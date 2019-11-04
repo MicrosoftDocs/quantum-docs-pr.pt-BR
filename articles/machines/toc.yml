@@ -1,4 +1,4 @@
-- name: Computadores e drivers clássicos
+- name: Visão geral
   href: index.md
 - name: Simulador do Quantum
   href: full-state-simulator.md
