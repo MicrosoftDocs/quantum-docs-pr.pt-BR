@@ -1,19 +1,19 @@
 ---
-title: Conceitos da computação quântica
-description: O que é computação quântica?
+title: Histórico e contexto sobre a computação quântica
+description: Saiba mais sobre o histórico da computação quântica, um pouco de contexto sobre como ela funciona e também sobre o Microsoft Quantum Development Kit.
 author: QuantumWriter
-ms.author: nawiebe@microsoft.com
+ms.author: nawiebe
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 37f5181f2d9e4e11efa29811c24116ca7d64f81b
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fb1df9e3460c18d0cdc0ff430fa236192b3aa2fa
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72978962"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442302"
 ---
-# <a name="what-is-quantum-computing"></a>O que é computação quântica?
+# <a name="quantum-computing-history-and-background"></a>Histórico e contexto sobre a computação quântica
 
 Uma série de novas tecnologias computacionais surgiu nos últimos anos, sendo a computação quântica possivelmente a tecnologia que exige a maior mudança de paradigma por parte dos desenvolvedores.  Os computadores quânticos foram propostos na década de 1980 por [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) e [Yuri Manin](https://en.wikipedia.org/wiki/Yuri_Manin).  A intuição por trás da computação quântica originou-se do que costumava ser visto como um dos maiores constrangimentos da física: o notável progresso científico enfrentava uma incapacidade de modelar até mesmo sistemas simples. Observe que a mecânica quântica foi desenvolvida entre 1900 e 1925 e ela continua sendo a base na qual a química, a física da matéria condensada e as tecnologias que vão de chips de computador à iluminação LED, em última análise, se apoiam.  Ainda assim, apesar desses sucessos, até mesmo alguns dos sistemas mais simples pareciam estar além da capacidade humana de modelagem com a mecânica quântica.  Isso ocorre porque a simulação de sistemas de, até mesmo, algumas dezenas de partículas interativas exige mais potência computacional do que qualquer computador convencional possa fornecer em milhares de anos!
 
@@ -27,4 +27,4 @@ A base da computação quântica é armazenar informações em estados quântico
 
 A criação de um programa quântico para utilização da interferência pode parecer um desafio assustador e, embora ele seja, muitas técnicas e ferramentas, incluindo nosso Microsoft Quantum development kit, foram introduzidas para tornar o desenvolvimento de programação e algoritmo quânticos mais acessível. Há algumas estratégias básicas que podem ser usadas para manipular a interferência quântica de uma maneira útil para a computação, embora, ao mesmo tempo, não façam com que a solução se perca em um emaranhado de possibilidades quânticas. A programação quântica é uma arte distinta da programação clássica, exigindo ferramentas muito diferentes para entender e expressar o raciocínio de algoritmo quântico. De fato, sem ferramentas gerais para ajudar um desenvolvedor quântico a lidar com a arte da programação quântica, o desenvolvimento de algoritmos quânticos não é tão fácil.
 
-Apresentamos o Microsoft Quantum development kit para capacitar uma comunidade cada vez maior com ferramentas para possibilitar a revolução quântica para tarefas, problemas e soluções. Nossa linguagem de programação de alto nível, Q#, foi desenvolvida para resolver os desafios do processamento de informações quânticas: ela é integrada a uma pilha de software que permite que um algoritmo quântico seja compilado até as operações primitivas de um computador quântico.  Antes de abordar a linguagem de programação, é útil examinar os princípios fundamentais nos quais a computação quântica se baseia. Vamos usar as regras fundamentais da computação quântica como axiomas, em vez de detalhar as bases delas na mecânica quântica. Além disso, presumiremos uma familiaridade básica com a álgebra linear (vetores, matrizes etc.). Caso você deseje obter um estudo mais profundo da história e dos princípios da computação quântica, indicamos a [seção de referência](xref:microsoft.quantum.more-information) que contém mais informações.
+Apresentamos o Microsoft Quantum development kit para capacitar uma comunidade cada vez maior com ferramentas para possibilitar a revolução quântica para tarefas, problemas e soluções. Nossa linguagem de programação de alto nível, Q#, foi desenvolvida para resolver os desafios do processamento de informações quânticas: ela é integrada a uma pilha de software que permite que um algoritmo quântico seja compilado até as operações primitivas de um computador quântico.  Antes de abordar a linguagem de programação, é útil examinar os princípios fundamentais nos quais a computação quântica se baseia. Vamos usar as regras fundamentais da computação quântica como axiomas, em vez de detalhar as bases delas na mecânica quântica. Além disso, presumiremos uma familiaridade básica com a álgebra linear (vetores, matrizes, etc.). Caso você deseje obter um estudo mais profundo da história e dos princípios da computação quântica, indicamos a [seção de referência](xref:microsoft.quantum.more-information) que contém mais informações.

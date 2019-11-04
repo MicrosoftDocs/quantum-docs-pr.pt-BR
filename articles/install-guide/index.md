@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 3ec53934436b47908fd4d794a98933010f6059a7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 2a098d89f13278d7137bf182a184a74afb9393be
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035292"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462876"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Instalar o QDK (Microsoft Quantum development kit)
 
@@ -26,11 +26,13 @@ Dependendo do ambiente de desenvolvimento escolhido, há diferentes etapas de in
 
 ## <a name="develop-with-python"></a>Desenvolvimento com o Python
 
+O pacote qsharp para Python facilita a simulação de operações e funções de Q# no Python. IQ# (pronunciado i-q-sharp) é uma extensão usada principalmente pelo Jupyter e pelo Python que fornece a funcionalidade principal para compilar e simular operações Q#.
+
 1. Pré-requisitos
 
     - [Python](https://www.python.org/downloads/) 3.6 ou posterior
     - O gerenciador de pacotes Python [PIP](https://pip.pypa.io/en/stable/installing)
-    - [SDK do .NET Core 2.1 ou posterior](https://www.microsoft.com/net/download)
+    - [SDK do .NET Core 3.0 ou posterior](https://www.microsoft.com/net/download)
 
 1. Instalar o pacote `iqsharp`
 
@@ -87,11 +89,16 @@ Dependendo do ambiente de desenvolvimento escolhido, há diferentes etapas de in
 
 ## <a name="develop-with-jupyter-notebooks"></a>Desenvolvimento com Jupyter notebooks
 
+Favoritos de configurações acadêmicas, laboratórios científicos e programação colaborativa baseada em uso online, os Jupyter Notebooks oferecem execução de código in-loco — agora incluindo código Q# — juntamente com instruções, anotações e outros conteúdos.  Aqui está o que você precisa fazer para começar a criar seus próprios notebooks de Q#.
+
+IQ# (pronunciado i-q-sharp) é uma extensão usada principalmente pelo Jupyter e pelo Python para o SDK do .NET Core que fornece a funcionalidade principal para compilar e simular operações Q#.
+
+
 1. Pré-requisitos
 
     - [Python](https://www.python.org/downloads/) 3.6 ou posterior
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [SDK do .NET Core 2.1 ou posterior](https://www.microsoft.com/net/download)
+    - [SDK do .NET Core 3.0 ou posterior](https://www.microsoft.com/net/download)
 
 1. Instalar o pacote `iqsharp`
 
@@ -120,11 +127,22 @@ Dependendo do ambiente de desenvolvimento escolhido, há diferentes etapas de in
 
     - Execute esta célula do notebook:
 
-        ![Célula do Jupyter Notebook](~/media/install-guide-jupyter.png)
+        ![Célula do Jupyter Notebook com código Q#](~/media/install-guide-jupyter.png)
 
         Você deverá ver `SayHello` na saída da célula. Durante a execução em Jupyter notebooks, o código Q# é compilado e o notebook gera o nome das operações encontradas.
 
+
+    - Em uma nova célula, usando um computador quântico, simule a execução da operação que você acabou de criar usando a mágica `%simulate`:
+
+        ![Célula do Jupyter Notebook com a mágica %simulate](~/media/install-guide-jupyter-simulate.png)
+
+        Você deverá ver a mensagem impressa na tela, juntamente com o resultado da operação que você invocou (nesse caso, vazio).
+
+
 ## <a name="develop-with-c-on-windows-using-visual-studio"></a>Desenvolvimento com o C# no Windows usando o Visual Studio
+
+O Visual Studio oferece um ambiente avançado para o desenvolvimento de programas de Q#, oferecendo ótimos recursos como conclusão de código e realce de sintaxe que orienta o desenvolvedor na criação de seus aplicativos.  A extensão do Visual Studio para Q# contém modelos para arquivos e projetos do Q#, bem como realce de sintaxe e suporte para IntelliSense.
+
 
 1. Pré-requisitos
 
@@ -158,12 +176,14 @@ Dependendo do ambiente de desenvolvimento escolhido, há diferentes etapas de in
 > [!NOTE]
 > * Caso você tenha vários projetos em uma só solução do Visual Studio, todos os projetos contidos na solução precisarão estar na mesma pasta da solução ou em uma das subpastas.  
 
-## <a name="develop-with-c-using-vs-code"></a>Desenvolvimento com o C# usando o VS Code
+## <a name="develop-with-c-using-visual-studio-code"></a>Desenvolver com C# usando o Visual Studio Code
+
+O VS Code (Visual Studio Code) oferece um ambiente avançado para o desenvolvimento de programas de Q# entre vários ambientes de computadores, incluindo Windows, Linux e Mac e oferecendo ótimos recursos, tais como conclusão de código e realce de sintaxe, que orientam os desenvolvedores na criação dos respectivos aplicativos.  A extensão VS Code do Q# contém realce de sintaxe e trechos de código do Q#.
 
 1. Pré-requisitos
 
    - [Código do VS](https://code.visualstudio.com/download)
-   - [SDK do .NET Core 2.1 ou posterior](https://www.microsoft.com/net/download)
+   - [SDK do .NET Core 3.0 ou posterior](https://www.microsoft.com/net/download)
 
 1. Instalar a extensão do VS Code para Quantum
 
@@ -195,9 +215,11 @@ Dependendo do ambiente de desenvolvimento escolhido, há diferentes etapas de in
 
 ## <a name="develop-with-c-using-the-dotnet-command-line-tool"></a>Desenvolvimento com o C# usando a ferramenta de linha de comando `dotnet`
 
+É claro que você também pode criar e executar os programas de Q# na linha de comando, simplesmente instalando o SDK do .NET Core e os modelos de projeto do QDK. 
+
 1. Pré-requisitos
 
-    - [SDK do .NET Core 2.1 ou posterior](https://www.microsoft.com/net/download)
+    - [SDK do .NET Core 3.0 ou posterior](https://www.microsoft.com/net/download)
 
 1. Instalar os modelos de projeto do Quantum para .NET
 
