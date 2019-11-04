@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.t
+name: T
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Aplica o portão π/8 a um único qubit.
+
+
+  \begin{align} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 & e ^ {i \pi/4} \end{bmatrix}.
+
+  \end{align}
+syntax: 'operation T (qubit : Qubit) : Unit'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    summary: Qubit ao qual a portão deve ser aplicada.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 3857f95e02fad6d38569758733d37191a491e508
+  ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 10/31/2019
+  ms.locfileid: "73216332"
