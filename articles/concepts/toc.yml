@@ -1,4 +1,4 @@
-- name: O que é computação quantum?
+- name: Histórico e contexto sobre a computação quântica
   href: index.md
 - name: Vetores e matrizes
   href: vectors-and-matrices.md
