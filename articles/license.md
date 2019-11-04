@@ -1,21 +1,18 @@
 ---
-title: Licença de Microsoft Quantum Development Kit | Microsoft Docs
+title: Licença de Microsoft Quantum Development Kit
 description: Licença de Microsoft Quantum Development Kit
-services: service-name-with-dashes-AZURE-ONLY
-keywords: Não adicione ou edite palavras-chave sem consultar seu especialista em SEO.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
-ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
-ms.openlocfilehash: e14720143144d4890358a1c6167541a0ea5a8362
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.author: cpalmer
+ms.date: 11/04/2019
+ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184926"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463375"
 ---
 # <a name="microsoft-software-license-terms"></a>TERMOS DE LICENÇA DE SOFTWARE DA MICROSOFT 
-# <a name="microsoft-quantum-development-kit-preview"></a>KIT DE DESENVOLVIMENTO DO MICROSOFT QUANTUM (VERSÃO PRÉVIA)
+## <a name="microsoft-quantum-development-kit-preview"></a>KIT DE DESENVOLVIMENTO DO MICROSOFT QUANTUM (VERSÃO PRÉVIA)
 
 
 * * *
@@ -61,13 +58,13 @@ SE VOCÊ CUMPRIR ESTES TERMOS DE LICENÇA, TERÁ OS DIREITOS DESCRITOS ABAIXO. A
     
     e. compartilhar, publicar, distribuir ou emprestar o software, fornecer o software como uma solução hospedada autônoma para outras pessoas usarem ou transferirem o software ou este contrato para terceiros.
 
-1. **restrições de exportação**. É necessário cumprir todas as leis de exportação nacionais e internacionais e os regulamentos que se aplicam ao software, que incluem restrições sobre destinos, usuários finais e uso final. Para obter mais informações sobre as restrições de exportação, acesse http://aka.ms/exporting.
+1. **restrições de exportação**. É necessário cumprir todas as leis de exportação nacionais e internacionais e os regulamentos que se aplicam ao software, que incluem restrições sobre destinos, usuários finais e uso final. Para obter mais informações sobre as restrições de exportação, acesse https://aka.ms/exporting.
 
 1. **serviços de suporte**. A Microsoft não é obrigada, sob este contrato, a fornecer qualquer serviço de suporte para o software. Qualquer suporte fornecido é "no estado em que se encontra", "com todas as falhas" e sem garantia de nenhum tipo.
 
 1. **Atualizações**. O software poderá verificar periodicamente se há atualizações e baixá-las e instalá-las para você. Você poderá obter atualizações somente da Microsoft ou de fontes autorizadas. A Microsoft talvez precise atualizar o sistema para fornecer atualizações. Você concorda em receber essas atualizações automáticas sem qualquer aviso adicional. Talvez as atualizações não incluam todos os recursos existentes de software, serviços ou dispositivos periféricos nem deem suporte a eles.
 
-1. **desistência de associação de ação de classe e arbitragem. Esta seção se aplica se você viver no (ou, se um negócio, seu lugar principal de negócios estiver em) Estados Unidos**.  Se você e a Microsoft entrarem em litígio, você e a Microsoft concordarão em tentar resolvê-lo informalmente em 60 dias. Se você e a Microsoft não conseguirem, você e a Microsoft concordam em **associar a arbitragem individual antes da Associação de arbitração americana** sob o ato de arbitração Federal ("FAA") e **não a Sue no tribunal na frente de uma julgar ou júri**. Em vez disso, um arbitrador neutro decidirá. **Processos judiciais de ação de classe, arbitrações em toda a classe, ações gerais de advogados privados**e qualquer outro procedimento em que alguém atua em uma capacidade representativa **não é permitido**; Nem a combinação de procedimentos individuais sem o consentimento de todas as partes. O Contrato de Arbitragem completo contém mais termos e se encontra em http://aka.ms/arb-agreement-1. Você e a Microsoft concordam com esses termos.
+1. **desistência de associação de ação de classe e arbitragem. Esta seção se aplica se você viver no (ou, se um negócio, seu lugar principal de negócios estiver em) Estados Unidos**.  Se você e a Microsoft entrarem em litígio, você e a Microsoft concordarão em tentar resolvê-lo informalmente em 60 dias. Se você e a Microsoft não conseguirem, você e a Microsoft concordam em **associar a arbitragem individual antes da Associação de arbitração americana** sob o ato de arbitração Federal ("FAA") e **não a Sue no tribunal na frente de uma julgar ou júri**. Em vez disso, um arbitrador neutro decidirá. **Processos judiciais de ação de classe, arbitrações em toda a classe, ações gerais de advogados privados**e qualquer outro procedimento em que alguém atua em uma capacidade representativa **não é permitido**; Nem a combinação de procedimentos individuais sem o consentimento de todas as partes. O Contrato de Arbitragem completo contém mais termos e se encontra em https://aka.ms/arb-agreement-1. Você e a Microsoft concordam com esses termos.
 
 1. **contrato completo**. Este contrato e quaisquer outros termos que a Microsoft possa fornecer para complementos, atualizações ou aplicativos de terceiros é todo o contrato para o software.
 

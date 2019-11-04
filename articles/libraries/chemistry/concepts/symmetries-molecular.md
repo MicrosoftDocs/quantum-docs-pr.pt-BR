@@ -1,20 +1,19 @@
 ---
 title: Symmetries dos integrantes do molecular | Microsoft Docs
 description: Documentos conceituais do Symmetries of molecular integrais
-keywords: Não adicione ou edite palavras-chave sem consultar seu especialista em SEO.
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
-ms.openlocfilehash: d539b6339a937c7ab9049e7b50d7852272c25deb
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 041d600bc8d65e7d67f5fe7d61a69426fb42ffbc
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185572"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442395"
 ---
-## <a name="symmetries-of-molecular-integrals"></a>Symmetries de integrantes do molecular
+# <a name="symmetries-of-molecular-integrals"></a>Symmetries de integrantes do molecular
 
 A simetria inerente do Coulomb Hamiltonian, que é o Hamiltonian fornecido em [modelos Quantum para sistemas eletrônicos](xref:microsoft.quantum.chemistry.concepts.quantummodels), que descreve elétrons interagindo eletricamente entre si e com a nuclei, leva a uma série de Symmetries que podem ser explorada para compactar os termos no Hamiltonian.
 Em geral, se não forem feitas mais suposições sobre as funções de base $ \psi_j $, temos apenas que \begin{Equation} h_ {PQRS} = h_ {qpsr}, \tag{★} \label{EQ: hpqrs} \end{Equation} que podem ser vistos imediatamente dos integrantes em [modelos Quantum para Sistemas eletrônicos](xref:microsoft.quantum.chemistry.concepts.quantummodels) , ao observar que seus valores permanecem idênticos se $p, q $ e $r, s $ são trocados de anti-commutação.
