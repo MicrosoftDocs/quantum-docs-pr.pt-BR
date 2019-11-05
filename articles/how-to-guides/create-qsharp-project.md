@@ -66,7 +66,7 @@ Escolha seu ambiente de desenvolvimento e idioma nas seções a seguir:
     python host.py
     ```
 
-1. Verifique a saída. Seu programa deve gerar as seguintes linhas:
+1. Verifique a saída. Seu programa deverá gerar as seguintes linhas:
 
     ```bash
     Hello from quantum world!
@@ -81,13 +81,13 @@ Agora você pode continuar a desenvolver seu programa Quantum.
 
     * O [Kit de desenvolvimento Quantum para notebooks Jupyter](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
 
-1. Execute o seguinte comando para iniciar o servidor do bloco de anotações:
+1. Execute o seguinte comando para iniciar o servidor de notebook:
 
     ```bash
     jupyter notebook
     ```
 
-1. Navegue até a URL mostrada na linha de comando. Por exemplo: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
+1. Procure a URL mostrada na linha de comando. Por exemplo: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85 ]
 
 1. Uma página Jupyter aparece no navegador. Na guia **arquivos** , selecione **novo** > **Q #** para criar um notebook Jupyter com um kernel Q #. Adicione o seguinte código à primeira célula do bloco de anotações:
 
@@ -117,28 +117,28 @@ Agora você pode adicionar outras operações Q # para continuar o desenvolvimen
 
     * O [Kit de desenvolvimento Quantum para Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
 
-1. Criar um novo aplicativo Q #
+1. Criar um aplicativo Q#
 
-    * Ir para o **arquivo** -> **novo** **projeto** de -> 
+    * Acesse **Arquivo** -> **Novo** -> **Projeto**
     * Digite `Q#` na caixa de pesquisa
-    * Selecione o **aplicativo Q #**
+    * Selecione **Aplicativo Q#**
     * Selecione **Avançar**
-    * Escolha um nome e um local para seu aplicativo
+    * Escolha um nome e uma localização para seu aplicativo
     * Escolha **Criar**
 
 1. Inspecionar o projeto
 
-    Você verá que dois arquivos foram criados: `Driver.cs`, que é o C# aplicativo host; e `Operation.qs`, que é um programa Q # que define uma operação simples para imprimir uma mensagem no console.
+    Você deverá ver que dois arquivos foram criados: `Driver.cs`, que é o aplicativo host C#; e `Operation.qs`, que é um programa Q# que define uma operação simples para imprimir uma mensagem no console.
 
 1. Executar o aplicativo
 
-    * Selecione **depurar** -> **Iniciar sem depuração**
-    * Você deve ver o texto `Hello quantum world!` impresso em uma janela do console.
+    * Selecione **Depurar** -> **Iniciar Sem Depuração**
+    * Você deverá ver o texto `Hello quantum world!` impresso em uma janela do console.
 
 Agora você pode continuar o desenvolvimento do Quantum usando o Visual Studio
 
 > [!NOTE]
-> * Se você tiver vários projetos dentro de uma solução do Visual Studio, todos os projetos contidos na solução precisarão estar na mesma pasta que a solução, ou em uma de suas subpastas.  
+> * Caso você tenha vários projetos em uma só solução do Visual Studio, todos os projetos contidos na solução precisarão estar na mesma pasta da solução ou em uma das subpastas.  
 
 ## <a name="create-a-c-project-using-vs-code"></a>Criar um C# projeto, usando vs Code
 
@@ -148,20 +148,20 @@ Agora você pode continuar o desenvolvimento do Quantum usando o Visual Studio
 
 1. Crie um novo projeto:
 
-    * Ir para **exibição** -> **paleta de comandos**
+    * Acesse **Exibir** -> **Paleta de Comandos**
     * Selecione **Q #: criar novo projeto**
-    * Navegue até o local no sistema de arquivos onde você gostaria de criar o aplicativo
-    * Clique no botão **abrir novo projeto...** , depois que o projeto tiver sido criado
+    * Navegue até a localização no sistema de arquivos em que deseja criar o aplicativo
+    * Clique no botão **Abrir novo projeto...** após a criação do projeto
 
 1. Executar o aplicativo:
 
-    * Ir para **depurar** -> **Iniciar sem depuração**
-    * Você deve ver o texto a seguir na janela de saída `Hello quantum world!`
+    * Acesse **Depurar** -> **Iniciar Sem Depuração**
+    * Você deverá ver o seguinte texto na Janela de Saída `Hello quantum world!`
 
 Agora você pode continuar o desenvolvimento do Quantum usando Visual Studio Code.
 
 > [!NOTE]
-> * No momento, os espaços de trabalho com várias pastas raiz não têm suporte da extensão Visual Studio Code. Se você tiver vários projetos em um espaço de trabalho VS Code, todos os projetos precisarão estar contidos na mesma pasta raiz.
+> * No momento, não há suporte para workspaces com várias pastas raiz na extensão do Visual Studio Code. Caso você tenha vários projetos em um workspace do VS Code, todos os projetos precisarão estar contidos na mesma pasta raiz.
 
 ## <a name="create-a-c-project-using-the-dotnet-command-line-tool"></a>Criar um C# projeto, usando a ferramenta de linha de comando `dotnet`
 
@@ -175,13 +175,13 @@ Agora você pode continuar o desenvolvimento do Quantum usando Visual Studio Cod
     dotnet new console -lang Q# -o <project name>
     ```
 
-1. Navegar até o novo diretório de aplicativos
+1. Navegue até o diretório do novo aplicativo
 
     ```bash
     cd <project name>
     ```
 
-    Você verá que dois arquivos foram criados, juntamente com os arquivos de projeto do aplicativo: um arquivo Q # (`Operation.qs`) e um C# arquivo de host (`Driver.cs`).
+    Você deverá ver que dois arquivos foram criados, juntamente com os arquivos de projeto do aplicativo: um arquivo Q# (`Operation.qs`) e um arquivo de host C# (`Driver.cs`).
 
 1. Executar o aplicativo
 

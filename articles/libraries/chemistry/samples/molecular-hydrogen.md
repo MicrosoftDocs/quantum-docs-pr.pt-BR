@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2019
 ms.locfileid: "73442573"
 ---
-# <a name="obtaining-energy-level-estimates"></a>Obtendo estimativas de nível de energia
+# <a name="obtaining-energy-level-estimates"></a>Obter estimativas do nível de energia
 Estimar os valores dos níveis de energia é um dos principais aplicativos da quantum química. Aqui, descrevemos como isso pode ser executado para o exemplo canônico de molecular Hydrogen. O exemplo referenciado nesta seção é `MolecularHydrogen` no repositório de exemplos de química. Um exemplo mais visual que plota a saída é a `MolecularHydrogenGUI` demonstração.
 
 Nossa primeira etapa é construir o Hamiltonian que representa o molecular Hydrogen. Embora isso possa ser construído por meio da ferramenta NWChem, adicionamos manualmente os termos de Hamiltonian para brevidade neste exemplo.

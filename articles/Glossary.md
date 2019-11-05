@@ -31,7 +31,7 @@ ms.locfileid: "73442537"
 |Medida|Obtendo um bit clássico de um qubit (ou conjunto de qubits). Consulte a seção [conceitos do qubit](xref:microsoft.quantum.concepts.qubit) para obter mais detalhes.|
 |Mutável|Uma variável cujo valor pode ser alterado após ser criada.|
 |Namespace|Um rótulo para uma coleção de nomes relacionados (normalmente, operações, funções e tipos). Por exemplo, o namespace [`Microsoft.Quantum.Preparation`](xref:microsoft.quantum.preparation) rotula todos os símbolos definidos na biblioteca padrão que ajudam na preparação de Estados iniciais.|
-|Operação|A unidade básica de execução Quantum em Q #. É quase equivalente a uma função em C ou C++ ou Python, ou um método estático em C# ou Java.|
+|Operação|A unidade básica de execução Quantum em Q #. É quase equivalente a uma função em C ou C++ ou Python, ou a um método estático em C# ou Java.|
 |Aplicativo do operador|Executando uma operação Quantum. Isso normalmente aplica uma matriz unitário ao vetor de estado atual. Consulte [introdução aos conceitos do Quantum](xref:microsoft.quantum.concepts.intro) para obter mais detalhes.|
 |Oracle|Uma sub-rotina que fornece informações dependentes de dados para um algoritmo Quantum em tempo de execução. Normalmente, o objetivo é fornecer uma superposição de saídas correspondentes às entradas que estão em superposição.   |
 |Aplicativo parcial|Chamar uma função ou operação sem todos os parâmetros necessários. O retorna um novo callable que precisa apenas dos parâmetros ausentes fornecidos durante um aplicativo futuro.|
