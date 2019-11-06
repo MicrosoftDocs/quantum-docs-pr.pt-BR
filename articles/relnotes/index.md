@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 169a8ac31c53f2892624618a227d8bdbdc458458
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 868d256270516cf99c228a757a11c6dc1a6319df
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72958872"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463327"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas sobre a versão do Microsoft Quantum Development Kit
 
@@ -20,6 +20,19 @@ Este artigo contém informações sobre cada versão do Quantum Development Kit.
 Para obter instruções de instalação, consulte o [guia de instalação](xref:microsoft.quantum.install).
 
 Para obter instruções de atualização, consulte o [guia de atualização](xref:microsoft.quantum.update).
+
+## <a name="version-0101911307"></a>Versão 0.10.1911.307
+
+*Data de lançamento: 1º de novembro de 2019*
+
+Esta versão contém o seguinte:
+
+- Atualizações para Visual Studio Code e extensões do Visual Studio para implantar o servidor de linguagem como um executável independente, eliminando a dependência de versão do SDK do .NET Core  
+- Migração para o .NET Core 3.0
+- Alteração significativa em Microsoft.Quantum.Simulation.Core.IOperationFactory com a introdução do novo método `Fail`. Ele afeta apenas simuladores personalizados que não estendem o SimulatorBase. Para obter mais detalhes, [exiba a solicitação de pull no GitHub](https://github.com/microsoft/qsharp-runtime/pull/59).
+- Novo suporte para atributos preteridos
+
+Consulte a lista completa de PRs encerrados para [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compilado](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [tempo de execução](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [amostras](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) e [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-0919093002"></a>Versão 0.9.1909.3002
 
@@ -448,7 +461,7 @@ Esta versão corrige alguns problemas relatados pela Comunidade. Especificamente
 #### <a name="hardware-and-software-requirements"></a>Requisitos de hardware e software
 
 - O simulador incluído no Quantum Development Kit requer uma instalação de 64 bits do Microsoft Windows para ser executado.
-- O simulador quântico da Microsoft, instalado com o Quantum Development Kit, utiliza AVX (Advance Vector Extensions) e requer uma CPU habilitada para AVX. Os processadores Intel fornecidos no primeiro trimestre de 2011 (Sandy Bridge) ou posteriores dão suporte a AVX. Estamos avaliando o suporte para CPUs anteriores e poderemos anunciar detalhes em um momento posterior.
+- O simulador quântico da Microsoft, instalado com o Quantum Development Kit, utiliza AVX (Advanced Vector Extensions) e requer uma CPU habilitada para AVX. Os processadores Intel fornecidos no primeiro trimestre de 2011 (Sandy Bridge) ou posteriores dão suporte a AVX. Estamos avaliando o suporte para CPUs anteriores e poderemos anunciar detalhes em um momento posterior.
 
 #### <a name="project-creation"></a>Criação do projeto
 
