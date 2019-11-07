@@ -6,18 +6,22 @@ ms.author: nakersha
 ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.what
-ms.openlocfilehash: 77d027abec90274ed7147d2cd8f97b207360bdbc
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 2f3b64b00a0a9552e52e34cb1e3652810b266eab
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443963"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529925"
 ---
 # <a name="what-is-quantum-computing"></a>O que é computação quântica?
 
-Há alguns problemas tão difíceis, tão incrivelmente extensos, que mesmo se todos os supercomputadores do mundo trabalhassem no problema em conjunto, ainda levaria mais tempo do que o tempo de vida do universo para serem resolvidos. Os computadores quânticos mantêm a promessa de resolver alguns dos principais desafios de nosso planeta – em meio ambiente, agricultura, saúde, energia, clima, ciência de materiais e aqueles que ainda não imaginamos. O impacto dos computadores quânticos será imenso e tão grande quanto a criação do transistor em 1947, que abriu o caminho para a economia digital de hoje.
+Há alguns problemas tão difíceis e extremamente extensos, que mesmo que todos os supercomputadores do mundo trabalhassem no problema em conjunto, ainda levaria mais tempo do que o tempo de vida do universo para que ele fosse resolvido.
 
-A computação quântica aproveita o comportamento exclusivo da física quântica para fornecer um modelo novo e muito eficiente de computação. A teoria da física quântica postula que a matéria, em um nível quântico, pode estar em uma superposição de vários estados clássicos. E esses muitos estados interferem uns com os outros, como as ondas em uma poça de maré.  Presume-se que o estado da matéria após uma medição seja “recolher” para um dos estados clássicos. Depois disso, repetir a mesma medida produzirá o mesmo resultado clássico.  O entrelaçamento quântico ocorre quando partículas interagem de maneiras tais que o estado quântico de cada uma não poderá ser completamente descrito independentemente das outras, mesmo se as partículas estiverem fisicamente distantes.  
+Os computadores quânticos prometem resolver alguns dos principais desafios do nosso planeta, como nas áreas de meio ambiente, agricultura, saúde, energia, clima, ciência de materiais, além daqueles que ainda nem imaginamos. O impacto dos computadores quânticos será imenso e tão grande quanto a criação do transistor em 1947, que abriu o caminho para a economia digital de hoje.
+
+A computação quântica aproveita o comportamento exclusivo da física quântica para oferecer um modelo de computação novo e altamente eficiente. A teoria da física quântica postula que a matéria, em um nível quântico, pode estar em uma superposição de vários estados clássicos. E esses muitos estados interferem uns com os outros, como as ondas em uma poça de maré.  O estado da matéria depois que uma medida "sucumbe" a um dos estados clássicos. 
+
+Depois disso, repetir a mesma medida produzirá o mesmo resultado clássico.  O entrelaçamento quântico ocorre quando as partículas interagem de tal maneira que o estado quântico de cada uma não pode ser descrito independentemente das outras, mesmo quando elas estão fisicamente distantes.  
 
 A computação quântica armazena informações em estados quânticos de matéria e usa sua natureza quântica de sobreposição e entrelaçamento para realizar operações quânticas que computam essas informações, aproveitando e aprendendo a programar a interferência quântica.
 
@@ -33,11 +37,11 @@ Vários qubits também podem ser **entrelaçados**. Quando fazemos uma medição
 
 ## <a name="quantum-algorithms"></a>Algoritmos quantum
 
-Os algoritmos quânticos foram criados para aproveitar a natureza e o comportamento quânticos para acelerar os algoritmos clássicos ou fornecer maneiras totalmente novas de modelar sistemas físicos.  Esses algoritmos exploram a maneira como as informações de codificação de qubits e a natureza paralela da operação em vários qubits entrelaçados em sobreposição.  
+Os algoritmos quânticos foram criados para aproveitar a natureza e o comportamento quânticos para acelerar os algoritmos clássicos ou fornecer maneiras totalmente novas de modelar sistemas físicos.  Esses algoritmos exploram a maneira em que os qubits codificam informações e a natureza paralela da operação em vários qubits entrelaçados em sobreposição.  
 
-Os computadores clássicos codificam informações em bits; cada bit codifica dois valores possíveis, 0 ou 1.  Um qubit codifica dois valores simultaneamente, 0 e 1.  Dois bits clássicos codificam um dos quatro valores possíveis (00, 01, 10, 11), enquanto dois qubits codificam qualquer sobreposição desses quatro simultaneamente, embora possamos obter apenas um desses valores ao medir.  Quatro bits codificam um de 16 valores.  Quatro qubits codificam qualquer sobreposição de 16 valores simultaneamente e assim por diante, exponencialmente.  100 qubits podem codificar mais informações do que o disponível nos maiores sistemas de computador atualmente.  
+Os computadores clássicos codificam informações em bits. Cada bit codifica dois valores possíveis, 0 ou 1.  Um qubit codifica dois valores simultaneamente, 0 e 1.  Dois bits clássicos codificam um dos quatro valores possíveis (00, 01, 10, 11), enquanto dois qubits codificam qualquer sobreposição desses quatro estados simultaneamente, embora somente um desses valores possa ser obtido durante a medição. Quatro qubits codificam qualquer sobreposição de 16 valores simultaneamente e assim por diante, exponencialmente.  100 qubits podem codificar mais informações do que o disponível nos maiores sistemas de computador atualmente.  
 
-Além disso, quando vários qubits entrelaçados atuam de forma coerente, eles podem processar várias opções simultaneamente. Isso permite que eles processem informações em uma fração do tempo que seria necessário, até mesmo nos sistemas não quânticos mais rápidos.
+Além disso, quando vários qubits entrelaçados atuam de forma coerente, eles podem processar várias opções simultaneamente. Os qubits entrelaçados podem processar informações em uma fração do tempo que até mesmo os sistemas não quânticos mais rápidos levariam.
 
 O aproveitamento desses atributos quânticos tem sido a busca de várias décadas de pesquisa sobre algoritmos quânticos, e há muitas técnicas inovadoras que resolvem problemas em uma fração do tempo que leva para a resolução clássica.  
 
@@ -47,24 +51,24 @@ No lado mais construtivo, os algoritmos para distribuição de chaves de criptog
 
 O _algoritmo de Grover_ realça uma técnica de algoritmo quântico que fornece uma velocidade quadrática para pesquisar dados não estruturados.
 
-
 ## <a name="quantum-hardware"></a>Hardware quântico
 
-Em computadores clássicos, os bits correspondem aos níveis de voltagem nos circuitos de silício. O hardware de computação quântica pode ser implementado por várias realizações físicas diferentes de qubits: íons presos, supercondutividade, átomos neutros, spin eletrônico, polarização da luz e qubits topológicos. O hardware quântico é uma tecnologia emergente. Os qubits são frágeis por natureza e se tornam menos coerentes conforme interagem com o ambiente. Isso exige o balanceamento da fidelidade do sistema com a escalabilidade. Quanto maior a escala (ou seja, o número de qubits), maior a taxa de erros.
+Em computadores clássicos, os bits correspondem aos níveis de voltagem nos circuitos de silício. O hardware de computação quântica pode ser implementado por várias realizações físicas diferentes de qubits: íons presos, supercondutividade, átomos neutros, spin eletrônico, polarização da luz e qubits topológicos. O hardware quântico é uma tecnologia emergente. Os qubits são frágeis por natureza e se tornam menos coerentes conforme interagem com o ambiente. É necessário balancear a fidelidade com a escalabilidade do sistema. Quanto maior a escala (ou seja, o número de qubits), maior a taxa de erros.
 
 A Microsoft está desenvolvendo um computador quântico baseado em qubits topológicos. Acreditamos que um qubit topológico será menos afetado pelas alterações no ambiente, reduzindo, portanto, o grau de correção externa de erros. O recurso de qubits topológicos aumentou a estabilidade e a resistência ao ruído ambiental, o que significa que eles podem ser dimensionados com mais facilidade e permanecer confiáveis por mais tempo.
 
-## <a name="quantum-computing--a-full-hardware-and-software-stack"></a>Computação quântica – uma pilha completa de hardware e software 
+## <a name="quantum-computing--a-full-hardware-and-software-stack"></a>Computação quântica – uma pilha completa de hardware e software
 
-O programa quântico da Microsoft é único pois nos focamos no dimensionamento de cada componente do sistema para oferecer impacto quântico real. Essa abordagem abrangente envolve: 
-* criar um computador quântico usando qubits topológicos confiáveis, escalonáveis e tolerante a falhas, 
-* projetar um painel de controle criogênico exclusivo com potência e dissipação de calor extremamente baixas, 
-* desenvolver uma pilha de software completa para habilitar a programação do computador quântico e controlar o sistema em escala. 
+O programa quântico da Microsoft é único pois nos focamos no dimensionamento de cada componente do sistema para oferecer impacto quântico real. Essa abordagem abrangente envolve:
 
-O QDK (Quantum Development Kit) de software livre foi introduzido para tornar o desenvolvimento de programação e algoritmo quânticos mais acessível. Nossa linguagem de programação de alto nível, Q#, aborda os desafios de programação quântica.  Criamos o Q# como uma linguagem de programação de alto nível com foco em quantum voltada para o desenvolvimento de algoritmos e aplicativos. O compilador Q# é integrado em uma pilha de software que permite que um algoritmo quântico seja compilado até as operações primitivas de um computador quântico.  Até determinada escala (número de qubits), a computação quântica pode ser simulada em um computador clássico. Usando a simulação, você pode começar a escrever programas quânticos hoje para execução no hardware quântico amanhã.  Também emparelhamos o Q# com exemplos, bibliotecas e exercícios de aprendizado para que você comece a programação quântica com facilidade hoje mesmo. 
+* a criação de um computador quântico usando qubits topológicos confiáveis, escalonáveis e tolerantes a falhas, 
+* o projeto de um painel de controle criogênico exclusivo com potência baixa e dissipação de calor, 
+* desenvolver uma pilha de software completa para habilitar a programação do computador quântico e controlar o sistema em escala.
+
+O QDK (Quantum Development Kit) de software livre foi introduzido para facilitar o acesso à programação quântica e ao desenvolvimento de algoritmos quânticos. Nossa linguagem de programação de alto nível, Q#, aborda os desafios de programação quântica.  Criamos o Q# como uma linguagem de programação de alto nível com foco em quantum voltada para o desenvolvimento de algoritmos e aplicativos. O compilador Q# é integrado em uma pilha de software que permite que um algoritmo quântico seja compilado até as operações primitivas de um computador quântico.  Até determinada escala (número de qubits), a computação quântica pode ser simulada em um computador clássico. Usando a simulação, você pode começar a escrever programas quânticos hoje para execução no hardware quântico amanhã.  Também emparelhamos o Q# com exemplos, bibliotecas e exercícios de aprendizado para que você comece a programação quântica com facilidade hoje mesmo. 
 
 ## <a name="next-steps"></a>Próximas etapas
 
-* [O que posso fazer com um computador quântico?](xref:microsoft.quantum.overview.computers)
+* [O que os computadores quânticos fazem?](xref:microsoft.quantum.overview.computers)
 * [Introdução ao Microsoft Quantum development kit](xref:microsoft.quantum.welcome)
 * Leia mais sobre os [conceitos da computação quântica](xref:microsoft.quantum.concepts.intro)
