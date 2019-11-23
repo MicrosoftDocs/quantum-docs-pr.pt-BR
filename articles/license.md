@@ -86,7 +86,7 @@ SE VOCÊ CUMPRIR ESTES TERMOS DE LICENÇA, TERÁ OS DIREITOS DESCRITOS ABAIXO. A
 
 <p>15. <strong>LIMITAÇÃO E EXCLUSÃO DE DANOS. SE VOCÊ TIVER QUALQUER BASE PARA RECUPERAR DANOS, APESAR DO AVISO DE ISENÇÃO DE RESPONSABILIDADE ANTERIOR, VOCÊ PODERÁ RECUPERAR DA MICROSOFT E DE SEUS FORNECEDORES APENAS DANOS DIRETOS ATÉ OS EUA $5. VOCÊ NÃO PODE RECUPERAR NENHUM OUTRO DANO, INCLUINDO DANOS CONSEQUENCIAIS, LUCROS CESSANTES, ESPECIAIS, INDIRETOS OU INCIDENTAIS.</strong>
 
-**Essa limitação se aplica a (a) qualquer coisa relacionada ao software, serviços, conteúdo (incluindo código) em sites de Internet de terceiros ou aplicativos de terceiros; e (b) declarações de violação de contrato, garantia, garantia ou condição; responsabilidade estrita, negligência ou outro delito; ou qualquer outra declaração; em cada caso, até o limite permitido pela lei aplicável**.
+**Essa limitação se aplica a (a) qualquer coisa relacionada ao software, serviços, conteúdo (incluindo código) em sites de Internet de terceiros ou aplicativos de terceiros; e (b) declarações de violação de contrato, garantia, garantia ou condição; responsabilidade estrita, negligência ou outro delito; ou qualquer outra declaração; em cada caso permitido pela lei aplicável**.
 
 **Ele também se aplica mesmo que a Microsoft soubesse ou deva ter conhecimento da possibilidade dos danos. A limitação ou a exclusão acima pode não se aplicar a você porque seu estado, província ou país pode não permitir a exclusão ou limitação de danos incidentais, consequenciais ou outros**.
 </blockquote>
