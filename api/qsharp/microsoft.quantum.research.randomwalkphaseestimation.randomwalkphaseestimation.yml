@@ -8,7 +8,7 @@ remarks: >-
   ### <a name="iterative-phase-estimation-and-eigenstates"></a>Estimativa e Eigenstates de fase iterativa
 
 
-  Em geral, o registro de entrada `eigenstate` não precisa ser um eigenstate $ \ket{\phi} $ de $U $, mas pode ser uma superposição em eigenstates. Suponha que o estado de entrada seja fornecido por \begin{align} \ket{\psi} & = \sum\_{j} \alpha\_j \ket{\phi\_j}, \end{align} em que $\{\alpha\_j\}$ sejam coeficientes complexos, de forma que $ \sum\_j | \alpha @no__ t_7_ j | ^ 2 = $1 e onde $U \ket{\phi\_j} = \phi\_j\ket {\ Phi\_j} $.
+  Em geral, o registro de entrada `eigenstate` não precisa ser um eigenstate $ \ket{\phi} $ de $U $, mas pode ser uma superposição em eigenstates. Suponha que o estado de entrada seja fornecido por \begin{align} \ket{\psi} & = \sum\_{j} \alpha\_j \ket{\phi\_j}, \end{align} em que $\{\alpha\_j\}$ são coeficientes complexos, de modo que $ \sum\_j | \alpha\_j | ^ 2 = $1 e onde $U \ket{\phi\_j} = \phi\_j\ket {\ Phi\_j} $.
 
 
   Em seguida, executar estimativa de fase iterativa eventualmente convergirá para um único eigenstate, conforme descrito no [Guia de desenvolvimento](xref:microsoft.quantum.libraries.characterization#iterative-phase-estimation-without-eigenstates).
