@@ -7,8 +7,8 @@ summary: >-
   Cria um unitário de codificação de bloco para um Hamiltonian.
 
 
-  O Hamiltonian $H = \sum_{j}\alpha_j P_j $ é descrito por uma soma de Pauli termos $P _J $, cada um com o coeficiente real $ \alpha_j $.
-remarks: Isso é obtido preparando e despreparando o estado $ \ sum_ {j} \ sqrt {\ alpha_j/\ Alpha} \ ket {j} $ e construindo um <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> unitário controlado por multiplicação e <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>.
+  O Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ é descrito por uma soma dos termos de Pauli $P _j $, cada um com o coeficiente real $ \ alpha_j $.
+remarks: Isso é obtido preparando e despreparando o estado $ \ sum_ {j} \sqrt{\ alpha_j/\alpha}\ket{j} $ e construindo um <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> unitário com controle de multiplicação e <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>.
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
@@ -23,7 +23,7 @@ output:
       ## <a name="first-parameter"></a>Primeiro parâmetro
 
 
-      A uma norma de coeficientes $ \alpha = \sum_{j} | \alpha_j | $.
+      A uma norma de coeficientes $ \alpha = \ sum_ {j} | \ alpha_j | $.
 
 
       ## <a name="second-parameter"></a>Segundo parâmetro
