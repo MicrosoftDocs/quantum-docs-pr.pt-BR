@@ -7,11 +7,11 @@ summary: >-
   Cria uma superposição uniforme em Estados que codificam 0 a `nIndices`.
 
 
-  Ou seja, esse unitário $U $ cria uma superposição uniforme em todos os Estados de número $0 $ para $M-$1, dado um estado de entrada $ \ket{0\cdots 0} $. Em outras palavras, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\sum_{j = 0} ^ {M-1} \ket{j}.
+  Ou seja, esse unitário $U $ cria uma superposição uniforme em todos os Estados de número $0 $ para $M-$1, dado um estado de entrada $ \ket{0\cdots 0} $. Em outras palavras, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{align} $ $.
 examples: >-
-  O exemplo a seguir prepara o estado $ \frac{1}{\sqrt{6}} \sum_{j = 0} ^{5}\ket{j} $ em $3 $ qubits.
+  O exemplo a seguir prepara o estado $ \frac{1}{\sqrt{6}} \ sum_ {j = 0} ^{5}\ket{j} $ em $3 $ qubits.
 
 
   ```Q#
