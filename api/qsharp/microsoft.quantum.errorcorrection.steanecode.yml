@@ -8,7 +8,7 @@ remarks: >-
   Esse código foi encontrado no seguinte documento:
 
 
-  - R. Steane, "interferência de várias partículas e correção de erro Quantum", proc. Roy. SOC. Lond. A452 (1996) PP. 2551; https://arxiv.org/abs/quant-ph/9601029.
+  - a. Steane, "interferência de várias partículas e correção de erro Quantum", proc. Roy. SOC. Lond. A452 (1996) PP. 2551; https://arxiv.org/abs/quant-ph/9601029.
 syntax: 'function SteaneCode () : Microsoft.Quantum.ErrorCorrection.CSS'
 input:
   content: ()
