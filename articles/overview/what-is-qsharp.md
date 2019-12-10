@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
-ms.openlocfilehash: 3fd288439c7db7f939240b4388c9cdb114b6535c
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: e04d72bafe390ff5c79af408db1d9400754b06ce
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529980"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864280"
 ---
 # <a name="what-is-q"></a>O que é o Q#?
 
@@ -25,12 +25,11 @@ A linguagem de programação Q# fornece um conjunto intuitivo de tipos, operaç�
 
 Nos primórdios da computação quântica, os algoritmos eram visualizados como diagramas da mesma forma que os diagramas de circuito na computação clássica.  Embora o modelo de circuito tenha sido útil por muitos anos na pesquisa da computação quântica, aqui na Microsoft, acreditamos que os desenvolvedores podem ir além dos circuitos quânticos e desenvolver aplicativos e algoritmos quânticos usando o Q#. A linguagem Q# foi criada para aproveitar o que aprendemos ao longo de décadas de desenvolvimento de software clássico e capacitar os desenvolvedores quânticos com uma funcionalidade de linguagem de alto nível direcionada à computação quântica.
 
-
 ## <a name="how-does-q-work"></a>Como funciona o Q#?
 
 Um dos blocos de construção fundamentais do Q# é o tipo `Qubit`, que não pode ser copiado nem acessado diretamente, assim como um qubit real. Em vez disso, podemos medi-lo e armazenar o resultado da medida em uma variável `Result`, um tipo Q# que pode usar dois valores possíveis: `Zero` e `One`. Constructos como esse garantem que os algoritmos sempre respeitem as leis da física quântica e possam ser executados corretamente em simuladores ou computadores quânticos.
 
-O Q# também inclui recursos lógicos clássicos como condicionais ou loops com algumas sutilezas para garantir que todas as regras quânticas sejam respeitadas. Por exemplo, restringir a maneira em que os loops são executados para garantir que as operações quânticas sejam executadas.
+O Q# também inclui recursos lógicos clássicos como condicionais e loops com algumas sutilezas para garantir que todas as regras quânticas sejam respeitadas. Por exemplo, restringir a maneira como os loops são executados para garantir que as operações quânticas não sejam chamadas dentro de funções que podem conter apenas subrotinas determinísticas clássicas.
 
 Os programas Q# geralmente são emparelhados com um programa host escrito em C# ou no Python, que possa fornecer uma organização conveniente dos códigos clássico e quântico. Além de dar suporte a linguagens como C# e Python, o QDK dá suporte ao Jupyter Notebook com o kernel IQ# Jupyter.
 
