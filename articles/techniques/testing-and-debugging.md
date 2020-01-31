@@ -1,24 +1,24 @@
 ---
-title: 'Técnicas de Q # – testando e Depurando | Microsoft Docs'
-description: 'Técnicas de Q # – teste e depuração'
+title: 'Testando e Depurando-Q # técnicas | Microsoft Docs'
+description: 'Testando e Depurando – técnicas de Q #'
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d352ffa315b654cfcf8991fa116465d3dad49f0a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: cfc71f08be0f190d9f5f4a48796e3d0ad06d6107
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864263"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820106"
 ---
-# <a name="testing-and-debugging"></a>Teste e depuração
+# <a name="testing-and-debugging"></a>Testando e Depurando
 
 Assim como acontece com a programação clássica, é essencial poder verificar se os programas Quantum atuam como pretendidos e ser capaz de diagnosticar um programa Quantum incorreto.
 Nesta seção, abordaremos as ferramentas oferecidas por Q # para testar e depurar programas Quantum.
 
-## <a name="unit-tests"></a>Testes de Unidades
+## <a name="unit-tests"></a>Testes de unidade
 
 Uma abordagem comum para testar programas clássicos é escrever programas pequenos chamados *testes de unidade* que executam código em uma biblioteca e comparam sua saída a alguma saída esperada.
 Por exemplo, talvez queiramos garantir que `Square(2)` retorna `4`, já que sabemos *um priori* de que $2 ^ 2 = $4.
@@ -50,8 +50,8 @@ Inicialmente, esse arquivo contém um teste de unidade de exemplo `AllocateQubit
     @Test("QuantumSimulator")
     operation AllocateQubit () : Unit {
 
-        using (q = Qubit()) {
-            Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+        using (qubit = Qubit()) {
+            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");
@@ -136,7 +136,7 @@ Para testes com falha, as saídas também são impressas no console do para ajud
 
 ***
 
-## <a name="assertions"></a>Afirmações
+## <a name="assertions"></a>Declarações
 
 Como as funções em Q # não têm efeitos colaterais _lógicos_ , quaisquer _outros tipos_ de efeitos de execução de uma função cujo tipo de saída é a tupla vazia `()` nunca podem ser observados em um programa Q #.
 Ou seja, um computador de destino pode optar por não executar nenhuma função que retorne `()` com a garantia de que essa omissão não modificará o comportamento de qualquer código Q # a seguir.

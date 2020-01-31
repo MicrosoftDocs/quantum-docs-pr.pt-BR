@@ -62,11 +62,7 @@ functions:
 - uid: microsoft.quantum.simulation.paulistringfromgenidx
   summary: Extrai a cadeia de caracteres Pauli e seus índices qubit de um termo Pauli descrito por um `GeneratorIndex`.
 - uid: microsoft.quantum.simulation.quantumwalkbyqubitization
-  summary: >-
-    Converte um `BlockEncodingReflection` em uma Walk do Quantum.
-
-
-    Ou seja, dado um `BlockEncodingReflection` unitário $U $ que codifica algum operador $H $ de interesse, converte-o em uma visão Quantum $W $ contendo o espectro de $ \pm e ^ {\pm i\sin ^{-1}(H)} $.
+  summary: Converte uma reflexão de codificação de bloco em uma Walk de Quantum.
 - uid: microsoft.quantum.simulation.sumgeneratorsystems
   summary: Adiciona vários `GeneratorSystem`s para criar um novo GeneratorSystem.
 - uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
@@ -162,9 +158,9 @@ newtypes:
 - uid: microsoft.quantum.simulation.unitary
   summary: Representa a evolução em um operador unitário.
 metadata:
-  ms.openlocfilehash: 05db213d04304a635e4e86e0f6c40f15bb81441a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 967c27e6c5c8f475e54f7e9d4f3a14594fb04cc5
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215873"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76869820"

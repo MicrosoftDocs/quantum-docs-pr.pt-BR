@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: 3ff15a744bf15924564d5a8fee54f4fbce4c04ee
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: f9e0f0d9540102331aea64a1245cbaa4833e1e02
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864416"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819953"
 ---
 # <a name="contributing-code"></a>Código de contribuição #
 
@@ -26,7 +26,7 @@ Uma contribuição de código ideal se baseia no trabalho existente em um reposi
 Quando aceitamos uma contribuição de código, ele se torna parte do próprio kit de desenvolvimento Quantum, de modo que novos recursos serão lançados, mantidos e desenvolvidos da mesma maneira que o restante do kit de desenvolvimento Quantum.
 Portanto, é útil quando a funcionalidade adicionada por uma contribuição é bem testada e documentada.
 
-### <a name="unit-tests"></a>Testes de Unidades ###
+### <a name="unit-tests"></a>Testes de unidade ###
 
 As funções, operações e tipos definidos pelo usuário do Q # que compõem bibliotecas como a Canon são testadas automaticamente como parte do desenvolvimento no repositório [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) .
 Quando uma nova solicitação pull é aberta, por exemplo, nossa configuração de [Azure pipelines](https://azure.microsoft.com/services/devops/pipelines/) verificará se as alterações na solicitação pull não interrompem nenhuma funcionalidade existente da qual a comunidade de programação Quantum dependa.
@@ -58,7 +58,7 @@ Por exemplo, o teste a seguir verifica se `H(q); X(q); H(q);` conforme chamado p
 
 ```qsharp
 @Test("QuantumSimulator")
-operation WithTest () : Unit {
+operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
     let expected = Z;
     AssertOperationsEqualReferenced(ApplyToEach(actual, _), ApplyToEachA(expected, _), 4);

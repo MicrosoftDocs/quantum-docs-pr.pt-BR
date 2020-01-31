@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 40b2e7ddf5def6285250dffe130b152429dce1f8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185181"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821075"
 ---
 # <a name="file-structure"></a>Estrutura do arquivo
 
@@ -84,13 +84,13 @@ Cada arquivo de origem Q # pode definir qualquer número de operações.
 
 Os nomes de operação devem ser exclusivos em um namespace e podem não entrar em conflito com os nomes de tipo e função.
 
-Uma declaração de operação consiste na `operation`de palavras-chave, seguida pelo símbolo que é o nome da operação, uma tupla de identificador tipada que define os argumentos para a operação, dois pontos `:`, uma anotação de tipo que descreve o tipo de resultado da operação, Opcionalmente, uma anotação com as características da operação, uma chave de abertura `{`, o corpo da declaração da operação e uma chave de fechamento final `}`.
+Uma declaração de operação consiste na `operation`de palavras-chave, seguida pelo símbolo que é o nome da operação, uma tupla de identificador tipado que define os argumentos para a operação, dois pontos `:`, uma anotação de tipo que descreve o tipo de resultado da operação, opcionalmente uma anotação com as características da operação, uma `{`de chaves abertas, o corpo da declaração da operação e uma `}`chave de fechamento
 
 O corpo da declaração da operação consiste na implementação padrão ou de uma lista de especializações.
 A implementação padrão pode ser especificada diretamente dentro da declaração se apenas a implementação da especialização de corpo padrão precisar especificar explicitamente.
 Nesse caso, uma anotação com as características da operação na declaração é útil para garantir que o compilador gere automaticamente outras especializações com base na implementação padrão. 
 
-Por exemplo, 
+Por exemplo 
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -138,7 +138,7 @@ is Ctl + Adj {
 }
 ```
 
-No exemplo acima, `adjoint invert;` indica que a especialização de adjacente deve ser gerada ao inverter a implementação do corpo e `controlled adjoint invert;` indica que a especialização adjacente controlada deve ser gerada por meio da inversão da implementação fornecida do especialização controlada.
+No exemplo acima, `adjoint invert;` indica que a especialização de adjacente deve ser gerada ao inverter a implementação do corpo e `controlled adjoint invert;` indica que a especialização adjacente controlada deve ser gerada por meio da inversão da implementação fornecida da especialização controlada.
 
 Para uma operação para dar suporte ao aplicativo do `Adjoint` e/ou `Controlled` functor, seu tipo de retorno precisa ser `Unit`. 
 
@@ -187,12 +187,12 @@ Para `body` e `adjoint`, a lista de argumentos sempre deve ser `(...)`; para `co
 Se uma ou mais especializações além do corpo padrão precisarem ser declaradas explicitamente, a implementação do corpo padrão precisará ser encapsulada em uma declaração de especialização adequada também:
 
 ```qsharp
-operation CountOnes(qs: Qubit[]) : Int {
+operation CountOnes(qubits: Qubit[]) : Int {
 
     body (...) // default body specialization
     {
         mutable n = 0;
-        for (q in qs) {
+        for (qubit in qubits) {
             set n += M(q) == One ? 1 | 0;
         }
         return n;
@@ -208,7 +208,7 @@ O erro de uma operação especifica como a seqüência conjugada complexa da ope
 Uma operação dá suporte ao `Adjoint` functor se sua declaração contiver uma declaração implícita ou explícita de uma especialização adjacente.
 Uma especialização adjacente controlada explicitamente implica a existência de uma especialização adjacente. 
 
-Para a operação cujo corpo contém loops repetir-até-êxito, instruções SET, medidas, instruções de retorno ou chamadas para outras operações que não dão suporte ao `Adjoint` functor, gerando automaticamente uma especialização de adjacente após a `invert` ou @no__ a diretiva t_2_ não é possível.
+Para a operação cujo corpo contém loops repetidos-until-êxito, instruções SET, medidas, instruções de retorno ou chamadas para outras operações que não dão suporte ao `Adjoint` functor, a geração automática de uma especialização adjacente após a diretiva `invert` ou `auto` não é possível.
 
 ### <a name="controlled"></a>Controlado
 
@@ -236,7 +236,7 @@ Para uma operação cujo corpo contém chamadas para outras operações que não
 Uma declaração de operação pode ser tão simples quanto a seguinte, que define a operação primitiva de Pauli X:
 
 ```qsharp
-operation X (q : Qubit) : Unit
+operation X (qubit : Qubit) : Unit
 is Adj + Ctl {
     body intrinsic;
     adjoint self;
@@ -282,7 +282,7 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
 São rotinas puramente clássicas em Q #.
 Cada arquivo de origem Q # pode definir qualquer número de funções.
 
-Uma declaração de função consiste na `function`de palavras-chave, seguida pelo símbolo que é o nome da função, uma tupla de identificador tipada, uma anotação de tipo que descreve o tipo de retorno da função e um bloco de instruções que descreve a implementação do funcionamento.
+Uma declaração de função consiste na `function`da palavra-chave, seguida pelo símbolo que é o nome da função, uma tupla de identificador tipada, uma anotação de tipo que descreve o tipo de retorno da função e um bloco de instruções que descreve a implementação da função.
 
 O bloco de instrução que define uma função deve ser colocado entre `{` e `}` como qualquer outro bloco de instrução.
 

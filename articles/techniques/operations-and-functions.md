@@ -1,17 +1,17 @@
 ---
-title: 'Q # técnicas-operações e funções | Microsoft Docs'
-description: 'Técnicas de Q # – operações e funções'
+title: 'Operações e funções – Q # técnicas | Microsoft Docs'
+description: 'Operações e funções – técnicas de Q #'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 06da09dc9c6e0ba0331db6bc0cd3d2ddeb287113
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183447"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820769"
 ---
 # <a name="q-operations-and-functions"></a>Operações e funções do Q #
 
@@ -66,7 +66,7 @@ Se uma operação implementar uma transformação unitário, será possível def
 A existência dessas especializações pode ser declarada como parte da assinatura da operação: `is Adj + Ctl` no exemplo a seguir. A implementação correspondente para cada tal especialização declarada implicitamente é gerada pelo compilador. 
 
 ```qsharp
-operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit {
+operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
 is Adj + Ctl { // implies the existence of an adjoint, a controlled, and a controlled adjoint specialization
     H(here);
     CNOT(here, there);
@@ -111,7 +111,7 @@ is Ctl + Adj {
     controlled adjoint invert; 
 }
 ```
-No exemplo acima, `adjoint invert;` indica que a especialização de adjacente deve ser gerada ao inverter a implementação do corpo e `controlled adjoint invert;` indica que a especialização adjacente controlada deve ser gerada por meio da inversão da implementação fornecida do especialização controlada.
+No exemplo acima, `adjoint invert;` indica que a especialização de adjacente deve ser gerada ao inverter a implementação do corpo e `controlled adjoint invert;` indica que a especialização adjacente controlada deve ser gerada por meio da inversão da implementação fornecida da especialização controlada.
 
 Veremos mais exemplos disso no fluxo de [controle de ordem superior](xref:microsoft.quantum.concepts.control-flow).
 
@@ -163,7 +163,7 @@ operation U(target : Qubit) : Unit {
 
 Cada vez que `U` for chamado, ele terá uma ação diferente em `target`.
 Em particular, o compilador não pode garantir que, se adicionamos uma declaração de especialização de `adjoint auto` para `U`, `U(target); Adjoint U(target);` atua como identidade (ou seja, como não operacional).
-Isso viola a definição do adjoin que vimos em [vetores e matrizes](xref:microsoft.quantum.concepts.vectors), de modo que permitir a geração automática de uma especialização adjacente em uma operação em que chamamos a operação <xref:microsoft.quantum.math.randomreal> interromperia as garantias fornecidas pelo compilador ; <xref:microsoft.quantum.math.randomreal> é uma operação para a qual não existe nenhuma versão adjacente ou controlada.
+Isso viola a definição do adjacente que vimos em [vetores e matrizes](xref:microsoft.quantum.concepts.vectors), de modo que permitir a geração automática de uma especialização adjacente em uma operação em que chamamos a operação <xref:microsoft.quantum.math.randomreal> interromperia as garantias fornecidas pelo compilador; <xref:microsoft.quantum.math.randomreal> é uma operação para a qual não existe nenhuma versão adjacente ou controlada.
 
 Por outro lado, permitir chamadas de função como `Square` é seguro, pois o compilador pode ter certeza de que ele só precisa preservar a entrada para `Square` para manter sua saída estável.
 Portanto, isolar o máximo de lógica clássica possível em funções facilita a reutilização dessa lógica em outras funções e operações semelhantes.

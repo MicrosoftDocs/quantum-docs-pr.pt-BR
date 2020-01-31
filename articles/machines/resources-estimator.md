@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 591e306b3001934bd81342a533e3f6ca25129781
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184977"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820854"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>O computador de destino ResourcesEstimator
 
@@ -97,40 +97,40 @@ A seguir está a lista de métricas estimadas pelo `ResourcesEstimator`:
 * __QubitClifford__: a contagem de uma única qubit Clifford e Pauli Gates executadas.
 * __Medida__: a contagem de qualquer medida executada.
 * __R__: a contagem de qualquer rotação qubit única executada, excluindo T, Clifford e Pauli Gates.
-* __T__: a contagem de t Gates e seus conjugados, incluindo o t Gate, T_x = h. T. H e T_y = hipótese. T. hipótese, executado.
+* __T__: a contagem de t Gates e seus conjugados, incluindo o Gate t, T_x = h. T. H e T_y = hipótese. T. hipótese, executado.
 * __Profundidade__: profundidade do circuito Quantum executado pela operação Q #. Por padrão, somente T Gates são contadas na profundidade, consulte o [contador de profundidade](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) para obter detalhes.
 * __Largura__: o número máximo de qubits alocadas durante a execução da operação Q #.
 * __BorrowedWidth__: número máximo de qubits emprestados dentro da operação Q #.
 
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a>Fornecendo a probabilidade de resultados de medida
+## <a name="providing-the-probability-of-measurement-outcomes"></a>Como fornecer a probabilidade de resultados de medida
 
-<xref:microsoft.quantum.primitive.assertprob> do namespace <xref:microsoft.quantum.primitive> pode ser usado para fornecer informações sobre a probabilidade esperada de uma medida para ajudar a conduzir a execução do programa Q #. O exemplo a seguir ilustra isso:
+<xref:microsoft.quantum.intrinsic.assertprob> do namespace <xref:microsoft.quantum.intrinsic> pode ser usado para fornecer informações sobre a probabilidade esperada de uma medida para ajudar a conduzir a execução do programa Q #. O exemplo a seguir ilustra isso:
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
+operation Teleport(source : Qubit, target : Qubit) : Unit {
 
-    using (ancilla = Qubit()) {
+    using (qubit = Qubit()) {
 
-        H(ancilla);
-        CNOT(ancilla, target);
+        H(q);
+        CNOT(qubit, target);
 
-        CNOT(source, ancilla);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [qubit], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(qubit) == One) { X(target); X(qubit); }
     }
 }
 ```
 
-Quando o `ResourcesEstimator` encontrar `AssertProb` ele gravará que medir `PauliZ` em `source` e `ancilla` deverá receber um resultado de `Zero` com a probabilidade 0,5. Quando ele for executado `M` mais tarde, ele encontrará os valores gravados das probabilidades de resultado e `M` retornará `Zero` ou `One` com a probabilidade 0,5.
+Quando o `ResourcesEstimator` encontrar `AssertProb` ele gravará que medir `PauliZ` em `source` e `q` deverá receber um resultado de `Zero` com a probabilidade 0,5. Quando ele for executado `M` mais tarde, ele encontrará os valores gravados das probabilidades de resultado e `M` retornará `Zero` ou `One` com a probabilidade 0,5.
 
 
-## <a name="see-also"></a>Consulte
+## <a name="see-also"></a>Consulte também
 
 O `ResourcesEstimator` é criado sobre o [simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro)de computador Quantum, que fornece um conjunto mais rico de métricas, a capacidade de relatar métricas no grafo de Call completo e recursos como o [Verificador de entradas distintos](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) para ajudar a encontrar bugs em programas de Q #. Consulte a documentação do [simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) para obter mais informações.
 

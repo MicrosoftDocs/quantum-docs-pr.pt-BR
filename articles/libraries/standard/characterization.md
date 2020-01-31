@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1eb48da9d4ae2a730019e2707dcb2c69b998491e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864365"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870341"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterização e estatísticas do Quantum #
 
@@ -39,11 +39,11 @@ Ao discutir a estimativa de fase iterativa, consideraremos um $U unitário $ for
 Conforme descrito na seção sobre Oracle em estruturas de [dados](xref:microsoft.quantum.libraries.data-structures), os modelos Q # Canon são operações pelo tipo de <xref:microsoft.quantum.oracles.discreteoracle> definido pelo usuário, definido pelo `((Int, Qubit[]) => Unit : Adjoint, Controlled)`tipo de tupla.
 Concretamente, se `U : DiscreteOracle`, `U(m)` implementa $U ^ m $ para `m : Int`.
 
-Com essa definição em vigor, cada etapa da estimativa de fase iterativa continua preparando uma auxiliar qubit no estado $ \ket{+} $, juntamente com o estado inicial $ \ket{\phi} $ que supomos que é um [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) de $U (m) $, ou seja, $U (m) \ket{\phi} = e ^ {im\phi} \ ket {\ Phi} $.  
+Com essa definição em vigor, cada etapa da estimativa de fase iterativa continua preparando uma qubit auxiliar no estado $ \ket{+} $, juntamente com o estado inicial $ \ket{\phi} $ que supomos que é um [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) de $U (m) $, ou seja, $U (m) \ket{\phi} = e ^ {im\phi} \ ket {\ Phi} $.  
 Um aplicativo controlado de `U(m)` é usado, o que prepara o estado $ \left (R\_1 (m \phi) \ket{+} \right) \ket{\phi} $.
 Como no caso do Quantum, o efeito de um aplicativo controlado do `U(m)` da Oracle é precisamente o mesmo que o efeito de aplicar $R _1 $ para a fase desconhecida em $ \ket{+} $, de modo que possamos descrever os efeitos de $U $ dessa maneira mais simples.
 Opcionalmente, o algoritmo gira o controle qubit aplicando $R _1 (-m\theta) $ para obter um estado $ \ket{\psi} = \left (R\_1 (m [\phi-\theta]) \ket{+} \right) \ket{\phi} $ $.
-O auxiliar qubit usado como um controle para `U(m)` é então medido na base de $X $ para obter um único `Result`clássico.
+O qubit auxiliar usado como um controle para `U(m)` é então medido na base $X $ para obter um único `Result`clássico.
 
 Neste ponto, a reconstrução da fase do `Result` valores obtidos por meio da estimativa de fase iterativa é um problema de inferência de estatística clássica.
 Encontrar o valor de $m $ que maximiza as informações obtidas, considerando um método de inferência fixo, é simplesmente um problema nas estatísticas.
@@ -106,7 +106,7 @@ Um exemplo com uma etapa de pós-processamento clássica eficiente é o algoritm
 
 O recurso mais importante da estimativa de fase robusta, que é compartilhada com a maioria das variantes úteis, é que a qualidade de reconstrução de $ \hat{\phi} $ está em certo sentido Heisenberg-Limited. Isso significa que, se o desvio de $ \hat{\phi} $ do valor verdadeiro for $ \sigma $, $ \sigma $ escala inversamente – proporcionalmente ao número total de consultas $Q $ feitas para o $U controlado $, ou seja, $ \sigma = \mathcal{O} (1/Q) $. Agora, a definição de desvio varia entre diferentes algoritmos de estimativa. Em alguns casos, pode significar que, com pelo menos $ \mathcal{O} (1) $ probabilidade, o erro de estimativa $ | \hat{\phi}-\phi |\_\circ\le \sigma $ em alguma medida circular $ \circ $. Para estimativa de fase robusta, o desvio é precisamente a variância $ \sigma ^ 2 = \mathbb{E}\_\hat{\phi} [(\mod\_{2 \ PI} (\hat{\phi}-\phi + \pi)-\pi) ^ 2] $ se não quebrarmos as fases periódicas em um único intervalo finito $ (-\pi, \pi] $. Mais precisamente, o desvio padrão em estimativa de fase robusta satisfaz as desigualdades $ $ \begin{align} 2,0 \pi/Q \le \sigma \le 2 \ pi/2 ^ {n} \le 10.7 \ PI/Q, \end{Align} $ $, onde o limite inferior é atingido no limite de assintoticamente grande $Q $ e o limite superior é garantido até mesmo para tamanhos de amostra pequenos.  Observe que $n $ selecionado pela entrada de `bitsPrecision`, que define implicitamente $Q $.
 
-Outros detalhes relevantes incluem, digamos, a sobrecarga de espaço pequeno de apenas $1 $ ancilla qubit, ou que o procedimento não é adaptável, o que significa que a sequência necessária de experimentos de Quantum é independente dos resultados de medida intermediários. Neste e em breves exemplos em que a escolha do algoritmo de estimativa de fase é importante, deve-se consultar a documentação como @"microsoft.quantum.canon.robustphaseestimation" e as publicações referenciadas aqui para obter mais informações e sobre sua implementação.
+Outros detalhes relevantes incluem, digamos, a sobrecarga de espaço pequeno de apenas $1 $ ancilla qubit, ou que o procedimento não é adaptável, o que significa que a sequência necessária de experimentos de Quantum é independente dos resultados de medida intermediários. Neste e em breves exemplos em que a escolha do algoritmo de estimativa de fase é importante, deve-se consultar a documentação como @"microsoft.quantum.characterization.robustphaseestimation" e as publicações referenciadas aqui para obter mais informações e sobre sua implementação.
 
 > [!TIP]
 > Há muitos exemplos em que a estimativa de fase robusta é usada. Para estimativa de fase na extração da energia de estado terrestre de vários sistemas físicos, consulte o exemplo de [ **simulação H2** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), o [exemplo **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)e o exemplo de [ **modelo Hubbard** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
@@ -154,25 +154,27 @@ Assim, como visto no **H2Sample**, uma operação pode aceitar um algoritmo de e
 
 ```qsharp
 operation H2EstimateEnergy(
-    idxBondLength : Int, 
+    idxBondLength : Int,
     trotterStepSize : Double,
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
 : Double
 ```
 
-Esses algoritmos de estimativa de inúmeras fases são otimizados para diferentes propriedades e parâmetros de entrada, que devem ser compreendidos para fazer a melhor escolha para o aplicativo de destino. Por exemplo, alguns algoritmos de estimativa de fase são adaptáveis, o que significa que as etapas futuras são controladas de maneira clássica pelos resultados das medidas anteriores. Alguns exigem a capacidade de exponentiater seu Oracle unitário de caixa preta com potências reais arbitrárias e outros exigem apenas potências de inteiros, mas só podem resolver um módulo de estimativa de fase $2 \ PI $. Alguns exigem muitos auxiliar qubits e outros exigem apenas um.
+Esses algoritmos de estimativa de inúmeras fases são otimizados para diferentes propriedades e parâmetros de entrada, que devem ser compreendidos para fazer a melhor escolha para o aplicativo de destino. Por exemplo, alguns algoritmos de estimativa de fase são adaptáveis, o que significa que as etapas futuras são controladas de maneira clássica pelos resultados das medidas anteriores. Alguns exigem a capacidade de exponentiater seu Oracle unitário de caixa preta com potências reais arbitrárias e outros exigem apenas potências de inteiros, mas só podem resolver um módulo de estimativa de fase $2 \ PI $. Alguns exigem muitos qubits auxiliares e outros exigem apenas um.
 
 Da mesma forma, o uso da estimativa de fase de busca aleatória prossegue praticamente da mesma forma que para outros algoritmos fornecidos com a Canon:
 
 ```qsharp
-operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : Unit
-is Adj + Ctl {
+operation ApplyExampleOracle(
+    eigenphase : Double,
+    time : Double,
+    register : Qubit[])
+: Unit is Adj + Ctl {
     Rz(2.0 * eigenphase * time, register[0]);
 }
 
-operation BayesianPhaseEstimationCanonSample(eigenphase : Double) : Double {
-
-    let oracle = ContinuousOracle(ExampleOracle(eigenphase, _, _));
+operation EstimateBayesianPhase(eigenphase : Double) : Double {
+    let oracle = ContinuousOracle(ApplyExampleOracle(eigenphase, _, _));
     using (eigenstate = Qubit()) {
         X(eigenstate);
         // The additional inputs here specify the mean and variance of the prior, the number of

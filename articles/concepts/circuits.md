@@ -1,17 +1,17 @@
 ---
 title: Circuitos Quantum | Microsoft Docs
-description: Circuitos Quantum
+description: Circuitos do Quantum
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7c2afa58fd70d893529cf794ae07df480466aaec
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210707"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820786"
 ---
 # <a name="quantum-circuits"></a>Circuitos Quantum
 Considere por um momento a transformação unitário $ \Text{CNOT} _{01}(H\otimes 1) $.
@@ -39,7 +39,7 @@ Por exemplo, o símbolo
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_2.png)
 
-é o portão [Hadamard](xref:microsoft.quantum.primitive.h) que atua em um registro de qubit único.
+é o portão [Hadamard](xref:microsoft.quantum.intrinsic.h) que atua em um registro de qubit único.
 
 As Gates da Quantum são ordenadas em ordem cronológica com a porta mais à esquerda como a portão aplicada pela primeira vez ao qubits.
 Em outras palavras, se você modelar os fios como tendo o estado Quantum, os fios trazem o estado da Quantum por meio de cada um dos Gates no diagrama da esquerda para a direita.
@@ -72,7 +72,7 @@ Isso significa que você pode obter uma intuição sobre o fluxo de dados para u
 
 ## <a name="controlled-gates"></a>Gates controlados
 O outro constructo criado em diagramas de circuito Quantum qubit é Control.
-A ação de um portão controlado de Quantum singular, denotado $ \Lambda (G) $, em que um único valor de qubit controla o aplicativo de $G $, pode ser compreendido examinando o exemplo a seguir de uma entrada de estado do produto $ \Lambda (G) (\alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \beta \ket{1} G\ket {\ psi} $.
+A ação de um portão controlado de Quantum singular, denotado $ \Lambda (G) $, em que um único valor de qubit controla o aplicativo de $G $, pode ser compreendido observando o exemplo a seguir de uma entrada de estado do produto $ \Lambda (G) (\alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \beta \ket{1} G\ket {\ psi} $
 Ou seja, a porta controlada se aplica $G $ ao registro que contém $ \psi $ If e somente se o qubit de controle usa o valor $1 $.
 Em geral, descrevemos essas operações controladas em diagramas de circuito como
 
@@ -81,7 +81,7 @@ Em geral, descrevemos essas operações controladas em diagramas de circuito com
 ![](~/media/concepts_5.png)
 
 Aqui, o círculo preto denota o bit quântico no qual o portão é controlado e uma transmissão vertical denota o unitário que é aplicado quando o qubit de controle usa o valor $1 $.
-Para os casos especiais em que $G = X $ e $G = Z $ apresentamos a notação a seguir para descrever a versão controlada das Gates (Observe que a porta X controlada é a [porta do $CNOT $](xref:microsoft.quantum.primitive.cnot)):
+Para os casos especiais em que $G = X $ e $G = Z $ apresentamos a notação a seguir para descrever a versão controlada das Gates (Observe que a porta X controlada é a [porta do $CNOT $](xref:microsoft.quantum.intrinsic.cnot)):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -106,7 +106,7 @@ Especificamente, esse subcircuito é semelhante a:
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![circuito de medição](~/media/concepts_7.png)
 
-Q # implementa um [operador de medida](xref:microsoft.quantum.primitive.measure) para essa finalidade.
+Q # implementa um [operador de medida](xref:microsoft.quantum.intrinsic.measure) para essa finalidade.
 Consulte a [seção sobre medições](xref:microsoft.quantum.libraries.standard.prelude#measurements) para obter mais informações.
 
 Da mesma forma, o subcircuito

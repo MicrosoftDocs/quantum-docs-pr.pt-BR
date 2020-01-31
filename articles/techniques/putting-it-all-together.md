@@ -1,23 +1,23 @@
 ---
-title: 'Técnicas de Q # – reunindo todas elas | Microsoft Docs'
-description: 'Técnicas de Q #-reunindo tudo'
+title: 'Colocando tudo em conjunto-Q # técnicas | Microsoft Docs'
+description: 'Colocando tudo em conjunto-Q # técnicas'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f65b3e260f98a7a90da13b62edd6cc63d200f5af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183260"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820157"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Juntando tudo: Teleportation #
 Vamos retornar ao exemplo do circuito de Teleportation definido em [circuitos Quantum](xref:microsoft.quantum.concepts.circuits). Vamos usar isso para ilustrar os conceitos que aprendemos até agora. Uma explicação sobre a teleportação Quantum é fornecida abaixo para aqueles que não estão familiarizados com a teoria, seguidos por uma explicação da implementação do código em Q #. 
 
 ## <a name="quantum-teleportation-theory"></a>Portabilidade Quantum: teoria
-A teleportabilidade Quantum é uma técnica para enviar um estado de Quantum desconhecido (que iremos nos referir como "__Message__") de um qubit em um local para um qubit em outro local (vamos nos referir a esses qubits como "__aqui__" e "__lá__", respectivamente). Podemos representar nossa __mensagem__ como um vetor usando a notação Dirac: 
+A teleportação Quantum é uma técnica para enviar um estado de Quantum desconhecido (que iremos nos referir como "__Message__") de um qubit em um local para um qubit em outro local (vamos nos referir a esses qubits como "__aqui__" e "__lá__", respectivamente). Podemos representar nossa __mensagem__ como um vetor usando a notação Dirac: 
 
 $ $ \ket{\psi} = \alpha\ket{0} + \beta\ket{1} $ $
 
@@ -56,7 +56,7 @@ $ \ket{1}$  | $ \frac{1}{\sqrt{2}} (\ket{0}-\ket{1}) $
 
 Se aplicarmos o portão Hadamard à primeira qubit de cada termo de nossa saída acima, obteremos o seguinte resultado:
 
-$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{ \sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
+$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
 
 Observe que cada termo tem $2 \frac{1}{\sqrt{2}} $ fatores. Podemos multiplicar esses resultados dando o seguinte resultado:
 
@@ -125,7 +125,7 @@ Também precisamos alocar um `here` qubit que realizamos com um bloco de `using`
 ```
 
 ### <a name="step-1-create-an-entangled-state"></a>Etapa 1: criar um estado de confusas
-Em seguida, podemos criar o par confusas entre `here` e `there` usando as operações @"microsoft.quantum.primitive.h" e @"microsoft.quantum.primitive.cnot":
+Em seguida, podemos criar o par confusas entre `here` e `there` usando as operações @"microsoft.quantum.intrinsic.h" e @"microsoft.quantum.intrinsic.cnot":
 
 ```qsharp
         H(here);
@@ -141,7 +141,7 @@ Em seguida, usamos as próximas $ \operatorname{CNOT} $ e $H $ Gates para mover 
 ```
 
 ### <a name="step-3--4-measuring-and-interpreting-the-result"></a>Etapa 3 & 4: medindo e interpretando o resultado
-Por fim, usamos @"microsoft.quantum.primitive.m" para executar as medidas e executar as operações de portão necessárias para obter o estado desejado, conforme indicado pelas instruções `if`:
+Por fim, usamos @"microsoft.quantum.intrinsic.m" para executar as medidas e executar as operações de portão necessárias para obter o estado desejado, conforme indicado pelas instruções `if`:
 
 ```qsharp
         // Measure out the entanglement

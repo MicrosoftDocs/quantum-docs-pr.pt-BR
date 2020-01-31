@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 332781a4356015461426ee7640fd931a41450367
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184603"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821024"
 ---
 # <a name="using-the-numerics-library"></a>Usando a biblioteca de numéricos
 
@@ -64,7 +64,7 @@ Para cada um dos três tipos acima, uma variedade de operações está disponív
     - Recíproco (1/x)
     - Medida (duplo clássico)
 
-Para obter mais informações e documentação detalhada para cada uma dessas operações, consulte os documentos de referência da biblioteca do Q # em [docs.Microsoft.com](https://docs.microsoft.com/en-us/quantum)
+Para obter mais informações e documentação detalhada para cada uma dessas operações, consulte os documentos de referência da biblioteca do Q # em [docs.Microsoft.com](https://docs.microsoft.com/quantum)
 
 ## <a name="sample-integer-addition"></a>Exemplo: adição de inteiro
 
@@ -72,15 +72,14 @@ Como um exemplo básico, considere a operação $ $ \ket x\ket y\mapsto \ket x\k
 
 Usando o kit de desenvolvimento Quantum, essa operação pode ser aplicada da seguinte maneira:
 ```qsharp
-operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
-{
+operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
         x = LittleEndian(xQubits); // define bit order
         y = LittleEndian(yQubits);
         
-        ApplyXorInPlace(xInt, x); // initialize values
-        ApplyXorInPlace(yInt, y);
+        ApplyXorInPlace(xValue, x); // initialize values
+        ApplyXorInPlace(yValue, y);
         
         AddI(x, y); // perform addition x+y into y
         
@@ -95,18 +94,18 @@ Para avaliar funções suaves, como $ \sin (x) $ em um computador Quantum, em qu
 
 O primeiro, `EvaluatePolynomialFxP`, permite avaliar um polinomial da forma $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, em que $d $ denota o *grau*. Para fazer isso, tudo o que é necessário são os coeficientes do polinomial `[a_0,..., a_d]` (do tipo `Double[]`), a `x : FixedPoint` de entrada e a saída `y : FixedPoint` (inicialmente zero):
 ```qsharp
-EvaluatePolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
 O resultado, $P (x) = 1 + 2x $, será armazenado em `yFxP`.
 
-O segundo, `EvaluateEvenPolynomialFxP`e o terceiro, `EvaluateOddPolynomialFxP`, são especializações para os casos de funções pares e ímpares, respectivamente. Ou seja, para uma função par/ímpar $f (x) $ e $ $ P_ {mesmo} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + A_D x ^ {2D}, $ $ $f (x) $ é aproximado bem pelo $P _ {mesmo} (x) $ ou $P _ {Odd} (x): = x\cdot P_ {mesmo} (x) $ respectivos.
+O segundo, `EvaluateEvenPolynomialFxP`e o terceiro, `EvaluateOddPolynomialFxP`, são especializações para os casos de funções pares e ímpares, respectivamente. Ou seja, para uma função par/ímpar $f (x) $ e $ $ P_ {mesmo} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ é aproximado bem pelo $P _ {mesmo} (x) $ ou $P _ {Odd} (x): = x\cdot P_ {mesmo} (x) $, respectivamente.
 Em Q #, esses dois casos podem ser tratados da seguinte maneira:
 ```qsharp
-EvaluateEvenPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```
 que avalia $P _ {mesmo} (x) = 1 + 2x ^ 2 $ e
 ```qsharp
-EvaluateOddPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateOddPolynomialFxP([1.0, 2.0], x, y);
 ```
 que avalia $P _ {Odd} (x) = x + 2x ^ 3 $.
 

@@ -6,12 +6,12 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: 7fd9d1fa4fb3c5dd216d846038abd40454ece2e8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 929745a6da6034599e97d2f573190308fde6eb75
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035130"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820429"
 ---
 # <a name="quantum-trace-simulator"></a>Simulador de rastreamento quântico
 
@@ -24,29 +24,26 @@ O simulador de rastreamento depende de informações adicionais fornecidas pelo 
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Como fornecer a probabilidade de resultados de medida
 
-Há dois tipos de medidas que aparecem em algoritmos quânticos. O primeiro tipo desempenha uma função auxiliar em que o usuário geralmente conhece a probabilidade dos resultados. Nesse caso, o usuário pode escrever <xref:microsoft.quantum.primitive.assertprob> por meio do namespace <xref:microsoft.quantum.primitive> para expressar esse conhecimento. O exemplo a seguir ilustra isso:
+Há dois tipos de medidas que aparecem em algoritmos quânticos. O primeiro tipo desempenha uma função auxiliar em que o usuário geralmente conhece a probabilidade dos resultados. Nesse caso, o usuário pode escrever <xref:microsoft.quantum.intrinsic.assertprob> por meio do namespace <xref:microsoft.quantum.intrinsic> para expressar esse conhecimento. O exemplo a seguir ilustra isso:
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
-
-    using (ancilla = Qubit()) {
-
-        H(ancilla);
-        CNOT(ancilla, target);
-
-        CNOT(source, ancilla);
+operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
+    using (qubit = Qubit()) {
+        H(qubit);
+        CNOT(qubit, target);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(q) == One) { X(target); X(q); }
     }
 }
 ```
 
-Quando o simulador de rastreamento executar `AssertProb`, ele registrará isso medindo `PauliZ` em `source`, e `ancilla` deverá receber um resultado igual a `Zero` com a probabilidade 0,5. Quando o simulador executar `M` mais tarde, ele encontrará os valores registrados das probabilidades de resultado e `M` retornará `Zero` ou `One` com a probabilidade 0,5. Quando o mesmo código for executado em um simulador que controla o estado quântico, esse simulador verificará se as probabilidades fornecidas em `AssertProb` estão corretas.
+Quando o simulador de rastreamento executar `AssertProb`, ele registrará isso medindo `PauliZ` em `source`, e `q` deverá receber um resultado igual a `Zero` com a probabilidade 0,5. Quando o simulador executar `M` mais tarde, ele encontrará os valores registrados das probabilidades de resultado e `M` retornará `Zero` ou `One` com a probabilidade 0,5. Quando o mesmo código for executado em um simulador que controla o estado quântico, esse simulador verificará se as probabilidades fornecidas em `AssertProb` estão corretas.
 
 ## <a name="running-your-program-with-the-quantum-computer-trace-simulator"></a>Como executar o programa com o simulador de rastreamento de computador quântico 
 
@@ -84,6 +81,6 @@ Além de executar programas quânticos, o simulador de rastreamento é fornecido
 
 Cada um desses componentes pode ser habilitado pela definição de sinalizadores apropriados em `QCTraceSimulatorConfiguration`. Mais detalhes sobre como usar cada um desses componentes são fornecidos nos arquivos de referência correspondentes. Confira a documentação da API em [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) para obter detalhes específicos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 A referência de C# do [simulador de rastreamento](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) de computador quântico 
 
