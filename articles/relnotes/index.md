@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863156"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871610"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas sobre a versão do Microsoft Quantum Development Kit
 
@@ -20,6 +20,19 @@ Este artigo contém informações sobre cada versão do Quantum Development Kit.
 Para obter instruções de instalação, consulte o [guia de instalação](xref:microsoft.quantum.install).
 
 Para obter instruções de atualização, consulte o [guia de atualização](xref:microsoft.quantum.update).
+
+## <a name="version-01020012831"></a>Versão 0.10.2001.2831
+
+*Data de lançamento: 29 de janeiro de 2020*
+
+Esta versão contém o seguinte:
+
+- Novo pacote NuGet Microsoft.Quantum.SDK, veja o [LEIAME](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md) para obter mais detalhes
+- Suporte adicionado para o .NET Core 3.1. É altamente recomendável ter a versão 3.1.100 instalada, pois a criação com versões mais antigas do SDK do .NET Core pode causar problemas
+- Novas transformações de compilador disponíveis em Microsoft.Quantum.QsCompiler.Experimental
+- Nova funcionalidade para expor vetores de estado de saída como HTML em IQ#
+- Adicionado suporte para EstimateFrequencyA para Microsoft.Quantum.Characterization para testes de SWAP e Hadamard
+- O namespace AmplitudeAmplification agora usa o guia de estilo do Q#
 
 ## <a name="version-01019120501"></a>Versão 0.10.1912.0501
 
@@ -357,7 +370,7 @@ Esta versão inclui várias contribuições da Comunidade, bem como uma experiê
 * Aprimoramento da funcionalidade de depuração.
 * Contribuições da Comunidade com correções de bugs, novas funções auxiliares, operações e novos exemplos.
 
-### <a name="performance-improvements"></a>Aprimoramentos de desempenho
+### <a name="performance-improvements"></a>Melhorias de desempenho
 
 Essa atualização inclui melhorias significativas de desempenho para a simulação de números grandes e pequenos de qubits para todos os computadores de destino.  Essa melhoria é facilmente visível com a simulação H<sub>2</sub> que é um exemplo padrão no Quantum Development Kit.
 
@@ -502,7 +515,7 @@ Esta versão corrige alguns problemas relatados pela Comunidade. Especificamente
 
 - O Simulador de Quantum usa OpenMP para paralelizar a álgebra linear necessária. Por padrão, o OpenMP usa todos os threads de hardware disponíveis, o que significa que programas com pequenos números de qubits geralmente serão executados lentamente, pois a coordenação necessária reduzirá o trabalho real. Isso pode ser corrigido definindo a variável de ambiente OMP_NUM_THREADS como um número pequeno. Como uma regra prática muito ampla, 1 thread é adequado para até cerca de 4 qubits e, em seguida, 1 thread adicional por qubit é adequado, embora isso seja altamente dependente de seu algoritmo.
 
-#### <a name="debugging"></a>Depurando
+#### <a name="debugging"></a>Depuração
 
 - F11 (step in) não funciona no código Q#.
 - O realce de código em Q# em um ponto de interrupção ou pausa em uma única etapa é, às vezes, impreciso. A linha correta será realçada, mas às vezes o realce será iniciado e terminará em colunas incorretas na linha.

@@ -18,7 +18,7 @@
           href: overview/how-to-learn-quantum-computing.md
     - name: Aprenda com o Quantum Katas
       href: intro-to-katas.md
-- name: Guia de início rápido
+- name: Inícios rápidos
   items:
     - name: Gerador de número quântico aleatório
       href: quickstarts/qrng.md
@@ -29,7 +29,15 @@
 - name: Guias de instruções
   items:
     - name: Instalar o QDK
-      href: install-guide/index.md
+      items:
+        - name: Visão geral da instalação
+          href: install-guide/index.md
+        - name: 'Q# + C#'
+          href: install-guide/csinstall.md
+        - name: 'Q# + Python'
+          href: install-guide/pyinstall.md
+        - name: 'Jupyter Notebooks do Q#'
+          href: install-guide/qjupyter.md
     - name: Atualizar o QDK
       href: install-guide/update.md
     - name: 'Criar um projeto Q#'
@@ -42,7 +50,7 @@
     - name: 'Linguagem de programação Q#'
       topicHref: language/index.md
       href: language/toc.yml
-    - name: 'Bibliotecas Q#'
+    - name: 'Bibliotecas do Q#'
       href: libraries/toc.yml
     - name: Conceitos da computação quântica
       href: concepts/toc.yml
