@@ -6,17 +6,17 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: c3039b92c4b3235a397d5cf31280ac2673706e9d
-ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
+ms.openlocfilehash: 134617455b720cc755b9ee9fb68fb59e624d3f1a
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73462842"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820888"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>Início Rápido: Implementar um Gerador de Número Quântico Aleatório em Q#
 Um exemplo simples de um algoritmo quântico escrito em Q# é um gerador de número quântico aleatório. Esse algoritmo usa a natureza da mecânica quântica para produzir um número aleatório. 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - O Microsoft [Quantum development kit](xref:microsoft.quantum.install).
 - [Criar um projeto Q#](xref:microsoft.quantum.howto.createproject)
@@ -33,10 +33,10 @@ Um exemplo simples de um algoritmo quântico escrito em Q# é um gerador de núm
         open Microsoft.Quantum.Intrinsic;
 
         operation QuantumRandomNumberGenerator() : Result {
-            using(q = Qubit())  { // Allocate a qubit.
-                H(q);             // Put the qubit to superposition. It now has a 50% chance of being 0 or 1.
-                let r = M(q);     // Measure the qubit value.
-                Reset(q);
+            using(qubit = Qubit())  { // Allocate a qubit.
+                H(qubit);             // Put the qubit to superposition. It now has a 50% chance of being 0 or 1.
+                let r = M(v);     // Measure the qubit value.
+                Reset(qubit);
                 return r;
             }
         }
@@ -57,16 +57,59 @@ Quando um `Qubit` for desalocado, ele deverá ser explicitamente definido de vol
 
 Na esfera Bloch, o polo norte representa o valor clássico **0** e o polo sul representa o valor clássico **1**. Qualquer sobreposição pode ser representada por um ponto na esfera (representada por uma seta). Quanto mais próxima a extremidade da seta estiver de um polo, maior a probabilidade de o qubit recolher o valor clássico atribuído a esse polo quando medido. Por exemplo, o estado do qubit representado pela seta vermelha abaixo terá uma probabilidade mais alta de dar o valor **0** se medirmos isso.
 
-<img src="./Bloch.svg" width="175">
+<img src="~/media/qrng-Bloch.png" width="175">
 
 Podemos usar essa representação para visualizar o que o código está fazendo:
 
 * Primeiro, começamos com um qubit inicializado no estado **0** e aplicamos `H` para criar uma sobreposição na qual as probabilidades de **0** e **1** são as mesmas.
 
-<img src="./H.svg" width="450">
+<img src="~/media/qrng-H.png" width="450">
 
 * Em seguida, medimos o qubit e salvamos a saída:
 
-<img src="./Measurement2.svg" width="450">
+<img src="~/media/qrng-meas.png" width="450">
 
 Como o resultado da medição é completamente aleatório, obtivemos um bit aleatório. Podemos chamar essa operação várias vezes para criar inteiros. Por exemplo, se chamarmos a operação três vezes para obter três bits aleatórios, poderemos criar números aleatórios de 3 bits (ou seja, um número aleatório entre 0 e 7).
+
+## <a name="creating-a-complete-random-number-generator-using-a-host-program"></a>Criar um gerador de número aleatório completo usando um programa de host
+
+Agora que temos uma operação em Q# que gera bits aleatórios, podemos usá-la para criar um gerador de número quântico aleatório completo com um programa de host.
+
+ ### <a name="python-with-visual-studio-code-or-the-command-linetabtabid-python"></a>[Python com Visual Studio Code ou a linha de comando](#tab/tabid-python)
+ 
+ Para executar o novo programa Q# no Python, salve o seguinte código como `host.py`:
+ 
+:::code language="python" source="~/quantum/samples/getting-started/qrng/host.py" range="11-30":::
+
+ Em seguida, execute o programa host do Python na linha de comando:
+ ```bash
+ $ python host.py
+ Preparing Q# environment...
+ ..The random number generated is 42
+ ```
+ ### <a name="c-with-visual-studio-code-or-the-command-linetabtabid-csharp"></a>[C# com Visual Studio Code ou a linha de comando](#tab/tabid-csharp)
+ 
+ Para executar o novo programa Q# no C#, modifique `Driver.cs` para incluir o seguinte código C#:
+ 
+ :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
+ 
+ Em seguida, execute o programa host do C# na linha de comando:
+ 
+ ```bash
+ $ dotnet run
+ The random number generated is 42
+ ```
+
+ ### <a name="c-with-visual-studio-2019tabtabid-vs2019"></a>[C# com Visual Studio 2019](#tab/tabid-vs2019)
+
+ Para executar seu novo programa em Q# no C# no Visual Studio, modifique `Driver.cs` para incluir o seguinte código C#:
+
+ :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
+
+ Em seguida, pressione F5. O programa iniciará a execução e uma nova janela será exibida com o número aleatório gerado: 
+
+ ```bash
+ $ dotnet run
+ The random number generated is 42
+ ```
+ ***
