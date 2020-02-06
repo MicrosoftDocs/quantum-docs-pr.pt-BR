@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870341"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036246"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterização e estatísticas do Quantum #
 
@@ -88,7 +88,7 @@ Seguindo a terminologia clássica tradicional, chamamos de $ \eqref{EQ: Phase-es
 
 Após observar uma `Result` da função de probabilidade de estimativa de fase iterativa, podemos usar a regra Bayes ' para prescrever o que deve acreditar que a fase esteja seguindo essa observação.
 Concretamente, \begin{Equation} \Pr (\phi | d) = \frac{\Pr (d | \phi) \Pr (\phi)} {\int \Pr (d | \phi) \Pr (\phi) {\mathrm d} \phi} \Pr (\phi), \end{Equation} em que $d na \\{\texttt{Zero}, \texttt{One}\\} $ é um `Result`e, em que $ \Pr (\phi) $ descreve nossos crenças anteriores sobre $ \phi $.
-Isso faz com que a natureza iterativa da estimativa de fase iterativa seja explícita, já que a distribuição posteriores $ \Pr (\phi | d) $ descreve nosso crenças imediatamente antes da nossa observação do próximo `Result`.
+Isso então torna a natureza iterativa da estimativa de fase iterativa explícita, já que a distribuição posteriores $ \Pr (\phi | d) $ descreve nosso crenças imediatamente antes da nossa observação da próxima `Result`.
 
 A qualquer momento durante esse procedimento, podemos relatar a fase $ \hat{\phi} $ inferida pelo controlador clássico como \begin{Equation} \hat{\phi} \mathrel{: =} \expect [\phi | \Text{data}] = \int \phi \Pr (\phi | \Text{Data}) {\mathrm d} \phi, \end{Equation}, em que $ \Text{data} $ significa todo o registro de todos os `Result` valores obtidos.
 

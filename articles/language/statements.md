@@ -6,16 +6,16 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 9a6f5d53ec21090d0c13f4369e0270d264cd1e9b
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821058"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036484"
 ---
 # <a name="statements-and-other-constructs"></a>Instruções e outras construções
 
-## <a name="comments"></a>Comentários
+## <a name="comments"></a>Comments
 
 Os comentários começam com duas barras, `//`e continuam até o fim da linha.
 Um comentário pode aparecer em qualquer lugar em um arquivo de origem Q #.
@@ -74,7 +74,7 @@ Os nomes a seguir são reconhecidos como cabeçalhos de comentário da documenta
 - **Consulte também**: uma lista de nomes totalmente qualificados que indica funções relacionadas, operações ou tipos definidos pelo usuário.
 - **Referências**: uma lista de referências e citações para o item que está sendo documentado.
 
-## <a name="namespaces"></a>Namespaces
+## <a name="namespaces"></a>{1&gt;Namespaces&lt;1}
 
 Cada operação de Q #, função e tipo definido pelo usuário é definido em um namespace.
 O Q # segue as mesmas regras para nomear como outras linguagens .NET.
@@ -191,7 +191,7 @@ Existe uma concatenação semelhante para expressões de copiar e atualizar no l
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
+function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -273,7 +273,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-e a
+e
 
 ```qsharp
 if (a == b) {
@@ -308,7 +308,7 @@ if (a == b) {
 ...
 ```
 
-## <a name="control-flow"></a>Fluxo de Controle
+## <a name="control-flow"></a>Fluxo de controle
 
 ### <a name="for-loop"></a>Loop For
 
@@ -475,7 +475,7 @@ ou
 return (results, qubits);
 ```
 
-### <a name="fail"></a>Falha
+### <a name="fail"></a>Reprovado
 
 A instrução Fail encerra a execução de uma operação e retorna um valor de erro para o chamador.
 Ela consiste na `fail`de palavras-chave, seguida por uma cadeia de caracteres e um ponto e vírgula de terminação.

@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 91f65b05c83367c2d2ece93212369dc448d8c2a8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821007"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036348"
 ---
 # <a name="quantum-algorithms"></a>Algoritmos Quantum #
 
@@ -48,7 +48,8 @@ Além disso, a eficiência da *transformação de Fourier Quantum* (QFT) supera 
 
 Como uma generalização aproximada do QFT, fornecemos a operação <xref:microsoft.quantum.canon.approximateqft> que permite mais otimizações por meio da remoção de rotações que não são estritamente necessárias para a precisão do algoritmo desejado.
 O QFT aproximado requer a <xref:microsoft.quantum.intrinsic.rfrac> operação de $Z $-Rotation, bem como a operação de <xref:microsoft.quantum.intrinsic.h>.
-Presume-se que a entrada e a saída sejam codificadas na codificação big endian (o menor bit/qubit está à esquerda, o mesmo que [ket Notation](xref:microsoft.quantum.concepts.dirac)).
+Presume-se que a entrada e a saída sejam codificadas na codificação big endian---ou seja, o qubit com o índice `0` é codificado no bit mais à esquerda (mais alto) da representação de inteiro binário.
+Isso se alinha com a [notação ket](xref:microsoft.quantum.concepts.dirac), como um registro de três qubits no estado $ \ket{100}$ corresponde a $q _0 $ estando no estado $ \ket{1}$, enquanto $q _1 $ e $q _2 $ estão ambos no estado $ \ket{0}$.
 O parâmetro de aproximação $a $ determina o nível de remoção do $Z $-rotações, ou seja, $a na [0.. n] $.
 Nesse caso, todos os $Z $-rotações $2 \ pi/2 ^ k $ em que $k > um $ são removidos do circuito QFT.
 É conhecido que para $k \ge \ log_2 (n) + \ log_2 (1/\epsilon) + $3. é possível associar $\\| \operatorname{QFT}-\operatorname{AQFT} \\| < \epsilon $.
@@ -56,7 +57,7 @@ Aqui, $\\| \cdot\\| $ é a norma do operador que, nesse caso, é a raiz quadrada
 
 ## <a name="arithmetic"></a>Aritmético ##
 
-Assim como a aritmética desempenha uma função central na computação clássica, ela também é indispensáveisda na computação Quantum.  Algoritmos como o algoritmo de fatoração do Atal, métodos de simulação do Quantum, bem como muitos algoritmos oracular dependem de operações aritméticas coerentes.  A maioria das abordagens para a compilação aritmética nos circuitos do adicionador Quantum.  O adicionador mais simples usa uma entrada clássica $b $ e adiciona o valor a um estado Quantum contendo um inteiro $ \ket{a} $.  Matematicamente, o adicionador (que denotamos $ \operatorname{Add} (b) $ para entrada clássica $b $) tem a propriedade que
+Assim como a aritmética desempenha uma função central na computação clássica, ela também é indispensável na computação Quantum.  Algoritmos como o algoritmo de fatoração do Atal, métodos de simulação do Quantum, bem como muitos algoritmos oracular dependem de operações aritméticas coerentes.  A maioria das abordagens para a compilação aritmética nos circuitos do adicionador Quantum.  O adicionador mais simples usa uma entrada clássica $b $ e adiciona o valor a um estado Quantum contendo um inteiro $ \ket{a} $.  Matematicamente, o adicionador (que denotamos $ \operatorname{Add} (b) $ para entrada clássica $b $) tem a propriedade que
 
 $ $ \operatorname{Add} (b) \ket{a} = \ket{a + b}.
 $ $ Esse circuito básico do adicionador é mais um incrementador do que um adicionador.

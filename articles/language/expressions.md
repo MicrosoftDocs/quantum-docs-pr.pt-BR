@@ -1,19 +1,19 @@
 ---
 title: Expressões | Microsoft Docs
-description: Expressões
+description: '{1&gt;Expressões&lt;1}'
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 09d493df4e1178fee1f7a5946cfda2f411111006
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185198"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036296"
 ---
-# <a name="expressions"></a>Expressões
+# <a name="expressions"></a>{1&gt;Expressões&lt;1}
 
 ## <a name="grouping"></a>Agrupamento
 
@@ -22,7 +22,7 @@ Por exemplo, `(7)` é uma expressão de `Int`, `([1,2,3])` é uma expressão do 
 
 A equivalência entre valores simples e tuplas de elemento único descritos no [modelo de tipo](xref:microsoft.quantum.language.type-model#tuple-types) remove a ambiguidade entre `(6)` como um grupo e `(6)` como uma tupla de elemento único.
 
-## <a name="symbols"></a>Symbol
+## <a name="symbols"></a>Símbolos
 
 O nome de um símbolo associado ou atribuído a um valor do tipo `'T` é uma expressão do tipo `'T`.
 Por exemplo, se o símbolo `count` estiver associado ao valor inteiro `5`, `count` será uma expressão de número inteiro.
@@ -61,7 +61,7 @@ Nesse caso, o segundo parâmetro deve caber em 32 bits; caso contrário, um erro
 
 Dadas duas expressões de inteiro ou de inteiro grande, um novo inteiro ou uma expressão de inteiro grande podem ser formados usando os operadores `%` (módulo), `&&&` (bit e), `|||` (bit-a-or) ou `^^^` ("XOR bit)".
 
-Dado um inteiro ou uma expressão de inteiro grande à esquerda e uma expressão de inteiro à direita, os operadores de `<<<` (deslocamento aritmético à esquerda) ou `>>>` (deslocamento aritmético à direita) podem ser usados para criar uma nova expressão com o mesmo tipo que a do lado esquerdo expressão.
+Dado um inteiro ou uma expressão de inteiro grande à esquerda e uma expressão de inteiro à direita, os operadores de `<<<` (deslocamento aritmético à esquerda) ou `>>>` (deslocamento aritmético à direita) podem ser usados para criar uma nova expressão com o mesmo tipo que a expressão à esquerda.
 
 O segundo parâmetro (o valor de deslocamento) para a operação de deslocamento deve ser maior ou igual a zero; o comportamento para valores de deslocamento negativos é indefinido.
 O valor de deslocamento para uma das operações de deslocamento também deve se ajustar a 32 bits; caso contrário, um erro de tempo de execução será gerado.
@@ -89,14 +89,14 @@ A nova expressão será o mesmo tipo da expressão constituinte.
 
 Dado qualquer inteiro ou expressão de inteiro grande, uma nova expressão do mesmo tipo pode ser formada usando o operador unário `~~~` (complemento bit-a).
 
-## <a name="boolean-expressions"></a>Expressões booleanas
+## <a name="boolean-expressions"></a>Expressões boolianas
 
 Os dois `Bool` valores literais são `true` e `false`.
 
 Dadas as duas expressões do mesmo tipo primitivo, os operadores binários `==` e `!=` podem ser usados para construir uma expressão de `Bool`.
-A expressão será true se as duas expressões forem (resp. is not) iguais.
+A expressão será true se as duas expressões forem iguais e false se não.
 
-Os valores de tipos definidos pelo usuário não podem ser comparados, apenas seus valores podem ser comparados. Por exemplo,
+Os valores de tipos definidos pelo usuário não podem ser comparados, apenas seus valores não encapsulados podem ser comparados. Por exemplo, usando o operador "Unwrap" `!` (explicado na [página de modelo do tipo Q #](xref:microsoft.quantum.language.type-model#user-defined-types)),
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -112,7 +112,7 @@ O estado dos dois qubits não são comparados, acessados, medidos ou modificados
 A comparação de igualdade para valores de `Double` pode ser enganosa devido a efeitos de arredondamento.
 Por exemplo, `49.0 * (1.0/49.0) != 1.0`.
 
-Dadas quaisquer duas expressões numéricas, os operadores binários `>`, `<`, `>=`e `<=` podem ser usados para construir uma nova expressão booliana que seja verdadeira se a primeira expressão for maior que, menor que, maior ou igual a ou menor ou igual à segunda expressão.
+Dadas quaisquer duas expressões numéricas, os operadores binários `>`, `<`, `>=`e `<=` podem ser usados para construir uma nova expressão booliana que seja verdadeira se a primeira expressão for maior que, menor que, maior ou igual ou menor ou igual à segunda.
 
 Dadas quaisquer duas expressões booleanas, os operadores binários `and` e `or` podem ser usados para construir uma nova expressão booliana que seja verdadeira se ambos (resp. ou ambos) as duas expressões forem true.
 
@@ -267,7 +267,7 @@ let f2 = Op(5, qb, _);      // f2 has type (Int => Unit is Adj)
 let f3 = Op(_,qb, _);       // f3 generates a compilation error
 ```
 
-### <a name="recursion"></a>Recursão
+### <a name="recursion"></a>{1&gt;Recursão&lt;1}
 
 Os chamadores do Q # podem ser recursivos direta ou indiretamente.
 Ou seja, uma operação ou função pode chamar a si mesma ou chamar outro callable que chama direta ou indiretamente a operação que pode ser chamada.
@@ -347,7 +347,7 @@ As matrizes que contêm qubits ou callables devem ser inicializadas corretamente
 
 Os valores padrão para cada tipo são:
 
-Type | Padrão
+Tipo | Padrão
 ---------|----------
  `Int` | `0`
  `BigInt` | `0L`
@@ -476,7 +476,7 @@ Por exemplo, no caso `a==b ? C(qs) | D(qs)`, se `a==b` for true, a operação de
 Isso é semelhante ao curto circuito em outras linguagens.
 
 
-## <a name="operator-precedence"></a>Precedência de operador
+## <a name="operator-precedence"></a>{1&gt;Precedência do operador&lt;1}
 
 Todos os operadores binários são associativos à direita, exceto para `^`.
 
@@ -488,7 +488,7 @@ Parênteses para operação e invocação de função também são associados an
 
 Operadores em ordem de precedência, do mais alto ao mais baixo:
 
-operador | Arity | Descrição | Tipos de operando
+Operador | Arity | Descrição | Tipos de operando
 ---------|----------|---------|---------------
  `!` à direita | Unário | Desencapsular | Qualquer tipo definido pelo usuário
  `-`, `~~~`, `not` | Unário | Numérico negativo, complemento de bit-nte, negação lógica | `Int`, `BigInt` ou `Double` para `-`, `Int` ou `BigInt` para `~~~`, `Bool` para `not`
@@ -498,7 +498,7 @@ operador | Arity | Descrição | Tipos de operando
  `<<<`, `>>>` | Binário | Deslocamento à esquerda, deslocamento à direita | `Int` ou `BigInt`
  `<`, `<=`, `>`, `>=` | Binário | Comparações de menor que, menor que ou igual a, maior que, maior que ou igual a | `Int`, `BigInt` ou `Double`
  `==`, `!=` | Binário | comparações iguais, não iguais | qualquer tipo primitivo
- `&&&` | Binário | E | `Int` ou `BigInt`
+ `&&&` | Binário | AND bit a bit | `Int` ou `BigInt`
  `^^^` | Binário | XOR bits | `Int` ou `BigInt`
  <code>\|\|\|</code> | Binário | OR-bit | `Int` ou `BigInt`
  `and` | Binário | AND lógico | `Bool`
