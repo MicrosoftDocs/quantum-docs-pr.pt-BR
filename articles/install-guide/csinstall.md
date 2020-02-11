@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 1fd829c684502092bb7491b0f46b5f690320c941
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831011"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036280"
 ---
 # <a name="develop-with-q--c"></a>Desenvolver com Q # +C#
 
@@ -23,7 +23,7 @@ O Q # foi criado para brincar bem com linguagens .NET – C#especificamente. Voc
 - [Q # + C# usando Visual Studio Code (Windows, Linux e Mac)](#VSC)
 - [Q # + C# usando a ferramenta de linha de comando `dotnet`](#command)
 
-## Desenvolver com Q # + C# usando o Visual Studio<a name="VS"></a>
+## Desenvolver com Q # + C# usando o Visual Studio <a name="VS"></a>
 
 O Visual Studio oferece um ambiente avançado para o desenvolvimento de programas em Q #. A extensão do Visual Studio para Q # contém modelos para arquivos e projetos do Q #, bem como realce de sintaxe, conclusão de código e suporte IntelliSense.
 
@@ -43,7 +43,7 @@ O Visual Studio oferece um ambiente avançado para o desenvolvimento de programa
         - Acesse **Arquivo** -> **Novo** -> **Projeto**
         - Digite `Q#` na caixa de pesquisa
         - Selecione **Aplicativo Q#**
-        - Selecione **Avançar**
+        - Selecione **Avançar**.
         - Escolha um nome e uma localização para seu aplicativo
         - Escolha **Criar**
 
@@ -59,7 +59,7 @@ O Visual Studio oferece um ambiente avançado para o desenvolvimento de programa
 > [!NOTE]
 > * Caso você tenha vários projetos em uma só solução do Visual Studio, todos os projetos contidos na solução precisarão estar na mesma pasta da solução ou em uma das subpastas.  
 
-## Desenvolver com Q # + C# usando Visual Studio Code<a name="VSC"></a>
+## Desenvolver com Q # + C# usando Visual Studio Code <a name="VSC"></a>
 
 O Visual Studio Code (VS Code) oferece um ambiente avançado para o desenvolvimento de programas em Q # no Windows, Linux e Mac.  A extensão Q # VS Code inclui suporte para realce de sintaxe Q #, conclusão de código e trechos de código Q #.
 
@@ -111,7 +111,7 @@ O Visual Studio Code (VS Code) oferece um ambiente avançado para o desenvolvime
 
 1. Instalar os modelos de projeto do Quantum para .NET
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
@@ -121,8 +121,8 @@ O Visual Studio Code (VS Code) oferece um ambiente avançado para o desenvolvime
 
     - Crie um novo aplicativo
 
-       ```bash
-       dotnet new console -lang Q# -o runSayHello
+       ```dotnetcli
+       dotnet new console -lang "Q#" -o runSayHello
        ```
 
     - Navegue até o diretório do novo aplicativo
@@ -135,7 +135,7 @@ O Visual Studio Code (VS Code) oferece um ambiente avançado para o desenvolvime
 
     - Executar o aplicativo
 
-        ```bash
+        ```dotnetcli
         dotnet run
         ```
 
