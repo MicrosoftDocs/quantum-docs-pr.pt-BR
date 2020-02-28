@@ -1,6 +1,6 @@
-- name: Referência
+- name: Referência de API
   items:
-    - name: 'Bibliotecas Q#'
+    - name: 'Bibliotecas do Q#'
       href: qsharp/toc.yml
     - name: Bibliotecas .NET
       items:
@@ -8,5 +8,5 @@
           href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
         - name: Química do Quantum
           href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry'
-    - name: Bibliotecas Python
+    - name: Bibliotecas do Python
       href: 'https://docs.microsoft.com/python/qsharp'
