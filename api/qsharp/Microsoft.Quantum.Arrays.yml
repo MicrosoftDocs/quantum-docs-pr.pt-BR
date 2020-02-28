@@ -7,6 +7,8 @@ functions:
   summary: Dada uma matriz e um predicado que é definido para os elementos da matriz e verifica se todos os elementos da matriz atendem ao predicado.
 - uid: microsoft.quantum.arrays.any
   summary: Dada uma matriz e um predicado que é definido para os elementos da matriz, verifica se pelo menos um elemento da matriz atende ao predicado.
+- uid: microsoft.quantum.arrays.chunks
+  summary: Divide uma matriz em várias partes de comprimento igual.
 - uid: microsoft.quantum.arrays.constantarray
   summary: Cria uma matriz de comprimento determinado com todos os elementos iguais ao valor fornecido.
 - uid: microsoft.quantum.arrays.enumerated
@@ -23,6 +25,8 @@ functions:
   summary: Retorna o primeiro índice do primeiro elemento em uma matriz que atende a um determinado predicado. Se nenhum elemento desse tipo existir, retornará-1.
 - uid: microsoft.quantum.arrays.indexrange
   summary: Dada uma matriz, retorna um intervalo sobre os índices dessa matriz, adequado para uso em um loop for.
+- uid: microsoft.quantum.arrays.isempty
+  summary: Retornará true se e somente se uma matriz estiver vazia.
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: Dada uma matriz, retorna uma função que retorna elementos dessa matriz.
 - uid: microsoft.quantum.arrays.mapped
@@ -51,6 +55,8 @@ functions:
   summary: Retorna o último elemento da matriz.
 - uid: microsoft.quantum.arrays.tuplearrayasnestedarray
   summary: Transforma uma lista de duas tuplas em uma matriz aninhada.
+- uid: microsoft.quantum.arrays.where
+  summary: Dado um predicado e uma matriz, retorna os índices dessa matriz em que o predicado é verdadeiro.
 - uid: microsoft.quantum.arrays.zip
   summary: Dadas duas matrizes, retorna uma nova matriz de pares, de modo que cada par contém um elemento de cada matriz original.
 - uid: microsoft.quantum.arrays.zip3
@@ -61,9 +67,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Dada uma matriz e uma operação que é definida para os elementos da matriz, retorna uma nova matriz que consiste nas imagens da matriz original sob a operação.
 metadata:
-  ms.openlocfilehash: 12835bef2608d979809027cb9a271f2cda864b10
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 5cbe8e172fda72d1016b407656c75457526651aa
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858863"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905583"
