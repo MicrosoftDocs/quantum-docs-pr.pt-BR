@@ -1,17 +1,18 @@
 ---
 title: Saiba como atualizar o Microsoft Quantum Development Kit (QDK)
+description: 'Descreve como atualizar seus projetos do Q # e o Microsoft Quantum Development Kit para a versão atual.'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: f19285ae0e008b3460d06430a236f098d716e268
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 264b5640216b2c0a468b625cdef4b9e0123d8b39
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036297"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904750"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Atualizar o Microsoft Quantum Development Kit (QDK)
 
@@ -71,7 +72,7 @@ Agora você pode pular para [atualizar sua extensão QDK do Visual Studio](#upda
 ### <a name="update-q-projects-using-the-command-line"></a>Atualizar projetos do Q # usando a linha de comando
 
 1. Navegue até a pasta que contém o arquivo de projeto
-2. Execute o seguinte comando:
+2. Execute o comando a seguir:
 
     ```dotnetcli
     dotnet clean [project_name].csproj
@@ -85,7 +86,7 @@ Agora você pode pular para [atualizar sua extensão QDK do Visual Studio](#upda
     ```
 
     Você pode encontrar mais detalhes sobre como especificar estruturas de destino [aqui](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
-4. Execute o seguinte comando:
+4. Execute o comando a seguir:
 
     ```dotnetcli
     dotnet add package Microsoft.Quantum.Development.Kit

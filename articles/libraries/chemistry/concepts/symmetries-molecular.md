@@ -1,22 +1,22 @@
 ---
-title: Symmetries dos integrantes do molecular | Microsoft Docs
-description: Documentos conceituais do Symmetries of molecular integrais
+title: Symmetries de integrantes do molecular
+description: 'Saiba mais sobre como usar o tipo Q # OrbitalIntegral para enumerar molecular Symmetries.'
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
-ms.openlocfilehash: 041d600bc8d65e7d67f5fe7d61a69426fb42ffbc
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: b7e7b79af17af544c4a784eff08500498afc9f67
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442395"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904461"
 ---
 # <a name="symmetries-of-molecular-integrals"></a>Symmetries de integrantes do molecular
 
-A simetria inerente do Coulomb Hamiltonian, que é o Hamiltonian fornecido em [modelos Quantum para sistemas eletrônicos](xref:microsoft.quantum.chemistry.concepts.quantummodels), que descreve elétrons interagindo eletricamente entre si e com a nuclei, leva a uma série de Symmetries que podem ser explorada para compactar os termos no Hamiltonian.
-Em geral, se não forem feitas mais suposições sobre as funções de base $ \psi_j $, temos apenas que \begin{Equation} h_ {PQRS} = h_ {qpsr}, \tag{★} \label{EQ: hpqrs} \end{Equation} que podem ser vistos imediatamente dos integrantes em [modelos Quantum para Sistemas eletrônicos](xref:microsoft.quantum.chemistry.concepts.quantummodels) , ao observar que seus valores permanecem idênticos se $p, q $ e $r, s $ são trocados de anti-commutação.
+A simetria inerente do Coulomb Hamiltonian, que é o Hamiltonian fornecido em [modelos Quantum para sistemas eletrônicos](xref:microsoft.quantum.chemistry.concepts.quantummodels), que descreve elétrons interagindo eletricamente entre si e com a nuclei, leva a uma série de Symmetries que podem ser explorados para compactar os termos no Hamiltonian.
+Em geral, se não forem feitas mais suposições sobre as funções base $ \ psi_j $, temos apenas que \begin{Equation} h_ {PQRS} = h_ {qpsr}, \tag{★} \label{EQ: hpqrs} \end{Equation}, que pode ser visto imediatamente a partir dos integrantes de [modelos Quantum para sistemas eletrônicos](xref:microsoft.quantum.chemistry.concepts.quantummodels) , ao observar que seus valores permanecem idênticos se $p, q $ e $r, s $ são trocados de anti-commutação.
 
 Se presumirmos que os giros girados sejam de valor real (como são para bases orbital gaussianas), então, temos mais que \begin{Equation} h_ {PQRS} = h_ {qpsr} = h_ {srqp} = h_ {rspq} = h_ {rqps} = h_ {psrq} = h_ {SPQR} = h_ {qrsp} .\tag {★} \label{EQ: hpqrsreal} \end{ Equation} considerando tais suposições, podemos usar o Symmetries acima para reduzir os dados necessários para armazenar os elementos de matriz do Hamiltonian por um fator de $8 $; Embora isso torne a importação de dados de forma consistente um pouco mais desafiador.
 Felizmente, a biblioteca de simulação de Hamiltonian tem sub-rotinas que podem ser usadas para importar arquivos inteiros de [liqui $ | \rangle $](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/) ou diretamente do [NWChem](http://www.nwchem-sw.org/index.php/Main_Page).

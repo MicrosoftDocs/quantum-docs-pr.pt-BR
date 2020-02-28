@@ -1,17 +1,17 @@
 ---
-title: 'P # bibliotecas padrão-algoritmos | Microsoft Docs'
-description: Bibliotecas padrão Q#
+title: 'Algoritmos Quantum em Q #'
+description: Saiba mais sobre algoritmos de computação básicos da Quantum, incluindo amplificação de amplitude, transformação de Fourier, somas Draper e Beauregard e estimativa de fase.
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: aaa9ddf47e5ea35e7e57b9828db082889d0e6adf
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036348"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907232"
 ---
 # <a name="quantum-algorithms"></a>Algoritmos Quantum #
 

@@ -1,24 +1,24 @@
 ---
-title: Oracle Quantum | Microsoft Docs
-description: Oracle Quantum
+title: Oracles Quantum
+description: Saiba como trabalhar com e definir os Oracle da Quantum, as operações de caixa preta que são usadas como entrada para outro algoritmo.
 author: cgranade
 uid: microsoft.quantum.concepts.oracles
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 07/11/2018
 ms.topic: article
-ms.openlocfilehash: 96949b371a3a5a1135d624690933a48ea0214a2e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1d1d0b0903db8e994166c3e8a5798f70742a1c7e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184705"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904920"
 ---
 # <a name="quantum-oracles"></a>Oracle Quantum
 
 Um Oracle $O $ é uma operação de "caixa preta" que é usada como entrada para outro algoritmo.
 Muitas vezes, essas operações são definidas usando uma função clássica $f: \\{0, 1\\} ^ n \tO \\{0, 1\\} ^ m $, que usa uma entrada binária de $n de $ bits e produz uma saída binária de $ bits de $m.
 Para fazer isso, considere uma entrada binária específica $x = (x_{0}, x_{1}, \dots, x_ {n-1}) $.
-Podemos rotular Estados qubit como $ \ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cdots \otimes \ket{x_{n-1}} $.
+Podemos rotular Estados qubit como $ \ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cdots \otimes \ket{x_ {n-1}} $.
 
 Primeiro, podemos tentar definir $O $ para que $O \ket{x} = \ket{f (x)} $, mas isso tem alguns problemas.
 Primeiro, $f $ pode ter um tamanho diferente de entrada e saída ($n \ne m $), de modo que a aplicação de $O $ alteraria o número de qubits no registro.
@@ -43,16 +43,16 @@ Isso é seguido imediatamente do fato de que $O $, como todas as operações de 
 Considere a operação Hadamard, por exemplo, que é definida por $H \ket{0} = \ket{+} $ e $H \ket{1} = \ket{-}$.
 Se quisermos saber como $H $ age em $ \ket{+} $, podemos usar essa $H $ é linear,
 
-$ $ \begin{align} H\ket {+} & = \frac{1}{\sqrt{2}} H (\ket{0} + \ket{1}) = \frac{1}{\sqrt{2}} (H\ket{0} + H\ket{1}) \\\\ & = \frac{1}{\sqrt{2}} (\ ket {+} + \ket{-}) = \frac12 (\ket{0} + \ket{1} + \ket{0}-\ket{1}) = \ket{0}.
+$ $ \begin{align} H\ket {+} & = \frac{1}{\sqrt{2}} H (\ket{0} + \ket{1}) = \frac{1}{\sqrt{2}} (H\ket{0} + H\ket{1}) \\\\ & = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-}) = \frac12 (\ket{0} + \ket{1} + \ket{0}-\ket{1}) = \ket{0}.
 \end{align} $ $
 
 No caso da definição de nosso Oracle $O $, podemos usar de forma semelhante que qualquer estado $ \ket{\psi} $ em $n + m $ qubits pode ser escrito como
 
-$ $ \begin{align} \ket{\psi} & = \sum_{x na \\{0, 1\\} ^ n, y na \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y} \end{align} $ $
+$ $ \begin{align} \ket{\psi} & = \ sum_ {x na \\{0, 1\\} ^ n, y na \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y} \end{align} $ $
 
 em que $ \alpha: \\{0, 1\\} ^ n \times \\{0, 1\\} ^ m \tO \mathbb{C} $ representa os coeficientes do estado $ \ket{\psi} $. Dessa
 
-$ $ \begin{align} O \ket{\psi} & = O \sum_{x na \\{0, 1\\} ^ n, y na \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y} \\\\ & = \sum_{x na \\{0 , 1\\} ^ n, y na \\{0, 1\\} ^ m} \alpha (x, y) O \ket{x} \ket{y} \\\\ & = \sum_{x na \\{0, 1\\} ^ n, y na \\{0 , 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y \oplus f (x)}.
+$ $ \begin{align} O \ket{\psi} & = O \ sum_ {x na \\{0, 1\\} ^ n, y na \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y} \\\\ & = \ sum_ {x na \\{0, 1\\} ^ n, y na \\{0, 1\\} ^ m} \alpha (x, y) O \ket{x} \ket{y} \\\\ & = \ sum_ {x na \\{0, 1\\} ^ n , y na \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y \oplus f (x)}.
 \end{align} $ $
 
 ## <a name="phase-oracles"></a>Fase Oracle
@@ -60,8 +60,8 @@ Como alternativa, podemos codificar $f $ em um Oracle $O $ aplicando uma _fase_ 
 Por exemplo, podemos definir $O $ de modo que $ $ \begin{align} O \ket{x} = (-1) ^ {f (x)} \ket{x}.
 \end{align} $ $ se uma fase Oracle age em um registro inicialmente em um estado de base computacional $ \ket{x} $, essa fase é uma fase global e, portanto, não observável.
 Mas tal Oracle pode ser um recurso muito potente se aplicado a uma superposição ou como uma operação controlada.
-Por exemplo, considere uma fase orcale $O _F $ para uma função qubit única $f $.
-Em seguida, $ $ \begin{align} O_f \ket{+} & = O_f (\ket{0} + \ket{1})/\sqrt{2} \\\\ & = ((-1) ^ {f (0)} \ket{0} + (-1) ^ {f (1)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f ( 0)} (\ket{0} + (-1) ^ {f (1)-f (0)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket{+}.
+Por exemplo, considere uma fase orcale $O _f $ para uma função de qubit única $f $.
+Em seguida, $ $ \begin{align} O_f \ket{+} & = O_f (\ket{0} + \ket{1})/\sqrt{2} \\\\ & = ((-1) ^ {f (0)} \ket{0} + (-1) ^ {f (1)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} (\ket{0} + (-1) ^ {f (1)-f (0)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket{+}.
 \end{align} $ $
 
 Em geral, as duas exibições de Oracle podem ser ampliadas para representar funções clássicas que retornam números reais em vez de apenas um único bit.

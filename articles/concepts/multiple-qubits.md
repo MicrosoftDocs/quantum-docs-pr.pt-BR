@@ -1,17 +1,17 @@
 ---
-title: Vários qubits | Microsoft Docs
-description: Vários qubits
+title: Vários qubits
+description: Saiba como executar operações em dois ou mais qubits.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e9c043f4ee41a878b9544a27d5ea052fce29f06e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863209"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907538"
 ---
 # <a name="multiple-qubits"></a>Vários qubits
 
@@ -27,12 +27,12 @@ Essas ferramentas são absolutamente necessárias para entender os conjuntos de 
 
 ## <a name="representing-two-qubits"></a>Representando dois qubits
 A principal diferença entre os Estados de um e dois qubit é que os Estados de dois qubit são bidimensionais em vez de bidimensionais.
-Isso ocorre porque a base computacional para Estados de duas qubit é formada pelos produtos tensor de Estados One-qubit.  Por exemplo, temos \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.
+Isso ocorre porque a base computacional para Estados de duas qubit é formada pelos produtos tensor de Estados One-qubit.  Por exemplo, temos \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.\\
 \end{align}
 
 É fácil ver que, geralmente, o estado da Quantum de $n $ qubits é representado por um vetor de unidade da dimensão $2 ^ n $ usando essa construção.  O vetor
 
-$ $ \begin{bmatrix} \ alpha_{00} \\\\ alpha_{01} \\\\ \end{bmatrix} alpha_{10} \\, \\ alpha_ $ $
+$ $ \begin{bmatrix} \ alpha_{00} \\\\ alpha_{01} \\\\ \end{bmatrix} alpha_{10} \\, \\ alpha_ $ ${11}
 
 representa um estado Quantum em dois qubits se $ | \ alpha_{00}| ^ 2 + | \ alpha_{01}| ^ 2 + | \ alpha_{10}| ^ 2 + | \ alpha_{11}| ^ 2 = 1 $. Assim como ocorre com qubits único, o vetor de estado do quantum de vários qubits contém todas as informações necessárias para descrever o comportamento do sistema.
 
@@ -50,7 +50,7 @@ Esse estado de duas qubit, que não pode ser escrito como o produto tensor de Es
 ## <a name="measuring-two-qubit-states"></a>Medindo Estados de duas qubit ##
 Medir Estados de duas qubit é muito semelhante a medições de qubit único. Medindo o estado
 
-$ $ \begin{bmatrix} \ alpha_{00} \\\\ alpha_{01} \\\\ \end{bmatrix} alpha_{10} \\, \\ alpha_ $ $
+$ $ \begin{bmatrix} \ alpha_{00} \\\\ alpha_{01} \\\\ \end{bmatrix} alpha_{10} \\, \\ alpha_ $ ${11}
 
 produz $0 $ com probabilidade $ | \ alpha_{00}| ^ $2, $1 $ com probabilidade $ | \ alpha_{01}| ^ $2, $10 $ com probabilidade $ | \ alpha_{10}| ^ $2 e $11 $ com probabilidade $ | \ alpha_{11}| ^ $2. As variáveis $ \ alpha_{00}, \ alpha_{01}, \ alpha_{10}, $ e $ \ alpha_{11}$ foram deliberadamente nomeadas para tornar essa conexão clara. Após a medição, se o resultado for $0 $, o estado do quantum do sistema de duas qubit foi recolhido e agora é
 
@@ -103,7 +103,7 @@ Também podemos formar Gates de duas qubit aplicando Gates de qubit único em am
 
 $ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix} $ $
 
-e a
+e
 
 $ $ \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} $ $
 

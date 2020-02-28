@@ -1,17 +1,17 @@
 ---
-title: Teoria de Hartree-Fock | Microsoft Docs
-description: Documentos de teoria de Hartree-Fock
+title: Teoria de Hartree-Fock
+description: Saiba mais sobre a teoria do Hartree – Fock, uma maneira simples de construir o estado inicial para sistemas Quantum.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.hartreefock
-ms.openlocfilehash: e73111ae710e11ca6730581b8be711cf32783677
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6fa63cbe13fe98565ffb42b56f3ade86720cedb3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184093"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904444"
 ---
 # <a name="hartreefock-theory"></a>Hartree – teoria de Fock
 
@@ -22,10 +22,10 @@ Quantidades como energia de estado terrestre podem ser aprendidas.
 Por exemplo, se $ \ket{\psi} $ for qualquer estado de Quantum puro, então \begin{Equation} E = \bra{\psi} \hat{H} \ket{\psi} \end{Equation} proporcionará a energia média que o sistema tem nesse estado.
 O estado de aterramento é o estado que fornece o menor valor desse. Como resultado, escolher um estado que seja o mais próximo possível do estado de terra real é vitalmente importante para estimar a energia diretamente (como é feito no eigensolvers de variação) ou por meio de estimativa de fase.
 
-Hartree – a teoria de Fock oferece uma maneira simples de construir o estado inicial para sistemas Quantum. Ele produz uma única aproximação Slater-determinante para o estado de aterramento de um sistema Quantum. Para esse fim, ele encontra uma rotação no Fock que minimiza a energia do estado do solo. Em particular, para um sistema de $N $ elétrons, o método executa a rotação \begin{Equation} \prod_{j = 0} ^ {N-1} a ^ \dagger_j \ket{0} \mapsto \prod_{j = 0} ^ {N-1} e ^ {u} a ^ \dagger_j e ^ {-u} \ket{0}\defeq\prod_{j = 0} ^ {N-1} \widetilde{a} ^ \dagger _J \ket{0}, \end{Equation} com um Hermitian (ou seja, $u =-u ^ \dagger $) Matrix $u = \sum_{pq} U_ {pq} a ^ \dagger_p a_q $. Deve-se observar que a matriz $u $ representa as rotações de orbital e $ \widetilde{a} ^ \dagger_j $ e $ \widetilde{a}_J $ representam os operadores de criação e Annihilation para elétrons ocupando Hartree – Fock molecular spin-órbitas.
+Hartree – a teoria de Fock oferece uma maneira simples de construir o estado inicial para sistemas Quantum. Ele produz uma única aproximação Slater-determinante para o estado de aterramento de um sistema Quantum. Para esse fim, ele encontra uma rotação no Fock que minimiza a energia do estado do solo. Em particular, para um sistema de $N $ elétrons, o método executa a rotação \begin{Equation} \ prod_ {j = 0} ^ {N-1} a ^ \ dagger_j \ket{0} \mapsto \ prod_ {j = 0} ^ {N-1} e ^ {u} a ^ \ dagger_j e ^ {-u} \ket{0}\defeq\ prod_ {j = 0} ^ {N-1} \widetilde{a} ^ \ dagger_j \ket{0}, \end{Equation} com um Hermitian (ou seja, $u =-u ^ \dagger $) Matrix $u = \ sum_ {pq} u_ {pq} a ^ \ dagger_p a_q $. Deve-se observar que a matriz $u $ representa as rotações orbital e $ \widetilde{a} ^ \ dagger_j $ e $ \widetilde{a} _j $ representam os operadores de criação e Annihilation para elétrons ocupando Hartree – Fock molecular spin-órbitas.
 
 
-A matriz $u $ é otimizada para minimizar o esperado Energy $ \bra{0} \prod_{j = 0} ^ {N-1} \widetilde{a}\_j H \prod\_{k = 0} ^ {N-1} \widetilde{a} ^ \dagger_k\ket{0}$. Embora esses problemas de otimização possam ser genericamente difíceis, na prática, o algoritmo Hartree – Fock tende a convergir rapidamente para uma solução quase ideal para o problema de otimização, especialmente para moléculas de shell fechado nas geometrias de equilíbrio. Podemos especificar esses Estados como uma instância do objeto `FermionWavefunction`. Por exemplo, o estado $a ^ \dagger_{1}um ^ \dagger_{2}um ^ \dagger_{6}\ket{0}$ é instanciado na biblioteca química da seguinte maneira.
+A matriz $u $ é otimizada para minimizar o esperado Energy $ \bra{0} \ prod_ {j = 0} ^ {N-1} \widetilde{a}\_j H \prod\_{k = 0} ^ {N-1} \widetilde{a} ^ \ dagger_k \ket{0}$. Embora esses problemas de otimização possam ser genericamente difíceis, na prática, o algoritmo Hartree – Fock tende a convergir rapidamente para uma solução quase ideal para o problema de otimização, especialmente para moléculas de shell fechado nas geometrias de equilíbrio. Podemos especificar esses Estados como uma instância do objeto `FermionWavefunction`. Por exemplo, o estado $a ^ \ dagger_{1}um ^ \ dagger_{2}um ^ \ dagger_{6}\ket{0}$ é instanciado na biblioteca química da seguinte maneira.
 ```csharp
 // Create a list of integer indices of the creation operators
 var indices = new[] { 1, 2, 6 };

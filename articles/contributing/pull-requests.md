@@ -1,19 +1,19 @@
 ---
-title: Abrindo solicitações pull | Microsoft Docs
-description: Abrindo solicitações pull
+title: Abrindo solicitações pull
+description: Saiba como enviar uma solicitação de pull do GitHub quando estiver pronto para contribuir com código ou documentação para o Microsoft Quantum Development Kit.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: d70a0a0319d14cfdae4910b897733d77b236f2f9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183719"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907453"
 ---
-# <a name="opening-pull-requests"></a>Abrindo solicitações pull #
+# <a name="opening-pull-requests"></a>Abrir solicitações de pull #
 
 Toda a documentação do kit de desenvolvimento Quantum é gerenciada usando o sistema de controle de versão do git por meio do uso de vários repositórios hospedados no GitHub.
 O uso do git e do GitHub juntos torna mais fácil colaborar amplamente no kit de desenvolvimento Quantum.
@@ -42,19 +42,19 @@ Em geral, desenhamos diagramas nos quais as confirmações são desenhadas como 
 Suponha que você tenha iniciado uma contribuição em uma _ramificação_ chamada `feature`.
 Em seguida, sua bifurcação da **Microsoft/Quantum** pode ser semelhante a esta:
 
-![](~/media/git-workflow-step0.png)
+![Um Branch de trabalho no GitHub](~/media/git-workflow-step0.png)
 
 Se você fizer as alterações em seu repositório local, poderá efetuar _pull_ de alterações de outro repositório em seu para obter as alterações que ocorreram upstream.
 
-![](~/media/git-workflow-step1.png)
+![Pull e mesclagem de alterações de um repositório upstream](~/media/git-workflow-step1.png)
 
 As solicitações de pull funcionam da mesma forma, mas na ordem inversa: quando você abre uma solicitação de pull, solicita o repositório upstream para efetuar o pull da sua contribuição.
 
-![](~/media/git-workflow-step2.png)
+![Solicitando o pull de suas alterações de volta para o repositório original](~/media/git-workflow-step2.png)
 
 Quando você abre uma solicitação de pull para um de nossos repositórios, o GitHub oferecerá uma oportunidade para que outras pessoas na Comunidade vejam um resumo das suas alterações, para comentar sobre elas e para fazer sugestões de como ajudar a fazer uma contribuição ainda melhor.
 
-![](~/media/pull-request-header.png)
+![Captura de tela de uma solicitação de pull no GitHub](~/media/pull-request-header.png)
 
 O uso desse processo nos ajuda a usar a funcionalidade do GitHub para melhorar as contribuições e manter um produto de alta qualidade para a comunidade de programação Quantum.
 
@@ -84,7 +84,7 @@ This way, you can edit your personal fork to your heart's content before making 
 
 -->
 
-## <a name="next-steps"></a>Próximos passos ##
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1} ##
 
 Parabéns por usar o Git para ajudar a Comunidade do kit de desenvolvimento do Quantum!
 Para saber mais sobre como contribuir com código, continue com o guia a seguir.

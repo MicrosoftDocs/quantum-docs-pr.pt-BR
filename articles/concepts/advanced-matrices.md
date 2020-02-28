@@ -1,17 +1,17 @@
 ---
-title: Conceitos de matriz avançada | Microsoft Docs
-description: Conceitos de matriz avançada
+title: Conceitos avançados sobre matriz
+description: Saiba mais sobre os exponenciais eigenvectors, eigenvalues e Matrix, as ferramentas fundamentais usadas para descrever e simular algoritmos Quantum.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.matrix-advanced
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f87b3bcd19d2f98fea2a9724a280781a78c4cbb9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a83911e01ad758bbcb7f701000fd58b4f1c91cd2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183753"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907572"
 ---
 # <a name="advanced-matrix-concepts"></a>Conceitos de matriz avançada #
 
@@ -32,14 +32,14 @@ $$
 
 Os vetores
 
-$ $ \begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0 \ fim {bmatrix} e \begin{bmatrix}0 \\\\ 0 \\\\ 1 \ encerrar {bmatrix} $ $
+$ $ \begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0 \ fim {bmatrix} e \begin{bmatrix}0 \\\\ 0 \\\\ 1 \ fim {bmatrix} $ $
 
 são eigenvectors dessa matriz com eigenvalues $d _1 $, $d _2 $ e $d _3 $, respectivamente. Se $d _1 $, $d _2 $ e $d _3 $ forem números distintos, esses vetores (e seus múltiplos) serão os únicos eigenvectors da matriz $D $. Em geral, para uma matriz diagonal, é fácil ler eigenvalues e eigenvectors. Eigenvalues são todos os números que aparecem na diagonal, e seus respectivos eigenvectors são os vetores de unidade com uma entrada igual a $1 $ e as entradas restantes iguais a $0 $.
 
 Observe no exemplo acima que o eigenvectors de $D $ forma uma base para vetores $3 $-dimensional. Uma base é um conjunto de vetores, de modo que qualquer vetor pode ser escrito como uma combinação linear deles. Mais explicitamente, $v _1 $, $v _2 $ e $v _3 $ formam uma base se qualquer vetor $v $ puder ser escrito como $v = a_1 v_1 + a_2 v_2 + a_3 v_3 $ para alguns números $a _1 $, $a _2 $ e $a _3 $.
 
 Lembre-se de que uma matriz Hermitian (também chamada de auto-adjacente) é uma matriz quadrada complexa igual à sua própria conjugada complexa, enquanto uma matriz unitário é uma matriz quadrada complexa cujo inverso é igual ao seu conjugado complexo.
-Para matrizes Hermitian e unitários, que são essencialmente as únicas matrizes encontradas na computação Quantum, há um resultado geral conhecido como [*Spectral teorema*](https://en.wikipedia.org/wiki/Spectral_theorem), que declara o seguinte: para qualquer matriz Hermitian ou unitário $M $, existe um o unitário $U $ de forma que $M = U ^ \dagger D U $ para alguma matriz diagonal $D $. Além disso, as entradas diagonais de $D $ serão o eigenvalues de $M $.
+Para matrizes Hermitian e unitários, que são essencialmente as únicas matrizes encontradas na computação Quantum, há um resultado geral conhecido como [*Spectral teorema*](https://en.wikipedia.org/wiki/Spectral_theorem), que declara o seguinte: para qualquer matriz Hermitian ou unitário $M $, existe um $U unitário, que $M = u ^ \Dagger D U $ para alguma matriz diagonal $D $. Além disso, as entradas diagonais de $D $ serão o eigenvalues de $M $.
 
 Já sabemos como calcular o eigenvalues e o eigenvectors de uma matriz diagonal $D $. Usando este teorema, sabemos que, se $v $ for um eigenvector de $D $ com eigenvalue $c $, ou seja, $Dv = CV $, $U ^ \dagger v $ será um eigenvector de $M $ com eigenvalue $c $. Isso ocorre porque
 

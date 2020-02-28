@@ -1,21 +1,21 @@
 ---
-title: Usando a biblioteca de numéricos | Microsoft Docs
-description: Usando a biblioteca de numéricos
+title: 'Usando a biblioteca de numéricos do Microsoft Q #'
+description: Saiba mais sobre os tipos e as operações disponíveis na biblioteca de numéricos do Microsoft Quantum.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821024"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907249"
 ---
 # <a name="using-the-numerics-library"></a>Usando a biblioteca de numéricos
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 A biblioteca de numéricos consiste em três componentes
 
@@ -36,7 +36,7 @@ A biblioteca de numéricos dá suporte aos seguintes tipos
 1. **`SignedLittleEndian`** : o mesmo que `LittleEndian`, exceto que ele representa um inteiro assinado armazenado no complemento de dois.
 1. **`FixedPoint`** : representa um número real que consiste em uma matriz qubit `qArr2 : Qubit[]` e uma posição de ponto binário `pos`, que conta o número de dígitos binários à esquerda do ponto binário. `qArr2` é armazenada da mesma maneira que `SignedLittleEndian`.
 
-## <a name="operations"></a>Operations
+## <a name="operations"></a>Operações
 
 Para cada um dos três tipos acima, uma variedade de operações está disponível:
 
@@ -109,7 +109,7 @@ EvaluateOddPolynomialFxP([1.0, 2.0], x, y);
 ```
 que avalia $P _ {Odd} (x) = x + 2x ^ 3 $.
 
-## <a name="more-samples"></a>Mais amostras
+## <a name="more-samples"></a>Mais exemplos
 
 Você pode encontrar mais exemplos no [repositório principal de exemplos](https://github.com/Microsoft/Quantum).
 

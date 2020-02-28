@@ -1,18 +1,18 @@
 ---
-title: Microsoft Quantum Development Kit software de terceiros | Microsoft Docs
-description: Microsoft Quantum Development Kit software de terceiros
+title: Microsoft Quantum Development Kit software de terceiros
+description: Microsoft Quantum Development Kit avisos e informações de software de terceiros.
 services: service-name-with-dashes-AZURE-ONLY
 keywords: Não adicione ou edite palavras-chave sem consultar seu especialista em SEO.
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
-ms.openlocfilehash: 85bade791c0744d6636d60fe4f7c9b8f7749c7c6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 84d83bf65b3c01a630d98210a5ac3fe322fa501f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184365"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906807"
 ---
 # <a name="third-party-software-notices-and-information"></a>AVISOS E INFORMAÇÕES DE SOFTWARE DE TERCEIROS
 
@@ -20,7 +20,7 @@ Esse arquivo se baseia ou incorpora material dos projetos listados abaixo (IP de
 
 1. YamlDotNet. versão assinada 4.2.2 (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
 2. xUnit. Runner. VisualStudio 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
-3. xUnit. Runner. console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1 )
+3. xUnit. Runner. console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1)
 4. xUnit. Extensibility. Execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
 5. xUnit. Extensibility. Core 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.core/2.3.1)
 6. xUnit. Core 2.3.1 (https://www.nuget.org/packages/xunit.core/2.3.1)
@@ -39,7 +39,7 @@ Esse arquivo se baseia ou incorpora material dos projetos listados abaixo (IP de
 ---------------------------------------
 Copyright (c) 2008, 2009, 2010, 2011, 2012, 2013, 2014 Antoine Aubry e colaboradores
 
-A permissão é concedida, sem encargos, a qualquer pessoa que obtenha uma cópia deste software e os arquivos de documentação associados (o "software"), para lidar com o software sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, mesclagem Publique, distribua, sublicenciamento e/ou venda de cópias do software e para permitir que pessoas com quem o software é fornecido façam isso, sujeito às seguintes condições:
+A permissão é concedida, sem encargos, a qualquer pessoa que obtenha uma cópia deste software e os arquivos de documentação associados (o "software"), para lidar com o software sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, mesclagem, publicação, distribuição, sublicença e/ou venda de cópias do software e para permitir que pessoas com quem o software é fornecido, estejam sujeitas às seguintes condições:
 
 O aviso de direitos autorais acima e esse aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do software.
 
@@ -180,7 +180,7 @@ Um "colaborador" é qualquer pessoa que distribua sua contribuição sob esta li
 
 (A) concessão de direitos autorais-sujeito aos termos desta licença, incluindo as condições de licença e as limitações na seção 3, cada colaborador concede a você uma licença de copyright não exclusiva, mundial e isenta de royalties para reproduzir sua contribuição, preparar derivativo funciona de sua contribuição e distribui sua contribuição ou quaisquer trabalhos derivativos que você criar.
 
-(B) concessão de patente-sujeito aos termos desta licença, incluindo as condições de licença e as limitações na seção 3, cada colaborador concede a você uma licença não exclusiva, em todo o mundo, isenta de royalties sob suas patentes licenciadas para fazer, ter feito, usar, vender, oferecer para venda, importação e/ou, de outra forma, descarte sua contribuição no software ou trabalhos derivativos da contribuição no software.
+(B) concessão de patente-sujeito aos termos desta licença, incluindo as condições de licença e as limitações na seção 3, cada colaborador concede a você uma licença não exclusiva, mundial, isenta de royalties sob suas patentes licenciadas para fazer, ter feito, usar, vender, oferecer para venda, importação e/ou, de outra forma, descartar sua contribuição no software ou trabalhos derivativos da contribuição no software.
 
 3. Condições e limitações
 
@@ -192,7 +192,7 @@ Um "colaborador" é qualquer pessoa que distribua sua contribuição sob esta li
 
 (D) se você distribuir qualquer parte do software no formulário de código-fonte, poderá fazer isso somente sob essa licença, incluindo uma cópia completa dessa licença com sua distribuição. Se você distribuir qualquer parte do software no formulário compilado ou de código de objeto, você só poderá fazer isso sob uma licença que esteja em conformidade com essa licença.
 
-(E) o software é licenciado "no estado em que se encontra". Você aceita o risco de utilizá-lo. Os colaboradores não oferecem garantias ou condições expressas. Você pode ter direitos de consumidor adicionais sob suas leis locais que esta licença não pode alterar. Até o limite permitido pelas leis locais, os colaboradores excluem as garantias implícitas de comercialização, adequação a uma finalidade específica e não violação.
+(E) o software é licenciado "no estado em que se encontra". O usuário assume os riscos de utilizar este conteúdo. Os colaboradores não oferecem garantias ou condições expressas. Você pode ter direitos de consumidor adicionais sob suas leis locais que esta licença não pode alterar. Até o limite permitido pelas leis locais, os colaboradores excluem as garantias implícitas de comercialização, adequação a uma finalidade específica e não violação.
 
 ## <a name="fsharpcore-notices-and-information"></a>AVISOS e informações principais do FSharp. Core
 ---------------------------------------
@@ -201,7 +201,7 @@ A licença MIT (MIT)
 Copyright (c) Microsoft Corporation.
 Todos os direitos reservados.
 
-A permissão é concedida, sem encargos, a qualquer pessoa que obtenha uma cópia deste software e os arquivos de documentação associados (o "software"), para lidar com o software sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, mesclagem Publique, distribua, sublicenciamento e/ou venda de cópias do software e para permitir que pessoas com quem o software é fornecido façam isso, sujeito às seguintes condições:
+A permissão é concedida, sem encargos, a qualquer pessoa que obtenha uma cópia deste software e os arquivos de documentação associados (o "software"), para lidar com o software sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, mesclagem, publicação, distribuição, sublicença e/ou venda de cópias do software e para permitir que pessoas com quem o software é fornecido, estejam sujeitas às seguintes condições:
 
 O aviso de direitos autorais acima e esse aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do software.
 
@@ -213,7 +213,7 @@ A licença MIT (MIT)
 
 Copyright (c) 2013 Tomas Petricek
 
-A permissão é concedida, sem encargos, a qualquer pessoa que obtenha uma cópia deste software e os arquivos de documentação associados (o "software"), para lidar com o software sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, mesclagem Publique, distribua, sublicenciamento e/ou venda de cópias do software e para permitir que pessoas com quem o software é fornecido façam isso, sujeito às seguintes condições:
+A permissão é concedida, sem encargos, a qualquer pessoa que obtenha uma cópia deste software e os arquivos de documentação associados (o "software"), para lidar com o software sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, mesclagem, publicação, distribuição, sublicença e/ou venda de cópias do software e para permitir que pessoas com quem o software é fornecido, estejam sujeitas às seguintes condições:
 
 O aviso de direitos autorais acima e esse aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do software.
 
@@ -226,7 +226,7 @@ A licença MIT (MIT)
 
 Copyright (c) 2012 Oystein Bjorke
 
-A permissão é concedida, sem encargos, a qualquer pessoa que obtenha uma cópia deste software e os arquivos de documentação associados (o "software"), para lidar com o software sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, mesclagem Publique, distribua, sublicenciamento e/ou venda de cópias do software e para permitir que pessoas com quem o software é fornecido façam isso, sujeito às seguintes condições:
+A permissão é concedida, sem encargos, a qualquer pessoa que obtenha uma cópia deste software e os arquivos de documentação associados (o "software"), para lidar com o software sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, mesclagem, publicação, distribuição, sublicença e/ou venda de cópias do software e para permitir que pessoas com quem o software é fornecido, estejam sujeitas às seguintes condições:
 
 O aviso de direitos autorais acima e esse aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do software.
 
@@ -244,7 +244,7 @@ A redistribuição e o uso em formulários binários e de origem, com ou sem mod
 * As redistribuições em formato binário devem reproduzir o aviso de direitos autorais acima, esta lista de condições e a seguinte isenção de responsabilidade na documentação e/ou em outros materiais fornecidos com a distribuição.
 * Nem o nome de FsCheck nem os nomes de seus colaboradores podem ser usados para endossar ou promover produtos derivados deste software sem permissão específica prévia por escrito.
 
-ESSE SOFTWARE É FORNECIDO PELOS CONTENTORES E COLABORADORES DE DIREITOS AUTORAIS "COMO ESTÃO" E QUAISQUER GARANTIAS EXPRESSAS OU IMPLÍCITAS, INCLUINDO, MAS NÃO SE LIMITANDO A, AS GARANTIAS IMPLÍCITAS DE COMERCIALIZAÇÃO E ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA SÃO DESALEGADAS. EM NENHUM EVENTO, O PROPRIETÁRIO OU OS COLABORADORES DOS DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUAISQUER DANOS DIRETOS, INDIRETOS, INCIDENTAIS, ESPECIAIS, EXEMPLARES OU CONSEQÜENCIAIS (INCLUINDO, MAS NÃO SE LIMITANDO A, AQUISIÇÃO DE BENS OU SERVIÇOS SUBSTITUTOS; PERDA DE USO, DADOS OU LUCROS; OU INTERRUPÇÕES DE NEGÓCIOS), NO ENTANTO, CAUSADOS E EM QUALQUER TEORIA DE RESPONSABILIDADE, SEJA EM CONTRATO, RESPONSABILIDADE ESTRITA OU DELITO (INCLUINDO NEGLIGÊNCIA OU DE OUTRA FORMA) RESULTANTE DE QUALQUER FORMA DO USO DESTE SOFTWARE, MESMO SE FOR INFORMADO SOBRE A POSSIBILIDADE DE TAIS DANOS.
+ESTE SOFTWARE FOI FORNECIDO PELOS MARCADORES E COLABORADORES DE DIREITOS AUTORAIS “NO ESTADO EM QUE SE ENCONTRA” E QUAISQUER GARANTIAS EXPRESSAS OU IMPLÍCITAS INCLUINDO, MAS NÃO LIMITADAS A, AS GARANTIAS INCLUSAS DE COMERCIALIZAÇÃO E ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA SÃO ISENTAS DE RESPONSABILIDADE. EM NENHUM EVENTO, O PROPRIETÁRIO OU OS COLABORADORES DOS DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUAISQUER DANOS DIRETOS, INDIRETOS, INCIDENTAIS, ESPECIAIS, EXEMPLARES OU CONSEQÜENCIAIS (INCLUINDO, MAS NÃO SE LIMITANDO A, AQUISIÇÃO DE BENS OU SERVIÇOS SUBSTITUTOS; PERDA DE USO, DADOS OU LUCROS; OU INTERRUPÇÕES DE NEGÓCIOS), NO ENTANTO, CAUSADOS E EM QUALQUER TEORIA DE RESPONSABILIDADE, SEJA EM CONTRATO, RESPONSABILIDADE ESTRITA OU DELITO (INCLUINDO NEGLIGÊNCIA OU DE OUTRA FORMA) RESULTANTE DE QUALQUER FORMA DO USO DESTE SOFTWARE, MESMO SE FOR INFORMADO SOBRE A POSSIBILIDADE DE TAIS DANOS.
 
 ## <a name="argu-notices-and-information"></a>INFORMAÇÕES e avisos do argu
 ---------------------------------------
@@ -252,7 +252,7 @@ A licença MIT (MIT)
 
 Copyright (c) 2016 Eirik Tsarpalis
 
-A permissão é concedida, sem encargos, a qualquer pessoa que obtenha uma cópia deste software e os arquivos de documentação associados (o "software"), para lidar com o software sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, mesclagem Publique, distribua, sublicenciamento e/ou venda de cópias do software e para permitir que pessoas com quem o software é fornecido façam isso, sujeito às seguintes condições:
+A permissão é concedida, sem encargos, a qualquer pessoa que obtenha uma cópia deste software e os arquivos de documentação associados (o "software"), para lidar com o software sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, mesclagem, publicação, distribuição, sublicença e/ou venda de cópias do software e para permitir que pessoas com quem o software é fornecido, estejam sujeitas às seguintes condições:
 
 O aviso de direitos autorais acima e esse aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do software.
 

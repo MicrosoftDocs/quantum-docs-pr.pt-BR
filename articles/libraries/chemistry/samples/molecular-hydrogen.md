@@ -1,17 +1,17 @@
 ---
-title: Obtendo estimativas de nível de energia | Microsoft Docs
-description: Obtendo documentos de estimativas de nível de energia
+title: Obter estimativas do nível de energia
+description: 'Percorra um programa de exemplo Q # que estima os valores de nível de energia de molecular Hydrogen.'
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: 0fd457b152083af364d924502c18bc0813e34b83
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 3242d8c6dc6fad2bd99055027dd7ce4ec3510ff4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442573"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907300"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Obter estimativas do nível de energia
 Estimar os valores dos níveis de energia é um dos principais aplicativos da quantum química. Aqui, descrevemos como isso pode ser executado para o exemplo canônico de molecular Hydrogen. O exemplo referenciado nesta seção é `MolecularHydrogen` no repositório de exemplos de química. Um exemplo mais visual que plota a saída é a `MolecularHydrogenGUI` demonstração.

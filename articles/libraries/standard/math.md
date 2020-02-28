@@ -1,16 +1,16 @@
 ---
-title: 'P # bibliotecas padrão-matemática | Microsoft Docs'
-description: 'P # bibliotecas padrão-matemática'
+title: 'Matemática nas bibliotecas padrão do Q #'
+description: 'Saiba mais sobre as funções matemáticas clássicas nas bibliotecas padrão do Q # que são usadas com os tipos de dados internos.'
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 7ac9d321f59f7cc95ad8939a4cf7c36e0c5e0491
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: bec866472abc0d4327cdc570306341375395f492
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184450"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906144"
 ---
 # <a name="classical-mathematical-functions"></a>Funções matemáticas clássicas #
 

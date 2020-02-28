@@ -1,17 +1,17 @@
 ---
-title: 'Q # bibliotecas padrão-caracterização | Microsoft Docs'
-description: 'P # bibliotecas padrão-caracterização'
+title: Caracterização e estatísticas do Quantum
+description: Saiba como as estatísticas de medição das estimativas de fase são usadas para estimar valores de resultado na programação Quantum.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036246"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907181"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterização e estatísticas do Quantum #
 

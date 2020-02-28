@@ -1,17 +1,17 @@
 ---
-title: 'Colocando tudo em conjunto-Q # técnicas | Microsoft Docs'
-description: 'Colocando tudo em conjunto-Q # técnicas'
+title: 'Técnicas de Q #-reunindo tudo'
+description: 'Percorra um programa básico Q # que demonstra a teleportação Quantum.'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 6c988f77ef6e433945dbf21dfb41204c74bdda3e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820157"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906824"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Juntando tudo: Teleportation #
 Vamos retornar ao exemplo do circuito de Teleportation definido em [circuitos Quantum](xref:microsoft.quantum.concepts.circuits). Vamos usar isso para ilustrar os conceitos que aprendemos até agora. Uma explicação sobre a teleportação Quantum é fornecida abaixo para aqueles que não estão familiarizados com a teoria, seguidos por uma explicação da implementação do código em Q #. 

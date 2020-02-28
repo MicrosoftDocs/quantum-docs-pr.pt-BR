@@ -1,17 +1,17 @@
 ---
 title: Licença de Microsoft Quantum Development Kit
-description: Licença de Microsoft Quantum Development Kit
+description: Termos de licença, isenções de responsabilidade e direitos de usuário para o Microsoft Quantum Development Kit.
 author: QuantumWriter
 ms.author: cpalmer
 ms.date: 11/04/2019
-ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 0d3aa9ae9e4f232ba2403512ff6e2394ecedeb22
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463375"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907113"
 ---
-# <a name="microsoft-software-license-terms"></a>TERMOS DE LICENÇA DE SOFTWARE DA MICROSOFT 
+# <a name="microsoft-software-license-terms"></a>TERMOS DE LICENÇA PARA SOFTWARE MICROSOFT 
 ## <a name="microsoft-quantum-development-kit-preview"></a>KIT DE DESENVOLVIMENTO DO MICROSOFT QUANTUM (VERSÃO PRÉVIA)
 
 
@@ -23,7 +23,7 @@ ms.locfileid: "73463375"
 
 Estes termos de licença constituem um contrato entre você e a Microsoft Corporation (ou uma de suas afiliadas). Eles se aplicam ao software de pré-lançamento nomeado acima e quaisquer atualizações de software ou serviços da Microsoft (exceto na medida em que esses serviços ou atualizações são acompanhados por termos novos ou adicionais, caso em que esses termos diferentes se aplicam com potencial e não alteram seu ou os direitos da Microsoft relacionados a softwares ou serviços previamente atualizados).
 
-SE VOCÊ CUMPRIR ESTES TERMOS DE LICENÇA, TERÁ OS DIREITOS DESCRITOS ABAIXO. AO USAR O SOFTWARE, VOCÊ ACEITA ESTES TERMOS.
+SE VOCÊ CUMPRIR ESTES TERMOS DE LICENÇA, TERÁ OS DIREITOS DESCRITOS ABAIXO. O USO DO SOFTWARE REPRESENTA A SUA ACEITAÇÃO DESTES TERMOS.
 
 1. **DIREITOS DE INSTALAÇÃO E DE UTILIZAÇÃO.**
 
@@ -42,11 +42,11 @@ SE VOCÊ CUMPRIR ESTES TERMOS DE LICENÇA, TERÁ OS DIREITOS DESCRITOS ABAIXO. A
 1. **software de pré-lançamento**. O software é uma versão de pré-lançamento. Ele pode não funcionar corretamente. Ele pode ser diferente da versão liberada comercialmente.
 
 
-1. **Comentários**. Caso você forneça comentários sobre o software à Microsoft, você concederá à Microsoft, sem custos adicionais, o direito de usar, compartilhar e comercializar seus comentários de qualquer forma e para qualquer finalidade. Você não fornecerá comentários que estejam sujeitos a uma licença que exija que a Microsoft licencie seu software ou sua documentação para terceiros devido à inclusão de seus comentários nele por parte da Microsoft. Esses direitos permanecerão em vigor após este contrato.
+1. **Comentários**. Se você fornecer comentários sobre o software à Microsoft, concederá à Microsoft, sem encargos, o direito de usar, compartilhar e comercializar seus comentários de qualquer forma e para qualquer finalidade. Você não fornecerá comentários que estejam sujeitos a uma licença que exija que a Microsoft licencie seu software ou sua documentação para terceiros devido à inclusão de seus comentários nele por parte da Microsoft. Esses direitos sobrevivem a este contrato.
 
 1. **coleta de dados**. O software poderá coletar informações sobre você e seu uso do software e enviá-las à Microsoft. A Microsoft poderá usar essas informações para fornecer serviços e aprimorar os produtos e serviços da Microsoft. Seus direitos de recusa, se houver, são descritos na documentação do produto. Alguns recursos do software poderão habilitar a coleta de dados de usuários dos aplicativos que acessam ou usam o software. Se você usar esses recursos para habilitar a coleta de dados em seus aplicativos, você deverá cumprir a lei aplicável, incluindo obter o consentimento do usuário necessário e manter uma política de privacidade importante que informe com precisão os usuários sobre como usar, coletar e compartilhar seus dados. É possível saber mais sobre a coleta e o uso de dados pela Microsoft na documentação do produto e na Política de Privacidade da Microsoft em https://go.microsoft.com/fwlink/?LinkId=521839. Você concorda em cumprir todas as disposições aplicáveis da Política de Privacidade da Microsoft.
 
-1. **escopo da licença** O software é licenciado, não vendido. A Microsoft reserva-se todos os outros direitos. A menos que a legislação aplicável lhe conceda mais direitos apesar dessa limitação, você não poderá (não terá direito a):
+1. **escopo da licença** O software é licenciado, não vendido. A Microsoft se reserva todos os outros direitos. A menos que a legislação aplicável lhe conceda mais direitos apesar dessa limitação, você não poderá (não terá direito a):
 
     a. contornar as limitações técnicas do software que só permitem que você o use de determinadas maneiras;
 
@@ -70,7 +70,7 @@ SE VOCÊ CUMPRIR ESTES TERMOS DE LICENÇA, TERÁ OS DIREITOS DESCRITOS ABAIXO. A
 
 1. **lei aplicável e lugar para resolver as CONtestações**. Se você adquiriu o software nos Estados Unidos ou no Canadá, as leis do estado em que você mora (ou, caso você seja uma empresa, o local de sua sede) regem a interpretação deste contrato, as indenizações por sua violação e todas as outras reivindicações (incluindo proteção ao consumidor, concorrência desleal e pedidos de indenização), independentemente de conflito com os princípios legais, exceto pelo fato de a FAA controlar tudo relacionado a arbitragem. Se você adquiriu o software em qualquer outro país, as leis desse país serão aplicáveis, exceto pelo fato de a FAA controlar tudo relacionado a arbitragem. Se existir uma jurisdição federal dos Estados Unidos, você e a Microsoft concordarão com a jurisdição exclusiva e com o foro do tribunal federal de King County, Washington para todos os litígios ouvidos no tribunal (excluindo arbitragem). Caso contrário, você e a Microsoft aceitam como foro competente e exclusivo o Tribunal Superior localizado em King County, Washington, EUA em todos os litígios apresentados em tribunal (excluindo a arbitragem).
 
-1. **direitos de consumidor; VARIAÇÕES regionais**. Este contrato descreve determinados direitos legais. Você poderá ter outros direitos, incluindo os direitos de consumidor, nos termos da lei do seu estado ou país. Separadamente e além da sua relação com a Microsoft, você também poderá ter direitos com relação à parte de quem você adquiriu o software. Este contrato não alterará esses outros direitos se as leis do seu estado ou país não permitirem essa alteração. Por exemplo, se você tiver adquirido o software em uma das regiões abaixo ou se for aplicável a lei obrigatória do país, as seguintes disposições serão aplicáveis a você:
+1. **direitos de consumidor; VARIAÇÕES regionais**. Este contrato descreve alguns direitos legais. Você poderá ter outros direitos, incluindo os direitos de consumidor, nos termos da lei do seu estado ou país. Separadamente e além da sua relação com a Microsoft, você também poderá ter direitos com relação à parte de quem você adquiriu o software. Este contrato não alterará esses outros direitos se as leis do seu estado ou país não permitirem essa alteração. Por exemplo, se você tiver adquirido o software em uma das regiões abaixo ou se for aplicável a lei obrigatória do país, as seguintes disposições serão aplicáveis a você:
 
     a. **Austrália**. Você tem garantias estatutárias nos termos da Lei do Consumidor Australiana e nada neste contrato tem como objetivo afetar tais direitos.
 
@@ -78,7 +78,7 @@ SE VOCÊ CUMPRIR ESTES TERMOS DE LICENÇA, TERÁ OS DIREITOS DESCRITOS ABAIXO. A
 
     c. **Alemanha e Áustria**.
 <p style="margin-left: 60px">i. <strong>Garantia</strong>. O software devidamente licenciado funcionará substancialmente conforme descrito nos materiais da Microsoft que acompanham o software. No entanto, a Microsoft não concederá nenhuma garantia contratual em relação ao software licenciado.</p>
-<p style="margin-left: 60px">II. <strong>Limitação de responsabilidade</strong>. Em caso de conduta intencional, negligência grosseira, queixas baseadas na Lei sobre Responsabilidade por Produtos, bem como em caso de morte ou danos à integridade física ou pessoal, a Microsoft é responsável de acordo com a lei estatutária.</p>
+<p style="margin-left: 60px">ii. <strong>Limitação de responsabilidade</strong>. Em caso de conduta intencional, negligência grosseira, queixas baseadas na Lei sobre Responsabilidade por Produtos, bem como em caso de morte ou danos à integridade física ou pessoal, a Microsoft é responsável de acordo com a lei estatutária.</p>
 <p style="margin-left: 60px">Sujeito à cláusula ii. precedente, a Microsoft somente será responsável por negligência leve se ela violar tais obrigações contratuais materiais, cujo cumprimento facilite o desempenho de vencimento do contrato, violação que poderia colocar em risco o objetivo deste contrato com cuja conformidade uma parte está constantemente a contar (as chamadas "obrigações fundamentais"). A Microsoft não será responsável em todos os outros casos de negligência ligeira.</p>
 
 <blockquote>

@@ -1,17 +1,17 @@
 ---
-title: Estimador de recursos do kit de desenvolvimento Quantum | Microsoft Docs
-description: Visão geral do estimador de recursos do kit de desenvolvimento Quantum da Microsoft
+title: Estimador de recursos do kit de desenvolvimento Quantum
+description: 'Saiba mais sobre o estimador de recursos, que estima os recursos necessários para executar uma determinada instância de uma operação Q # em um computador Quantum.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 37c901e5a861f0e8a10cdc911ad1d84ddd3e6e00
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820854"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907045"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>O computador de destino ResourcesEstimator
 

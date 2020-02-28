@@ -1,24 +1,24 @@
 ---
-title: 'Testando e Depurando-Q # técnicas | Microsoft Docs'
-description: 'Testando e Depurando – técnicas de Q #'
+title: 'Testando e Depurando programas de Q #'
+description: Saiba como usar testes de unidade, fatos e asserções e funções de despejo para testar e depurar programas Quantum.
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: cfc71f08be0f190d9f5f4a48796e3d0ad06d6107
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 3df8df8defabcc9cc87d59f543f425c882b001e0
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820106"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907674"
 ---
 # <a name="testing-and-debugging"></a>Testando e Depurando
 
 Assim como acontece com a programação clássica, é essencial poder verificar se os programas Quantum atuam como pretendidos e ser capaz de diagnosticar um programa Quantum incorreto.
 Nesta seção, abordaremos as ferramentas oferecidas por Q # para testar e depurar programas Quantum.
 
-## <a name="unit-tests"></a>Testes de unidade
+## <a name="unit-tests"></a>Testes de Unidades
 
 Uma abordagem comum para testar programas clássicos é escrever programas pequenos chamados *testes de unidade* que executam código em uma biblioteca e comparam sua saída a alguma saída esperada.
 Por exemplo, talvez queiramos garantir que `Square(2)` retorna `4`, já que sabemos *um priori* de que $2 ^ 2 = $4.
@@ -27,12 +27,12 @@ O Q # dá suporte à criação de testes de unidade para programas Quantum e que
 
 ### <a name="creating-a-test-project"></a>Criando um projeto de teste
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Abra o Visual Studio 2019. Vá para o menu `File` e selecione `New` > `Project...`.
 No canto superior direito, pesquise `Q#`e selecione o modelo de `Q# Test Project`.
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Linha de comando/Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[Linha de comando/Visual Studio Code](#tab/tabid-vscode)
 
 Na sua linha de comando favorita, execute o seguinte comando:
 ```bash
@@ -71,7 +71,7 @@ O compilador Q # reconhece os destinos internos "QuantumSimulator", "ToffoliSimu
 
 ### <a name="running-q-unit-tests"></a>Executando os testes de unidade de Q #
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Como configuração única por solução, vá para `Test` menu e selecione `Test Settings` > `Default Processor Architecture` > `X64`.
 
@@ -81,7 +81,7 @@ Como configuração única por solução, vá para `Test` menu e selecione `Test
 
 Compile o projeto, vá para o menu de `Test` e selecione `Windows` > `Test Explorer`. `AllocateQubit` aparecerá na lista de testes no grupo de `Not Run Tests`. Selecione `Run All` ou execute este teste individual e ele deve passar!
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Linha de comando/Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[Linha de comando/Visual Studio Code](#tab/tabid-vscode)
 
 Para executar testes, navegue até a pasta do projeto (a pasta que contém `Tests.csproj`) e execute o comando:
 
@@ -123,29 +123,29 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 A função intrínseca <xref:microsoft.quantum.intrinsic.message> tem o tipo `(String -> Unit)` e habilita a criação de mensagens de diagnóstico.
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Depois de executar um teste no Test Explorer e clicar no teste, um painel será exibido com informações sobre a execução do teste: passou/falha no status, tempo decorrido e um link de "saída". Se você clicar no link "saída", a saída de teste será aberta em uma nova janela.
 
 ![saída de teste](~/media/unit-test-output.png)
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Linha de comando/Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[Linha de comando/Visual Studio Code](#tab/tabid-vscode)
 
 O status de aprovação/reprovação de cada teste é impresso no console do por `dotnet test`.
 Para testes com falha, as saídas também são impressas no console do para ajudar a diagnosticar a falha.
 
 ***
 
-## <a name="assertions"></a>Declarações
+## <a name="facts-and-assertions"></a>Fatos e asserções
 
 Como as funções em Q # não têm efeitos colaterais _lógicos_ , quaisquer _outros tipos_ de efeitos de execução de uma função cujo tipo de saída é a tupla vazia `()` nunca podem ser observados em um programa Q #.
 Ou seja, um computador de destino pode optar por não executar nenhuma função que retorne `()` com a garantia de que essa omissão não modificará o comportamento de qualquer código Q # a seguir.
-Isso faz com que as funções retornem `()` uma ferramenta útil para incorporar asserções e depurar a lógica em programas Q #. 
+Isso faz com que as funções que retornam `()` (ou seja, `Unit`) uma ferramenta útil para incorporar asserções e depurar a lógica em programas Q #. 
 
-A mesma lógica pode ser aplicada à implementação de asserções. Vamos considerar um exemplo simples:
+Vamos considerar um exemplo simples:
 
 ```qsharp
-function AssertPositive(value : Double) : Unit 
+function PositivityFact(value : Double) : Unit 
 {
     if (value <= 0) 
     {
@@ -156,11 +156,31 @@ function AssertPositive(value : Double) : Unit
 
 Aqui, a palavra-chave `fail` indica que a computação não deve continuar, gerando uma exceção no computador de destino que executa o programa Q #.
 Por definição, uma falha desse tipo não pode ser observada em Q #, pois nenhum código Q # adicional é executado depois que uma instrução `fail` é atingida.
-Portanto, se continuarmos passando por uma chamada para `AssertPositive`, poderemos ter certeza de que sua entrada era positiva.
+Portanto, se continuarmos passando por uma chamada para `PositivityFact`, poderemos ter certeza de que sua entrada era positiva.
+
+Observe que podemos implementar o mesmo comportamento que `PositivityFact` usando a função [`Fact`](xref:microsoft.quantum.diagnostics.fact) do namespace <xref:microsoft.quantum.diagnostics>:
+
+```qsharp
+    Fact(value <= 0, "Expected a positive number.");
+```
+
+As *asserções*, por outro lado, são usadas de forma semelhante aos fatos, mas podem ser dependentes do estado do computador de destino. De forma correspondente, eles são definidos como operações, enquanto os fatos são definidos como funções (como acima).
+Para entender a distinção, considere o seguinte uso de um fato em uma asserção:
+
+```qsharp
+operation AssertQubitsAreAvailable() : Unit
+{
+     Fact(GetQubitsAvailableToUse() > 0, "No qubits were actually available");
+}
+```
+
+Aqui, estamos usando a operação <xref:microsoft.quantum.environment.getqubitsavailabletouse> para retornar o número de qubits disponíveis para uso.
+Como isso depende claramente do estado global do programa e de seu ambiente de execução, nossa definição de `AssertQubitsAreAvailable` também deve ser uma operação.
+No entanto, podemos usar esse estado global para produzir um valor `Bool` simples como entrada para a função `Fact`.
 
 Com base nessas ideias, [o prelúdio](xref:microsoft.quantum.libraries.standard.prelude) oferece duas declarações especialmente úteis, <xref:microsoft.quantum.intrinsic.assert> e <xref:microsoft.quantum.intrinsic.assertprob> modeladas como operações em `()`. Cada declaração assume um operador Pauli que descreve uma medida de interesse específica, um registro Quantum no qual uma medida deve ser executada e um resultado hipotético.
 Em computadores de destino que funcionam por simulação, não estamos vinculados pelo [teorema no-Cloning](https://en.wikipedia.org/wiki/No-cloning_theorem)e podem executar essas medições sem perturbar o registro passado para tais asserções.
-Um simulador pode, assim, semelhante à função `AssertPositive` acima, anular a computação se o resultado hipotético não fosse observado na prática:
+Um simulador pode, assim, semelhante à função `PositivityFact` acima, anular a computação se o resultado hipotético não fosse observado na prática:
 
 ```qsharp
 using (register = Qubit()) 
@@ -265,7 +285,7 @@ Os exemplos a seguir mostram `DumpMachine` para alguns Estados comuns:
   > A ID de um qubit é atribuída em tempo de execução e não está necessariamente alinhada com a ordem na qual o qubit foi alocado ou sua posição em um registro qubit.
 
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
   > [!TIP]
   > Você pode descobrir uma ID de qubit no Visual Studio colocando um ponto de interrupção em seu código e inspecionando o valor de uma variável qubit, por exemplo:
@@ -274,7 +294,7 @@ Os exemplos a seguir mostram `DumpMachine` para alguns Estados comuns:
   >
   > o qubit com o `0` de índice em `register2` tem ID =`3`, o qubit com `1` de índice tem a ID =`2`.
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[Linha de comando/Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[Linha de comando/Visual Studio Code](#tab/tabid-vscode)
 
   > [!TIP]
   > Você pode descobrir uma ID de qubit usando a função <xref:microsoft.quantum.intrinsic.message> e passando a variável qubit na mensagem, por exemplo:

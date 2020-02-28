@@ -1,17 +1,17 @@
 ---
-title: Contador de largura | Simulador de rastreamento de computador Quantum | Microsoft Docs
-description: Visão geral do simulador de rastreamento de computador quântico
+title: Contador de largura
+description: Saiba mais sobre o contador de largura QDK da Microsoft, que conta o número de qubits alocadas e emprestadas por cada operação em um programa Quantum.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: 9c3601e74eec17bd6b463e90f8f3085c959d6f95
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: a76292222950310acc90dded02980e4a5b792e76
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820361"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907079"
 ---
 # <a name="width-counter"></a>Contador de largura
 

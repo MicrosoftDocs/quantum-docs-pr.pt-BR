@@ -1,17 +1,17 @@
 ---
-title: Notação de Dirac | Microsoft Docs
-description: Notação de Dirac
+title: Notação dirac
+description: Saiba mais sobre como usar a notação Dirac para representar os Estados Quantum e para simular operações Quantum.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.dirac
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 33d964d079c94bd947e35d2c09516b29df1bba11
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 204e56cc97fe28f9c52dcfb882aadec7e09bb2dc
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184756"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907555"
 ---
 # <a name="dirac-notation"></a>Notação de Dirac
 
@@ -36,7 +36,7 @@ $$
 
 A notação a seguir é geralmente usada para descrever os Estados resultantes da aplicação da porta Hadamard a $ \ket{0}$ e $ \ket{1}$ (que correspondem aos vetores de unidade nas direções $ + x $ e $-x $ na esfera Bloch):
 
-$ $ \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\ 1 \end{bmatrix} = H\ket{0} = \ket{+}, \qquad \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\-1 \end{bmatrix} = H\ket{1} = \ket{-} .
+$ $ \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\ 1 \end{bmatrix} = H\ket{0} = \ket{+}, \qquad \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\-1 \end{bmatrix} = H\ket{1} = \ket{-}.
 $$
 
 Esses Estados também podem ser expandidos usando a notação Dirac como somas de $ \ket{0}$ e $ \ket{1}$:
@@ -62,7 +62,7 @@ $ $ \big | \braket{1 | \psi}\big | ^ 2 = \left | \frac{3}{5}\braket{1 | 1} + \fr
 ### <a name="tensor-product-notation"></a>Notação de produto do tensor
 A notação Dirac também inclui uma estrutura de produto tensor implícita dentro dela.  Isso é importante porque, na computação Quantum, o vetor de estado descrito por dois registros Quantum não correlacionados são os produtos tensor dos dois vetores de estado.  A descrição concisa da estrutura do produto tensor, ou a falta deles, é vital se você quiser explicar uma computação Quantum.  A estrutura do produto tensor implica que podemos escrever $ \psi \otimes \phi $ para quaisquer dois vetores de estado Quantum $ \phi $ e $ \psi $ como $ \ket{\psi} \ket{\phi} $, às vezes explicitamente escritos como $ \ket{\psi} \otimes \ket{\phi} $, porém por convenção escrevendo $ \otimes $ entre os vetores é desnecessário.  Por exemplo, o estado com dois qubits inicializados para o estado zero é fornecido por
 
-$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \ket{0} \ OTimes \ket{0}= \ket{0} \ket{0}.
+$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \ket{0} \otimes \ket{0}= \ket{0} \ket{0}.
 $$
 
 Da mesma forma, o estado $ \ket{p} $ para Integer $p $ representa um estado Quantum que codifica na representação binária o inteiro $p $.  Por exemplo, se quisermos expressar o número $5 $ usando uma codificação binária não assinada, poderia ser expressado igualmente como
@@ -78,7 +78,7 @@ $$
 ### <a name="example-describing-superposition-with-dirac-notation"></a>Exemplo: descrevendo a superposição com a notação Dirac
 Como outro exemplo de como você pode usar a notação Dirac para descrever um estado Quantum, considere as seguintes maneiras equivalentes de escrever um estado Quantum que seja uma superposição igual em cada cadeia de caracteres de bits possível de comprimento $n $
 
-$ $ H ^ {\otimes n} \ket{0} = \frac{1}{2 ^ {n/2}} \sum_{j = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {\otimes n}.
+$ $ H ^ {\otimes n} \ket{0} = \frac{1}{2 ^ {n/2}} \ sum_ {j = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {\otimes n}.
 $$
 
 Aqui você pode estar imaginando por que a soma vai de $0 $ a $2 ^ {n}-$1 para $n $ bits.  Primeiro, observe que há $2 ^ {n} $ configurações diferentes que $n $ bits pode executar.  Você pode ver isso observando que um bit pode receber de $2 $ valores, mas dois bits podem receber de $4 $ valores e assim por diante. Em geral, isso significa que há $2 ^ n $ diferentes cadeias de caracteres de bits possíveis, mas o maior valor codificado em qualquer um deles $1 \ cdots 1 = 2 ^ n-$1 e, portanto, é o limite superior para a soma.
@@ -102,7 +102,7 @@ O fato de que o sinal negativo aparece no cálculo da probabilidade é uma manif
 ## <a name="ketbra-or-outer-product"></a>produto ketbra ou externo
 O item final que vale a pena discutir na notação Dirac é o produto *ketbra* ou externo.  O produto externo é representado em notações de Dirac como $ \ket{\psi} \bra{\phi} $ e às vezes é chamado de ketbras porque o Bras e o Kets ocorrem na ordem oposta como brakets.  O produto externo é definido por meio da multiplicação de matriz como $ \ket{\psi} \bra{\phi} = \psi \phi ^ \dagger $ para os vetores de estado Quantum $ \psi $ e $ \phi $.  O exemplo mais simples, e comprovadamente mais comum dessa notação, é
 
-$ $ \ket{0} \bra{0} = \begin{bmatrix}1\\\\ 0 \end{bmatrix}\begin{bmatrix}1 & 0 \end{bmatrix} = \begin{bmatrix}1 & 0\\\\ 0 & 0 \ end {bmatrix} \qquad \ket{1} \bra{1} = \begin{bmatrix}0\\\\ 1 \end{bmatrix}\begin{bmatrix}0 & 1 \end{bmatrix} = \begin{bmatrix}0 & 0\\\\ 0 & 1 \ fim {bmatrix}.
+$ $ \ket{0} \bra{0} = \begin{bmatrix}1\\\\ 0 \end{bmatrix}\begin{bmatrix}1 & 0 \end{bmatrix} = \begin{bmatrix}1 & 0\\\\ 0 & 0 \ end {bmatrix} \qquad \ket{1} \bra{1} = \begin{bmatrix}0\\\\ 1 \end{bmatrix}\begin{bmatrix}0 & 1 \end{bmatrix} = \begin{bmatrix}0 & 0\\\\ 0 & 1 \ end {bmatrix}.
 $$
 
 Ketbras geralmente são chamados de projetores porque projetam um estado Quantum em um valor fixo.  Como essas operações não são de forma uniforme (e nem mesmo preservam a norma de um vetor), ela deve ser tão surpresa que um computador Quantum não pode aplicar de forma determinística um projetor.  No entanto, os projetores fazem um lindo trabalho de descrever a ação que a medição tem em um estado Quantum.  Por exemplo, se medirmos um estado $ \ket{\psi} $ para ser $0 $, a transformação resultante que o estado enfrenta como resultado da medição é
@@ -132,7 +132,7 @@ $$
 
 Podemos ver que isso é consistente com a discussão sobre as chances de medição dos Estados multiqubit usando a notação de vetor de coluna:
 
-$ $ P (\Text{First qubit = 1}) = \psi ^ \dagger (e\_{10}e\_{10}^ \dagger + e\_{11}e\_{11}^ \dagger) \psi = | e\_{10}^ \dagger \psi | ^ 2 + | e\_{11}^ \ Dagger \psi | ^ 2, $ $
+$ $ P (\Text{First qubit = 1}) = \psi ^ \dagger (e\_{10}e\_{10}^ \dagger + e\_{11}e\_{11}^ \dagger) \psi = | e\_{10}^ \dagger \psi | ^ 2 + | e\_{11}^ \dagger \psi | ^ 2, $ $
 
 que corresponde à discussão sobre a medição de várias qubit.  A generalização desse resultado para o caso qubit, no entanto, é um pouco mais simples de expressar usando notação de Dirac do que a notação de vetor de coluna e é totalmente equivalente ao tratamento anterior.
 
@@ -146,4 +146,3 @@ Para o leitor interessado, é recomendável ler um dos livros de referência for
 
 ## <a name="q-gate-sequences-equivalent-to-quantum-states"></a>Sequências de portão Q # equivalentes a Estados Quantum
 Um ponto final que vale a pena disparar a notação Quantum e a linguagem de programação Q #: no início deste documento, mencionamos que o estado do Quantum é o objeto fundamental das informações na computação Quantum.  Em seguida, ele pode ser uma surpresa que, em Q #, não há nenhuma noção de um estado Quantum.  Em vez disso, todos os Estados são descritos somente pelas operações usadas para prepará-los.  O exemplo anterior é uma ilustração excelente disso.  Em vez de expressar uma superposição uniforme em cada cadeia de caracteres de bit Quantum em um registro, podemos representar o resultado como $H ^ {\otimes n} \ket{0}$.  Essa descrição exponencialmente mais curta do estado não apenas tem a vantagem de que podemos, de forma clássica, a respeito disso, mas também define de forma concisa as operações necessárias para serem propagadas por meio da pilha de software para implementar o algoritmo.  Por esse motivo, o Q # foi projetado para emitir sequências de portão em vez de Estados de Quantum; no entanto, em um nível teórico, as duas perspectivas são equivalentes.
-

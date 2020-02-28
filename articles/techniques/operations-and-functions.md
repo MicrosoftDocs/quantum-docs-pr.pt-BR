@@ -1,17 +1,17 @@
 ---
-title: 'Operações e funções – Q # técnicas | Microsoft Docs'
-description: 'Operações e funções – técnicas de Q #'
+title: 'Operações e funções do Q #'
+description: 'Saiba mais sobre as operações e funções do Q # e como elas são aplicadas em um programa Quantum.'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 43f0cf2da192a607e514d0c7de57a9bdd067faf7
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820769"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907657"
 ---
 # <a name="q-operations-and-functions"></a>Operações e funções do Q #
 
@@ -168,7 +168,7 @@ Isso viola a definição do adjacente que vimos em [vetores e matrizes](xref:mic
 Por outro lado, permitir chamadas de função como `Square` é seguro, pois o compilador pode ter certeza de que ele só precisa preservar a entrada para `Square` para manter sua saída estável.
 Portanto, isolar o máximo de lógica clássica possível em funções facilita a reutilização dessa lógica em outras funções e operações semelhantes.
 
-## <a name="control-flow"></a>Fluxo de Controle
+## <a name="control-flow"></a>Fluxo de controle
 
 Em uma operação ou função, cada instrução é executada em ordem, semelhante às linguagens clássicas mais comuns.
 No entanto, esse fluxo de controle pode ser modificado de três maneiras distintas:
@@ -231,7 +231,7 @@ operation ApplyTwice(op : (Qubit => Unit), target : Qubit) : Unit {
 
 Neste exemplo, a `=>` seta exibida no tipo `(Qubit => Unit)` denota que o campo de entrada `op` é uma operação que usa como entrada o tipo `Qubit` e produz uma tupla vazia como sua saída.
 Além disso, especificamos as características desse tipo de operação, que contêm as informações sobre quais transmissão functors têm suporte.
-Uma operação do tipo `(Qubit => Unit)` não dá suporte aos `Adjoint` nem ao `Controlled` functor. Se quisermos indicar que uma operação desse tipo deve dar suporte, por exemplo, a `Adjoint` functor, precisamos declará-la como sendo de adjointable. Isso é feito usando a anotação `is Adj` para o tipo. Da mesma forma, `(Qubit => Unit is Ctl)` denota que uma operação desse tipo dá suporte ao `Controlled` functor. Exploraremos isso ainda mais quando discutimos [Types in Q #] (xref: Microsoft. Quantum. Language. Type-Model) mais geralmente.
+Uma operação do tipo `(Qubit => Unit)` não dá suporte aos `Adjoint` nem ao `Controlled` functor. Se quisermos indicar que uma operação desse tipo deve dar suporte, por exemplo, a `Adjoint` functor, precisamos declará-la como sendo de adjointable. Isso é feito usando a anotação `is Adj` para o tipo. Da mesma forma, `(Qubit => Unit is Ctl)` denota que uma operação desse tipo dá suporte ao `Controlled` functor. Exploraremos isso posteriormente quando discutimos os [tipos em Q #](xref:microsoft.quantum.language.type-model) mais geralmente.
 
 Por enquanto, enfatizamos que também podemos retornar operações como parte das saídas, de modo que possamos isolar alguns tipos de lógica condicional clássica como uma função clássica que retorna uma descrição de um programa Quantum na forma de uma operação.
 Como exemplo simples, considere o exemplo de teleportação, no qual a parte que recebe uma mensagem clássica de dois bits precisa usar a mensagem para decodificar seu qubit no estado de Teleporta adequado.

@@ -1,17 +1,17 @@
 ---
-title: 'P # bibliotecas padrão-prelúdio | Microsoft Docs'
-description: 'P # bibliotecas padrão-prelúdio'
+title: Operações intrínsecas e funções no QDK
+description: Saiba mais sobre as operações intrínsecas e funções no QDK, incluindo funções clássicas e operações de rotação e medição.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: dddb3d4a5ebcdca16da41a5ae5520d98ea900a7f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: b1c26c632f36b6c254d940a89b13638f7592ab80
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73183226"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907198"
 ---
 # <a name="the-prelude"></a>O prelúdio #
 
@@ -101,7 +101,7 @@ Ele tem `(Qubit => Unit is Adj + Ctl)`de assinatura e corresponde ao único qubi
 Além das operações Pauli e Clifford acima, a p # prelúdio fornece uma variedade de formas de expressar rotações.
 Conforme descrito em [operações de qubit único](xref:microsoft.quantum.concepts.qubit#single-qubit-operations), a capacidade de girar é essencial para algoritmos Quantum.
 
-Começamos recuperando que podemos expressar qualquer operação de qubit único usando o $H $ e $T $ Gates, em que $H $ é a operação Hadamard e em que \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\% FIXME: isso atualmente usa o quad back Partilhe hack.
+Começamos recuperando que podemos expressar qualquer operação de qubit único usando o $H $ e $T $ Gates, em que $H $ é a operação Hadamard e em que \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\% FIXME: isso atualmente usa o do Quad back de partilhe.
 0 & e ^ {i \pi/4} \end{bmatrix} \end{Equation} esta é a raiz quadrada da operação <xref:microsoft.quantum.intrinsic.s>, de modo que $T ^ 2 = S $.
 A Gate $T $ é, por sua vez, implementada pela operação <xref:microsoft.quantum.intrinsic.t> e tem `(Qubit => Unit is Adj + Ctl)`de assinatura, indicando que se trata de uma operação unitário em um único qubit.
 
@@ -176,7 +176,7 @@ Ou seja, ele implementa a matriz unitário \begin{Equation} \operatorname{SWAP} 
 > A porta de troca controlada, também conhecida como portão Fredkin, é eficiente o suficiente para incluir toda a computação clássica.
 
 Por fim, o prelúdio fornece duas operações para representar exponencials de operadores de Pauli de vários qubit.
-A operação de <xref:microsoft.quantum.intrinsic.exp> executa uma rotação com base em um produto tensor de matrizes Pauli, conforme representado pelo qubit unitário \begin{Equation} \operatorname{Exp} (\vec{\sigma}, \phi) \mathrel{: =} \exp\left (i \phi \sigma_0 \otimes \sigma_1 \otimes \ cdots \otimes \sigma_n \right), \end{Equation}, em que $ \vec{\sigma} = (\sigma_0, \sigma_1, \dots, \sigma_n) $ é uma sequência de operadores de qubit de Pauli único e em que $ \phi $ é um ângulo.
+A operação de <xref:microsoft.quantum.intrinsic.exp> executa uma rotação com base em um produto tensor de matrizes Pauli, conforme representado pelo qubit unitário \begin{Equation} \operatorname{Exp} (\vec{\sigma}, \phi) \mathrel{: =} \exp\left (i \phi \ sigma_0 \otimes \ sigma_1 \otimes \cdots \otimes \ sigma_n \right), \end{Equation}, em que $ \vec{\sigma} = (\ sigma_0, \ sigma_1, \dots, \ sigma_n) $ é uma sequência de operadores de qubit de Pauli único e em que $ \phi $ é um ângulo.
 A rotação de `Exp` representa $ \vec{\sigma} $ como uma matriz de elementos `Pauli`, de modo que ele tem `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`de assinatura.
 
 A operação de <xref:microsoft.quantum.intrinsic.expfrac> executa a mesma rotação, usando a notação de fração dyadic discutida acima.
@@ -235,7 +235,7 @@ A implementação fornecida pelo kit de desenvolvimento Quantum usa a base class
 Embora isso não apresente um problema para um simulador local, isso pode ser um problema de desempenho ao usar um simulador remoto ou hardware real como um computador de destino.
 Dito isso, um computador de destino individual pode mitigar esse impacto no desempenho substituindo essas operações por versões mais eficientes para esse sistema específico.
 
-### <a name="math"></a>Matemática ###
+### <a name="math"></a>Math ###
 
 O namespace <xref:microsoft.quantum.extensions.math> fornece muitas funções úteis da [classe`System.Math`](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)da biblioteca de classes base .net.
 Essas funções podem ser usadas da mesma maneira que qualquer outra função Q #:

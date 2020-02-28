@@ -1,23 +1,23 @@
 ---
-title: De ponta a ponta com NWChem | Microsoft Docs
-description: Ponta a ponta com o NWChem docs
+title: Programa de Quantum NWChem de exemplo
+description: Usando um baralho de entrada NWChem, percorra um exemplo de como obter contagens de portão para a simulação química Quantum.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 8f727ea4599e06b41ced561c624c4e773b9887d9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185810"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906501"
 ---
 # <a name="end-to-end-with-nwchem"></a>Ponta a ponta com NWChem #
 
 Nesta página, veremos um exemplo de como obter contagens de portão para a simulação química do Quantum, a partir de um baralho de entrada [NWChem](http://www.nwchem-sw.org/index.php/Main_Page) .
 Antes de continuar com este exemplo, verifique se você instalou o Docker, seguindo o [Guia de instalação e validação](xref:microsoft.quantum.chemistry.concepts.installation).
 
-Para obter mais informações:
+Para mais informações:
 - [Estrutura de baralhos de entrada NWChem](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
     - [Comandos de baralho de entrada para uso com o kit de desenvolvimento Quantum](https://github.com/nwchemgit/nwchem/tree/master/contrib/quasar)
 - [Instalando a biblioteca e as dependências química](xref:microsoft.quantum.chemistry.concepts.installation)
