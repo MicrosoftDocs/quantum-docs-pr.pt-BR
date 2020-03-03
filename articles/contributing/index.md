@@ -1,17 +1,17 @@
 ---
-title: Como contribuir com o Quantum development kit | Microsoft Docs
-description: Como contribuir com o Quantum development kit
+title: Contribuir com o Microsoft Quantum Development Kit
+description: Saiba como contribuir com o Microsoft Quantum Development Kit e com a comunidade de desenvolvimento quântico.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 3f27f7502c83574e6bd8f950d7e17ee481e44a3c
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 63c6f90a511c7bd14435b2e593af0d8615c18519
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819851"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904869"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Como contribuir com o Quantum development kit #
 
@@ -79,4 +79,3 @@ Caso deseje saber mais sobre como fazer uma contribuição, prossiga para um dos
 
 > [!div class="nextstepaction"]
 > [Saiba como abrir solicitações de pull](xref:microsoft.quantum.contributing.pulls)
-
