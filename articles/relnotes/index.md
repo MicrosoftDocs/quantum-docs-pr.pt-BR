@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: f4bc69e5b14833dea0d61106a9eb368d7d7f5663
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 53b7d226f0f9b12f47460964944f1ddb6160c357
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906926"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022830"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas sobre a versão do Microsoft Quantum Development Kit
 
@@ -57,7 +57,7 @@ Esta versão contém o seguinte:
 
 - o novo atributo de teste para teste de unidade Q#, confira a documentação da API [aqui](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) e o teste atualizado e o guia de depuração [aqui](xref:microsoft.quantum.techniques.testing-and-debugging)
 - O rastreamento de pilha foi adicionado no caso de um erro de execução do programa Q#
-- Compatibilidade com pontos de interrupção no Visual Studio Code devido a uma atualização na [extensão do Visual Studio Code em C# do OmniSharp](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+- Compatibilidade com pontos de interrupção no Visual Studio Code devido a uma atualização na [extensão do Visual Studio Code em C# do OmniSharp](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
 Consulte a lista completa de PRs encerrados para [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compilado](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [tempo de execução](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [amostras](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) e [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
