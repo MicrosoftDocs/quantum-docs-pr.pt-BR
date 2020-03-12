@@ -6,27 +6,27 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: 1882e640dacf3987745ed225fef18636726f70a8
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907470"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022462"
 ---
-# <a name="contributing-code"></a>Código de contribuição #
+# <a name="contributing-code"></a>Código de contribuição
 
 Além de relatar problemas e aprimorar a documentação, o código que contribui para o kit de desenvolvimento Quantum pode ser uma maneira muito direta de ajudar seus colegas na Comunidade de programação Quantum.
 Ao contribuir com código, você pode ajudar a corrigir problemas, fornecer novos exemplos, tornar as bibliotecas existentes mais fáceis de usar ou até mesmo adicionar recursos totalmente novos.
 
 Neste guia, detalharemos um pouco do que procuramos quando revisarmos as solicitações de pull para ajudar sua contribuição a fazer o mais bom.
 
-## <a name="what-we-look-for"></a>O que procuramos ##
+## <a name="what-we-look-for"></a>O que procuramos
 
 Uma contribuição de código ideal se baseia no trabalho existente em um repositório de kit de desenvolvimento Quantum para corrigir problemas, expandir os recursos existentes ou adicionar novos recursos que estão dentro do escopo de um repositório.
 Quando aceitamos uma contribuição de código, ele se torna parte do próprio kit de desenvolvimento Quantum, de modo que novos recursos serão lançados, mantidos e desenvolvidos da mesma maneira que o restante do kit de desenvolvimento Quantum.
 Portanto, é útil quando a funcionalidade adicionada por uma contribuição é bem testada e documentada.
 
-### <a name="unit-tests"></a>Testes de Unidades ###
+### <a name="unit-tests"></a>Testes de Unidades
 
 As funções, operações e tipos definidos pelo usuário do Q # que compõem bibliotecas como a Canon são testadas automaticamente como parte do desenvolvimento no repositório [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) .
 Quando uma nova solicitação pull é aberta, por exemplo, nossa configuração de [Azure pipelines](https://azure.microsoft.com/services/devops/pipelines/) verificará se as alterações na solicitação pull não interrompem nenhuma funcionalidade existente da qual a comunidade de programação Quantum dependa.
@@ -56,7 +56,7 @@ function PairTest () : Unit {
 Condições mais complicadas podem ser verificadas usando as técnicas na [seção de teste](xref:microsoft.quantum.libraries.diagnostics) do guia de bibliotecas padrão.
 Por exemplo, o teste a seguir verifica se `H(q); X(q); H(q);` conforme chamado pelo <xref:microsoft.quantum.canon.applywith> faz a mesma coisa que `Z(q)`.
 
-```qsharp
+```Q#
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
@@ -79,7 +79,8 @@ Localmente, os testes de unidade podem ser executados usando o Visual Studio Tes
 
 ### Citations and References ### -->
 
-## <a name="when-well-reject-a-pull-request"></a>Quando rejeitarmos uma solicitação de pull ##
+
+## <a name="when-well-reject-a-pull-request"></a>Quando rejeitarmos uma solicitação de pull
 
 Às vezes, rejeitaremos a solicitação de pull para uma contribuição.
 Se isso acontecer com você, não significa que ela é inadequada, pois há vários motivos para não poder aceitar uma contribuição específica.
@@ -98,10 +99,15 @@ Por fim, não podemos aceitar contribuições que causam danos à comunidade de 
 Queremos garantir que as contribuições atendam a toda a comunidade de computação Quantum, tanto em sua diversidade maravilhosa atual quanto no futuro, à medida que ela cresce para se tornar ainda mais inclusiva.
 Agradecemos sua ajuda em concretizar essa meta.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1} ##
+## <a name="next-steps"></a>Próximas etapas
 
 Obrigado por ajudar a tornar o kit de desenvolvimento Quantum um excelente recurso para toda a comunidade de programação Quantum!
 Para saber mais, continue com o seguinte guia sobre o estilo de Q #.
 
 > [!div class="nextstepaction"]
 > [Saiba mais sobre as diretrizes de estilo Q #](xref:microsoft.quantum.contributing.style)
+
+Dependendo do tipo de código que você está contribuindo, pode haver coisas adicionais para ter em mente que podem ajudá-lo a fazer sua contribuição fazer o máximo possível para a Comunidade.
+
+> [!div class="nextstepaction"]
+> [Saiba mais sobre exemplos de colaboração](xref:microsoft.quantum.contributing.samples)
