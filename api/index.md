@@ -6,20 +6,19 @@ author: natke
 ms.author: nakersha
 ms.date: 09/04/2019
 ms.topic: landing-page
-ms.openlocfilehash: 25a53e1cb8577761ef89cdcf2cfcddc509093f86
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 5975b0caf0fc73ad18fbd8a1e7c82a2333161da2
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056956"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022505"
 ---
-# <a name="q-standard-libraries"></a><span data-ttu-id="156a8-103">Bibliotecas padrão Q#</span><span class="sxs-lookup"><span data-stu-id="156a8-103">Q# standard libraries</span></span> #
+# <a name="q-api-reference"></a><span data-ttu-id="f90a1-103">Referência de API do Q#</span><span class="sxs-lookup"><span data-stu-id="f90a1-103">Q# API reference</span></span> #
 
-<span data-ttu-id="156a8-104">Há suporte para o Q# em uma variedade de diferentes operações úteis, funções e tipos definidos pelo usuário que abrangem a *biblioteca padrão* Q#.</span><span class="sxs-lookup"><span data-stu-id="156a8-104">Q# is supported by a range of different useful operations, functions, and user-defined types that comprise the Q# *standard library*.</span></span>
-<span data-ttu-id="156a8-105">A biblioteca padrão Q# é dividida em duas partes principais:</span><span class="sxs-lookup"><span data-stu-id="156a8-105">The Q# standard library is split into two main parts:</span></span>
+<span data-ttu-id="f90a1-104">Essa referência de API inclui a biblioteca padrão Q# e as três bibliotecas desenvolvidas com base nela – as bibliotecas de química, numéricos e aprendizado de máquina.</span><span class="sxs-lookup"><span data-stu-id="f90a1-104">This API reference includes the Q# standard library and the three libraries built on top of it - the chemistry, numerics, and machine learning libraries.</span></span> <span data-ttu-id="f90a1-105">Também há bibliotecas .NET e Python disponíveis para Q#.</span><span class="sxs-lookup"><span data-stu-id="f90a1-105">There are also .NET and Python libraries available for Q#.</span></span>
 
-- <span data-ttu-id="156a8-106">**O prelúdio**: operações e funções definidas como parte do compilador e do computador de destino, normalmente, no código .NET nativo clássico.</span><span class="sxs-lookup"><span data-stu-id="156a8-106">**The prelude**: operations and functions defined as a part of the target machine and compiler, typically in classical native .NET code.</span></span>
-  <span data-ttu-id="156a8-107">Em geral, diferentes computadores de destino podem ter implementações diferentes do prelúdio, apropriadas para cada sistema.</span><span class="sxs-lookup"><span data-stu-id="156a8-107">In general, different target machines may have different implementations of the prelude appropriate to each system.</span></span>
-- <span data-ttu-id="156a8-108">**O cânone**: operações e funções definidas em Q# baseadas na lógica definida no prelúdio.</span><span class="sxs-lookup"><span data-stu-id="156a8-108">**The canon**: operations and functions defined in Q# building on the logic defined in the prelude.</span></span>
-  <span data-ttu-id="156a8-109">A implementação do cânone é independente com relação aos computadores de destino.</span><span class="sxs-lookup"><span data-stu-id="156a8-109">The canon implementation is agnostic with respect to target machines.</span></span>
-<span data-ttu-id="156a8-110">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="sxs-lookup"><span data-stu-id="156a8-110">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></span>
+- [<span data-ttu-id="f90a1-106">Bibliotecas do Q#</span><span class="sxs-lookup"><span data-stu-id="f90a1-106">Q# libraries</span></span>](xref:microsoft.quantum.qsharplibintro)
+- [<span data-ttu-id="f90a1-107">Bibliotecas .NET</span><span class="sxs-lookup"><span data-stu-id="f90a1-107">.NET libraries</span></span>](xref:microsoft.quantum.dotnetlibsintro)
+- [<span data-ttu-id="f90a1-108">Bibliotecas do Python</span><span class="sxs-lookup"><span data-stu-id="f90a1-108">Python libraries</span></span>](https://docs.microsoft.com/python/qsharp)
+
+<span data-ttu-id="f90a1-109">Para saber mais sobre as bibliotecas Q#, confira <xref:microsoft.quantum.libraries>.</span><span class="sxs-lookup"><span data-stu-id="f90a1-109">For more information about the Q# libraries, see <xref:microsoft.quantum.libraries>.</span></span>
