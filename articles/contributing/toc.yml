@@ -6,5 +6,9 @@
   href: pull-requests.md
 - name: Código de contribuição
   href: code.md
+- name: Exemplos de contribuição
+  href: samples.md
 - name: Guia de Estilo
   href: style-guide.md
+- name: Princípios de design da API
+  href: api-design-principles.md
