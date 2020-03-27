@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.pauli
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: fcd30c171859f96c3f9cc74664ecba8df0a02855
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 08babbcb0d6c6c4d83622489bc4ecc811e64829a
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907504"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320858"
 ---
 # <a name="pauli-measurements"></a>Medições de Pauli
 
@@ -61,7 +61,7 @@ Ou seja, usar essa linguagem, "Measure $Y $" é equivalente a aplicar $HS ^ \dag
 $ $ \begin{align} S = \begin{bmatrix} 1 & 0 \\\\ 0 & \end{bmatrix}.
 \end{align} $ $
 
-Também é equivalente a aplicar $HS ^ \dagger $ ao vetor de estado Quantum e, em seguida, medir $Z $, de modo que a seguinte operação é equivalente a `Measure([PauliY], [q]])`:
+Também é equivalente a aplicar $HS ^ \dagger $ ao vetor de estado Quantum e, em seguida, medir $Z $, de modo que a seguinte operação é equivalente a `Measure([PauliY], [q])`:
 
 ```Q#
 operation MeasureY(qubit : Qubit) : Result {

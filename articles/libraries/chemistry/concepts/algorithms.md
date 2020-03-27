@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: e3ce76f5ddcca497adb519eece959c9dd5dec92f
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 5dad4e4a77eea99e72eb2efac52eec61ebbdb21c
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904631"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320719"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Simulando o Hamiltonian Dynamics
 
@@ -28,14 +28,14 @@ Observe que se $e ^ {-i H} $ fosse um exponencial comum, o erro nessa aproximaç
 Esse erro ocorre porque $e ^ {-iHt} $ é um exponencial de operador e, como resultado, há um erro incorrido ao usar essa fórmula devido ao fato de que os $H _j $ termos não são transformados (*ou seja*, $H _J H_k \ne H_k H_j $ em geral).
 
 Se $t $ for grande, as fórmulas Trotter – Suzuki ainda poderão ser usadas para simular o Dynamics com precisão, dividindo-o em uma sequência de etapas curtas.
-Deixe $r $ seja o número de etapas executadas na evolução do tempo.
-Em seguida, temos o $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r), $ $, que implica que, se $r $ for dimensionado como $m ^ 2 t ^ 2/\ épsilon $, o erro poderá ser feito no máximo $ \epsilon $ para qualquer $ \epsilon > 0 $.
+Deixe $r $ seja o número de etapas executadas na evolução do tempo, de modo que cada etapa seja executada por tempo $t/r $. Em seguida, temos o $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r), $ $, que implica que, se $r $ for dimensionado como $m ^ 2 t ^ 2/\ épsilon $, o erro poderá ser feito no máximo $ \epsilon $ para qualquer $ \epsilon > 0 $.
 
 As aproximações mais precisas podem ser criadas com a construção de uma sequência de exponenciais de operador, de modo que os termos de erro sejam cancelados.
-A fórmula mais simples, a fórmula Trotter simétrica ou a divisão Strang, usa a forma $ $ U_1 (t) = \ prod_ {j = 1} ^ m e ^ {-iH_j t/2} \ prod_ {j = m} ^ 1 e ^ {-iH_j t} = e ^ {-iHt} + O (m ^ 3 t ^ 3), $ $ que pode ser feito com menos de $ \epsilon $ para qualquer $ \epsilon > 0 $ escolhendo $r $ para dimensionar como $m ^ {3/2} t ^ {3/2}/\sqrt {\ Épsilon} $.
+A fórmula mais simples, a segunda, a fórmula Trotter-Suzuki, usa a forma $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2R} \ prod_ {j = m} ^ 1 e ^ {-iH_j t/2R} \ right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ o erro do qual pode ser feito menos de $ \epsilon $ para qualquer $ \epsilon > 0 $ escolhendo $r $ para dimensionar como $m ^ {3/2} t ^ {3/2}/\sqrt {\ Épsilon} $.
 
-As fórmulas Trotter de ordem superior podem ser construídas com base em $U _1 $.
-A maneira mais simples é a quarta fórmula de ordem a seguir, introduzido originalmente por Suzuki: $ $ U_2 (t) = U_1 ^ 2 (s_1t) U_1 ([1-4s_1] t) U_1 ^ 2 (s_1 t) = e ^ {-iHt} + O (m ^ 5T ^ 5), $ $ em que $s _1 = (4-4 ^ {1/3}) ^{-1}$.
+Até mesmo as fórmulas de ordem mais alta, especificamente (US $2k $), para $k > 0 $, podem ser construídas recursivamente: $ $ U_ {2K} (t) = [U_ {2K-2} (s_k\~ t)] ^ 2 U_ {2K-2} ([1-4s_k] t) [U_ {2K-2} (s_k\~ t)] ^ 2 = e ^ {-iHt} + O ((m t) ^ {2K + 1}/r ^ {2K}), $ $, em que $s _k = (4-4 ^ {1/(2K-1)}) ^{-1}$.
+
+O mais simples é a seguinte fórmula de ordem ($k = $2), originalmente introduzida por Suzuki: $ $ U_4 (t) = [U_2 (s_2\~ t)] ^ 2 U_2 ([1-4s_2] t) [U_2 (s_2\~ t)] ^ 2 = e ^ {-iHt} + O (m ^ 5T ^ 5/r ^ 4), $ $, onde $s _2 = (4-4 ^ {1/3}) ^{-1}$.
 Em geral, as fórmulas de ordem superior arbitrariamente podem ser construídas de forma semelhante; no entanto, os custos incorridos com o uso de integradores mais complexos geralmente superam os benefícios além da quarta ordem para os problemas mais práticos.
 
 Para fazer com que as estratégias acima funcionem, precisamos ter um método para simular uma ampla classe de $e ^ {-iH_j t} $.
