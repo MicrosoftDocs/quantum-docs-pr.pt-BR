@@ -13,6 +13,8 @@ functions:
   summary: Cria uma matriz de comprimento determinado com todos os elementos iguais ao valor fornecido.
 - uid: microsoft.quantum.arrays.enumerated
   summary: Dada uma matriz, retorna uma nova matriz contendo os elementos da matriz original junto com os índices de cada elemento.
+- uid: microsoft.quantum.arrays.equala
+  summary: Dadas duas matrizes do mesmo tipo e um predicado que é definido para pares de elementos das matrizes, verifica se as matrizes são iguais.
 - uid: microsoft.quantum.arrays.exclude
   summary: Retorna uma matriz que contém os elementos de outra matriz, excluindo os elementos em uma determinada lista de índices.
 - uid: microsoft.quantum.arrays.filtered
@@ -67,9 +69,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Dada uma matriz e uma operação que é definida para os elementos da matriz, retorna uma nova matriz que consiste nas imagens da matriz original sob a operação.
 metadata:
-  ms.openlocfilehash: 5cbe8e172fda72d1016b407656c75457526651aa
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 422564f632efd7a6d093d78358a15ee012f918f8
+  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905583"
+  ms.lasthandoff: 03/26/2020
+  ms.locfileid: "80320731"
