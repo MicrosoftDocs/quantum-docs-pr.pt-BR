@@ -1,17 +1,17 @@
 ---
-title: Notas sobre a versão prévia do Quantum Development Kit
+title: Notas sobre a versão do Quantum Development Kit
 description: Saiba mais sobre as atualizações mais recentes da versão prévia do Microsoft Quantum Development Kit.
 author: natke
 ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 53b7d226f0f9b12f47460964944f1ddb6160c357
-ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
+ms.openlocfilehash: 61a91278ee2c77972ff12ed77b4f20c837b02643
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79022830"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320695"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas sobre a versão do Microsoft Quantum Development Kit
 
