@@ -7,10 +7,10 @@ ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
 ms.openlocfilehash: 9d8ba90a504f298f9465ebf564c43625a4d43168
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "73529942"
 ---
 # <a name="what-can-a-quantum-computer-do"></a>O que um computador quântico pode fazer?
@@ -37,7 +37,7 @@ A computação quântica torna essas operações teoricamente tratáveis (por me
 
 Aqui na Microsoft, temos a equipe líder mundial em criptografia pós-quântica e em segurança no desenvolvimento de algoritmos resistentes a quantum.
 
-## <a name="optimization"></a>Otimização
+## <a name="optimization"></a>Optimization
 
 A otimização é a tarefa de executar uma pesquisa grande em um espaço altamente dimensional para uma solução que minimize uma determinada função de custo.   Em um computador quântico, podemos acelerar os algoritmos de otimização, o que permite que encontremos soluções que não eram possíveis de outra maneira. Os aplicativos variam entre transporte e logística, saúde, diagnóstico e ciência de materiais. Pode haver um impacto profundo sobre como esses setores podem se tornar mais eficientes.
 
