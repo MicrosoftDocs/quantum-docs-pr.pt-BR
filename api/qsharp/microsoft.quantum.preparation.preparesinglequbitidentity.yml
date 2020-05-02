@@ -7,7 +7,7 @@ summary: >-
   Prepara um qubit no estado máximo misto.
 
 
-  Ele prepara o determinado qubit no estado $ \boldone/$2 aplicando o canal de despolarização $ $ \begin{align} \Omega (\rho) \mathrel{: =} \frac{1}{4} \sum_{\mu na \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\ Dagger}, \end{Align} $ $, em que $ \sigma\_i $ é o operador $i $ th Pauli e em que $ \rho $ é um operador de densidade que representa um estado misto.
+  Ele prepara o determinado qubit no estado $ \boldone/$2 aplicando o \rho de despolarização do canal $ $ \begin{align} \Omega (\mathrel{): =} \frac{1} {4} \ sum_ {\mu na \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\dagger}, \end{Align} $ $, em que\_$ \sigma i $ é o operador $i $ th Pauli e em que $ \rho $ é um operador de densidade que representa um estado misto.
 remarks: >-
   O estado misto $ \boldone/$2 que descreve o resultado da aplicação dessa operação a um estado descreve implicitamente um valor de expectativa sobre as escolhas aleatórias feitas nesta operação.
 
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 944178e3a8473b2206de037031bd8def546425b8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4dd07e9e59575d60bca81c996ad5fc1a3a82b16d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226515"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686514"
