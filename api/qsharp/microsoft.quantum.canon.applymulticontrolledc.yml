@@ -23,7 +23,7 @@ input:
 
       Supõe-se que o primeiro qubit no argumento da operação seja um controle e que o resto seja de destino qubits.
 
-      `ApplyMultiControlled` sempre chama `singlyControlledOp` com um argumento de comprimento pelo menos 1.
+      `ApplyMultiControlled`sempre chama `singlyControlledOp` com um argumento de comprimento pelo menos 1.
     isOperation: true
     input:
       types:
@@ -39,14 +39,14 @@ input:
     uid: microsoft.quantum.canon.ccnotop
   - name: controls
     summary: >-
-      O qubits que `singlyControlledOp` deve ser controlado.
+      O qubits que `singlyControlledOp` deve ser controlado em.
 
       O comprimento de `controls` deve ser pelo menos 1.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: O qubits de destino com o qual `singlyControlledOp` atua.
+    summary: O qubits de destino `singlyControlledOp` que atua.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -60,9 +60,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applymulticontrolledca
 metadata:
-  ms.openlocfilehash: 0c6f30505081f3b5f449a72a10bac89815c3bf14
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3b4398dd3845d8767842acb23da3b7c67c210b78
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217335"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672543"

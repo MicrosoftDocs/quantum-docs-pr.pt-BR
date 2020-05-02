@@ -7,13 +7,13 @@ summary: >-
   Aplica uma das duas operações de unitário, dependendo do valor de um resultado clássico.
 
 
-  Dado um resultado `result`, o aplica a operação `zeroOp` com `zeroInput` como sua entrada quando `result` é igual a `Zero`e aplica `oneOp(oneInput)` quando `result == One`.
+  Dado um resultado `result`, o aplica a `zeroOp` operação `zeroInput` com como sua entrada `result` quando é igual `Zero`a e se `oneOp(oneInput)` aplica `result == One`quando.
 syntax: "operation ApplyIfElseRCA (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U))"
   types:
   - name: result
-    summary: O resultado da medida usado para determinar se `zeroOp` ou `oneOp` é aplicado.
+    summary: O resultado da medida usado para determinar `zeroOp` se `oneOp` ou é aplicado.
     isPrimitive: true
     uid: Result
   - name: zeroOp
@@ -31,7 +31,7 @@ input:
     - Adjoint
     - Controlled
   - name: zeroInput
-    summary: A entrada a ser fornecida para `zeroOp` quando `result == Zero`.
+    summary: A entrada a ser fornecida a `zeroOp` quando `result == Zero`.
     uid: "'T"
     isLocal: true
   - name: oneOp
@@ -49,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: oneInput
-    summary: A entrada a ser fornecida para `oneOp` quando `result == One`.
+    summary: A entrada a ser fornecida a `oneOp` quando `result == One`.
     uid: "'U"
     isLocal: true
 output:
@@ -59,9 +59,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação `zeroOp` ser aplicado condicionalmente.
+  summary: O tipo de entrada da operação `zeroOp` a ser aplicada condicionalmente.
 - uid: "'U"
-  summary: O tipo de entrada da operação `oneOp` ser aplicado condicionalmente.
+  summary: O tipo de entrada da operação `oneOp` a ser aplicada condicionalmente.
 functors:
 - Adjoint
 - Controlled
@@ -72,9 +72,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 79fc62ca2c3525699deec6669e6b078408ede837
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a1182abedfbb4905ec65f5e720d82a1766aa5d65
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213714"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672718"
