@@ -7,9 +7,9 @@ summary: >-
   Executa uma "e uma escada" controlada em um registro de qubits de destino.
 
 
-  Esta operação aplica uma transformação descrita pelo seguinte mapeamento da base computacional, $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1, \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{Align} $ $, em que $ \ket{x\_1, \dots, x\_n} $ refere-se aos Estados de base computacional de `controls`e em que $ \ket{y\_1, \dots, y\_{n-1}} $ refere-se aos Estados de base computacional de `targets`.
+  Esta operação aplica\_uma transformação descrita pelo seguinte mapeamento da base computacional, $ $ \begin{align} \ket{x 1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1, \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}}, \end{Align} $ $, em que $ \ket{x\_1, \dots, x\_n} $ refere-se aos Estados de base computacional de `controls`e onde $ \ket{y\_1, \dots, y\_{n-1}} $ refere-se aos Estados de base computacional de `targets`.
 remarks: >-
-  - Usado como parte de <xref:microsoft.quantum.canon.applymulticontrolledc> e <xref:microsoft.quantum.canon.applymulticontrolledca>.
+  - Usado como parte de <xref:microsoft.quantum.canon.applymulticontrolledc> e. <xref:microsoft.quantum.canon.applymulticontrolledca>
 
   - Para obter a explicação e o diagrama de circuito, consulte a Figura 4,10, seção 4,3 em Nielsen & Chuang.
 syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
@@ -24,7 +24,7 @@ input:
     summary: >-
       Um registro de qubits a ser usado como controles para a escada e.
 
-      Essa operação deixa os Estados de base computacional de `controls` invariável.
+      Essa operação deixa os Estados de base de `controls` variável de constante.
 
       O comprimento de `controls` deve ser pelo menos 2 e deve ser igual a um mais o comprimento de `targets`.
     isArray: true
@@ -43,9 +43,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: bf5b262ca55bea542218356918cf36eb95502967
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 4cc74315145176fd3a2258a3d92b2f2dfb4d66d3
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871032"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676385"

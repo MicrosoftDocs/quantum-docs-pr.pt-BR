@@ -7,17 +7,17 @@ summary: >-
   Aplica uma das duas operações de adjointable, dependendo do valor de um resultado clássico.
 
 
-  Dado um resultado `result`, o aplica a operação `zeroOp` com `zeroInput` como sua entrada quando `result` é igual a `Zero`e aplica `oneOp(oneInput)` quando `result == One`.
+  Dado um resultado `result`, o aplica a `zeroOp` operação `zeroInput` com como sua entrada `result` quando é igual `Zero`a e se `oneOp(oneInput)` aplica `result == One`quando.
 syntax: "operation ApplyIfElseRA (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U))"
   types:
   - name: result
-    summary: O resultado da medida usado para determinar se `zeroOp` ou `oneOp` é aplicado.
+    summary: O resultado da medida usado para determinar `zeroOp` se `oneOp` ou é aplicado.
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: A operação de adjointable a ser aplicada quando `result == Zero`.
+    summary: A operação de jointable a ser aplicada `result == Zero`quando.
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Adjoint
   - name: zeroInput
-    summary: A entrada a ser fornecida para `zeroOp` quando `result == Zero`.
+    summary: A entrada a ser fornecida a `zeroOp` quando `result == Zero`.
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: A operação de adjointable a ser aplicada quando `result == One`.
+    summary: A operação de jointable a ser aplicada `result == One`quando.
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Adjoint
   - name: oneInput
-    summary: A entrada a ser fornecida para `oneOp` quando `result == One`.
+    summary: A entrada a ser fornecida a `oneOp` quando `result == One`.
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação `zeroOp` ser aplicado condicionalmente.
+  summary: O tipo de entrada da operação `zeroOp` a ser aplicada condicionalmente.
 - uid: "'U"
-  summary: O tipo de entrada da operação `oneOp` ser aplicado condicionalmente.
+  summary: O tipo de entrada da operação `oneOp` a ser aplicada condicionalmente.
 functors:
 - Adjoint
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: df838f6eda12db4710ee19cd3c0aeb334935cd22
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6168a991766f07ec5d0fd0a7685f17d02510e038
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213901"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676326"
