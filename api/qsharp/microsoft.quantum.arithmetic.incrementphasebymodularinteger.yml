@@ -7,7 +7,7 @@ summary: >-
   Executa um incremento modular de um registro qubit por uma constante de inteiro.
 
 
-  Deixe-nos indicar `increment` por $a $, `modulus` pelo $N $ e pelo número inteiro codificado em `target` por $y $.
+  Vamos indicar `increment` por $a $, `modulus` por $N $ e inteiro codificado `target` por $y $.
 
   Em seguida, a operação executa a seguinte transformação: \begin{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} inteiros são codificados no formato little-endian na base QFT.
 remarks: >-
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: 69240c9ecac0917f8f2a6d1f6a3554cc93269cbd
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: e97f88d64d9188d18b10ed7f67adc0225167c466
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871406"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676845"

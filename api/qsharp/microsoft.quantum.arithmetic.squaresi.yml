@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.squaresi
 name: SquareSI
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Inteiro assinado quadrado `xs` e armazenar o resultado em `result`, que deve ser inicialmente zero.
+summary: Inteiro `xs` com sinal de quadrado e armazena o `result`resultado em, que deve ser inicialmente zero.
 remarks: A implementação depende do IntegerSquare.
 syntax: 'operation SquareSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 71a3ffc190540ccfb51eb81febdce6a943dc99fb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e4a212094c38d370e2489b586ee8014131bef9dc
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218406"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676596"

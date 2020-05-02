@@ -3,7 +3,7 @@ uid: microsoft.quantum.arrays.fold
 name: Fold
 type: function
 namespace: Microsoft.Quantum.Arrays
-summary: Itera uma função `f` por meio de uma `array`de matriz, retornando `f(f(f(initialState, array[0]), array[1]), ...)`.
+summary: Itera uma função `f` por meio de uma `array`matriz, `f(f(f(initialState, array[0]), array[1]), ...)`retornando.
 examples: >-
   ```qsharp
 
@@ -45,18 +45,18 @@ input:
 output:
   content: "'State"
   types:
-  - summary: O estado final retornado pela pasta após a iteração em todos os elementos de `array`.
+  - summary: O estado final retornado pela pasta após a iteração em todos os `array`elementos de.
     uid: "'State"
     isLocal: true
 typeParameters:
 - uid: "'State"
-  summary: O tipo de Estados no qual a função `folder` Opera, ou seja, aceita como seu primeiro argumento e retorna.
+  summary: O tipo de Estados em `folder` que a função Opera, ou seja, aceita como seu primeiro argumento e retorna.
 - uid: "'T"
-  summary: O tipo de elementos de `array`.
+  summary: O tipo de `array` elementos.
 metadata:
-  ms.openlocfilehash: 4be4752029b10351cfb3fe0fa6aa61b84b157510
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d02d20c049e8b8d21214028efcd6a647067bf71f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214343"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676438"
