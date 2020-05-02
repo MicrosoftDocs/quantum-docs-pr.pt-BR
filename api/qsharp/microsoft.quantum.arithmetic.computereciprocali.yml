@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.computereciprocali
 name: ComputeReciprocalI
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Computa o 1/x recíproco para um inteiro sem sinal x usando divisão de inteiro. O resultado, interpretado como um inteiro, será `floor(2^(2*n-1) / x)`.
+summary: Computa o 1/x recíproco para um inteiro sem sinal x usando divisão de inteiro. O resultado, interpretado como um inteiro, `floor(2^(2*n-1) / x)`será.
 remarks: Para a entrada x = 0, a saída será All-The.
 syntax: 'operation ComputeReciprocalI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 91999bd0be10e1e77fb5d1daa88e34373eb83b9f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b371c7c1e7442e49aab01793fdaa9c99bcafa35d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221041"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679731"
