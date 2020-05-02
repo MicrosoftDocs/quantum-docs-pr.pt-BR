@@ -7,7 +7,7 @@ summary: >-
   Incrementa um registro de Quantum não assinado por um inteiro clássico, usando rotações de fase.
 
 
-  Suponha que `target` codifica um inteiro sem sinal $x $ em uma codificação little-endian e que `increment` é igual a $a $.
+  Suponha que `target` o codifica um inteiro sem sinal $x $ em uma codificação little-endian e que `increment` seja igual a $a $.
 
   Em seguida, essa operação implementa o unitário $ \ket{x} \mapsto \ket{x + a} $, em que a adição é executada módulo $2 ^ n $, em que $n = \texttt{Length (Target!)} $.
 syntax: 'operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d05ed867e62f4f7474319ffe23dcd23aa34675c5
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: c07015f69d9cab08b287c383230fe79b5d67d6a0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871151"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679549"
