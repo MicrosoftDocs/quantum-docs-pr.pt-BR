@@ -7,13 +7,13 @@ summary: >-
   Aplica uma das duas operações controláveis, dependendo do valor de um resultado clássico.
 
 
-  Dado um resultado `result`, o aplica a operação `zeroOp` com `zeroInput` como sua entrada quando `result` é igual a `Zero`e aplica `oneOp(oneInput)` quando `result == One`.
+  Dado um resultado `result`, o aplica a `zeroOp` operação `zeroInput` com como sua entrada `result` quando é igual `Zero`a e se `oneOp(oneInput)` aplica `result == One`quando.
 syntax: "operation ApplyIfElseRC (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U))"
   types:
   - name: result
-    summary: O resultado da medida usado para determinar se `zeroOp` ou `oneOp` é aplicado.
+    summary: O resultado da medida usado para determinar `zeroOp` se `oneOp` ou é aplicado.
     isPrimitive: true
     uid: Result
   - name: zeroOp
@@ -30,7 +30,7 @@ input:
     functors:
     - Controlled
   - name: zeroInput
-    summary: A entrada a ser fornecida para `zeroOp` quando `result == Zero`.
+    summary: A entrada a ser fornecida a `zeroOp` quando `result == Zero`.
     uid: "'T"
     isLocal: true
   - name: oneOp
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: oneInput
-    summary: A entrada a ser fornecida para `oneOp` quando `result == One`.
+    summary: A entrada a ser fornecida a `oneOp` quando `result == One`.
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação `zeroOp` ser aplicado condicionalmente.
+  summary: O tipo de entrada da operação `zeroOp` a ser aplicada condicionalmente.
 - uid: "'U"
-  summary: O tipo de entrada da operação `oneOp` ser aplicado condicionalmente.
+  summary: O tipo de entrada da operação `oneOp` a ser aplicada condicionalmente.
 functors:
 - Controlled
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: e2dd871aa42ed22ba088e6eaad9d9705dfb26254
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aeb4c7f86ac1f41140bb14436d9dee39b4c4d98b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220922"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672735"
