@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: Dado um operador Pauli de qubit único e o índice de um qubit, retorna um operador Pauli de vários qubit com o operador Single-qubit fornecido nesse índice e `PauliI` em todos os outros índices.
 examples: >-
-  Para obter a `[PauliI, PauliI, PauliX, PauliI]`de matriz:
+  Para obter a matriz `[PauliI, PauliI, PauliX, PauliI]`:
 
 
   ```qsharp
@@ -22,7 +22,7 @@ input:
     isPrimitive: true
     uid: Pauli
   - name: location
-    summary: Um índice que `output[location] == pauli`, em que `output` é a saída dessa função.
+    summary: Um índice de tal `output[location] == pauli`forma, `output` em que é a saída dessa função.
     isPrimitive: true
     uid: Int
   - name: n
@@ -36,9 +36,9 @@ output:
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 1e852781f6dd85e5432f5613184f028db0e84b87
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: df9cff23b6a7255ec57e944fd1bed140ff18560a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219375"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675595"
