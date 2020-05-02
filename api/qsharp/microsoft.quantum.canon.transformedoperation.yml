@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: Dada uma função e uma operação, retorna uma nova operação cuja entrada é transformada pela função fornecida.
 examples: >-
-  A chamada a seguir usa @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" para transformar uma operação projetada para @"Microsoft.Quantum.Arithmetic.BigEndian" entradas em uma operação que aceita entradas do tipo @"Microsoft.Quantum.Arithmetic.LittleEndian":
+  A chamada a seguir @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" usa para transformar uma operação projetada @"Microsoft.Quantum.Arithmetic.BigEndian" para entradas em uma operação que aceita entradas do @"Microsoft.Quantum.Arithmetic.LittleEndian"tipo:
 
 
   ```qsharp
@@ -42,7 +42,7 @@ input:
 output:
   content: ('U => Unit)
   types:
-  - summary: Uma nova operação tbat chama `fn` com sua entrada e, em seguida, passa a saída resultante para `op`.
+  - summary: Uma nova operação tbat chamadas `fn` com sua entrada e, em seguida, passa a `op`saída resultante para.
     isOperation: true
     input:
       types:
@@ -59,9 +59,9 @@ seeAlso:
 - applywithinputtransformation
 - compose
 metadata:
-  ms.openlocfilehash: 8bf89235c2f702ec6cd3a9d8950c13ff6ce8cf8c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a2ac6d6682fdbe064e655e5af9a9e8454edac5d3
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217097"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678073"
