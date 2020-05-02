@@ -4,7 +4,7 @@ name: XBits
 type: function
 namespace: Microsoft.Quantum.Bitwise
 summary: Retorna um inteiro que representa os X bits de uma matriz de operadores Pauli.
-remarks: A função gerará se o comprimento da matriz de `paulis` for maior que 63.
+remarks: A função gerará se o comprimento da `paulis` matriz for maior que 63.
 syntax: 'function XBits (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -17,15 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: Um inteiro $x $ com representação binária $ (p_{62}\,p_{61}\,\dots\,p_0) $, em que $p _i = $0 se `paulis[i]` for `PauliI` ou `PauliZ` e onde $p _i = $1 se `paulis[i]` for `PauliX` ou `PauliY`.
+  - summary: Um inteiro $x $ com representação binária $ (p_{62}\,p_{61}\,\dots\,p_0) $, em que $p _i = $0 `paulis[i]` se `PauliI` for `PauliZ` ou e onde $p _i = $1 `paulis[i]` se `PauliX` for `PauliY`ou.
     isPrimitive: true
     uid: Int
 seeAlso:
 - zbits
 metadata:
-  ms.openlocfilehash: 9319e664aaa7af3ea500bd5bee78c09a92d9573b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0dccf94d895984b3661790b44f10455fce35331d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217726"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680577"
