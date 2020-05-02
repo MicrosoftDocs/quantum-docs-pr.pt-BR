@@ -7,7 +7,7 @@ summary: >-
   Declara que um qubit no estado esperado.
 
 
-  `expected` representa um vetor complexo, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+  `expected`representa um vetor complexo, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
   O primeiro elemento das tuplas que representa cada $a $, $b $ é a parte real do número complexo, enquanto o segundo é a parte imaginária.
 
@@ -37,7 +37,7 @@ remarks: >-
   ```
 
 
-  A tolerância é a $L\_{\infty} $ Distance entre 3 vetores de dimensão real (x ₂, x ₃, x ₄) definido por $ \langle\psi | \psi\rangle = x\_1 I + x\_2 X + x\_3 Y + x\_4 Z $ e real vector (y ₂, y ₃, y ₄) definido por ρ = y ₁ I + y ₂ X + y ₃ Y + Y ₄ Z, em que ρ é a matriz de densidade correspondente ao estado do registro.
+  A tolerância é a $L\_{\infty} $ Distance entre 3 vetores de dimensão real (x ₂, x ₃, x ₄) definido por $ \langle\psi | \psi\rangle\_= x 1 I\_+ x 2 x\_+ x 3 y\_+ x 4 Z $ e real vector (y ₂, y ₃, y ₄) definido por ρ = Y ₁ I + y ₂ x + y ₃ Y + Y ₄ Z, em que ρ é a matriz de densidade correspondente ao estado do registro.
 
   Isso só é verdade na suposição de que TR (ρ) e Tr (| ψ ⟩ ⟨ ψ |) são 1 (por exemplo, x ₁ = 1/2, y ₁ = 1/2).
 
@@ -60,7 +60,7 @@ input:
   content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: Amplitudes complexas esperadas para $ \ket{0}$ e $ \ket{1}$, respectivamente.
+    summary: Amplitudes complexas esperadas para ${0}\ket $ e ${1}\ket $, respectivamente.
     types:
     - uid: microsoft.quantum.math.complex
     - uid: microsoft.quantum.math.complex
@@ -81,9 +81,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 8b43bac19173c5ae5a11ff6879a03209c32e7c76
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 77d28c122a44f39924242dedb6bd6163974e18c1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227110"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82656594"
