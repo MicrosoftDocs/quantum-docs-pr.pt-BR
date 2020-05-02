@@ -20,12 +20,12 @@ functions:
 - uid: microsoft.quantum.errorcorrection.steanecoderecoveryz
   summary: Decodificador para a parte Z do grupo de estabilizador do ⟦ 7, 1, 3 ⟧ Steane código do Quantum.
 - uid: microsoft.quantum.errorcorrection.tablelookuprecovery
-  summary: Para uma determinada tabela de operações de Pauli em um determinado registro de qubits, essa função retorna um objeto do tipo `RecoveryFn` que contém todas as informações necessárias para executar uma decodificação de tabela de pesquisa em relação à matriz de operações de Pauli especificada.
+  summary: Para uma determinada tabela de operações de Pauli em um determinado registro de qubits, essa função retorna um objeto do `RecoveryFn` tipo que contém todas as informações necessárias para executar uma decodificação de tabela de pesquisa em relação à matriz de operações de Pauli especificada.
 operations:
 - uid: microsoft.quantum.errorcorrection.bitflipdecoder
-  summary: "\n> [!WARNING]\n> Preteridos\n\nBitFlipDecoder foi preterido. Em vez disso, use @\"microsoft.quantum.errorcorrection.decodefrombitflipcode\".\nUse @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nBitFlipDecoder foi preterido. Use @\"microsoft.quantum.errorcorrection.decodefrombitflipcode\" em seu lugar.\nUse @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"."
 - uid: microsoft.quantum.errorcorrection.bitflipencoder
-  summary: "\n> [!WARNING]\n> Preteridos\n\nBitFlipEncoder foi preterido. Em vez disso, use @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\".\nUse @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nBitFlipEncoder foi preterido. Use @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\" em seu lugar.\nUse @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"."
 - uid: microsoft.quantum.errorcorrection.decodefrombitflipcode
   summary: Decodifica do código [3, 1, 3]/⟦ 3, 1, 1 ⟧ bit-flip.
 - uid: microsoft.quantum.errorcorrection.decodefromfivequbitcode
@@ -39,9 +39,9 @@ operations:
 - uid: microsoft.quantum.errorcorrection.encodeintosteanecode
   summary: Uma operação de codificação que mapeia um registro Quantum não codificado para um registro Quantum codificado sob o código Quantum ⟦ 7, 1, 3 ⟧ Steane.
 - uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
-  summary: "\n> [!WARNING]\n> Preteridos\n\nFiveQubitCodeDecoder foi preterido. Em vez disso, use @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\".\nUse @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nFiveQubitCodeDecoder foi preterido. Use @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\" em seu lugar.\nUse @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
 - uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
-  summary: "\n> [!WARNING]\n> Preteridos\n\nFiveQubitCodeEncoder foi preterido. Em vez disso, use @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\".\nUse @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nFiveQubitCodeEncoder foi preterido. Use @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\" em seu lugar.\nUse @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"."
 - uid: microsoft.quantum.errorcorrection.injectpi4yrotation
   summary: Gira um único qubit por π/4 sobre o eixo Y.
 - uid: microsoft.quantum.errorcorrection.knilldistill
@@ -49,16 +49,16 @@ operations:
 - uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
   summary: Mede o conjunto determinado de geradores de um grupo de estabilizador.
 - uid: microsoft.quantum.errorcorrection.recover
-  summary: Executa uma única rodada de correção de erro por um código Quantum descrito por um tipo de `QECC`.
+  summary: Executa uma única rodada de correção de erro por um código Quantum descrito por `QECC` um tipo.
 - uid: microsoft.quantum.errorcorrection.recovercss
-  summary: Executa uma única rodada de correção de erro por um código Quantum descrito por um tipo de `CSS`.
+  summary: Executa uma única rodada de correção de erro por um código Quantum descrito por `CSS` um tipo.
 - uid: microsoft.quantum.errorcorrection.steanecodedecoder
-  summary: "\n> [!WARNING]\n> Preteridos\n\nSteaneCodeDecoder foi preterido. Em vez disso, use @\"microsoft.quantum.errorcorrection.decodefromsteanecode\".\nUse @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nSteaneCodeDecoder foi preterido. Use @\"microsoft.quantum.errorcorrection.decodefromsteanecode\" em seu lugar.\nUse @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
 - uid: microsoft.quantum.errorcorrection.steanecodeencoder
-  summary: "\n> [!WARNING]\n> Preteridos\n\nSteaneCodeEncoder foi preterido. Em vez disso, use @\"microsoft.quantum.errorcorrection.encodeintosteanecode\".\nUse @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nSteaneCodeEncoder foi preterido. Use @\"microsoft.quantum.errorcorrection.encodeintosteanecode\" em seu lugar.\nUse @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
 newtypes:
 - uid: microsoft.quantum.errorcorrection.css
-  summary: Representa um código de Calderbank – Atal – Steane (CSS) conforme definido por seu codificador, decodificador e seus procedimentos de medição de síndrome para erros de `X` e `Z`, respectivamente.
+  summary: Representa um código de Calderbank – Atal – Steane (CSS) conforme definido por seu codificador, decodificador e seus procedimentos `X` de `Z` medição de síndrome e erros, respectivamente.
 - uid: microsoft.quantum.errorcorrection.decodeop
   summary: >-
     Representa uma operação que decodifica um registro codificado em um registro físico e o qubits transitório usado para registrar uma síndrome.
@@ -72,19 +72,19 @@ newtypes:
 
     O primeiro argumento é usado para ser o registro físico que será codificado, enquanto o segundo argumento é utilizado para ser o registro transitório que será usado.
 - uid: microsoft.quantum.errorcorrection.logicalregister
-  summary: Tipo para registro de qubits físico `Qubit[]` que codificam o qubits lógico.
+  summary: Tipo para registro de qubits `Qubit[]` físicos que codificam o qubits lógico.
 - uid: microsoft.quantum.errorcorrection.qecc
   summary: Representa um código de correção de erro conforme definido por seu codificador, decodificador e procedimento de medição da síndrome.
 - uid: microsoft.quantum.errorcorrection.recoveryfn
-  summary: Tipo para função que mapeia uma síndrome de erro para uma sequência de operações de `Pauli[]` que corrija o erro detectado.
+  summary: Tipo para função que mapeia uma síndrome de erro para uma sequência `Pauli[]` de operações que corrigem o erro detectado.
 - uid: microsoft.quantum.errorcorrection.syndrome
-  summary: Tipo para resultados de medida `Result[]` que especificam uma síndrome de erro de um código Quantum.
+  summary: Tipo para resultados `Result[]` de medida que especificam uma síndrome de erro de um código Quantum.
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: Representa uma operação que é usada para medir a síndrome de um bloco de código com correção de erros.
 metadata:
-  ms.openlocfilehash: 0a149810314453e816c7754dd535b2f3bb7d8e58
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: b4d7aaa55fee7e99b9c96ebf3cecb36706a66062
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870781"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673322"

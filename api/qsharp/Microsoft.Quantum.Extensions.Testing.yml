@@ -3,25 +3,25 @@ uid: microsoft.quantum.extensions.testing
 name: Microsoft.Quantum.Extensions.Testing
 operations:
 - uid: microsoft.quantum.extensions.testing.assertallzero
-  summary: "\n> [!WARNING]\n> Preteridos\n\nAssertAllZero foi preterido. Use @\"microsoft.quantum.diagnostics.assertallzero\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertallzero\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertAllZero foi preterido. Use @\"microsoft.quantum.diagnostics.assertallzero\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertallzero\"."
 - uid: microsoft.quantum.extensions.testing.assertallzerotol
-  summary: "\n> [!WARNING]\n> Preteridos\n\nAssertAllZeroTol foi preterido. Use @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertAllZeroTol foi preterido. Use @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\"."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
-  summary: "\n> [!WARNING]\n> Preteridos\n\nAssertOperationsEqualInPlace foi preterido. Use @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\".\nObserve que a ordem dos argumentos para esta operação foi alterada."
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertOperationsEqualInPlace foi preterido. Use @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\".\nObserve que a ordem dos argumentos para esta operação foi alterada."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
-  summary: "\n> [!WARNING]\n> Preteridos\n\nAssertOperationsEqualInPlaceCompBasis foi preterido. Use @\"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis\".\nObserve que a ordem dos argumentos para esta operação foi alterada."
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertOperationsEqualInPlaceCompBasis foi preterido. Use @\"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis\".\nObserve que a ordem dos argumentos para esta operação foi alterada."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
-  summary: "\n> [!WARNING]\n> Preteridos\n\nAssertOperationsEqualReferenced foi preterido. Use @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\".\nObserve que a ordem dos argumentos para esta operação foi alterada."
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertOperationsEqualReferenced foi preterido. Use @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\".\nObserve que a ordem dos argumentos para esta operação foi alterada."
 - uid: microsoft.quantum.extensions.testing.assertqubit
-  summary: "\n> [!WARNING]\n> Preteridos\n\nAssertQubit foi preterido. Use @\"microsoft.quantum.diagnostics.assertqubit\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertqubit\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertQubit foi preterido. Use @\"microsoft.quantum.diagnostics.assertqubit\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertqubit\"."
 - uid: microsoft.quantum.extensions.testing.assertqubitstate
-  summary: "\n> [!WARNING]\n> Preteridos\n\nAssertQubitState foi preterido. Use @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertQubitState foi preterido. Use @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\"."
 - uid: microsoft.quantum.extensions.testing.assertqubittol
-  summary: "\n> [!WARNING]\n> Preteridos\n\nAssertQubitTol foi preterido. Use @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertQubitTol foi preterido. Use @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\" em seu lugar.\nUse @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\"."
 metadata:
-  ms.openlocfilehash: 0d06129c66f13c8c5ee9158ef6be41bf447791f9
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 2edd8b382cb62078188850d6810c26e4f3a8a901
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858407"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673241"
