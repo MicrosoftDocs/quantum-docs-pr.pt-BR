@@ -8,9 +8,9 @@ operations:
 - uid: microsoft.quantum.characterization.discretephaseestimationiteration
   summary: Executa uma única iteração de um algoritmo de estimativa de fase iterativa (controlado de forma clássica) usando potências de inteiros de um Oracle unitário.
 - uid: microsoft.quantum.characterization.estimatefrequency
-  summary: Dada uma preparação e medida, o estima a frequência com a qual essa medida é realizada com sucesso (retorna `Zero`) executando um determinado número de avaliações.
+  summary: Dada uma preparação e medida, o estima a frequência com a qual essa medida é realizada `Zero`com sucesso (retorna) executando um determinado número de avaliações.
 - uid: microsoft.quantum.characterization.estimatefrequencya
-  summary: Devido a uma preparação que é de adjointable e de medição, o estima a frequência com a qual essa medida é realizada com sucesso (retorna `Zero`) executando um determinado número de avaliações.
+  summary: Devido a uma preparação que é de adjointable e de medição, o estima a frequência com a qual `Zero`essa medida é realizada com sucesso (retorna) executando um determinado número de avaliações.
 - uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
   summary: Considerando-se duas operações que cada uma das cópias de um estado, o estima a parte imaginário da sobreposição entre os Estados preparados por cada operação.
 - uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
@@ -18,19 +18,19 @@ operations:
 - uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
   summary: Considerando-se duas operações que cada uma das cópias de um estado, o estima a parte real da sobreposição entre os Estados preparados por cada operação.
 - uid: microsoft.quantum.characterization.measureallz
-  summary: "\n> [!WARNING]\n> Preteridos\n\nMeasureAllZ foi preterido. Em vez disso, use @\"microsoft.quantum.measurement.measureallz\".\nUse @\"microsoft.quantum.measurement.measureAllZ\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nMeasureAllZ foi preterido. Use @\"microsoft.quantum.measurement.measureallz\" em seu lugar.\nUse @\"microsoft.quantum.measurement.measureAllZ\"."
 - uid: microsoft.quantum.characterization.measureidentity
   summary: Mede o operador de identidade em um registro de qubits.
 - uid: microsoft.quantum.characterization.quantumphaseestimation
-  summary: Executa o algoritmo de estimativa de fase Quantum para um determinado `U` do Oracle e `targetState`, lendo a fase em um registro de Quantum big-endian.
+  summary: Executa o algoritmo de estimativa de fase Quantum para um `U` determinado `targetState`Oracle e, em seguida, lendo a fase em um registro de Quantum big-endian.
 - uid: microsoft.quantum.characterization.robustphaseestimation
-  summary: Executa o algoritmo de estimativa de fase de Quantum não iterativo robusto para um determinado `U` e eigenstate da Oracle e fornece uma única estimativa de valor real da fase com dimensionamento de variação no limite de Heisenberg.
+  summary: Executa o algoritmo de estimativa de fase de Quantum não iterativa robusto para `U` um determinado Oracle e eigenstate e fornece uma única estimativa de valor real da fase com dimensionamento de variação no limite de Heisenberg.
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: Executa uma medida de tomography de processo de qubit único na base Pauli, dado um canal específico de interesse.
 metadata:
-  ms.openlocfilehash: ff2bee3d5885c4b83a7ba17eeaf578c226dbbf20
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 2ae4ee28cf6e87a3fde1f8107194760c388b462c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870674"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673369"
