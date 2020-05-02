@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 82af3b5123588cc06882f746ffcb0402ad3f0f2e
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907453"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686849"
 ---
 # <a name="opening-pull-requests"></a>Abrir solicitações de pull #
 
@@ -60,9 +60,9 @@ O uso desse processo nos ajuda a usar a funcionalidade do GitHub para melhorar a
 
 ## <a name="how-to-make-a-pull-request"></a>Como fazer uma solicitação de pull ##
 
-Há duas maneiras principais de fazer uma solicitação de pull.
-Para pequenas alterações que afetam apenas um único arquivo, a interface da Web do GitHub pode ser usada para fazer uma solicitação pull totalmente online.
-Para contribuições mais complicadas, geralmente é mais fácil usar seu computador local para se preparar primeiro para uma solicitação de pull.
+Há duas maneiras principais de fazer uma solicitação de pull.  
+Para pequenas alterações que afetam apenas um único arquivo, a interface da Web do GitHub pode ser usada para fazer uma solicitação pull totalmente online. Basta navegar até o arquivo que você deseja editar e usar o ícone Editar.  
+Para contribuições mais complicadas, é mais fácil clonar o repositório em seu computador local para se preparar primeiro para uma solicitação de pull.
 
 <!--
 ### Using the Web Interface ###
@@ -84,7 +84,7 @@ This way, you can edit your personal fork to your heart's content before making 
 
 -->
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1} ##
+## <a name="next-steps"></a>Próximas etapas ##
 
 Parabéns por usar o Git para ajudar a Comunidade do kit de desenvolvimento do Quantum!
 Para saber mais sobre como contribuir com código, continue com o guia a seguir.

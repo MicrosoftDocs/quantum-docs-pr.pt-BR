@@ -4,10 +4,10 @@ name: PrepareUniformSuperposition
 type: operation
 namespace: Microsoft.Quantum.Preparation
 summary: >-
-  Cria uma superposição uniforme em Estados que codificam 0 a `nIndices`.
+  Cria uma superposição uniforme em Estados que codificam 0 `nIndices`a.
 
 
-  Ou seja, esse unitário $U $ cria uma superposição uniforme em todos os Estados de número $0 $ para $M-$1, dado um estado de entrada $ \ket{0\cdots 0} $. Em outras palavras, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
+  Ou seja, esse unitário $U $ cria uma superposição uniforme em todos os Estados de número $0 $ para $M-$1, dado um estado de entrada $ \ket{0\cdots 0} $. Em outras palavras, $ $ \begin{align} U\ket{0}= \Frac{1}{\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{align} $ $.
 examples: >-
@@ -33,7 +33,7 @@ input:
     uid: Int
   - name: indexRegister
     summary: >-
-      O registro qubit que armazena os Estados de número no formato `LittleEndian`.
+      O registro qubit que armazena os Estados de número `LittleEndian` no formato.
 
       Esse registro deve ser capaz de armazenar o número $M-$1 e presume-se que seja inicializado no estado $ \ket{0\cdots 0} $.
     uid: microsoft.quantum.arithmetic.littleendian
@@ -46,9 +46,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4bb7c83382f8d48f132fbd91acfd2184a570aea4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a697f4d410ed47c8be3908e2206080a9393260f7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226481"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686517"

@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.estimateenergy
 name: EstimateEnergy
 type: operation
 namespace: Microsoft.Quantum.Simulation
-summary: Executa a preparação do estado aplicando um `statePrepUnitary` em uma estimativa de fase de estado de entrada alocada automaticamente com relação a `qpeUnitary`no estado resultante usando uma `phaseEstAlgorithm`.
+summary: Executa a preparação do estado aplicando um `statePrepUnitary` em uma estimativa de fase de estado de entrada `qpeUnitary`alocada automaticamente em relação ao `phaseEstAlgorithm`estado resultante usando um.
 syntax: 'operation EstimateEnergy (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
@@ -25,7 +25,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: Um Oracle representando um operador unitário $U $ representando a evolução do tempo $ \delta t $ em um gerador dinâmico com estado de terra $ \ket{\phi} $ e Energy State de terra $E = \phi\\, \delta t $.
+    summary: Um Oracle que representa um operador unitário $U $ representando a evolução do tempo $ \delta t $ em um gerador dinâmico com estado de terra $ \ket{\phi} $ e energia de estado terrestre\\$E = \phi, \delta t $.
     isOperation: true
     input:
       types:
@@ -62,9 +62,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: aff8ac5575b6a5e08dc80263a7a8d4bfec59fa12
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d7f32999782763bbb6224afc2c764188c718379b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223319"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686890"
