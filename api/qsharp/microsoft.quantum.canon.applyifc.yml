@@ -7,11 +7,11 @@ summary: >-
   Aplica uma operação controlável condicionalmente em um bit clássico.
 
 
-  Dada uma operação `op` e um valor de bit `bit`, o aplica `op` à `target` se `bit` for `true`. Se `false`, nada acontecerá com o `target`.
+  Dada uma operação `op` e um valor `bit`de bit, `op` aplica- `target` se `bit` ao `true`if is. Se `false`nada acontecer com o `target`.
 
   O sufixo `C` indica que a operação a ser aplicada é controlável.
 examples: >-
-  O seguinte prepara um registro de qubits para um estado de base computacional representado por uma cadeia de caracteres de bits clássicas fornecida como uma matriz de valores de `Bool`:
+  O seguinte prepara um registro de qubits para um estado de base computacional representado por uma cadeia de caracteres de bits clássicas fornecida como `Bool` uma matriz de valores:
 
 
   ```Q#
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: 166f61f877a282578a71419a74fea6361cc2cac3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a41eea8aafeabd5bda6bcc55b958598e58f52184
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217573"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680484"

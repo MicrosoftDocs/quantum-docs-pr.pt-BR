@@ -7,10 +7,10 @@ summary: >-
   Inverte um determinado qubit de destino se e somente se ambos os controles qubits estiverem no estado 1, usando a medida para executar a operação de adjoin.
 
 
-  Inverte `target` se e somente se ambos os controles forem 1, mas pressupõe que `target` está no estado 0.  A operação tem T-Count 4, T-Depth 2 e não requer nenhum qubit auxiliar e, portanto, pode ser preferível a uma operação CCNOT, se `target` for conhecido como 0.  O adjoin dessa operação é baseado em medição e não requer nenhuma Gates.
+  Inverte `target` se e somente se ambos os controles forem 1, mas pressupõe que `target` está no estado 0.  A operação tem T-Count 4, T-Depth 2 e não requer nenhum qubit auxiliar e, portanto, pode ser preferível a uma operação `target` CCNOT, se for conhecido como 0.  O adjoin dessa operação é baseado em medição e não requer nenhuma Gates.
 
 
-  O aplicativo controlado desta operação não requer nenhum auxiliar qubit, `2^c` `Rz` Gates e não é otimizado para profundidade, em que `c` é o número de qubits de controle geral, incluindo os dois controles da operação de `ApplyAnd`.  O aplicativo controlado por adjacente requer `2^c - 1` `Rz` Gates (com um ângulo duas vezes o tamanho da operação não adjacente), nenhum auxiliar qubit e não é otimizado para profundidade.
+  O aplicativo controlado desta operação não requer nenhum auxiliar qubit, `2^c` `Rz` Gates e não é otimizado para profundidade, `c` em que é o número de qubits de controle geral, incluindo os `ApplyAnd` dois controles da operação.  O aplicativo controlado por adjacente `2^c - 1` `Rz` requer Gates (com um ângulo duas vezes o tamanho da operação não-adjacente), nenhum auxiliar qubit e não é otimizado para profundidade.
 syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
   - Cody Jones: "construções de romance para a porta Toffoli tolerante a falhas", Phys. Rev. A 87, 022328, 2013 [arXiv: 1212.5069](https://arxiv.org/abs/1212.5069) doi: 10.1103/PhysRevA. 87.022328
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7cde3dbbd33ff482609bbaaccb15e4c7b1bc536e
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 973f7f618154720396be0bb4a01b52d763ccdd1c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872981"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680535"
