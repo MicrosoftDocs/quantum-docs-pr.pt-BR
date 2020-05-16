@@ -1,19 +1,19 @@
 ---
-title: Desenvolvimento com Q# + C#
+title: Desenvolvimento com o Q# e o .NET
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 5bcb036b0b32e64d43f90e9a068d9dcc237890ba
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 155367dbb1373f00e2b0bd732a5319b32462c9f9
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680173"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426497"
 ---
-# <a name="using-q-with-c-and-f"></a>Usando Q # com C\# e F\#
+# <a name="develop-with-q-and-net"></a>Desenvolvimento com o Q# e o .NET
 
 O Q # foi criado para ser bem executado com linguagens .NET, como C# e F #.
 Neste guia, demonstraremos como usar o Q # com um programa de host escrito em uma linguagem .NET.
@@ -29,7 +29,7 @@ A primeira etapa é criar projetos para a biblioteca do Q # e para o host do .NE
 ### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 - Criar uma nova biblioteca do Q #
-  - Ir para **arquivo** -> **novo** -> **projeto**
+  - Ir para **arquivo**  ->  **novo**  ->  **projeto**
   - Digite "Q #" na caixa de pesquisa
   - Selecionar **biblioteca de Q #**
   - Selecione **Avançar**.
@@ -84,18 +84,18 @@ Por exemplo, o [exemplo de interoperabilidade .net](https://github.com/microsoft
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-Para chamar essa operação do .NET em um simulador Quantum, você pode usar `Run` o método da `RunAlgorithm` classe .net gerada pelo compilador Q #:
+Para chamar essa operação do .NET em um simulador Quantum, você pode usar o `Run` método da `RunAlgorithm` classe .net gerada pelo compilador Q #:
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 :::code language="csharp" source="~/quantum/samples/interoperability/dotnet/csharp/Host.cs" range="4-":::
 
-### <a name="f"></a>[Fixo #](#tab/tabid-fsharp)
+### <a name="f"></a>[F#](#tab/tabid-fsharp)
 
 :::code language="fsharp" source="~/quantum/samples/interoperability/dotnet/fsharp/Host.fs" range="4-":::
 
 ***
     
-## <a name="whats-next"></a>O que vem a seguir?
+## <a name="next-steps"></a>Próximas etapas
 
-Agora que você tem o kit de desenvolvimento Quantum configurado para os dois programas de linha de comando Q # e para interoperabilidade com o .NET, você pode escrever e executar [seu primeiro programa Quantum](xref:microsoft.quantum.write-program).
+Agora que você tem o kit de desenvolvimento Quantum configurado para os dois programas de linha de comando Q # e para interoperabilidade com o .NET, você pode escrever e executar [seu primeiro programa Quantum](xref:microsoft.quantum.quickstarts.qrng).

@@ -6,25 +6,25 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 80d9df00159090768ea442e519c34043a99b050c
-ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
+ms.openlocfilehash: 43f14d67db76dabda34bf881ccbfae0bfd1784ff
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79022693"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426620"
 ---
 # <a name="quantum-circuits"></a>Circuitos Quantum
-Considere por um momento a transformação unitário $ \Text{CNOT} _{01}(H\otimes 1) $.
+Considere por um momento a transformação unitário $ \Text{CNOT} _ {01} (H\otimes 1) $.
 Essa sequência de portão é de importância fundamental para a computação Quantum porque ela cria um estado confusas de duas qubit de maneira máxima:
 
-$ $ \mathrm{CNOT}_{01}(H\otimes 1) \ket{00} = \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right), $ $
+$ $ \mathrm{CNOT}_ {01} (H\otimes 1) \ket {00} = \frac {1} {\sqrt {2} } \left (\ket {00} + \ket {11} \right), $ $
 
 As operações com essa ou mais complexidade são onipresentes em algoritmos Quantum e correção de erro Quantum, portanto, deve ser um grande alívio de que há um método simples para sua visualização chamada de *diagrama de circuito Quantum*.
 O diagrama de circuito para preparar esse estado de Quantum de confusas máximo é:
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![diagrama de circuito para um estado confusas de dois qubits de duas pontas](~/media/1.svg)
+![Diagrama de circuito para um estado confusas de duas qubit](~/media/1.svg)
 
 ## <a name="quantum-circuit-diagram-conventions"></a>Convenções de diagrama de circuito Quantum
 Essa linguagem visual para operações Quantum pode ser mais prontamente fácil do que escrever sua matriz equivalente quando você entende as convenções para expressar um circuito Quantum.
@@ -37,7 +37,7 @@ Por exemplo, o símbolo
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![símbolo de uma operação de Hadamard que atua em um registro de qubit único](~/media/2.svg)
+![Símbolo para uma operação Hadamard agindo em um registro de qubit único](~/media/2.svg)
 
 é uma operação [Hadamard](xref:microsoft.quantum.intrinsic.h) que atua em um registro de qubit único.
 
@@ -47,7 +47,7 @@ Isso é para dizer
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![diagrama de Gates Quantum sendo aplicado da esquerda para a direita](~/media/3.svg)
+![Diagrama de Gates Quantum sendo aplicado da esquerda para a direita](~/media/3.svg)
 
 é a matriz unitário $CBA $.
 A multiplicação de matriz obedece à Convenção oposta: a matriz mais à direita é aplicada primeiro. Em diagramas de circuito Quantum, no entanto, o portão mais à esquerda é aplicado primeiro.
@@ -65,27 +65,27 @@ Como um exemplo de esclarecimento, podemos definir uma operação qubit de dois 
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![diagrama de circuito de uma operação qubit de duas pontas](~/media/4.svg)
+![Diagrama de circuito de uma operação unitário de dois qubit](~/media/4.svg)
 
 Também podemos exibir $B $ como tendo uma ação em um único registro de duas qubit em vez de registros de 2 1-qubit, dependendo do contexto no qual o circuito é usado. Talvez a propriedade mais útil desses diagramas de circuito abstrato seja que eles permitam que algoritmos de Quantum complicados sejam descritos em um alto nível sem precisar compilá-los em Gates fundamentais.
 Isso significa que você pode obter uma intuição sobre o fluxo de dados para um grande algoritmo Quantum sem a necessidade de entender todos os detalhes de como cada uma das sub-rotinas dentro do algoritmo funciona.
 
 ## <a name="controlled-gates"></a>Gates controlados
 O outro constructo criado em diagramas de circuito Quantum qubit é Control.
-A ação de um portão controlado de Quantum singular, denotado $ \Lambda (G) $, em que um único valor de qubit controla o aplicativo de $G $, pode ser compreendido observando o exemplo a seguir de uma entrada de estado do produto $ \Lambda (G) (\alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \beta \ket{1} G\ket {\ psi} $
+A ação de um portão controlado de Quantum singular, denotado $ \Lambda (G) $, em que um único valor de qubit controla o aplicativo de $G $, pode ser compreendido examinando o exemplo a seguir de uma entrada de estado do produto $ \Lambda (G) (\alpha \ket {0} + \beta \ket {1} ) \ket{\psi} = \alpha \ket {0} \ket{\psi} + \beta \ket {1} G\ket {\ psi} $.
 Ou seja, a porta controlada se aplica $G $ ao registro que contém $ \psi $ If e somente se o qubit de controle usa o valor $1 $.
 Em geral, descrevemos essas operações controladas em diagramas de circuito como
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![diagrama de circuito de um portão individualmente controlado](~/media/5.svg)
+![Diagrama de circuito de um portão controlado individualmente](~/media/5.svg)
 
 Aqui, o círculo preto denota o bit quântico no qual o portão é controlado e uma transmissão vertical denota o unitário que é aplicado quando o qubit de controle usa o valor $1 $.
 Para os casos especiais em que $G = X $ e $G = Z $ apresentamos a notação a seguir para descrever a versão controlada das Gates (Observe que a porta X controlada é a [porta do $CNOT $](xref:microsoft.quantum.intrinsic.cnot)):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-diagrama de circuito de ![para casos especiais de Gates controlados](~/media/6.svg)
+![Diagrama de circuito para casos especiais de Gates controlados](~/media/6.svg)
 
 O Q # fornece métodos para gerar automaticamente a versão controlada de uma operação, o que evita que o programador tenha que codificar essas operações manualmente. Um exemplo disso é mostrado abaixo:
 
@@ -104,7 +104,7 @@ Especificamente, esse subcircuito é semelhante a:
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![símbolo que representa uma operação de medida](~/media/7.svg)
+![Símbolo que representa uma operação de medição](~/media/7.svg)
 
 Q # implementa um [operador de medida](xref:microsoft.quantum.intrinsic.measure) para essa finalidade.
 Consulte a [seção sobre medições](xref:microsoft.quantum.libraries.standard.prelude#measurements) para obter mais informações.
@@ -113,16 +113,16 @@ Da mesma forma, o subcircuito
 
 <!--- ![](.\media\8.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![diagrama de circuito que representa uma operação controlada](~/media/8.svg)
+![Diagrama de circuito que representa uma operação controlada](~/media/8.svg)
 
 fornece um portão controlado de forma clássica, em que $G $ é aplicado condicionalmente no bit de controle clássico sendo o valor de $1 $.
 
 ## <a name="teleportation-circuit-diagram"></a>Diagrama de circuito de teleportação
-A [porta de transporte Quantum](xref:microsoft.quantum.techniques.puttingittogether) talvez seja o melhor algoritmo Quantum para ilustrar esses componentes.
-A teleportabilidade Quantum é um método para mover dados dentro de um computador Quantum (ou até mesmo entre computadores Quantum distantes em uma rede Quantum) por meio do uso de Entanglement e medição.
+A porta de transporte Quantum talvez seja o melhor algoritmo Quantum para ilustrar esses componentes.
+Você pode aprender a usar a teleportabilidade do Quantum [Kata](xref:microsoft.quantum.overview.katas) Quantum correspondente é um método para mover dados dentro de um computador Quantum (ou até mesmo entre computadores Quantum distantes em uma rede Quantum) por meio do uso de Entanglement e medição.
 Curiosamente, é realmente capaz de mover um estado Quantum, digamos o valor em um determinado qubit, de um qubit para outro, sem nem mesmo saber qual é o valor da qubit!
 Isso é necessário para que o protocolo funcione de acordo com as leis da mecânica quantum.
 O circuito de teleportabilidade Quantum é fornecido abaixo; também fornecemos uma versão anotada do circuito para ilustrar como ler o circuito Quantum.
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
-![circuito de teleportagem Quantum](~/media/tp2.svg)
+![Circuito de Teleportation Quantum](~/media/tp2.svg)

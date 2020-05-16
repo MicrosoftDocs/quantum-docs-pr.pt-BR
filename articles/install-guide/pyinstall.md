@@ -1,19 +1,19 @@
 ---
-title: Desenvolvimento com Q# + Python
+title: 'Desenvolver com Q # e Python'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: e1b8a0c68b3ac0c059c6de6e478593321764ff88
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: a8c5b9c25c069f98ef8eefd6cfbc36bf3376931c
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680158"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426356"
 ---
-# <a name="develop-with-q--python"></a>Desenvolvimento com Q# + Python
+# <a name="develop-with-q-and-python"></a>Desenvolver com Q # e Python
 
 Instale o QDK para desenvolver programas de host do Python para chamar as operações de Q #.
 
@@ -83,6 +83,6 @@ Instale o QDK para desenvolver programas de host do Python para chamar as opera�
 > [!NOTE]
 > * Você também pode usar notebooks Jupyter do Python para escrever o programa de Python clássico e chamar as operações Q # das células. O código Python é apenas um programa Python normal.
 
-## <a name="whats-next"></a>O que vem a seguir?
+## <a name="next-steps"></a>Próximas etapas
 
-Agora que você instalou o Quantum development kit em seu ambiente preferido, escreva e execute [seu primeiro programa quântico](xref:microsoft.quantum.write-program).
+Agora que você instalou o Quantum development kit em seu ambiente preferido, escreva e execute [seu primeiro programa quântico](xref:microsoft.quantum.quickstarts.qrng).

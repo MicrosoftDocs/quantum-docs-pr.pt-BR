@@ -6,14 +6,14 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 51186134e9279727fec212cdce84f69493aaa656
-ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+ms.openlocfilehash: 01d242ed405bdd326f65e534f82ff378a464ee7d
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80320816"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426870"
 ---
-# <a name="the-resourcesestimator-target-machine"></a>O computador de destino ResourcesEstimator
+# <a name="the-resources-estimator-target-machine"></a>O computador de destino do avaliador de recursos
 
 Como o nome indica, o `ResourcesEstimator` estima os recursos necessários para executar uma determinada instância de uma operação Q # em um computador Quantum.
 Ele realiza isso executando a operação Quantum sem realmente simular o estado de um computador Quantum; por esse motivo, ele pode estimar recursos para operações Q # que usam milhares de qubits, se a parte clássica do código puder ser executada em um tempo razoável.
@@ -22,7 +22,7 @@ Ele realiza isso executando a operação Quantum sem realmente simular o estado 
 
 O `ResourcesEstimator` é apenas outro tipo de computador de destino, portanto, ele pode ser usado para executar qualquer operação Q #. 
 
-Como outros computadores de destino, para usá-lo C# em um programa de host, crie uma instância e passe-a como o primeiro parâmetro do método de `Run` da operação:
+Como outros computadores de destino, para usá-lo em um programa de host C#, crie uma instância e passe-a como o primeiro parâmetro do método da operação `Run` :
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -42,7 +42,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-Como mostra o exemplo, o `ResourcesEstimator` fornece um método `ToTSV()` para gerar uma tabela com TSV (valores separados por tabulação) que podem ser salvos em um arquivo ou gravados no console para análise. A saída do programa acima deve ser semelhante a esta:
+Como mostra o exemplo, o `ResourcesEstimator` fornece um `ToTSV()` método para gerar uma tabela com TSV (valores separados por tabulação) que podem ser salvos em um arquivo ou gravados no console para análise. A saída do programa acima deve ser semelhante a esta:
 
 ```Output
 Metric          Sum
@@ -57,15 +57,15 @@ BorrowedWidth   0
 ```
 
 > [!NOTE]
-> O `ResourcesEstimator` não redefine seus cálculos em todas as execuções, se a mesma instância for usada para executar outra operação, ele continuará agregando contagens sobre os resultados existentes.
+> O `ResourcesEstimator` não redefine seus cálculos em cada execução, se a mesma instância for usada para executar outra operação, ele continuará agregando contagens sobre os resultados existentes.
 > Se você precisar redefinir cálculos entre execuções, crie uma nova instância para cada execução.
 
 
 ## <a name="programmatically-retrieving-the-estimated-data"></a>Recuperando programaticamente os dados estimados
 
-Além de uma tabela TSV, os recursos estimados podem ser recuperados programaticamente por meio da propriedade `Data` do `ResourcesEstimator`. `Data` fornece uma instância de `System.DataTable` com duas colunas: `Metric` e `Sum`, indexadas pelos nomes de métricas.
+Além de uma tabela TSV, os recursos estimados podem ser recuperados programaticamente por meio da `ResourcesEstimator` `Data` Propriedade do. `Data`fornece uma `System.DataTable` instância com duas colunas: `Metric` e `Sum` , indexada pelos nomes de métricas.
 
-O código a seguir mostra como recuperar e imprimir o número total de `QubitClifford`, `T` e `CNOT` Gates usados por uma operação Q #:
+O código a seguir mostra como recuperar e imprimir o número total de `QubitClifford` `T` e `CNOT` Gates usados por uma operação Q #:
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -91,7 +91,7 @@ namespace Quantum.MyProgram
 
 ## <a name="metrics-reported"></a>Métricas relatadas
 
-A seguir está a lista de métricas estimadas pelo `ResourcesEstimator`:
+A seguir está a lista de métricas estimada pelo `ResourcesEstimator` :
 
 * __CNOT__: a contagem de CNOT (também conhecida como a porta controlada de Pauli X) de Gates executada.
 * __QubitClifford__: a contagem de uma única qubit Clifford e Pauli Gates executadas.
@@ -105,7 +105,7 @@ A seguir está a lista de métricas estimadas pelo `ResourcesEstimator`:
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Como fornecer a probabilidade de resultados de medida
 
-<xref:microsoft.quantum.intrinsic.assertprob> do namespace <xref:microsoft.quantum.intrinsic> pode ser usado para fornecer informações sobre a probabilidade esperada de uma medida para ajudar a conduzir a execução do programa Q #. O exemplo a seguir ilustra isso:
+<xref:microsoft.quantum.intrinsic.assertprob>do <xref:microsoft.quantum.intrinsic> namespace pode ser usado para fornecer informações sobre a probabilidade esperada de uma medida para ajudar a conduzir a execução do programa Q #. O exemplo a seguir ilustra isso:
 
 ```qsharp
 operation Teleport(source : Qubit, target : Qubit) : Unit {
@@ -127,10 +127,10 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-Quando o `ResourcesEstimator` encontrar `AssertProb` ele gravará que medir `PauliZ` em `source` e `q` deverá receber um resultado de `Zero` com a probabilidade 0,5. Quando ele for executado `M` mais tarde, ele encontrará os valores gravados das probabilidades de resultado e `M` retornará `Zero` ou `One` com a probabilidade 0,5.
+Quando o `ResourcesEstimator` encontrar `AssertProb` , ele registrará essa `PauliZ` medição `source` e `q` deverá receber um resultado de `Zero` com a probabilidade 0,5. Quando ele for executado `M` posteriormente, ele encontrará os valores gravados das probabilidades de resultado e `M` retornará `Zero` ou `One` com a probabilidade 0,5.
 
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-O `ResourcesEstimator` é criado sobre o [simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro)de computador Quantum, que fornece um conjunto mais rico de métricas, a capacidade de relatar métricas no grafo de Call completo e recursos como o [Verificador de entradas distintos](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) para ajudar a encontrar bugs em programas de Q #. Consulte a documentação do [simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) para obter mais informações.
+O `ResourcesEstimator` é criado com base no [simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro)de computador Quantum, que fornece um conjunto mais rico de métricas, a capacidade de relatar métricas no grafo de Call completo e recursos como o [corretor de entradas distintos](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) para ajudar a encontrar bugs em programas de Q #. Consulte a documentação do [simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) para obter mais informações.
 
