@@ -6,6 +6,8 @@ functions:
   summary: Declara que duas matrizes de valores Boolianos são iguais.
 - uid: microsoft.quantum.diagnostics.allequalityfacti
   summary: Declara que duas matrizes de valores inteiros são iguais.
+- uid: microsoft.quantum.diagnostics.contradiction
+  summary: Declara que uma condição clássica é falsa.
 - uid: microsoft.quantum.diagnostics.dumpmachine
   summary: Despeja o status do computador de destino atual.
 - uid: microsoft.quantum.diagnostics.dumpregister
@@ -34,15 +36,15 @@ functions:
   summary: Declara que um valor de ponto flutuante clássico tem o valor esperado até uma pequena tolerância de 1e-10.
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: Assert que determinados qubits estão todos no estado ${0}\ket $.
+  summary: Assert que determinados qubits estão todos no estado $ \ket {0} $.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: Assert que determinados qubits estão todos em $ \ket{0}$ State até uma determinada tolerância.
+  summary: Assert que determinados qubits estão todos em $ \ket {0} $ State até uma determinada tolerância.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     Dadas duas operações, afirma que elas agem de forma idêntica para todos os Estados de entrada.
 
 
-    Essa asserção é implementada verificando a ação das operações em todos os Estados do formulário $V _0 \otimes... \otimes V_ {n-1} $, em que $V _K $ é um dos Estados $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ e $ \ket{i} $ (+ 1 eigenstate do operador Y Pauli).
+    Essa asserção é implementada verificando a ação das operações em todos os Estados do formulário $V _0 \otimes... \otimes V_ {n-1} $, em que $V _k $ é um dos Estados $ \ket {0} $, $ \ket {1} $, $ \ket{+} $ e $ \ket{i} $ (+ 1 eigenstate do operador Y Pauli).
 
 
     Essa declaração usa $n $ qubits e requer que várias chamadas das operações sejam comparadas.
@@ -82,9 +84,9 @@ newtypes:
   summary: Atributo reconhecido pelo compilador usado para marcar um teste de unidade.
 summary: " # <a name=\"summary\"></a>Resumo\n Esse namespace contém funções e operações úteis para fins de diagnóstico, incluindo operações Assert e funções de declaração."
 metadata:
-  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676951"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326584"
