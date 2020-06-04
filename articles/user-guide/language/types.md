@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
-ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
+ms.openlocfilehash: f7a3ac3813966c0ef695068297ce4d9949ead554
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609134"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327281"
 ---
 # <a name="types-in-q"></a>Tipos em Q#
 
@@ -63,7 +63,8 @@ No segundo exemplo, observe que isso representa uma matriz potencialmente irregu
 O Q # não fornece suporte para matrizes multidimensionais retangulares.
 
 Um valor de matriz pode ser escrito em código-fonte Q # usando colchetes em volta dos elementos de uma matriz, como em `[PauliI, PauliX, PauliY, PauliZ]` .
-O tipo de um literal de matriz é determinado pelo tipo base comum de todos os itens na matriz. 
+O tipo de um literal de matriz é determinado pelo tipo base comum de todos os itens na matriz. Portanto, tentar construir uma matriz com elementos que não têm nenhum tipo base comum gerará um erro.  
+Consulte [matrizes de callableies](xref:microsoft.quantum.guide.expressions#arrays-of-callables) para obter um exemplo disso.
 
 > [!WARNING]
 > Os elementos de uma matriz não podem ser alterados após a criação da matriz.
@@ -291,7 +292,8 @@ Ao invocar um callable-parametrizado de tipo, todos os argumentos que têm o mes
 
 O Q # não fornece um mecanismo para restringir os possíveis tipos que podem ser substituídos por um parâmetro de tipo.
 
-## <a name="whats-next"></a>O que vem a seguir?
+## <a name="next-steps"></a>Próximas etapas
+
 Agora que você viu todos os tipos que compõem a linguagem Q #, você pode se encabeçar para [digitar expressões em Q #](xref:microsoft.quantum.guide.expressions) para ver como criar e manipular expressões desses vários tipos.
 
 

@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: cbc473eb14d8afd255a7072475dc054e18b98e3e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 042e4e27ef4e42cfc0c24fbb0ae2232cf1bbfe36
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426697"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327604"
 ---
 # <a name="quantum-computing-glossary"></a>Glossário da computação Quantum
 
@@ -55,7 +55,7 @@ O fator pelo qual a magnitude de uma [eigenvector](xref:microsoft.quantum.glossa
 
 Um vetor cuja direção é inalterada por uma determinada transformação e cuja magnitude é alterada por um fator correspondente ao [eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)do vetor. Dada uma matriz quadrada $M $ e um eigenvalue $c $, então $Mv = CV $, em que $v $ é um eigenvector da matriz e pode ser um número complexo de qualquer argumento. Para obter mais informações, consulte [conceitos de matriz avançada](xref:microsoft.quantum.concepts.matrix-advanced).
 
-## <a name="entanglement"></a>Entanglement
+## <a name="entanglement"></a>Emaranhamento
 
 As partículas de Quantum, como [qubits](xref:microsoft.quantum.glossary#qubit), podem ser conectadas ou *confusas* de modo que não possam ser descritas independentemente uma da outra. Seus resultados de medição são correlacionados mesmo quando estão separados infinitamente longe. Entanglement é essencial para [medir](xref:microsoft.quantum.glossary#measurement) o [estado](xref:microsoft.quantum.glossary#quantum-state) de um qubit.  Para obter mais informações, consulte [conceitos de matriz avançada](xref:microsoft.quantum.concepts.matrix-advanced).
 
@@ -120,7 +120,11 @@ Um conjunto de três matrizes de 2 x 2 unitários conhecidas como as `X` `Y` ope
 
 ## <a name="quantum-circuit-diagram"></a>Diagrama de circuito Quantum
 
-Um método para representar graficamente a sequência de [operações](xref:microsoft.quantum.glossary#operation) (ou [Gates](xref:microsoft.quantum.glossary#gate)) para programas Quantum simples, por exemplo, ![ diagrama de circuito de amostra ](~/media/qpe.png) . Para obter mais informações, consulte [circuitos Quantum](xref:microsoft.quantum.concepts.circuits).
+Um método para representar graficamente a sequência de [operações](xref:microsoft.quantum.glossary#operation) (ou [Gates](xref:microsoft.quantum.glossary#gate)) para programas Quantum simples, por exemplo 
+
+![Diagrama de circuito de exemplo](~/media/qpe.png). 
+
+Para obter mais informações, consulte [circuitos Quantum](xref:microsoft.quantum.concepts.circuits).
 
 ## <a name="quantum-libraries"></a>Bibliotecas Quantum
 
@@ -144,7 +148,7 @@ Um algoritmo Quantum que Probabilistic teve sucesso. Após a falha, a rotina ten
 
 ## <a name="superposition"></a>Superposição
 
-O conceito na computação Quantum que um [qubit](xref:microsoft.quantum.glossary#qubit) é uma combinação linear de dois Estados, $ \ket{\0} $ e $ \ket{\1} $, até que seja [medido](xref:microsoft.quantum.glossary#measurement).  Para obter mais informações, consulte [noções básicas sobre computação Quantum](xref:microsoft.quantum.overview.understanding).
+O conceito na computação Quantum que um [qubit](xref:microsoft.quantum.glossary#qubit) é uma combinação linear de dois Estados, $ \ket {0} $ e $ \ket {1} $, até que seja [medido](xref:microsoft.quantum.glossary#measurement).  Para obter mais informações, consulte [noções básicas sobre computação Quantum](xref:microsoft.quantum.overview.understanding).
 
 ## <a name="target-machine"></a>Computador de destino
 

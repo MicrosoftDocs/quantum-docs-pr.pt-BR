@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 93432cef9711b6780192cd59e92b09647a264b5c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431199"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327298"
 ---
 # <a name="type-expressions-in-q"></a>Expressões de tipo em Q #
 
@@ -221,7 +221,6 @@ let g = Foo(arg)!;      // Syntax error
 Um literal de matriz é uma sequência de uma ou mais expressões de elemento, separadas por vírgulas, colocadas em `[` e `]` .
 Todos os elementos devem ser compatíveis com o mesmo tipo.
 
-
 Dadas duas matrizes do mesmo tipo, o `+` operador binário pode ser usado para formar uma nova matriz que é a concatenação das duas matrizes.
 Por exemplo, `[1,2,3] + [4,5,6]` é `[1,2,3,4,5,6]` .
 
@@ -229,6 +228,9 @@ Por exemplo, `[1,2,3] + [4,5,6]` é `[1,2,3,4,5,6]` .
 
 Dado um tipo e uma `Int` expressão, o `new` operador pode ser usado para alocar uma nova matriz do tamanho determinado.
 Por exemplo, `new Int[i + 1]` alocaria uma nova `Int` matriz com `i + 1` elementos.
+
+Literais de matriz vazios, `[]` , não são permitidos.
+Em vez disso, o uso de `new ★[0]` , onde `★` é o espaço reservado para um tipo adequado, permite criar a matriz desejada de comprimento zero.
 
 Os elementos de uma nova matriz são inicializados para um valor padrão dependente de tipo.
 Na maioria dos casos, essa é uma variação de zero.
@@ -373,8 +375,7 @@ Por exemplo, se `Op1` , `Op2` , e `Op3` todos forem `Qubit[] => Unit` , mas o of
 - `[Op1, Op3]`é uma matriz de `(Qubit[] => Unit is Adj)` operações.
 - `[Op2, Op3]`é uma matriz de `(Qubit[] => Unit is Ctl)` operações.
 
-Literais de matriz vazios, `[]` , não são permitidos.
-Em vez disso, o uso de `new ★[0]` , onde `★` é o espaço reservado para um tipo adequado, permite criar a matriz desejada de comprimento zero.
+No entanto, enquanto `(Qubit[] => Unit is Adj)` `(Qubit[] => Unit is Ctl)` as operações têm o tipo base comum de `(Qubit[] => Unit)` , observe *of* que as matrizes desses operadores não compartilham um tipo base comum. Por exemplo, `[[Op1], [Op2]]` no momento, o geraria um erro porque ele está tentando criar uma matriz dos tipos de matriz incompatíveis `(Qubit[] => Unit is Adj)[]` e `(Qubit[] => Unit is Ctl)[]` .
 
 
 ## <a name="conditional-expressions"></a>Expressões condicionais
@@ -492,5 +493,6 @@ Operador | Arity | Descrição | Tipos de operando
  `?` `|` | Ternário | Condicional | `Bool`para o lado esquerdo
 `w/` `<-` | Ternário | Copiar e atualizar | consulte [expressões de copiar e atualizar](#copy-and-update-expressions)
 
-## <a name="whats-next"></a>O que vem a seguir?
+## <a name="next-steps"></a>Próximas etapas
+
 Agora que você pode trabalhar com expressões em Q #, você pode ir para [operações e funções em q #](xref:microsoft.quantum.guide.operationsfunctions) para saber como definir e chamar operações e funções.

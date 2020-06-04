@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
-ms.openlocfilehash: fd0ea47f00b1456ec460808ef7d451c8427677cd
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: e77b52d1a6eb7e2f62ab12dedd75d00ac8fec4be
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431148"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327315"
 ---
 # <a name="q-basics"></a>Noções básicas do Q #
 
@@ -106,8 +106,7 @@ As instruções de avaliação de expressão exigem um ponto e vírgula de termi
 Quase todos os aspectos de um programa Q # são criados usando instruções, portanto, nenhuma única página pode abranger todas as informações relacionadas a elas.
 No entanto, sua estrutura lexical e formatação são descritas na página [estrutura de arquivo Q #](xref:microsoft.quantum.guide.filestructure) , atribuição de associação de símbolo e escopo em [variáveis em q #](xref:microsoft.quantum.guide.variables)e loops de fluxo de controle, como `for` no [fluxo de controle em Q #](xref:microsoft.quantum.guide.controlflow).
 
-
-## <a name="whats-next"></a>O que vem a seguir?
+## <a name="next-steps"></a>Próximas etapas
 No restante deste guia, mostraremos como usar o Q # para construir programas Quantum complexos por meio dos blocos de construção básicos de operações, funções e tipos.
 
 Para começar, você pode começar a aprender sobre os [tipos em Q #](xref:microsoft.quantum.guide.types).

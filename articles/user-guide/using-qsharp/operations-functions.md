@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: bc9695b85b68807801225ccbc903a4622b450768
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 9e924b973c4f22a59dd862df3f4f0d70278a1b4e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431063"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327791"
 ---
 # <a name="operations-and-functions-in-q"></a>Operações e funções em p #
 
@@ -670,5 +670,6 @@ No entanto, há dois comentários importantes sobre o uso da recursão:
 - Ao executar em um dispositivo Quantum real, o espaço de pilha pode ser limitado e, portanto, a recursão profunda pode levar a um erro de tempo de execução.
   Em particular, o compilador e o tempo de execução do Q # não identificam e otimizam a recursão da cauda.
 
-## <a name="whats-next"></a>O que vem a seguir?
+## <a name="next-steps"></a>Próximas etapas
+
 Saiba mais sobre [variáveis](xref:microsoft.quantum.guide.variables) em Q #.
