@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: f365d471d9af73828b78c4fab8579557310a5288
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: ec5b3b26102df6ecc19d89b41c7fd8938b34e761
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426774"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327757"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas sobre a versão do Microsoft Quantum Development Kit
 
@@ -20,6 +20,19 @@ Este artigo contém informações sobre cada versão do Quantum Development Kit.
 Para obter instruções de instalação, consulte o [guia de instalação](xref:microsoft.quantum.install).
 
 Para obter instruções de atualização, consulte o [guia de atualização](xref:microsoft.quantum.update).
+
+## <a name="version-0112006207"></a>Versão 0.11.2006.207
+
+*Data de lançamento: 3 de junho de 2020*
+
+Esta versão contém o seguinte:
+
+- Os programas de host de notebooks de Q# e Python não falharão mais quando um ponto de entrada Q# estiver presente
+- Atualizações para a [biblioteca padrão](xref:microsoft.quantum.libraries.standard.intro) para usar modificadores de acesso
+- Agora, o compilador permite o plug-in de etapas de regravação entre as etapas de regravação internas
+- Várias funções e operações preteridas foram removidas seguindo o agendamento descrito em nossos [Princípios de API](xref:microsoft.quantum.contributing.api-design). Os programas e as bibliotecas do Q# que desenvolvem sem avisos na versão 0.11.2004.2825 continuarão a funcionar sem modificações.
+
+Consulte a lista completa de PRs encerrados para [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compilador](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [amostras](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) e [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-01120042825"></a>Versão 0.11.2004.2825
 
@@ -34,7 +47,6 @@ Esta versão contém o seguinte:
 > [!NOTE]
 > No momento, os aplicativos de linha de comando do Q# que usam o novo atributo [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) não podem ser chamados de programas de host do Python ou .NET.
 > Confira os guias de [interoperabilidade do Python](xref:microsoft.quantum.install.python) e [do .NET](xref:microsoft.quantum.install.cs) para obter mais informações.
-
 
 ## <a name="version-01120033107"></a>Versão 0.11.2003.3107
 
