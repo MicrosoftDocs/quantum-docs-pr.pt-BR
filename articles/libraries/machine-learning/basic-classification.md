@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327638"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422165"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Classificação básica: classificar dados com o QDK
 
@@ -86,7 +86,7 @@ Salvamos o código a seguir em um arquivo chamado `Training.qs` .
 As funções e operações mais importantes definidas no código acima são:
 
 - `ClassifierStructure() : ControlledRotation[]`: nessa função, definimos a estrutura do nosso modelo de circuito adicionando as camadas das Gates controladas que consideramos. Esta etapa é análoga à declaração de camadas de neurônios em um modelo de aprendizado profundo sequencial.
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: essa operação é a parte principal do código e define o treinamento. Aqui, carregamos os exemplos do conjunto de conjuntos incluído na biblioteca, definimos os parâmetros do Hyper e os parâmetros iniciais para o treinamento e iniciamos o treinamento chamando a operação `TrainSequentialClassifier` incluída na biblioteca. Ele gera os parâmetros e a tendência que determinam o classificador.
+- `TrainHalfMoonModel() : (Double[], Double)`: essa operação é a parte principal do código e define o treinamento. Aqui, carregamos os exemplos do conjunto de conjuntos incluído na biblioteca, definimos os parâmetros do Hyper e os parâmetros iniciais para o treinamento e iniciamos o treinamento chamando a operação `TrainSequentialClassifier` incluída na biblioteca. Ele gera os parâmetros e a tendência que determinam o classificador.
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: essa operação define o processo de validação para avaliar o modelo. Aqui, carregamos os exemplos para validação, o número de medições por amostra e a tolerância. Ele gera o número de classificações incorretas no lote escolhido de amostras para validação.
 
 ## <a name="next-steps"></a>Próximas etapas

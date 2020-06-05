@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
-ms.openlocfilehash: f0b87936c9baf07555e76f295da58c0a6b9ecd17
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 05d3292e1c6e3c8c1163c460f2aaa51c591aa1d5
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84328588"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422233"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Tutorial: escrever e simular programas de nível qubit em Q\#
 
@@ -386,7 +386,7 @@ Em detalhes para a primeira linha do nosso estado de entrada $ \ket {000} $:
 * **`    ---`**: Uma representação gráfica da fase de amplitude.
 * **`[ 0.0000 rad ]`**: o valor numérico da fase (em radianos).
 
-A magnitude e a fase são exibidas com uma representação gráfica. A representação de magnitude é simples: ela mostra uma barra de `*` e quanto maior a probabilidade, maior será a barra. Para a fase, consulte a seção DumpMachine [aqui](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions) para ver as possíveis representações de símbolo com base em intervalos de ângulo.
+A magnitude e a fase são exibidas com uma representação gráfica. A representação de magnitude é simples: ela mostra uma barra de `*` e quanto maior a probabilidade, maior será a barra. Para a fase, consulte [testando e Depurando: despejar funções](xref:microsoft.quantum.guide.testingdebugging#dump-functions) para as possíveis representações de símbolo com base em intervalos de ângulo.
 
 
 Portanto, a saída impressa está ilustrando que nossas Gates programadas transformaram nosso estado de
