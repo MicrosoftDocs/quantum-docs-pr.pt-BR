@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 8019b32a3290e2d45124ebb1eb75395f6cb758db
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 8af8e3288aab731520ede984d5f89644de292385
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327519"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578204"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Criar um projeto do Q # em seu ambiente de desenvolvimento
 
@@ -62,13 +62,13 @@ Escolha seu ambiente de desenvolvimento e idioma nas seções a seguir:
 
 1. Execute o programa:
 
-    ```bash
+    ```
     python host.py
     ```
 
 1. Verifique a saída. Seu programa deverá gerar as seguintes linhas:
 
-    ```bash
+    ```
     Hello from quantum world!
     0
     ```
@@ -83,7 +83,7 @@ Agora você pode continuar a desenvolver seu programa Quantum.
 
 1. Execute o seguinte comando para iniciar o servidor de notebook:
 
-    ```bash
+    ```
     jupyter notebook
     ```
 
@@ -130,7 +130,7 @@ Agora você pode adicionar outras operações Q # para continuar o desenvolvimen
 
     Você deverá ver que dois arquivos foram criados: `Driver.cs`, que é o aplicativo host C#; e `Operation.qs`, que é um programa Q# que define uma operação simples para imprimir uma mensagem no console.
 
-1. Executar o aplicativo
+1. Execute o aplicativo
 
     * Selecione **depurar**  ->  **Iniciar sem depuração**
     * Você deverá ver o texto `Hello quantum world!` impresso em uma janela do console.
@@ -179,13 +179,13 @@ Agora você pode continuar o desenvolvimento do Quantum usando Visual Studio Cod
 
 1. Navegue até o diretório do novo aplicativo
 
-    ```bash
+    ```
     cd <project name>
     ```
 
     Você deverá ver que dois arquivos foram criados, juntamente com os arquivos de projeto do aplicativo: um arquivo Q# (`Operation.qs`) e um arquivo de host C# (`Driver.cs`).
 
-1. Executar o aplicativo
+1. Execute o aplicativo
 
     ```dotnetcli
     dotnet run
