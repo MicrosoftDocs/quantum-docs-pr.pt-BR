@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: 9e924b973c4f22a59dd862df3f4f0d70278a1b4e
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 6cfc1b14d86e86a1cbf0109d5e81dfe50c3a80bf
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327791"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630226"
 ---
 # <a name="operations-and-functions-in-q"></a>Operações e funções em p #
 
@@ -227,7 +227,7 @@ A `auto` diretiva será resolvida para a seguinte diretiva de geração se uma d
 > [!TIP]   
 > Se uma operação for autoadjacente, especifique explicitamente a prejunção ou a especialização de adjacente controlada por meio da diretiva de geração `self` para permitir que o compilador use essas informações para fins de otimização.
 
-Uma declaração de especialização contendo uma implementação definida pelo usuário consiste em uma tupla de argumento seguida por um bloco de instrução com o código Q # que implementa a especialização.
+Uma declaração de especialização que contém uma implementação definida pelo usuário consiste em uma tupla de argumento seguida por um bloco de instrução com o código Q # que implementa a especialização.
 Na lista de argumentos, `...` é usado para representar os argumentos declarados para a operação como um todo.
 Para `body` e `adjoint` , a lista de argumentos deve ser sempre `(...)` ; para `controlled` e `adjoint controlled` , a lista de argumentos deve ser um símbolo que representa a matriz de controle qubits, seguida por `...` , entre parênteses; por exemplo, `(controls,...)` .
 
@@ -273,7 +273,7 @@ is Ctl + Adj {
         CNOT(here, there);
     }
 
-    controlled (cs, ...) { // user defined implementation for the controlled specialization
+    controlled (cs, ...) { // user-defined implementation for the controlled specialization
         Controlled H(cs, here);
         Controlled X(cs + [here], there);
     }

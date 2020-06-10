@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: b32644382bb88fb11da00d0d7d78bbd797a0eaaa
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327298"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84629992"
 ---
 # <a name="type-expressions-in-q"></a>Expressões de tipo em Q #
 
@@ -201,7 +201,7 @@ Além de literais, as únicas expressões de um tipo definido pelo usuário são
 Em Q #, o operador de desencapsulamento é um ponto de exclamação à direita `!` .
 Por exemplo, se `IntPair` é um tipo definido pelo usuário com o tipo subjacente `(Int, Int)` e `s` era uma variável com valor `IntPair(2, 3)` , `s!` seria `(2, 3)` .
 
-Para tipos definidos pelo usuário definidos em termos de outros tipos definidos pelo usuário. o operador de desencapsulamento pode ser repetido; por exemplo, `s!!` indica o valor duplo não encapsulado de `s` .
+Para tipos definidos pelo usuário definidos em termos de outros tipos definidos pelo usuário, o operador de desencapsulamento pode ser repetido; por exemplo, `s!!` indica o valor duplo não encapsulado de `s` .
 Portanto, se `WrappedPair` for um tipo definido pelo usuário com o tipo subjacente `IntPair` , e `t` for uma variável com valor `WrappedPair(IntPair(1,2))` , será `t!!` `(1,2)` .
 
 O `!` operador tem precedência maior do que todos os outros operadores diferentes de `[]` para indexação e divisão de matriz.

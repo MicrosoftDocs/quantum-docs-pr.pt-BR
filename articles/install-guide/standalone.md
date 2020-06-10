@@ -6,18 +6,18 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: e829862521951c50cb42eebf261c803071a95275
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4311ebf9f72254485a20ba721ea2ce19163f4371
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426432"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630269"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Desenvolver com aplicativos de linha de comando Q #
 
 Os programas da Q # podem ser executados por conta própria, sem um driver em uma linguagem de host como C#, F # ou Python.
 
-## <a name="pre-requisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [SDK do .NET Core 3,1 ou posterior](https://www.microsoft.com/net/download)
 

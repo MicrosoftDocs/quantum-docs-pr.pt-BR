@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: dfb2b1779e3ddc77fc74697bc4dc2904b1a0c70f
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 948b385948f0b362e7c12500662132883959a798
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426923"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630220"
 ---
 # <a name="q-style-guide"></a>Guia de estilo de Q # #
 ## <a name="general-conventions"></a>Convenções gerais ##
@@ -80,7 +80,7 @@ Por exemplo, `ControlledOnInt` usa a forma de particípio da parte do verbo "Con
 Esse nome tem o benefício adicional de corresponder a semântica do `Controlled` functor interno, conforme discutido abaixo.
 Da mesma forma, os _substantivos do agente_ podem ser usados para construir nomes de função e UDT a partir de nomes de operação, como no caso do nome `Encoder` de um UDT que esteja fortemente associado a `Encode` .
 
-# <a name="guidance"></a>[Diretrizes](#tab/guidance)
+# <a name="guidance"></a>[Guia](#tab/guidance)
 
 Sugerimos:
 
@@ -93,7 +93,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Nome | Descrição |
+|   | Name | Descrição |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Limpar o uso de um verbo ("refletir") para indicar o efeito da operação. |
 | ☒ | <s>`operation XRotation`</s> | O uso da frase de substantivo sugere a função, em vez da operação. |
@@ -132,7 +132,7 @@ is Adj + Ctl {
 }
 ```
 
-# <a name="guidance"></a>[Diretrizes](#tab/guidance)
+# <a name="guidance"></a>[Guia](#tab/guidance)
 
 Sugerimos:
 
@@ -143,7 +143,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Nome | Descrição |
+|   | Name | Descrição |
 |---|------|-------------|
 | ☑ | `X` | Atalho bem compreendido para "aplicar uma transformação de $X $" |
 | ☑ | `CNOT` | Atalho bem compreendido para "controlado-não" |
@@ -172,7 +172,7 @@ Essa preferência é especialmente importante, uma vez que algum uso dos nomes a
 Alguns conceitos de Quantum da mesma forma são nomeados de maneira semelhante, incluindo o `Pauli` tipo interno à linguagem Q #.
 Ao minimizar o uso de substantivos apropriados em que esse uso não é essencial, reduzimos o impacto em que os nomes próprios não podem ser evitados de forma razoável.
 
-# <a name="guidance"></a>[Diretrizes](#tab/guidance) 
+# <a name="guidance"></a>[Guia](#tab/guidance) 
 
 Sugerimos:
 
@@ -192,7 +192,7 @@ Em particular, sugerimos que as funções de conversão de tipo nunca devem ser 
 Ao listar tipos de matriz em nomes de função de conversão de tipo, recomendamos a abreviação `Arr` .
 Ao bloquear circunstâncias excepcionais, recomendamos que todas as funções de conversão de tipo sejam nomeadas usando `As` para que possam ser identificadas rapidamente.
 
-# <a name="guidance"></a>[Diretrizes](#tab/guidance)
+# <a name="guidance"></a>[Guia](#tab/guidance)
 
 Sugerimos:
 
@@ -200,7 +200,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Nome | Descrição |
+|   | Name | Descrição |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | A preposição "to" resulta em uma frase verbal, indicando uma operação e não uma função. |
 | ☒ | <s>`AsDouble`</s> | O tipo de entrada não é claro do nome da função. |
@@ -215,7 +215,7 @@ Em muitos casos, um nome destina-se estritamente ao uso interno de uma bibliotec
 É útil indicar claramente que esse é o caso ao nomear funções e operações para que dependências acidentais em código somente interno sejam tornadas óbvias.
 Se uma operação ou função não for destinada ao uso direto, mas, em vez disso, deve ser usada por um chamado callable que age por aplicativo parcial, considere usar um nome começando com `_` para o callable que é parcialmente aplicado.
 
-# <a name="guidance"></a>[Diretrizes](#tab/guidance)
+# <a name="guidance"></a>[Guia](#tab/guidance)
 
 Sugerimos:
 
@@ -223,7 +223,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Nome | Descrição |
+|   | Name | Descrição |
 |---|------|-------------|
 | ☒ | <s>`ApplyDecomposedOperation_`</s> | O sublinhado `_` não deve aparecer no final do nome. |
 | ☑ | `_ApplyDecomposedOperation` | O sublinhado `_` no início claramente indica que esta operação é apenas para uso interno. |
@@ -244,7 +244,7 @@ Esses grupos podem ser diferenciados usando o mesmo nome de raiz, seguidos por u
 | `D` | Entradas ou entradas são do tipo`Double` |
 | `L` | Entradas ou entradas são do tipo`BigInt` |
 
-# <a name="guidance"></a>[Diretrizes](#tab/guidance)
+# <a name="guidance"></a>[Guia](#tab/guidance)
 
 Sugerimos:
 
@@ -261,7 +261,7 @@ Uma meta importante do código Q # para uma função ou operação é que ela se
 Da mesma forma, os nomes de entradas e argumentos de tipo devem comunicar como uma função ou um argumento será usado uma vez fornecido.
 
 
-# <a name="guidance"></a>[Diretrizes](#tab/guidance)
+# <a name="guidance"></a>[Guia](#tab/guidance)
 
 Sugerimos:
 
@@ -280,12 +280,12 @@ Sugerimos:
 
 ***
 
-### <a name="user-defined-type-named-items"></a>Tipos de itens nomeados definidos pelo usuário ###
+### <a name="user-defined-type-named-items"></a>Itens nomeados do tipo definido pelo usuário ###
 
 Os itens nomeados em tipos definidos pelo usuário devem ser nomeados como `CamelCase` , mesmo em entrada para construtores UDT.
 Isso ajuda a fazer com que os itens nomeados sejam claramente separados de referências a variáveis com escopo local ao usar a notação de acessador (por exemplo: `callable::Apply` ) ou a notação de copiar e atualizar ( `set arr w/= Data <- newData` ).
 
-# <a name="guidance"></a>[Diretrizes](#tab/guidance)
+# <a name="guidance"></a>[Guia](#tab/guidance)
 
 Sugerimos:
 
@@ -342,7 +342,7 @@ Como um caso especial de minimizar a surpresa, algumas funções e operações i
 Por exemplo, `ControlledOnInt<'T>` tem tipo `(Int, ('T => Unit is Adj + Ctl)) => ((Qubit[], 'T) => Unit is Adj + Ctl)` , que `ControlledOnInt<Qubit[]>(5, _)` funciona como o `Controlled` functor, mas na condição que o registro de controle representa o estado $ \ket {5} = \ket {101} $.
 Portanto, um desenvolvedor espera que as entradas `ControlledOnInt` coloquem o callable que está sendo transformado por último e que a operação resultante leve como sua entrada `(Qubit[], 'T)` ---mesma ordem, conforme seguido pela saída do `Controlled` functor.
 
-# <a name="guidance"></a>[Diretrizes](#tab/guidance)
+# <a name="guidance"></a>[Guia](#tab/guidance)
 
 Sugerimos:
 
@@ -368,7 +368,7 @@ Fazer uso de comentários de documentação pode ajudar os usuários a fazer sen
 
 Para usar efetivamente essa funcionalidade para ajudar os usuários, é recomendável manter algumas coisas em mente ao escrever comentários de documentação.
 
-# <a name="guidance"></a>[Diretrizes](#tab/guidance)
+# <a name="guidance"></a>[Guia](#tab/guidance)
 
 Sugerimos:
 
@@ -434,7 +434,7 @@ Essas regras de formatação por natureza tendem a ser, de certa forma, arbitrá
 No entanto, recomendamos manter um conjunto consistente de convenções de formatação dentro de um grupo de colaboradores e, especialmente, para projetos grandes do Q #, como o próprio kit de desenvolvimento do Quantum.
 Essas regras podem ser aplicadas automaticamente usando a ferramenta de formatação integrada ao compilador Q #.
 
-# <a name="guidance"></a>[Diretrizes](#tab/guidance) 
+# <a name="guidance"></a>[Guia](#tab/guidance) 
 
 Sugerimos:
 
