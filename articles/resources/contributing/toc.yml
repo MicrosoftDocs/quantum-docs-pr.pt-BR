@@ -1,0 +1,14 @@
+- name: Relatar bugs
+  href: reporting-bugs.md
+- name: Como aprimorar a documentação
+  href: docs.md
+- name: Abrir solicitações de pull
+  href: pull-requests.md
+- name: Código de contribuição
+  href: code.md
+- name: Exemplos de contribuição
+  href: samples.md
+- name: Guia de Estilo
+  href: style-guide.md
+- name: Princípios de design da API
+  href: api-design-principles.md

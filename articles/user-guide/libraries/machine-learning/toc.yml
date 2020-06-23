@@ -1,0 +1,10 @@
+- name: Introdução ao aprendizado de máquina quântico
+  href: introduction.md
+- name: Classificação básica
+  href: basic-classification.md
+- name: Criar seu classificador
+  href: design.md
+- name: Carregar seus conjuntos de dados
+  href: load.md
+- name: Glossário (QML)
+  href: glossary-qml.md
