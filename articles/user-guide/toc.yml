@@ -1,12 +1,14 @@
 - name: Visão Geral/Conteúdo
   href: index.md
-- name: 'Noções básicas da linguagem Q#'
+- name: Noções básicas da linguagem Q#
   href: basics.md
-- name: 'Linguagem Q#'
+- name: Linguagem Q#
   href: language/toc.yml
-- name: 'Usar Q#'
+- name: Usar Q#
   href: using-qsharp/toc.yml
 - name: Simuladores e avaliadores de recursos
-  href: ../machines/toc.yml
+  href: machines/toc.yml
+- name: Bibliotecas do Q#
+  href: libraries/toc.yml
 - name: Referência rápida
   href: quickref/toc.yml
