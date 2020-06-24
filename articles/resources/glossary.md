@@ -1,0 +1,249 @@
+---
+title: Glossário da computação Quantum
+description: Um glossário de termos, ações e objetos comuns usados na computação Quantum.
+author: QuantumWriter
+ms.author: Alan.Geller@microsoft.com
+ms.date: 12/11/2017
+ms.topic: article
+uid: microsoft.quantum.glossary
+no-loc:
+- $
+- $
+- $
+- $
+- $
+- $
+- '\cdots'
+- bmatrix
+- '\ddots'
+- '\equiv'
+- '\sum'
+- '\begin'
+- '\end'
+- '\sqrt'
+- '\otimes'
+- '{'
+- '}'
+- '\text'
+- '\phi'
+- '\kappa'
+- '\psi'
+- '\alpha'
+- '\beta'
+- '\gamma'
+- '\delta'
+- '\omega'
+- '\bra'
+- '\ket'
+- '\boldone'
+- '\\\\'
+- '\\'
+- =
+- '\frac'
+- '\text'
+- '\mapsto'
+- '\dagger'
+- '\to'
+- "\begin{cases}"
+- "\end{cases}"
+- '\operatorname'
+- '\braket'
+- '\id'
+- '\expect'
+- '\defeq'
+- '\variance'
+- '\dd'
+- '&'
+- "\begin{align}"
+- "\end{align}"
+- '\Lambda'
+- '\lambda'
+- '\Omega'
+- '\mathrm'
+- '\left'
+- '\right'
+- '\qquad'
+- '\times'
+- '\big'
+- '\langle'
+- '\rangle'
+- '\bigg'
+- '\Big'
+- '|'
+- '\mathbb'
+- '\vec'
+- '\in'
+- '\texttt'
+- '\ne'
+- <
+- '>'
+- '\leq'
+- '\geq'
+- ~~
+- "~"
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: ba4d171d84d808f082b919dcc6156d9c65df7c05
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85274233"
+---
+# <a name="quantum-computing-glossary"></a><span data-ttu-id="605c9-103">Glossário da computação Quantum</span><span class="sxs-lookup"><span data-stu-id="605c9-103">Quantum computing glossary</span></span>
+
+## <a name="adjoint"></a><span data-ttu-id="605c9-104">Adjacente</span><span class="sxs-lookup"><span data-stu-id="605c9-104">Adjoint</span></span>
+
+<span data-ttu-id="605c9-105">A transpoção conjugada complexa de uma [operação](xref:microsoft.quantum.glossary#operation).</span><span class="sxs-lookup"><span data-stu-id="605c9-105">The complex conjugate transpose of an [operation](xref:microsoft.quantum.glossary#operation).</span></span> <span data-ttu-id="605c9-106">Para operações que implementam um operador [unitário](xref:microsoft.quantum.glossary#unitary-operator) , o adjacente é o inverso da operação e é indicado por um símbolo de Dagger.</span><span class="sxs-lookup"><span data-stu-id="605c9-106">For operations that implement a [unitary](xref:microsoft.quantum.glossary#unitary-operator) operator, the adjoint is the inverse of the operation and is indicated by a dagger symbol.</span></span> <span data-ttu-id="605c9-107">Por exemplo, se a operação `U` representar o operador unitário $U $ , o `Adjoint U` representará $U ^ \dagger $ .</span><span class="sxs-lookup"><span data-stu-id="605c9-107">For example, if the operation `U` represents the unitary operator $U$, then `Adjoint U` represents $U^\dagger$.</span></span> <span data-ttu-id="605c9-108">Para obter mais informações, consulte [Adjoinout](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).</span><span class="sxs-lookup"><span data-stu-id="605c9-108">For more information, see [Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).</span></span>
+
+## <a name="ancilla"></a><span data-ttu-id="605c9-109">Ancilla</span><span class="sxs-lookup"><span data-stu-id="605c9-109">Ancilla</span></span>
+
+<span data-ttu-id="605c9-110">Um [qubit](xref:microsoft.quantum.glossary#qubit) que serve como memória temporária para um computador Quantum e é alocado e desalocado conforme necessário.</span><span class="sxs-lookup"><span data-stu-id="605c9-110">A [qubit](xref:microsoft.quantum.glossary#qubit) that serves as temporary memory for a quantum computer and is allocated and de-allocated as needed.</span></span>  <span data-ttu-id="605c9-111">Para obter mais informações, consulte [Multiple qubits](xref:microsoft.quantum.concepts.multiple-qubits).</span><span class="sxs-lookup"><span data-stu-id="605c9-111">For more information, see [Multiple qubits](xref:microsoft.quantum.concepts.multiple-qubits).</span></span>
+
+## <a name="bell-state"></a><span data-ttu-id="605c9-112">Estado de sino</span><span class="sxs-lookup"><span data-stu-id="605c9-112">Bell state</span></span>
+
+<span data-ttu-id="605c9-113">Um dos quatro [Estados](xref:microsoft.quantum.glossary#quantum-state) de Quantum [confusas](xref:microsoft.quantum.glossary#entanglement) de dois qubits específicos.</span><span class="sxs-lookup"><span data-stu-id="605c9-113">One of four specific maximally [entangled](xref:microsoft.quantum.glossary#entanglement) [quantum states](xref:microsoft.quantum.glossary#quantum-state) of two qubits.</span></span> <span data-ttu-id="605c9-114">Os quatro Estados são definidos $ \ket { \ beta_ {IJ } } = (\Mathbb{I } \Otimes X ^ Iz ^ j) (\ket{00 } + \ket{11 } )/\sqrt{2 } $.</span><span class="sxs-lookup"><span data-stu-id="605c9-114">The four states are defined $\ket{\beta_{ij}} = (\mathbb{I} \otimes X^iZ^j) (\ket{00} + \ket{11}) / \sqrt{2}$.</span></span> <span data-ttu-id="605c9-115">Um estado de sino também é conhecido como um [par EPR](xref:microsoft.quantum.glossary#epr-pair).</span><span class="sxs-lookup"><span data-stu-id="605c9-115">A Bell state is also known as an [EPR pair](xref:microsoft.quantum.glossary#epr-pair).</span></span>
+
+## <a name="bloch-sphere"></a><span data-ttu-id="605c9-116">Esfera de Bloch</span><span class="sxs-lookup"><span data-stu-id="605c9-116">Bloch sphere</span></span>
+
+<span data-ttu-id="605c9-117">Uma representação gráfica de um estado de[qubit](xref:microsoft.quantum.glossary#qubit) [Quantum](xref:microsoft.quantum.glossary#quantum-state) de qubit único como um ponto em uma esfera de unidade tridimensional.</span><span class="sxs-lookup"><span data-stu-id="605c9-117">A graphical representation of a single-[qubit](xref:microsoft.quantum.glossary#qubit) [quantum state](xref:microsoft.quantum.glossary#quantum-state) as a point in a three-dimensional unit sphere.</span></span> <span data-ttu-id="605c9-118">Para obter mais informações, consulte [visualizando qubits e transformações usando a esfera Bloch](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).</span><span class="sxs-lookup"><span data-stu-id="605c9-118">For more information, see  [Visualizing Qubits and Transformations using the Bloch Sphere](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).</span></span>
+
+## <a name="callable"></a><span data-ttu-id="605c9-119">Acessível</span><span class="sxs-lookup"><span data-stu-id="605c9-119">Callable</span></span>
+
+<span data-ttu-id="605c9-120">Uma [operação](xref:microsoft.quantum.glossary#operation) ou [função](xref:microsoft.quantum.glossary#function) na linguagem Q #.</span><span class="sxs-lookup"><span data-stu-id="605c9-120">An [operation](xref:microsoft.quantum.glossary#operation) or [function](xref:microsoft.quantum.glossary#function) in the Q# language.</span></span> <span data-ttu-id="605c9-121">Para obter mais informações, consulte [operações e funções](xref:microsoft.quantum.guide.operationsfunctions).</span><span class="sxs-lookup"><span data-stu-id="605c9-121">For more information, see [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).</span></span>
+
+## <a name="clifford-group"></a><span data-ttu-id="605c9-122">Grupo de Clifford</span><span class="sxs-lookup"><span data-stu-id="605c9-122">Clifford group</span></span>
+
+<span data-ttu-id="605c9-123">O conjunto de operações que ocupam o octants da [esfera Bloch](xref:microsoft.quantum.glossary#bloch-sphere) e afetam as permutações dos [operadores Pauli](xref:microsoft.quantum.glossary#pauli-operators).</span><span class="sxs-lookup"><span data-stu-id="605c9-123">The set of operations that occupy the octants of the [Bloch sphere](xref:microsoft.quantum.glossary#bloch-sphere) and effect permutations of the [Pauli operators](xref:microsoft.quantum.glossary#pauli-operators).</span></span> <span data-ttu-id="605c9-124">Isso inclui as operações [$X $ ](xref:microsoft.quantum.intrinsic.x), [$Y $ ](xref:microsoft.quantum.intrinsic.y), [$Z $ ](xref:microsoft.quantum.intrinsic.z), [$H $ ](xref:microsoft.quantum.intrinsic.h) e [$S $ ](xref:microsoft.quantum.intrinsic.s).</span><span class="sxs-lookup"><span data-stu-id="605c9-124">These include the operations [$X$](xref:microsoft.quantum.intrinsic.x), [$Y$](xref:microsoft.quantum.intrinsic.y), [$Z$](xref:microsoft.quantum.intrinsic.z), [$H$](xref:microsoft.quantum.intrinsic.h) and [$S$](xref:microsoft.quantum.intrinsic.s).</span></span>
+
+## <a name="controlled"></a><span data-ttu-id="605c9-125">Controlado</span><span class="sxs-lookup"><span data-stu-id="605c9-125">Controlled</span></span>
+
+<span data-ttu-id="605c9-126">Uma [operação](xref:microsoft.quantum.glossary#operation) Quantum que usa um ou mais [qubits](xref:microsoft.quantum.glossary#qubit) como habilitadores para a operação de destino.</span><span class="sxs-lookup"><span data-stu-id="605c9-126">A quantum [operation](xref:microsoft.quantum.glossary#operation) that takes one or more [qubits](xref:microsoft.quantum.glossary#qubit) as enablers for the target operation.</span></span> <span data-ttu-id="605c9-127">Para obter mais informações, consulte [operações controladas e adjacentes](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).</span><span class="sxs-lookup"><span data-stu-id="605c9-127">For more information, see [Controlled and adjoint operations](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).</span></span>
+
+## <a name="dirac-notation"></a><span data-ttu-id="605c9-128">Notação de Dirac</span><span class="sxs-lookup"><span data-stu-id="605c9-128">Dirac Notation</span></span>
+
+<span data-ttu-id="605c9-129">Uma abreviação simbólica que simplifica a representação de [Estados Quantum](xref:microsoft.quantum.glossary#quantum-state), também chamada de notação de *bra ket* .</span><span class="sxs-lookup"><span data-stu-id="605c9-129">A symbolic shorthand that simplifies the representation of [quantum states](xref:microsoft.quantum.glossary#quantum-state), also called *bra-ket* notation.</span></span>  <span data-ttu-id="605c9-130">A porção *Bra* representa um vetor de linha, por exemplo, $ \bra{A } = \begin{ bmatrix } a {_1 } & a {_2 } \end{ bmatrix } $ e a porção *ket* representa um vetor de coluna, $ \ket{B } = \begin{ bmatrix } b {_1 } \\ \\ b {_2 } \end{ bmatrix } $.</span><span class="sxs-lookup"><span data-stu-id="605c9-130">The *bra* portion represents a row vector, for example  $\bra{A} = \begin{bmatrix} A{_1} & A{_2} \end{bmatrix}$ and the *ket* portion represents a column vector, $\ket{B} = \begin{bmatrix} B{_1} \\\\ B{_2} \end{bmatrix}$.</span></span> <span data-ttu-id="605c9-131">Para obter mais informações, consulte [notação de Dirac](xref:microsoft.quantum.concepts.dirac).</span><span class="sxs-lookup"><span data-stu-id="605c9-131">For more information, see [Dirac Notation](xref:microsoft.quantum.concepts.dirac).</span></span>
+
+## <a name="eigenvalue"></a><span data-ttu-id="605c9-132">Eigenvalue</span><span class="sxs-lookup"><span data-stu-id="605c9-132">Eigenvalue</span></span>
+
+<span data-ttu-id="605c9-133">O fator pelo qual a magnitude de uma [eigenvector](xref:microsoft.quantum.glossary#eigenvector) de uma determinada transformação é alterada pelo aplicativo da transformação.</span><span class="sxs-lookup"><span data-stu-id="605c9-133">The factor by which the magnitude of an [eigenvector](xref:microsoft.quantum.glossary#eigenvector) of a given transformation is changed by the application of the transformation.</span></span>  <span data-ttu-id="605c9-134">Dada uma matriz quadrada $M $ e uma $v eigenvector $ , em seguida, $MV = CV $ , onde $c $ é o eigenvalue e pode ser um número complexo de qualquer argumento.</span><span class="sxs-lookup"><span data-stu-id="605c9-134">Given a square matrix $M$ and an eigenvector $v$, then $Mv = cv$, where $c$ is the eigenvalue and can be a complex number of any argument.</span></span> <span data-ttu-id="605c9-135">Para obter mais informações, consulte [conceitos de matriz avançada](xref:microsoft.quantum.concepts.matrix-advanced).</span><span class="sxs-lookup"><span data-stu-id="605c9-135">For more information, see [Advanced matrix concepts](xref:microsoft.quantum.concepts.matrix-advanced).</span></span>
+
+## <a name="eigenvector"></a><span data-ttu-id="605c9-136">Eigenvector</span><span class="sxs-lookup"><span data-stu-id="605c9-136">Eigenvector</span></span>
+
+<span data-ttu-id="605c9-137">Um vetor cuja direção é inalterada por uma determinada transformação e cuja magnitude é alterada por um fator correspondente ao [eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)do vetor.</span><span class="sxs-lookup"><span data-stu-id="605c9-137">A vector whose direction is unchanged by a given transformation and whose magnitude is changed by a factor corresponding to that vector's [eigenvalue](xref:microsoft.quantum.glossary#eigenvalue).</span></span> <span data-ttu-id="605c9-138">Dada uma matriz quadrada $M $ e uma $c eigenvalue $ , em seguida, $MV = CV $ , onde $v $ é um eigenvector da matriz e pode ser um número complexo de qualquer argumento.</span><span class="sxs-lookup"><span data-stu-id="605c9-138">Given a square matrix $M$ and an eigenvalue $c$, then $Mv = cv$, where $v$ is an eigenvector of the matrix and can be a complex number of any argument.</span></span> <span data-ttu-id="605c9-139">Para obter mais informações, consulte [conceitos de matriz avançada](xref:microsoft.quantum.concepts.matrix-advanced).</span><span class="sxs-lookup"><span data-stu-id="605c9-139">For more information, see [Advanced matrix concepts](xref:microsoft.quantum.concepts.matrix-advanced).</span></span>
+
+## <a name="entanglement"></a><span data-ttu-id="605c9-140">Emaranhamento</span><span class="sxs-lookup"><span data-stu-id="605c9-140">Entanglement</span></span>
+
+<span data-ttu-id="605c9-141">As partículas de Quantum, como [qubits](xref:microsoft.quantum.glossary#qubit), podem ser conectadas ou *confusas* de modo que não possam ser descritas independentemente uma da outra.</span><span class="sxs-lookup"><span data-stu-id="605c9-141">Quantum particles, such as [qubits](xref:microsoft.quantum.glossary#qubit), can be connected or *entangled* such that they cannot be described independently from each other.</span></span> <span data-ttu-id="605c9-142">Seus resultados de medição são correlacionados mesmo quando estão separados infinitamente longe.</span><span class="sxs-lookup"><span data-stu-id="605c9-142">Their measurement results are correlated even when they are separated infinitely far away.</span></span> <span data-ttu-id="605c9-143">Entanglement é essencial para [medir](xref:microsoft.quantum.glossary#measurement) o [estado](xref:microsoft.quantum.glossary#quantum-state) de um qubit.</span><span class="sxs-lookup"><span data-stu-id="605c9-143">Entanglement is essential to [measuring](xref:microsoft.quantum.glossary#measurement) the [state](xref:microsoft.quantum.glossary#quantum-state) of a qubit.</span></span>  <span data-ttu-id="605c9-144">Para obter mais informações, consulte [conceitos de matriz avançada](xref:microsoft.quantum.concepts.matrix-advanced).</span><span class="sxs-lookup"><span data-stu-id="605c9-144">For more information, see [Advanced matrix concepts](xref:microsoft.quantum.concepts.matrix-advanced).</span></span>
+
+## <a name="epr-pair"></a><span data-ttu-id="605c9-145">Par de EPR</span><span class="sxs-lookup"><span data-stu-id="605c9-145">EPR pair</span></span>
+
+<span data-ttu-id="605c9-146">Um dos quatro [Estados de Quantum](xref:microsoft.quantum.glossary#quantum-state) confusas de dois [qubits](xref:microsoft.quantum.glossary#qubit)específicos.</span><span class="sxs-lookup"><span data-stu-id="605c9-146">One of four specific maximally entangled [quantum states](xref:microsoft.quantum.glossary#quantum-state) of two [qubits](xref:microsoft.quantum.glossary#qubit).</span></span> <span data-ttu-id="605c9-147">Os quatro Estados são definidos $ \ket { \ beta_ {IJ } } = (\Mathbb{1 } \Otimes X ^ Iz ^ j) (\ket{00 } + \ket{11 } )/\sqrt{2 } $.</span><span class="sxs-lookup"><span data-stu-id="605c9-147">The four states are defined $\ket{\beta_{ij}} = (\mathbb{1} \otimes X^iZ^j) (\ket{00} + \ket{11}) / \sqrt{2}$.</span></span> <span data-ttu-id="605c9-148">Um par EPR também é conhecido como um [estado de sino](xref:microsoft.quantum.glossary#bell-state)</span><span class="sxs-lookup"><span data-stu-id="605c9-148">An EPR pair is also known as a [Bell state](xref:microsoft.quantum.glossary#bell-state)</span></span>
+
+## <a name="evolution"></a><span data-ttu-id="605c9-149">Evolucionário</span><span class="sxs-lookup"><span data-stu-id="605c9-149">Evolution</span></span>
+
+<span data-ttu-id="605c9-150">Como um [estado Quantum](xref:microsoft.quantum.glossary#quantum-state) muda ao longo do tempo.</span><span class="sxs-lookup"><span data-stu-id="605c9-150">How a [quantum state](xref:microsoft.quantum.glossary#quantum-state) changes over time.</span></span> <span data-ttu-id="605c9-151">Para obter mais informações, consulte [exponencials de matriz](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials).</span><span class="sxs-lookup"><span data-stu-id="605c9-151">For more information, see [Matrix exponentials](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials).</span></span>
+
+## <a name="function"></a><span data-ttu-id="605c9-152">Função</span><span class="sxs-lookup"><span data-stu-id="605c9-152">Function</span></span>
+<span data-ttu-id="605c9-153">Um tipo de sub-rotina na linguagem Q # que é puramente clássico (não Quantum).</span><span class="sxs-lookup"><span data-stu-id="605c9-153">A type of subroutine in the Q# language that is purely classical (non-quantum).</span></span> <span data-ttu-id="605c9-154">Embora as funções sejam usadas em algoritmos Quantum, elas não podem agir em [operações](xref:microsoft.quantum.glossary#operation) [qubits](xref:microsoft.quantum.glossary#qubit) ou Call.</span><span class="sxs-lookup"><span data-stu-id="605c9-154">While functions are used within quantum algorithms, they cannot act on [qubits](xref:microsoft.quantum.glossary#qubit) or call [operations](xref:microsoft.quantum.glossary#operation).</span></span> <span data-ttu-id="605c9-155">Para obter mais informações, consulte [operações e funções](xref:microsoft.quantum.guide.operationsfunctions).</span><span class="sxs-lookup"><span data-stu-id="605c9-155">For more information, see [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).</span></span>
+
+## <a name="gate"></a><span data-ttu-id="605c9-156">Check</span><span class="sxs-lookup"><span data-stu-id="605c9-156">Gate</span></span>
+
+<span data-ttu-id="605c9-157">Um termo herdado para uma [operação](xref:microsoft.quantum.glossary#operation)Quantum, com base no conceito de Gates de lógica clássica.</span><span class="sxs-lookup"><span data-stu-id="605c9-157">A legacy term for a quantum [operation](xref:microsoft.quantum.glossary#operation), based on the concept of classical logic gates.</span></span> <span data-ttu-id="605c9-158">Um [circuito Quantum](xref:microsoft.quantum.glossary#quantum-circuit-diagram) é uma rede de Gates (ou operações), com base no conceito semelhante de circuitos lógicos clássicos.</span><span class="sxs-lookup"><span data-stu-id="605c9-158">A [quantum circuit](xref:microsoft.quantum.glossary#quantum-circuit-diagram) is a network of gates (or operations), based on the similar concept of classical logic circuits.</span></span>
+
+## <a name="global-phase"></a><span data-ttu-id="605c9-159">Fase global</span><span class="sxs-lookup"><span data-stu-id="605c9-159">Global phase</span></span>
+
+<span data-ttu-id="605c9-160">Quando dois [Estados](xref:microsoft.quantum.glossary#quantum-state) são idênticos até um múltiplo de um número complexo $e ^ {i \phi } $, eles são considerados diferentes para uma fase global.</span><span class="sxs-lookup"><span data-stu-id="605c9-160">When two [states](xref:microsoft.quantum.glossary#quantum-state) are identical up to a multiple of a complex number $e^{i\phi}$, they are said to differ up to a global phase.</span></span> <span data-ttu-id="605c9-161">Ao [contrário das fases locais, as fases](xref:microsoft.quantum.glossary#measurement)globais não podem ser observadas por qualquer medida.</span><span class="sxs-lookup"><span data-stu-id="605c9-161">Unlike local phases, global phases cannot be observed through any [measurment](xref:microsoft.quantum.glossary#measurement).</span></span> <span data-ttu-id="605c9-162">Para obter mais informações, consulte [o qubit](xref:microsoft.quantum.concepts.qubit).</span><span class="sxs-lookup"><span data-stu-id="605c9-162">For more information, see [The Qubit](xref:microsoft.quantum.concepts.qubit).</span></span>
+
+## <a name="hadamard"></a><span data-ttu-id="605c9-163">Hadamard</span><span class="sxs-lookup"><span data-stu-id="605c9-163">Hadamard</span></span>
+
+<span data-ttu-id="605c9-164">A operação Hadamard (também conhecida como portão ou transformação Hadamard) atua em um único [qubit](xref:microsoft.quantum.glossary#qubit) e a coloca em uma [superposição](xref:microsoft.quantum.glossary#superposition) uniforme de $ \ket{0 } $ ou $ \ket{1 } $ se o qubit estiver inicialmente no estado $ \ket{0 } $.</span><span class="sxs-lookup"><span data-stu-id="605c9-164">The Hadamard operation (also referred to as the Hadamard gate or transform) acts on a single [qubit](xref:microsoft.quantum.glossary#qubit) and puts it in an even [superposition](xref:microsoft.quantum.glossary#superposition) of $\ket{0}$ or $\ket{1}$ if the qubit is initially in the $\ket{0}$ state.</span></span> <span data-ttu-id="605c9-165">Em Q #, essa operação é aplicada pela operação predefinida [`H`](xref:microsoft.quantum.intrinsic.h) .</span><span class="sxs-lookup"><span data-stu-id="605c9-165">In Q#, this operation is applied by the pre-defined [`H`](xref:microsoft.quantum.intrinsic.h) operation.</span></span>
+
+## <a name="immutable"></a><span data-ttu-id="605c9-166">Imutável</span><span class="sxs-lookup"><span data-stu-id="605c9-166">Immutable</span></span>
+
+<span data-ttu-id="605c9-167">Uma variável cujo valor não pode ser alterado.</span><span class="sxs-lookup"><span data-stu-id="605c9-167">A variable whose value cannot be changed.</span></span> <span data-ttu-id="605c9-168">Uma variável imutável em Q # é criada usando a `let` palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="605c9-168">An immutable variable in Q# is created using the `let` keyword.</span></span> <span data-ttu-id="605c9-169">Para declarar variáveis que *podem* ser alteradas, use a palavra-chave [mutable](xref:microsoft.quantum.glossary#immutable) para declarar e a `set` palavra-chave para modificar o valor.</span><span class="sxs-lookup"><span data-stu-id="605c9-169">To declare variables that *can* be changed, use the [mutable](xref:microsoft.quantum.glossary#immutable) keyword to declare and the `set` keyword to modify the value.</span></span> 
+
+## <a name="measurement"></a><span data-ttu-id="605c9-170">Medida</span><span class="sxs-lookup"><span data-stu-id="605c9-170">Measurement</span></span>
+
+<span data-ttu-id="605c9-171">Uma manipulação de um [qubit](xref:microsoft.quantum.glossary#qubit) (ou conjunto de qubits) que produz o resultado de uma observação, na verdade, obtendo um bit clássico.</span><span class="sxs-lookup"><span data-stu-id="605c9-171">A manipulation of a [qubit](xref:microsoft.quantum.glossary#qubit) (or set of qubits) that yields the result of an observation, in effect obtaining a classical bit.</span></span> <span data-ttu-id="605c9-172">Para obter mais informações, consulte [o qubit](xref:microsoft.quantum.concepts.qubit#measuring-a-qubit).</span><span class="sxs-lookup"><span data-stu-id="605c9-172">For more information, see [The Qubit](xref:microsoft.quantum.concepts.qubit#measuring-a-qubit).</span></span>
+
+## <a name="mutable"></a><span data-ttu-id="605c9-173">Mutável</span><span class="sxs-lookup"><span data-stu-id="605c9-173">Mutable</span></span>
+
+<span data-ttu-id="605c9-174">Uma variável cujo valor pode ser alterado após ser criada.</span><span class="sxs-lookup"><span data-stu-id="605c9-174">A variable whose value may be changed after it is created.</span></span> <span data-ttu-id="605c9-175">Uma variável mutável em Q # é declarada usando a `mutable` palavra-chave e modificada usando a `set` palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="605c9-175">A mutable variable in Q# is declared using the `mutable` keyword and modified using the `set` keyword.</span></span> <span data-ttu-id="605c9-176">As variáveis criadas com a `let` palavra-chave são [imutáveis](xref:microsoft.quantum.glossary#immutable) e seu valor não pode ser alterado.</span><span class="sxs-lookup"><span data-stu-id="605c9-176">Variables created with the `let` keyword are [immutable](xref:microsoft.quantum.glossary#immutable) and their value cannot be changed.</span></span>
+
+## <a name="namespace"></a><span data-ttu-id="605c9-177">Namespace</span><span class="sxs-lookup"><span data-stu-id="605c9-177">Namespace</span></span>
+
+<span data-ttu-id="605c9-178">Um rótulo para uma coleção de nomes relacionados (ou seja, [operações](xref:microsoft.quantum.glossary#operation), [funções](xref:microsoft.quantum.glossary#function)e [tipos definidos pelo usuário](xref:microsoft.quantum.glossary#user-defined-type)).</span><span class="sxs-lookup"><span data-stu-id="605c9-178">A label for a collection of related names (i.e., [operations](xref:microsoft.quantum.glossary#operation), [functions](xref:microsoft.quantum.glossary#function), and [user-defined types](xref:microsoft.quantum.glossary#user-defined-type)).</span></span> <span data-ttu-id="605c9-179">Por exemplo, o namespace [Microsoft. Quantum.](xref:microsoft.quantum.preparation) Preparation rotula todos os símbolos definidos na biblioteca padrão que ajudam na preparação de Estados iniciais.</span><span class="sxs-lookup"><span data-stu-id="605c9-179">For instance the namespace [Microsoft.Quantum.Preparation](xref:microsoft.quantum.preparation) labels all of the symbols defined in the standard library that help with preparing initial states.</span></span>
+
+## <a name="operation"></a><span data-ttu-id="605c9-180">Operação</span><span class="sxs-lookup"><span data-stu-id="605c9-180">Operation</span></span>
+
+<span data-ttu-id="605c9-181">A unidade básica de execução Quantum em Q #.</span><span class="sxs-lookup"><span data-stu-id="605c9-181">The basic unit of quantum execution in Q#.</span></span> <span data-ttu-id="605c9-182">Ele é basicamente equivalente a uma função em C, C++ ou Python, ou um método estático em C# ou Java.</span><span class="sxs-lookup"><span data-stu-id="605c9-182">It is roughly equivalent to a function in C, C++ or Python, or a static method in C# or Java.</span></span> <span data-ttu-id="605c9-183">Para obter mais informações, consulte [operações e funções](xref:microsoft.quantum.guide.operationsfunctions).</span><span class="sxs-lookup"><span data-stu-id="605c9-183">For more information, see [Operations and functions](xref:microsoft.quantum.guide.operationsfunctions).</span></span>
+
+## <a name="operator-application"></a><span data-ttu-id="605c9-184">Aplicativo do operador</span><span class="sxs-lookup"><span data-stu-id="605c9-184">Operator application</span></span>
+
+<span data-ttu-id="605c9-185">Executando uma operação Quantum.</span><span class="sxs-lookup"><span data-stu-id="605c9-185">Performing a quantum operation.</span></span> <span data-ttu-id="605c9-186">Isso normalmente aplica uma matriz unitário ao vetor de estado atual do Quantum.</span><span class="sxs-lookup"><span data-stu-id="605c9-186">This typically applies a unitary matrix to the current quantum state vector.</span></span>
+
+## <a name="oracle"></a><span data-ttu-id="605c9-187">Oracle</span><span class="sxs-lookup"><span data-stu-id="605c9-187">Oracle</span></span>
+
+<span data-ttu-id="605c9-188">Uma sub-rotina que fornece informações dependentes de dados para um algoritmo Quantum em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="605c9-188">A subroutine that provides data-dependent information to a quantum algorithm at runtime.</span></span> <span data-ttu-id="605c9-189">Normalmente, o objetivo é fornecer uma [superposição](xref:microsoft.quantum.glossary#superposition) de saídas correspondentes às entradas que estão em superposição.</span><span class="sxs-lookup"><span data-stu-id="605c9-189">Typically, the goal is to provide a [superposition](xref:microsoft.quantum.glossary#superposition) of outputs corresponding to inputs that are in superposition.</span></span> <span data-ttu-id="605c9-190">Para obter mais informações, consulte [ORACLES](xref:microsoft.quantum.libraries.data-structures#oracles).</span><span class="sxs-lookup"><span data-stu-id="605c9-190">For more information, see [Oracles](xref:microsoft.quantum.libraries.data-structures#oracles).</span></span>
+
+## <a name="partial-application"></a><span data-ttu-id="605c9-191">Aplicativo parcial</span><span class="sxs-lookup"><span data-stu-id="605c9-191">Partial application</span></span>
+
+<span data-ttu-id="605c9-192">Chamar uma [função](xref:microsoft.quantum.glossary#function) ou [operação](xref:microsoft.quantum.glossary#operation) sem todas as entradas necessárias.</span><span class="sxs-lookup"><span data-stu-id="605c9-192">Calling a [function](xref:microsoft.quantum.glossary#function) or [operation](xref:microsoft.quantum.glossary#operation) without all the required inputs.</span></span> <span data-ttu-id="605c9-193">Isso retorna um novo [callable](xref:microsoft.quantum.glossary#callable) que precisa apenas dos parâmetros ausentes (indicados por um sublinhado) para ser fornecido durante um aplicativo futuro.</span><span class="sxs-lookup"><span data-stu-id="605c9-193">This returns a new [callable](xref:microsoft.quantum.glossary#callable) that only needs the missing parameters (indicated by an underscore) to be supplied during a future application.</span></span> <span data-ttu-id="605c9-194">Por exemplo, dada a função, `MyFunc(x : int, y : int) : int {return x + y;}` você pode aplicá-la parcialmente a uma nova função `let NewFunc = MyFunc(_, 3)` .</span><span class="sxs-lookup"><span data-stu-id="605c9-194">For example, given the function `MyFunc(x : int, y : int) : int {return x + y;}` you can partially apply it to a new function `let NewFunc = MyFunc(_, 3)`.</span></span> <span data-ttu-id="605c9-195">Em seguida, você pode chamar a nova função em um momento posterior com o parâmetro Missing, `NewFunc(2)` que retorna o valor *5*.</span><span class="sxs-lookup"><span data-stu-id="605c9-195">You can then call the new function at a later time with the missing parameter `NewFunc(2)` which returns the value *5*.</span></span>  <span data-ttu-id="605c9-196">Para obter mais informações, consulte [parcial Application](xref:microsoft.quantum.guide.operationsfunctions#partial-application).</span><span class="sxs-lookup"><span data-stu-id="605c9-196">For more information, see [Partial application](xref:microsoft.quantum.guide.operationsfunctions#partial-application).</span></span>
+
+## <a name="pauli-operators"></a><span data-ttu-id="605c9-197">Operadores Pauli</span><span class="sxs-lookup"><span data-stu-id="605c9-197">Pauli operators</span></span>
+
+<span data-ttu-id="605c9-198">Um conjunto de três matrizes de 2 x 2 unitários conhecidas como as `X` `Y` operações de `Z` Quantum e.</span><span class="sxs-lookup"><span data-stu-id="605c9-198">A set of three 2 x 2 unitary matrices known as the `X`, `Y` and `Z` quantum operations.</span></span> <span data-ttu-id="605c9-199">A matriz de identidade, $I $ , geralmente é incluída no conjunto também.</span><span class="sxs-lookup"><span data-stu-id="605c9-199">The identity matrix, $I$, is often included in the set as well.</span></span>  <span data-ttu-id="605c9-200">$I = \begin{ bmatrix } 1 & 0 \\ \\ 0 & 1 \end{ bmatrix } $, $X = \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } $, $Y = \begin{ bmatrix } 0 &-i \\ \\ i & 0 \end{ bmatrix } $, $Z = \begin{ bmatrix } 1 & 0 \\ \\ 0 &-1 \end{ bmatrix } $.</span><span class="sxs-lookup"><span data-stu-id="605c9-200">$I = \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix}$, $X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}$, $Y = \begin{bmatrix} 0 & -i \\\\ i & 0 \end{bmatrix}$, $Z = \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix}$.</span></span>   <span data-ttu-id="605c9-201">Para obter mais informações, consulte [operações de qubit único](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).</span><span class="sxs-lookup"><span data-stu-id="605c9-201">For more information, see [Single-qubit operations](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).</span></span>
+
+## <a name="quantum-circuit-diagram"></a><span data-ttu-id="605c9-202">Diagrama de circuito Quantum</span><span class="sxs-lookup"><span data-stu-id="605c9-202">Quantum circuit diagram</span></span>
+
+<span data-ttu-id="605c9-203">Um método para representar graficamente a sequência de [operações](xref:microsoft.quantum.glossary#operation) (ou [Gates](xref:microsoft.quantum.glossary#gate)) para programas Quantum simples, por exemplo</span><span class="sxs-lookup"><span data-stu-id="605c9-203">A method to graphically represent the sequence of [operations](xref:microsoft.quantum.glossary#operation) (or [gates](xref:microsoft.quantum.glossary#gate)) for simple quantum programs, for example</span></span> 
+
+![Diagrama de circuito de exemplo](~/media/qpe.png)<span data-ttu-id="605c9-205">.</span><span class="sxs-lookup"><span data-stu-id="605c9-205">.</span></span> 
+
+<span data-ttu-id="605c9-206">Para obter mais informações, consulte [circuitos Quantum](xref:microsoft.quantum.concepts.circuits).</span><span class="sxs-lookup"><span data-stu-id="605c9-206">For more information, see [Quantum circuits](xref:microsoft.quantum.concepts.circuits).</span></span>
+
+## <a name="quantum-libraries"></a><span data-ttu-id="605c9-207">Bibliotecas Quantum</span><span class="sxs-lookup"><span data-stu-id="605c9-207">Quantum libraries</span></span>
+
+<span data-ttu-id="605c9-208">Coleções de [operações](xref:microsoft.quantum.glossary#operation), [funções](xref:microsoft.quantum.glossary#function) e [tipos definidos pelo usuário](xref:microsoft.quantum.glossary#user-defined-type) para a criação de programas em Q #.</span><span class="sxs-lookup"><span data-stu-id="605c9-208">Collections of [operations](xref:microsoft.quantum.glossary#operation), [functions](xref:microsoft.quantum.glossary#function) and [user-defined types](xref:microsoft.quantum.glossary#user-defined-type) for creating Q# programs.</span></span> <span data-ttu-id="605c9-209">A [biblioteca padrão](xref:microsoft.quantum.libraries.standard.intro) é instalada por padrão.</span><span class="sxs-lookup"><span data-stu-id="605c9-209">The [Standard library](xref:microsoft.quantum.libraries.standard.intro) is installed by default.</span></span> <span data-ttu-id="605c9-210">Outras bibliotecas disponíveis são a [biblioteca de química](xref:microsoft.quantum.chemistry.concepts.intro), a [biblioteca de números](xref:microsoft.quantum.numerics.intro) e a biblioteca de aprendizado de [máquina](xref:microsoft.quantum.machine-learning.concepts.intro).</span><span class="sxs-lookup"><span data-stu-id="605c9-210">Other libraries available are the [Chemistry library](xref:microsoft.quantum.chemistry.concepts.intro), the [Numerics library](xref:microsoft.quantum.numerics.intro) and the [Machine learning library](xref:microsoft.quantum.machine-learning.concepts.intro).</span></span>
+
+## <a name="quantum-state"></a><span data-ttu-id="605c9-211">Estado do Quantum</span><span class="sxs-lookup"><span data-stu-id="605c9-211">Quantum state</span></span>
+
+<span data-ttu-id="605c9-212">O estado preciso de um sistema Quantum isolado, do qual as probabilidades de [medida](xref:microsoft.quantum.glossary#measurement) podem ser extraídas.</span><span class="sxs-lookup"><span data-stu-id="605c9-212">The precise state of an isolated quantum system, from which [measurement](xref:microsoft.quantum.glossary#measurement) probabilities can be extracted.</span></span> <span data-ttu-id="605c9-213">Na computação Quantum, o simulador Quantum usa essas informações para simular como qubits responder às operações.</span><span class="sxs-lookup"><span data-stu-id="605c9-213">In quantum computing, the quantum simulator uses this information to simulate how qubits respond to operations.</span></span> <span data-ttu-id="605c9-214">Para obter mais informações, consulte [o qubit](xref:microsoft.quantum.concepts.qubit).</span><span class="sxs-lookup"><span data-stu-id="605c9-214">For more information, see [The Qubit](xref:microsoft.quantum.concepts.qubit).</span></span>
+
+## <a name="qubit"></a><span data-ttu-id="605c9-215">Qubit</span><span class="sxs-lookup"><span data-stu-id="605c9-215">Qubit</span></span>
+
+<span data-ttu-id="605c9-216">Uma unidade básica de informações de Quantum, análoga a um *pouco* na computação clássica.</span><span class="sxs-lookup"><span data-stu-id="605c9-216">A basic unit of quantum information, analogous to a *bit* in classical computing.</span></span> <span data-ttu-id="605c9-217">Para obter mais informações, consulte [o qubit](xref:microsoft.quantum.concepts.qubit).</span><span class="sxs-lookup"><span data-stu-id="605c9-217">For more information, see [The Qubit](xref:microsoft.quantum.concepts.qubit).</span></span>
+
+## <a name="repeat-until-success"></a><span data-ttu-id="605c9-218">Repetir-até-êxito</span><span class="sxs-lookup"><span data-stu-id="605c9-218">Repeat-until-success</span></span>
+
+<span data-ttu-id="605c9-219">Um algoritmo Quantum que Probabilistic teve sucesso.</span><span class="sxs-lookup"><span data-stu-id="605c9-219">A quantum algorithm that probabilistically succeeds.</span></span> <span data-ttu-id="605c9-220">Após a falha, a rotina tentará novamente até que tenha êxito (ou um limite tenha sido atingido).</span><span class="sxs-lookup"><span data-stu-id="605c9-220">Upon failure, the routine will retry until successful (or a limit has been reached).</span></span> <span data-ttu-id="605c9-221">Para obter mais informações, consulte [repetir até êxito (RUS)](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop)</span><span class="sxs-lookup"><span data-stu-id="605c9-221">For more information, see [Repeat Until Success (RUS)](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop)</span></span>
+
+## <a name="standard-libraries"></a><span data-ttu-id="605c9-222">Bibliotecas padrão</span><span class="sxs-lookup"><span data-stu-id="605c9-222">Standard libraries</span></span>
+
+<span data-ttu-id="605c9-223">[Operações](xref:microsoft.quantum.glossary#operation), [funções](xref:microsoft.quantum.glossary#function) e [tipos definidos pelo usuário](xref:microsoft.quantum.glossary#user-defined-type) que são instalados juntamente com o compilador Q # durante a instalação.</span><span class="sxs-lookup"><span data-stu-id="605c9-223">[Operations](xref:microsoft.quantum.glossary#operation), [functions](xref:microsoft.quantum.glossary#function) and [user-defined types](xref:microsoft.quantum.glossary#user-defined-type) that are installed along with the Q# compiler during installation.</span></span> <span data-ttu-id="605c9-224">A implementação da biblioteca padrão é independente em relação aos computadores de destino.</span><span class="sxs-lookup"><span data-stu-id="605c9-224">The standard library implementation is agnostic with respect to target machines.</span></span> <span data-ttu-id="605c9-225">Para obter mais informações, consulte [bibliotecas padrão](xref:microsoft.quantum.libraries.standard.intro).</span><span class="sxs-lookup"><span data-stu-id="605c9-225">For more information, see [Standard libraries](xref:microsoft.quantum.libraries.standard.intro).</span></span>
+
+## <a name="superposition"></a><span data-ttu-id="605c9-226">Superposição</span><span class="sxs-lookup"><span data-stu-id="605c9-226">Superposition</span></span>
+
+<span data-ttu-id="605c9-227">O conceito na computação Quantum que um [qubit](xref:microsoft.quantum.glossary#qubit) é uma combinação linear de dois Estados, $ \ket{0 } $ e $ \ket{1 } $, até que seja [medido](xref:microsoft.quantum.glossary#measurement).</span><span class="sxs-lookup"><span data-stu-id="605c9-227">The concept in quantum computing that a [qubit](xref:microsoft.quantum.glossary#qubit) is a linear combination of two states, $\ket{0}$ and $\ket{1}$, until it is [measured](xref:microsoft.quantum.glossary#measurement).</span></span>  <span data-ttu-id="605c9-228">Para obter mais informações, consulte [noções básicas sobre computação Quantum](xref:microsoft.quantum.overview.understanding).</span><span class="sxs-lookup"><span data-stu-id="605c9-228">For more information, see [Understanding quantum computing](xref:microsoft.quantum.overview.understanding).</span></span>
+
+## <a name="target-machine"></a><span data-ttu-id="605c9-229">Computador de destino</span><span class="sxs-lookup"><span data-stu-id="605c9-229">Target machine</span></span>
+
+<span data-ttu-id="605c9-230">Um destino de compilação que reduz um programa Quantum abstrato em direção a hardware ou simulação.</span><span class="sxs-lookup"><span data-stu-id="605c9-230">A compilation target that lowers an abstract quantum program towards hardware or simulation.</span></span> <span data-ttu-id="605c9-231">Isso normalmente inclui regravações para muitas finalidades, incluindo substituição de portão, codificação para correção de erros, layout geométrico e outros.</span><span class="sxs-lookup"><span data-stu-id="605c9-231">This typically include re-writes for many purposes including gate replacement, encoding for error correction, geometric layout and others.</span></span> <span data-ttu-id="605c9-232">Para obter mais informações, consulte [simuladores do Quantum e aplicativos de host](xref:microsoft.quantum.machines).</span><span class="sxs-lookup"><span data-stu-id="605c9-232">For more information, see [Quantum simulators and host applications](xref:microsoft.quantum.machines).</span></span>
+
+## <a name="teleportation"></a><span data-ttu-id="605c9-233">Portabilidade</span><span class="sxs-lookup"><span data-stu-id="605c9-233">Teleportation</span></span>
+
+<span data-ttu-id="605c9-234">Um método para regenerar dados ou o [estado Quantum](xref:microsoft.quantum.glossary#quantum-state)de um [qubit](xref:microsoft.quantum.glossary#qubit) de um lugar para outro sem mover fisicamente o qubit, usando [Entanglement](xref:microsoft.quantum.glossary#entanglement) e [medição](xref:microsoft.quantum.glossary#measurement).</span><span class="sxs-lookup"><span data-stu-id="605c9-234">A method for regenerating data, or the [quantum state](xref:microsoft.quantum.glossary#quantum-state), of one [qubit](xref:microsoft.quantum.glossary#qubit) from one place to another without physically moving the qubit, using [entanglement](xref:microsoft.quantum.glossary#entanglement) and [measurement](xref:microsoft.quantum.glossary#measurement).</span></span>  <span data-ttu-id="605c9-235">Para obter mais informações, consulte [circuitos Quantum](xref:microsoft.quantum.concepts.circuits) e o respectivo Kata no [Quantum katas](xref:microsoft.quantum.overview.katas).</span><span class="sxs-lookup"><span data-stu-id="605c9-235">For more information, see [Quantum circuits](xref:microsoft.quantum.concepts.circuits) and the respective kata at [Quantum Katas](xref:microsoft.quantum.overview.katas).</span></span>
+
+## <a name="tuple"></a><span data-ttu-id="605c9-236">Tupla</span><span class="sxs-lookup"><span data-stu-id="605c9-236">Tuple</span></span>
+
+<span data-ttu-id="605c9-237">Uma coleção de valores separados por vírgula que atua como um único valor.</span><span class="sxs-lookup"><span data-stu-id="605c9-237">A collection of comma-separated values that acts as a single value.</span></span> <span data-ttu-id="605c9-238">O *tipo* de uma tupla é definido pelos tipos de valores que ela contém.</span><span class="sxs-lookup"><span data-stu-id="605c9-238">The *type* of a tuple is defined by the types of values it contains.</span></span> <span data-ttu-id="605c9-239">Em Q #, as tuplas são [imutáveis](xref:microsoft.quantum.glossary#immutable) e podem ser aninhadas, conter matrizes ou usadas em uma matriz.</span><span class="sxs-lookup"><span data-stu-id="605c9-239">In Q#, tuples are [immutable](xref:microsoft.quantum.glossary#immutable) and can be nested, contain arrays, or used in an array.</span></span> <span data-ttu-id="605c9-240">Para obter mais informações, consulte [tipos de tupla](xref:microsoft.quantum.guide.types#tuple-types).</span><span class="sxs-lookup"><span data-stu-id="605c9-240">For more information, see [Tuple types](xref:microsoft.quantum.guide.types#tuple-types).</span></span>
+
+## <a name="unitary-operator"></a><span data-ttu-id="605c9-241">Operador unitário</span><span class="sxs-lookup"><span data-stu-id="605c9-241">Unitary operator</span></span>
+
+<span data-ttu-id="605c9-242">Um operador cujo inverso é igual a seu [adjacente](xref:microsoft.quantum.glossary#adjoint), ou seja, $UU ^ {\dagger } = \id $ .</span><span class="sxs-lookup"><span data-stu-id="605c9-242">An operator whose inverse is equal to its [adjoint](xref:microsoft.quantum.glossary#adjoint), i.e., $UU^{\dagger} = \id$.</span></span>
+
+## <a name="user-defined-type"></a><span data-ttu-id="605c9-243">Tipo definido pelo usuário</span><span class="sxs-lookup"><span data-stu-id="605c9-243">User-defined type</span></span>
+
+<span data-ttu-id="605c9-244">Uma coleção de tipos internos ou definidos anteriormente que podem ser referidos como uma única unidade.</span><span class="sxs-lookup"><span data-stu-id="605c9-244">A collection of built-in or previously defined types that may be referred to as a single unit.</span></span> <span data-ttu-id="605c9-245">Para obter mais informações, consulte [tipos definidos pelo usuário](xref:microsoft.quantum.guide.types#user-defined-types).</span><span class="sxs-lookup"><span data-stu-id="605c9-245">For more information, see [User-defined types](xref:microsoft.quantum.guide.types#user-defined-types).</span></span>
