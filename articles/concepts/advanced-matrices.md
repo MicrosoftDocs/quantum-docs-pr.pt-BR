@@ -9,6 +9,13 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
+- $$
+- $$
+- $$
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +84,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 8d3c646715f13c454e51b9295cbfdabf6a236ffc
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 71923247121eae6a1d4e26d2664d8e547370ba3a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630144"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269449"
 ---
 # <a name="advanced-matrix-concepts"></a>Conceitos de matriz avançada #
 
@@ -104,7 +114,7 @@ $$
 
 Os vetores
 
-$ $ \begin{ bmatrix } 1 \\ \\ 0 0 \\ \\ \end{ bmatrix } , \begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end { bmatrix } e \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1 \end {bmatrix}$$
+$ $ \begin{ bmatrix } 1 \\ \\ 0 0 \\ \\ \end{ bmatrix } , \begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end{bmatrix} e \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1\end{bmatrix}$$
 
 são eigenvectors dessa matriz com eigenvalues $d _1 $ , $d _2 $ e $d _3 $ , respectivamente. Se $d _1 $ , $d _2 $ e $d _3 $ forem números distintos, esses vetores (e seus múltiplos) serão os únicos eigenvectors da matriz $D $ . Em geral, para uma matriz diagonal, é fácil ler eigenvalues e eigenvectors. Eigenvalues são todos os números que aparecem na diagonal e seus respectivos eigenvectors são os vetores de unidade com uma entrada igual a $1 $ e as entradas restantes iguais a $0 $ .
 

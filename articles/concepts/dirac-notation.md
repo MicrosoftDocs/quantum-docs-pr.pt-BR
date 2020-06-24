@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 958910452109fc722999acddd70894c458e38357
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: f9dddfa25e9fd1e3d8aaf92b2e3b17c96ed8b72a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630391"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269499"
 ---
 # <a name="dirac-notation"></a>Notação de Dirac
 
@@ -123,7 +130,7 @@ $$
 
 Como exemplo de notação Dirac, considere o freio $ \braket{0 | 1 } $, que é o produto interno entre $0 $ e $1 $ .  Ele pode ser escrito como 
 
-$ $ \braket{0 | 1 } = \begin{ bmatrix } 1 & 0 \end{ bmatrix } \begin{ bmatrix } 0 \\\\ 1 \end { bmatrix } = 0. $ $
+$ $ \braket{0 | 1 } = \begin{ bmatrix } 1 & 0 \end{ bmatrix } \begin{ bmatrix } 0 \\\\ 1 \end{bmatrix} = 0. $ $
 
 Isso diz que $ \ket{0 } $ e $ \ket{1 } $ são vetores ortogonal, o que significa que $ \braket{0 | 1 } = \braket{1 | 0 } = 0 $ .  Além disso, por definição $ \braket{0 | 0 } = \braket{1 | 1 } = 1 $ , o que significa que os dois vetores de base computacional também podem ser chamados de *orthonormal*.
 Essas propriedades orthonormal serão úteis no exemplo a seguir. Se tivermos um estado $ \ket { \psi } = {\frac{3 } {5 } } \ket{1 } + {\frac{4 } {5 } } \ket{0 } $ then, porque $ \braket{1 | 0 } = 0 $ a probabilidade de medir $1 $ é  
@@ -173,7 +180,7 @@ O fato de que o sinal negativo aparece no cálculo da probabilidade é uma manif
 ## <a name="ketbra-or-outer-product"></a>produto ketbra ou externo
 O item final que vale a pena discutir na notação Dirac é o produto *ketbra* ou externo.  O produto externo é representado em notações de Dirac como $ \ket { \psi } \bra { \phi } $ e, às vezes, chamado de ketbras porque os Bras e Kets ocorrem na ordem oposta como brakets.  O produto externo é definido por meio da multiplicação de matriz como $ \ket { \psi } \bra { \phi } = \psi \phi ^ \dagger $ para os vetores de estado Quantum $ \psi $ e $ \phi $ .  O exemplo mais simples, e comprovadamente mais comum dessa notação, é
 
-$ $ \ket{0 } \bra{0 } = \begin{ bmatrix } 1 \\\\ 0 \end{ bmatrix } \begin{ bmatrix } 1&0 \end{ bmatrix } = \begin{ bmatrix } 1 &0 \\\\ 0 &0 \end { bmatrix } \qquad \ket{1 } \bra{1 } = \begin{ bmatrix } 0 \\\\ 1 \end{ bmatrix } \begin{ bmatrix } 0&1 \end{ bmatrix } = \begin{ bmatrix } 0 &0 \\\\ 0 &1 \end { bmatrix } .
+$ $ \ket{0 } \bra{0 } = \begin{ bmatrix } 1 \\\\ 0 \end{ bmatrix } \begin{ bmatrix } 1&0 \end{ bmatrix } = \begin{ bmatrix } 1 &0 \\\\ 0 &0 \end{bmatrix} \qquad \ket{1 } \bra{1 } = \begin{ bmatrix } 0 \\\\ 1 \end{ bmatrix } \begin{ bmatrix } 0&1 \end{ bmatrix } = \begin{ bmatrix } 0 &0 \\\\ 0 &1 \end{bmatrix} .
 $$
 
 Ketbras geralmente são chamados de projetores porque projetam um estado Quantum em um valor fixo.  Como essas operações não são de forma uniforme (e nem mesmo preservam a norma de um vetor), ela deve ser tão surpresa que um computador Quantum não pode aplicar de forma determinística um projetor.  No entanto, os projetores fazem um lindo trabalho de descrever a ação que a medição tem em um estado Quantum.  Por exemplo, se medirmos um estado $ \ket { \psi } $ para ser $0 $ , a transformação resultante que o estado enfrenta como resultado da medição é
