@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: e48f4157438fba063877b2b79fbc7629710fc9f3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274236"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415436"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas sobre a versão do Microsoft Quantum Development Kit
 
@@ -344,8 +344,6 @@ Se já tiver instalado a extensão, você precisará instalá-la novamente visit
 
 Esta versão corrige um bug que impedia alguns usuários de carregar com êxito a extensão do Visual Studio.
 
-Se estiver atualizando de uma versão 0.2 do Quantum Development Kit, saiba mais sobre as [alterações na linguagem Q# e sobre a migração de seu programa em Q#](xref:microsoft.quantum.relnotes.migration-0-3).
-
 ## <a name="version-031811203"></a>Versão 0.3.1811.203
 
 *Data de lançamento: 2 de novembro de 2018*
@@ -356,8 +354,6 @@ Esta versão inclui algumas correções de bugs, incluindo:
 * Avisos de compilação removidos ao compilar projetos usando uma versão do .NET Core anterior ao 2.1.403.
 * Limpar a documentação, especialmente as dicas de ferramenta mostradas com o deslocamento do ponteiro do mouse no VS Code ou no Visual Studio.
 
-Se estiver atualizando de uma versão 0.2 do Quantum Development Kit, saiba mais sobre as [alterações na linguagem Q# e sobre a migração de seu programa em Q#](xref:microsoft.quantum.relnotes.migration-0-3).
-
 ## <a name="version-0318102508"></a>Versão 0.3.1810.2508
 
 *Data de lançamento: 29 de outubro de 2018*
@@ -367,8 +363,6 @@ Esta versão inclui novos recursos de linguagem e uma experiência de desenvolve
 * Esta versão inclui um servidor de linguagem para Q#, bem como as integrações de cliente para o Visual Studio e o Visual Studio Code. Isso habilita um novo conjunto de recursos do IntelliSense, juntamente com feedback dinâmico no formato de sublinhados ondulados de erros e avisos. 
 * Essa atualização melhora muito as mensagens de diagnóstico em geral, com navegação fácil e intervalos precisos de diagnósticos, e detalhes adicionais nas informações exibidas em foco.
 * A linguagem Q# foi estendida de maneira a unificar as formas como os desenvolvedores podem realizar operações comuns e com novos aprimoramentos nos recursos de linguagem para expressar de forma eficiente a computação quântica.  Há algumas alterações de falha na linguagem Q# com esta versão.   
-
-Saiba mais sobre as [alterações na linguagem Q# e a migração de seu programa em Q#](xref:microsoft.quantum.relnotes.migration-0-3).
 
 Esta versão também inclui uma nova biblioteca de química quântica:
 
@@ -504,7 +498,7 @@ Após a atualização, certifique-se de remover todos os arquivos temporários g
 dotnet clean 
 ```
 
-### <a name="known-issues"></a>Problemas conhecidos
+### <a name="known-issues"></a>Problemas Conhecidos
 
 Não há problemas conhecidos adicionais a relatar.
 
@@ -539,7 +533,7 @@ Projetos criados com versões anteriores do Quantum Development Kit ainda funcio
 
 Observe que a operação RandomWalkPhaseEstimation do namespace Microsoft.Quantum.Canon foi movida para o namespace Microsoft.Research.Quantum.RandomWalkPhaseEstimation no repositório [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc).
 
-### <a name="known-issues"></a>Problemas conhecidos
+### <a name="known-issues"></a>Problemas Conhecidos
 
 - A opção `--filter` para `dotnet test` não funciona corretamente para testes escritos em Q#.
   Como resultado, testes de unidade individuais não podem ser executados no Visual Studio Code; é recomendável usar `dotnet test` na linha de comando para executar novamente todos os testes.

@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: cbb1c274b64738cc4b47869563d7d02eb717afbc
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274256"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415245"
 ---
 # <a name="the-resources-estimator-target-machine"></a>O computador de destino do avaliador de recursos
 
@@ -98,8 +98,8 @@ A seguir está a lista de métricas estimada pelo `ResourcesEstimator` :
 * __Medida__: a contagem de qualquer medida executada.
 * __R__: a contagem de qualquer rotação qubit única executada, excluindo T, Clifford e Pauli Gates.
 * __T__: a contagem de t Gates e seus conjugados, incluindo o Gate t, T_x = h. T. H e T_y = hipótese. T. hipótese, executado.
-* __Profundidade__: profundidade do circuito Quantum executado pela operação Q #. Por padrão, somente T Gates são contadas na profundidade, consulte o [contador de profundidade](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) para obter detalhes.
-* __Largura__: o número máximo de qubits alocadas durante a execução da operação Q #.
+* __Profundidade__: o limite inferior para a profundidade do circuito Quantum executado pela operação Q #. Por padrão, somente T Gates são contadas na profundidade, consulte o [contador de profundidade](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) para obter detalhes.
+* __Largura__: o limite inferior para o número máximo de qubits alocadas durante a execução da operação Q #. Talvez não seja possível obter os limites mais baixos de __profundidade__ e __largura__ simultaneamente.
 * __BorrowedWidth__: número máximo de qubits emprestados dentro da operação Q #.
 
 
