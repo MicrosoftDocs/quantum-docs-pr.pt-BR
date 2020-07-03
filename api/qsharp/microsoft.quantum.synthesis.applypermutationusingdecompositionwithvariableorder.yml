@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder
+name: ApplyPermutationUsingDecompositionWithVariableOrder
+type: operation
+namespace: Microsoft.Quantum.Synthesis
+summary: >-
+  Permuta as amplitudes em um estado Quantum, considerando uma permuta usando a síntese baseada em decomposição.
+
+
+  Esta operação é uma versão mais geral do @"microsoft.quantum.synthesis.applypermutationusingdecomposition" na qual a ordem variável pode ser especificada. Uma ordem variável diferente altera a sequência de decomposição e as tabelas da verdade usadas para as @"microsoft.quantum.intrinsic.x" Gates controladas.  Portanto, alterar a ordem da variável altera o número de Gates gerais usadas para concretizar a permutação.
+examples: >-
+  Para sintetizar uma `SWAP` operação:
+
+
+  ```Q#
+
+  using (qubits = Qubit[2]) {
+    ApplyPermutationUsingDecompositionWithVariableOrder([0, 2, 1, 3], [1, 0], LittleEndian(qubits));
+  }
+
+  ```
+syntax: 'operation ApplyPermutationUsingDecompositionWithVariableOrder (perm : Int[], variableOrder : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(perm : Int[], variableOrder : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: perm
+    summary: Uma permutação de $2 ^ n $ elementos começando em 0.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: variableOrder
+    summary: Uma permutação de elementos $n $ começando em 0.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: qubits
+    summary: Uma lista de $n $ qubits à qual a permutação é aplicada.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.synthesis.applypermutationusingdecomposition
+- microsoft.quantum.synthesis.applypermutationusingtransformation
+metadata:
+  ms.openlocfilehash: ef6b24fa5b9c010f01ade622f470aec7c0a25835
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886053"
