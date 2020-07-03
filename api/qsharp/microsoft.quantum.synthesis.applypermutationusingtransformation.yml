@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.synthesis.applypermutationusingtransformation
+name: ApplyPermutationUsingTransformation
+type: operation
+namespace: Microsoft.Quantum.Synthesis
+summary: >-
+  Permuta as amplitudes em um estado Quantum, considerando uma permuta usando a síntese baseada em transformação.
+
+
+  Este procedimento implementa a abordagem de síntese baseada em transformação unidirecional.  A entrada é uma permutação $ \pi $ sobre $2 ^ n $ Elements $ \{ 0, \dots, 2 ^ n-1 \} $, que representa uma função booliana $n $-Variable reversível.
+
+  O algoritmo executa iterativamente as seguintes etapas:
+
+
+  1. Localize o menor $x $ de forma que $x \ne \pi (x) = y $.
+
+  2. Encontre operações Toffoli com vários controle, que se aplicam às saídas, tornam $ \pi (x) = x $ e não alteram $ \pi (x ') $ para todos os $x ' < x $
+examples: >-
+  Para sintetizar uma `SWAP` operação:
+
+
+  ```Q#
+
+  using (qubits = Qubit[2]) {
+    ApplyPermutationUsingTransformation([0, 2, 1, 3], LittleEndian(qubits));
+  }
+
+  ```
+syntax: 'operation ApplyPermutationUsingTransformation (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+references: >-
+  - [*D. Michael Miller*, *Dmitri Maslov*, *Gerhard W. Dueck*, proc. Dac 2003, IEEE, pp. 318-323, 2003](https://doi.org/10.1145/775832.775915)
+
+  - [*Mathias Soeken*, *Gerhard W. Dueck*, *D. Michael Miller*, proc. rc 2016, Springer, pp. 307-321, 2016](https://doi.org/10.1007/978-3-319-40578-0_22)
+input:
+  content: '(perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: perm
+    summary: Uma permutação de $2 ^ n $ elementos começando em 0.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: qubits
+    summary: Uma lista de $n $ qubits à qual a permutação é aplicada.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.synthesis.applypermutationusingdecomposition
+metadata:
+  ms.openlocfilehash: e611197ba2fbfc0271c17664acc23b4de2c90ff6
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886051"

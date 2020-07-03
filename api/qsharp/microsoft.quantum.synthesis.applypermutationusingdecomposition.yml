@@ -1,0 +1,68 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.synthesis.applypermutationusingdecomposition
+name: ApplyPermutationUsingDecomposition
+type: operation
+namespace: Microsoft.Quantum.Synthesis
+summary: >-
+  Permuta as amplitudes em um estado Quantum, considerando uma permuta usando a síntese baseada em decomposição.
+
+
+  Esse procedimento implementa a abordagem de síntese baseada em decomposição.  A entrada é uma permutação $ \pi $ sobre $2 ^ n $ Elements $ \{ 0, \dots, 2 ^ n-1 \} $, que representa uma função booliana $n $-Variable reversível.
+
+  O algoritmo executa iterativamente as seguintes etapas para cada índice variável $i $:
+
+
+  1. Compute $ ((\ pi_l, \ pi_r), \pi ') $ de forma que as imagens de $ \ pi_l $ e $ \ pi_r $ não alterem bits em seus elementos em índices diferentes de $i $ e imagens de $ \pi ' $ não alterar bit $i $ em seus elementos.
+
+  2. Defina $ \pi \leftarrow \pi ' $ ' e derive as tabelas da verdade de $ \ pi_l $ e $ \ pi_r $ com base em elementos que não são pontos fixos.
+
+
+  Depois de aplicar essas etapas para todos os índices de variáveis, a permutação restante $ \pi $ será a identidade e, com base nas tabelas e índices da verdade coletados, uma poderá aplicar as operações controladas de verdade @"microsoft.quantum.intrinsic.x" da tabela usando a @"microsoft.quantum.synthesis.applyxcontrolledontruthtable" operação.
+
+
+  A ordem da variável é $0, \dots, n-$1.  Uma ordem de variável personalizada pode ser especificada na operação @"microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder" .
+examples: >-
+  Para sintetizar uma `SWAP` operação:
+
+
+  ```Q#
+
+  using (qubits = Qubit[2]) {
+    ApplyPermutationUsingDecomposition([0, 2, 1, 3], LittleEndian(qubits));
+  }
+
+  ```
+syntax: 'operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+references: >-
+  - [*Alexis de vos*, *Yvan Van Rentergem*, avçd. em Math. de comm. 2 (2), 2008, pp. 183--200](http://www.aimsciences.org/article/doi/10.3934/amc.2008.2.183)
+
+  - [*Mathias Soeken*, *Laura Tague*, *Gerhard W. Dueck*, *Rolf Drechsler*, diário de computação simbólica 73 (2016), pp. 1--26](https://www.sciencedirect.com/science/article/pii/S0747717115000188?via%3Dihub)
+input:
+  content: '(perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: perm
+    summary: Uma permutação de $2 ^ n $ elementos começando em 0.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: qubits
+    summary: Uma lista de $n $ qubits à qual a permutação é aplicada.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder
+- microsoft.quantum.synthesis.applypermutationusingtransformation
+metadata:
+  ms.openlocfilehash: 2394b1260a848e590bea911e5b52d0e37d8c1bac
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886054"
