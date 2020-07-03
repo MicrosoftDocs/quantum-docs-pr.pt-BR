@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: f8e398b5c9932a5079222fed7ad20e54de814eb8
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274235"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884202"
 ---
 # <a name="q-style-guide"></a>Guia de estilo de Q # #
 ## <a name="general-conventions"></a>Convenções gerais ##
@@ -105,6 +105,31 @@ Sugerimos:
 | ☑ | `newtype GeneratorTerm` | O uso de frase de substantivo claramente se refere ao resultado da chamada do Construtor UDT. |
 | ☒ | <s>`@Attribute() newtype RunOnce()`</s> | O uso de frase verbal sugere que o Construtor UDT é uma operação. |
 | ☑ | `@Attribute() newtype Deprecated(Reason : String)` | O uso de frase de substantivo comunica o uso do atributo. |
+
+***
+
+### <a name="entry-points"></a>Pontos de entrada
+
+Ao definir um ponto de entrada em um programa Q #, o compilador Q # reconhece que o [ `@EntryPoint()` atributo](xref:microsoft.quantum.core.entrypoint) , em vez de exigir que os pontos de entrada tenham um nome específico (por exemplo: `main` , `Main` ou `__main__` ).
+Ou seja, da perspectiva de um desenvolvedor de Q #, os pontos de entrada são operações comuns anotadas com `@EntryPoint()` .
+Além disso, os pontos de entrada Q # podem ser pontos de entrada para um aplicativo inteiro (ou seja, em arquivos executáveis autônomos Q #) ou podem ser uma interface entre um programa Q # e o programa host para um aplicativo (ou seja, ao usar o Q # com Python ou .NET), de modo que o nome "Main
+
+Sugerimos o uso de pontos de entrada de nomenclatura para refletir o uso do `@EntryPoint()` atributo usando o Conselho geral para as operações de nomenclatura listadas acima.
+
+
+# <a name="guidance"></a>[Diretrizes](#tab/guidance)
+
+Sugerimos:
+
+- Não nomeie operações de ponto de entrada como "Main".
+- Nome de operações de ponto de entrada como operações comuns.
+
+# <a name="examples"></a>[Exemplos](#tab/examples)
+
+|   | Nome | Descrição |
+|---|------|-------------|
+| ☑ | `@EntryPoint() operation RunSimulation` | Comunica claramente a finalidade do ponto de entrada por meio do nome da operação. |
+| ☒ | <s>`@EntryPoint() operation Main`</s> | O uso de `Main` não comunica claramente a finalidade do ponto de entrada e é redundante com o `@EntryPoint()` atributo. |
 
 ***
 

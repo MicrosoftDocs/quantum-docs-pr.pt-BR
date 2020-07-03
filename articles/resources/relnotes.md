@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415436"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885039"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas sobre a versão do Microsoft Quantum Development Kit
 
@@ -20,6 +20,27 @@ Este artigo contém informações sobre cada versão do Quantum Development Kit.
 Para obter instruções de instalação, consulte o [guia de instalação](xref:microsoft.quantum.install).
 
 Para obter instruções de atualização, consulte o [guia de atualização](xref:microsoft.quantum.update).
+
+## <a name="version-01220070124"></a>0.12.20070124 da versão
+
+*Data de lançamento: 2 de julho de 2020*
+
+Esta versão contém o seguinte:
+
+- Nova `qdk-chem` ferramenta para converter formatos de serialização de problemas de estrutura eletrônica herdada (por exemplo: FCIDUMP) para [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)
+- Novas funções e operações no [ `Microsoft.Quantum.Synthesis` namespace](xref:microsoft.quantum.synthesis) para aplicar de forma coerente as Oracle clássicas usando algoritmos de síntese baseados em transformação e descomposição.
+- IQ # agora permite argumentos para o `%simulate` , `%estimate` e outros comandos mágicos. Consulte a [ `%simulate` referência do comando mágico](xref:microsoft.quantum.iqsharp.magic-ref.simulate) para obter mais detalhes.
+- Novas opções de exibição de fase em IQ #. Consulte a [ `%config` referência do comando mágico](xref:microsoft.quantum.iqsharp.magic-ref.config) para obter mais detalhes.
+- O IQ # e o `qsharp` pacote Python agora são fornecidos por meio de pacotes Conda ([qsharp](https://anaconda.org/quantum-engineering/qsharp) e [iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) para simplificar a instalação local da funcionalidade Q # Jupyter e Python em um ambiente Conda. Consulte os guias do [q # Jupyter notebooks](xref:microsoft.quantum.install.jupyter) e [q # com a](xref:microsoft.quantum.install.python) instalação do Python para obter mais detalhes.
+- Ao usar o simulador, qubits não precisa mais estar no estado | 0 ⟩ na versão, mas pode ser redefinido automaticamente se eles forem medidos imediatamente antes da liberação.
+- Atualizações para tornar mais fácil para os usuários do IQ # consumirem pacotes de biblioteca com versões diferentes do QDK, exigindo apenas grandes & números de versão secundários correspondem em vez da mesma versão exata
+- Namespace preterido removido `Microsoft.Quantum.Primitive.*`
+- Operações movidas:
+  - `Microsoft.Quantum.Intrinsic.Assert` agora é `Microsoft.Quantum.Diagnostics.AssertMeasurement`
+  - `Microsoft.Quantum.Intrinsic.AssertProb` agora é `Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`
+- Correções de bug 
+
+Consulte a lista completa de PRs encerrados para [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compilador](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [amostras](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) e [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-0112006403"></a>Versão 0.11.2006.403
 
@@ -498,7 +519,7 @@ Após a atualização, certifique-se de remover todos os arquivos temporários g
 dotnet clean 
 ```
 
-### <a name="known-issues"></a>Problemas Conhecidos
+### <a name="known-issues"></a>Problemas conhecidos
 
 Não há problemas conhecidos adicionais a relatar.
 
@@ -533,7 +554,7 @@ Projetos criados com versões anteriores do Quantum Development Kit ainda funcio
 
 Observe que a operação RandomWalkPhaseEstimation do namespace Microsoft.Quantum.Canon foi movida para o namespace Microsoft.Research.Quantum.RandomWalkPhaseEstimation no repositório [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc).
 
-### <a name="known-issues"></a>Problemas Conhecidos
+### <a name="known-issues"></a>Problemas conhecidos
 
 - A opção `--filter` para `dotnet test` não funciona corretamente para testes escritos em Q#.
   Como resultado, testes de unidade individuais não podem ser executados no Visual Studio Code; é recomendável usar `dotnet test` na linha de comando para executar novamente todos os testes.
