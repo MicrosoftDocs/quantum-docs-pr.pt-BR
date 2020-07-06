@@ -6,12 +6,12 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 4311ebf9f72254485a20ba721ea2ce19163f4371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 15015d1673f47faf5a13dde516f834916b4319d6
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274024"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884278"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Desenvolver com aplicativos de linha de comando do Q#
 
@@ -23,7 +23,7 @@ Os programas Q# podem ser executados por conta própria, sem um driver em uma li
 
 ## <a name="installation"></a>Instalação
 
-Embora você possa compilar aplicativos de linha de comando do Q# em qualquer IDE, recomendamos usar o VS Code (Visual Studio Code) ou o IDE do Visual Studio para seus aplicativos Q#. O desenvolvimento nessas ferramentas fornece acesso a funcionalidades avançadas.
+Embora você possa compilar aplicativos de linha de comando do Q# em qualquer IDE, recomendamos usar o VS Code (Visual Studio Code) ou o IDE do Visual Studio para seus aplicativos Q#. O desenvolvimento nesses ambientes inclui a funcionalidade sofisticada da extensão do QDK, que inclui avisos, realce de sintaxe, modelos de projeto e muito mais.
 
 Para configurar o VS Code:
 
@@ -35,8 +35,17 @@ Para configurar o Visual Studio:
 1. Baixe e instale o [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 ou superior, com a carga de trabalho de desenvolvimento multiplataforma do .NET Core habilitada.
 2. Baixe e instale o [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
+Para instalar o QDK para outro ambiente, digite na linha de comando:
 
-## <a name="develop-with-q-using-vs-code"></a>Desenvolver com o C# por meio do VS Code
+```dotnetcli
+dotnet new -i Microsoft.Quantum.ProjectTemplates
+```
+
+## <a name="develop-with-q"></a>Desenvolver com Q #
+
+Siga as instruções na guia correspondente ao seu ambiente.
+
+### <a name="vs-code"></a>[Código do VS](#tab/tabid-vscode)
 
 Instale os modelos de projeto Q#:
 
@@ -64,7 +73,7 @@ Para executar o aplicativo:
 > [!NOTE]
 > No momento, não há suporte para workspaces com várias pastas raiz na extensão do Q# para VS Code. Caso você tenha vários projetos em um workspace do VS Code, todos os projetos precisarão estar contidos na mesma pasta raiz.
 
-## <a name="develop-with-q-using-visual-studio"></a>Desenvolver com o Q# por meio do Visual Studio
+### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs)
 
 Verifique sua instalação do Visual Studio criando um aplicativo Q# `Hello World`.
 
@@ -83,6 +92,30 @@ Para executar o aplicativo:
 > [!NOTE]
 > Se você tiver vários projetos em uma só solução do Visual Studio, todos os projetos contidos na solução precisarão estar na mesma pasta da solução ou em uma das subpastas dela.  
 
+### <a name="other-editors-with-the-command-line"></a>[Outros editores com a linha de comando](#tab/tabid-cmdline)
+
+Verifique sua instalação criando um aplicativo Q# `Hello World`.
+
+1. Crie um aplicativo:
+    ```dotnetcli
+    dotnet new console -lang Q# -o runSayHello
+    ```
+
+2. Navegue até o diretório do aplicativo:
+    ```dotnetcli
+    cd runSayHello
+    ```
+
+    Agora, esse diretório deve conter um arquivo `Program.qs`, que é um programa Q# que define uma operação simples para imprimir uma mensagem no console. Você pode modificar esse modelo com um editor de texto e substituí-lo por seus aplicativos quânticos. 
+
+3. Execute o programa:
+    ```dotnetcli
+    dotnet run
+    ```
+
+4. Você verá o seguinte texto impresso: `Hello quantum world!`
+
+***
 
 ## <a name="next-steps"></a>Próximas etapas
 
