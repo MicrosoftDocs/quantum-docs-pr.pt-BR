@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 4b5e7b657f0e11fb4a14308c20859f4007729146
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885039"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871544"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas sobre a versão do Microsoft Quantum Development Kit
 
@@ -21,6 +21,17 @@ Para obter instruções de instalação, consulte o [guia de instalação](xref:
 
 Para obter instruções de atualização, consulte o [guia de atualização](xref:microsoft.quantum.update).
 
+
+## <a name="version-01220072031"></a>0.12.20072031 da versão
+
+*Data de lançamento: 21 de julho de 2020*
+
+Esta versão contém o seguinte:
+
+- Os namespaces abertos em blocos de anotações do Q # agora estão disponíveis para todas as execuções de célula futuras. Isso permite, por exemplo, que os namespaces sejam abertos uma vez em uma célula na parte superior do notebook, em vez de precisarem abrir namespaces relevantes em cada célula de código. Um novo `%lsopen` comando mágico exibe a lista de namespaces abertos no momento.
+
+Consulte a lista completa de PRs encerrados para [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compilador](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [amostras](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) e [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
 ## <a name="version-01220070124"></a>0.12.20070124 da versão
 
 *Data de lançamento: 2 de julho de 2020*
@@ -28,7 +39,7 @@ Para obter instruções de atualização, consulte o [guia de atualização](xre
 Esta versão contém o seguinte:
 
 - Nova `qdk-chem` ferramenta para converter formatos de serialização de problemas de estrutura eletrônica herdada (por exemplo: FCIDUMP) para [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)
-- Novas funções e operações no [ `Microsoft.Quantum.Synthesis` namespace](xref:microsoft.quantum.synthesis) para aplicar de forma coerente as Oracle clássicas usando algoritmos de síntese baseados em transformação e descomposição.
+- Novas funções e operações no [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis) namespace para aplicar de forma coerente as Oracle clássicas usando algoritmos de síntese baseados em transformação e descomposição.
 - IQ # agora permite argumentos para o `%simulate` , `%estimate` e outros comandos mágicos. Consulte a [ `%simulate` referência do comando mágico](xref:microsoft.quantum.iqsharp.magic-ref.simulate) para obter mais detalhes.
 - Novas opções de exibição de fase em IQ #. Consulte a [ `%config` referência do comando mágico](xref:microsoft.quantum.iqsharp.magic-ref.config) para obter mais detalhes.
 - O IQ # e o `qsharp` pacote Python agora são fornecidos por meio de pacotes Conda ([qsharp](https://anaconda.org/quantum-engineering/qsharp) e [iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) para simplificar a instalação local da funcionalidade Q # Jupyter e Python em um ambiente Conda. Consulte os guias do [q # Jupyter notebooks](xref:microsoft.quantum.install.jupyter) e [q # com a](xref:microsoft.quantum.install.python) instalação do Python para obter mais detalhes.
@@ -554,7 +565,7 @@ Projetos criados com versões anteriores do Quantum Development Kit ainda funcio
 
 Observe que a operação RandomWalkPhaseEstimation do namespace Microsoft.Quantum.Canon foi movida para o namespace Microsoft.Research.Quantum.RandomWalkPhaseEstimation no repositório [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc).
 
-### <a name="known-issues"></a>Problemas conhecidos
+### <a name="known-issues"></a>Problemas Conhecidos
 
 - A opção `--filter` para `dotnet test` não funciona corretamente para testes escritos em Q#.
   Como resultado, testes de unidade individuais não podem ser executados no Visual Studio Code; é recomendável usar `dotnet test` na linha de comando para executar novamente todos os testes.

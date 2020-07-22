@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 26de7d5f639ea1b4df24232127b6f95cee3a041e
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884202"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871375"
 ---
 # <a name="q-style-guide"></a>Guia de estilo de Q # #
 ## <a name="general-conventions"></a>Convenções gerais ##
@@ -386,9 +386,8 @@ O compilador fornecido com o kit de desenvolvimento Quantum extrai esses coment�
 Da mesma forma, o servidor de linguagem fornecido com o kit de desenvolvimento Quantum usa esses comentários para fornecer ajuda aos usuários quando eles passam o mouse sobre símbolos em seu código Q #.
 Fazer uso de comentários de documentação pode ajudar os usuários a fazer sentido de código fornecendo uma referência útil para os detalhes que não são facilmente expressos usando as outras convenções deste documento.
 
-<div class="nextstepaction">
-    [Referência de sintaxe de comentário de documentação](xref:microsoft.quantum.guide.filestructure#documentation-comments)
-</div>
+> [!div class="nextstepaction"]
+> [Referência de sintaxe de comentário da documentação](xref:microsoft.quantum.guide.filestructure#documentation-comments).
 
 Para usar efetivamente essa funcionalidade para ajudar os usuários, é recomendável manter algumas coisas em mente ao escrever comentários de documentação.
 
