@@ -1,28 +1,33 @@
 ---
-title: Estimador de recursos do kit de desenvolvimento Quantum
-description: 'Saiba mais sobre o estimador de recursos, que estima os recursos necessários para executar uma determinada instância de uma operação Q # em um computador Quantum.'
+title: Estimador de recursos do Quantum – kit de desenvolvimento do Quantum
+description: 'Saiba mais sobre o estimador de recursos do Microsoft QDK, que estima os recursos necessários para executar uma determinada instância de uma operação Q # em um computador Quantum.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
-ms.date: 1/22/2019
+ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: cbb1c274b64738cc4b47869563d7d02eb717afbc
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: 0909a050e89d6295664e54ab63cfda5d407a8f12
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415245"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870526"
 ---
-# <a name="the-resources-estimator-target-machine"></a><span data-ttu-id="f18a3-103">O computador de destino do avaliador de recursos</span><span class="sxs-lookup"><span data-stu-id="f18a3-103">The Resources Estimator Target Machine</span></span>
+# <a name="quantum-development-kit-qdk-resources-estimator"></a><span data-ttu-id="32a9b-103">Estimador de recursos do kit de desenvolvimento Quantum (QDK)</span><span class="sxs-lookup"><span data-stu-id="32a9b-103">Quantum Development Kit (QDK) resources estimator</span></span>
 
-<span data-ttu-id="f18a3-104">Como o nome indica, o `ResourcesEstimator` estima os recursos necessários para executar uma determinada instância de uma operação Q # em um computador Quantum.</span><span class="sxs-lookup"><span data-stu-id="f18a3-104">As the name implies, the `ResourcesEstimator` estimates the resources required to run a given instance of a Q# operation on a quantum computer.</span></span>
-<span data-ttu-id="f18a3-105">Ele realiza isso executando a operação Quantum sem realmente simular o estado de um computador Quantum; por esse motivo, ele pode estimar recursos para operações Q # que usam milhares de qubits, se a parte clássica do código puder ser executada em um tempo razoável.</span><span class="sxs-lookup"><span data-stu-id="f18a3-105">It accomplishes this by executing the quantum operation without actually simulating the state of a quantum computer; for this reason, it can estimate resources for Q# operations that use thousands of qubits, if the classical part of the code can be run in a reasonable time.</span></span>
+<span data-ttu-id="32a9b-104">Como o nome indica, a `ResourcesEstimator` classe estima os recursos necessários para executar uma determinada instância de uma operação Q # em um computador Quantum.</span><span class="sxs-lookup"><span data-stu-id="32a9b-104">As the name implies, the `ResourcesEstimator` class estimates the resources required to run a given instance of a Q# operation on a quantum computer.</span></span> <span data-ttu-id="32a9b-105">Ele realiza isso executando a operação Quantum sem realmente simular o estado de um computador Quantum; por esse motivo, ele estima recursos para operações Q # que usam milhares de qubits, desde que a parte clássica do código seja executada em um tempo razoável.</span><span class="sxs-lookup"><span data-stu-id="32a9b-105">It accomplishes this by executing the quantum operation without actually simulating the state of a quantum computer; for this reason, it estimates resources for Q# operations that use thousands of qubits, provided that the classical part of the code runs in a reasonable time.</span></span>
 
-## <a name="usage"></a><span data-ttu-id="f18a3-106">Uso</span><span class="sxs-lookup"><span data-stu-id="f18a3-106">Usage</span></span>
+<span data-ttu-id="32a9b-106">O estimador de recursos é criado com base no [simulador de rastreamento Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro), que fornece um conjunto mais rico de métricas e ferramentas para ajudar a depurar programas em Q #.</span><span class="sxs-lookup"><span data-stu-id="32a9b-106">The resources estimator is built on top of the [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), which provides a richer set of metrics and tools to help debug Q# programs.</span></span>
 
-<span data-ttu-id="f18a3-107">O `ResourcesEstimator` é apenas outro tipo de computador de destino, portanto, ele pode ser usado para executar qualquer operação Q #.</span><span class="sxs-lookup"><span data-stu-id="f18a3-107">The `ResourcesEstimator` is just another type of target machine, thus it can be used to run any Q# operation.</span></span> 
+## <a name="invoking-and-running-the-resources-estimator"></a><span data-ttu-id="32a9b-107">Invocando e executando o estimador de recursos</span><span class="sxs-lookup"><span data-stu-id="32a9b-107">Invoking and running the resources estimator</span></span>
 
-<span data-ttu-id="f18a3-108">Como outros computadores de destino, para usá-lo em um programa de host C#, crie uma instância e passe-a como o primeiro parâmetro do método da operação `Run` :</span><span class="sxs-lookup"><span data-stu-id="f18a3-108">As other target machines, to use it on a C# host program create an instance and pass it as the first parameter of the operation's `Run` method:</span></span>
+<span data-ttu-id="32a9b-108">Você pode usar o estimador de recursos para executar qualquer operação de Q #.</span><span class="sxs-lookup"><span data-stu-id="32a9b-108">You can use the resources estimator to run any Q# operation.</span></span> <span data-ttu-id="32a9b-109">Para obter detalhes adicionais, consulte [maneiras de executar um programa Q #](xref:microsoft.quantum.guide.host-programs).</span><span class="sxs-lookup"><span data-stu-id="32a9b-109">For additional details, see [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs).</span></span>
+
+### <a name="invoking-the-resources-estimator-from-c"></a><span data-ttu-id="32a9b-110">Invocando o estimador de recursos de C #</span><span class="sxs-lookup"><span data-stu-id="32a9b-110">Invoking the resources estimator from C#</span></span> 
+
+<span data-ttu-id="32a9b-111">Assim como acontece com outros computadores de destino, você primeiro cria uma instância da `ResourceEstimator` classe e, em seguida, passa-a como o primeiro parâmetro do método de uma operação `Run` .</span><span class="sxs-lookup"><span data-stu-id="32a9b-111">As with other target machines, you first create an instance of the `ResourceEstimator` class and then pass it as the first parameter of an operation's `Run` method.</span></span>
+
+<span data-ttu-id="32a9b-112">Observe que, diferentemente da `QuantumSimulator` classe, a `ResourceEstimator` classe não implementa a <xref:System.IDisposable> interface e, portanto, você não precisa colocá-la em uma `using` instrução.</span><span class="sxs-lookup"><span data-stu-id="32a9b-112">Note that, unlike the `QuantumSimulator` class, the `ResourceEstimator` class does not implement the <xref:System.IDisposable> interface, and thus you do not need to enclose it within a `using` statement.</span></span>
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -42,9 +47,9 @@ namespace Quantum.MyProgram
 }
 ```
 
-<span data-ttu-id="f18a3-109">Como mostra o exemplo, o `ResourcesEstimator` fornece um `ToTSV()` método para gerar uma tabela com TSV (valores separados por tabulação) que podem ser salvos em um arquivo ou gravados no console para análise.</span><span class="sxs-lookup"><span data-stu-id="f18a3-109">As the example shows, the `ResourcesEstimator` provides a `ToTSV()` method to generate a table with tab-separated-values (TSV) that can be saved into a file or written to the console for analysis.</span></span> <span data-ttu-id="f18a3-110">A saída do programa acima deve ser semelhante a esta:</span><span class="sxs-lookup"><span data-stu-id="f18a3-110">The output of the above program should look something like this:</span></span>
+<span data-ttu-id="32a9b-113">Como mostra o exemplo, o `ResourcesEstimator` fornece o `ToTSV()` método, que gera uma tabela com valores separados por tabulações (TSV).</span><span class="sxs-lookup"><span data-stu-id="32a9b-113">As the example shows, `ResourcesEstimator` provides the `ToTSV()` method, which generates a table with tab-separated values (TSV).</span></span> <span data-ttu-id="32a9b-114">Você pode salvar a tabela em um arquivo ou exibi-la no console para análise.</span><span class="sxs-lookup"><span data-stu-id="32a9b-114">You can save the table to a file or display it to the console for analysis.</span></span> <span data-ttu-id="32a9b-115">Veja a seguir um exemplo de saída do programa anterior:</span><span class="sxs-lookup"><span data-stu-id="32a9b-115">The following is a sample output from the preceding program:</span></span>
 
-```Output
+```output
 Metric          Sum
 CNOT            1000
 QubitClifford   1000
@@ -57,15 +62,37 @@ BorrowedWidth   0
 ```
 
 > [!NOTE]
-> <span data-ttu-id="f18a3-111">O `ResourcesEstimator` não redefine seus cálculos em cada execução, se a mesma instância for usada para executar outra operação, ele continuará agregando contagens sobre os resultados existentes.</span><span class="sxs-lookup"><span data-stu-id="f18a3-111">The `ResourcesEstimator` does not reset its calculations on every run, if the same instance is used to execute another operation it will keep aggregating counts on top of existing results.</span></span>
-> <span data-ttu-id="f18a3-112">Se você precisar redefinir cálculos entre execuções, crie uma nova instância para cada execução.</span><span class="sxs-lookup"><span data-stu-id="f18a3-112">If you need to reset calculations between runs, create a new instance for every execution.</span></span>
+> <span data-ttu-id="32a9b-116">Uma `ResourcesEstimator` instância do não redefine seus cálculos em todas as execuções.</span><span class="sxs-lookup"><span data-stu-id="32a9b-116">A `ResourcesEstimator` instance does not reset its calculations on every run.</span></span> <span data-ttu-id="32a9b-117">Se você usar a mesma instância para executar outra operação, ela agregará os novos resultados com os resultados existentes.</span><span class="sxs-lookup"><span data-stu-id="32a9b-117">If you use the same instance to run another operation, it aggregates the new results with the existing results.</span></span> <span data-ttu-id="32a9b-118">Se você precisar redefinir cálculos entre execuções, crie uma nova instância para cada execução.</span><span class="sxs-lookup"><span data-stu-id="32a9b-118">If you need to reset calculations between runs, create a new instance for every run.</span></span>
 
+### <a name="invoking-the-resources-estimator-from-python"></a><span data-ttu-id="32a9b-119">Invocando o estimador de recursos do Python</span><span class="sxs-lookup"><span data-stu-id="32a9b-119">Invoking the resources estimator from Python</span></span>
 
-## <a name="programmatically-retrieving-the-estimated-data"></a><span data-ttu-id="f18a3-113">Recuperando programaticamente os dados estimados</span><span class="sxs-lookup"><span data-stu-id="f18a3-113">Programmatically Retrieving the Estimated Data</span></span>
+<span data-ttu-id="32a9b-120">Use o método [estimate_resources ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) da biblioteca do Python com a operação de Q # importada:</span><span class="sxs-lookup"><span data-stu-id="32a9b-120">Use the [estimate_resources()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) method from the Python library with the imported Q# operation:</span></span>
 
-<span data-ttu-id="f18a3-114">Além de uma tabela TSV, os recursos estimados podem ser recuperados programaticamente por meio da `ResourcesEstimator` `Data` Propriedade do.</span><span class="sxs-lookup"><span data-stu-id="f18a3-114">In addition to a TSV table, the resources estimated can be retrieved programmatically via the `ResourcesEstimator`'s `Data` property.</span></span> <span data-ttu-id="f18a3-115">`Data`fornece uma `System.DataTable` instância com duas colunas: `Metric` e `Sum` , indexada pelos nomes de métricas.</span><span class="sxs-lookup"><span data-stu-id="f18a3-115">`Data` provides a `System.DataTable` instance with two columns: `Metric` and `Sum`, indexed by the metrics names.</span></span>
+```python
+qubit_result = myOperation.estimate_resources()
+```
 
-<span data-ttu-id="f18a3-116">O código a seguir mostra como recuperar e imprimir o número total de `QubitClifford` `T` e `CNOT` Gates usados por uma operação Q #:</span><span class="sxs-lookup"><span data-stu-id="f18a3-116">The following code shows how to retrieve and print the total number of `QubitClifford`, `T` and `CNOT` gates used by a Q# operation:</span></span>
+### <a name="invoking-the-resources-estimator-from-the-command-line"></a><span data-ttu-id="32a9b-121">Invocando o estimador de recursos da linha de comando</span><span class="sxs-lookup"><span data-stu-id="32a9b-121">Invoking the resources estimator from the command line</span></span>
+
+<span data-ttu-id="32a9b-122">Ao executar um programa Q # na linha de comando, use o parâmetro **--Simulator** (ou **-s** Shortcut) para especificar o `ResourcesEstimator` computador de destino.</span><span class="sxs-lookup"><span data-stu-id="32a9b-122">When running a Q# program from the command line, use the **--simulator** (or **-s** shortcut) parameter to specify the `ResourcesEstimator` target machine.</span></span> <span data-ttu-id="32a9b-123">O comando a seguir executa um programa usando o estimador de recursos:</span><span class="sxs-lookup"><span data-stu-id="32a9b-123">The following command runs a program using the resources estimator:</span></span> 
+
+```dotnetcli
+dotnet run -s ResourcesEstimator
+```
+
+### <a name="invoking-the-resources-estimator-from-juptyer-notebooks"></a><span data-ttu-id="32a9b-124">Invocando o estimador de recursos de notebooks Juptyer</span><span class="sxs-lookup"><span data-stu-id="32a9b-124">Invoking the resources estimator from Juptyer Notebooks</span></span>
+
+<span data-ttu-id="32a9b-125">Use a [estimativa de%](xref:microsoft.quantum.iqsharp.magic-ref.simulate) de comando mágico de IQ # para executar a operação Q #.</span><span class="sxs-lookup"><span data-stu-id="32a9b-125">Use the IQ# magic command [%estimate](xref:microsoft.quantum.iqsharp.magic-ref.simulate) to run the Q# operation.</span></span>
+
+```
+%estimate myOperation
+```
+
+## <a name="programmatically-retrieving-the-estimated-data"></a><span data-ttu-id="32a9b-126">Recuperando programaticamente os dados estimados</span><span class="sxs-lookup"><span data-stu-id="32a9b-126">Programmatically retrieving the estimated data</span></span>
+
+<span data-ttu-id="32a9b-127">Além de uma tabela TSV, você pode recuperar programaticamente os recursos estimados durante a execução por meio da `Data` Propriedade do estimador de recursos.</span><span class="sxs-lookup"><span data-stu-id="32a9b-127">In addition to a TSV table, you can programmatically retrieve the resources estimated during the run via the `Data` property of the resources estimator.</span></span> <span data-ttu-id="32a9b-128">A `Data` propriedade fornece uma `System.DataTable` instância com duas colunas: `Metric` e `Sum` , indexada pelos nomes de métricas.</span><span class="sxs-lookup"><span data-stu-id="32a9b-128">The `Data` property provides a `System.DataTable` instance with two columns: `Metric` and `Sum`, indexed by the metrics' names.</span></span>
+
+<span data-ttu-id="32a9b-129">O código a seguir mostra como recuperar e imprimir o número total de `QubitClifford` `T` e `CNOT` as operações usadas por uma operação Q #:</span><span class="sxs-lookup"><span data-stu-id="32a9b-129">The following code shows how to retrieve and print the total number of `QubitClifford`, `T` and `CNOT` operations used by a Q# operation:</span></span>
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -89,48 +116,27 @@ namespace Quantum.MyProgram
 }
 ```
 
-## <a name="metrics-reported"></a><span data-ttu-id="f18a3-117">Métricas relatadas</span><span class="sxs-lookup"><span data-stu-id="f18a3-117">Metrics Reported</span></span>
+## <a name="metrics-reported"></a><span data-ttu-id="32a9b-130">Métricas relatadas</span><span class="sxs-lookup"><span data-stu-id="32a9b-130">Metrics Reported</span></span>
 
-<span data-ttu-id="f18a3-118">A seguir está a lista de métricas estimada pelo `ResourcesEstimator` :</span><span class="sxs-lookup"><span data-stu-id="f18a3-118">The following is the list of metrics estimated by the `ResourcesEstimator`:</span></span>
+<span data-ttu-id="32a9b-131">O estimador de recursos acompanha as seguintes métricas:</span><span class="sxs-lookup"><span data-stu-id="32a9b-131">The resources estimator tracks the following metrics:</span></span>
 
-* <span data-ttu-id="f18a3-119">__CNOT__: a contagem de CNOT (também conhecida como a porta controlada de Pauli X) de Gates executada.</span><span class="sxs-lookup"><span data-stu-id="f18a3-119">__CNOT__: The count of CNOT (also known as the Controlled Pauli X gate) gates executed.</span></span>
-* <span data-ttu-id="f18a3-120">__QubitClifford__: a contagem de uma única qubit Clifford e Pauli Gates executadas.</span><span class="sxs-lookup"><span data-stu-id="f18a3-120">__QubitClifford__: The count of any single qubit Clifford and Pauli gates executed.</span></span>
-* <span data-ttu-id="f18a3-121">__Medida__: a contagem de qualquer medida executada.</span><span class="sxs-lookup"><span data-stu-id="f18a3-121">__Measure__:  The count of any measurements executed.</span></span>
-* <span data-ttu-id="f18a3-122">__R__: a contagem de qualquer rotação qubit única executada, excluindo T, Clifford e Pauli Gates.</span><span class="sxs-lookup"><span data-stu-id="f18a3-122">__R__: The count of any single qubit rotations executed, excluding T, Clifford and Pauli gates.</span></span>
-* <span data-ttu-id="f18a3-123">__T__: a contagem de t Gates e seus conjugados, incluindo o Gate t, T_x = h. T. H e T_y = hipótese. T. hipótese, executado.</span><span class="sxs-lookup"><span data-stu-id="f18a3-123">__T__: The count of T gates and their conjugates, including the T gate, T_x = H.T.H, and T_y = Hy.T.Hy, executed.</span></span>
-* <span data-ttu-id="f18a3-124">__Profundidade__: o limite inferior para a profundidade do circuito Quantum executado pela operação Q #.</span><span class="sxs-lookup"><span data-stu-id="f18a3-124">__Depth__: The lower bound for the depth of the quantum circuit executed by the Q# operation.</span></span> <span data-ttu-id="f18a3-125">Por padrão, somente T Gates são contadas na profundidade, consulte o [contador de profundidade](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) para obter detalhes.</span><span class="sxs-lookup"><span data-stu-id="f18a3-125">By default, only T gates are counted in the depth, see [depth counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) for details.</span></span>
-* <span data-ttu-id="f18a3-126">__Largura__: o limite inferior para o número máximo de qubits alocadas durante a execução da operação Q #.</span><span class="sxs-lookup"><span data-stu-id="f18a3-126">__Width__: The lower bound for the maximum number of qubits allocated during the execution of the Q# operation.</span></span> <span data-ttu-id="f18a3-127">Talvez não seja possível obter os limites mais baixos de __profundidade__ e __largura__ simultaneamente.</span><span class="sxs-lookup"><span data-stu-id="f18a3-127">It might not be possible to achieve both __Depth__ and __Width__ lower bounds simultaneously.</span></span>
-* <span data-ttu-id="f18a3-128">__BorrowedWidth__: número máximo de qubits emprestados dentro da operação Q #.</span><span class="sxs-lookup"><span data-stu-id="f18a3-128">__BorrowedWidth__: Maximum number of qubits borrowed inside the Q# operation.</span></span>
+|<span data-ttu-id="32a9b-132">Métrica</span><span class="sxs-lookup"><span data-stu-id="32a9b-132">Metric</span></span>|<span data-ttu-id="32a9b-133">Descrição</span><span class="sxs-lookup"><span data-stu-id="32a9b-133">Description</span></span>|
+|----|----|
+|<span data-ttu-id="32a9b-134">__CNOT__</span><span class="sxs-lookup"><span data-stu-id="32a9b-134">__CNOT__</span></span>    |<span data-ttu-id="32a9b-135">A contagem de operações de execução `CNOT` (também conhecida como operações Pauli X controladas).</span><span class="sxs-lookup"><span data-stu-id="32a9b-135">The run count of `CNOT` operations (also known as Controlled Pauli X operations).</span></span>|
+|<span data-ttu-id="32a9b-136">__QubitClifford__</span><span class="sxs-lookup"><span data-stu-id="32a9b-136">__QubitClifford__</span></span> |<span data-ttu-id="32a9b-137">A contagem de execuções de uma única qubit Clifford e operações de Pauli.</span><span class="sxs-lookup"><span data-stu-id="32a9b-137">The run count of any single qubit Clifford and Pauli operations.</span></span>|
+|<span data-ttu-id="32a9b-138">__Medida__</span><span class="sxs-lookup"><span data-stu-id="32a9b-138">__Measure__</span></span>    |<span data-ttu-id="32a9b-139">A contagem de execuções de qualquer medida.</span><span class="sxs-lookup"><span data-stu-id="32a9b-139">The run count of any measurements.</span></span>  |
+|<span data-ttu-id="32a9b-140">__R__</span><span class="sxs-lookup"><span data-stu-id="32a9b-140">__R__</span></span>    |<span data-ttu-id="32a9b-141">A contagem de execuções de qualquer rotação de qubit única, excluindo `T` , Clifford e Pauli operações.</span><span class="sxs-lookup"><span data-stu-id="32a9b-141">The run count of any single-qubit rotations, excluding `T`, Clifford and Pauli operations.</span></span>  |
+|<span data-ttu-id="32a9b-142">__T__</span><span class="sxs-lookup"><span data-stu-id="32a9b-142">__T__</span></span>    |<span data-ttu-id="32a9b-143">A contagem de execuções de `T` operações e seus conjugados, incluindo as `T` operações, T_x = h. T. H e T_y = hipótese. T. hipótese.</span><span class="sxs-lookup"><span data-stu-id="32a9b-143">The run count of `T` operations and their conjugates, including the `T` operations, T_x = H.T.H, and T_y = Hy.T.Hy.</span></span>  |
+|<span data-ttu-id="32a9b-144">__Depth__</span><span class="sxs-lookup"><span data-stu-id="32a9b-144">__Depth__</span></span>|<span data-ttu-id="32a9b-145">O limite inferior para a profundidade do circuito Quantum executado pela operação Q #.</span><span class="sxs-lookup"><span data-stu-id="32a9b-145">The lower bound for the depth of the quantum circuit run by the Q# operation.</span></span> <span data-ttu-id="32a9b-146">Por padrão, a métrica de profundidade conta apenas `T` Gates.</span><span class="sxs-lookup"><span data-stu-id="32a9b-146">By default, the depth metric only counts `T` gates.</span></span> <span data-ttu-id="32a9b-147">Para obter mais detalhes, consulte o [contador de profundidade](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).</span><span class="sxs-lookup"><span data-stu-id="32a9b-147">For more details, see [Depth Counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).</span></span>   |
+|<span data-ttu-id="32a9b-148">__Largura__</span><span class="sxs-lookup"><span data-stu-id="32a9b-148">__Width__</span></span>    |<span data-ttu-id="32a9b-149">O limite inferior para o número máximo de qubits alocadas durante a execução da operação Q #.</span><span class="sxs-lookup"><span data-stu-id="32a9b-149">The lower bound for the maximum number of qubits allocated during the run of the Q# operation.</span></span> <span data-ttu-id="32a9b-150">Talvez não seja possível obter os limites mais baixos de __profundidade__ e __largura__ simultaneamente.</span><span class="sxs-lookup"><span data-stu-id="32a9b-150">It might not be possible to achieve both __Depth__ and __Width__ lower bounds simultaneously.</span></span>  |
+|<span data-ttu-id="32a9b-151">__BorrowedWidth__</span><span class="sxs-lookup"><span data-stu-id="32a9b-151">__BorrowedWidth__</span></span>    |<span data-ttu-id="32a9b-152">O número máximo de qubits emprestados dentro da operação Q #.</span><span class="sxs-lookup"><span data-stu-id="32a9b-152">The maximum number of qubits borrowed inside the Q# operation.</span></span>  |
 
+## <a name="providing-the-probability-of-measurement-outcomes"></a><span data-ttu-id="32a9b-153">Fornecendo a probabilidade de resultados de medida</span><span class="sxs-lookup"><span data-stu-id="32a9b-153">Providing the probability of measurement outcomes</span></span>
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a><span data-ttu-id="f18a3-129">Como fornecer a probabilidade de resultados de medida</span><span class="sxs-lookup"><span data-stu-id="f18a3-129">Providing the Probability of Measurement Outcomes</span></span>
+<span data-ttu-id="32a9b-154">Você pode usar <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> do <xref:microsoft.quantum.diagnostics> namespace para fornecer informações sobre a probabilidade esperada de uma operação de medição.</span><span class="sxs-lookup"><span data-stu-id="32a9b-154">You can use <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> from the <xref:microsoft.quantum.diagnostics> namespace to provide information about the expected probability of a measurement operation.</span></span> <span data-ttu-id="32a9b-155">Para obter mais informações, consulte o [simulador de rastreamento do Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)</span><span class="sxs-lookup"><span data-stu-id="32a9b-155">For more information, see [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)</span></span>
 
-<span data-ttu-id="f18a3-130"><xref:microsoft.quantum.intrinsic.assertprob>do <xref:microsoft.quantum.intrinsic> namespace pode ser usado para fornecer informações sobre a probabilidade esperada de uma medida para ajudar a conduzir a execução do programa Q #.</span><span class="sxs-lookup"><span data-stu-id="f18a3-130"><xref:microsoft.quantum.intrinsic.assertprob> from the <xref:microsoft.quantum.intrinsic> namespace can be used to provide information about the expected probability of a measurement to help drive the execution of the Q# program.</span></span> <span data-ttu-id="f18a3-131">O exemplo a seguir ilustra isso:</span><span class="sxs-lookup"><span data-stu-id="f18a3-131">The following example illustrates this:</span></span>
+## <a name="see-also"></a><span data-ttu-id="32a9b-156">Veja também</span><span class="sxs-lookup"><span data-stu-id="32a9b-156">See also</span></span>
 
-```qsharp
-operation Teleport(source : Qubit, target : Qubit) : Unit {
-
-    using (qubit = Qubit()) {
-
-        H(q);
-        CNOT(qubit, target);
-
-        CNOT(source, qubit);
-        H(source);
-
-        AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [qubit], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-
-        if (M(source) == One)  { Z(target); X(source); }
-        if (M(qubit) == One) { X(target); X(qubit); }
-    }
-}
-```
-
-<span data-ttu-id="f18a3-132">Quando o `ResourcesEstimator` encontrar `AssertProb` , ele registrará essa `PauliZ` medição `source` e `q` deverá receber um resultado de `Zero` com a probabilidade 0,5.</span><span class="sxs-lookup"><span data-stu-id="f18a3-132">When the `ResourcesEstimator` encounters `AssertProb` it will record that measuring `PauliZ` on `source` and `q` should be given an outcome of `Zero` with probability 0.5.</span></span> <span data-ttu-id="f18a3-133">Quando ele for executado `M` posteriormente, ele encontrará os valores gravados das probabilidades de resultado e `M` retornará `Zero` ou `One` com a probabilidade 0,5.</span><span class="sxs-lookup"><span data-stu-id="f18a3-133">When it executes `M` later, it will find the recorded values of the outcome probabilities and `M` will return `Zero` or `One` with probability 0.5.</span></span>
-
-
-## <a name="see-also"></a><span data-ttu-id="f18a3-134">Veja também</span><span class="sxs-lookup"><span data-stu-id="f18a3-134">See also</span></span>
-
-<span data-ttu-id="f18a3-135">O `ResourcesEstimator` é criado com base no [simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro)de computador Quantum, que fornece um conjunto mais rico de métricas, a capacidade de relatar métricas no grafo de Call completo e recursos como o [corretor de entradas distintos](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) para ajudar a encontrar bugs em programas de Q #.</span><span class="sxs-lookup"><span data-stu-id="f18a3-135">The `ResourcesEstimator` is built on top of the quantum computer [trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro), which provides a richer set of metrics, the ability to report metrics on the full call-graph, and features like [distinct inputs checker](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) to help find bugs on Q# programs.</span></span> <span data-ttu-id="f18a3-136">Consulte a documentação do [simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="f18a3-136">Please refer to the [trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) documentation for more information.</span></span>
-
+- [<span data-ttu-id="32a9b-157">Simulador de rastreamento Quantum</span><span class="sxs-lookup"><span data-stu-id="32a9b-157">Quantum trace simulator</span></span>](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
+- [<span data-ttu-id="32a9b-158">Simulador de Toffoli Quantum</span><span class="sxs-lookup"><span data-stu-id="32a9b-158">Quantum Toffoli simulator</span></span>](xref:microsoft.quantum.machines.toffoli-simulator)
+- [<span data-ttu-id="32a9b-159">Simulador de estado completo Quantum</span><span class="sxs-lookup"><span data-stu-id="32a9b-159">Quantum full state simulator</span></span>](xref:microsoft.quantum.machines.full-state-simulator) 
