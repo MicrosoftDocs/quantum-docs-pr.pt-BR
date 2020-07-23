@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
-ms.openlocfilehash: efd1a712616534ac281433fc008f0983271881d7
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9552f3683e1df8cb10d19d0b3f85223df056f83d
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273219"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871341"
 ---
 # <a name="introduction-to-the-quantum-numerics-library"></a>Introdução à Biblioteca de Numéricos do Quantum
 
@@ -33,9 +33,10 @@ Considerando que muitas etapas são necessárias para se chegar a uma implementa
 
 Além da aritmética de inteiros mencionada até agora, a biblioteca de numéricos fornece
 
- - Funcionalidade de inteiro com (sem) sinal (multiplicação, quadrado, divisão com resto, inversão...) com um ou dois números inteiros quantum como entrada
- - Funcionalidade de ponto fixo (adição/subtração, multiplicação, quadrado, 1/x, avaliação polinomial) com um ou dois números de ponto fixo quantum como entrada
+- Funcionalidade de inteiro com (sem) sinal (multiplicação, quadrado, divisão com resto, inversão...) com um ou dois números inteiros quantum como entrada
+- Funcionalidade de ponto fixo (adição/subtração, multiplicação, quadrado, 1/x, avaliação polinomial) com um ou dois números de ponto fixo quantum como entrada
 
 ## <a name="getting-started"></a>Introdução
 
-Para começar a usar a biblioteca numérica, confira o [guia de instalação](xref:microsoft.quantum.numerics.installation) e mais informações sobre [como usar a biblioteca numérica](xref:microsoft.quantum.numerics.usage).
+> [!div class="nextstepaction"]
+> [Saiba como usar a biblioteca de numéricos](xref:microsoft.quantum.numerics.usage)
