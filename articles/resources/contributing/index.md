@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: c5acd6c2b3163488a9b4c6e52e6d34489a8f4056
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871409"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436566"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Como contribuir com o Quantum development kit
 
@@ -19,7 +19,7 @@ O Quantum development kit é mais do que uma coleção de ferramentas para a com
 Faz parte de uma ampla comunidade de pessoas que estão descobrindo a computação quântica, realizando pesquisas em algoritmos quânticos, desenvolvendo novas aplicações para dispositivos quânticos e que, de outro modo, estão trabalhando para aproveitar ao máximo a programação quântica.
 Como membro dessa comunidade, o Quantum development kit visa oferecer aos desenvolvedores quânticos uma ampla gama de contextos com os recursos necessários.
 Suas contribuições para o Quantum development kit ajudam a concretizar essa meta, aprimorando as ferramentas usadas por outros desenvolvedores quânticos, a forma como essas ferramentas são documentadas e, até mesmo, criando recursos e funcionalidades que ajudam a fazer toda a comunidade de programação quântica um lugar melhor para descobertas e criações.
-Somos muito gratos por suas generosas contribuições e pela oportunidade de trabalhar com você, visando tornar nossa comunidade a melhor possível.
+Somos muito gratos por suas generosas contribuições e pela oportunidade de trabalhar com você, visando tornar nossa comunidade a melhor possível. 
 
 Neste guia, fornecemos algumas orientações sobre como tornar sua contribuição a mais útil possível para a comunidade mais ampla de programação quântica.
 

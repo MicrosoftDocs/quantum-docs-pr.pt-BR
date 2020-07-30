@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274290"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436530"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterização e estatísticas do Quantum #
 
@@ -96,7 +96,7 @@ A inferência exata de bayesiana é uma prática inmanejável.
 Para ver essa imagine, desejamos aprender uma variável de $n de $ bits $x $.
 A distribuição anterior $ \Pr (x) $ tem suporte acima de US $2 ^ n $ valores hipotéticos de $x $.
 Isso significa que, se precisar de uma estimativa altamente precisa de $x $, a estimativa de fase Bayesiana poderá precisar de memória proibitiva e tempo de processamento.
-Embora, para alguns aplicativos, como a simulação do Quantum, a precisão Limitted necessária não impede que outros métodos de outros aplicativos, como o algoritmo do Atal, não possam usar a inferência exata de Bayesiana em sua etapa de estimativa de fase.  Por esse motivo, também fornecemos implementações para métodos Bayesiana aproximados, como [estimativa aleatória de fase de passeio (RWPE)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) e também abordagens não Bayesiana, como [estimativa de fase robusta](xref:microsoft.quantum.characterization.robustphaseestimation).
+Embora, para alguns aplicativos, como a simulação do Quantum, a precisão Limitted necessária não impede que outros métodos de outros aplicativos, como o algoritmo do Atal, não possam usar a inferência exata de Bayesiana em sua etapa de estimativa de fase.  Por esse motivo, também fornecemos implementações para métodos Bayesiana aproximados, como [estimativa aleatória de fase de passeio (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) e também abordagens não Bayesiana, como [estimativa de fase robusta](xref:microsoft.quantum.characterization.robustphaseestimation).
 
 ### <a name="robust-phase-estimation"></a>Estimativa de fase robusta ###
 
