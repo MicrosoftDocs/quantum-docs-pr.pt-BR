@@ -6,18 +6,21 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: 1655d18ab9d8638ad356e6fb90994b5c1fd76a25
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885308"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867855"
 ---
 # <a name="working-with-qubits"></a>Trabalhar com qubits
 
 Qubits são o objeto fundamental das informações na computação Quantum. Para obter uma introdução geral ao qubits, consulte [noções básicas sobre computação Quantum](xref:microsoft.quantum.overview.understanding)e aprofundar-se em sua representação matemática, consulte [o qubit](xref:microsoft.quantum.concepts.qubit). 
 
-Este artigo explora como usar e trabalhar com o qubits em um programa Q #. 
+Este artigo explora como usar e trabalhar com o qubits em um Q# programa. 
 
 > [!IMPORTANT]
 >Nenhuma das instruções discutidas neste artigo são válidas dentro do corpo de uma função. Eles só são válidos dentro de operações.
@@ -25,7 +28,7 @@ Este artigo explora como usar e trabalhar com o qubits em um programa Q #.
 ## <a name="allocating-qubits"></a>Alocando qubits
 
 Como os qubits físicos são um recurso precioso em um computador Quantum, parte do trabalho do compilador é garantir que eles estejam sendo usados com a maior eficiência possível.
-Como tal, você precisa informar Q # para *alocar* qubits para uso em um bloco de instrução específico.
+Como tal, você precisa dizer Q# para *alocar* qubits para uso em um bloco de instrução específico.
 Você pode alocar qubits como um único qubit ou como uma matriz de qubits, conhecida como um *registro*. 
 
 ### <a name="clean-qubits"></a>Limpar qubits
@@ -36,7 +39,7 @@ A instrução consiste na palavra-chave `using` , seguida por uma associação e
 A associação segue o mesmo padrão que as `let` instruções: um único símbolo ou uma tupla de símbolos, seguido por um sinal de igual `=` , e um único valor ou uma tupla correspondente de *inicializadores*.
 
 Inicializadores estão disponíveis para um único qubit, indicado como `Qubit()` , ou uma matriz de qubits, `Qubit[n]` , em que `n` é uma `Int` expressão.
-Por exemplo,
+Por exemplo:
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -65,7 +68,7 @@ Esses qubits geralmente não estão em um estado limpo, ou seja, eles não são 
 Essas são muitas vezes chamadas de qubits "sujas" porque seu estado é desconhecido e pode até mesmo ser confusas com outras partes da memória do computador Quantum.
 
 A associação segue o mesmo padrão e regras que a `using` instrução.
-Por exemplo,
+Por exemplo:
 ```qsharp
 borrowing (qubit = Qubit()) {
     // ...
@@ -82,17 +85,17 @@ Ao emprestar qubits, o sistema primeiro tenta preencher a solicitação de qubit
 Se não houver tal qubits suficiente, ele alocará novas qubits para concluir a solicitação.
 
 Entre os casos de uso conhecidos de qubits sujos estão implementações de Gates de CNOT de vários controle que exigem apenas poucos qubits e implementação de incrementais.
-Para obter um exemplo de uso em Q #, confira o exemplo emissor [qubits](#borrowing-qubits-example) neste artigo ou a [*fatoração de papel usando 2n + 2 qubits com multiplicação modular baseada em Toffoli*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler e Svore 2017) para um algoritmo que utiliza a qubits emprestada.
+Para obter um exemplo de uso no Q# , consulte [emprestando qubits exemplo](#borrowing-qubits-example) neste artigo ou a [*fatoração de papel usando 2n + 2 qubits com multiplicação modular baseada em Toffoli*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler e Svore 2017) para um algoritmo que utiliza qubits emprestados.
 
 ## <a name="intrinsic-operations"></a>Operações intrínsecas
 
 Uma vez alocado, você pode passar um qubit para funções e operações.
-De certa forma, isso é tudo o que um programa Q # pode fazer com um qubit, pois as ações que podem ser executadas são todas definidas como operações.
+De certa forma, isso é tudo o que um Q# programa pode fazer com um qubit, pois as ações que podem ser executadas são todas definidas como operações.
 
-Este artigo discute algumas operações de Q # úteis que você pode usar para interagir com o qubits.
+Este artigo discute algumas Q# operações úteis que você pode usar para interagir com o qubits.
 Para obter mais detalhes sobre esses e outros, consulte [operações e funções intrínsecas](xref:microsoft.quantum.libraries.standard.prelude). 
 
-Primeiro, os operadores de Pauli de qubit único $X $, $Y $ e $Z $ são representados em Q # pelas operações intrínsecas [`X`](xref:microsoft.quantum.intrinsic.x) , [`Y`](xref:microsoft.quantum.intrinsic.y) e [`Z`](xref:microsoft.quantum.intrinsic.z) cada um deles tem um tipo `(Qubit => Unit is Adj + Ctl)` .
+Primeiro, os operadores de Pauli de qubit único $X $, $Y $ e $Z $ são representados Q# pelas operações intrínsecas [`X`](xref:microsoft.quantum.intrinsic.x) , [`Y`](xref:microsoft.quantum.intrinsic.y) e [`Z`](xref:microsoft.quantum.intrinsic.z) , cada um deles tem um tipo `(Qubit => Unit is Adj + Ctl)` .
 
 Conforme descrito em [operações e funções intrínsecas](xref:microsoft.quantum.libraries.standard.prelude), considere o $X $ e, portanto, `X` como uma operação de inversão de bits ou não de porta.
 Você pode usar a `X` operação para preparar Estados do formulário $ \ket{s_0 s_1 \dots s_n} $ para uma cadeia de caracteres de bits clássica $s $:
@@ -124,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > Posteriormente, você verá mais formas compactadas de gravar essa operação que não exigem o fluxo de controle manual.
 
-Você também pode preparar Estados como $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ e $ \ket {-} = \left (\ket {0} -\ket {1} \right)/\sqrt {2} $ usando o Hadamard Transform $H $, que é representado em Q # pela operação intrínseca [`H`](xref:microsoft.quantum.intrinsic.h) (também do tipo (qubit = unidade de> é adj + CTL) "):
+Você também pode preparar Estados como $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ e $ \ket {-} = \left (\ket {0} -\ket {1} \right)/\sqrt {2} $ usando o Hadamard Transform $H $, que é representado Q# pela operação intrínseca [`H`](xref:microsoft.quantum.intrinsic.h) (também do tipo (qubit = unidade de> é adj + CTL) '):
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -242,4 +245,4 @@ O motivo disso é que, devido à estrutura do circuito, é fácil adicionar mais
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Saiba mais sobre o [fluxo de controle](xref:microsoft.quantum.guide.controlflow) em Q #.
+Saiba mais sobre o [fluxo de controle](xref:microsoft.quantum.guide.controlflow) no Q# .

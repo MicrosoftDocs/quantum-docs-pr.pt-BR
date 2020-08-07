@@ -6,16 +6,19 @@ uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 19674620475e68b41c855023807a5fd1f7945ec9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 283504a5f5635a4996c804e514a6f52eb4966d22
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274271"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868433"
 ---
 # <a name="the-prelude"></a>O prelúdio #
 
-O compilador Q # e os computadores de destino incluídos com o kit de desenvolvimento Quantum fornecem um conjunto de funções intrínsecas e operações que podem ser usadas na gravação de programas Quantum em Q #.
+O Q# compilador e os computadores de destino incluídos no kit de desenvolvimento Quantum fornecem um conjunto de funções intrínsecas e operações que podem ser usadas durante a gravação de programas Quantum no Q# .
 
 ## <a name="intrinsic-operations-and-functions"></a>Operações intrínsecas e funções ##
 
@@ -27,11 +30,11 @@ As operações intrínsecas definidas na biblioteca padrão basicamente se enqua
 - Operações de implementação de medidas.
 
 Como o conjunto de portão Clifford + $T $ é [Universal](xref:microsoft.quantum.concepts.multiple-qubits) para a computação Quantum, essas operações são suficientes para aproximadamente implementar qualquer algoritmo Quantum dentro de um erro pequeno negligibly.
-Ao fornecer rotações também, o Q # permite que o programador trabalhe dentro da única biblioteca de portão qubit unitário e CNOT. Essa biblioteca é muito mais fácil de pensar porque não exige que o programador expresse diretamente a descomposição Clifford + $T $ e porque existem métodos altamente eficientes para a compilação de unidades de qubit individuais em Clifford e $T $ Gates (consulte [aqui](xref:microsoft.quantum.more-information) para obter mais informações).
+Ao fornecer rotações também, Q# permite que o programador trabalhe dentro da única biblioteca de portão qubit unitário e CNOT. Essa biblioteca é muito mais fácil de pensar porque não exige que o programador expresse diretamente a descomposição Clifford + $T $ e porque existem métodos altamente eficientes para a compilação de unidades de qubit individuais em Clifford e $T $ Gates (consulte [aqui](xref:microsoft.quantum.more-information) para obter mais informações).
 
 Sempre que possível, as operações definidas no prelúdio que atuam no qubits permitem a aplicação da `Controlled` variante, de modo que o computador de destino execute a decomposição apropriada.
 
-Muitas das funções e operações definidas nesta parte do prelúdio estão no @"microsoft.quantum.intrinsic" namespace, de modo que a maioria dos arquivos de origem de Q # terá uma `open Microsoft.Quantum.Intrinsic;` diretiva imediatamente após a declaração de namespace inicial.
+Muitas das funções e operações definidas nesta parte do prelúdio estão no @"microsoft.quantum.intrinsic" namespace, de modo que a maioria dos Q# arquivos de origem terá uma `open Microsoft.Quantum.Intrinsic;` diretiva imediatamente após a declaração de namespace inicial.
 O <xref:microsoft.quantum.core> namespace é aberto automaticamente, para que funções como o <xref:microsoft.quantum.core.length> possam ser usadas sem uma `open` instrução.
 
 ### <a name="common-single-qubit-unitary-operations"></a>Operações de um único qubit unitário comuns ###
@@ -96,9 +99,9 @@ Ele tem assinatura `(Qubit => Unit is Adj + Ctl)` e corresponde ao único qubit 
 \begin{Equation} \begin{bmatrix} 1 & 0 \\ \\ % FIXME: isso atualmente usa o quadwhack hack.
 0 & i \end{bmatrix} \end{Equation}
 
-#### <a name="rotations"></a>Rotações ####
+#### <a name="rotations"></a>Escalas ####
 
-Além das operações Pauli e Clifford acima, a p # prelúdio fornece uma variedade de formas de expressar rotações.
+Além das operações Pauli e Clifford acima, o Q# prelúdio fornece uma variedade de formas de expressar rotações.
 Conforme descrito em [operações de qubit único](xref:microsoft.quantum.concepts.qubit#single-qubit-operations), a capacidade de girar é essencial para algoritmos Quantum.
 
 Começamos recuperando que podemos expressar qualquer operação de qubit único usando o $H $ e $T $ Gates, em que $H $ é a operação Hadamard e em que \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ % FIXME: atualmente, isso usa os de quatro de hack-back.
@@ -229,7 +232,7 @@ return rs;
 
 ## <a name="extension-functions-and-operations"></a>Funções e operações de extensão ##
 
-Além disso, o prelúdio define um conjunto avançado de funções matemáticas e de conversão de tipo no nível do .NET para uso no código de Q #.
+Além disso, o prelúdio define um conjunto avançado de funções matemáticas e de conversão de tipo no nível do .NET para uso no Q# código.
 Por exemplo, o <xref:microsoft.quantum.math> namespace define operações úteis, como <xref:microsoft.quantum.math.sin> e <xref:microsoft.quantum.math.log> .
 A implementação fornecida pelo kit de desenvolvimento Quantum usa a base class library clássica do .NET e, portanto, pode envolver uma viagem de ida e volta de comunicação adicional entre os programas Quantum e seus drivers clássicos.
 Embora isso não apresente um problema para um simulador local, isso pode ser um problema de desempenho ao usar um simulador remoto ou hardware real como um computador de destino.
@@ -238,7 +241,7 @@ Dito isso, um computador de destino individual pode mitigar esse impacto no dese
 ### <a name="math"></a>Matemática ###
 
 O <xref:microsoft.quantum.math> namespace fornece muitas funções úteis da [ `System.Math` classe](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)da biblioteca de classes base do .net.
-Essas funções podem ser usadas da mesma maneira que qualquer outra função Q #:
+Essas funções podem ser usadas da mesma maneira que qualquer outra Q# função:
 
 ```qsharp
 open Microsoft.Quantum.Math;
@@ -246,7 +249,7 @@ open Microsoft.Quantum.Math;
 let y = Sin(theta);
 ```
 
-Onde um método estático do .NET foi sobrecarregado com base no tipo de seus argumentos, a função Q # correspondente é anotada com um sufixo que indica o tipo de sua entrada:
+Onde um método estático do .NET foi sobrecarregado com base no tipo de seus argumentos, a Q# função correspondente é anotada com um sufixo que indica o tipo de sua entrada:
 
 ```qsharp
 let x = AbsI(-3); // x : Int = 3

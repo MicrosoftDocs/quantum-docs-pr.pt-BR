@@ -1,21 +1,24 @@
 ---
-title: 'Estrutura de arquivos de Q #'
-description: 'Descreve a estrutura e a sintaxe de um arquivo Q #.'
+title: Q#Estrutura de arquivos
+description: Descreve a estrutura e a sintaxe de um Q# arquivo.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
-ms.openlocfilehash: 54efc2b9d6b7f1956cdf9a335c88620b29f7729d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884181"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867923"
 ---
-# <a name="q-file-structure"></a>Estrutura de arquivos de Q #
+# <a name="no-locq-file-structure"></a>Q#Estrutura de arquivos
 
-Um arquivo Q # consiste em uma sequência de *declarações de namespace*.
+Um Q# arquivo consiste em uma sequência de *declarações de namespace*.
 Cada declaração de namespace contém declarações para tipos, operações e funções definidas pelo usuário, e pode conter qualquer número de cada tipo de declaração e em qualquer ordem.
 Para obter mais informações sobre declarações em um namespace, consulte tipos, [operações](xref:microsoft.quantum.guide.operationsfunctions#defining-new-operations)e [funções](xref:microsoft.quantum.guide.operationsfunctions#defining-new-functions) [definidas pelo usuário](xref:microsoft.quantum.guide.types#user-defined-types).
 
@@ -24,10 +27,10 @@ Em particular, comentários de documentação para um namespace precedem a decla
 
 ## <a name="namespace-declarations"></a>Declarações de namespace
 
-Um arquivo Q # normalmente tem apenas uma declaração de namespace, mas pode ter nenhum (e estar vazio ou apenas conter comentários) ou pode conter vários namespaces.
+Um Q# arquivo normalmente tem apenas uma declaração de namespace, mas pode ter nenhum (e estar vazio ou apenas conter comentários) ou pode conter vários namespaces.
 Declarações de namespace não podem ser aninhadas.
 
-Você pode declarar o mesmo namespace em vários arquivos Q # que são compilados juntos, desde que não haja nenhuma declaração de tipo, operação ou função com o mesmo nome.
+Você pode declarar o mesmo namespace em vários Q# arquivos que são compilados juntos, desde que não haja nenhuma declaração de tipo, operação ou função com o mesmo nome.
 Em particular, é inválido definir o mesmo tipo no mesmo namespace em vários arquivos, mesmo que as declarações sejam idênticas.
 
 Uma declaração de namespace consiste na palavra-chave `namespace` , seguida pelo nome do namespace e as declarações contidas no namespace entre chaves `{ }` .
@@ -61,7 +64,7 @@ se uma operação declarada usar uma operação `Op` do `Microsoft.Quantum.Intri
 No entanto, para chamar uma determinada função `Fn` do `Microsoft.Quantum.Math` , você deve chamá-la usando `Math.Fn` .
 
 A `open` diretiva se aplica a todo o bloco de namespace dentro de um arquivo.
-Portanto, se você definir um namespace adicional no mesmo arquivo Q # como `NS` anterior, quaisquer operações/funções/tipos definidos no segundo namespace não teriam acesso a nada de `Microsoft.Quantum.Intrinsic` ou `Microsoft.Quantum.Math` a menos que você tenha repetido as diretivas abertas. 
+Portanto, se você definir um namespace adicional no mesmo Q# arquivo `NS` anterior, quaisquer operações/funções/tipos definidos no segundo namespace não teriam acesso a nada de `Microsoft.Quantum.Intrinsic` ou `Microsoft.Quantum.Math` a menos que você tenha repetido as diretivas abertas. 
 
 Para fazer referência a um tipo ou callable definido em outro namespace que *não* está aberto no namespace atual, você deve fazer referência a ele pelo nome totalmente qualificado.
 Por exemplo, dada uma operação chamada `Op` do `X.Y` namespace:
@@ -73,13 +76,13 @@ Por exemplo, dada uma operação chamada `Op` do `X.Y` namespace:
 Geralmente, é melhor incluir um namespace usando uma `open` diretiva.
 Usar um nome totalmente qualificado é necessário se dois namespaces definem construções com o mesmo nome e a fonte atual usa construções de ambos.
 
-O Q # segue as mesmas regras para nomear como outras linguagens .NET.
-No entanto, Q # não oferece suporte a referências relativas a namespaces.
+Q#segue as mesmas regras para nomear como outras linguagens .NET.
+No entanto, Q# o não oferece suporte a referências relativas a namespaces.
 Por exemplo, se o namespace `a.b` estiver aberto, uma referência a uma operação chamada `c.d` não *será* resolvida para uma operação com o nome completo `a.b.c.d` .
 
 ## <a name="formatting"></a>Formatação
 
-A maioria das instruções Q # e diretivas terminam com um ponto e vírgula de terminação, `;` .
+A maioria das Q# instruções e diretivas terminam com um ponto e vírgula de terminação, `;` .
 Instruções e declarações como `for` e `operation` que terminam com um bloco de instruções (consulte a seção a seguir) não exigem um ponto e vírgula de terminação.
 Cada descrição de instrução observa se o ponto e vírgula de terminação é necessário.
 
@@ -88,14 +91,14 @@ Evite colocar várias instruções em uma única linha.
 
 ## <a name="statement-blocks"></a>Blocos de instrução
 
-As instruções Q # são agrupadas em blocos de instrução, que estão contidos com chaves `{ }` . Um bloco de instruções começa com uma abertura `{` e termina com um fechamento `}` .
+Q#as instruções são agrupadas em blocos de instrução, que estão contidos com chaves `{ }` . Um bloco de instruções começa com uma abertura `{` e termina com um fechamento `}` .
 
 Um bloco de instrução que está delimitado de forma lexical dentro de outro bloco é considerado um subbloco do bloco de contenção; os blocos e os subcontêineres também são chamados de bloco externo e interno.
 
 ## <a name="comments"></a>Comentários
 
 Os comentários começam com duas barras, `//` e continuam até o final da linha.
-Um comentário pode aparecer em qualquer lugar em um arquivo de origem Q #.
+Um comentário pode aparecer em qualquer lugar em um Q# arquivo de origem.
 
 ## <a name="documentation-comments"></a>Comentários de documentação
 
@@ -103,7 +106,7 @@ Os comentários que começam com três barras "/", `///` são tratados especialm
 Nesse caso, o compilador os trata como documentação para o tipo definido pelo usuário ou callable, o mesmo que outras linguagens .NET.
 
 Em `///` comentários, o texto a ser exibido como parte da documentação da API é formatado como [redução](https://daringfireball.net/projects/markdown/syntax), com diferentes partes da documentação indicada por cabeçalhos nomeados especialmente.
-Em redução, use a `@"<ref target>"` extensão para operações de referência cruzada, funções e tipos definidos pelo usuário em Q #. Substituir `<ref target>` pelo nome totalmente qualificado do objeto de código referenciado.
+Em redução, use a `@"<ref target>"` extensão para operações de referência cruzada, funções e tipos definidos pelo usuário no Q# . Substituir `<ref target>` pelo nome totalmente qualificado do objeto de código referenciado.
 Mecanismos de documentação diferentes também podem oferecer suporte a extensões de redução adicionais.
 
 Por exemplo:
@@ -153,4 +156,4 @@ Os nomes a seguir são válidos como cabeçalhos de comentário da documentaçã
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Saiba mais sobre [as operações e funções](xref:microsoft.quantum.guide.operationsfunctions) em Q #.
+Saiba mais sobre [as operações e funções](xref:microsoft.quantum.guide.operationsfunctions) no Q# .

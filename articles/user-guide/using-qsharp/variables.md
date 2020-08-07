@@ -1,28 +1,31 @@
 ---
-title: 'Variáveis em Q #'
+title: Variáveis emQ#
 description: Descrição do preenchimento
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 08301f408dcb2211ba25c582a5e5aa43310b714a
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885280"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867838"
 ---
-# <a name="variables-in-q"></a>Variáveis em Q #
+# <a name="variables-in-no-locq"></a>Variáveis emQ#
 
-O Q # distingue entre símbolos mutáveis e imutáveis, ou *variáveis*, que são associados/atribuídos a expressões.
+Q#distingue entre símbolos mutáveis e imutáveis, ou *variáveis*, que são associados/atribuídos a expressões.
 Em geral, o uso de símbolos imutáveis é incentivado porque permite que o compilador execute mais otimizações.
 
 O lado esquerdo de uma associação consiste em uma tupla de símbolos e no lado direito de uma expressão.
 
 ## <a name="immutable-variables"></a>Variáveis imutáveis
 
-Você pode atribuir um valor de qualquer tipo em Q # a uma variável para reutilização em uma operação ou função usando a `let` palavra-chave. 
+Você pode atribuir um valor de qualquer tipo em Q# uma variável para reutilização em uma operação ou função usando a `let` palavra-chave. 
 
 Uma associação imutável consiste na palavra-chave `let` , seguida por uma tupla de símbolo ou símbolo, um sinal de igual `=` , uma expressão para associar os símbolos a e um ponto e vírgula de terminação.
 
@@ -55,7 +58,7 @@ Veja a seguir alguns exemplos de técnicas de instrução de reassociação.
 
 #### <a name="apply-and-reassign-statements"></a>Instruções de aplicar e reatribuir
 
-Um determinado tipo de `set` instrução, a instrução *Apply-e-REASSIGN* , fornece uma maneira conveniente de concatenação se o lado direito consistir no aplicativo de um operador binário e o resultado for ser reassociado ao argumento esquerdo para o operador. Por exemplo,
+Um determinado tipo de `set` instrução, a instrução *Apply-e-REASSIGN* , fornece uma maneira conveniente de concatenação se o lado direito consistir no aplicativo de um operador binário e o resultado for ser reassociado ao argumento esquerdo para o operador. Por exemplo:
 
 ```qsharp
 mutable counter = 0;
@@ -107,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-No caso de matrizes, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) na biblioteca padrão do Q # fornece as ferramentas necessárias para muitas necessidades comuns de inicialização e manipulação de matriz e, portanto, ajuda a evitar a necessidade de atualizar itens de matriz em primeiro lugar. 
+No caso de matrizes, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) na Q# biblioteca Standard fornece as ferramentas necessárias para muitas necessidades comuns de inicialização e manipulação de matriz e, portanto, ajuda a evitar a necessidade de atualizar itens de matriz em primeiro lugar. 
 
 As instruções UPDATE-and-REASSIGN fornecem uma alternativa, se necessário:
 
@@ -236,4 +239,4 @@ if (a == b) {
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Saiba mais sobre como [trabalhar com qubits](xref:microsoft.quantum.guide.qubits) em Q #.
+Saiba mais sobre como [trabalhar com o qubits](xref:microsoft.quantum.guide.qubits) no Q# .

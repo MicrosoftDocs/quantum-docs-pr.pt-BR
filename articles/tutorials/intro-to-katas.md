@@ -6,16 +6,19 @@ ms.author: bradben
 ms.date: 06/02/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: 1c4dfa5c47aa38935cd5936cd256e357b6605371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b2a3b25bf90109468f02c98c6c687befb83648bc
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274341"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869674"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Conheça a computação quântica com o Quantum Katas
 
-[Os katas Quantum são os](https://github.com/Microsoft/QuantumKatas/) tutoriais individualizados de software livre e os exercícios de programação destinados a ensinar os elementos de computação Quantum e a programação Q # ao mesmo tempo.
+[Os katas Quantum são os](https://github.com/Microsoft/QuantumKatas/) tutoriais individualizados de software livre e os exercícios de programação destinados a ensinar os elementos de computação e Q# programação Quantum ao mesmo tempo.
 
 ## <a name="learning-by-doing"></a>Aprender fazendo
 
@@ -42,15 +45,15 @@ Explore os conceitos básicos e os conceitos básicos da computação Quantum ou
 |[Álgebra linear](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)|A Algebra linear é usada para representar os Estados de Quantum e as operações na computação Quantum. Este tutorial aborda as noções básicas, incluindo matrizes e vetores.|
 |[O conceito de um qubit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)|Saiba mais sobre o qubits-um dos principais conceitos da computação Quantum. |
 |[Portões quânticos de qubit único](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)|Este tutorial apresenta Gates de Quantum de qubit único, que atuam como os blocos de construção de algoritmos de Quantum e que transformam Estados de qubit Quantum de várias maneiras.|
-|[Sistemas com vários qubits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|Este tutorial apresenta sistemas qubit, sua representação em notação matemática e em código Q # e o conceito de Entanglement.|
+|[Sistemas com vários qubits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|Este tutorial apresenta sistemas qubit, sua representação em notação matemática e em Q# código e o conceito de Entanglement.|
 |[Gates de Quantum qubit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)|Este tutorial segue o tutorial de [Gates de Quantum de qubit único](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates) e se concentra em aplicar Gates de Quantum a sistemas qubit.|
 
 ### <a name="quantum-computing-fundamentals"></a>Conceitos sobre computação quântica
 
 | Kata | Descrição |
 |:-----|-------------|
-|[Reconhecer portões quânticos](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|Uma série de exercícios projetados para familiarizar-se com os Gates básicos da Quantum em Q #. Inclui exercícios para Gates básico de qubit único e qubit, Gates e entradas controladas e como usar Gates para modificar o estado de um qubit.|
-|[Criar uma sobreposição quântica](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Use esses exercícios para se familiarizar com o conceito de superposição e programação em Q #. Inclui exercícios para qubit básico e qubit, superposição e controle de fluxo e recursão em Q #.|
+|[Reconhecer portões quânticos](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|Uma série de exercícios projetados para familiarizar-se com as Gates básicas da Quantum no Q# . Inclui exercícios para Gates básico de qubit único e qubit, Gates e entradas controladas e como usar Gates para modificar o estado de um qubit.|
+|[Criar uma sobreposição quântica](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Use esses exercícios para se familiarizar com o conceito de superposição e programação no Q# . Inclui exercícios para os Gates básico de qubit e qubit, superposição e controle de fluxo e recursão no Q# .|
 |[Diferenciar estados quânticos usando medidas](https://github.com/microsoft/QuantumKatas/tree/master/Measurements)|Resolva esses exercícios enquanto aprende sobre a medição Quantum e os Estados ortogonal e não ortogonal. |
 |[Medidas conjuntas](https://github.com/microsoft/QuantumKatas/tree/master/JointMeasurements)|Saiba mais sobre as medidas de paridade conjuntas e como usar a operação de [medida](xref:microsoft.quantum.intrinsic.measure) para distinguir os Estados da Quantum.|
 
@@ -72,7 +75,7 @@ Explore os conceitos básicos e os conceitos básicos da computação Quantum ou
 |:-----|-------------|
 |[Protocolo BB84 para distribuição de chave quântica](https://github.com/microsoft/QuantumKatas/tree/master/KeyDistribution_BB84)|Saiba mais e implemente um protocolo Quantum de distribuição de chaves, [BB84](https://en.wikipedia.org/wiki/BB84), usando qubits para trocar chaves de criptografia. |
 |[Bit-inverter código de correção de erro](https://github.com/microsoft/QuantumKatas/tree/master/QEC_BitFlipCode)|Explore a correção de erro do Quantum com o mais simples dos códigos de correção de erro Quantum (QEC)-o código de inversão de bit três qubit.|
-|[Estimativa de fase](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|Os algoritmos de estimativa de fase são alguns dos blocos de construção mais fundamentais da computação Quantum. Saiba mais sobre a estimativa de fase com estes exercícios que abrangem a estimativa da fase Quantum e como preparar e executar rotinas de estimativa de fase em Q #.|
+|[Estimativa de fase](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|Os algoritmos de estimativa de fase são alguns dos blocos de construção mais fundamentais da computação Quantum. Saiba mais sobre a estimativa de fase com esses exercícios que abrangem a estimativa da fase Quantum e como preparar e executar rotinas de estimativa de fase no Q# .|
 |[Aritmética de Quantum: Compilando o ondulador-transportar somas](https://github.com/microsoft/QuantumKatas/blob/master/RippleCarryAdder)|Uma série detalhada de exercícios que explora a adição da [ondulação](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) em um computador Quantum. Crie um adicionador de Quantum no local, expanda-o com um algoritmo diferente e, por fim, crie um subtrator de Quantum in-loco.   |
 
 ### <a name="entanglement-games"></a>Jogos de entrelaçamento

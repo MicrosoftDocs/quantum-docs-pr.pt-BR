@@ -1,6 +1,8 @@
 ---
 Título: Descrição da Quantum Oracle: saiba como trabalhar com e definir Oracle Quantum, operações de caixa preta que são usadas como entrada para outro algoritmo.
 Autor: cgranade UID: Microsoft. Quantum. Concepts. oraclees MS. Author: Christopher.Granade@microsoft.com MS. Data: 07/11/2018 MS. Topic: artigo no-loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -105,7 +107,7 @@ $$
 Agora $ o = ^ \dagger $ por construção, portanto, resolvemos os dois problemas anteriores.
 
 > [!TIP]
->Para ver que $ o o = ^ { \dagger } $ , observe que o $ ^ 2, = \boldone $ desde $ um \oplus b \oplus = b $ para todos $ , b \in \[ ! Parar. Não-LOC ({)] 0, 1 \[ ! Parar. Não-LOC (})] $ .
+>Para ver que $ o o = ^ { \dagger } $ , observe que o $ ^ 2, = \boldone $ desde $ um \oplus b \oplus b = a $ para todos os $ , b \in \: :: no-Loc ({)::: 0, 1 \: :: no-Loc (})::: $ .
 >Como resultado, $ O \ket { x } \ket { y \oplus f (x) } = \ket { x } \ket { y \oplus f (x) \oplus f (x) } = \ket { x } \ket { y } $ .
 
 De forma importante, definir um Oracle dessa maneira para cada Estado de base computacional $ \ket { x } \ket { y } $ também define como $ O O $ age para qualquer outro Estado.

@@ -1,21 +1,24 @@
 ---
 title: Contador de largura – kit de desenvolvimento do Quantum
-description: 'Saiba mais sobre o contador de largura QDK da Microsoft, que usa o simulador de rastreamento Quantum para contar o número de qubits alocados e emprestados por operações em um programa Q #.'
+description: Saiba mais sobre o contador de largura QDK da Microsoft, que usa o simulador de rastreamento Quantum para contar o número de qubits alocados e emprestados por operações em um Q# programa.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: af8609dc5c05f7a19b8d21755281427feb29b84c
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 02f4937aaccf7bf49d6450355c6b42b273071b2e
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871511"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868195"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>Simulador de rastreamento Quantum: contador de largura
 
-O contador de largura faz parte do [simulador de rastreamento Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)do kit de desenvolvimento Quantum. Você pode usá-lo para contar o número de qubits alocadas e emprestadas por cada operação em um programa Q #. Algumas operações primitivas podem alocar qubits extras, por exemplo, operações controladas multiplicadas `X` ou operações controladas `T` .
+O contador de largura faz parte do [simulador de rastreamento Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)do kit de desenvolvimento Quantum. Você pode usá-lo para contar o número de qubits alocadas e emprestadas por cada operação em um Q# programa. Algumas operações primitivas podem alocar qubits extras, por exemplo, operações controladas multiplicadas `X` ou operações controladas `T` .
 
 ## <a name="invoking-the-width-counter"></a>Invocando o contador de largura
 
@@ -29,7 +32,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-width-counter-in-a-c-host-program"></a>Usando o contador de largura em um programa de host C#
 
-O exemplo de C# a seguir nesta seção computa o número de qubits extras alocados pela implementação de uma operação controlada de multiplicação <xref:microsoft.quantum.intrinsic.x> , com base no seguinte código de exemplo de p #:
+O exemplo de C# a seguir nesta seção computa o número de qubits extras alocados pela implementação de uma operação controlada de multiplicação <xref:microsoft.quantum.intrinsic.x> , com base no seguinte Q# código de exemplo:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -68,7 +71,7 @@ Por fim, você pode gerar todas as estatísticas coletadas pelo contador de larg
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - A visão geral do [simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) do quantum do kit de desenvolvimento Quantum.
 - A <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> referência da API.

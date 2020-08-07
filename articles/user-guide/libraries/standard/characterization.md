@@ -6,12 +6,15 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436530"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868620"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterização e estatísticas do Quantum #
 
@@ -19,7 +22,7 @@ ms.locfileid: "87436530"
 Isso é desafiador porque cada medição de um sistema Quantum gera no máximo um pouco de informação.
 Para aprender um eigenvalue, independente de um estado Quantum, os resultados de várias medições devem ser Unidos para que o usuário possa obter as muitas informações necessárias para representar esses conceitos.
 Os Estados da Quantum são especialmente inconvenientes porque o [teorema sem clonagem](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) afirma que não há como aprender um estado de Quantum arbitrário a partir de uma única cópia do estado, pois isso permitiria que você faça cópias do estado.
-Essa ofuscação do estado Quantum do usuário é refletida no fato de que Q # não expõe ou nem define o que um estado *é* para os programas Quantum.
+Essa ofuscação do estado Quantum do usuário é refletida no fato de Q# não expor ou até mesmo definir o que um estado *é* para os programas Quantum.
 Portanto, abordamos a caracterização Quantum tratando as operações e os Estados como preto-caixa; Essa abordagem compartilha muito em comum com a prática experimental de caracterização, verificação e validação do Quantum (QCVV).
 
 A caracterização é distinta de muitas das outras bibliotecas discutidas anteriormente.
@@ -36,7 +39,7 @@ Isso tem a vantagem de exigirmos apenas um único qubit adicional para executar 
 Cada um dos métodos propostos abaixo usa uma estratégia diferente para a criação de experimentos e métodos de processamento de dados diferentes para aprender a fase.  Cada um deles tem vantagem única, desde a necessidade de limites de erro rigorosos até a capacidade de incorporar informações anteriores, tolerar erros ou executar em computadores Limitted de memória.
 
 Ao discutir a estimativa de fase iterativa, consideraremos um $U unitário $ fornecido como uma operação de caixa preta.
-Conforme descrito na seção sobre Oracle em estruturas de [dados](xref:microsoft.quantum.libraries.data-structures), os modelos Q # Canon são operações pelo <xref:microsoft.quantum.oracles.discreteoracle> tipo definido pelo usuário, definidos pelo tipo de tupla `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
+Conforme descrito na seção sobre Oracle em estruturas de [dados](xref:microsoft.quantum.libraries.data-structures), os Q# modelos de Canon são operações pelo <xref:microsoft.quantum.oracles.discreteoracle> tipo definido pelo usuário, definidos pelo tipo de tupla `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
 Concretamente, se `U : DiscreteOracle` , `U(m)` implementa $U ^ m $ para `m : Int` .
 
 Com essa definição em vigor, cada etapa da estimativa de fase iterativa continua preparando uma qubit auxiliar no estado $ \ket{+} $, juntamente com o estado inicial $ \ket{\phi} $ que supomos que é um [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) de $U (m) $, ou seja, $U (m) \ket{\phi} = e ^ {im\phi} \ ket {\ Phi} $.  
@@ -47,7 +50,7 @@ O qubit auxiliar usado como um controle para `U(m)` é medido na base $X $ para 
 
 Neste ponto, a reconstrução da fase a partir dos `Result` valores obtidos por meio da estimativa de fase iterativa é um problema de inferência de estatística clássica.
 Encontrar o valor de $m $ que maximiza as informações obtidas, considerando um método de inferência fixo, é simplesmente um problema nas estatísticas.
-Enfatizamos isso descrevendo brevemente a estimativa de fase iterativa em um nível teórico no bayesiana de estimativa de parâmetro de subestimação antes de continuar a descrever os algoritmos estatísticos fornecidos no Q # Canon para resolver esse problema de inferência clássica.
+Enfatizamos isso descrevendo brevemente a estimativa de fase iterativa em um nível teórico no bayesiana de estimativa de parâmetro de subestimação antes de continuar a descrever os algoritmos estatísticos fornecidos na Q# Canon para resolver esse problema de inferência clássica.
 
 ### <a name="iterative-phase-estimation-without-eigenstates"></a>Estimativa de fase iterativa sem Eigenstates ###
 
@@ -127,7 +130,7 @@ Portanto, o uso da estimativa de fase com consultas contínuas nos permite apren
 
 ### <a name="random-walk-phase-estimation"></a>Estimativa de fase de passo aleatório ###
 
-O Q # fornece uma aproximação útil de estimativa de fase de Bayesiana projetada para uso próximo de dispositivos Quantum que operam por condicionado uma movimentação aleatória no registro de dados obtido da estimativa de fase iterativa.
+Q#fornece uma aproximação útil de estimativa de fase de Bayesiana projetada para uso próximo de dispositivos Quantum que operam por condicionado uma movimentação aleatória no registro de dados obtido da estimativa de fase iterativa.
 Esse método é adaptativo e totalmente determinístico, permitindo o dimensionamento quase ideal de erros na fase estimada $ \hat{\phi} $ com sobrecargas de memória muito baixas.
 
 O protocolo usa um método de inferência Bayesiana aproximado que assume que a distribuição anterior é gaussiana.
@@ -141,7 +144,7 @@ A capacidade de avançar para trás também permite que o algoritmo Aprenda mesm
 
 ## <a name="calling-phase-estimation-algorithms"></a>Chamando algoritmos de estimativa de fase ##
 
-Cada operação de estimativa de fase fornecida com o Q # Canon usa um conjunto diferente de entradas parametrizando a qualidade que solicitamos a estimativa final de $ \hat{\phi} $.
+Cada operação de estimativa de fase fornecida com a Q# Canon usa um conjunto diferente de entradas parametrizando a qualidade que solicitamos a estimativa final de $ \hat{\phi} $.
 No entanto, essas várias entradas compartilham várias entradas em comum, de modo que o aplicativo parcial nos parâmetros de qualidade resulta em uma assinatura comum.
 Por exemplo, a <xref:microsoft.quantum.characterization.robustphaseestimation> operação discutida na próxima seção tem a seguinte assinatura:
 

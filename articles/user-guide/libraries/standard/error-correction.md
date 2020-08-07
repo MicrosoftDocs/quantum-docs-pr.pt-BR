@@ -1,17 +1,20 @@
 ---
-title: 'Correção de erro nas bibliotecas padrão do Q #'
-description: 'Saiba como usar códigos de correção de erros em seus programas do Q # ao mesmo tempo em que protege o estado do qubits.'
+title: Correção de erro nas Q# bibliotecas padrão
+description: Saiba como usar códigos de correção de erro em seus Q# programas enquanto protege o estado do qubits.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 514fe68f603b9a3a0b4607390719b08a43fe4967
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274278"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868484"
 ---
 # <a name="error-correction"></a>Correção de erro #
 
@@ -48,7 +51,7 @@ Observe que $Z _0 Z_1 \ket {000} = \ket {000} $ e que $Z _0 Z_1 \ket {111} = \ke
 Por outro lado, $Z _0 Z_1 \ket {100} =-\ket {100} $ e $Z _0 Z_1 \ket {011} =-\ket {011} $, portanto, o resultado da medição de $Z _0 Z_1 $ revela informações úteis sobre o erro ocorrido.
 
 Para enfatizar isso, repetimos a tabela acima, mas adiciono os resultados da medição de $Z _0 Z_1 $ e $Z _1 Z_2 $ em cada linha.
-Denotamos os resultados de cada medição pelo sinal do eigenvalue observado, $ + $ ou $-$, que corresponde aos `Result` valores de Q # de `Zero` e `One` , respectivamente.
+Denotamos os resultados de cada medição pelo sinal do eigenvalue observado, $ + $ ou $-$, que corresponde aos Q# `Result` valores de `Zero` e `One` , respectivamente.
 
 | Erro $E $ | $E \ket{\overline {0} } $ | $E \ket{\overline {1} } $ | Resultado de $Z _0 Z_1 $ | Resultado de $Z _1 Z_2 $ |
 | --- | --- | --- | --- | --- |
@@ -68,16 +71,16 @@ Em particular, enfatizamos que a recuperação é um procedimento de inferência
 > Em geral, os códigos podem ser criados para lidar com um número maior de erros e para manipular $Z $ erros, bem como $X $ erros.
 
 A percepção de que podemos descrever as medidas na correção de erro Quantum que atuam da mesma forma em todos os Estados de código, é a essência do *semiformal do estabilizador*.
-O Q # Canon fornece uma estrutura para descrever a codificação e decodificação de códigos de estabilizador e para descrever como um se recupera de erros.
+A Q# Canon fornece uma estrutura para descrever a codificação e decodificação de códigos de estabilizador e para descrever como um se recupera de erros.
 Nesta seção, descrevemos essa estrutura e seu aplicativo com alguns códigos de correção de erro de Quantum simples.
 
 > [!TIP]
 > Uma introdução completa ao informativo do estabilizador está além do escopo desta seção.
 > Nós nos referimos aos leitores interessados em aprender mais sobre o [Gottesman 2009](https://arxiv.org/abs/0904.2557).
 
-## <a name="representing-error-correcting-codes-in-q"></a>Representando códigos de correção de erro em Q # ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>Representando códigos de correção de erro noQ# ##
 
-Para ajudar a especificar códigos de correção de erro, o Q # Canon fornece vários tipos distintos definidos pelo usuário:
+Para ajudar a especificar códigos de correção de erro, a Q# Canon fornece vários tipos distintos definidos pelo usuário:
 
 - <xref:microsoft.quantum.errorcorrection.logicalregister>`= Qubit[]`: Indica que um registro de qubits deve ser interpretado como o bloco de código de um código de correção de erro.
 - <xref:microsoft.quantum.errorcorrection.syndrome>`= Result[]`: Indica que uma matriz de resultados de medição deve ser interpretada como a síndrome medida em um bloco de código.
@@ -119,4 +122,4 @@ using (scratch = Qubit[nScratch]) {
 
 Exploraremos isso mais detalhadamente na [amostra de código de inversão de bits](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code).
 
-Além do código de inversão de bits, o Q # Canon é fornecido com implementações do [código perfeito de cinco qubit](https://arxiv.org/abs/quant-ph/9602019)e o [código de sete qubit](https://arxiv.org/abs/quant-ph/9705052), que pode corrigir um erro arbitrário de qubit único.
+Além do código de inversão de bits, a Q# Canon é fornecida com implementações do [código perfeito de cinco qubit](https://arxiv.org/abs/quant-ph/9602019)e o [código de sete qubit](https://arxiv.org/abs/quant-ph/9705052), que pode corrigir um erro arbitrário de qubit único.

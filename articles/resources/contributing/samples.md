@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.samples
-ms.openlocfilehash: 3bd0de04a448c74eea6c3e8e3a15dcbb19f9d705
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 20da0e1765a242c172cc595f03d7791a0e8b8d2d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274237"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867498"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>Colaborando com exemplos do kit de desenvolvimento Quantum
 
@@ -47,8 +50,8 @@ Examinando os arquivos que compõem cada pasta, vamos nos aprofundar no [`algori
 
 | Arquivo              | Descrição                                                |
 |-------------------|------------------------------------------------------------|
-| `CHSHGame.csproj` | Projeto Q # usado para criar o exemplo com o SDK do .NET Core |
-| `Game.qs`         | Q # operações e funções para o exemplo                 |
+| `CHSHGame.csproj` | Q#projeto usado para criar o exemplo com o SDK do .NET Core |
+| `Game.qs`         | Q#operações e funções para o exemplo                 |
 | `Host.cs`         | Programa de host C# usado para executar o exemplo                     |
 | `host.py`         | Programa de host Python usado para executar o exemplo                 |
 | `README.md`       | Documentação sobre o que o exemplo faz e como usá-lo    |

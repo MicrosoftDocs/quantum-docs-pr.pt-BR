@@ -1,17 +1,20 @@
 ---
 title: Verificador de uso qubits invalidado – kit de desenvolvimento Quantum
-description: 'Saiba mais sobre o verificador de uso qubits invalidado do Microsoft QDK, que usa o simulador de rastreamento do Quantum para verificar o código de Q # para qubits potencialmente inválidos.'
+description: Saiba mais sobre o verificador de uso qubits invalidado do Microsoft QDK, que usa o simulador de rastreamento Quantum para verificar o Q# código em busca de qubits potencialmente inválidos.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: fccf6d5784b587f4ad9b659e23027619acd06ffa
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: c451747badba03801bd4ecd419420f131ac502d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871086"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868280"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>Simulador de rastreamento Quantum: verificador de uso invalidado do qubits
 
@@ -19,7 +22,7 @@ O verificador de uso invalidado do qubits faz parte do [simulador de rastreament
 
 ## <a name="invalid-qubits"></a>Qubits inválido
 
-Considere a seguinte parte do código do Q # para ilustrar os problemas detectados pelo verificador de uso invalidado do qubits:
+Considere o seguinte trecho de Q# código para ilustrar os problemas detectados pelo verificador de uso invalidado do qubits:
 
 ```qsharp
 operation UseReleasedQubit() : Unit {
@@ -70,7 +73,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - A visão geral do [simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) do quantum do kit de desenvolvimento Quantum.
 - A <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> referência da API.

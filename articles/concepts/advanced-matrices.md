@@ -1,6 +1,8 @@
 ---
 Título: conceitos de matriz avançada Descrição: Saiba mais sobre os exponenciais eigenvectors, eigenvalues e Matrix, as ferramentas fundamentais usadas para descrever e simular os algoritmos Quantum.
 Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. Matrix-avançado MS. Author: nawiebe@microsoft.com MS. Data: 12/11/2017 MS. Topic: artigo no-loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -124,7 +126,7 @@ $$
 e ^ A = \boldone + a + \frac { a ^ 2 } { 2! } + \frac { Um ^ 3 3 } { !}+\cdots
 $$
 
-Isso é importante porque a evolução do tempo mecânico da Quantum é descrita por uma matriz unitário do formato $ e ^ { IB } $ para a matriz Hermitian $ B $ .  Por esse motivo, a execução de exponencials de matriz é uma parte fundamental da computação Quantum e, como tal, Q # oferece rotinas intrínsecas para descrever essas operações.
+Isso é importante porque a evolução do tempo mecânico da Quantum é descrita por uma matriz unitário do formato $ e ^ { IB } $ para a matriz Hermitian $ B $ .  Por esse motivo, a execução de exponencials de matriz é uma parte fundamental da computação Quantum e, como tal, Q# oferece rotinas intrínsecas para descrever essas operações.
 Há muitas maneiras de fazer a computação de um exponencial de matriz em um computador clássico e, em geral, o aproximar de forma numérica como tal exponencial é muito perigoso com Peril.  Confira [*Cleve Moler e Charles Van empréstimo. "Dezenove duvidosa maneiras de computar o exponencial de uma matriz". SIAM revisar 20,4 (1978): 801-836*](https://doi.org/10.1137/S00361445024180) para obter mais informações sobre os desafios envolvidos.
 
 A maneira mais fácil de entender como computar o exponencial de uma matriz é por meio de eigenvalues e eigenvectors dessa matriz.  Especificamente, o Spectral teorema discutido acima diz que para cada matriz Hermitian ou unitário $ a $ existe uma matriz unitário $ u $ e uma matriz diagonal $ d, de $ modo que u $ = ^ \dagger d u $ .  Devido às propriedades de unitarity, temos esse $ ^ 2 = u ^ \dagger d ^ 2 u $ e, da mesma forma, para qualquer Power $ p $ $ A ^ p = u ^ \dagger d ^ p u $ .  Se substituímos isso na definição de operador do exponencial de operador, obtemos:

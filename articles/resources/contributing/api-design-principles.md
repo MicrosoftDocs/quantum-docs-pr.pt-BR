@@ -1,32 +1,35 @@
 ---
-title: 'Princípios de design da API Q #'
-description: 'Princípios de design da API Q #'
+title: Q#Princípios de design de API
+description: Q#Princípios de design de API
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
-ms.openlocfilehash: def6a9f12accfa399fd4db3783b9899fc743f025
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 580fcaea575ff544ed2c5f31eba7e963bea4534b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274249"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866886"
 ---
-# <a name="q-api-design-principles"></a>Princípios de design da API Q #
+# <a name="no-locq-api-design-principles"></a>Q#Princípios de design de API
 
 ## <a name="introduction"></a>Introdução
 
-Como uma linguagem e como uma plataforma, o Q # capacita os usuários a escrever, executar, compreender e explorar aplicativos Quantum.
-Para capacitar os usuários, quando criamos as bibliotecas de Q #, seguimos um conjunto de princípios de design de API para guiar nossos designs e nos ajudar a criar bibliotecas utilizáveis para a comunidade de desenvolvimento Quantum.
-Este artigo lista esses princípios e fornece exemplos para ajudar a ajudá-lo a aplicá-los ao projetar as APIs de Q #.
+Como uma linguagem e como uma plataforma, o Q# permite que os usuários escrevam, executem, compreendam e explorem os aplicativos Quantum.
+Para capacitar os usuários, quando criamos Q# bibliotecas, seguimos um conjunto de princípios de design de API para guiar nossos designs e nos ajudar a criar bibliotecas utilizáveis para a comunidade de desenvolvimento Quantum.
+Este artigo lista esses princípios e fornece exemplos para ajudar a ajudá-lo a aplicá-los durante a criação de Q# APIs.
 
 > [!TIP]
 > Este é um documento bastante detalhado destinado a ajudar a orientar o desenvolvimento da biblioteca e as contribuições detalhadas da biblioteca.
-> Você provavelmente achará mais útil se estiver escrevendo suas próprias bibliotecas em Q # ou se estiver contribuindo com recursos maiores para o repositório de [bibliotecas do Q #](https://github.com/microsoft/QuantumLibraries).
+> Você provavelmente o achará mais útil se estiver escrevendo suas próprias bibliotecas Q# ou se estiver contribuindo com recursos maiores para o repositório de [ Q# bibliotecas](https://github.com/microsoft/QuantumLibraries).
 >
 > Por outro lado, se você estiver procurando aprender como contribuir com o kit de desenvolvimento Quantum mais geralmente, sugerimos começar com o guia de [contribuição](xref:microsoft.quantum.contributing).
-> Se você estiver procurando informações mais gerais sobre como é recomendável formatar o código de Q #, talvez esteja interessado em verificar o [Guia de estilo](xref:microsoft.quantum.contributing.style).
+> Se você estiver procurando informações mais gerais sobre como é recomendável Formatar seu Q# código, talvez esteja interessado em verificar o guia de [estilo](xref:microsoft.quantum.contributing.style).
 
 ## <a name="general-principles"></a>Noções básicas gerais
 
@@ -81,7 +84,7 @@ Principal **princípio:** projetar funções e operações para ser o mais reuti
 - ✅**Faça** funções e operações de design para compor bem com outras funções e operações, tanto na mesma API quanto em bibliotecas existentes anteriormente.
 
   *Exemplos:*
-  - A @"microsoft.quantum.canon.delay" operação faz suposições mínimas sobre sua entrada e, portanto, pode ser usada para atrasar aplicativos de operações em toda a biblioteca padrão do Q # ou conforme definido pelos usuários.
+  - A @"microsoft.quantum.canon.delay" operação faz suposições mínimas sobre sua entrada e, portanto, pode ser usada para atrasar aplicativos de operações em toda a Q# biblioteca padrão ou conforme definido pelos usuários.
     <!-- TODO: define bad example. -->
 
 - ✅**Expõem** lógica clássica puramente determinística como funções em vez de operações.

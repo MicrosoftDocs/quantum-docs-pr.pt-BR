@@ -1,19 +1,22 @@
 ---
 title: Licenciamento de software livre para o QDK
-description: 'Saiba mais sobre o licenciamento para usar e contribuir com as bibliotecas padrão do Microsoft Q #-licenciamento e contribuição.'
+description: Saiba mais sobre o licenciamento para usar e contribuir com as Q# bibliotecas padrão da Microsoft-licenciamento e contribuição.
 author: martinro
 ms.author: martinro@microsoft.com
 ms.date: 2/16/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.licensing
-ms.openlocfilehash: 4bc0fb7fbeb4a71b891619218905d509e50911c9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: f964d5f4a4c20c8d53ceb4375c869030cd53ff07
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274269"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868450"
 ---
-# <a name="licensing"></a>Licenciamento #
+# <a name="licensing"></a>Licenças #
 
 O kit de desenvolvimento Quantum é fornecido com uma ampla coleção de funções e operações de software livre, licenciada sob a [licença MIT](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt).
 As partes da biblioteca padrão que são portáveis em computadores de destino podem ser obtidas no repositório [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) no GitHub, juntamente com outras bibliotecas, como e outras bibliotecas, como a [biblioteca química do Quantum](xref:microsoft.quantum.chemistry.concepts.intro).

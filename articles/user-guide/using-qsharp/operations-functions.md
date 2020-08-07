@@ -1,28 +1,31 @@
 ---
-title: 'Operações e funções em p #'
+title: Operações e funções noQ#
 description: Como definir e chamar operações e funções, bem como as especializações de operação controladas e adjacentes.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: 08eaf150a38afd789f8a23f567ff111d002bac07
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 76437c83df894fa86409e680f961d97e267c6869
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884217"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867872"
 ---
-# <a name="operations-and-functions-in-q"></a>Operações e funções em p #
+# <a name="operations-and-functions-in-no-locq"></a>Operações e funções noQ#
 
 ## <a name="defining-new-operations"></a>Definindo novas operações
 
-As operações são o núcleo de Q #.
-Depois de declarados, eles podem ser chamados de aplicativos .NET clássicos, por exemplo, usando um simulador ou outras operações em Q #.
-Cada operação definida em Q # pode chamar qualquer número de outras operações, incluindo as operações intrínsecas internas definidas pelo idioma. A maneira específica em que Q # define essas operações intrínsecas depende do computador de destino.
+As operações são o núcleo de Q# .
+Depois de declarados, eles podem ser chamados de aplicativos .NET clássicos, por exemplo, usando um simulador ou outras operações no Q# .
+Cada operação definida no Q# pode chamar qualquer número de outras operações, incluindo as operações intrínsecas internas definidas pelo idioma. A maneira específica de Q# definir essas operações intrínsecas depende da máquina de destino.
 Quando compilada, cada operação é representada como um tipo de classe do .NET que pode ser fornecido para os computadores de destino.
 
-Cada arquivo de origem Q # pode definir qualquer número de operações.
+Cada Q# arquivo de origem pode definir qualquer número de operações.
 Os nomes de operação devem ser exclusivos em um namespace e não podem entrar em conflito com nomes de tipo ou função.
 
 Uma declaração de operação consiste na palavra-chave `operation` , seguida pelo símbolo que é o nome da operação, uma tupla de identificador tipada que define os argumentos para a operação, dois-pontos `:` , uma anotação de tipo que descreve o tipo de resultado da operação, opcionalmente uma anotação com as características da operação, uma chave de abertura e o corpo da declaração da operação, entre chaves `{ }` .
@@ -61,16 +64,16 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 ```
 
 > [!NOTE]
-> Cada operação em Q # usa exatamente uma entrada e retorna exatamente uma saída.
+> Cada operação no Q# usa exatamente uma entrada e retorna exatamente uma saída.
 > Várias entradas e saídas são representadas usando *tuplas*, que coletam vários valores juntos em um único valor.
-> Nesse sentido, Q # é uma linguagem de "tupla-in-out".
+> Nesse sentido, Q# é uma linguagem de "tupla na tupla".
 > Após esse conceito, um conjunto de parênteses vazios, `()` , deve ser lido como a tupla "vazia", que tem o tipo `Unit` .
 
 ## <a name="controlled-and-adjoint-operations"></a>Operações controladas e adjacentes
 
-Se uma operação implementa uma transformação unitário, como é o caso de muitas operações em Q #, é possível definir como a operação age quando *adjointed* ou *controlada*. Uma especialização *adjacente* de uma operação especifica como o "inverso" da operação age, enquanto uma especialização *controlada* especifica como uma operação age quando seu aplicativo é condicionado no estado de um registro de Quantum específico.
+Se uma operação implementa uma transformação unitário, como é o caso de muitas operações no Q# , é possível definir como a operação age quando *adjointed* ou *controlada*. Uma especialização *adjacente* de uma operação especifica como o "inverso" da operação age, enquanto uma especialização *controlada* especifica como uma operação age quando seu aplicativo é condicionado no estado de um registro de Quantum específico.
 
-Adjoints de operações Quantum são cruciais para muitos aspectos da computação Quantum. Para obter um exemplo de uma dessas situações discutida junto com uma técnica útil de programação de Q #, consulte [conjugados](#conjugations) neste artigo. 
+Adjoints de operações Quantum são cruciais para muitos aspectos da computação Quantum. Para obter um exemplo de uma dessas situações discutida junto com uma Q# técnica de programação útil, consulte [conjugados](#conjugations) neste artigo. 
 
 A versão controlada de uma operação é uma nova operação que aplica efetivamente a operação base somente se todas as qubits de controle estiverem em um estado especificado.
 Se o controle qubits estiver em superposição, a operação base será aplicada coerentemente à parte apropriada da superposição.
@@ -83,15 +86,15 @@ Naturalmente, uma especialização *adjacente controlada* poderia existir també
 > Aplicar sucessivamente uma operação e, em seguida, seu adjacente a um estado deixa o estado inalterado, conforme ilustrado pelo fato de que $UU ^ \dagger = U ^ \dagger U = \id $, a matriz de identidade.
 > A representação unitário de uma operação controlada é ligeiramente mais nuance, mas você pode encontrar mais detalhes em [conceitos de computação Quantum: vários qubits](xref:microsoft.quantum.concepts.multiple-qubits).
 
-A seção a seguir descreve como chamar essas várias especializações no código de Q # e como definir operações para dar suporte a elas.
+A seção a seguir descreve como chamar essas várias especializações em seu Q# código e como definir operações para dar suporte a elas.
 
 ### <a name="calling-operation-specializations"></a>Chamando especializações de operação
 
-Um *functor* em Q # é um alocador que define uma nova operação de outra operação.
-Os dois transmissão functors padrão em Q # são `Adjoint` e `Controlled` .
+Um *functor* no Q# é uma fábrica que define uma nova operação de outra operação.
+Os dois transmissão functors padrão no Q# são `Adjoint` e `Controlled` .
 
 Transmissão functors têm acesso à implementação da operação base ao definir a implementação da nova operação.
-Portanto, o transmissão functors pode executar funções mais complexas do que as funções tradicionais de nível superior. Transmissão functors não tem uma representação no sistema do tipo Q #. Portanto, no momento, não é possível associá-los a uma variável ou passá-los como argumentos. 
+Portanto, o transmissão functors pode executar funções mais complexas do que as funções tradicionais de nível superior. Transmissão functors não tem uma representação no sistema de Q# tipos. Portanto, no momento, não é possível associá-los a uma variável ou passá-los como argumentos. 
 
 Use um functor aplicando-o a uma operação, que retorna uma nova operação.
 Por exemplo, aplicar o `Adjoint` functor à `Y` operação retorna a nova operação `Adjoint Y` . Você pode invocar a nova operação como qualquer outra operação.
@@ -109,7 +112,7 @@ O `Adjoint` functor é seu próprio inverso; ou seja, `Adjoint Adjoint Op` é se
 Da mesma forma, `Controlled X(controls, target)` o aplica o `Controlled` functor à `X` operação para gerar uma nova operação e aplica essa nova operação ao `controls` e ao `target` .
 
 > [!NOTE]
-> Em Q #, as versões controladas sempre usam uma matriz de qubits de controle, e o controle é sempre baseado em todos os qubits de controle que estão no `PauliZ` estado computacional () `One` , $ \ket {1} $.
+> No Q# , as versões controladas sempre assumem uma matriz de qubits de controle e o controle é sempre baseado em todos os qubits de controle que estão no `PauliZ` estado computacional () `One` , $ \ket {1} $.
 > O controle com base em outros Estados é obtido aplicando a operação unitário apropriada ao qubits de controle antes da operação controlada e, em seguida, aplicando as inversas da operação unitário após a operação controlada.
 > Por exemplo, a aplicação de uma `X` operação a um qubit de controle antes e depois de uma operação controlada faz com que a operação controle o `Zero` estado ($ \ket {0} $) para esse qubit; a aplicação de uma `H` operação antes e depois dos controles no `PauliX` `One` estado, que é-1 eigenvalue de Pauli X, $ \ket {-} \mathrel{: =} (\ket {0} -\ket {1} )/\sqrt {2} $ em vez do `PauliZ` `One` estado.
 
@@ -140,7 +143,7 @@ Na primeira declaração de operação nos exemplos anteriores, as operações `
 Como `DecodeSuperdense` inclui medições, ela não é uma operação unitário e, portanto, nenhuma especialização não adjacente pode existir (Lembre-se do requisito relacionado que tal operação retorna `Unit` ).
 No entanto, como `BitFlip` simplesmente executa a <xref:microsoft.quantum.intrinsic.x> operação unitário, você poderia defini-la com ambas as especializações.
 
-Esta seção fornece detalhes sobre como incluir a existência de especializações em suas declarações de operação do Q #, portanto, dando-lhes a capacidade de chamada em conjunto com o `Adjoint` ou o `Controlled` transmissão functors.
+Esta seção fornece detalhes sobre como incluir a existência de especializações em suas Q# declarações de operação, portanto, dando-lhes a capacidade de chamada em conjunto com o `Adjoint` ou `Controlled` transmissão functors.
 Para obter mais informações sobre algumas das situações em que elas são válidas ou não válidas para declarar determinadas especializações, consulte [circunstâncias de definição válida de especializações](#circumstances-for-validly-defining-specializations) neste artigo.
 
 As características da operação definem quais tipos de transmissão functors você pode aplicar à operação declarada e qual efeito eles têm. A existência dessas especializações pode ser declarada como parte da assinatura da operação, especificamente por meio de uma anotação com as características da operação: `is Adj` `is Ctl` ou, ou `is Adj + Ctl` .
@@ -189,7 +192,7 @@ A seguir, há uma gama completa de possibilidades, com alguns exemplos de especi
 
 #### <a name="explicit-specialization-declarations"></a>Declarações de especialização explícitas
 
-As operações de Q # podem conter as seguintes declarações de especialização explícitas:
+Q#as operações podem conter as seguintes declarações de especialização explícitas:
 
 - A `body` especialização especifica a implementação da operação sem nenhum transmissão functors aplicado.
 - A `adjoint` especialização especifica a implementação da operação com o `Adjoint` functor aplicado.
@@ -224,7 +227,7 @@ A `auto` diretiva será resolvida para a seguinte diretiva gerada se uma declara
 > [!TIP]   
 > Se uma operação for autoadjacente, especifique explicitamente a prejunção ou a especialização de adjacente controlada por meio da diretiva de geração `self` para permitir que o compilador use essas informações para fins de otimização.
 
-Uma declaração de especialização que contém uma implementação definida pelo usuário consiste em uma tupla de argumento seguida por um bloco de instrução com o código Q # que implementa a especialização.
+Uma declaração de especialização que contém uma implementação definida pelo usuário consiste em uma tupla de argumento seguida por um bloco de instrução com o Q# código que implementa a especialização.
 Na lista de argumentos, `...` é usado para representar os argumentos declarados para a operação como um todo.
 Para `body` e `adjoint` , a lista de argumentos deve ser sempre `(...)` ; para `controlled` e `adjoint controlled` , a lista de argumentos deve ser um símbolo que representa a matriz de controle qubits, seguida por `...` , entre parênteses; por exemplo, `(controls,...)` .
 
@@ -326,9 +329,9 @@ Para uma operação cujo corpo contém chamadas para outras operações que não
 
 Use uma operação com transmissão functors adicionais com suporte em qualquer lugar em que você use uma operação com menos transmissão functors, mas a mesma assinatura. Por exemplo, use uma operação do tipo `(Qubit => Unit is Adj)` em qualquer lugar em que você use uma operação do tipo `(Qubit => Unit)` .
 
-Q # é *covariant* com relação a tipos de retorno que podem ser chamados: um callable que retorna um tipo `'A` é compatível com um callable com o mesmo tipo de entrada e um tipo de resultado compatível com `'A` .
+Q#é *Covariance* com relação a tipos de retorno que podem ser chamados: um callable que retorna um tipo `'A` é compatível com um callable com o mesmo tipo de entrada e um tipo de resultado compatível com `'A` .
 
-Q # é *contravariant* em relação aos tipos de entrada: um callable que usa um tipo `'A` como entrada é compatível com um callable com o mesmo tipo de resultado e um tipo de entrada compatível com `'A` .
+Q#é *contravariant* em relação aos tipos de entrada: um callable que usa um tipo `'A` como entrada é compatível com um callable com o mesmo tipo de resultado e um tipo de entrada compatível com `'A` .
 
 Ou seja, dadas as definições a seguir,
 
@@ -357,7 +360,7 @@ function ConjugateUnitaryWith(
 - Retornar um valor do tipo `(Qubit[] => Unit is Adj + Ctl)` de `ConjugateInvertWith` .
 
 > [!IMPORTANT]
-> A p # 0,3 introduziu uma diferença significativa no comportamento de tipos definidos pelo usuário.
+> Q#0,3 introduziu uma diferença significativa no comportamento de tipos definidos pelo usuário.
 
 Os tipos definidos pelo usuário são tratados como uma versão encapsulada do tipo subjacente, em vez de como um subtipo.
 Isso significa que um valor de um tipo definido pelo usuário não é utilizável em que você espera que um valor do tipo subjacente seja.
@@ -380,7 +383,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-A partir da nossa versão 0,9, o Q # dá suporte a uma instrução Conjugation que implementa a transformação anterior. Usando essa instrução, a operação `ApplyWith` pode ser implementada da seguinte maneira:
+A partir da nossa versão 0,9, Q# o dá suporte a uma instrução de conjugação que implementa a transformação anterior. Usando essa instrução, a operação `ApplyWith` pode ser implementada da seguinte maneira:
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -405,12 +408,12 @@ Como as variáveis mutáveis usadas como parte do bloco Within não podem ser re
 
 ## <a name="defining-new-functions"></a>Definindo novas funções
 
-As funções são puramente determinísticas, rotinas clássicas em Q #, que são diferentes das operações, pois elas não têm permissão para ter nenhum efeito além de calcular um valor de saída.
+As funções são puramente determinísticas, rotinas clássicas no Q# , que são diferentes das operações, pois elas não têm permissão para ter nenhum efeito além de calcular um valor de saída.
 Em particular, as funções não podem chamar operações; agir sobre, alocar ou emprestar qubits; números aleatórios de exemplo; ou, de outra forma, dependem do estado após o valor de entrada para uma função.
-Como consequência, as funções Q # são *puras*, pois elas sempre mapeiam os mesmos valores de entrada para os mesmos valores de saída.
-Esse comportamento permite que o compilador Q # reordene com segurança como e quando chamar funções ao gerar especializações de operação.
+Como consequência, as Q# funções são *puras*, pois elas sempre mapeiam os mesmos valores de entrada para os mesmos valores de saída.
+Esse comportamento permite que o Q# compilador reordene com segurança como e quando chamar funções ao gerar especializações de operação.
 
-Cada arquivo de origem Q # pode definir qualquer número de funções.
+Cada Q# arquivo de origem pode definir qualquer número de funções.
 Os nomes de função devem ser exclusivos em um namespace e não podem entrar em conflito com os nomes de operação ou tipo.
 
 A definição de uma função funciona de forma semelhante à definição de uma operação, exceto que nenhuma especialização adjacente ou controlada pode ser definida para uma função.
@@ -422,7 +425,7 @@ function Square(x : Double) : (Double) {
 }
 ```
 
-ou 
+ou o 
 
 ```qsharp
 function DotProduct(a : Double[], b : Double[]) : Double {
@@ -442,7 +445,7 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 
 Sempre que for possível fazer isso, é útil escrever a lógica clássica em termos de funções em vez de operações para que as operações possam usá-las mais prontamente. Por exemplo, se você tivesse escrito a `Square` declaração anterior como uma *operação*, o compilador não teria conseguido garantir que chamá-la com a mesma entrada produzirá consistentemente as mesmas saídas.
 
-Para enfatizar a diferença entre funções e operações, considere o problema de amostragem clássica de um número aleatório de dentro de uma operação Q #:
+Para enfatizar a diferença entre funções e operações, considere o problema de amostragem clássica de um número aleatório de dentro de uma Q# operação:
 
 ```qsharp
 operation U(target : Qubit) : Unit {
@@ -464,7 +467,7 @@ Portanto, isolar o máximo de lógica clássica possível em funções facilita 
 
 Muitas funções e operações que você talvez queira definir não dependem muito dos tipos de suas entradas, mas, em vez disso, apenas usam implicitamente seus tipos por meio de alguma outra função ou operação.
 Por exemplo, considere o conceito de *mapa* comum a muitas linguagens funcionais; dada uma função $f (x) $ e uma coleção de valores $ \{ x_1, x_2, \dots, x_n \} $, MAP retorna uma nova coleção $ \{ f (x_1), f (x_2), \dots, f (x_n) \} $.
-Para implementar isso em Q #, aproveite o fato de que as funções são a primeira classe.
+Para implementar isso no Q# , aproveite o fato de que as funções são a primeira classe.
 Aqui está um exemplo rápido de `Map` , usando `T` como um espaço reservado enquanto você descobrir quais tipos são necessários.
 
 ```qsharp
@@ -504,17 +507,17 @@ Além disso, se você construir uma nova tupla ou UDT, agora você também deve 
 Embora isso seja indesejado para um pequeno número dessas funções, à medida que você coleta cada vez mais funções da mesma forma que `Map` , o custo da introdução de novos tipos torna-se razoavelmente grande em ordem razoavelmente curta.
 
 No entanto, grande parte dessa dificuldade resulta do fato de que você não deu ao compilador as informações de que ele precisa para reconhecer como as diferentes versões do `Map` estão relacionadas.
-Efetivamente, você deseja que o compilador trate `Map` como algum tipo de função matemática de *tipos* q # para funções q #.
+Efetivamente, você deseja que o compilador trate `Map` como algum tipo de função matemática de Q# *tipos* para Q# funções.
 
-P # formalizes essa noção, permitindo que funções e operações tenham *parâmetros de tipo*, bem como seus parâmetros de tupla comuns.
+Q#formalizes essa noção permitindo que funções e operações tenham *parâmetros de tipo*, bem como seus parâmetros de tupla comuns.
 Nos exemplos anteriores, você deseja considerar `Map` como tendo parâmetros de tipo `Int, Pauli` no primeiro caso e `Double, String` no segundo caso.
 Para a maior parte, use esses parâmetros de tipo como se fossem tipos comuns. Use valores de parâmetros de tipo para criar matrizes e tuplas, chamar funções e operações e atribuir a variáveis comuns ou mutáveis.
 
 > [!NOTE]
-> O caso mais extremo de dependência indireta é o de qubits, em que um programa Q # não pode depender diretamente da estrutura do `Qubit` tipo, mas **deve** passar esses tipos para outras operações e funções.
+> O caso mais extremo de dependência indireta é o de qubits, em que um Q# programa não pode depender diretamente da estrutura do `Qubit` tipo, mas **deve** passar esses tipos para outras operações e funções.
 
 Retornando ao exemplo anterior, você vê que `Map` precisa ter parâmetros de tipo, um para representar a entrada para `fn` e um para representar a saída de `fn` .
-Em Q #, isso é escrito pela adição de colchetes angulares (ou seja `<>` , não brakets $ \braket {} $!) após o nome de uma função ou operação em sua declaração e listando cada parâmetro de tipo.
+No Q# , isso é escrito pela adição de colchetes angulares (isto é `<>` , não brakets $ \braket {} $!) após o nome de uma função ou operação em sua declaração e listando cada parâmetro de tipo.
 O nome de cada parâmetro de tipo deve começar com um tique `'` , indicando que ele é um parâmetro de tipo e não um tipo comum (também conhecido como um tipo *concreto* ).
 Portanto, `Map` , é escrito:
 
@@ -541,8 +544,8 @@ let paulis = Map(IntToPauli, ints);
 ```
 
 > [!TIP]
-> Escrever funções e operações genéricas é um lugar em que "tupla-in-out" é uma maneira muito útil de pensar em funções e operações do Q #.
-> Como cada função usa exatamente uma entrada e retorna exatamente uma saída, uma entrada do tipo `'T -> 'U` corresponde a *qualquer* função Q # qualquer.
+> Escrever funções e operações genéricas é um lugar em que "tupla-in-out" é uma maneira muito útil de pensar em Q# funções e operações.
+> Como cada função usa exatamente uma entrada e retorna exatamente uma saída, uma entrada do tipo `'T -> 'U` corresponde a *qualquer* Q# função.
 > Da mesma forma, você pode passar qualquer operação para uma entrada do tipo `'T => 'U` .
 
 Como um segundo exemplo, considere o desafio de escrever uma função que retorne a composição de duas outras funções:
@@ -571,15 +574,15 @@ function Compose<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B)) : ('A -
 }
 ```
 
-As bibliotecas padrão de Q # fornecem uma variedade de operações e funções parametrizadas por tipo para facilitar o expressar o fluxo de controle de ordem mais alta.
-Eles são abordados mais detalhadamente no [Guia de biblioteca padrão do Q #](xref:microsoft.quantum.libraries.standard.intro).
+As Q# bibliotecas padrão fornecem uma variedade de operações e funções parametrizadas por tipo para facilitar o expressar o fluxo de controle de ordem mais alta.
+Eles são discutidos mais detalhadamente no [ Q# guia da biblioteca padrão](xref:microsoft.quantum.libraries.standard.intro).
 
 
 ## <a name="callables-as-first-class-values"></a>É chamado como valores de primeira classe
 
-Uma técnica crítica para o raciocínio sobre o fluxo de controle e a lógica clássica usando funções em vez de operações é utilizar essas operações e funções em Q # são de *primeira classe*.
+Uma técnica crítica para o raciocínio sobre o fluxo de controle e a lógica clássica usando funções em vez de operações é utilizar essas operações e funções no Q# são de *primeira classe*.
 Ou seja, eles são cada um dos valores no idioma que estão no seu próprio direito.
-Por exemplo, este é um código Q # perfeitamente válido, se um pouco indireto:
+Por exemplo, o código a seguir é perfeitamente válido Q# , se for um pouco indireto:
 
 ```qsharp
 operation FirstClassExample(target : Qubit) : Unit {
@@ -649,12 +652,12 @@ function SquareOperation(op : (Qubit => Unit)) : (Qubit => Unit) {
 }
 ```
 
-Em princípio, a lógica clássica dentro `SquareOperation` poderia ter sido muito mais envolvida, mas ainda é isolada do restante de uma operação pelas garantias que o compilador pode oferecer sobre as funções. A biblioteca padrão Q # usa essa abordagem para expressar o fluxo de controle clássico de forma que os programas Quantum possam ser usados prontamente.
+Em princípio, a lógica clássica dentro `SquareOperation` poderia ter sido muito mais envolvida, mas ainda é isolada do restante de uma operação pelas garantias que o compilador pode oferecer sobre as funções. A Q# biblioteca padrão usa essa abordagem para expressar o fluxo de controle clássico de forma que os programas Quantum possam ser usados prontamente.
 
 
 ## <a name="recursion"></a>Recursão
 
-Os chamadores do Q # podem ser recursivos direta ou indiretamente.
+Q#os chamadores podem ser recursivos direta ou indiretamente.
 Ou seja, uma operação ou função pode chamar a si mesma ou chamar outro callable que chama direta ou indiretamente a operação que pode ser chamada.
 
 No entanto, há dois comentários importantes sobre o uso da recursão:
@@ -662,8 +665,8 @@ No entanto, há dois comentários importantes sobre o uso da recursão:
 - O uso da recursão nas operações provavelmente interfere em determinadas otimizações.
   Essa interferência pode ter um impacto significativo no tempo de execução do algoritmo.
 - Durante a execução em um dispositivo Quantum real, o espaço de pilha pode ser limitado e, portanto, a recursão profunda pode levar a um erro de tempo de execução.
-  Em particular, o compilador e o tempo de execução do Q # não identificam e otimizam a recursão da cauda.
+  Em particular, o Q# compilador e o tempo de execução não identificam e otimizam a recursão de cauda.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Saiba mais sobre [variáveis](xref:microsoft.quantum.guide.variables) em Q #.
+Saiba mais sobre [variáveis](xref:microsoft.quantum.guide.variables) no Q# .

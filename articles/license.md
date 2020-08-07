@@ -4,12 +4,15 @@ description: Termos de licença, isenções de responsabilidade e direitos de us
 author: QuantumWriter
 ms.author: cpalmer
 ms.date: 11/04/2019
-ms.openlocfilehash: 0d3aa9ae9e4f232ba2403512ff6e2394ecedeb22
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 33b36e5619c62c9e2306441f55b244caa3214e98
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907113"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866716"
 ---
 # <a name="microsoft-software-license-terms"></a>TERMOS DE LICENÇA PARA SOFTWARE MICROSOFT 
 ## <a name="microsoft-quantum-development-kit-preview"></a>KIT DE DESENVOLVIMENTO DO MICROSOFT QUANTUM (VERSÃO PRÉVIA)
@@ -21,11 +24,11 @@ ms.locfileid: "77907113"
 
 * * *
 
-Estes termos de licença constituem um contrato entre você e a Microsoft Corporation (ou uma de suas afiliadas). Eles se aplicam ao software de pré-lançamento nomeado acima e quaisquer atualizações de software ou serviços da Microsoft (exceto na medida em que esses serviços ou atualizações são acompanhados por termos novos ou adicionais, caso em que esses termos diferentes se aplicam com potencial e não alteram seu ou os direitos da Microsoft relacionados a softwares ou serviços previamente atualizados).
+Estes termos de licença constituem um contrato entre você e a Microsoft Corporation (ou uma de suas afiliadas). Eles se aplicam ao software de pré-lançamento nomeado acima e quaisquer atualizações de software ou serviços da Microsoft (exceto na medida em que esses serviços ou atualizações são acompanhados por termos novos ou adicionais, caso em que esses termos diferentes se aplicam com potencial e não alteram os direitos de seus ou da Microsoft relacionados a softwares ou serviços previamente atualizados).
 
-SE VOCÊ CUMPRIR ESTES TERMOS DE LICENÇA, TERÁ OS DIREITOS DESCRITOS ABAIXO. O USO DO SOFTWARE REPRESENTA A SUA ACEITAÇÃO DESTES TERMOS.
+SE VOCÊ CUMPRIR ESTES TERMOS DE LICENÇA, TERÁ OS DIREITOS DESCRITOS ABAIXO. AO USAR O SOFTWARE, VOCÊ ACEITA ESTES TERMOS.
 
-1. **DIREITOS DE INSTALAÇÃO E DE UTILIZAÇÃO.**
+1. **DIREITOS DE INSTALAÇÃO E USO.**
 
      a. **Geral**. Você só pode usar o software Microsoft Quantum Development Kit (versão prévia) para ajudá-lo a desenvolver e testar seus aplicativos.
 
@@ -42,9 +45,9 @@ SE VOCÊ CUMPRIR ESTES TERMOS DE LICENÇA, TERÁ OS DIREITOS DESCRITOS ABAIXO. O
 1. **software de pré-lançamento**. O software é uma versão de pré-lançamento. Ele pode não funcionar corretamente. Ele pode ser diferente da versão liberada comercialmente.
 
 
-1. **Comentários**. Se você fornecer comentários sobre o software à Microsoft, concederá à Microsoft, sem encargos, o direito de usar, compartilhar e comercializar seus comentários de qualquer forma e para qualquer finalidade. Você não fornecerá comentários que estejam sujeitos a uma licença que exija que a Microsoft licencie seu software ou sua documentação para terceiros devido à inclusão de seus comentários nele por parte da Microsoft. Esses direitos sobrevivem a este contrato.
+1. **COMENTÁRIOS**. Caso você forneça comentários sobre o software à Microsoft, você concederá à Microsoft, sem custos adicionais, o direito de usar, compartilhar e comercializar seus comentários de qualquer forma e para qualquer finalidade. Você não fornecerá comentários que estejam sujeitos a uma licença que exija que a Microsoft licencie seu software ou sua documentação para terceiros devido à inclusão de seus comentários nele por parte da Microsoft. Esses direitos permanecerão em vigor após este contrato.
 
-1. **coleta de dados**. O software poderá coletar informações sobre você e seu uso do software e enviá-las à Microsoft. A Microsoft poderá usar essas informações para fornecer serviços e aprimorar os produtos e serviços da Microsoft. Seus direitos de recusa, se houver, são descritos na documentação do produto. Alguns recursos do software poderão habilitar a coleta de dados de usuários dos aplicativos que acessam ou usam o software. Se você usar esses recursos para habilitar a coleta de dados em seus aplicativos, você deverá cumprir a lei aplicável, incluindo obter o consentimento do usuário necessário e manter uma política de privacidade importante que informe com precisão os usuários sobre como usar, coletar e compartilhar seus dados. É possível saber mais sobre a coleta e o uso de dados pela Microsoft na documentação do produto e na Política de Privacidade da Microsoft em https://go.microsoft.com/fwlink/?LinkId=521839. Você concorda em cumprir todas as disposições aplicáveis da Política de Privacidade da Microsoft.
+1. **coleta de dados**. O software poderá coletar informações sobre você e seu uso do software e enviá-las à Microsoft. A Microsoft poderá usar essas informações para fornecer serviços e aprimorar os produtos e serviços da Microsoft. Seus direitos de recusa, se houver, são descritos na documentação do produto. Alguns recursos do software poderão habilitar a coleta de dados de usuários dos aplicativos que acessam ou usam o software. Se você usar esses recursos para habilitar a coleta de dados em seus aplicativos, você deverá cumprir a lei aplicável, incluindo obter o consentimento do usuário necessário e manter uma política de privacidade importante que informe com precisão os usuários sobre como usar, coletar e compartilhar seus dados. É possível saber mais sobre a coleta e o uso de dados pela Microsoft na documentação do produto e na Política de Privacidade da Microsoft em https://go.microsoft.com/fwlink/?LinkId=521839. Você concorda em cumprir todas as cláusulas aplicáveis da Política de Privacidade da Microsoft.
 
 1. **escopo da licença** O software é licenciado, não vendido. A Microsoft se reserva todos os outros direitos. A menos que a legislação aplicável lhe conceda mais direitos apesar dessa limitação, você não poderá (não terá direito a):
 
@@ -70,7 +73,7 @@ SE VOCÊ CUMPRIR ESTES TERMOS DE LICENÇA, TERÁ OS DIREITOS DESCRITOS ABAIXO. O
 
 1. **lei aplicável e lugar para resolver as CONtestações**. Se você adquiriu o software nos Estados Unidos ou no Canadá, as leis do estado em que você mora (ou, caso você seja uma empresa, o local de sua sede) regem a interpretação deste contrato, as indenizações por sua violação e todas as outras reivindicações (incluindo proteção ao consumidor, concorrência desleal e pedidos de indenização), independentemente de conflito com os princípios legais, exceto pelo fato de a FAA controlar tudo relacionado a arbitragem. Se você adquiriu o software em qualquer outro país, as leis desse país serão aplicáveis, exceto pelo fato de a FAA controlar tudo relacionado a arbitragem. Se existir uma jurisdição federal dos Estados Unidos, você e a Microsoft concordarão com a jurisdição exclusiva e com o foro do tribunal federal de King County, Washington para todos os litígios ouvidos no tribunal (excluindo arbitragem). Caso contrário, você e a Microsoft aceitam como foro competente e exclusivo o Tribunal Superior localizado em King County, Washington, EUA em todos os litígios apresentados em tribunal (excluindo a arbitragem).
 
-1. **direitos de consumidor; VARIAÇÕES regionais**. Este contrato descreve alguns direitos legais. Você poderá ter outros direitos, incluindo os direitos de consumidor, nos termos da lei do seu estado ou país. Separadamente e além da sua relação com a Microsoft, você também poderá ter direitos com relação à parte de quem você adquiriu o software. Este contrato não alterará esses outros direitos se as leis do seu estado ou país não permitirem essa alteração. Por exemplo, se você tiver adquirido o software em uma das regiões abaixo ou se for aplicável a lei obrigatória do país, as seguintes disposições serão aplicáveis a você:
+1. **direitos de consumidor; VARIAÇÕES regionais**. Este contrato descreve determinados direitos legais. Você poderá ter outros direitos, incluindo os direitos de consumidor, nos termos da lei do seu estado ou país. Separadamente e além da sua relação com a Microsoft, você também poderá ter direitos com relação à parte de quem você adquiriu o software. Este contrato não alterará esses outros direitos se as leis do seu estado ou país não permitirem essa alteração. Por exemplo, se você tiver adquirido o software em uma das regiões abaixo ou se for aplicável a lei obrigatória do país, as seguintes disposições serão aplicáveis a você:
 
     a. **Austrália**. Você tem garantias estatutárias nos termos da Lei do Consumidor Australiana e nada neste contrato tem como objetivo afetar tais direitos.
 
@@ -82,7 +85,7 @@ SE VOCÊ CUMPRIR ESTES TERMOS DE LICENÇA, TERÁ OS DIREITOS DESCRITOS ABAIXO. O
 <p style="margin-left: 60px">Sujeito à cláusula ii. precedente, a Microsoft somente será responsável por negligência leve se ela violar tais obrigações contratuais materiais, cujo cumprimento facilite o desempenho de vencimento do contrato, violação que poderia colocar em risco o objetivo deste contrato com cuja conformidade uma parte está constantemente a contar (as chamadas "obrigações fundamentais"). A Microsoft não será responsável em todos os outros casos de negligência ligeira.</p>
 
 <blockquote>
-<p>14. <strong>isenção de garantia. O SOFTWARE É LICENCIADO "NO ESTADO EM QUE SE ENCONTRA". VOCÊ ASSUME O RISCO DE USÁ-LO. A MICROSOFT NÃO OFERECE GARANTIAS, GARANTIAS OU CONDIÇÕES EXPRESSAS. ATÉ o limite permitido pelas leis aplicáveis, a MICROSOFT exclui todas as garantias IMPLÍCITAs, incluindo comercialização, adequação a uma finalidade específica e não violação.</strong>
+<p>14. <strong>ISENÇÃO DE GARANTIA. O SOFTWARE É LICENCIADO "NO ESTADO EM QUE SE ENCONTRA". VOCÊ ASSUME O RISCO DE USÁ-LO. A MICROSOFT NÃO OFERECE GARANTIAS, GARANTIAS OU CONDIÇÕES EXPRESSAS. ATÉ O LIMITE PERMITIDO PELAS LEIS APLICÁVEIS, A MICROSOFT EXCLUI TODAS AS GARANTIAS IMPLÍCITAS, INCLUINDO COMERCIALIZAÇÃO, ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA E NÃO VIOLAÇÃO.</strong>
 
 <p>15. <strong>LIMITAÇÃO E EXCLUSÃO DE DANOS. SE VOCÊ TIVER QUALQUER BASE PARA RECUPERAR DANOS, APESAR DO AVISO DE ISENÇÃO DE RESPONSABILIDADE ANTERIOR, VOCÊ PODERÁ RECUPERAR DA MICROSOFT E DE SEUS FORNECEDORES APENAS DANOS DIRETOS ATÉ OS EUA $5. VOCÊ NÃO PODE RECUPERAR NENHUM OUTRO DANO, INCLUINDO DANOS CONSEQUENCIAIS, LUCROS CESSANTES, ESPECIAIS, INDIRETOS OU INCIDENTAIS.</strong>
 

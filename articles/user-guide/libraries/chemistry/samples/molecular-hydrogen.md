@@ -1,17 +1,20 @@
 ---
 title: Obter estimativas do nível de energia
-description: 'Percorra um programa de exemplo Q # que estima os valores de nível de energia de molecular Hydrogen.'
+description: Percorra um programa de exemplo Q# que estima os valores de nível de energia de molecular Hydrogen.
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: b26538980366cf4cbe01fc2ef59580ae182f1e8a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871552"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869198"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Obter estimativas do nível de energia
 Estimar os valores dos níveis de energia é um dos principais aplicativos da quantum química. Este artigo descreve como você pode executar isso para o exemplo canônico de molecular Hydrogen. O exemplo referenciado nesta seção está [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) no repositório de exemplos de química. Um exemplo mais visual que plota a saída é a [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) demonstração.
@@ -121,7 +124,7 @@ operation GetEnergyByTrotterization (
 }
 ```
 
-Agora você pode invocar o código Q # do programa host. O código C# a seguir cria um simulador de estado completo e é executado `GetEnergyByTrotterization` para obter a energia de estado terrestre.
+Agora você pode invocar o Q# código do programa host. O código C# a seguir cria um simulador de estado completo e é executado `GetEnergyByTrotterization` para obter a energia de estado terrestre.
 
 ```csharp
 using (var qsim = new QuantumSimulator())
