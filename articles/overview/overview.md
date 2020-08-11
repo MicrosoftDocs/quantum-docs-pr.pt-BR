@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 05/05/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.introduction
-ms.openlocfilehash: 7c55420bd35f9b6e0e7ec80ddffe8a861cb7df39
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 59cb595ac207d6e84358fc6ba742e0e0019c76f9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430774"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866971"
 ---
 # <a name="introduction-to-quantum-computing-and-the-quantum-development-kit"></a>Introdução à computação quântica e ao Quantum Development Kit
 
@@ -62,7 +65,7 @@ O machine learning em computadores clássicos está revolucionando o mundo da ci
 
 O Quantum Development Kit é fornecido com a [biblioteca de machine learning quântico](xref:microsoft.quantum.machine-learning.concepts.intro), que permite executar experimentos híbridos de machine learning quântico/clássico. A biblioteca inclui amostras e tutoriais e fornece as ferramentas necessárias para implementar um novo algoritmo quântico-clássico híbrido, o classificador quântico centrado em circuito, para resolver problemas de classificação supervisionados.
 
-## <a name="q-and-the-microsoft-quantum-development-kit-qdk"></a>Q# e o Microsoft QDK (Quantum Development Kit)
+## <a name="no-locq-and-the-microsoft-quantum-development-kit-qdk"></a>Q# e o Microsoft QDK (Quantum Development Kit)
 
 O Q# é a linguagem de programação de software livre da Microsoft para o desenvolvimento e a execução de algoritmos quânticos. Ele faz parte do [QDK](https://docs.microsoft.com/quantum/), um kit de desenvolvimento completo para o Q#, que pode ser usado com ferramentas e linguagens padrão para desenvolver aplicativos quânticos que podem ser executados em vários ambientes, incluindo o simulador quântico completo de estado integral interno.
 
@@ -74,7 +77,7 @@ A documentação inclui um guia da linguagem Q#, tutoriais e um código de exemp
 
 ## <a name="microsoft-quantum-hardware-partners"></a>Parceiros de hardware quântico da Microsoft
 
-A Microsoft está fazendo uma parceria com empresas de hardware quântico para fornecer aos desenvolvedores o acesso à nuvem ao hardware quântico. Aproveitando a plataforma [Azure Quantum](https://azure.microsoft.com/services/quantum/) e a linguagem Q#, os desenvolvedores poderão explorar algoritmos quânticos e executar os programas quânticos em diferentes tipos de hardware quântico.
+A Microsoft está fazendo uma parceria com empresas de hardware quântico para fornecer aos desenvolvedores o acesso à nuvem ao hardware quântico. Com a plataforma [Azure Quantum](https://azure.microsoft.com/services/quantum/) e a linguagem Q#, os desenvolvedores poderão explorar algoritmos quânticos e executar os programas quânticos em diferentes tipos de hardware quântico.
 
 A [IonQ](https://ionq.com/news/november-4-2019-microsoft-partnership) e a [Honeywell](https://www.honeywell.com/en-us/newsroom/news/2019/11/the-future-of-quantum-computing) usam processadores **baseados em íon capturados**, utilizando íons individuais capturados em um campo eletrônico, enquanto a [QCI](https://quantumcircuits.com/news-and-publications/quantum-circuits-partners-with-microsoft-on-azure-quantum) usa circuitos supercondutores.
 

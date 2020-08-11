@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
-ms.openlocfilehash: 2f5345504ba31211c97493e78af1563d575881e4
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 299baea75865a4f0ece6b490cef3301dd2a672ac
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327740"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867702"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>Computadores e simuladores quantum
 
@@ -40,7 +43,7 @@ O recurso de qubits topológicos aumentou a estabilidade e a resistência ao ru�
 
 ## <a name="microsoft-and-quantum-hardware-partnerships"></a>Parcerias da Microsoft com fabricantes de hardware quântico
 
-A Microsoft está fazendo uma parceria com os fabricantes de hardware quântico IonQ, Honeywell e QCI para tornar os computadores quânticos acessíveis aos desenvolvedores no futuro. Aproveitando a plataforma Azure Quantum, os desenvolvedores poderão usar o QDK (Quantum Development Kit) da Microsoft e o Q# para escrever programas quânticos e executá-los remotamente.
+A Microsoft está fazendo uma parceria com os fabricantes de hardware quântico IonQ, Honeywell e QCI para tornar os computadores quânticos acessíveis aos desenvolvedores no futuro. Com a plataforma Azure Quantum, os desenvolvedores poderão usar o QDK (Quantum Development Kit) da Microsoft e o Q# para escrever programas quânticos e executá-los remotamente.
 
 ## <a name="quantum-computations"></a>Cálculos quânticos
 
@@ -54,7 +57,7 @@ A execução de cálculos em um computador quântico ou um simulador quântico s
 A inicialização e a transformação de qubits são feitas por meio de **operações quânticas** (às vezes chamadas de portas quânticas). As operações quânticas são semelhantes às operações lógicas na computação clássica, como AND, OR, NOT e XOR. Uma operação pode ser tão básica quanto a inversão de um estado de qubit de 1 para 0 ou o emaranhamento um par de qubits e tão complexa quanto o uso de várias operações em série para afetar a probabilidade de colapso de um qubit superposto de uma forma ou de outra.
 
 > [!NOTE] 
-> As [bibliotecas Q#](xref:microsoft.quantum.libraries) fornecem operações internas que definem combinações complexas de operações quânticas de nível inferior. Use as operações da biblioteca para transformar qubits e criar operações mais complexas definidas pelo usuário.  
+> As bibliotecas [Q#](xref:microsoft.quantum.libraries) fornecem operações internas que definem combinações complexas de operações quânticas de nível inferior. Use as operações da biblioteca para transformar qubits e criar operações mais complexas definidas pelo usuário.  
 
 A medição do resultado do cálculo nos informa uma resposta, mas em alguns algoritmos quânticos, não necessariamente a resposta correta. Como o resultado de alguns algoritmos quânticos é baseado na probabilidade que foi configurada pelas operações quânticas, esses cálculos são executados várias vezes para obter uma distribuição de probabilidade e refinar a precisão dos resultados.  A garantia de que uma operação retornou uma resposta correta é conhecida como verificação quântica e é um desafio significativo na computação quântica.
 

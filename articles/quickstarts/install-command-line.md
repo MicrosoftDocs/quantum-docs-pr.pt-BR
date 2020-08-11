@@ -6,14 +6,17 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 3d70838289e72afdd0a48bbdff0bec407428d125
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871426"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867600"
 ---
-# <a name="develop-with-q-command-line-applications"></a>Desenvolver com aplicativos de linha de comando do Q#
+# <a name="develop-with-no-locq-command-line-applications"></a>Desenvolver com aplicativos de linha de comando do Q#
 
 Os programas Q# podem ser executados por conta própria, sem um driver em uma linguagem de host como C#, F# ou Python.
 
@@ -23,7 +26,7 @@ Os programas Q# podem ser executados por conta própria, sem um driver em uma li
 
 ## <a name="installation"></a>Instalação
 
-Embora você possa compilar aplicativos de linha de comando do Q# em qualquer IDE, recomendamos usar o VS Code (Visual Studio Code) ou o IDE do Visual Studio para desenvolver seus aplicativos Q# localmente. Para desenvolvimento na nuvem por meio do navegador da Web, recomendamos o Codespaces do Visual Studio. O desenvolvimento nesses ambientes inclui a funcionalidade sofisticada da extensão do QDK, que inclui avisos, realce de sintaxe, modelos de projeto e muito mais. 
+Embora seja possível compilar aplicativos de linha de comando do Q# em qualquer IDE, é recomendável usar o VS Code (Visual Studio Code) ou o IDE do Visual Studio para desenvolver aplicativos Q# localmente. Para desenvolvimento na nuvem por meio do navegador da Web, recomendamos o Codespaces do Visual Studio. O desenvolvimento nesses ambientes inclui a funcionalidade sofisticada da extensão do QDK, que inclui avisos, realce de sintaxe, modelos de projeto e muito mais. 
 
 Para configurar o VS Code:
 
@@ -48,7 +51,7 @@ Para instalar o QDK para outro ambiente, digite na linha de comando:
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
-## <a name="develop-with-q"></a>Desenvolver com Q #
+## <a name="develop-with-no-locq"></a>Desenvolver com Q#
 
 Siga as instruções na guia correspondente ao seu ambiente.
 
@@ -61,7 +64,7 @@ Para criar um projeto:
 3. Navegue até o local para salvar o projeto e clique em **Criar Projeto**.
 4. Quando o projeto for criado com êxito, clique em **Abrir novo projeto...** no canto inferior direito.
         
-Inspecione o projeto. Você verá um arquivo de origem chamado `Program.qs`, que é um programa Q# que define uma operação simples para imprimir uma mensagem no console.
+Inspecione o projeto. Você verá um arquivo de origem chamado `Program.qs`, um programa Q# que define uma operação simples para imprimir uma mensagem no console.
 
 Para executar o aplicativo:
 1. Clique em **Terminal** -> **Novo Terminal**.
@@ -70,19 +73,19 @@ Para executar o aplicativo:
 
 
 > [!NOTE]
-> No momento, não há suporte para workspaces com várias pastas raiz na extensão do Q# para VS Code. Caso você tenha vários projetos em um workspace do VS Code, todos os projetos precisarão estar contidos na mesma pasta raiz.
+> No momento, não há compatibilidade com workspaces com várias pastas raiz na extensão do Q# para VS Code. Caso você tenha vários projetos em um workspace do VS Code, todos os projetos precisarão estar contidos na mesma pasta raiz.
 
 ### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs)
 
 Verifique sua instalação do Visual Studio criando um aplicativo Q# `Hello World`.
 
-Para criar um aplicativo Q#:
+Para criar um novo aplicativo Q#:
 1. Abra o Visual Studio e clique em **Arquivo** -> **Novo** -> **Projeto**.
 2. Digite `Q#` na caixa de pesquisa, selecione **Aplicativo Q#** e clique em **Avançar**.
 3. Insira um nome e um local para o aplicativo e clique em **Criar**.
 
 
-Inspecione o projeto. Você verá um arquivo de origem chamado `Program.qs`, que é um programa Q# que define uma operação simples para imprimir uma mensagem no console.
+Inspecione o projeto. Você verá um arquivo de origem chamado `Program.qs`, um programa Q# que define uma operação simples para imprimir uma mensagem no console.
 
 Para executar o aplicativo:
 1. Selecione **Depurar** -> **Iniciar Sem Depuração**.

@@ -1,17 +1,20 @@
 ---
 title: Simulador de rastreamento quântico – Quantum Development Kit
-description: Aprenda a usar o simulador de rastreamento de computador do Microsoft Quantum para depurar código clássico e estimar os requisitos de recursos de um programa Q#.
+description: Aprenda a usar o simulador de rastreamento do computador quântico da Microsoft para depurar código clássico e estimar os requisitos de recursos de um programa Q#.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: c01f01973ea08153cbfa35d87a588a4eae46f1b7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5d5efef037ff236bd040dfd88e94f7f3dd331aef
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871103"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868212"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Simulador de rastreamento quântico do Microsoft QDK (Quantum Development Kit)
 
@@ -22,7 +25,7 @@ A classe QDK <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCT
 
 ## <a name="invoking-the-quantum-trace-simulator"></a>Invocando o simulador de rastreamento quântico
 
-Você pode usar o simulador de rastreamento quântico para executar qualquer operação Q#.
+É possível usar o simulador de rastreamento quântico para executar qualquer operação Q#.
 
 Assim como acontece com outros computadores de destino, primeiramente você cria uma instância da classe `QCTraceSimulator` e, em seguida, passa-a como o primeiro parâmetro do método `Run` de uma operação.
 
@@ -91,7 +94,7 @@ Cada uma dessas ferramentas é habilitada definindo sinalizadores apropriados no
 
 ## <a name="qctracesimulator-methods"></a>Métodos QCTraceSimulator
 
-O `QCTraceSimulator` tem vários métodos internos para recuperar os valores das métricas rastreadas durante uma operação quântica. Exemplos dos métodos [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) e [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) podem ser encontrados nos artigos [Contador de operações primitivo](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Contador de profundidade](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) e [Contador de largura](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter). Para obter mais informações sobre todos os métodos disponíveis, confira [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) na referência da API do Q#.  
+O `QCTraceSimulator` tem vários métodos internos para recuperar os valores das métricas rastreadas durante uma operação quântica. Exemplos dos métodos [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) e [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) podem ser encontrados nos artigos [Contador de operações primitivo](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Contador de profundidade](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) e [Contador de largura](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter). Para saber mais sobre todos os métodos disponíveis, confira [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) na referência da API do Q#.  
 
 ## <a name="see-also"></a>Confira também
 

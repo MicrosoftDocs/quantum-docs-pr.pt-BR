@@ -6,16 +6,19 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: c81226ba3e50b65cb1012e885866bd6fcc3764d7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 77401ca3642b89d708f338f852dc60bf7346b87b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871154"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868297"
 ---
 # <a name="quantum-simulators"></a>Simuladores quânticos
 
-Os simuladores quânticos são programas de software executados em computadores clássicos e agem como um *computador de destino* para um programa Q#, possibilitando executar e testar programas quânticos em um ambiente que prevê como os qubits reagirão a diferentes operações. Este artigo descreve quais simuladores quânticos estão incluídos no QDK (Quantum Development Kit) e maneiras diferentes de passar um programa Q# para os simuladores quânticos, por exemplo, por meio da linha de comando ou usando o código de driver escrito em uma linguagem clássica.  
+Simuladores quânticos são programas de software executados em computadores clássicos e atuam como um *computador de destino* para um programa Q#. Assim, é possível executar e testar programas quânticos em um ambiente que prevê como os qubits reagem a diferentes operações. Este artigo descreve os simuladores quânticos incluídos no QDK (Quantum Development Kit) e maneiras diferentes de passar um programa Q# para os simuladores quânticos, por exemplo, por meio da linha de comando ou usando o código de driver escrito em uma linguagem clássica.  
 
 
 
@@ -41,14 +44,14 @@ O QDK inclui várias classes de computadores quânticos, todas definidas no name
 
 ## <a name="invoking-the-quantum-simulator"></a>Invocando o simulador quântico
 
-Em [Maneiras de executar um programa Q#](xref:microsoft.quantum.guide.host-programs), três maneiras de passar o código Q# para o simulador quântico são demonstradas: 
+Em [Maneiras de executar um Q# programa](xref:microsoft.quantum.guide.host-programs), três modos de passar o código Q# para o simulador quântico são demonstrados: 
 
 * Usando a linha de comando
 * Usando um programa de host em Python
 * Usando um programa de host em C#
 
-Os computadores quânticos são instâncias de classes .NET normais e, portanto, são criadas invocando o construtor delas, assim como qualquer classe .NET. A forma como você faz isso depende de como você executa o programa Q#.
+Os computadores quânticos são instâncias de classes .NET normais e, portanto, são criadas invocando o construtor delas, assim como qualquer classe .NET. O procedimento depende de como você executa o programa Q#.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-* Para obter detalhes sobre como invocar computadores de destino para programas Q# em ambientes diferentes, confira [Maneiras de executar um programa Q#](xref:microsoft.quantum.guide.host-programs).
+* Para saber detalhes sobre como invocar computadores de destino para programas Q# em ambientes distintos, confira [Maneiras de executar um Q# programa](xref:microsoft.quantum.guide.host-programs).
