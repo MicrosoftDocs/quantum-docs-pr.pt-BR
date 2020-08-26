@@ -53,9 +53,9 @@ functions:
 - uid: microsoft.quantum.math.complexpolarascomplex
   summary: Converte um número complexo de tipo `ComplexPolar` em um número complexo de tipo `Complex` .
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: Localiza a fração contínua Convergent mais próxima de `fraction` com o denominador menor ou igual a`denominatorBound`
+  summary: Localiza a fração contínua Convergent mais próxima de `fraction` com o denominador menor ou igual a `denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: Localiza a fração contínua Convergent mais próxima de `fraction` com o denominador menor ou igual a`denominatorBound`
+  summary: Localiza a fração contínua Convergent mais próxima de `fraction` com o denominador menor ou igual a `denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: Retorna o cosseno do ângulo especificado.
 - uid: microsoft.quantum.math.cosh
@@ -243,17 +243,17 @@ newtypes:
 summary: " # <a name=\"summary\"></a>Resumo\n Esse namespace contém funções matemáticas clássicas e tipos de dados."
 operations:
 - uid: microsoft.quantum.math.randomint
-  summary: Gera um número inteiro aleatório de amostra uniforme maior ou igual a zero e menor que um limite superior fornecido.
+  summary: "\n> [!WARNING]\n> Preterido\n\nRandomInt foi preterido. Use @\"microsoft.quantum.random.drawrandomint\" em seu lugar."
 - uid: microsoft.quantum.math.randomintpow2
-  summary: Gera um inteiro aleatório de amostra uniforme de todos os inteiros que podem ser representados em um determinado número de bits.
+  summary: "\n> [!WARNING]\n> Preterido\n\nRandomIntPow2 foi preterido. Use @\"microsoft.quantum.random.drawrandomint\" em seu lugar."
 - uid: microsoft.quantum.math.randomreal
-  summary: Retorna um número real aleatório no intervalo maior ou igual a zero e menor que um.
+  summary: "\n> [!WARNING]\n> Preterido\n\nRandomReal foi preterido. Use @\"microsoft.quantum.random.drawrandomdouble\" em seu lugar."
 - uid: microsoft.quantum.math.randomsinglequbitpauli
-  summary: Retorna um dos operadores de Pauli de qubit única de forma uniforme em aleatório.
+  summary: "\n> [!WARNING]\n> Preterido\n\nRandomSingleQubitPauli foi preterido. Use @\"microsoft.quantum.random.drawrandompauli\" em seu lugar."
 metadata:
-  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 9df4513399d0b2d1ac534c7ba106189483ef49cc
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326482"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863059"

@@ -9,20 +9,20 @@ uid: microsoft.quantum.libraries.using
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ef88ca765a394a7092eb0a60bf6f3615c082ef6a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c558e25bf0d906ba6480cd7c41d3ece4ea97c2d1
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869572"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863077"
 ---
 # <a name="using-additional-no-locq-libraries"></a>Usando Q# bibliotecas adicionais
 
 O kit de desenvolvimento Quantum fornece funcionalidade adicional específica de domínio por meio de _pacotes NuGet_ que podem ser adicionados aos seus Q# projetos.
 
-| Q#Biblioteca  | Pacote NuGet | Observações |
+| Q# Biblioteca  | Pacote NuGet | Observações |
 |---------|---------|--------|
-| [Q#biblioteca padrão](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft. Quantum. Standard**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Incluído por padrão |
+| [Q# biblioteca padrão](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft. Quantum. Standard**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Incluído por padrão |
 | [Biblioteca de química do Quantum](xref:microsoft.quantum.chemistry.concepts.intro) | [**Microsoft.Quantum.Chemistry**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) | |
 | [Biblioteca de numéricos do Quantum](xref:microsoft.quantum.numerics.intro) | [**Microsoft. Quantum. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) | |
 | [Biblioteca de aprendizado de máquina quântico](xref:microsoft.quantum.libraries.machine-learning.intro) | [**Microsoft.Quantum.MachineLearning**](https://www.nuget.org/packages/Microsoft.Quantum.MachineLearning) | |
@@ -33,9 +33,9 @@ Depois de instalar o kit de desenvolvimento Quantum para uso com seu ambiente e 
 > Algumas Q# bibliotecas podem funcionar bem com ferramentas adicionais que funcionam junto Q# com seus programas ou que se integram aos seus aplicativos host.
 > Por exemplo, as [instruções de instalação da biblioteca do química](xref:microsoft.quantum.chemistry.concepts.installation) descrevem como usar o [pacote **Microsoft. Quantum. química** ](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) junto com a plataforma química computacional NWChem e como instalar as `qdk-chem` ferramentas de linha de comando para trabalhar com dados de química do Quantum.
 
-## <a name="no-locq-command-line-applications-or-net-interopability"></a>[Q#aplicativos de linha de comando ou interoperabilidade do .NET](#tab/tabid-csproj)
+## <a name="no-locq-applications-or-net-interopability"></a>[Q# aplicativos ou interoperabilidade do .NET](#tab/tabid-csproj)
 
-**Linha de comando ou Visual Studio Code:** Usando a linha de comando por conta própria ou de dentro Visual Studio Code, você pode usar o `dotnet` comando para adicionar uma referência de pacote NuGet ao seu projeto.
+**Prompt de comando ou Visual Studio Code:** Usando o prompt de comando por conta própria ou de dentro de Visual Studio Code, você pode usar o `dotnet` comando para adicionar uma referência de pacote NuGet ao seu projeto.
 Por exemplo, para adicionar o pacote [**Microsoft. Quantum. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) , execute o seguinte comando:
 
 ```dotnetcli
@@ -54,7 +54,7 @@ Para obter mais detalhes, consulte o [Guia de interface do usuário do Gerenciad
 
 Como alternativa, você pode usar o console do Gerenciador de pacotes para adicionar a biblioteca de numéricos ao seu projeto por meio da interface de linha de comando.
 
-![Usar o console do Gerenciador de pacotes na linha de comando](~/media/vs2017-nuget-console-menu.png)
+![Usar o console do Gerenciador de pacotes no prompt de comando](~/media/vs2017-nuget-console-menu.png)
 
 No console do Gerenciador de pacotes, execute o seguinte:
 

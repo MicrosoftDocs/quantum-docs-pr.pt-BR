@@ -86,12 +86,7 @@ operations:
 
     > Esta operação usa a Convenção de sinal **oposta** de @"microsoft.quantum.intrinsic.r" e não inclui o fator de $1/2 $ incluído por @"microsoft.quantum.intrinsic.r1" .
 - uid: microsoft.quantum.intrinsic.random
-  summary: >-
-    A operação aleatória usa uma matriz de duplicatas como entrada e retorna um índice selecionado aleatoriamente para a matriz como um `Int` .
-
-    A probabilidade de selecionar um índice específico é proporcional ao valor do elemento de matriz nesse índice.
-
-    Os elementos de matriz que são iguais a zero são ignorados e seus índices nunca são retornados. Se qualquer elemento de matriz for menor que zero, ou se nenhum elemento de matriz for maior que zero, a operação falhará.
+  summary: "\n> [!WARNING]\n> Preterido\n\nO Random foi preterido. Use @\"microsoft.quantum.random.drawcategorical\" em seu lugar."
 - uid: microsoft.quantum.intrinsic.reset
   summary: Considerando um único qubit, o mede e garante que ele esteja no estado | 0 ⟩, de modo que ele possa ser liberado com segurança.
 - uid: microsoft.quantum.intrinsic.resetall
@@ -157,9 +152,9 @@ operations:
 
     \end{align}
 metadata:
-  ms.openlocfilehash: c0be1da035393f32fa2949214d79ecb8a4c5ccb3
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 87002c73fd66a4b05e690daec1bed37d09708118
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885227"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88862702"

@@ -8,12 +8,12 @@ uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fb7b5543ef9222e6bab2b1cbbc7e3ebb54863438
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1d2d092588e1a5c69d12e5d50377e3e26412c094
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867974"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863691"
 ---
 # <a name="ino-locq-magic-commands"></a>Q#Comandos mágicos
 
@@ -22,8 +22,10 @@ ms.locfileid: "87867974"
 - [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config): Permite a configuração ou consulta de opções de configuração.
 - [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate): Executa uma determinada função ou operação no computador de destino ResourcesEstimator.
 - [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic): Retorna uma lista de todos os comandos mágicos disponíveis no momento.
+- [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen): Lista namespaces abertos no momento e seus aliases.
 - [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package): Fornece a capacidade de carregar um pacote NuGet.
 - [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance): Relata as métricas de desempenho atuais para este kernel.
+- [`%project`](xref:microsoft.quantum.iqsharp.magic-ref.project): Fornece a capacidade de exibir ou adicionar Q# referências de projeto. 
 - [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate): Executa uma determinada função ou operação no computador de destino QuantumSimulator.
 - [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli): Executa uma determinada função ou operação no computador de destino ToffoliSimulator.
 - [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): Lista as Q# operações disponíveis na sessão atual.

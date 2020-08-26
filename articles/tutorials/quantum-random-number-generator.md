@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8db892091794cb1166e41744572d8938d975abf2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869759"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863618"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Tutorial: Implementar um gerador de número quântico aleatório em Q\#
 
@@ -23,11 +23,11 @@ Um exemplo simples de um algoritmo Quantum escrito em Q# é um gerador de númer
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - O Microsoft [Quantum development kit](xref:microsoft.quantum.install).
-- Crie um Q# projeto para o [usando Q# a partir da linha de comando](xref:microsoft.quantum.install.standalone)ou com um programa de host do [Python](xref:microsoft.quantum.install.python) ou um [programa de host C#](xref:microsoft.quantum.install.cs).
+- Crie um Q# projeto para um [ Q# aplicativo](xref:microsoft.quantum.install.standalone), com um [programa de host Python](xref:microsoft.quantum.install.python)ou um [programa de host C#](xref:microsoft.quantum.install.cs).
 
 ## <a name="write-a-no-locq-operation"></a>Gravar uma Q# operação
 
-### <a name="no-locq-operation-code"></a>Q#código da operação
+### <a name="no-locq-operation-code"></a>Q# código da operação
 
 1. Substitua o conteúdo do arquivo Program.qs pelo seguinte código:
 
@@ -64,13 +64,13 @@ Como o resultado da medição é completamente aleatório, obtivemos um bit alea
 
 ## <a name="creating-a-complete-random-number-generator"></a>Criar um gerador de número aleatório completo
 
-Agora que temos uma Q# operação que gera bits aleatórios, podemos usá-lo para criar um gerador de número aleatório de Quantum completo. Podemos usar os Q# aplicativos de linha de comando ou usar um programa de host.
+Agora que temos uma Q# operação que gera bits aleatórios, podemos usá-lo para criar um gerador de número aleatório de Quantum completo. Podemos usar um Q# aplicativo ou usar um programa host.
 
 
 
-### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Q#aplicativos de linha de comando com o Visual Studio ou o Visual Studio Code](#tab/tabid-qsharp)
+### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>[Q# aplicativos com Visual Studio ou Visual Studio Code](#tab/tabid-qsharp)
 
-Para criar o Q# aplicativo de linha de comando completo, adicione o seguinte ponto de entrada ao seu Q# programa: 
+Para criar o Q# aplicativo completo, adicione o seguinte ponto de entrada ao seu Q# programa: 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
@@ -92,13 +92,13 @@ Para as próximas execuções, não é necessário compilá-lo novamente. Para e
 dotnet run --no-build
 ```
 
-### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python com Visual Studio Code ou a linha de comando](#tab/tabid-python)
+### <a name="python-with-visual-studio-code-or-the-command-prompt"></a>[Python com Visual Studio Code ou o prompt de comando](#tab/tabid-python)
 
 Para executar o novo Q# programa do Python, salve o seguinte código como `host.py` :
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
-Em seguida, execute o programa host do Python na linha de comando:
+Em seguida, você pode executar o programa de host do Python no prompt de comando:
 
 ```bash
 $ python host.py
@@ -112,7 +112,7 @@ Para executar o novo Q# programa a partir do C#, modifique `Driver.cs` para incl
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 
-Em seguida, você pode executar o programa host C# na linha de comando (no Visual Studio, você deve pressionar F5):
+Em seguida, você pode executar o programa de host C# no prompt de comando (no Visual Studio, você deve pressionar F5):
 
 ```bash
 $ dotnet run
