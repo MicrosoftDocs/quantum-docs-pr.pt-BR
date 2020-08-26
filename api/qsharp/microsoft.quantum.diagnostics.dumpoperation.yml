@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.dumpoperation
+name: DumpOperation
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: Dada uma operação, exibe o diagnóstico sobre a operação disponibilizada pelo destino de execução atual.
+remarks: >-
+  Chamar esta operação não tem nenhum efeito observável de em Q #. Os diagnósticos exatos que são exibidos, se houver, dependem do ambiente de destino e do editor de execução atual.
+
+  Por exemplo, quando usado no simulador de Quantum de estado completo, é exibida uma matriz unitário usada para representar `op` .
+
+
+  Observe que, quando executado em simuladores que admitem uma ambiguidade de fase global (por exemplo: o simulador de estado completo), representações retornadas podem variar até uma fase global.
+
+
+  Da mesma forma, a ordenação de representações de matriz de linhas e colunas pode variar com as convenções usadas por cada simulador que dá suporte a essa operação.
+examples: >-
+  Quando executado no destino do simulador do Quantum, o trecho a seguir produzirá a matriz $ $ \begin{aligned} \left (\begin{Matrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \end{Matrix}\right) \end{aligned}.
+
+  $$
+
+
+  ```Q#
+
+  operation DumpCnot() : Unit {
+      DumpOperation(2, ApplyToFirstTwoQubitsCA(CNOT, _));
+  }
+
+  ```
+syntax: 'operation DumpOperation (nQubits : Int, op : (Qubit[] => Unit is Adj)) : Unit'
+input:
+  content: '(nQubits : Int, op : (Qubit[] => Unit is Adj))'
+  types:
+  - name: nQubits
+    summary: O número de qubits em que a operação fornecida funciona.
+    isPrimitive: true
+    uid: Int
+  - name: op
+    summary: A operação a ser diagnosticada.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+metadata:
+  ms.openlocfilehash: ba2e3c4dd42faa0919b5777a6db82ce787acb80a
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863879"
