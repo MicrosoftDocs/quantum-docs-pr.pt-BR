@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e44a366b7eea133499beb44dbb338a02174c0073
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: f1eca44dabd72cd107d72d3b9e3ad1081c19c27d
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863148"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992183"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Maneiras de executar um Q# programa
 
@@ -346,7 +346,7 @@ Multiple qubits:
 
 Por padrão, o `import qsharp` comando carrega todos os `.qs` arquivos na pasta atual e torna suas Q# operações e funções disponíveis para uso de dentro do script Python.
 
-Para carregar Q# o código de outra pasta, a [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) pode ser usada para adicionar uma referência a um `.csproj` arquivo para um Q# projeto (ou seja, um projeto que faz referência a `Microsoft.Quantum.Sdk` ).
+Para carregar Q# o código de outra pasta, a [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) pode ser usada para adicionar uma referência a um `.csproj` arquivo para um Q# projeto (ou seja, um projeto que faz referência a `Microsoft.Quantum.Sdk` ).
 Esse comando compilará todos os `.qs` arquivos na pasta que contém o `.csproj` e suas subpastas. Ele também carregará recursivamente todos os pacotes referenciados por meio `PackageReference` Q# do ou projetos referenciados por meio `ProjectReference` desse `.csproj` arquivo.
 
 Por exemplo, o seguinte código Python importa um projeto externo, referenciando seu caminho relativo à pasta atual e invoca uma de suas Q# operações:
@@ -365,7 +365,7 @@ Adding reference to project: ../qrng/Qrng.csproj
 Qrng result: 0
 ```
 
-Para carregar pacotes externos que contenham Q# código, use a [ `qsharp.packages` API](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages).
+Para carregar pacotes externos que contenham Q# código, use a [ `qsharp.packages` API](https://docs.microsoft.com/python/qsharp-core/qsharp.packages.packages).
 
 Se o Q# código na pasta atual depender de projetos ou pacotes externos, você poderá ver erros durante a execução `import qsharp` , já que as dependências ainda não foram carregadas.
 Para carregar os pacotes ou projetos externos necessários Q# durante o `import qsharp` comando, verifique se a pasta com o script Python contém um `.csproj` arquivo que faz referência a `Microsoft.Quantum.Sdk` . Nesse caso `.csproj` , adicione a propriedade `<IQSharpLoadAutomatically>true</IQSharpLoadAutomatically>` ao `<PropertyGroup>` . Isso instruirá Q# a carregar recursivamente qualquer `ProjectReference` item ou `PackageReference` encontrado no `.csproj` `import qsharp` comando.
