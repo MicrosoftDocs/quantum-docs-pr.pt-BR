@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866750"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863636"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Atualizar o Microsoft QDK (Quantum Development Kit)
 
@@ -37,7 +37,7 @@ Independentemente de você estar usando o C# ou o Python para hospedar operaçõ
     dotnet --version
     ```
 
-    Verifique se a saída é `3.1.100` ou superior. Caso contrário, instale a [última versão](https://dotnet.microsoft.com/download) e verifique novamente. Em seguida, siga as instruções abaixo, dependendo da configuração (o Visual Studio, o Visual Studio Code ou diretamente a linha de comando).
+    Verifique se a saída é `3.1.100` ou superior. Caso contrário, instale a [última versão](https://dotnet.microsoft.com/download) e verifique novamente. Em seguida, siga as instruções abaixo, dependendo da configuração (o Visual Studio, o Visual Studio Code ou diretamente no prompt de comando).
 
 ### <a name="update-no-locq-projects-in-visual-studio"></a>Atualizar projetos do Q# no Visual Studio
  
@@ -84,9 +84,9 @@ Agora acesse [Atualizar sua extensão do QDK no Visual Studio](#update-visual-st
 
 1. No Visual Studio Code, abra a pasta que contém o projeto a ser atualizado.
 2. Selecione **Terminal** -> **Novo Terminal**.
-3. Siga as instruções de atualização usando a linha de comando (diretamente abaixo).
+3. Siga as instruções de atualização usando o prompt de comando (diretamente abaixo).
 
-### <a name="update-no-locq-projects-using-the-command-line"></a>Atualizar projetos do Q# na linha de comando
+### <a name="update-no-locq-projects-using-the-command-prompt"></a>Atualizar projetos Q# no prompt de comando
 
 1. Navegue até a pasta que contém o arquivo de projeto principal.
 
@@ -309,7 +309,7 @@ Agora você pode usar o kernel do IQ# atualizado para executar os Jupyter Notebo
 
 1. Atualizar os modelos de projeto do Quantum para .NET
 
-    Na linha de comando:
+    No prompt de comando:
 
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates

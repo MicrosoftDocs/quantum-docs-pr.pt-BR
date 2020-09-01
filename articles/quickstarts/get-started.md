@@ -9,12 +9,12 @@ ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ff5eb9984da0b22a65f3919599ee18605a206fa0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 06198f3b5b806bab49abf9fca38b5d2f15cfb65f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867499"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863749"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Introdução ao QDK (Quantum Development Kit)
 
@@ -36,7 +36,7 @@ Para começar a usar o poder do quantum, experimente nossos tutoriais:
 * [Explorar o emaranhamento com o Q#](xref:microsoft.quantum.write-program): esse tutorial ajuda a escrever um programa Q# que demonstra alguns dos conceitos fundamentais da programação quântica.
     Caso não esteja tudo pronto para iniciar a codificação, você ainda poderá acompanhar sem instalar o QDK e ter uma visão geral da linguagem de programação Q# e dos primeiros conceitos da computação quântica.
 * [Algoritmo de pesquisa de Grover](xref:microsoft.quantum.quickstarts.search): explore este exemplo de programa Q# para ter uma ideia da capacidade do Q# de expressar o algoritmo quântico de modo a abstrair as operações quânticas de nível inferior.
-    Este tutorial descreverá o desenvolvimento do programa como um aplicativo de linha de comando Q# usando o Visual Studio ou o Visual Studio Code.
+    Este tutorial descreverá o desenvolvimento do programa como um aplicativo Q# usando o Visual Studio ou o Visual Studio Code.
 
 ### <a name="learning-further"></a>Aprenda ainda mais
 * Os [módulos do Microsoft Learn sobre computação quântica](https://docs.microsoft.com/learn/browse/?term=quantum) ensinarão você a dominar os principais conceitos de acordo com seu ritmo e com sua agenda. Aprenda os conceitos básicos de como criar programas quânticos com o QDK com o nosso [primeiro módulo](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/).
