@@ -2,13 +2,13 @@
 uid: microsoft.quantum.arithmetic.fixedpoint
 name: FixedPoint
 type: newtype
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Representa um registro da codificação qubits de um número de ponto fixo. Consiste em um inteiro que é igual ao número de qubits à esquerda do ponto binário, ou seja, qubits de peso maior ou igual a 1 e um registro Quantum.
 syntax: newtype FixedPoint = (Int, Qubit[]);
 metadata:
-  ms.openlocfilehash: a7dfac25f4a35bea5ef11cff090a8619f0457ce2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 003fdd7fbf4bf9e9d6252823e54c9fba0f0584e0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679629"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341999"
