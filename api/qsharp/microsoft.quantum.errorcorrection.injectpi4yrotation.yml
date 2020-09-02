@@ -2,15 +2,15 @@
 uid: microsoft.quantum.errorcorrection.injectpi4yrotation
 name: InjectPi4YRotation
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
   Gira um único qubit por π/4 sobre o eixo Y.
 
 
-  Executa uma rotação de π/4 `Y`sobre.
+  Executa uma rotação de π/4 sobre `Y` .
 
 
-  A rotação é executada consumindo um estado mágico; ou seja, uma cópia do estado $ $ \begin{align}{8} \cos\frac{\pi} \ket{0} + \sin \frac{\pi}{8} \ket.{1}
+  A rotação é executada consumindo um estado mágico; ou seja, uma cópia do estado $ $ \begin{align} \cos\frac{\pi} {8} \ket {0} + \sin \frac{\pi} {8} \ket {1} .
 
   \end{align} $ $
 remarks: >-
@@ -38,7 +38,7 @@ remarks: >-
   ```
 
 
-  Esta operação dá suporte `Adjoint` ao functor, caso em que o mesmo estado mágico é consumido, mas o efeito no qubit de dados é uma rotação de $-\ pi/4 $ $Y $.
+  Esta operação dá suporte ao `Adjoint` functor, caso em que o mesmo estado mágico é consumido, mas o efeito no qubit de dados é uma rotação de $-\ pi/4 $ $Y $.
 syntax: 'operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit'
 input:
   content: '(data : Qubit, magic : Qubit)'
@@ -48,7 +48,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: magic
-    summary: Um qubit inicialmente no estado mágico. O aplicativo a seguir dessa operação `magic` é retornado para o estado ${0}\ket $.
+    summary: Um qubit inicialmente no estado mágico. O aplicativo a seguir dessa operação `magic` é retornado para o estado $ \ket {0} $.
     isPrimitive: true
     uid: Qubit
 output:
@@ -59,9 +59,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: cb0efd896b4d8f9b4b81c061b644a1e2f7f74e96
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bf39fac578e364b5b228490484525f044d40b29d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684873"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336219"
