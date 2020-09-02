@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelserca
 name: ApplyIfElseRCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Aplica uma das duas operações de unitário, dependendo do valor de um resultado clássico.
 
 
-  Dado um resultado `result`, o aplica a `zeroOp` operação `zeroInput` com como sua entrada `result` quando é igual `Zero`a e se `oneOp(oneInput)` aplica `result == One`quando.
+  Dado um resultado `result` , o aplica a operação `zeroOp` com `zeroInput` como sua entrada quando `result` é igual a `Zero` e se aplica `oneOp(oneInput)` quando `result == One` .
 syntax: "operation ApplyIfElseRCA (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U))"
   types:
   - name: result
-    summary: O resultado da medida usado para determinar `zeroOp` se `oneOp` ou é aplicado.
+    summary: O resultado da medida usado para determinar se `zeroOp` ou `oneOp` é aplicado.
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: A operação unitário a ser aplicada quando `result == Zero`.
+    summary: A operação unitário a ser aplicada quando `result == Zero` .
     isOperation: true
     input:
       types:
@@ -31,11 +31,11 @@ input:
     - Adjoint
     - Controlled
   - name: zeroInput
-    summary: A entrada a ser fornecida a `zeroOp` quando `result == Zero`.
+    summary: A entrada a ser fornecida a `zeroOp` quando `result == Zero` .
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: A operação unitário a ser aplicada quando `result == One`.
+    summary: A operação unitário a ser aplicada quando `result == One` .
     isOperation: true
     input:
       types:
@@ -49,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: oneInput
-    summary: A entrada a ser fornecida a `oneOp` quando `result == One`.
+    summary: A entrada a ser fornecida a `oneOp` quando `result == One` .
     uid: "'U"
     isLocal: true
 output:
@@ -72,9 +72,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: a1182abedfbb4905ec65f5e720d82a1766aa5d65
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bc9f0b3b1504adf1a3ea435a7a4440c6509dd547
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672718"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350176"

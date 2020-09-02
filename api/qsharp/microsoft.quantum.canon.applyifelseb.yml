@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelseb
 name: ApplyIfElseB
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Aplica uma das duas operações, dependendo do valor de um bit clássico.
 
 
-  Dado um pouco `bit`, o aplica a `trueOp` operação `trueInput` com como sua entrada `bit` quando `true`está e se `falseOp(falseInput)` aplica `bit` quando `false`é.
+  Dado um pouco `bit` , o aplica a operação `trueOp` com `trueInput` como sua entrada quando `bit` está `true` e se aplica `falseOp(falseInput)` quando `bit` é `false` .
 syntax: "operation ApplyIfElseB (bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U))"
   types:
   - name: bit
-    summary: O valor booliano usado para determinar `trueOp` se `falseOp` ou é aplicado.
+    summary: O valor booliano usado para determinar se `trueOp` ou `falseOp` é aplicado.
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: A operação a ser aplicada quando `bit` é `true`.
+    summary: A operação a ser aplicada quando `bit` é `true` .
     isOperation: true
     input:
       types:
@@ -28,11 +28,11 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: trueInput
-    summary: A entrada a ser fornecida para `trueOp` quando `bit` é `true`.
+    summary: A entrada a ser fornecida para `trueOp` quando `bit` é `true` .
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: A operação a ser aplicada quando `bit` é `false`.
+    summary: A operação a ser aplicada quando `bit` é `false` .
     isOperation: true
     input:
       types:
@@ -43,7 +43,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: falseInput
-    summary: A entrada a ser fornecida para `falseOp` quando `bit` é `false`.
+    summary: A entrada a ser fornecida para `falseOp` quando `bit` é `false` .
     uid: "'U"
     isLocal: true
 output:
@@ -63,9 +63,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: cce5dba2473874f5af7c8cbb41a69ed6ba62e7c7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 756cfb829ce29e658641e9e7a4e42c626bce4798
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675025"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350414"
