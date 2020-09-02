@@ -4,15 +4,15 @@ name: Microsoft.Quantum.Oracles
 summary: " # <a name=\"summary\"></a>Resumo\n Esses namespaces fornecem tipos definidos pelo usuário para decorar vários tipos de Oracle por seu uso pretendido em algoritmos Quantum, como estimativa de fase e amplificação de amplitude."
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
-  summary: Converte um Oracle do tipo `StateOracle` em `DeterministicStateOracle`.
+  summary: Converte um Oracle do tipo `StateOracle` em `DeterministicStateOracle` .
 - uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
-  summary: Combina os Oracle `DeterministicStateOracle` e `ObliviousOracle`o.
+  summary: Combina os Oracle `DeterministicStateOracle` e o `ObliviousOracle` .
 - uid: microsoft.quantum.oracles.oracletodiscrete
   summary: Dada uma operação que representa uma "caixa preta" da Oracle, retorna um Oracle de tempo discreto que representa a "caixa preta" da Oracle repetida várias vezes.
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
   summary: Constrói a reflexão sobre um determinado estado de um Oracle.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
-  summary: Converte um Oracle do tipo `DeterministicStateOracle` em `StateOracle`.
+  summary: Converte um Oracle do tipo `DeterministicStateOracle` em `StateOracle` .
 newtypes:
 - uid: microsoft.quantum.oracles.continuousoracle
   summary: >-
@@ -28,7 +28,7 @@ newtypes:
     A entrada para o Oracle $O $ é:
 
 
-    - O registro que armazenará o estado de Quantum desejado $\_\ket{\psi} s $.
+    - O registro que armazenará o estado de Quantum desejado $ \ket{\psi} \_ s $.
 - uid: microsoft.quantum.oracles.discreteoracle
   summary: >-
     Representa um Oracle em tempo discreto.
@@ -45,7 +45,7 @@ newtypes:
 
     - O ancilla registra $a $ que $O $ age.
 
-    - O sistema registra $s $ em que o unitário desejado $U $ é aplicado, post-Selected no registro $a $ estando no estado $ \ket{t}\_a $.
+    - O sistema registra $s $ em que o unitário desejado $U $ é aplicado, post-Selected no registro $a $ estando no estado $ \ket{t} \_ a $.
 - uid: microsoft.quantum.oracles.reflectionoracle
   summary: >-
     Representa uma reflexão do Oracle.
@@ -67,11 +67,11 @@ newtypes:
 
     - Um inteiro que indexa o sinalizador qubit $f $.
 
-    - O registro do sistema $s $, que armazenará o estado de Quantum\_desejado $ \ket{\psi} s $.
+    - O registro do sistema $s $, que armazenará o estado de Quantum desejado $ \ket{\psi} \_ s $.
 metadata:
-  ms.openlocfilehash: c1f364d74aab6d318e7b6db078d5532aeae57bcd
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 100ea34895b343c8b24ef4f584bbf534acd9d6ff
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673100"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340945"
