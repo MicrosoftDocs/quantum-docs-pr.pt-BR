@@ -2,12 +2,12 @@
 uid: microsoft.quantum.preparation.preparesinglequbitidentity
 name: PrepareSingleQubitIdentity
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
   Prepara um qubit no estado máximo misto.
 
 
-  Ele prepara o determinado qubit no estado $ \boldone/$2 aplicando o \rho de despolarização do canal $ $ \begin{align} \Omega (\mathrel{): =} \frac{1} {4} \ sum_ {\mu na \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\dagger}, \end{Align} $ $, em que\_$ \sigma i $ é o operador $i $ th Pauli e em que $ \rho $ é um operador de densidade que representa um estado misto.
+  Ele prepara o determinado qubit no estado $ \boldone/$2 aplicando o \rho de despolarização do canal $ $ \begin{align} \Omega (\mathrel{): =} \frac {1} {4} \ sum_ {\mu na \{ 0, 1, 2, 3 \} } \sigma \_ {\mu} \rho \sigma \_ {\mu} ^ {\dagger}, \end{Align} $ $, em que $ \sigma \_ i $ é o operador $i $ th Pauli e em que $ \rho $ é um operador de densidade que representa um estado misto.
 remarks: >-
   O estado misto $ \boldone/$2 que descreve o resultado da aplicação dessa operação a um estado descreve implicitamente um valor de expectativa sobre as escolhas aleatórias feitas nesta operação.
 
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 4dd07e9e59575d60bca81c996ad5fc1a3a82b16d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 65b39d742a6ba4399137fb4d88c6f762969a0f93
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686514"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331340"

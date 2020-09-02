@@ -2,15 +2,15 @@
 uid: microsoft.quantum.amplitudeamplification.applyobliviousamplitudeamplification
 name: ApplyObliviousAmplitudeAmplification
 type: operation
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Amplificação de amplitude de alheios especificando reflexões parciais.
 remarks: >-
-  Dado um estado de início auxiliar específico $ \ket{\Text{Start}}\_a $, um estado de destino auxiliar específico $ \ket{\Text{Target}}\_a $ e qualquer estado do sistema $ \ket{\psi}\_s $, suponha que \begin{align} O\ket {\ Text {Start}}\_a\ket {\ psi}\_s = \lambda\ket{\Text{Target}}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{\Text{Target} ^ \perp}\_a\cdots \end{align} para alguns $U unitários $.
+  Dado um estado de início auxiliar específico $ \ket{\Text{Start}} \_ a $, um estado de destino auxiliar específico $ \ket{\Text{Target}} \_ a $ e qualquer estado do sistema $ \ket{\psi} \_ s $, suponha que \begin{align} O\ket {\ Text {Start}} \_ a\ket {\ psi} \_ s = \lambda\ket{\Text{Target}} \_ a U \ket{\psi} \_ s + \sqrt{1-| \lambda | ^ 2} \ket{\text{target} ^ \perp} \_ a\cdots \end{align} para alguns $U unitários $.
 
-  Por uma sequência de reflexos sobre os Estados de início e de destino no registro auxiliar intercalado por aplicativos `signalOracle` do e seu adjacente, a probabilidade de êxito da aplicação de U pode ser alterada.
+  Por uma sequência de reflexos sobre os Estados de início e de destino no registro auxiliar intercalado por aplicativos do `signalOracle` e seu adjacente, a probabilidade de êxito da aplicação de U pode ser alterada.
 
 
-  Na maioria dos casos `auxiliaryRegister` , é inicializado no estado $\_\ket{\Text{Start}} a $.
+  Na maioria dos casos, `auxiliaryRegister` é inicializado no estado $ \ket{\Text{Start}} \_ a $.
 syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
 references: >-
   Consulte
@@ -32,7 +32,7 @@ input:
     summary: Operador de reflexão sobre o estado de destino do registro auxiliar
     uid: microsoft.quantum.oracles.reflectionoracle
   - name: signalOracle
-    summary: O $O do Oracle unitário $ `ObliviousOracle` do tipo que atua em conjunto nos registros auxiliares e do sistema.
+    summary: O $O do Oracle unitário $ do tipo `ObliviousOracle` que atua em conjunto nos registros auxiliares e do sistema.
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: auxiliaryRegister
     summary: Registro auxiliar
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7452686a76d9ff89c0eb79290e7dae23347778ac
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 21bdb88716a07c32673425fd4f5276559b56d266
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672957"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340520"

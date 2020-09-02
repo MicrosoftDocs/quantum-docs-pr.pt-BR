@@ -2,8 +2,8 @@
 uid: microsoft.quantum.errorcorrection.recover
 name: Recover
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: Executa uma única rodada de correção de erro por um código Quantum descrito por `QECC` um tipo.
+namespace: microsoft.quantum.errorcorrection
+summary: Executa uma única rodada de correção de erro por um código Quantum descrito por um `QECC` tipo.
 syntax: 'operation Recover (code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
@@ -12,7 +12,7 @@ input:
     summary: Um código Quantum-corrigindo códigos empacotados como um `QECC` tipo descreve a codificação e a decodificação de dados Quantum e como os síndromes de erro devem ser medidos.
     uid: microsoft.quantum.errorcorrection.qecc
   - name: fn
-    summary: Um `RecoveryFn` que mapeia cada síndrome de erro para `Pauli[]` as operações que corrigem o erro detectado.
+    summary: Um `RecoveryFn` que mapeia cada síndrome de erro para as `Pauli[]` operações que corrigem o erro detectado.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
     summary: Uma matriz de qubits onde o código de estabilizador é definido.
@@ -27,9 +27,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: 2a873e06c20bf62c998b1096d862d26ff89aa134
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b61c7255da3c8c22ffbbf7cd9a739ad4c9cca5d4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682287"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349955"
