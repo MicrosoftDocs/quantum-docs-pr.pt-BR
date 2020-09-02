@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.andladder
 name: AndLadder
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Executa uma "e uma escada" controlada em um registro de qubits de destino.
 
 
-  Esta operação aplica\_uma transformação descrita pelo seguinte mapeamento da base computacional, $ $ \begin{align} \ket{x 1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1, \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}}, \end{Align} $ $, em que $ \ket{x\_1, \dots, x\_n} $ refere-se aos Estados de base computacional de `controls`e onde $ \ket{y\_1, \dots, y\_{n-1}} $ refere-se aos Estados de base computacional de `targets`.
+  Esta operação aplica uma transformação descrita pelo seguinte mapeamento da base computacional, $ $ \begin{align} \ket{x \_ 1, \dots, x \_ n} \ket{y \_ 1, \dots, y \_ {n-1}} \mapsto \ket{x \_ 1, \dots, x \_ n} \ket{y \_ 1 \oplus (x \_ 1 \land x \_ 2), \dots, y \_ {n-1} \oplus (x \_ 1 \land x \_ 2 \land \cdots \land x \_ {n-1}}, \end{Align} $ $, em que $ \ket{x \_ 1, \dots, x \_ n} $ refere-se aos Estados de base computacional de `controls` e onde $ \ket{y \_ 1, \dots, y \_ {n-1}} $ refere-se aos Estados de base computacional de `targets` .
 remarks: >-
-  - Usado como parte de <xref:microsoft.quantum.canon.applymulticontrolledc> e. <xref:microsoft.quantum.canon.applymulticontrolledca>
+  - Usado como parte de <xref:microsoft.quantum.canon.applymulticontrolledc> e <xref:microsoft.quantum.canon.applymulticontrolledca> .
 
   - Para obter a explicação e o diagrama de circuito, consulte a Figura 4,10, seção 4,3 em Nielsen & Chuang.
 syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
@@ -26,7 +26,7 @@ input:
 
       Essa operação deixa os Estados de base de `controls` variável de constante.
 
-      O comprimento de `controls` deve ser pelo menos 2 e deve ser igual a um mais o comprimento de `targets`.
+      O comprimento de `controls` deve ser pelo menos 2 e deve ser igual a um mais o comprimento de `targets` .
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -43,9 +43,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 4cc74315145176fd3a2258a3d92b2f2dfb4d66d3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 194e562588a7ea244b39795ea1c489a07a7fbfba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676385"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350873"
