@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelsebc
 name: ApplyIfElseBC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Aplica uma das duas operações controláveis, dependendo do valor de um bit clássico.
 
 
-  Dado um pouco `bit`, o aplica a `trueOp` operação `trueInput` com como sua entrada `bit` quando `true`está e se `falseOp(falseInput)` aplica `bit` quando `false`é.
+  Dado um pouco `bit` , o aplica a operação `trueOp` com `trueInput` como sua entrada quando `bit` está `true` e se aplica `falseOp(falseInput)` quando `bit` é `false` .
 syntax: "operation ApplyIfElseBC (bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U))"
   types:
   - name: bit
-    summary: O valor booliano usado para determinar `trueOp` se `falseOp` ou é aplicado.
+    summary: O valor booliano usado para determinar se `trueOp` ou `falseOp` é aplicado.
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: A operação controláveis a ser aplicada quando `bit` é `true`.
+    summary: A operação controláveis a ser aplicada quando `bit` é `true` .
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: trueInput
-    summary: A entrada a ser fornecida para `trueOp` quando `bit` é `true`.
+    summary: A entrada a ser fornecida para `trueOp` quando `bit` é `true` .
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: A operação controláveis a ser aplicada quando `bit` é `false`.
+    summary: A operação controláveis a ser aplicada quando `bit` é `false` .
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: falseInput
-    summary: A entrada a ser fornecida para `falseOp` quando `bit` é `false`.
+    summary: A entrada a ser fornecida para `falseOp` quando `bit` é `false` .
     uid: "'U"
     isLocal: true
 output:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: c1d7c1fdf83b5ec87b8d5e8b22c45bb00072f69a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1cd8df26dabaaa13d39fc194ae958f71e3b618ac
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674997"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350380"
