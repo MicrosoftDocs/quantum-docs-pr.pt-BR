@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.cyclicentanglinglayer
 name: CyclicEntanglingLayer
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Retorna uma matriz de rotações controladas isoladamente ao longo de um determinado eixo, organizadas de forma cíclica em um registro de qubits e parametrizadas por parâmetros de modelo distintos.
 examples: >-
   Os itens a seguir são equivalentes:
@@ -38,13 +38,13 @@ input:
 output:
   content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
   types:
-  - summary: Uma matriz de rotações controladas de dois qubits, projetadas de forma cíclica em `nQubits` um registro de qubits.
+  - summary: Uma matriz de rotações controladas de dois qubits, projetadas de forma cíclica em um registro de `nQubits` qubits.
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
 metadata:
-  ms.openlocfilehash: 9578cb4798fc403642a98c7886374295000b6097
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: daac61ccccadbe16910c6487549cd6ce524d3b58
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681657"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344838"

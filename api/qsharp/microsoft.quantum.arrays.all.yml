@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.all
 name: All
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Dada uma matriz e um predicado que é definido para os elementos da matriz e verifica se todos os elementos da matriz atendem ao predicado.
-remarks: "A função é definida para tipos genéricos, ou seja, sempre que temos uma matriz `'T[]` e uma função `predicate: 'T -> Bool` , podemos produzir um `Bool` valor que indica se todos os elementos `predicate`atendem."
+remarks: "A função é definida para tipos genéricos, ou seja, sempre que temos uma matriz `'T[]` e uma função, `predicate: 'T -> Bool` podemos produzir um `Bool` valor que indica se todos os elementos atendem `predicate` ."
 examples: >-
   O código a seguir verifica se todos os elementos da matriz são diferentes de zero:
 
@@ -39,7 +39,7 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Uma matriz de elementos `'T`.
+    summary: Uma matriz de elementos `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
@@ -53,9 +53,9 @@ typeParameters:
 - uid: "'T"
   summary: O tipo de `array` elementos.
 metadata:
-  ms.openlocfilehash: 116a2a537c4712c968187785873c0546ec236762
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 515dcb29844277e626158e44da4202fae0e7fd61
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676579"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352641"

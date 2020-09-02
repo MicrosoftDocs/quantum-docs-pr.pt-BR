@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.sum
 name: Sum
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Implementa uma porta de soma reversível. Dado um bit `carryIn` de transporte codificado em qubit e dois bits de soma codificados `summand1` no `summand2`e no, o computa o XOR `carryIn`bit `summand1` e `summand2` o de qubit `summand2`.
+namespace: microsoft.quantum.arithmetic
+summary: Implementa uma porta de soma reversível. Dado um bit de transporte codificado em qubit `carryIn` e dois bits de soma codificados no `summand1` e `summand2` no, o computa o XOR bit e o de `carryIn` `summand1` `summand2` qubit `summand2` .
 remarks: Ao contrário da `Carry` operação, isso não computa o bit de execução.
 syntax: 'operation Sum (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit) : Unit'
 input:
@@ -18,7 +18,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: summand2
-    summary: Segundo soma qubit, é substituído pelo menor bit da soma de `summand1` e. `summand2`
+    summary: Segundo soma qubit, é substituído pelo menor bit da soma de `summand1` e `summand2` .
     isPrimitive: true
     uid: Qubit
 output:
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d72ec97c01944b73ed459afcddbdfb3aa1cf3c49
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 076a767177b20b04d029d3512ecf73bc26902824
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681044"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352675"

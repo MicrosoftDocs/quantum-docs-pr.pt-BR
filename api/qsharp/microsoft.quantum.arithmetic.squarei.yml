@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.squarei
 name: SquareI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Computa o quadrado do inteiro `xs` em `result`, que deve ser inicialmente zero.
+namespace: microsoft.quantum.arithmetic
+summary: Computa o quadrado do inteiro `xs` em `result` , que deve ser inicialmente zero.
 remarks: Usa uma abordagem Shift-and-add padrão para calcular o quadrado. Salva $n-$1 qubits em comparação com a solução direta, que primeiro copia XS antes de aplicar um multiplicador regular e, em seguida, desfazendo a operação de cópia.
 syntax: 'operation SquareI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
@@ -13,7 +13,7 @@ input:
     summary: número de $n de $ bits para quadrado (LittleEndian)
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: o resultado de $2n $-bit (LittleEndian) deve estar no estado ${0}\ket $ inicialmente.
+    summary: o resultado de $2n $-bit (LittleEndian) deve estar no estado $ \ket {0} $ inicialmente.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: eedc2536da0fd75712929af44f5167d3fc73add3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4b001663d1d4f863d0b597e31bec87c65871ebc1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676622"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352692"
