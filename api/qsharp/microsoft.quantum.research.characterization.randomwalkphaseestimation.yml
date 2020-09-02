@@ -2,13 +2,13 @@
 uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
 name: RandomWalkPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Research.Characterization
+namespace: microsoft.quantum.research.characterization
 summary: Executa estimativa de fase iterativa usando uma passagem aleatória para a inferência de Bayesiana aproximada nos resultados da medição clássica de um determinado Oracle e eigenstate.
 remarks: >-
   ### <a name="iterative-phase-estimation-and-eigenstates"></a>Estimativa e Eigenstates de fase iterativa
 
 
-  Em geral, o registro `eigenstate` de entrada não precisa ser um eigenstate $ \ket{\phi} $ de $U $, mas pode ser uma superposição em relação a eigenstates. Suponha que o estado de entrada seja fornecido por \begin{align} \ket{\psi} & =\_\sum {j}\_\alpha j\_\ket{\phi j}, \end{Align},\{em\_que\}$ \alpha j $ são coeficientes complexos,\_de modo que\_$ \sum j | \alpha j | ^ 2 =\_$1 e onde $U\_\ket{\phi j} =\_\phi j\ket {\ Phi j} $.
+  Em geral, o registro de entrada `eigenstate` não precisa ser um eigenstate $ \ket{\phi} $ de $U $, mas pode ser uma superposição em relação a eigenstates. Suponha que o estado de entrada seja fornecido por \begin{align} \ket{\psi} & = \sum \_ {j} \alpha \_ j \ket{\phi \_ j}, \end{Align}, em que $ \{ \alpha \_ j \} $ são coeficientes complexos, de modo que $ \sum \_ j | \alpha \_ j | ^ 2 = $1 e onde $U \ket{\phi \_ j} = \phi \_ j\ket {\ Phi \_ j} $.
 
 
   Em seguida, executar estimativa de fase iterativa eventualmente convergirá para um único eigenstate, conforme descrito no [Guia de desenvolvimento](xref:microsoft.quantum.libraries.characterization#iterative-phase-estimation-without-eigenstates).
@@ -17,7 +17,7 @@ remarks: >-
   ### <a name="experiment-design"></a>Design do experimento
 
 
-  Os tempos de medição $t $ e os ângulos de inversão $ \theta `oracle` $ passados para são escolhidos de acordo com a *heurística de adivinhação de partícula*, \begin{align} \theta \sim \Pr ({1}\phi), \quad t \approx \frac {\variance{\phi}}.
+  Os tempos de medição $t $ e os ângulos de inversão $ \theta $ passados para `oracle` são escolhidos de acordo com a *heurística de adivinhação de partícula*, \Begin{align} \theta \sim \Pr (\phi), \quad t \approx \frac {1} {\variance{\phi}}.
 
   \end{align} esse heurístico é ideal para reduzir a variância esperada de posteriores na estimativa de fase iterativa sob a hipótese de um normal anterior.
 
@@ -74,9 +74,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 719c8583cb0fe7f0c9c0f7fa617fa469080a9588
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 27841784ec8961f7a5a78c425411fcf0ae8e8f15
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82706730"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330575"

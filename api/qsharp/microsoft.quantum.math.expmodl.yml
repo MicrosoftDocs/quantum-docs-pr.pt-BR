@@ -2,7 +2,7 @@
 uid: microsoft.quantum.math.expmodl
 name: ExpModL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
   Retorna um número inteiro elevado a uma determinada potência, com relação a um determinado módulo.
 
@@ -13,7 +13,7 @@ summary: >-
 
 
   Supomos que $N $, $x $ são positivos e a energia não é negativa.
-remarks: Leva tempo proporcional ao número de bits em `power`, e não ao `power` próprio.
+remarks: Leva tempo proporcional ao número de bits em `power` , e não ao `power` próprio.
 syntax: 'function ExpModL (expBase : BigInt, power : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(expBase : BigInt, power : BigInt, modulus : BigInt)'
@@ -33,9 +33,9 @@ output:
   - isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: f694fa792e8aee5846ce6ec2393287eb64aca44d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f5f7d5c4a51055583f3c5fd04315af8ee0dfc0c4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673864"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344124"
