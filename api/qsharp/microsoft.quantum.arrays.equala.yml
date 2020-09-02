@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.equala
 name: EqualA
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Dadas duas matrizes do mesmo tipo e um predicado que é definido para pares de elementos das matrizes, verifica se as matrizes são iguais.
 remarks: >-
-  Essa função é definida para tipos genéricos; ou seja, sempre que tivermos duas `'T[]` matrizes e `equal: ('T, 'T) -> Bool`uma função, essa função `Bool` retornará um valor que indica se as matrizes são iguais.
+  Essa função é definida para tipos genéricos; ou seja, sempre que tivermos duas matrizes `'T[]` e uma função `equal: ('T, 'T) -> Bool` , essa função retornará um `Bool` valor que indica se as matrizes são iguais.
 
   Para que duas matrizes sejam consideradas iguais, elas precisam ter comprimento igual e os elementos nas mesmas posições nas matrizes devem ser iguais.
 examples: >-
@@ -61,16 +61,16 @@ output:
   - summary: >-
       O valor `true` se e somente se `array1` e `array2` forem iguais.
 
-      Ou seja, se ambas as matrizes tiverem o mesmo comprimento e todos os elementos forem iguais, `equal`conforme definido pelo.
+      Ou seja, se ambas as matrizes tiverem o mesmo comprimento e todos os elementos forem iguais, conforme definido pelo `equal` .
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
   summary: O tipo dos elementos de cada matriz.
 metadata:
-  ms.openlocfilehash: d2af5ff8e2d66e6162c73c3854670451a00dcf50
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9f3083483b7720efb4f8eda89d2de224543c236e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676496"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352369"
