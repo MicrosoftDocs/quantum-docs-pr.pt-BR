@@ -18,9 +18,9 @@ functions:
 - uid: microsoft.quantum.convert.boolarrayaspauli
   summary: Dada uma cadeia de caracteres de bits, retorna um operador qubit Pauli representado como uma matriz de operadores de Pauli de qubit único.
 - uid: microsoft.quantum.convert.boolarrayasresultarray
-  summary: Converte um `Bool[]` tipo em um `Result[]` tipo, onde `true` é mapeado para `One` e `false` é mapeado para `Zero`.
+  summary: Converte um `Bool[]` tipo em um `Result[]` tipo, onde `true` é mapeado para `One` e `false` é mapeado para `Zero` .
 - uid: microsoft.quantum.convert.boolasresult
-  summary: Converte um `Bool` tipo em um `Result` tipo, onde `true` é mapeado para `One` e `false` é mapeado para `Zero`.
+  summary: Converte um `Bool` tipo em um `Result` tipo, onde `true` é mapeado para `One` e `false` é mapeado para `Zero` .
 - uid: microsoft.quantum.convert.boolasstring
   summary: Converte um determinado valor booliano em uma representação de cadeia de caracteres equivalente.
 - uid: microsoft.quantum.convert.doubleasstring
@@ -49,18 +49,18 @@ functions:
 - uid: microsoft.quantum.convert.rangeasintarray
   summary: Cria uma matriz `arr` de inteiros enumerados por início.. etapa.. completo.
 - uid: microsoft.quantum.convert.resultarrayasboolarray
-  summary: Converte um `Result[]` tipo em um `Bool[]` tipo, onde `One` é mapeado para `true` e `Zero` é mapeado para `false`.
+  summary: Converte um `Result[]` tipo em um `Bool[]` tipo, onde `One` é mapeado para `true` e `Zero` é mapeado para `false` .
 - uid: microsoft.quantum.convert.resultarrayasint
   summary: Produz um inteiro positivo de uma cadeia de caracteres de resultados no formato little endian.
 - uid: microsoft.quantum.convert.resultasbool
-  summary: Converte um `Result` tipo em um `Bool` tipo, onde `One` é mapeado para `true` e `Zero` é mapeado para `false`.
+  summary: Converte um `Result` tipo em um `Bool` tipo, onde `One` é mapeado para `true` e `Zero` é mapeado para `false` .
 operations:
 - uid: microsoft.quantum.convert.call
   summary: Chama uma função com uma determinada entrada.
 metadata:
-  ms.openlocfilehash: d435979692fe94efb64af82f4a7a949cb2341ef8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7ab5e02631823dcf4dee36f98c14212b43381b74
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677012"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341353"

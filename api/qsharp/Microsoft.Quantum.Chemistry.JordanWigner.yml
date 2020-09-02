@@ -3,7 +3,7 @@ uid: microsoft.quantum.chemistry.jordanwigner
 name: Microsoft.Quantum.Chemistry.JordanWigner
 functions:
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerblockencodinggeneratorsystem
-  summary: Converte um Hamiltonian descrito por `JWOptimizedHTerms` para um `GeneratorSystem` expresso em termos de Pauli `GeneratorIndex`.
+  summary: Converte um Hamiltonian descrito por `JWOptimizedHTerms` para um `GeneratorSystem` expresso em termos de Pauli `GeneratorIndex` .
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorevolutionset
   summary: Representa um gerador dinâmico como um conjunto de Gates e uma expansão na base JordanWigner.
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorgeneratorsystem
@@ -15,7 +15,7 @@ functions:
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignergeneratorsystem
   summary: Converte um Hamiltonian descrito por `JWOptimizedHTerms` para um `GeneratorSystem` expresso em termos da `GeneratorIndex` Convenção definida neste arquivo.
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedblockencodinggeneratorsystem
-  summary: Converte um Hamiltonian descrito por `JWOptimizedHTerms` para um `GeneratorSystem` expresso em termos de Pauli `GeneratorIndex`.
+  summary: Converte um Hamiltonian descrito por `JWOptimizedHTerms` para um `GeneratorSystem` expresso em termos de Pauli `GeneratorIndex` .
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle
   summary: Retorna a operação Qubitization otimizada para T-Count e os parâmetros necessários para executá-la.
 - uid: microsoft.quantum.chemistry.jordanwigner.qubitizationoracle
@@ -24,7 +24,7 @@ functions:
   summary: Retorna a operação de etapa Trotter e os parâmetros necessários para executá-lo.
 operations:
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
-  summary: Um unitário $U $ que aplica a cadeia de caracteres Pauli em $ (X ^ {z +\_1} pY ^ {\_Z} p\_) z {p-1}... Z_0 $ em qubits $0.. p $ conditioned em um índice $z na\{0, 1\}$ e $p $. Ou seja, $ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ psi} = \ket{z}\ket{p} (X ^ {z + 1}\_pY ^ {z}\_p) z\_{p-1}... Z_0 \ket{\psi} \end{align} $ $
+  summary: Um unitário $U $ que aplica a cadeia de caracteres Pauli em $ (X ^ {z + 1} \_ pY ^ {z} \_ p) z \_ {p-1}... Z_0 $ em qubits $0.. p $ conditioned em um índice $z na \{ 0, 1 \} $ e $p $. Ou seja, $ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ psi} = \ket{z}\ket{p} (X ^ {z + 1} \_ pY ^ {z} \_ p) z \_ {p-1}... Z_0 \ket{\psi} \end{align} $ $
 - uid: microsoft.quantum.chemistry.jordanwigner.preparesingleconfigurationalstatesinglesiteoccupation
   summary: Preparação de estado simples do estado de avaliação ocupando giros de rotação
 - uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
@@ -34,7 +34,7 @@ operations:
 - uid: microsoft.quantum.chemistry.jordanwigner.prepareunitarycoupledclusterstate
   summary: Preparação de estado de cluster acoplado unitário do estado de avaliação
 - uid: microsoft.quantum.chemistry.jordanwigner.selectz
-  summary: Um unitário $U $ que aplica a portão Pauli $Z $ em um qubits $p $ Condition em um estado de índice $ \ket{p} $. Ou seja, $ $ \begin{align} U\ket {p} \ ket {\ psi} = \ket{p}Z\_p\ket {\ psi} \end{align} $ $
+  summary: Um unitário $U $ que aplica a portão Pauli $Z $ em um qubits $p $ Condition em um estado de índice $ \ket{p} $. Ou seja, $ $ \begin{align} U\ket {p} \ ket {\ psi} = \ket{p}Z \_ p\ket {\ psi} \end{align} $ $
 newtypes:
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   summary: >-
@@ -49,13 +49,13 @@ newtypes:
 
     O significado dos dados representados é determinado pelo algoritmo que o recebe.
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
-  summary: Função que retorna `OptimizedBETermIndex` dados para o `n` termo dado um `n`inteiro, junto com o número de termos na primeira `Int` e a soma de valores absolutos de todos os coeficientes de termo `Double`no.
+  summary: Função que retorna `OptimizedBETermIndex` dados para o termo `n` dado um inteiro `n` , junto com o número de termos na primeira `Int` e a soma de valores absolutos de todos os coeficientes de termo no `Double` .
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbetermindex
   summary: Dados de termo no algoritmo de codificação de bloco otimizado.
 metadata:
-  ms.openlocfilehash: bbc51f1ca36c81f15f96d0e526eb15bf79922373
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0299b01d022eda61772a48ce1cb1bc693ffbdf31
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677034"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341438"
