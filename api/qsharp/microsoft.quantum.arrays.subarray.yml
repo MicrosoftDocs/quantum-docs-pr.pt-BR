@@ -2,17 +2,17 @@
 uid: microsoft.quantum.arrays.subarray
 name: Subarray
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Usa uma matriz e uma lista de locais e produz uma nova matriz formada a partir dos elementos da matriz original que correspondem aos locais determinados.
 remarks: >-
-  A função é definida para tipos genéricos, ou seja, sempre que temos uma matriz `'T[]` e uma lista de locais `Int[]` que definem a submatriz.
+  A função é definida para tipos genéricos, ou seja, sempre que temos uma matriz `'T[]` e uma lista de locais que `Int[]` definem a submatriz.
 
   A construção da submatriz é baseada na geração de uma nova cópia profunda da matriz especificada, em oposição à manutenção de referências.
 
 
-  Se `Length(indices) < Length(array)`, essa função retornará um subconjunto de `array`. Por outro lado, se `indices` contiver elementos repetidos, os elementos correspondentes `array` do serão repetidos da mesma forma.
+  Se `Length(indices) < Length(array)` , essa função retornará um subconjunto de `array` . Por outro lado, se `indices` contiver elementos repetidos, os elementos correspondentes do `array` serão repetidos da mesma forma.
 
-  Se `indices` e `array` tiverem o mesmo comprimento, essa função fornecerá permutações `array`de.
+  Se `indices` e `array` tiverem o mesmo comprimento, essa função fornecerá permutações de `array` .
 syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
 input:
   content: "(indices : Int[], array : 'T[])"
@@ -23,14 +23,14 @@ input:
     isPrimitive: true
     uid: Int
   - name: array
-    summary: Uma matriz de elementos `'T`.
+    summary: Uma matriz de elementos `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: Uma matriz `out` de elementos cujos índices correspondem à submatriz, assim `out[idx] == array[indices[idx]]`.
+  - summary: Uma matriz `out` de elementos cujos índices correspondem à submatriz, assim `out[idx] == array[indices[idx]]` .
     isArray: true
     uid: "'T"
     isLocal: true
@@ -38,9 +38,9 @@ typeParameters:
 - uid: "'T"
   summary: O tipo de `array` elementos.
 metadata:
-  ms.openlocfilehash: 2740a39d1b7c1c56aed4f9107c65d339c5fb4c1a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1d5739f49e32ec4548cb24df2106dec0866a94cb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675125"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351621"
