@@ -2,7 +2,7 @@
 uid: microsoft.quantum.logical.notequalb
 name: NotEqualB
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Retorna true se e somente se duas entradas não forem iguais.
 remarks: >-
   Os itens a seguir são equivalentes:
@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`se e somente se `a` não for igual a `b`.'
+  - summary: '`true` se e somente se `a` não for igual a `b` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: b98ea49e20a21b07d24d3d7880a94f512e292f7b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3d106662dea672057fadffcb597b63ee1d723f18
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684581"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345399"

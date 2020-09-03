@@ -2,7 +2,7 @@
 uid: microsoft.quantum.bitwise.leftshiftedi
 name: LeftShiftedI
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: Desloca a representação bit a bit de um número à esquerda por um determinado número de bits.
 remarks: >-
   Os itens a seguir são equivalentes:
@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: Int
   - name: amount
-    summary: O número de bits pelo qual `value` deve ser deslocado para a esquerda.
+    summary: O número de bits pelo qual deve `value` ser deslocado para a esquerda.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: O valor de `value`, deslocado para a `amount` esquerda por bits.
+  - summary: O valor de `value` , deslocado para a esquerda por `amount` bits.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: e63653304eced80526b26e0ad05d1e4ed4aeb682
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cab8f84fe6e4b268bb93c555dd58077377d8a9af
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680702"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351282"
