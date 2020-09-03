@@ -2,12 +2,12 @@
 uid: microsoft.quantum.math.realmod
 name: RealMod
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Computa o módulo entre dois números reais.
 remarks: >-
   Essa função computa o módulo real encapsulando a linha real sobre o círculo da unidade e, em seguida, localizando o ângulo no círculo da unidade correspondente à entrada.
 
-  Em `minValue` seguida, a entrada especifica efetivamente onde recortar o círculo da unidade.
+  `minValue`Em seguida, a entrada especifica efetivamente onde recortar o círculo da unidade.
 examples: >-
   ```qsharp
       // Returns 3 π / 2.
@@ -38,9 +38,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 0a35628198ae5d496b093b98542daeac16aced9b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6738040f8628998a98a69a7e884125ac91228787
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681489"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333125"
