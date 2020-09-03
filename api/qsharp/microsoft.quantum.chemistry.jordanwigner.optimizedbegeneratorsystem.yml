@@ -2,13 +2,13 @@
 uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
 name: OptimizedBEGeneratorSystem
 type: newtype
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Função que retorna `OptimizedBETermIndex` dados para o `n` termo dado um `n`inteiro, junto com o número de termos na primeira `Int` e a soma de valores absolutos de todos os coeficientes de termo `Double`no.
+namespace: microsoft.quantum.chemistry.jordanwigner
+summary: Função que retorna `OptimizedBETermIndex` dados para o termo `n` dado um inteiro `n` , junto com o número de termos na primeira `Int` e a soma de valores absolutos de todos os coeficientes de termo no `Double` .
 syntax: newtype OptimizedBEGeneratorSystem = (Int, Double, (Int -> Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex));
 metadata:
-  ms.openlocfilehash: 76e4e810dc31779efcd281c9c132e7f4b97556b9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7911ed7672c02ddc7ce15a1d31e3ec51c823bc1d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82665990"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339534"
