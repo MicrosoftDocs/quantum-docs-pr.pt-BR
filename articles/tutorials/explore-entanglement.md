@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
+ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863435"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90063233"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Explorar o emaranhamento com o Q\#
 
@@ -112,7 +112,7 @@ Uma Q# operação é uma sub-rotina Quantum. Ou seja, é uma rotina que possa se
 
 Os argumentos de uma operação são especificados como uma tupla, entre parênteses.
 
-O tipo de retorno da operação é especificado após dois-pontos. Nesse caso, a operação `SetQubitState` não tem retorno, sendo, portanto, marcada como retornando `Unit`. Esse é o Q# equivalente de `unit` em F #, que é basicamente análogo a `void` em C# e uma tupla vazia ( `Tuple[()]` ) no Python.
+O tipo de retorno da operação é especificado após dois-pontos. Nesse caso, a operação `SetQubitState` não tem retorno, sendo, portanto, marcada como retornando `Unit`. Esse é o Q# equivalente de `unit` em F #, que é basicamente análogo a `void` em C# e uma tupla vazia em Python ( `()` , representada pela dica de tipo `Tuple[()]` ).
 
 Você usou duas operações Quantum em sua primeira Q# operação:
 
