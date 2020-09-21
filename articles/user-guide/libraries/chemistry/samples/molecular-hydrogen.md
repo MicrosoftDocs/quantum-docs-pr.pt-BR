@@ -9,15 +9,15 @@ uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869198"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759725"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Obter estimativas do nível de energia
-Estimar os valores dos níveis de energia é um dos principais aplicativos da quantum química. Este artigo descreve como você pode executar isso para o exemplo canônico de molecular Hydrogen. O exemplo referenciado nesta seção está [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) no repositório de exemplos de química. Um exemplo mais visual que plota a saída é a [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) demonstração.
+Estimar os valores dos níveis de energia é um dos principais aplicativos da quantum química. Este artigo descreve como você pode executar isso para o exemplo canônico de molecular Hydrogen. O exemplo referenciado nesta seção está [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) no repositório de exemplos de química. Um exemplo mais visual que plota a saída é a [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) demonstração.
 
 ## <a name="estimating-the-energy-values-of-molecular-hydrogen"></a>Estimando os valores de energia de molecular Hydrogen
 
@@ -65,7 +65,7 @@ A simulação do Hamiltonian requer a conversão dos operadores Fermion em opera
     var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
-Em seguida, passe `qSharpData` , que representa o Hamiltonian, para a `TrotterStepOracle` função. `TrotterStepOracle`Retorna uma operação Quantum que aproxima a evolução em tempo real do Hamiltonian. Para obter mais informações, consulte [simulando o Hamiltonian Dynamics](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms).
+Em seguida, passe `qSharpData` , que representa o Hamiltonian, para a `TrotterStepOracle` função. `TrotterStepOracle` Retorna uma operação Quantum que aproxima a evolução em tempo real do Hamiltonian. Para obter mais informações, consulte [simulando o Hamiltonian Dynamics](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms).
 
 ```qsharp
 // qSharpData passed from driver
@@ -156,5 +156,5 @@ using (var qsim = new QuantumSimulator())
 
 A operação retorna dois parâmetros: 
 
-- `energyEst`é a estimativa da energia do estado de terra e deve estar próxima de `-1.137` em média. 
-- `phaseEst`é a fase bruta retornada pelo algoritmo de estimativa de fase. Isso é útil para diagnosticar alias quando ocorre devido a um `trotterStep` valor muito grande.
+- `energyEst` é a estimativa da energia do estado de terra e deve estar próxima de `-1.137` em média. 
+- `phaseEst` é a fase bruta retornada pelo algoritmo de estimativa de fase. Isso é útil para diagnosticar alias quando ocorre devido a um `trotterStep` valor muito grande.

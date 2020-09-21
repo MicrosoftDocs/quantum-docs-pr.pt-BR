@@ -1,6 +1,6 @@
 ---
 Título: o qubit na descrição da computação Quantum: Saiba mais sobre o qubits, a unidade fundamental de informações na computação Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. qubit MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. tópico: article no-loc:
+Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. qubit MS. Author: v-benbra MS. Date: 12/11/2017 MS. tópico: article no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -100,7 +100,7 @@ Os vetores de estado Quantum $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ e $ \beg
 
 Pegamos esses dois Estados de Quantum para corresponder aos dois Estados de um bit clássico, a saber, $ 0 $ e $ 1 $ . A convenção padrão é escolher
 
-$$0 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} , \qquad 1 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} ,$$
+$$0 \equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix} , \qquad 1 \equiv \begin{bmatrix} 0 \\\\  1 \end{bmatrix} ,$$
 
 Embora a escolha oposta pudesse ser igualmente bem executada. Portanto, fora do número infinito de vetores de estado de Quantum de qubit único, apenas dois correspondem a Estados de bits clássicos; todos os outros Estados de Quantum não.
 
@@ -120,7 +120,7 @@ Qubits também pode ser pictureed em $ 3 $ D usando a representação de [*esfer
 ![Esfera de Bloch](~/media/concepts_bloch.png)
 
 As setas neste diagrama mostram a direção em que o vetor de estado do Quantum está apontando e cada transformação da seta pode ser considerada como uma rotação sobre um dos eixos cardinal.
-Embora pensar em uma computação Quantum como uma sequência de rotações seja uma intuição poderosa, é desafiador usar essa intuição para projetar e descrever algoritmos. Q#alivia esse problema fornecendo uma linguagem para descrever essas rotações.
+Embora pensar em uma computação Quantum como uma sequência de rotações seja uma intuição poderosa, é desafiador usar essa intuição para projetar e descrever algoritmos. Q# alivia esse problema fornecendo uma linguagem para descrever essas rotações.
 
 ## <a name="single-qubit-operations"></a>Operações de qubit único
 
@@ -128,7 +128,7 @@ Os computadores Quantum processam dados aplicando um conjunto universal de Gates
 Essa noção de universação é semelhante à noção de universalidade para computação tradicional (ou seja, clássica), em que um conjunto de portão é considerado universal se cada transformação dos bits de entrada puder ser executada usando um circuito de comprimento finito.
 Na computação Quantum, as transformações válidas que temos permissão para executar em um qubit são transformações e medição de unitários.
 A *operação de adjoin* ou a Transpose de conjugada complexa é de importância crucial para a computação Quantum porque é necessária para inverter as transformações Quantum.
-Q#reflete isso fornecendo métodos para Compilar automaticamente sequências de porta para seus adjacentes, o que evita que o programador tenha de codificar adjoints em muitos casos. Um exemplo disso é mostrado abaixo:
+Q# reflete isso fornecendo métodos para Compilar automaticamente sequências de porta para seus adjacentes, o que evita que o programador tenha de codificar adjoints em muitos casos. Um exemplo disso é mostrado abaixo:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -145,7 +145,7 @@ Para a universalidade, exigimos que um computador Quantum só se *aproxima* de c
 Em outras palavras, um conjunto de Gates será um conjunto de portão universal se qualquer transformação unitário puder ser aproximadamente gravada como um produto de Gates desse conjunto. Exigimos que, para qualquer erro prescrito associado, exista Gates $ G_ { 1 } , G_ { 2 } , \ldots, G_N $ do conjunto de portas de modo que
 
 $$
-G_N G_ { N-1 } \cdots G_2 G_1 \approx U.$$
+G_N G_ { N-1 } \cdots G_2 G_1 \approx U. $$
 
 Observe que, como a Convenção para multiplicação de matriz é multiplicada da direita para a esquerda a primeira operação de portão nessa sequência, $ G_N $ , na verdade, é a última aplicada ao vetor de estado Quantum. Mais formalmente, dizemos que esse conjunto de portão é universal se para cada tolerância de erro $ \epsilon > 0 $ existe $ G_1, \ldots, G_N $ de modo que a distância entre $ G_N \ldots G_1 $ e $ U $ seja no máximo $ \epsilon $ . Idealmente, o valor de $ N $ necessário para alcançar essa distância de $ \epsilon $ deve dimensionar o logaritmicamente com $ 1/\ Épsilon $ .
 

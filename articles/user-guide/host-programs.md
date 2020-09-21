@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f1eca44dabd72cd107d72d3b9e3ad1081c19c27d
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: f24c608ffc6522cb50f512de1a02b3db4b290e83
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992183"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759809"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Maneiras de executar um Q# programa
 
@@ -250,7 +250,7 @@ O núcleo da interoperabilidade se baseia no Q# compilador, tornando o conteúdo
 Um dos principais benefícios do uso de um programa de host é que os dados clássicos retornados pelo Q# programa podem ser processados ainda mais no idioma do host.
 Isso pode consistir em um processamento de dados avançado (por exemplo, algo que não pode ser executado internamente no Q# ) e, em seguida, chamar Q# ações adicionais com base nesses resultados ou algo tão simples quanto plotar os Q# resultados.
 
-O esquema geral é mostrado aqui e discutimos as implementações específicas para Python e C# abaixo. Um exemplo que usa um programa de host F # pode ser encontrado em [exemplos de interoperabilidade .net](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet).
+O esquema geral é mostrado aqui e discutimos as implementações específicas para Python e C# abaixo. Um exemplo que usa um programa de host F # pode ser encontrado em [exemplos de interoperabilidade .net](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet).
 
 <br/>
 <img src="../media/hostprograms_host_program_diagram.png" alt="Q# program from a host program" width="700">
@@ -409,7 +409,7 @@ using NamespaceName;                              // make the Q# namespace avail
 ```
 
 Em seguida, declaramos nosso namespace C#, alguns outros bits e partes (Confira o bloco de código completo abaixo) e, em seguida, qualquer programação clássica que desejamos (por exemplo, computação de argumentos para os Q# chamadores).
-O último não é necessário em nosso caso, mas um exemplo desse uso pode ser encontrado no  [exemplo de interoperabilidade do .net](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet).
+O último não é necessário em nosso caso, mas um exemplo desse uso pode ser encontrado no  [exemplo de interoperabilidade do .net](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet).
 
 #### <a name="target-machines"></a>Computadores de destino
 
@@ -580,7 +580,7 @@ BorrowedWidth   0
 Q# Os notebooks Jupyter usam o kernel I Q# , que permite que você defina, compile e execute o Q# callables em um único bloco de anotações---tudo junto com instruções, observações e outros conteúdos.
 Isso significa que, embora seja possível importar e usar o conteúdo dos `*.qs` Q# arquivos, eles não são necessários no modelo de execução.
 
-Aqui, detalharemos como executar as Q# operações definidas acima, mas uma introdução mais ampla ao uso de Q# notebooks Jupyter é fornecida em [introdução aos Q# blocos de anotações e Jupyter](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb).
+Aqui, detalharemos como executar as Q# operações definidas acima, mas uma introdução mais ampla ao uso de Q# notebooks Jupyter é fornecida em [introdução aos Q# blocos de anotações e Jupyter](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb).
 
 ### <a name="defining-operations"></a>Definindo operações
 
@@ -591,7 +591,7 @@ Após a execução de uma célula com tal instrução, as definições desses na
 
 > [!NOTE]
 > Os chamados de [Microsoft. Quantum. intrínseca](xref:microsoft.quantum.intrinsic) e [Microsoft. Quantum. Canon](xref:microsoft.quantum.canon) (por exemplo, [`H`](xref:microsoft.quantum.intrinsic.h) e [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) ) ficam automaticamente disponíveis para operações definidas nas células de Q# notebooks Jupyter.
-> No entanto, isso não é verdadeiro para o código trazido de Q# arquivos de origem externos (um processo mostrado em [introdução a Q# e Jupyter notebooks](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)). 
+> No entanto, isso não é verdadeiro para o código trazido de Q# arquivos de origem externos (um processo mostrado em [introdução a Q# e Jupyter notebooks](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)). 
 > 
 
 Da mesma forma, a definição de operações requer apenas a gravação do Q# código e a execução da célula.

@@ -1,5 +1,5 @@
 ---
-title: Fluxo de controle emQ#
+title: Fluxo de controle em Q#
 description: Loops, condicionais, etc.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,23 +9,23 @@ uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: e8c873868d6f697fc90b23a38c11f35e46b40c4f
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867940"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759655"
 ---
-# <a name="control-flow-in-no-locq"></a>Fluxo de controle emQ#
+# <a name="control-flow-in-no-locq"></a>Fluxo de controle em Q#
 
 Em uma operação ou função, cada instrução é executada em ordem, semelhante a outros idiomas clássicos imperativos comuns.
 No entanto, você pode modificar o fluxo de controle de três maneiras distintas:
 
-* `if`instruções
-* `for`loops
-* `repeat-until-success`loops
+* `if` instruções
+* `for` loops
+* `repeat-until-success` loops
 
-As `if` `for` construções de fluxo de controle e passam em um sentido familiar para a maioria das linguagens de programação clássicas. [`Repeat-until-success`](#repeat-until-success-loop)os loops são discutidos posteriormente neste artigo.
+As `if` `for` construções de fluxo de controle e passam em um sentido familiar para a maioria das linguagens de programação clássicas. [`Repeat-until-success`](#repeat-until-success-loop) os loops são discutidos posteriormente neste artigo.
 
 Importante, `for` loops e `if` instruções podem ser usados em operações para as quais as [especializações](xref:microsoft.quantum.guide.operationsfunctions) são geradas automaticamente. Nesse cenário, o adjoin de um `for` loop inverte a direção e usa o adjacente de cada iteração.
 Esta ação segue o princípio de "calçados e-Socks": se você deseja desfazer a colocação em SOCKS e, em seguida, os sapatos, você deve desfazer a colocação de sapatos e, em seguida, desfazer a colocação em Socks. 
@@ -45,7 +45,7 @@ Se a condição *If* original e todas as cláusulas else-if forem avaliadas como
 Observe que qualquer bloco é executado, ele é executado dentro de seu próprio escopo.
 Associações feitas dentro de um `if` bloco, `elif` ou `else` não são visíveis depois que o bloco termina.
 
-Por exemplo:
+Por exemplo,
 
 ```qsharp
 if (result == One) {
@@ -55,7 +55,7 @@ if (result == One) {
 } 
 // n is not bound
 ```
-ou o
+ou
 ```qsharp
 if (i == 1) {
     X(target);
@@ -169,11 +169,11 @@ while (index < Length(arr) && item < 0) {
 A instrução return encerra a execução de uma operação ou função e retorna um valor para o chamador.
 Ele consiste na palavra-chave `return` , seguida por uma expressão do tipo apropriado e um ponto e vírgula de terminação.
 
-Por exemplo:
+Por exemplo,
 ```qsharp
 return 1;
 ```
-ou o
+ou
 ```qsharp
 return (results, qubits);
 ```
@@ -194,7 +194,7 @@ A instrução retorna a cadeia de caracteres para o driver clássico como a mens
 Não há nenhuma restrição quanto ao número de instruções de falha em uma operação.
 O compilador pode emitir um aviso se as instruções seguirem uma instrução Fail dentro de um bloco.
 
-Por exemplo:
+Por exemplo,
 
 ```qsharp
 fail $"Impossible state reached";
@@ -248,7 +248,7 @@ fixup {
 }
 ```
 
-### <a name="rus-without-fixup"></a>RUS sem`fixup`
+### <a name="rus-without-fixup"></a>RUS sem `fixup`
 
 Este exemplo mostra um loop RUS sem a etapa de correção. O código é um circuito probabilística que implementa um portão de rotação importante $V _3 = (\boldone + 2 i Z)/\sqrt {5} $ usando `H` as `T` Gates e.
 O loop termina em média de $ \frac {8} {5} $ repetições.
@@ -330,7 +330,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-Para obter mais informações, consulte [exemplo de teste de unidade fornecido com a biblioteca padrão](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
+Para obter mais informações, consulte [exemplo de teste de unidade fornecido com a biblioteca padrão](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ## <a name="next-steps"></a>Próximas etapas
 

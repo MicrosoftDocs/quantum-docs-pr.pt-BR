@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.samples
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 20da0e1765a242c172cc595f03d7791a0e8b8d2d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: ae29614cc9c8bf965ea3cb373dc17470aec21252
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867498"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759179"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>Colaborando com exemplos do kit de desenvolvimento Quantum
 
@@ -46,12 +46,12 @@ Dentro da pasta de cada área de assunto, cada amostra consiste em uma única pa
 
 ## <a name="how-samples-are-structured"></a>Como os exemplos são estruturados
 
-Examinando os arquivos que compõem cada pasta, vamos nos aprofundar no [`algorithms/chsh-game/`](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/chsh-game) exemplo.
+Examinando os arquivos que compõem cada pasta, vamos nos aprofundar no [`algorithms/chsh-game/`](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/chsh-game) exemplo.
 
 | Arquivo              | Descrição                                                |
 |-------------------|------------------------------------------------------------|
-| `CHSHGame.csproj` | Q#projeto usado para criar o exemplo com o SDK do .NET Core |
-| `Game.qs`         | Q#operações e funções para o exemplo                 |
+| `CHSHGame.csproj` | Q# projeto usado para criar o exemplo com o SDK do .NET Core |
+| `Game.qs`         | Q# operações e funções para o exemplo                 |
 | `Host.cs`         | Programa de host C# usado para executar o exemplo                     |
 | `host.py`         | Programa de host Python usado para executar o exemplo                 |
 | `README.md`       | Documentação sobre o que o exemplo faz e como usá-lo    |

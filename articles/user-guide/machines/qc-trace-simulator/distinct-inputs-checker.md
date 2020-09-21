@@ -2,19 +2,19 @@
 title: Verificador de entradas distintos – kit de desenvolvimento Quantum
 description: Saiba mais sobre o verificador de entradas distintos da Microsoft QDK, que usa o simulador de rastreamento do Quantum para verificar o Q# código em busca de possíveis conflitos com o qubits compartilhado.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 750c94e7f861678d37f051619ff5b29bf4fd3d3e
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: bcb0bc92a546279496d27ad9b8c5f943ac133e2a
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868263"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833460"
 ---
 # <a name="quantum-trace-simulator-distinct-inputs-checker"></a>Simulador de rastreamento Quantum: verificador de entradas distintos
 
@@ -88,7 +88,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - A visão geral do [simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) do quantum do kit de desenvolvimento Quantum.
 - A <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> referência da API.

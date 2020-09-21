@@ -2,19 +2,19 @@
 title: Escreva e simule programas de nível qubit no Q#
 description: Tutorial passo a passo sobre como escrever e simular um programa Quantum que opera no nível de qubit individual
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863343"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834951"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Tutorial: escrever e simular programas de nível qubit em Q\#
 
@@ -116,7 +116,7 @@ Com `using` o, os qubits são alocados automaticamente no estado $ \ket {0} $. P
 Em seguida, aplicamos as Gates que compõem a própria operação.
 Q# já contém muitas Gates básicas de Quantum como operações no [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) namespace, e essas não são exceção. 
 
-Dentro de uma Q# operação, as instruções que chamam o callablefiles certamente serão executadas em ordem sequencial.
+Dentro de uma Q# operação, as instruções que chamam o callablefiles, é claro, serão executadas em ordem sequencial.
 Portanto, o primeiro portão a ser aplicado é o [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) para o primeiro qubit:
 
 <br/>
@@ -244,7 +244,7 @@ namespace NamespaceQFT {
 
 Com o Q# arquivo e a operação concluídos, nosso programa Quantum está pronto para ser chamado e simulado.
 
-## <a name="execute-the-program"></a>Executar o programa
+## <a name="run-the-program"></a>Execute o programa
 
 Depois de definir nossa Q# operação em um `.qs` arquivo, agora precisamos chamar essa operação e observar os dados clássicos retornados.
 Por enquanto, não há nada retornado (Lembre-se de que nossa operação definida acima retorna `Unit` ), mas quando modificamos posteriormente a Q# operação para retornar uma matriz de resultados de medida ( `Result[]` ), abordaremos isso.
@@ -269,7 +269,7 @@ Para executar o programa, abra o terminal na pasta do seu projeto e insira
 dotnet run
 ```
 
-Após a execução, você deverá ver `Message` as `DumpMachine` saídas e abaixo impressas em seu console.
+Após a conclusão, você deverá ver `Message` as `DumpMachine` saídas e abaixo impressas em seu console.
 
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
@@ -314,8 +314,8 @@ O host C# tem quatro partes:
     Não há nenhum neste exemplo.
 3. Executa o algoritmo quântico. 
     Cada Q# operação gera uma classe C# com o mesmo nome. 
-    Essa classe tem um método `Run` que executa a operação de **maneira assíncrona**.
-    A execução é assíncrona, porque a execução no hardware real será assíncrona. 
+    Essa classe tem um `Run` método que executa a operação de **forma assíncrona**.
+    A execução é assíncrona porque executá-la no hardware real será assíncrona. 
     Como o `Run` método é assíncrono, chamamos o `Wait()` método; isso bloqueia a execução até que a tarefa seja concluída e retorna o resultado de forma síncrona. 
 4. Processar o resultado retornado da operação.
     Por enquanto, a operação não retorna nada.
@@ -499,7 +499,7 @@ O código final da operação deve ser semelhante a:
 }
 ```
 
-Se você estiver trabalhando no prompt de comando, a matriz retornada será simplesmente impressa diretamente no console no final da execução.
+Se você estiver trabalhando no prompt de comando, a matriz retornada será simplesmente exibida diretamente para o console no final da execução.
 Caso contrário, atualize o programa de host para processar a matriz retornada.
 
 #### <a name="command-prompt"></a>[Prompt de comando](#tab/tabid-cmdline)

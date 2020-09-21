@@ -8,12 +8,12 @@ uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 78d6488ed5e3972f85f1e6cf1ba2d197596c4cc3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869300"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759708"
 ---
 # <a name="end-to-end-with-nwchem"></a>Ponta a ponta com NWChem #
 
@@ -22,7 +22,7 @@ Antes de continuar com este exemplo, verifique se você instalou o Docker, segui
 
 Para mais informações:
 - [Estrutura de baralhos de entrada NWChem](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
-    - [Comandos de baralho de entrada para uso com o kit de desenvolvimento Quantum](https://github.com/nwchemgit/nwchem/tree/master/contrib/quasar)
+    - [Comandos de baralho de entrada para uso com o kit de desenvolvimento Quantum](https://github.com/nwchemgit/nwchem/tree/main/contrib/quasar)
 - [Instalando a biblioteca e as dependências química](xref:microsoft.quantum.chemistry.concepts.installation)
 - [Contagem de recursos](xref:microsoft.quantum.chemistry.examples.resourcecounts)
 
@@ -65,7 +65,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Em seguida, importaremos o `Get-GateCount` comando fornecido com o exemplo **GetGateCount** .
-Para obter detalhes completos, consulte as [instruções fornecidas com o exemplo](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount).
+Para obter detalhes completos, consulte as [instruções fornecidas com o exemplo](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/GetGateCount).
 Em seguida, execute o seguinte, substituindo `<runtime>` por um `win10-x64` , `osx-x64` ou `linux-x64` , dependendo do seu sistema operacional:
 
 ```powershell
@@ -95,7 +95,7 @@ Primeiro, clone o [repositório nwchemgit/nwchem](https://github.com/nwchemgit/n
 git clone https://github.com/nwchemgit/nwchem --depth 1
 ```
 
-O `nwchemgit/nwchem` repositório vem com uma variedade de baralhos de entrada destinados ao uso com o kit de desenvolvimento Quantum, listado na [ `QA/chem_library_tests` pasta](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests).
+O `nwchemgit/nwchem` repositório vem com uma variedade de baralhos de entrada destinados ao uso com o kit de desenvolvimento Quantum, listado na [ `QA/chem_library_tests` pasta](https://github.com/nwchemgit/nwchem/tree/main/QA/chem_library_tests).
 Para este exemplo, usaremos o baralho de `H4` entrada:
 
 ```powershell
@@ -167,7 +167,7 @@ Há muitas coisas a serem passadas aqui:
 - Experimente diferentes decks de entrada predefinidos, por exemplo, variando o parâmetro `alpha` em `h4_sto6g_alpha.nw` , 
 - Tente modificar os baralhos editando os barNWChems diretamente, por exemplo, explorando `STO-nG` modelos para várias opções de n, 
 - Tente outros barNWChem de entrada predefinidos disponíveis em `nwchem/qa/chem_library_tests` ,
-- Experimente um conjunto de benchmarks predefinidos do Broombridge YAML que foram gerados do NWChem e estão disponíveis como parte do [repositório Microsoft/Quantum](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML). Esses parâmetros de comparação incluem: 
+- Experimente um conjunto de benchmarks predefinidos do Broombridge YAML que foram gerados do NWChem e estão disponíveis como parte do [repositório Microsoft/Quantum](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML). Esses parâmetros de comparação incluem: 
     - moléculas pequeno, como molecular Hydrogen (H2), Beryllium (ser), lítio hydride (LiH),
     - moléculas maiores, como ozônio (O3), beta-carotene, cytosine e muito mais. 
 - Experimente as [setas de EMSL](https://arrows.emsl.pnnl.gov/api/qsharp_chem) de front-end gráficas que apresenta uma interface para a Microsoft Quantum Development Kit. 
@@ -180,7 +180,7 @@ Para começar a usar as setas EMSL de front-end baseadas na Web, navegue até um
 > [!NOTE]
 > A execução de setas EMSL em um navegador da Web requer que o JavaScript esteja habilitado. Veja estas [instruções](https://www.enable-javascript.com/) sobre como habilitar o JavaScript em seu navegador. 
 
-Primeiro, insira um molécula na caixa de consulta que diz``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
+Primeiro, insira um molécula na caixa de consulta que diz ``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
 
 Você pode inserir muitos moléculas por seu nome de uso coloquial, como "cafeína" em vez de "1, 3, 7-Trimethylxanthine". 
 

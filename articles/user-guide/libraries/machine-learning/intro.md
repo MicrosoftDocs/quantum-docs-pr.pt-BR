@@ -1,19 +1,20 @@
 ---
 title: Biblioteca de aprendizado de máquina quântico
+description: Saiba como o Machine Learning é usado em sistemas Quantum
 author: alexeib2
-ms.author: alexei.bocharov@microsoft.com
+ms.author: alexeib
 ms.date: 11/22/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 65b0aa6a7f385765933d4d89ce34901f77cf76ec
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863093"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833801"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Introdução ao Quantum Machine Learning
 
@@ -74,4 +75,4 @@ Um caso de treinamento $ (x, y) na \mathcal{D} $ é considerado uma *classifica�
 
 Essas informações devem ser suficientes para começar a brincar com o código. No entanto, se você quiser saber mais sobre esse modelo, leia a proposta original: [ *' classificadores de Quantum centrado em circuitos ', Maria Schuld, Alex Bocharov, Krysta Svore e Nathan Wiebe*](https://arxiv.org/abs/1804.00633)
 
-Além do exemplo de código que você verá nas próximas etapas, você também pode começar a explorar a classificação Quantum neste [tutorial](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/QuantumClassification) 
+Além do exemplo de código que você verá nas próximas etapas, você também pode começar a explorar a classificação Quantum neste [tutorial](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/QuantumClassification) 

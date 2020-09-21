@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 956b0957a5261b8a77bf18d776fbcc2853bfbfe7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b27d084bbe2cda878efa6250c52c0ae628637850
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866901"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834883"
 ---
 # <a name="contributing-code"></a>Código de contribuição
 
@@ -34,7 +34,7 @@ Portanto, é útil quando a funcionalidade adicionada por uma contribuição é 
 As Q# funções, as operações e os tipos definidos pelo usuário que compõem bibliotecas como a Canon são testados automaticamente como parte do desenvolvimento no repositório [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) .
 Quando uma nova solicitação pull é aberta, por exemplo, nossa configuração de [Azure pipelines](https://azure.microsoft.com/services/devops/pipelines/) verificará se as alterações na solicitação pull não interrompem nenhuma funcionalidade existente da qual a comunidade de programação Quantum dependa.
 
-Com a versão mais recente Q# , o teste de unidade é definido usando o `@Test("QuantumSimulator")` atributo. O argumento pode ser "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" ou qualquer nome totalmente qualificado especificando o destino de execução. Vários atributos que definem destinos de execução diferentes podem ser anexados ao mesmo callable. Alguns de nossos testes ainda usam o pacote [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) preterido que expõe todas as Q# funções e operações que terminam `Test` com a estrutura [xUnit](https://xunit.github.io/) . Este pacote não é mais necessário para definir testes de unidade. 
+Com a versão mais recente Q# , os testes de unidade são definidos usando o `@Test("QuantumSimulator")` atributo. O argumento pode ser "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" ou qualquer nome totalmente qualificado especificando o destino de execução. Vários atributos que definem destinos de execução diferentes podem ser anexados ao mesmo callable. Alguns de nossos testes ainda usam o pacote [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) preterido que expõe todas as Q# funções e operações que terminam `Test` com a estrutura [xUnit](https://xunit.github.io/) . Este pacote não é mais necessário para definir testes de unidade. 
 
 A função a seguir é usada para garantir que <xref:microsoft.quantum.canon.fst> as <xref:microsoft.quantum.canon.snd> funções e retornam as saídas corretas em um exemplo representativo.
 Se a saída de `Fst` ou `Snd` estiver incorreta, a `fail` instrução será usada para fazer com que o teste falhe.

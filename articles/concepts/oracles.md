@@ -1,6 +1,6 @@
 ---
 Título: Descrição da Quantum Oracle: saiba como trabalhar com e definir Oracle Quantum, operações de caixa preta que são usadas como entrada para outro algoritmo.
-Autor: cgranade UID: Microsoft. Quantum. Concepts. oraclees MS. Author: Christopher.Granade@microsoft.com MS. Data: 07/11/2018 MS. Topic: artigo no-loc:
+Autor: cgranade UID: Microsoft. Quantum. Concepts. oraclees MS. Author: chgranad MS. Date: 07/11/2018 MS. tópico: article no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -140,7 +140,7 @@ O \ket { \psi } & = \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m 
 $$
 
 ## <a name="phase-oracles"></a>Fase Oracle
-Como alternativa, podemos codificar $ f $ em um Oracle $ O $ aplicando uma _fase_ com base na entrada para $ o $ . Por exemplo, poderemos definir $ O $ como$$
+Como alternativa, podemos codificar $ f $ em um Oracle $ O $ aplicando uma _fase_ com base na entrada para $ o $ . Por exemplo, poderemos definir $ O $ como $$
 \begin{align}
     O \ket { x } = (-1) ^ { f (x) } \ket { x } .
 \end{align}
@@ -148,9 +148,9 @@ $$
 Se uma fase da Oracle age em um registro inicialmente em um estado de base computacional $ \ket { x } $ , essa fase é uma fase global e, portanto, não observável.
 Mas tal Oracle pode ser um recurso muito potente se aplicado a uma superposição ou como uma operação controlada.
 Por exemplo, considere uma fase de $ O_f $ da Oracle para uma função f de qubit única $ $ .
-Clique$$
+Clique $$
 \begin{align}
-    O_f\ket{+}
+    O_f \ket{+}
         &=O_f ( \ket { 0 }  +  \ket { 1 } )/ \sqrt { 2 }\\\\
         &=((-1) ^ { f (0) } \ket { 0 } + (-1) ^ { f (1) } \ket { 1 } )/ \sqrt { 2 }\\\\
         &=(-1) ^ { f (0) } ( \ket { 0 } + (-1) ^ { f (1)-f (0) } \ket { 1 } )/ \sqrt { 2 }\\\\

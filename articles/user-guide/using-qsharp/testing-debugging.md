@@ -2,19 +2,19 @@
 title: Testando e depurando
 description: Saiba como usar testes de unidade, fatos e asserções e funções de despejo para testar e depurar programas Quantum.
 author: tcNickolas
-ms.author: mamykhai@microsoft.com
+ms.author: mamykhai
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2b5276da594ba263177d435c1153f6d96e29c4e8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 2f2181d388a59c1c6c5a0f13c9aa49d5fa1e51ae
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867906"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833171"
 ---
 # <a name="testing-and-debugging"></a>Testando e depurando
 
@@ -26,7 +26,7 @@ Nesta seção, abordaremos as ferramentas oferecidas pelo Q# para testar e depur
 Uma abordagem comum para testar programas clássicos é escrever programas pequenos chamados de *testes de unidade*, que executam o código em uma biblioteca e comparam sua saída a alguma saída esperada.
 Por exemplo, você pode garantir que os `Square(2)` retornos `4` desde que você saiba *um priori* que $2 ^ 2 = $4.
 
-Q#dá suporte à criação de testes de unidade para programas Quantum e que podem ser executados como testes dentro da estrutura de teste de unidade do [xUnit](https://xunit.github.io/) .
+Q# dá suporte à criação de testes de unidade para programas Quantum e que podem ser executados como testes dentro da estrutura de teste de unidade do [xUnit](https://xunit.github.io/) .
 
 ### <a name="creating-a-test-project"></a>Criando um projeto de teste
 
@@ -127,7 +127,7 @@ A função intrínseca <xref:microsoft.quantum.intrinsic.message> tem o tipo `(S
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Depois de executar um teste no Test Explorer e clicar no teste, um painel será exibido com informações sobre a execução do teste: status de aprovação/falha, tempo decorrido e um link para a saída. Clique em **saída** para abrir a saída de teste em uma nova janela.
+Depois de executar um teste no Test Explorer e clicar no teste, um painel será exibido com informações sobre a execução de teste: status de aprovação/falha, tempo decorrido e um link para a saída. Clique em **saída** para abrir a saída de teste em uma nova janela.
 
 ![saída de teste](~/media/unit-test-output.png)
 
@@ -314,7 +314,7 @@ Os exemplos a seguir mostram `DumpMachine` alguns Estados comuns:
 
 ***
 
-Como <xref:microsoft.quantum.diagnostics.dumpmachine> o é parte do <xref:microsoft.quantum.diagnostics> namespace, você deve adicionar uma `open` instrução para acessá-lo:
+Como <xref:microsoft.quantum.diagnostics.dumpmachine> o é parte do  <xref:microsoft.quantum.diagnostics> namespace, você deve adicionar uma `open` instrução para acessá-lo:
 
 ```qsharp
 namespace Samples {
@@ -333,7 +333,7 @@ namespace Samples {
 
 ### <a name="dumpregister"></a>DumpRegister
 
-<xref:microsoft.quantum.diagnostics.dumpregister>funciona como <xref:microsoft.quantum.diagnostics.dumpmachine> , exceto pelo fato de que ele também usa uma matriz de qubits para limitar a quantidade de informações apenas às relevantes para o qubits correspondente.
+<xref:microsoft.quantum.diagnostics.dumpregister> funciona como <xref:microsoft.quantum.diagnostics.dumpmachine> , exceto pelo fato de que ele também usa uma matriz de qubits para limitar a quantidade de informações apenas às relevantes para o qubits correspondente.
 
 Assim como acontece com <xref:microsoft.quantum.diagnostics.dumpmachine> , as informações geradas <xref:microsoft.quantum.diagnostics.dumpregister> dependem do computador de destino. Para o simulador de Quantum de estado completo, ele grava no arquivo a função de onda até uma fase global do subsistema Quantum gerado pelo qubits fornecido no mesmo formato que <xref:microsoft.quantum.diagnostics.dumpmachine> .  Por exemplo, pegue novamente um computador com apenas dois qubits alocados e no estado Quantum $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{(1 + i)} {2} \ket {10} =-e ^ {-i \ pi/4} ((\frac {1} {\sqrt {2} } \ket {0} -\frac{(1 + i)} {2} \ket {1} ) \otimes \frac{-(1 + i)} {\sqrt {2} } \ket {0} ), \end{align} $ $ chamando <xref:microsoft.quantum.diagnostics.dumpregister> para `qubit[0]` gera esta saída:
 
@@ -384,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a>Depuração
 
-Além das `Assert` funções e `Dump` operações, Q# o oferece suporte a um subconjunto de recursos de depuração padrão do Visual Studio: [definir pontos de interrupção de linha](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), percorrer [código usando F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)e [inspecionar valores de variáveis clássicas](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) é possível durante a execução do código no simulador.
+Além de `Assert` funções e `Dump` operações, Q# o dá suporte a um subconjunto de recursos de depuração padrão do Visual Studio: [definir pontos de interrupção de linha](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), percorrer [código usando F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)e [inspecionar valores de variáveis clássicas](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) é possível ao executar seu código no simulador.
 
 A depuração no Visual Studio Code aproveita os recursos de depuração fornecidos pelo C# para Visual Studio Code extensão da plataforma OmniSharp e requer a instalação da [versão mais recente](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp). 

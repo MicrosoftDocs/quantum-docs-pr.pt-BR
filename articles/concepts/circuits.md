@@ -1,6 +1,6 @@
 ---
 Título: descrição dos circuitos do Quantum: saiba como representar visualmente operações Quantum simples e complexas com diagramas de circuito Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. circuits MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. tópico: article no-loc:
+Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. circuits MS. Author: v-benbra MS. Date: 12/11/2017 MS. tópico: article no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -156,7 +156,7 @@ Para os casos especiais em que $ g = X $ e $ g = Z $ , apresentamos a seguinte n
 <!--Não pode encontrar uma maneira de centralizar facilmente isso... Provavelmente uma extensão necessária:-->
 ![Diagrama de circuito para casos especiais de Gates controlados](~/media/6.svg)
 
-Q#fornece métodos para gerar automaticamente a versão controlada de uma operação, o que evita que o programador tenha que codificar essas operações manualmente. Um exemplo disso é mostrado abaixo:
+Q# fornece métodos para gerar automaticamente a versão controlada de uma operação, o que evita que o programador tenha que codificar essas operações manualmente. Um exemplo disso é mostrado abaixo:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -175,7 +175,7 @@ Especificamente, esse subcircuito é semelhante a:
 <!--Não pode encontrar uma maneira de centralizar facilmente isso... Provavelmente uma extensão necessária:-->
 ![Símbolo que representa uma operação de medição](~/media/7.svg)
 
-Q#implementa um [operador de medida](xref:microsoft.quantum.intrinsic.measure) para essa finalidade.
+Q# implementa um [operador de medida](xref:microsoft.quantum.intrinsic.measure) para essa finalidade.
 Consulte a [seção sobre medições](xref:microsoft.quantum.libraries.standard.prelude#measurements) para obter mais informações.
 
 Da mesma forma, o subcircuito

@@ -1,6 +1,6 @@
 ---
 Título: Descrição de medidas de Pauli: saiba como trabalhar com operações de medição de Pauli única e qubit.
-Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. Pauli MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. tópico: article no-loc:
+Autor: bradben UID: Microsoft. Quantum. Concepts. Pauli MS. Author: v-benbra MS. Date: 12/11/2017 MS. tópico: article no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -143,8 +143,8 @@ Também é equivalente a aplicar $ HS ^ \dagger $ ao vetor de estado Quantum e, 
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
-        H(q);
         Adjoint S(q);
+        H(q);
     } apply {
         set result = M(q);
     }
@@ -230,7 +230,7 @@ Embora os dois tipos de medidas sejam igualmente valiosos na computação Quantu
 Ele revela que, na computação Quantum, geralmente as informações que você deseja aprender não são armazenadas em nenhum único qubit, mas armazenadas não localmente em todas as qubits de uma vez e, portanto, apenas examinando-as por meio de uma medida conjunta (por exemplo, $ z \otimes z $ ), essas informações se tornam manifestos.
 
 Por exemplo, na correção de erros, muitas vezes desejamos saber qual erro ocorreu ao aprender nada sobre o estado que estamos tentando proteger.
-O [exemplo de código de inversão de bits](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code) mostra um exemplo de como você pode fazer isso usando medidas como $ z \otimes z \otimes \id $ e $ \id \otimes z z \otimes $ . < ! --TODO: altere isso para um link para o navegador de exemplos assim que o exemplo de código de inversão de bits estiver integrado. -->
+O [exemplo de código de inversão de bits](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code) mostra um exemplo de como você pode fazer isso usando medidas como $ z \otimes z \otimes \id $ e $ \id \otimes z z \otimes $ . < ! --TODO: altere isso para um link para o navegador de exemplos assim que o exemplo de código de inversão de bits estiver integrado. -->
 
 Operadores Pauli arbitrários, como $ X \otimes Y Z, \otimes \otimes \boldone $ também podem ser medidos.
 Todos esses produtos tensor de operadores Pauli têm apenas dois eigenvalues $ \pm 1 $ e ambos eigenspaces constituem metades do espaço de vetor inteiro.

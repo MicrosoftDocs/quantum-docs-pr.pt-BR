@@ -2,30 +2,30 @@
 title: Licenciamento de software livre para o QDK
 description: Saiba mais sobre o licenciamento para usar e contribuir com as Q# bibliotecas padrão da Microsoft-licenciamento e contribuição.
 author: martinro
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 2/16/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.licensing
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f964d5f4a4c20c8d53ceb4375c869030cd53ff07
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4531d8c19e35f48f6e4c3cc2cebe3d82d6fa1025
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868450"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833690"
 ---
-# <a name="licensing"></a>Licenças #
+# <a name="licensing"></a>Licenciamento #
 
-O kit de desenvolvimento Quantum é fornecido com uma ampla coleção de funções e operações de software livre, licenciada sob a [licença MIT](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt).
+O kit de desenvolvimento Quantum é fornecido com uma ampla coleção de funções e operações de software livre, licenciada sob a [licença MIT](https://github.com/Microsoft/Quantum/blob/main/LICENSE.txt).
 As partes da biblioteca padrão que são portáveis em computadores de destino podem ser obtidas no repositório [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) no GitHub, juntamente com outras bibliotecas, como e outras bibliotecas, como a [biblioteca química do Quantum](xref:microsoft.quantum.chemistry.concepts.intro).
 
-O kit de desenvolvimento Quantum da Microsoft também fornece funções de biblioteca especializadas e operações licenciadas sob uma [licença do Microsoft Research](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE).
+O kit de desenvolvimento Quantum da Microsoft também fornece funções de biblioteca especializadas e operações licenciadas sob uma [licença do Microsoft Research](https://github.com/Microsoft/Quantum-NC/blob/main/LICENSE).
 Eles podem ser obtidos no repositório [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) no github.
 
 Também há muitos exemplos que explicam e ilustram o uso de funções e operações da biblioteca padrão e de outras bibliotecas.
-Esses exemplos são licenciados sob a [licença do MIT](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt).
+Esses exemplos são licenciados sob a [licença do MIT](https://github.com/Microsoft/Quantum/blob/main/LICENSE.txt).
 Os exemplos podem ser obtidos no repositório [Microsoft/Quantum](https://github.com/Microsoft/Quantum) no github.
 
 ## <a name="contributing"></a>Contribuição ##

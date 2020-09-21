@@ -1,5 +1,5 @@
 ---
-title: Operações e funções noQ#
+title: Operações e funções no Q#
 description: Como definir e chamar operações e funções, bem como as especializações de operação controladas e adjacentes.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,14 +9,14 @@ uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 76437c83df894fa86409e680f961d97e267c6869
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867872"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759417"
 ---
-# <a name="operations-and-functions-in-no-locq"></a>Operações e funções noQ#
+# <a name="operations-and-functions-in-no-locq"></a>Operações e funções no Q#
 
 ## <a name="defining-new-operations"></a>Definindo novas operações
 
@@ -43,12 +43,12 @@ operation BitFlip(target : Qubit) : Unit {
 A palavra-chave `operation` começa a definição da operação, seguida pelo nome; aqui, `BitFlip` .
 Em seguida, o tipo de entrada é definido ( `Qubit` ), junto com um nome, `target` , para se referir à entrada dentro da nova operação.
 Por fim, `Unit` define que a saída da operação está vazia.
-`Unit`é usado da mesma forma `void` no C# e em outras linguagens imperativas e é equivalente a `unit` em F # e a outras linguagens funcionais.
+`Unit` é usado da mesma forma `void` no C# e em outras linguagens imperativas e é equivalente a `unit` em F # e a outras linguagens funcionais.
 
 As operações também podem retornar tipos mais interessantes do que `Unit` .
 Por exemplo, a <xref:microsoft.quantum.intrinsic.m> operação retorna uma saída do tipo `Result` , representando tendo realizado uma medição.  Você pode passá-lo de uma operação para outra operação ou usá-lo com a `let` palavra-chave para definir uma nova variável.
 
-Essa abordagem permite representar a computação clássica que interage com as operações Quantum em um nível baixo, como na [codificação superdensa](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding):
+Essa abordagem permite representar a computação clássica que interage com as operações Quantum em um nível baixo, como na [codificação superdensa](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding):
 
 ```qsharp
 operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
@@ -100,14 +100,14 @@ Use um functor aplicando-o a uma operação, que retorna uma nova operação.
 Por exemplo, aplicar o `Adjoint` functor à `Y` operação retorna a nova operação `Adjoint Y` . Você pode invocar a nova operação como qualquer outra operação.
 Para uma operação para dar suporte ao aplicativo do `Adjoint` ou `Controlled` transmissão functors, seu tipo de retorno precisa ser necessariamente `Unit` . 
 
-#### <a name="adjoint-functor"></a>`Adjoint`functor
+#### <a name="adjoint-functor"></a>`Adjoint` functor
 
 Assim, `Adjoint Y(q1)` o aplica o `Adjoint` functor à `Y` operação para gerar uma nova operação e aplica essa nova operação ao `q1` .
 A nova operação tem a mesma assinatura e tipo que a operação base `Y` .
 Em particular, a nova operação também dá suporte a e `Adjoint` dá suporte a `Controlled` If e somente se a operação base tiver feito.
 O `Adjoint` functor é seu próprio inverso; ou seja, `Adjoint Adjoint Op` é sempre o mesmo que `Op` .
 
-#### <a name="controlled-functor"></a>`Controlled`functor
+#### <a name="controlled-functor"></a>`Controlled` functor
 
 Da mesma forma, `Controlled X(controls, target)` o aplica o `Controlled` functor à `X` operação para gerar uma nova operação e aplica essa nova operação ao `controls` e ao `target` .
 
@@ -123,11 +123,11 @@ A nova operação dá suporte a `Controlled` e dará suporte a `Adjoint` If e so
 
 Se a operação original levou apenas um único argumento, a [equivalência de tupla singleton](xref:microsoft.quantum.guide.types) entra em cena aqui.
 Por exemplo, `Controlled X` é a versão controlada da `X` operação. 
-`X`tem tipo `(Qubit => Unit is Adj + Ctl)` , portanto, `Controlled X` tem tipo `((Qubit[], (Qubit)) => Unit is Adj + Ctl)` ; devido à equivalência de tupla singleton, isso é o mesmo que `((Qubit[], Qubit) => Unit is Adj + Ctl)` .
+`X` tem tipo `(Qubit => Unit is Adj + Ctl)` , portanto, `Controlled X` tem tipo `((Qubit[], (Qubit)) => Unit is Adj + Ctl)` ; devido à equivalência de tupla singleton, isso é o mesmo que `((Qubit[], Qubit) => Unit is Adj + Ctl)` .
 
 Se a operação base levou vários argumentos, lembre-se de colocar os argumentos correspondentes da versão controlada da operação entre parênteses para convertê-los em uma tupla.
 Por exemplo, `Controlled Rz` é a versão controlada da `Rz` operação. 
-`Rz`tem tipo `((Double, Qubit) => Unit is Adj + Ctl)` , portanto, `Controlled Rz` tem tipo `((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)` .
+`Rz` tem tipo `((Double, Qubit) => Unit is Adj + Ctl)` , portanto, `Controlled Rz` tem tipo `((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)` .
 Portanto, `Controlled Rz(controls, (0.1, target))` seria uma invocação válida de `Controlled Rz` (Observe os parênteses `0.1, target` ).
 
 Como outro exemplo, `CNOT(control, target)` pode ser implementado como `Controlled X([control], target)` . Se um destino deve ser controlado por dois qubits de controle (CCNOT), use uma `Controlled X([control1, control2], target)` instrução.
@@ -192,7 +192,7 @@ A seguir, há uma gama completa de possibilidades, com alguns exemplos de especi
 
 #### <a name="explicit-specialization-declarations"></a>Declarações de especialização explícitas
 
-Q#as operações podem conter as seguintes declarações de especialização explícitas:
+Q# as operações podem conter as seguintes declarações de especialização explícitas:
 
 - A `body` especialização especifica a implementação da operação sem nenhum transmissão functors aplicado.
 - A `adjoint` especialização especifica a implementação da operação com o `Adjoint` functor aplicado.
@@ -329,9 +329,9 @@ Para uma operação cujo corpo contém chamadas para outras operações que não
 
 Use uma operação com transmissão functors adicionais com suporte em qualquer lugar em que você use uma operação com menos transmissão functors, mas a mesma assinatura. Por exemplo, use uma operação do tipo `(Qubit => Unit is Adj)` em qualquer lugar em que você use uma operação do tipo `(Qubit => Unit)` .
 
-Q#é *Covariance* com relação a tipos de retorno que podem ser chamados: um callable que retorna um tipo `'A` é compatível com um callable com o mesmo tipo de entrada e um tipo de resultado compatível com `'A` .
+Q# é *Covariance* com relação a tipos de retorno que podem ser chamados: um callable que retorna um tipo `'A` é compatível com um callable com o mesmo tipo de entrada e um tipo de resultado compatível com `'A` .
 
-Q#é *contravariant* em relação aos tipos de entrada: um callable que usa um tipo `'A` como entrada é compatível com um callable com o mesmo tipo de resultado e um tipo de entrada compatível com `'A` .
+Q# é *contravariant* em relação aos tipos de entrada: um callable que usa um tipo `'A` como entrada é compatível com um callable com o mesmo tipo de resultado e um tipo de entrada compatível com `'A` .
 
 Ou seja, dadas as definições a seguir,
 
@@ -360,7 +360,7 @@ function ConjugateUnitaryWith(
 - Retornar um valor do tipo `(Qubit[] => Unit is Adj + Ctl)` de `ConjugateInvertWith` .
 
 > [!IMPORTANT]
-> Q#0,3 introduziu uma diferença significativa no comportamento de tipos definidos pelo usuário.
+> Q# 0,3 introduziu uma diferença significativa no comportamento de tipos definidos pelo usuário.
 
 Os tipos definidos pelo usuário são tratados como uma versão encapsulada do tipo subjacente, em vez de como um subtipo.
 Isso significa que um valor de um tipo definido pelo usuário não é utilizável em que você espera que um valor do tipo subjacente seja.
@@ -425,7 +425,7 @@ function Square(x : Double) : (Double) {
 }
 ```
 
-ou o 
+ou 
 
 ```qsharp
 function DotProduct(a : Double[], b : Double[]) : Double {
@@ -509,7 +509,7 @@ Embora isso seja indesejado para um pequeno número dessas funções, à medida 
 No entanto, grande parte dessa dificuldade resulta do fato de que você não deu ao compilador as informações de que ele precisa para reconhecer como as diferentes versões do `Map` estão relacionadas.
 Efetivamente, você deseja que o compilador trate `Map` como algum tipo de função matemática de Q# *tipos* para Q# funções.
 
-Q#formalizes essa noção permitindo que funções e operações tenham *parâmetros de tipo*, bem como seus parâmetros de tupla comuns.
+Q# formalizes essa noção permitindo que funções e operações tenham *parâmetros de tipo*, bem como seus parâmetros de tupla comuns.
 Nos exemplos anteriores, você deseja considerar `Map` como tendo parâmetros de tipo `Int, Pauli` no primeiro caso e `Double, String` no segundo caso.
 Para a maior parte, use esses parâmetros de tipo como se fossem tipos comuns. Use valores de parâmetros de tipo para criar matrizes e tuplas, chamar funções e operações e atribuir a variáveis comuns ou mutáveis.
 
@@ -657,7 +657,7 @@ Em princípio, a lógica clássica dentro `SquareOperation` poderia ter sido mui
 
 ## <a name="recursion"></a>Recursão
 
-Q#os chamadores podem ser recursivos direta ou indiretamente.
+Q# os chamadores podem ser recursivos direta ou indiretamente.
 Ou seja, uma operação ou função pode chamar a si mesma ou chamar outro callable que chama direta ou indiretamente a operação que pode ser chamada.
 
 No entanto, há dois comentários importantes sobre o uso da recursão:

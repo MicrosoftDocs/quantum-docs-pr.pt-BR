@@ -4,18 +4,18 @@ description: Microsoft Quantum Development Kit avisos e informações de softwar
 services: service-name-with-dashes-AZURE-ONLY
 keywords: Não adicione ou edite palavras-chave sem consultar seu especialista em SEO.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 939dc681d6b9a89f02fd1f392b7fd84067d98e8f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869742"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834118"
 ---
 # <a name="third-party-software-notices-and-information"></a>AVISOS E INFORMAÇÕES DE SOFTWARE DE TERCEIROS
 
@@ -268,7 +268,7 @@ O SOFTWARE É FORNECIDO "COMO SE ENCONTRA" SEM QUALQUER TIPO DE GARANTIA, SEJA E
 
 Exceto quando indicado de outra forma, a biblioteca FParsec em formato de origem e binário é distribuída sob a licença do BSD simplificada. A licença do BSD simplificada (também conhecida como a "2 ‐ da cláusula BSD License") é uma licença simples e permissiva que é compatível com o OSI ‐. 
 
-O FParsec incorpora dados derivados do banco de dados de caracteres Unicode v. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., que é distribuído sob os seguintes termos:http://www.unicode.org/terms_of_use.html#Exhibit1 
+O FParsec incorpora dados derivados do banco de dados de caracteres Unicode v. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., que é distribuído sob os seguintes termos: http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 A documentação na pasta doc é licenciada sob a licença Creative Commons Reporting ‐ 3,0 comercialmente não portada. Essa licença Creative Commons não permite que você use a documentação para fins comerciais sem permissão. Isso significa, por exemplo, que você não pode vender a documentação do formulário de livro para fins de lucro ou colocá-la em um farm de conteúdo da Web para ganhar dinheiro com anúncios. No entanto, é claro que você pode usar a documentação em um contexto comercial (por exemplo, colocá-lo na intranet de uma corporação comercial), desde que você não esteja tentando ganhar dinheiro diretamente do texto da documentação. 
 
@@ -284,6 +284,6 @@ Esse software é fornecido pelos detentores de direitos autorais "como estão" e
 
 2,2 3,0 ‐ de atribuição da Creative Commons para licença não portada
 
-Resumohttps://creativecommons.org/licenses/by-nc/3.0/
+Resumo https://creativecommons.org/licenses/by-nc/3.0/
 
-O texto da licença completa:https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+O texto da licença completa: https://creativecommons.org/licenses/by-nc/3.0/legalcode 
