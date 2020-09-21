@@ -1,22 +1,22 @@
 ---
-title: Q#Estrutura de arquivos
+title: Q# Estrutura de arquivos
 description: Descreve a estrutura e a sintaxe de um Q# arquivo.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 98b3a2e35186989b8191cc566a5d5310bc26eafc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867923"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833303"
 ---
-# <a name="no-locq-file-structure"></a>Q#Estrutura de arquivos
+# <a name="no-locq-file-structure"></a>Q# Estrutura de arquivos
 
 Um Q# arquivo consiste em uma sequência de *declarações de namespace*.
 Cada declaração de namespace contém declarações para tipos, operações e funções definidas pelo usuário, e pode conter qualquer número de cada tipo de declaração e em qualquer ordem.
@@ -76,7 +76,7 @@ Por exemplo, dada uma operação chamada `Op` do `X.Y` namespace:
 Geralmente, é melhor incluir um namespace usando uma `open` diretiva.
 Usar um nome totalmente qualificado é necessário se dois namespaces definem construções com o mesmo nome e a fonte atual usa construções de ambos.
 
-Q#segue as mesmas regras para nomear como outras linguagens .NET.
+Q# segue as mesmas regras para nomear como outras linguagens .NET.
 No entanto, Q# o não oferece suporte a referências relativas a namespaces.
 Por exemplo, se o namespace `a.b` estiver aberto, uma referência a uma operação chamada `c.d` não *será* resolvida para uma operação com o nome completo `a.b.c.d` .
 
@@ -91,7 +91,7 @@ Evite colocar várias instruções em uma única linha.
 
 ## <a name="statement-blocks"></a>Blocos de instrução
 
-Q#as instruções são agrupadas em blocos de instrução, que estão contidos com chaves `{ }` . Um bloco de instruções começa com uma abertura `{` e termina com um fechamento `}` .
+Q# as instruções são agrupadas em blocos de instrução, que estão contidos com chaves `{ }` . Um bloco de instruções começa com uma abertura `{` e termina com um fechamento `}` .
 
 Um bloco de instrução que está delimitado de forma lexical dentro de outro bloco é considerado um subbloco do bloco de contenção; os blocos e os subcontêineres também são chamados de bloco externo e interno.
 

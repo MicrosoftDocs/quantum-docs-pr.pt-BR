@@ -1,32 +1,32 @@
 ---
-title: Expressões emQ#
+title: Expressões em Q#
 description: Entenda como especificar, referenciar e combinar constantes, variáveis, operadores, operações e funções como expressões no Q# .
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869606"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835835"
 ---
-# <a name="expressions-in-no-locq"></a>Expressões emQ#
+# <a name="expressions-in-no-locq"></a>Expressões em Q#
 
 ## <a name="numeric-expressions"></a>Expressões numéricas
 
 Expressões numéricas são expressões do tipo `Int` , `BigInt` ou `Double` .
 Ou seja, eles são números inteiros ou de ponto flutuante.
 
-`Int`os literais no Q# são gravados como uma sequência de dígitos.
+`Int` os literais no Q# são gravados como uma sequência de dígitos.
 Os inteiros hexadecimais e binários têm suporte e são gravados com um `0x` `0b` prefixo e, respectivamente.
 
-`BigInt`os literais no Q# têm um `l` sufixo ou à direita `L` .
+`BigInt` os literais no Q# têm um `l` sufixo ou à direita `L` .
 Há suporte para inteiros grandes hexadecimais e gravados com um prefixo "0x".
 Portanto, veja a seguir todos os usos válidos de `BigInt` literais:
 
@@ -36,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`os literais no Q# são números de ponto flutuante gravados usando dígitos decimais.
+`Double` os literais no Q# são números de ponto flutuante gravados usando dígitos decimais.
 Eles podem ser escritos com ou sem um ponto decimal, `.` ou uma parte exponencial indicada com ' e ' ou ' e ' (após o qual apenas um possível sinal negativo e dígitos decimais são válidos).
 Os seguintes são `Double` literais válidos: `0.0` , `1.2e5` , `1e-5` .
 
@@ -64,16 +64,14 @@ Para os valores inteiros e inteiros grandes, as turnos são aritméticas.
 A mudança de um valor negativo para a esquerda ou para a direita resulta em um número negativo.
 Ou seja, mudar uma etapa para a esquerda ou para a direita é o mesmo que multiplicar ou dividir por 2, respectivamente.
 
-Divisão de inteiros e módulo de inteiro seguem o mesmo comportamento para números negativos em C#.
-Ou seja, `a % b` sempre tem o mesmo sinal como `a` e `b * (a / b) + a % b` sempre é igual a `a` .
-Por exemplo:
+Divisão de inteiros e módulo de inteiro seguem o mesmo comportamento para números negativos em C#. Ou seja, `a % b` sempre tem o mesmo sinal como `a` e `b * (a / b) + a % b` sempre é igual a `a` . Por exemplo:
 
- `A` | `B` | `A / B` | `A % B`
----------|----------|---------|---------
- 5 | 2 | 2 | 1
- 5 | -2 | -2 | 1
- -5 | 2 | -2 | -1
- -5 | -2 | 2 | -1
+|`A` | `B` | `A / B` | `A % B`|
+|:---------:|:----------:|:---------:|:---------:|
+| 5 | 2 | 2 | 1 |
+| 5 | -2 | -2 | 1 |
+| -5 | 2 | -2 | -1 |
+| -5 | -2 | 2 | -1 |
 
 A divisão de inteiro grande e as operações de módulo funcionam da mesma maneira.
 
@@ -113,7 +111,7 @@ Dada qualquer expressão booliana, o `not` operador unário pode ser usado para 
 
 ## <a name="string-expressions"></a>Expressões de cadeia de caracteres
 
-Q#permite que as cadeias de caracteres sejam usadas na `fail` instrução (explicada no [fluxo de controle](xref:microsoft.quantum.guide.controlflow#fail-statement)) e na [`Message`](xref:microsoft.quantum.intrinsic.message) função padrão. O comportamento específico do segundo depende do simulador usado, mas normalmente grava uma mensagem no console do host quando chamado durante um Q# programa.
+Q# permite que as cadeias de caracteres sejam usadas na `fail` instrução (explicada no [fluxo de controle](xref:microsoft.quantum.guide.controlflow#fail-statement)) e na [`Message`](xref:microsoft.quantum.intrinsic.message) função padrão. O comportamento específico do segundo depende do simulador usado, mas normalmente grava uma mensagem no console do host quando chamado durante um Q# programa.
 
 Cadeias de caracteres no Q# são literais ou cadeias de caracteres interpoladas.
 
@@ -156,14 +154,14 @@ Observe que o implícito `step` é + 1, mesmo se `stop` for menor que `start` ; 
 
 Alguns intervalos de exemplo são:
 
-- `1..3`é o intervalo 1, 2, 3.
-- `2..2..5`é o intervalo de 2, 4.
-- `2..2..6`é o intervalo de 2, 4, 6.
-- `6..-2..2`é o intervalo de 6, 4, 2.
-- `2..1`é o intervalo vazio.
-- `2..6..7`é o intervalo 2.
-- `2..2..1`é o intervalo vazio.
-- `1..-1..2`é o intervalo vazio.
+- `1..3` é o intervalo 1, 2, 3.
+- `2..2..5` é o intervalo de 2, 4.
+- `2..2..6` é o intervalo de 2, 4, 6.
+- `6..-2..2` é o intervalo de 6, 4, 2.
+- `2..1` é o intervalo vazio.
+- `2..6..7` é o intervalo 2.
+- `2..2..1` é o intervalo vazio.
+- `1..-1..2` é o intervalo vazio.
 
 ## <a name="qubit-expressions"></a>Expressões qubit
 
@@ -207,7 +205,7 @@ Para tipos definidos pelo usuário definidos em termos de outros tipos definidos
 Portanto, se `WrappedPair` for um tipo definido pelo usuário com o tipo subjacente `IntPair` , e `t` for uma variável com valor `WrappedPair(IntPair(1,2))` , `t!!` será `(1,2)` .
 
 O `!` operador tem precedência maior do que todos os outros operadores diferentes de `[]` para indexação e divisão de matriz.
-`!`e `[]` Associate posicionalmente, ou seja, `a[i]![3]` é lido como `((a[i])!)[3]` : Pegue o `i` elemento th `a` , desenvolva-o e, em seguida, obtenha o terceiro elemento do valor não encapsulado (que deve ser uma matriz).
+`!` e `[]` Associate posicionalmente, ou seja, `a[i]![3]` é lido como `((a[i])!)[3]` : Pegue o `i` elemento th `a` , desenvolva-o e, em seguida, obtenha o terceiro elemento do valor não encapsulado (que deve ser uma matriz).
 
 A precedência do `!` operador tem um impacto que pode não ser óbvio.
 Se uma função ou operação retorna um valor que, em seguida, é desencapsulada, a função ou a chamada de operação deve ser colocada entre parênteses para que a tupla de argumento seja associada à chamada em vez de ser desencapsulada.
@@ -253,7 +251,7 @@ Type | Padrão
  `Qubit` | _qubit inválido_
  `Pauli` | `PauliI`
  `Result` | `Zero`
- `Range` | O intervalo vazio,`1..1..0`
+ `Range` | O intervalo vazio, `1..1..0`
  `Callable` | _callable inválido_
  `Array['T]` | `'T[0]`
 
@@ -328,17 +326,17 @@ Como todos os Q# tipos são tipos de valor (com o qubits que assume uma função
 Você pode criar uma nova matriz de uma matriz existente por meio de expressões de *copiar e atualizar* , que usam os `w/` operadores `<-` e.
 Uma expressão de copiar e atualizar é uma expressão do formulário `expression1 w/ expression2 <- expression3` , em que
 
-* `expression1`deve ser tipo `T[]` para algum tipo `T` .
-* `expression2`define quais índices na matriz especificados em `expression1` para modificar. `expression2`deve ser tipo `Int` ou tipo `Range` .
-* `expression3`são os valores usados para atualizar elementos no `expression1` , com base nos índices especificados em `expression2` . Se `expression2` for Type `Int` , `expression3` deverá ser Type `T` . Se `expression2` for Type `Range` , `expression3` deverá ser Type `T[]` .
+* `expression1` deve ser tipo `T[]` para algum tipo `T` .
+* `expression2` define quais índices na matriz especificados em `expression1` para modificar. `expression2` deve ser tipo `Int` ou tipo `Range` .
+* `expression3` são os valores usados para atualizar elementos no `expression1` , com base nos índices especificados em `expression2` . Se `expression2` for Type `Int` , `expression3` deverá ser Type `T` . Se `expression2` for Type `Range` , `expression3` deverá ser Type `T[]` .
 
 Por exemplo, a expressão Copy-and-update `arr w/ idx <- value` constrói uma nova matriz com todos os elementos definidos para os elementos correspondentes no `arr` , exceto para o elemento especificado por `idx` , que é definido como o (s) valor (es) em `value` . 
 
 Fornecido `arr` contém a matriz `[0,1,2,3]` , então 
 
-- `arr w/ 0 <- 10`é a matriz `[10,1,2,3]` .
-- `arr w/ 2 <- 10`é a matriz `[0,1,10,3]` .
-- `arr w/ 0..2..3 <- [10,12]`é a matriz `[10,1,12,3]` .
+- `arr w/ 0 <- 10` é a matriz `[10,1,2,3]` .
+- `arr w/ 2 <- 10` é a matriz `[0,1,10,3]` .
+- `arr w/ 0..2..3 <- [10,12]` é a matriz `[10,1,12,3]` .
 
 #### <a name="copy-and-update-expressions-for-named-items"></a>Copiar e atualizar expressões para itens nomeados
 
@@ -376,11 +374,11 @@ Você também pode criar uma matriz de chamadores.
 * Se o tipo de elemento comum for uma operação ou tipo de função, todos os elementos deverão ter os mesmos tipos de entrada e saída.
 * O tipo de elemento da matriz dá suporte a qualquer [transmissão functors](xref:microsoft.quantum.guide.operationsfunctions) que tenha suporte de todos os elementos.
 Por exemplo, If `Op1` , `Op2` e `Op3` All são `Qubit[] => Unit` operações, mas `Op1` dá suporte a, dá suporte a `Adjoint` `Op2` `Controlled` e `Op3` dá suporte a ambos:
-  * `[Op1, Op2]`é uma matriz de `(Qubit[] => Unit)` operações.
-  * `[Op1, Op3]`é uma matriz de `(Qubit[] => Unit is Adj)` operações.
-  * `[Op2, Op3]`é uma matriz de `(Qubit[] => Unit is Ctl)` operações.
+  * `[Op1, Op2]` é uma matriz de `(Qubit[] => Unit)` operações.
+  * `[Op1, Op3]` é uma matriz de `(Qubit[] => Unit is Adj)` operações.
+  * `[Op2, Op3]` é uma matriz de `(Qubit[] => Unit is Ctl)` operações.
 
-No entanto, enquanto as operações `(Qubit[] => Unit is Adj)` e `(Qubit[] => Unit is Ctl)` têm o tipo base comum de `(Qubit[] => Unit)` , as *matrizes* dessas operações não compartilham um tipo base comum.
+No entanto, enquanto as operações `(Qubit[] => Unit is Adj)` e  `(Qubit[] => Unit is Ctl)` têm o tipo base comum de `(Qubit[] => Unit)` , as *matrizes* dessas operações não compartilham um tipo base comum.
 
 Por exemplo, `[[Op1], [Op2]]` no momento, o geraria um erro porque ele tenta criar uma matriz dos dois tipos de matriz incompatíveis `(Qubit[] => Unit is Adj)[]` e `(Qubit[] => Unit is Ctl)[]` .
 
@@ -395,9 +393,9 @@ Dadas duas expressões do mesmo tipo e uma expressão booleana, formate uma expr
 Expressões condicionais podem ser avaliadas como operações que têm as mesmas entradas e saídas, mas dão suporte a diferentes transmissão functors. Nesse caso, o tipo da expressão condicional é uma operação com entradas e saídas que dão suporte a qualquer transmissão functors com suporte em ambas as expressões.
 Por exemplo, se `Op1` , `Op2` , e `Op3` todos forem `Qubit[]=>Unit` , mas o oferecer suporte a, o oferece suporte a `Op1` `Adjoint` `Op2` `Controlled` , e `Op3` dá suporte a ambos:
 
-- `flag ? Op1 | Op2`é uma `(Qubit[] => Unit)` operação.
-- `flag ? Op1 | Op3`é uma `(Qubit[] => Unit is Adj)` operação.
-- `flag ? Op2 | Op3`é uma `(Qubit[] => Unit is Ctl)` operação.
+- `flag ? Op1 | Op2` é uma `(Qubit[] => Unit)` operação.
+- `flag ? Op1 | Op3` é uma `(Qubit[] => Unit is Adj)` operação.
+- `flag ? Op2 | Op3` é uma `(Qubit[] => Unit is Ctl)` operação.
 
 Se qualquer uma das duas expressões de resultado possíveis incluir uma função ou uma chamada de operação, essa chamada só ocorrerá se o resultado for aquele que é o valor da chamada. Por exemplo, no caso `a==b ? C(qs) | D(qs)` , se `a==b` for true, a `C` operação será invocada e, se for false, somente a `D` operação será invocada. Essa abordagem é semelhante ao *curto circuito* em outras linguagens.
 
@@ -472,17 +470,17 @@ A especificação de tipo é necessária porque `Op3` e `Op1` tem tipos diferent
 
 * Parênteses para operação e invocação de função também são associados antes de qualquer operador, mas após a indexação de matriz e transmissão functors.
 
-Q#operadores em ordem de precedência, do mais alto ao mais baixo:
+Q# operadores em ordem de precedência, do mais alto ao mais baixo:
 
 Operador | Arity | Descrição | Tipos de operando
 ---------|----------|---------|---------------
- à direita`!` | Unário | Desencapsular | Qualquer tipo definido pelo usuário
- `-`, `~~~`, `not` | Unário | Numérico negativo, complemento de bit-nte, negação lógica | `Int`, `BigInt` ou `Double` para `-` , `Int` ou `BigInt` para `~~~` , `Bool` para`not`
- `^` | Binário | Potência de inteiro | `Int`ou `BigInt` para a base, `Int` para o expoente
- `/`, `*`, `%` | Binário | Divisão, multiplicação, módulo de inteiro | `Int`, `BigInt` ou `Double` para `/` e `*` , `Int` ou `BigInt` para`%`
- `+`, `-` | Binário | Adição ou concatenação de cadeia de caracteres e matriz, subtração | `Int`, `BigInt` ou `Double` , além disso, `String` ou qualquer tipo de matriz para`+`
+ à direita `!` | Unário | Desencapsular | Qualquer tipo definido pelo usuário
+ `-`, `~~~`, `not` | Unário | Numérico negativo, complemento de bit-nte, negação lógica | `Int`, `BigInt` ou `Double` para `-` , `Int` ou `BigInt` para `~~~` , `Bool` para `not`
+ `^` | Binário | Potência de inteiro | `Int` ou `BigInt` para a base, `Int` para o expoente
+ `/`, `*`, `%` | Binário | Divisão, multiplicação, módulo de inteiro | `Int`, `BigInt` ou `Double` para `/` e `*` , `Int` ou `BigInt` para `%`
+ `+`, `-` | Binário | Adição ou concatenação de cadeia de caracteres e matriz, subtração | `Int`, `BigInt` ou `Double` , além disso, `String` ou qualquer tipo de matriz para `+`
  `<<<`, `>>>` | Binário | Deslocamento à esquerda, deslocamento à direita | `Int` ou `BigInt`
- `<`, `<=`, `>`, `>=` | Binário | Comparações de menor que, menor que ou igual a, maior que, maior que ou igual a | `Int``BigInt`ou`Double`
+ `<`, `<=`, `>`, `>=` | Binário | Comparações de menor que, menor que ou igual a, maior que, maior que ou igual a | `Int`, `BigInt` ou `Double`
  `==`, `!=` | Binário | comparações iguais, não iguais | qualquer tipo primitivo
  `&&&` | Binário | AND bit a bit | `Int` ou `BigInt`
  `^^^` | Binário | XOR bit a bit | `Int` ou `BigInt`
@@ -490,7 +488,7 @@ Operador | Arity | Descrição | Tipos de operando
  `and` | Binário | AND lógico | `Bool`
  `or` | Binário | OR lógico | `Bool`
  `..` | Binary/ternário | Operador de intervalo | `Int`
- `?` `|` | Ternário | Condicional | `Bool`para o lado esquerdo
+ `?` `|` | Ternário | Condicional | `Bool` para o lado esquerdo
 `w/` `<-` | Ternário | Copiar e atualizar | Consulte [expressões de copiar e atualizar](#copy-and-update-expressions)
 
 ## <a name="next-steps"></a>Próximas etapas

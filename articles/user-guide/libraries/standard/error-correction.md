@@ -3,18 +3,18 @@ title: Correção de erro nas Q# bibliotecas padrão
 description: Saiba como usar códigos de correção de erro em seus Q# programas enquanto protege o estado do qubits.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: dad0db4d2aab27e5ae46d4df10ee050f785d8bb8
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868484"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835546"
 ---
 # <a name="error-correction"></a>Correção de erro #
 
@@ -78,7 +78,7 @@ Nesta seção, descrevemos essa estrutura e seu aplicativo com alguns códigos d
 > Uma introdução completa ao informativo do estabilizador está além do escopo desta seção.
 > Nós nos referimos aos leitores interessados em aprender mais sobre o [Gottesman 2009](https://arxiv.org/abs/0904.2557).
 
-## <a name="representing-error-correcting-codes-in-no-locq"></a>Representando códigos de correção de erro noQ# ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>Representando códigos de correção de erro no Q# ##
 
 Para ajudar a especificar códigos de correção de erro, a Q# Canon fornece vários tipos distintos definidos pelo usuário:
 
@@ -120,6 +120,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-Exploraremos isso mais detalhadamente na [amostra de código de inversão de bits](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code).
+Exploraremos isso mais detalhadamente na [amostra de código de inversão de bits](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code).
 
 Além do código de inversão de bits, a Q# Canon é fornecida com implementações do [código perfeito de cinco qubit](https://arxiv.org/abs/quant-ph/9602019)e o [código de sete qubit](https://arxiv.org/abs/quant-ph/9705052), que pode corrigir um erro arbitrário de qubit único.

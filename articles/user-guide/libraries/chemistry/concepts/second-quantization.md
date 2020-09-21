@@ -1,20 +1,20 @@
 ---
 title: Segunda quantificação
 description: Saiba mais sobre a segunda abordagem de quantificação para modelar estruturas eletrônicas na programação Quantum.
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ba77c499d6830b1f78bba39e20b15c4ebe9433fc
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869453"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835801"
 ---
 # <a name="second-quantization"></a>Segunda quantificação
 
@@ -77,7 +77,7 @@ A biblioteca química do Quantum pode usar essas convenções, e as rotações g
 ```
 
 Para sistemas fermionic, o princípio de exclusão de Pauli impede que mais de um horário de uso de um sistema de informações em qualquer orbital de rotação seja exibido ao mesmo tempo.
-Isso significa que podemos escrever os dois Estados legais para $ \ psi_1 $ como \begin{Equation} \ psi_1 \rightarrow \begin{cases} \ket {0} _1 & \Text{If $ \ psi_1 $ não está ocupado,}\\\
+Isso significa que podemos escrever os dois Estados legais para $ \ psi_1 $ como \begin{Equation} \ psi_1 \rightarrow \begin{cases} \ket {0} _1 & \Text{If $ \ psi_1 $ não está ocupado,} \\\
 \ket {1} _1 & \Text{If $ \ psi_1 $ está ocupado.} \end{cases} \end{Equation} essa codificação é excelente para computadores Quantum porque significa que podemos armazenar a ocupação eletrônica como um único bit Quantum.
 
 Os Estados de ocupação para as órbitas de rotação de $2N $ podem ser armazenados de forma semelhante em $2N $ qubits.

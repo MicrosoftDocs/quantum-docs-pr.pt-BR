@@ -1,24 +1,24 @@
 ---
 title: Contador de operações primitivas – kit de desenvolvimento do Quantum
-description: Saiba mais sobre o contador de operações do Microsoft QDK Primitive, que usa o simulador de rastreamento do Quantum para rastrear as execuções primitivas usadas pelas operações em um Q# programa.
+description: Saiba mais sobre o contador de operações do Microsoft QDK Primitive, que usa o simulador de rastreamento do Quantum para rastrear os processos primitivos usados pelas operações em um Q# programa.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ceb70cef6dc0a4530b992b5a529248a8b283c17f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8ee9ce25e680112e2f3c68d82ae9267c1b0fb355
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868229"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835971"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Simulador de rastreamento Quantum: contador de operações primitivas
 
-O contador de operação primitiva é uma parte do [simulador de rastreamento Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)do kit de desenvolvimento Quantum. Ele conta o número de execuções primitivas usadas por cada operação invocada em um programa Quantum. 
+O contador de operação primitiva é uma parte do [simulador de rastreamento Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)do kit de desenvolvimento Quantum. Ele conta o número de processos primitivos usados por cada operação invocada em um programa Quantum. 
 
 Todas as <xref:microsoft.quantum.intrinsic> operações são expressas em termos de rotações de qubit único, operações de T, operações de Clifford de qubit único, operações de CNOT e medidas de qubit de vários Pauli observáveis. O contador de operações primitivas agrega e coleta estatísticas sobre todas as bordas do [grafo de chamada](https://en.wikipedia.org/wiki/Call_graph)da operação.
 
@@ -75,7 +75,7 @@ Por fim, você pode gerar todas as estatísticas coletadas pelo contador de oper
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - A visão geral do [simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) do quantum do kit de desenvolvimento Quantum.
 - A <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> referência da API.

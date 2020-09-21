@@ -1,20 +1,20 @@
 ---
-title: Algoritmos Quantum emQ#
+title: Algoritmos Quantum em Q#
 description: Saiba mais sobre algoritmos de computação básicos da Quantum, incluindo amplificação de amplitude, transformação de Fourier, somas Draper e Beauregard e estimativa de fase.
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0b5972480061c460345057285bbfe53305acc122
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 7ce13c5df3795656156cccf28640c0a4b0dcba2e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868807"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835665"
 ---
 # <a name="quantum-algorithms"></a>Algoritmos Quantum #
 
@@ -30,7 +30,7 @@ A lógica por trás da amplificação de amplitude segue diretamente da decompos
 
 Outra propriedade útil que chega disso é que o eigenvalue $ \theta $ está diretamente relacionado à probabilidade de que o estado inicial seja marcado (no caso em que $P _0 $ é um projetor apenas para o estado inicial).  Como o eigenphases de $Q $ é US $2 \ teta = 2 \ sin ^ {-1} (\sqrt{\Pr (Success)}) $, então, se aplicarmos a estimativa de fase ao $Q $, poderemos aprender a probabilidade de sucesso para um procedimento de Quantum unitário.  Isso é útil porque requer menos aplicativos do procedimento Quantum para aprender a probabilidade de êxito do que seria necessário.
 
-Q#apresenta amplificação de amplitude como uma especialização de amplificação de amplitude alheios.  A amplificação de amplitude de alheios ganha esse moniker porque o projetor na eigenspace inicial não precisa ser um projetor no estado inicial.  Nesse sentido, o protocolo é alheios para o estado inicial.  O principal aplicativo da amplificação alheios amplitude está em determinadas *combinações lineares de métodos de simulação de Hamiltonian unitários* , em que o estado inicial é desconhecido, mas torna-se confusas com um registro ancilla no protocolo de simulação.  Se esse registro ancilla for ser medido como um valor fixo, digamos $0 $, esses métodos de simulação aplicarão a transformação unitário desejada ao qubits restante (chamado de registro do sistema).  No entanto, todos os outros resultados de medição resultam em falha.  A amplificação de amplitude alheios permite que a probabilidade de sucesso dessa medição seja aumentada para $100 \\ % $ usando o raciocínio acima.  Além disso, a amplificação de amplitude comum corresponde ao caso em que o registro do sistema está vazio.  É por isso que o Q# usa amplificação de amplitude de alheios como sua sub-rotina fundamental de amplificação de amplitude.
+Q# apresenta amplificação de amplitude como uma especialização de amplificação de amplitude alheios.  A amplificação de amplitude de alheios ganha esse moniker porque o projetor na eigenspace inicial não precisa ser um projetor no estado inicial.  Nesse sentido, o protocolo é alheios para o estado inicial.  O principal aplicativo da amplificação alheios amplitude está em determinadas *combinações lineares de métodos de simulação de Hamiltonian unitários* , em que o estado inicial é desconhecido, mas torna-se confusas com um registro ancilla no protocolo de simulação.  Se esse registro ancilla for ser medido como um valor fixo, digamos $0 $, esses métodos de simulação aplicarão a transformação unitário desejada ao qubits restante (chamado de registro do sistema).  No entanto, todos os outros resultados de medição resultam em falha.  A amplificação de amplitude alheios permite que a probabilidade de sucesso dessa medição seja aumentada para $100 \\ % $ usando o raciocínio acima.  Além disso, a amplificação de amplitude comum corresponde ao caso em que o registro do sistema está vazio.  É por isso que o Q# usa amplificação de amplitude de alheios como sua sub-rotina fundamental de amplificação de amplitude.
 
 A rotina geral ( `AmpAmpObliviousByReflectionPhases` ) tem dois registros que chamamos `ancillaRegister` de e `systemRegister` . Ele também aceita dois Oracle para os reflexos necessários. O `ReflectionOracle` age somente no `ancillaRegister` enquanto o `ObliviousOracle` atua em conjunto em ambos os registros. A entrada para `ancillaRegister` deve ser inicializada a-1 eigenstate do primeiro operador de reflexão $ \boldone-2P_1 $.
 

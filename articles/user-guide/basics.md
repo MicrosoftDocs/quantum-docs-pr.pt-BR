@@ -1,22 +1,22 @@
 ---
-title: Q#Algumas
-description: Conceitos básicos doQ#
+title: Q# Algumas
+description: Conceitos básicos do Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4f4a75cdaaa070fd763d7f75429b7c39357d25a5
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869640"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835512"
 ---
-# <a name="no-locq-basics"></a>Q#Algumas
+# <a name="no-locq-basics"></a>Q# Algumas
 
 Este artigo apresenta uma breve introdução aos blocos de construção básicos do Q# .
 
@@ -39,7 +39,7 @@ using (qubit = Qubit()) {
 ```
 Para obter mais informações sobre como inicializar, ou *alocar*, qubits, consulte [trabalhando com qubits](xref:microsoft.quantum.guide.qubits).
 
-## <a name="quantum-states-in-no-locq"></a>Estados do Quantum emQ#
+## <a name="quantum-states-in-no-locq"></a>Estados do Quantum em Q#
 
 O mais importante é que o programa anterior não se refere explicitamente ao estado no Q# , mas descreveu como nosso programa *transformou* o estado.
 Com essa abordagem, você pode ser totalmente independente do que um estado Quantum ainda *está* em cada computador de destino, que pode ter interpretações diferentes dependendo do computador. 
@@ -53,7 +53,7 @@ Mas olhando para o futuro, quando o computador de destino é um computador Quant
 Um Q# programa recombina essas operações conforme definido por um computador de destino para criar operações novas e de nível mais alto para a computação da Quantum Express.
 Dessa forma, Q# o torna mais fácil expressar os algoritmos Quantum e Quantum híbrido subjacentes da lógica, além de ser geral em relação à estrutura de um computador de destino ou simulador.
 
-## <a name="no-locq-operations-and-functions"></a>Q#operações e funções
+## <a name="no-locq-operations-and-functions"></a>Q# operações e funções
 
 Concretamente, um Q# programa consiste em *operações*, *funções*e qualquer tipo definido pelo usuário. 
 
@@ -65,13 +65,13 @@ Nesse caso, `Measure` é uma *operação* que instrui o computador de destino a 
 Juntas, operações e funções são conhecidas como *callables*. A estrutura subjacente e o comportamento são introduzidos e detalhados em [operações Q# e funções no ](xref:microsoft.quantum.guide.operationsfunctions).
 
 
-## <a name="no-locq-syntax-overview"></a>Q#Visão geral da sintaxe
+## <a name="no-locq-syntax-overview"></a>Q# Visão geral da sintaxe
 
 A sintaxe de uma linguagem descreve as diferentes combinações de símbolos que formam um programa sintaticamente correto.
 No Q# , os elementos de sintaxe são classificados em três grupos diferentes: tipos, expressões e instruções.
 
 ### <a name="types"></a>Tipos
-Q#é uma linguagem fortemente tipada, de modo que o uso cuidadoso dos tipos pode ajudar o compilador a fornecer fortes garantias sobre Q# programas em tempo de compilação.
+Q# é uma linguagem fortemente tipada, de modo que o uso cuidadoso dos tipos pode ajudar o compilador a fornecer fortes garantias sobre Q# programas em tempo de compilação.
 Além dos tipos primitivos internos padrão e específicos do Quantum, por exemplo,,, `Int` `Bool` `Qubit` e `Result` , Q# fornece suporte para tipos definidos pelo usuário.
 
 Para obter descrições de todos os tipos primitivos, detalhes de matriz e tipos de tupla e etapas para definir novos tipos dentro de um Q# arquivo, consulte [tipos em Q# ](xref:microsoft.quantum.guide.types).
@@ -87,7 +87,7 @@ Por exemplo, outra `Int` expressão que é avaliada como `5` é `2+3` .
 Para obter mais informações sobre expressões e operadores compatíveis no Q# , consulte [expressões de Q# tipo em ](xref:microsoft.quantum.guide.expressions). 
 
 ### <a name="statements"></a>Instruções 
-Uma instrução é uma unidade sintática de uma linguagem de programação imperativa que expressa algumas ações a serem executadas. As instruções contrastam com expressões nessas instruções não retornam resultados e são executadas exclusivamente para seus efeitos colaterais. No entanto, as expressões sempre retornam um resultado e, muitas vezes, não têm efeitos colaterais. Em suma, as Q# instruções são executadas, enquanto as expressões são avaliadas.
+Uma instrução é uma unidade sintática de uma linguagem de programação imperativa que expressa algumas ações a serem executadas. As instruções contrastam com expressões nessas instruções não retornam resultados e são executadas exclusivamente para seus efeitos colaterais. No entanto, as expressões sempre retornam um resultado e, muitas vezes, não têm nenhum efeito colateral. Em suma, as Q# instruções são executadas, enquanto as expressões são avaliadas.
 
 Um exemplo simples de uma instrução no Q# é atribuir um símbolo a uma expressão:
 ```qsharp

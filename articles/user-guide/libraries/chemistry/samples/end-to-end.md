@@ -2,18 +2,18 @@
 title: Programa de Quantum NWChem de exemplo
 description: Usando um baralho de entrada NWChem, percorra um exemplo de como obter contagens de portão para a simulação química Quantum.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 986ff2c2ff144c57bd01ddeea0467d0168fd9334
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759708"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835750"
 ---
 # <a name="end-to-end-with-nwchem"></a>Ponta a ponta com NWChem #
 
@@ -47,13 +47,13 @@ Import-Module InvokeNWChem.psm1
 
 > [!NOTE]
 > Por padrão, o Windows impede a execução de qualquer script ou módulo como uma medida de segurança.
-> Para permitir que módulos como o sejam `Invoke-NWChem.psm1` executados no Windows, talvez seja necessário alterar a política de execução.
+> Para permitir que módulos como o sejam `Invoke-NWChem.psm1` executados no Windows, talvez seja necessário alterar a política.
 > Para fazer isso, execute o `Set-ExecutionPolicy` comando:
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope Process
 > ```
-> A política de execução será revertida quando você sair do PowerShell.
-> Se você quiser salvar a política de execução, use um valor diferente para `-Scope` :
+> A política será revertida quando você sair do PowerShell.
+> Se você quiser salvar a política, use um valor diferente para `-Scope` :
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```

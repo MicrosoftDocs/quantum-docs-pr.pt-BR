@@ -2,18 +2,18 @@
 title: Q#Comandos mágicos
 description: Página de referência rápida para Q# comandos mágicos com Q# notebooks Jupyter
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d2d092588e1a5c69d12e5d50377e3e26412c094
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 75a1e1820e5ca16268c9b11322eb5653094b1a3c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863691"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833560"
 ---
 # <a name="ino-locq-magic-commands"></a>Q#Comandos mágicos
 
@@ -39,7 +39,7 @@ ms.locfileid: "88863691"
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): Exibe os resultados de um trabalho no espaço de trabalho atual do azure Quantum.
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): Exibe o status de um trabalho no espaço de trabalho atual do azure Quantum.
 - [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit): Envia um trabalho para um espaço de trabalho do azure Quantum.
-- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Define ou exibe o destino de execução ativo para Q# envio de trabalho em um espaço de trabalho do azure Quantum.
+- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Define ou exibe o destino de execução ativa para Q# envio de trabalho em um espaço de trabalho do azure Quantum.
 
 ### <a name="chemistry-from-microsoftquantumchemistry-package"></a>Química (do pacote Microsoft. Quantum. química)
 

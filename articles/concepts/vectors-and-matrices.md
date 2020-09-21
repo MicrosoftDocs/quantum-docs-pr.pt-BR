@@ -1,6 +1,6 @@
 ---
 Título: vetores e matrizes na descrição da computação Quantum: Aprenda as noções básicas de como trabalhar com vetores e matrizes.
-Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. vetores MS. Author: nawiebe@microsoft.com MS. Data: 12/11/2017 MS. Topic: artigo no-loc:
+Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. vetores MS. Author: v-benbra MS. Date: 12/11/2017 MS. tópico: article no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ $$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\
-v_n\end{bmatrix}$$
+v_n \end{bmatrix}$$
 
 A norma de um vetor $ v $ é definida como $ \sqrt { \sum \_ i | v \_ | ^ 2 } $ . Um vetor é considerado como sendo a norma da unidade (ou, como alternativa, é chamado de [*vetor de unidade*](https://en.wikipedia.org/wiki/Unit_vector)) se a sua norma for $ 1 $ . O [*adjoin de um vetor*](https://en.wikipedia.org/wiki/Adjoint_matrix) $ v $ é indicado $ como v ^ \dagger $ e é definido para ser o seguinte vetor de linha, em que $ \* $ denota o conjugado complexo,
 
@@ -114,12 +114,12 @@ u_1\\\\
 u_2\\\\
 \vdots\\\\
 u_n \end{bmatrix} ~ \mathrm { e}~
-l=\begin{bmatrix}
+l =\begin{bmatrix}
     v_1\\\\
     v_2\\\\
     \vdots\\\\
     v_n \end{bmatrix} , ~ \mathrm { em seguida,}~
-au + BV=\begin{bmatrix}
+au + BV =\begin{bmatrix}
 au_1 + bv_1\\\\
 au_2 + bv_2\\\\
 \vdots\\\\
@@ -128,7 +128,7 @@ $$
 
 Uma [*matriz*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) de tamanho $ m \times n $ é uma coleção de $ $ números complexos de MN organizadas nas $ $ linhas m e $ n $ colunas, conforme mostrado abaixo:
 
-$$D= 
+$$D = 
 \begin{bmatrix}
 M_ { 11 } ~~ M_ { 12 } ~~ \cdots ~~ M_ { 1N}\\\\
 M_ { 21 } ~~ M_ { 22 } ~~ \cdots ~~ M_ { 2n}\\\\
@@ -183,7 +183,7 @@ Uma matriz $ M $ é considerada [*Hermitian*](https://en.wikipedia.org/wiki/Herm
 Por fim, o [*produto tensor*](https://en.wikipedia.org/wiki/Tensor_product) (ou o produto Kronecker) de duas matrizes $ $ de tamanho $ m \times n $ e $ n $ de tamanho $ p \times q $ é uma matriz maior $ p = m \otimes n $ de tamanho $ MP \times NQ $ e é obtido de $ M $ e n da $ $ seguinte maneira:
 
 \begin{align}
-    M \otimes N&=
+    M \otimes N &=
     \begin{bmatrix}
         M_ { 11 } ~~ \cdots ~~ M_ { 1N }\\\\
         \ddots\\\\
@@ -211,7 +211,7 @@ $$
     \begin{bmatrix}
         a \\\\ b \end{bmatrix} \otimes \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}=
     \begin{bmatrix}
-        a \begin{bmatrix} c \\\\ d \\\\ e\end{bmatrix}
+        a \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}
         \\\\[1,5 em] b \begin{bmatrix} c \\\\ d \\\\ e\end{bmatrix}
     \end{bmatrix}
     =r a \begin{bmatrix} \\\\ d \\\\ a e \\\\ b c \\\\ b d \\\\\end{bmatrix}
@@ -221,26 +221,26 @@ e
 
 $$
     \begin{bmatrix}
-        a \ b \\\\ c \ d\end{bmatrix}
+        a \ b \\\\ c \ d \end{bmatrix}
     \otimes 
     \begin{bmatrix}
-        e \ f \\\\ g \ h\end{bmatrix}
+        e \ f \\\\ g \ h \end{bmatrix}
      =
     \begin{bmatrix}
     um\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     b\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \\\\[1em] c\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     3D\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \end{bmatrix}
     =
     \begin{bmatrix}
-    AE \ AF \ ser \ BF\\\\
-    AG \ Ah \ BG \ BH\\\\
-    CE \ CF \ de \ DF\\\\
+    AE \ AF \ ser \ BF \\\\
+    AG \ Ah \ BG \ BH \\\\
+    CE \ CF \ de \ DF \\\\
     CG \ ch \ DG \ DH \end{bmatrix} .
 $$
 

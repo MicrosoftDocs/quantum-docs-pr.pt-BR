@@ -9,14 +9,14 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 27a2ae5ae9d00329fc369268edae24228a9a9d0d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: fef3cea1c11e4fef49ddbf63adb34e07675049d2
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867582"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834186"
 ---
-# <a name="no-locq-style-guide"></a>Q#Guia de estilo #
+# <a name="no-locq-style-guide"></a>Q# Guia de estilo #
 ## <a name="general-conventions"></a>Convenções gerais ##
 
 As convenções sugeridas neste guia destinam-se a ajudar a tornar os programas e bibliotecas escritos Q# mais facilmente para serem lidos e compreendidos.
@@ -79,7 +79,7 @@ Para funções, sugerimos evitar o uso de verbos em favor de substantivos comuns
 - `LookupFunction`
 
 Em particular, em quase todos os casos, sugerimos usar participles anteriores, quando apropriado, para indicar que um nome de função está firmemente conectado a uma ação ou efeito colateral em outro lugar em um programa Quantum.
-Por exemplo, `ControlledOnInt` usa a forma de particípio da parte do verbo "Control" para indicar que a função atua como um adjetivo para modificar seu argumento.
+Por exemplo,  `ControlledOnInt` usa a forma de particípio da parte do verbo "Control" para indicar que a função atua como um adjetivo para modificar seu argumento.
 Esse nome tem o benefício adicional de corresponder a semântica do `Controlled` functor interno, conforme discutido abaixo.
 Da mesma forma, os _substantivos do agente_ podem ser usados para construir nomes de função e UDT a partir de nomes de operação, como no caso do nome `Encoder` de um UDT que esteja fortemente associado a `Encode` .
 
@@ -96,7 +96,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Nome | Descrição |
+| &nbsp;  | Name | Descrição |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Limpar o uso de um verbo ("refletir") para indicar o efeito da operação. |
 | ☒ | <s>`operation XRotation`</s> | O uso da frase de substantivo sugere a função, em vez da operação. |
@@ -115,7 +115,7 @@ Sugerimos:
 
 Ao definir um ponto de entrada em um Q# programa, o Q# compilador reconhece o [ `@EntryPoint()` atributo](xref:microsoft.quantum.core.entrypoint) , exigindo que os pontos de entrada tenham um nome específico (por exemplo: `main` , `Main` ou `__main__` ).
 Ou seja, da perspectiva de um Q# desenvolvedor, os pontos de entrada são operações comuns anotadas com o `@EntryPoint()` .
-Além disso, os Q# pontos de entrada podem ser pontos de entrada para um aplicativo inteiro (ou seja, em Q# executáveis autônomos) ou podem ser uma interface entre um Q# programa e o programa host para um aplicativo (ou seja, ao usar Q# com Python ou .net), de modo que o nome "Main" possa ser equivocado quando aplicado a um Q# ponto de entrada.
+Além disso, os Q# pontos de entrada podem ser pontos de entrada para um aplicativo inteiro (por exemplo, em Q# programas executáveis autônomos) ou podem ser uma interface entre um Q# programa e o programa host para um aplicativo (ou seja, ao usar Q# com Python ou .net), de modo que o nome "Main" possa ser equivocado quando aplicado a um Q# ponto de entrada.
 
 Sugerimos o uso de pontos de entrada de nomenclatura para refletir o uso do `@EntryPoint()` atributo usando o Conselho geral para as operações de nomenclatura listadas acima.
 
@@ -129,7 +129,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Nome | Descrição |
+| &nbsp;  | Name | Descrição |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | Comunica claramente a finalidade do ponto de entrada por meio do nome da operação. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | O uso de `Main` não comunica claramente a finalidade do ponto de entrada e é redundante com o `@EntryPoint()` atributo. |
@@ -171,7 +171,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Nome | Descrição |
+| &nbsp;   | Name | Descrição |
 |---|------|-------------|
 | ☑ | `X` | Atalho bem compreendido para "aplicar uma transformação de $X $" |
 | ☑ | `CNOT` | Atalho bem compreendido para "controlado-não" |
@@ -228,7 +228,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Nome | Descrição |
+| &nbsp;   | Name | Descrição |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | A preposição "to" resulta em uma frase verbal, indicando uma operação e não uma função. |
 | ☒ | <s>`AsDouble`</s> | O tipo de entrada não é claro do nome da função. |
@@ -251,7 +251,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Nome | Descrição |
+| &nbsp;  | Name | Descrição |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Não use um sublinhado `_` para indicar que esta operação é somente para uso interno. |
 | ☑ | `internal operation ApplyDecomposedOperation` | A `internal` palavra-chave no início indica claramente que esta operação é apenas para uso interno. |
@@ -264,12 +264,12 @@ Esses grupos podem ser diferenciados usando o mesmo nome de raiz, seguidos por u
 
 | Sufixo | Significado |
 |--------|---------|
-| `A` | Entrada esperada para suporte`Adjoint` |
-| `C` | Entrada esperada para suporte`Controlled` |
-| `CA` | Entrada esperada para dar suporte `Controlled` e`Adjoint` |
-| `I` | Entradas ou entradas são do tipo`Int` |
-| `D` | Entradas ou entradas são do tipo`Double` |
-| `L` | Entradas ou entradas são do tipo`BigInt` |
+| `A` | Entrada esperada para suporte `Adjoint` |
+| `C` | Entrada esperada para suporte `Controlled` |
+| `CA` | Entrada esperada para dar suporte `Controlled` e `Adjoint` |
+| `I` | Entradas ou entradas são do tipo `Int` |
+| `D` | Entradas ou entradas são do tipo `Double` |
+| `L` | Entradas ou entradas são do tipo `BigInt` |
 
 # <a name="guidance"></a>[Diretrizes](#tab/guidance)
 
@@ -323,7 +323,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Snippet | Descrição |
+| &nbsp;  | Snippet | Descrição |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | O nome `Apply` é uma `CamelCase` frase verbal formatada, sugerindo que o item nomeado é uma operação. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Itens nomeados devem começar com uma letra maiúscula inicial. |
@@ -479,7 +479,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Snippet | Descrição |
+| &nbsp; | Snippet | Descrição |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Use espaços em volta de operadores binários. |
 | ☒ | <s>`target:Qubit`</s> | Use espaços em volta de dois-pontos de anotação de tipo. |

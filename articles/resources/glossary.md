@@ -1,6 +1,6 @@
 ---
 Título: Descrição do glossário da computação Quantum: um glossário de termos, ações e objetos comuns usados na computação Quantum.
-Autor: QuantumWriter MS. Author: Alan.Geller@microsoft.com MS. Date: 12/11/2017 MS. tópico: Uid do artigo: Microsoft. Quantum. Glossário no-loc:
+Autor: bradben MS. Author: v-benbra MS. Date: 9/1/2020 MS. tópico: Uid do artigo: Microsoft. Quantum. Glossário no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -99,7 +99,7 @@ Um dos quatro [Estados](xref:microsoft.quantum.glossary#quantum-state) de Quantu
 
 ## <a name="bloch-sphere"></a>Esfera de Bloch
 
-Uma representação gráfica de um estado de[qubit](xref:microsoft.quantum.glossary#qubit) [Quantum](xref:microsoft.quantum.glossary#quantum-state) de qubit único como um ponto em uma esfera de unidade tridimensional. Para obter mais informações, consulte [visualizando qubits e transformações usando a esfera Bloch](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+Uma representação gráfica de um estado de[qubit](xref:microsoft.quantum.glossary#qubit) [Quantum](xref:microsoft.quantum.glossary#quantum-state) de qubit único como um ponto em uma esfera de unidade tridimensional. Para obter mais informações, consulte  [visualizando qubits e transformações usando a esfera Bloch](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 ## <a name="callable"></a>Acessível
 
@@ -170,7 +170,7 @@ Um rótulo para uma coleção de nomes relacionados (ou seja, [operações](xref
 
 ## <a name="operation"></a>Operação
 
-A unidade básica de execução Quantum no Q# . Ele é basicamente equivalente a uma função em C, C++ ou Python, ou um método estático em C# ou Java. Para obter mais informações, consulte [operações e funções](xref:microsoft.quantum.guide.operationsfunctions).
+A unidade básica de computação Quantum no Q# . Ele é basicamente equivalente a uma função em C, C++ ou Python, ou um método estático em C# ou Java. Para obter mais informações, consulte [operações e funções](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="operator-application"></a>Aplicativo do operador
 

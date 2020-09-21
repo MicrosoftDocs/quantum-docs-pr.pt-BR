@@ -2,19 +2,19 @@
 title: Estimador de recursos do Quantum – kit de desenvolvimento do Quantum
 description: Saiba mais sobre o estimador de recursos do Microsoft QDK, que estima os recursos necessários para executar uma determinada instância de uma Q# operação em um computador Quantum.
 author: anpaz-msft
-ms.author: anpaz@microsoft.com
+ms.author: anpaz
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1892431c3e332385a5bcefa357eb64a9fac3f381
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992234"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835920"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimador de recursos do kit de desenvolvimento Quantum (QDK)
 
@@ -138,7 +138,7 @@ O estimador de recursos acompanha as seguintes métricas:
 
 Você pode usar <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> do <xref:microsoft.quantum.diagnostics> namespace para fornecer informações sobre a probabilidade esperada de uma operação de medição. Para obter mais informações, consulte o [simulador de rastreamento do Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Simulador de rastreamento Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [Simulador quântico do Toffoli](xref:microsoft.quantum.machines.toffoli-simulator)

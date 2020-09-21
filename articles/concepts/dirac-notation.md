@@ -1,6 +1,6 @@
 ---
 Título: Descrição da notação de Dirac: Saiba mais sobre como usar a notação Dirac para representar os Estados Quantum e para simular operações Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. Dirac MS. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 MS. tópico: article no-loc:
+Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. Dirac MS. Author: v-benbra MS. Date: 12/11/2017 MS. tópico: article no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -230,5 +230,5 @@ Esse conceito de representar o estado como uma matriz, em vez de um vetor, geral
 Os operadores de estado geral do Quantum, em vez de vetores, são onipresentes em algumas áreas da computação Quantum, mas não são necessários para entender os conceitos básicos do campo.
 Para o leitor interessado, é recomendável ler um dos livros de referência fornecidos no [para obter mais informações](xref:microsoft.quantum.more-information).
 
-## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q#sequências de porta equivalentes a Estados Quantum
+## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q# sequências de porta equivalentes a Estados Quantum
 Um ponto final que vale a pena disparar a notação Quantum e a Q# linguagem de programação: no início deste documento, mencionamos que o estado do Quantum é o objeto fundamental das informações na computação Quantum.  Em seguida, ele pode ser uma surpresa que, em não, não há Q# nenhuma noção de um estado Quantum.  Em vez disso, todos os Estados são descritos somente pelas operações usadas para prepará-los.  O exemplo anterior é uma ilustração excelente disso.  Em vez de expressar uma superposição uniforme em cada cadeia de caracteres de bit Quantum em um registro, podemos representar o resultado como $ H ^ { \otimes n } \ket { 0 } $ .  Essa descrição exponencialmente mais curta do estado não apenas tem a vantagem de que podemos, de forma clássica, a respeito disso, mas também define de forma concisa as operações necessárias para serem propagadas por meio da pilha de software para implementar o algoritmo.  Por esse motivo, Q# o foi projetado para emitir sequências de portão em vez de Estados de Quantum; no entanto, em um nível teórico, as duas perspectivas são equivalentes.

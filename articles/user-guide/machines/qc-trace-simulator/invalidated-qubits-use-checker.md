@@ -2,19 +2,19 @@
 title: Verificador de uso qubits invalidado – kit de desenvolvimento Quantum
 description: Saiba mais sobre o verificador de uso qubits invalidado do Microsoft QDK, que usa o simulador de rastreamento Quantum para verificar o Q# código em busca de qubits potencialmente inválidos.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c451747badba03801bd4ecd419420f131ac502d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 18371b3798d0eaa12d4e7107f58f44379594619f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868280"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835988"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>Simulador de rastreamento Quantum: verificador de uso invalidado do qubits
 
@@ -73,7 +73,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - A visão geral do [simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) do quantum do kit de desenvolvimento Quantum.
 - A <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> referência da API.

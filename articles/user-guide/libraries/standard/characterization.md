@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b226f355771f2b65399ebe00cc3de9429a3cebb0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868620"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759902"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterização e estatísticas do Quantum #
 
@@ -74,7 +74,7 @@ A estimativa de fase para esse motivo aparece dentro de um número de algoritmos
 ### <a name="bayesian-phase-estimation"></a>Estimativa de fase Bayesiana ###
 
 > [!TIP]
-> Para obter mais detalhes sobre a estimativa de fase Bayesiana na prática, consulte o exemplo de [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) .
+> Para obter mais detalhes sobre a estimativa de fase Bayesiana na prática, consulte o exemplo de [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation) .
 
 A ideia da estimativa de fase de bayesiana é simples.
 Você coleta estatísticas de medição do protocolo de estimativa de fase e, em seguida, processa os resultados usando a inferência Bayesiana e fornece uma estimativa do parâmetro.
@@ -112,7 +112,7 @@ O recurso mais importante da estimativa de fase robusta, que é compartilhada co
 Outros detalhes relevantes incluem, digamos, a sobrecarga de espaço pequeno de apenas $1 $ ancilla qubit, ou que o procedimento não é adaptável, o que significa que a sequência necessária de experimentos de Quantum é independente dos resultados de medida intermediários. Neste e em breves exemplos em que a escolha do algoritmo de estimativa de fase é importante, deve-se consultar a documentação como @"microsoft.quantum.characterization.robustphaseestimation" e as publicações referenciadas aqui para obter mais informações e sobre sua implementação.
 
 > [!TIP]
-> Há muitos exemplos em que a estimativa de fase robusta é usada. Para estimativa de fase na extração da energia de estado terrestre de vários sistemas físicos, consulte o exemplo de [ **simulação H2** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), o [exemplo **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)e o exemplo de [ **modelo Hubbard** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
+> Há muitos exemplos em que a estimativa de fase robusta é usada. Para estimativa de fase na extração da energia de estado terrestre de vários sistemas físicos, consulte o exemplo de [ **simulação H2** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), o [exemplo **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)e o exemplo de [ **modelo Hubbard** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
 
 
 ### <a name="continuous-oracles"></a>Oracle contínuos ###
@@ -130,7 +130,7 @@ Portanto, o uso da estimativa de fase com consultas contínuas nos permite apren
 
 ### <a name="random-walk-phase-estimation"></a>Estimativa de fase de passo aleatório ###
 
-Q#fornece uma aproximação útil de estimativa de fase de Bayesiana projetada para uso próximo de dispositivos Quantum que operam por condicionado uma movimentação aleatória no registro de dados obtido da estimativa de fase iterativa.
+Q# fornece uma aproximação útil de estimativa de fase de Bayesiana projetada para uso próximo de dispositivos Quantum que operam por condicionado uma movimentação aleatória no registro de dados obtido da estimativa de fase iterativa.
 Esse método é adaptativo e totalmente determinístico, permitindo o dimensionamento quase ideal de erros na fase estimada $ \hat{\phi} $ com sobrecargas de memória muito baixas.
 
 O protocolo usa um método de inferência Bayesiana aproximado que assume que a distribuição anterior é gaussiana.

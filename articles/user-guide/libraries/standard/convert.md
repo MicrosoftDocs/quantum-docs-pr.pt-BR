@@ -3,21 +3,21 @@ title: Conversões de tipo nas Q# bibliotecas padrão
 description: Saiba mais sobre as funções de conversão de tipo comuns e definidas pelo usuário nas Q# bibliotecas padrão.
 author: cgranade
 uid: microsoft.quantum.libraries.convert
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2319bf453f5fbf6bd068859ea65562423d3ff4d0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: aa8a1ad624067906998d2735c7a95174a163ce97
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868501"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835597"
 ---
 # <a name="type-conversions"></a>Conversões de tipo #
 
-Q#é uma linguagem **fortemente tipada** .
+Q# é uma linguagem **fortemente tipada** .
 Em particular, não Q# é implicitamente convertido entre tipos distintos. Por exemplo, `1 + 2.0` não é uma Q# expressão válida.
 Em vez disso, Q# o fornece uma variedade de funções de conversão de tipo para construir novos valores de um determinado tipo.
 

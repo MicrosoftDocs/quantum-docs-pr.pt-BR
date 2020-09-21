@@ -1,24 +1,24 @@
 ---
-title: Variáveis emQ#
-description: Descrição do preenchimento
+title: Variáveis em Q#
+description: Saiba como trabalhar com variáveis diferentes em Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867838"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835869"
 ---
-# <a name="variables-in-no-locq"></a>Variáveis emQ#
+# <a name="variables-in-no-locq"></a>Variáveis em Q#
 
-Q#distingue entre símbolos mutáveis e imutáveis, ou *variáveis*, que são associados/atribuídos a expressões.
+Q# distingue entre símbolos mutáveis e imutáveis, ou *variáveis*, que são associados/atribuídos a expressões.
 Em geral, o uso de símbolos imutáveis é incentivado porque permite que o compilador execute mais otimizações.
 
 O lado esquerdo de uma associação consiste em uma tupla de símbolos e no lado direito de uma expressão.
@@ -58,7 +58,7 @@ Veja a seguir alguns exemplos de técnicas de instrução de reassociação.
 
 #### <a name="apply-and-reassign-statements"></a>Instruções de aplicar e reatribuir
 
-Um determinado tipo de `set` instrução, a instrução *Apply-e-REASSIGN* , fornece uma maneira conveniente de concatenação se o lado direito consistir no aplicativo de um operador binário e o resultado for ser reassociado ao argumento esquerdo para o operador. Por exemplo:
+Um determinado tipo de `set` instrução, a instrução *Apply-e-REASSIGN* , fornece uma maneira conveniente de concatenação se o lado direito consistir no aplicativo de um operador binário e o resultado for ser reassociado ao argumento esquerdo para o operador. Por exemplo,
 
 ```qsharp
 mutable counter = 0;

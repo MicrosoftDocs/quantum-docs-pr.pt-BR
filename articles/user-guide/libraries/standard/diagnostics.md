@@ -3,17 +3,17 @@ title: Diagnóstico nas Q# bibliotecas padrão
 description: Saiba mais sobre as funções de diagnóstico e as operações nas Q# bibliotecas padrão usadas para capturar erros ou erros em programas Quantum.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 11ce1bc86db0c5aa0f81ba7d0f2d6ec3463b178c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868535"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835563"
 ---
 # <a name="diagnostics"></a>Diagnósticos #
 
@@ -33,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`tem assinatura `(String -> Unit)` , representando novamente que a emissão de uma mensagem de log de depuração não pode ser observada de dentro do Q# .
+> `Message` tem assinatura `(String -> Unit)` , representando novamente que a emissão de uma mensagem de log de depuração não pode ser observada de dentro do Q# .
 
 O <xref:microsoft.quantum.diagnostics.dumpmachine> e o <xref:microsoft.quantum.diagnostics.dumpregister> callables instruem os computadores de destino a fornecer informações de diagnóstico sobre todos os qubits atualmente alocados ou sobre um registro específico do qubits, respectivamente.
 Cada computador de destino varia de acordo com as informações de diagnóstico fornecidas em resposta a uma instrução de despejo.
@@ -69,14 +69,14 @@ Em computadores de destino que não permitem a avaliação de asserções, as ch
 Em geral, a <xref:microsoft.quantum.diagnostics.assertmeasurement> operação declara que medir o qubits fornecido na base Pauli especificada sempre terá o resultado especificado.
 Se a asserção falhar, a execução terminará chamando `fail` com a mensagem fornecida.
 Por padrão, essa operação não é implementada; os simuladores que podem oferecer suporte a ele devem fornecer uma implementação que executa a verificação de tempo de execução.
-`AssertMeasurement`tem assinatura `((Pauli[], Qubit[], Result, String) -> ())` .
+`AssertMeasurement` tem assinatura `((Pauli[], Qubit[], Result, String) -> ())` .
 Como `AssertMeasurement` é uma função com uma tupla vazia como seu tipo de saída, nenhum efeito de tendo chamado `AssertMeasurement` é observável em um Q# programa.
 
 A <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> função de operação Asserts que medindo o determinado qubits na base de Pauli especificada terá o resultado fornecido com a probabilidade determinada, dentro de certa tolerância.
 A tolerância é aditiva (por exemplo, `abs(expected-actual) < tol` ).
 Se a asserção falhar, a execução terminará chamando `fail` com a mensagem fornecida.
 Por padrão, essa operação não é implementada; os simuladores que podem oferecer suporte a ele devem fornecer uma implementação que executa a verificação de tempo de execução.
-`AssertMeasurementProbability`tem assinatura `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . O primeiro dos `Double` parâmetros fornece a probabilidade desejada do resultado e o segundo a tolerância.
+`AssertMeasurementProbability` tem assinatura `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . O primeiro dos `Double` parâmetros fornece a probabilidade desejada do resultado e o segundo a tolerância.
 
 Podemos fazer mais do que declarar uma única medida, usando que as informações clássicas usadas por um simulador para representar o estado interno de um qubit é receptivos para copiar, de modo que não precisamos realmente executar uma medida para testar nossa declaração.
 Em particular, isso nos permite motivos sobre medidas *incompatíveis* que seriam impossíveis em hardware real.

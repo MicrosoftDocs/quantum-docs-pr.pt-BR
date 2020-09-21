@@ -2,19 +2,19 @@
 title: Fluxo de controle em Q#
 description: Loops, condicionais, etc.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e8c873868d6f697fc90b23a38c11f35e46b40c4f
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759655"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833515"
 ---
 # <a name="control-flow-in-no-locq"></a>Fluxo de controle em Q#
 
@@ -24,15 +24,16 @@ No entanto, você pode modificar o fluxo de controle de três maneiras distintas
 * `if` instruções
 * `for` loops
 * `repeat-until-success` loops
+* conjugações ( `apply-within` instruções)
 
-As `if` `for` construções de fluxo de controle e passam em um sentido familiar para a maioria das linguagens de programação clássicas. [`Repeat-until-success`](#repeat-until-success-loop) os loops são discutidos posteriormente neste artigo.
+As `if` `for` construções de fluxo de controle e passam em um sentido familiar para a maioria das linguagens de programação clássicas. [`Repeat-until-success`](#repeat-until-success-loop) os loops e os [conjugados](#conjugations) são discutidos posteriormente neste artigo.
 
 Importante, `for` loops e `if` instruções podem ser usados em operações para as quais as [especializações](xref:microsoft.quantum.guide.operationsfunctions) são geradas automaticamente. Nesse cenário, o adjoin de um `for` loop inverte a direção e usa o adjacente de cada iteração.
 Esta ação segue o princípio de "calçados e-Socks": se você deseja desfazer a colocação em SOCKS e, em seguida, os sapatos, você deve desfazer a colocação de sapatos e, em seguida, desfazer a colocação em Socks. 
 
 ## <a name="if-else-if-else"></a>If, else-if, Else
 
-A `if` instrução dá suporte à execução condicional.
+A `if` instrução dá suporte ao processamento condicional.
 Ele consiste na palavra-chave `if` , uma expressão booliana entre parênteses e um bloco de instrução (o bloco _then_ ).
 Opcionalmente, qualquer número de cláusulas else-if pode seguir, cada uma delas consiste na palavra-chave `elif` , uma expressão booliana entre parênteses e um bloco de instrução (o bloco _else-if_ ).
 Por fim, a instrução pode, opcionalmente, ser concluída com uma cláusula else, que consiste na palavra-chave `else` seguida por outro bloco de instrução (o bloco _else_ ).
@@ -152,7 +153,8 @@ Para obter mais exemplos e detalhes, consulte os [exemplos de repetir-até-êxit
 
 Os padrões de repetição-até-sucesso têm uma connotação de muito Quantum específica. Eles são amplamente usados em classes específicas de algoritmos Quantum, portanto, a construção de linguagem dedicada no Q# . No entanto, os loops que quebram com base em uma condição e cujo comprimento de execução é, portanto, desconhecido em tempo de compilação, são tratados com cuidado específico em um tempo de execução do Quantum. No entanto, seu uso dentro de funções não é problemático, pois esses loops contêm apenas um código que é executado em hardware convencional (sem Quantum). 
 
-Q#o, portanto, dá suporte ao uso de loops while apenas dentro de funções. Uma `while` instrução consiste na palavra-chave `while` , uma expressão booliana entre parênteses e um bloco de instruções.
+Q#o, portanto, dá suporte ao uso de loops while apenas dentro de funções.
+Uma `while` instrução consiste na palavra-chave `while` , uma expressão booliana entre parênteses e um bloco de instruções.
 O bloco de instrução (o corpo do loop) é executado contanto que a condição seja avaliada como `true` .
 
 ```qsharp
@@ -163,6 +165,45 @@ while (index < Length(arr) && item < 0) {
     set index += 1;
 }
 ```
+
+## <a name="conjugations"></a>Conjugações
+
+Em contraste com os bits clássicos, liberar memória Quantum é um pouco mais envolvida, uma vez que a redefinição oculta de qubits pode ter efeitos indesejados na computação restante se o qubits ainda for confusas. Esses efeitos podem ser evitados de forma adequada "desfazer" as computações realizadas antes de liberar a memória. Um padrão comum na computação Quantum é, portanto, o seguinte: 
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    outerOperation(target);
+    innerOperation(target);
+    Adjoint outerOperation(target);
+}
+```
+
+Q# dá suporte a uma instrução de conjugação que implementa a transformação anterior. Usando essa instrução, a operação `ApplyWith` pode ser implementada da seguinte maneira:
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    within{ 
+        outerOperation(target);
+    }
+    apply {
+        innerOperation(target);
+    }
+}
+```
+Essa instrução de conjugação se torna útil se as transformações externas e internas não estão prontamente disponíveis como operações, mas são mais convenientes de descrever por um bloco consistindo em várias instruções. 
+
+A transformação inversa para as instruções definidas no bloco Within é gerada automaticamente pelo compilador e executada após a conclusão do bloco de aplicação.
+Como as variáveis mutáveis usadas como parte do bloco Within não podem ser reassociadas no bloco Apply, a transformação gerada é garantida como sendo a adjoin do cálculo no bloco Within. 
 
 ## <a name="return-statement"></a>Instrução Return
 
