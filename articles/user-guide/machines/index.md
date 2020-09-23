@@ -2,19 +2,19 @@
 title: Simuladores quânticos e programas Q#
 description: Descreve os simuladores quânticos disponíveis como computadores de destino para programas Q#.
 author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com
+ms.author: v-benbra
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 77401ca3642b89d708f338f852dc60bf7346b87b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868297"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833424"
 ---
 # <a name="quantum-simulators"></a>Simuladores quânticos
 
@@ -31,7 +31,7 @@ Cada tipo de simulador quântico pode fornecer diferentes implementações desse
 
 ### <a name="quantum-machine-classes"></a>Classes de computador quântico
 
-No futuro, o QDK definirá classes adicionais de computadores quânticos para dar suporte a outros tipos de simulação e a execução em hardware quântico. Permitir que o algoritmo permaneça constante enquanto varia a implementação de computador subjacente facilita o teste e a depuração de um algoritmo em simulação e, em seguida, executa-o em um hardware real com a confiança de que o algoritmo não foi alterado.
+No futuro, o QDK definirá classes adicionais de computadores quânticos para dar suporte a outros tipos de simulação e à execução em hardware quântico. Permitir que o algoritmo permaneça constante enquanto varia a implementação de computador subjacente facilita o teste e a depuração de um algoritmo em simulação e, em seguida, executa-o em um hardware real com a confiança de que o algoritmo não foi alterado.
 
 O QDK inclui várias classes de computadores quânticos, todas definidas no namespace `Microsoft.Quantum.Simulation.Simulators`.
 

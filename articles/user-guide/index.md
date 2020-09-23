@@ -2,19 +2,19 @@
 title: Guia do usuário do Q#
 description: Visão geral da finalidade e do conteúdo do guia do usuário
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4fae2949bdcab0c3735b40ef029d70bf7ea3fb9f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f0680e773c8233d6c4f1acb742b3cc38dbc069d5
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869623"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834747"
 ---
 # <a name="the-no-locq-user-guide"></a>Guia do usuário do Q#
 
@@ -26,7 +26,7 @@ Nos diferentes tópicos deste guia, detalhamos os conceitos fundamentais da ling
 
 - [Q# Noções básicas](xref:microsoft.quantum.guide.basics): Uma visão geral introdutória da finalidade e da funcionalidade da linguagem de programação Q#. 
 
-- [Maneiras de executar um programa emQ#](xref:microsoft.quantum.guide.host-programs): descreve como um programa em Q# é executado e mostra uma visão geral das diversas formas de chamar o programa: da linha de comando, de Jupyter Notebooks Q# ou de um programa de host clássico escrito em uma linguagem Python ou .NET.
+- [Maneiras de executar um programa Q#](xref:microsoft.quantum.guide.host-programs): descreve como um programa Q# é executado e mostra uma visão geral das diversas formas de chamar o programa: da linha de comando, de Jupyter Notebooks Q# ou de um programa de host clássico escrito em uma linguagem Python ou .NET.
 
 ### <a name="no-locq-language"></a>Linguagem Q#
 
@@ -46,7 +46,7 @@ Nos diferentes tópicos deste guia, detalhamos os conceitos fundamentais da ling
 
 - [Trabalhar com qubits](xref:microsoft.quantum.guide.qubits): Descreve os recursos do Q# usados para tratar qubits e sistemas individuais do qubits, especificamente, alocando-os, executando operações neles e medindo-os. 
 
-- [Fluxo de controle](xref:microsoft.quantum.guide.controlflow): Detalha os padrões do fluxo de controle de programação disponíveis no Q#, que incluem muitas técnicas padrão (como execução condicional, loops for, loops while etc.), bem como o padrão “Repeat-Until-Success” específico da computação quântica.
+- [Fluxo de controle](xref:microsoft.quantum.guide.controlflow): Detalha os padrões do fluxo de controle de programação disponíveis no Q#, que incluem muitas técnicas padrão (como processamento condicional, loops *for* e loops *while*), bem como o padrão *Repeat-Until-Success* específico da computação quântica.
 
 - [Testando e depurando](xref:microsoft.quantum.guide.testingdebugging): Detalha algumas técnicas para verificar se o código está fazendo o que deveria fazer. 
     Devido à opacidade geral das informações quânticas, a depuração de um programa quântico pode exigir técnicas especializadas. 
@@ -61,7 +61,7 @@ Nos diferentes tópicos deste guia, detalhamos os conceitos fundamentais da ling
 
 - [Estimador de recursos](xref:microsoft.quantum.machines.resources-estimator): Estima os recursos necessários para executar uma determinada instância de uma operação em Q# em um computador quântico.
 
-- [Simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro): Executa um programa quantum da Microsoft sem realmente simular o estado de um computador quantum e, portanto, pode executar programas quantum que usam milhares de qubits. Útil para depurar um código clássico dentro de um programa quantum, bem como estimar os recursos necessários.
+- [Simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro): Executa um programa quântico da Microsoft sem realmente simular o estado de um computador quântico e, portanto, pode executar programas quânticos que usam milhares de qubits. Útil para depurar um código clássico dentro de um programa quantum, bem como estimar os recursos necessários.
 
 - [Simulador do Toffoli](xref:microsoft.quantum.machines.toffoli-simulator): Um simulador quantum de uso especial que pode ser usado com milhões de qubits, mas somente para programas com um conjunto restrito de operações quantum (X, CNOT e X multicontrolado).
 
