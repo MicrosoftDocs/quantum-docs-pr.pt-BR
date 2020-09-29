@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.lexographiccomparison
+name: LexographicComparison
+type: function
+namespace: microsoft.quantum.logical
+summary: Dada uma função de comparação, retorna uma nova função que lexographically compara duas matrizes.
+remarks: >-
+  A comparação de lexographic entre duas matrizes `xs` e `ys` é definida pelo procedimento a seguir. Dizemos que dois elementos `x` e `y` são equivalentes se `elementComparison(x, y)` e `elementComparison(y, x)` são ambos verdadeiros.
+
+
+  - Ambas as matrizes são comparadas elemento por elemento até o primeiro par de elementos que não são equivalentes. A matriz que contém o elemento que ocorre primeiro de acordo com o `elementComparison` é mencionada primeiro na ordenação lexographical.
+
+  - Se nenhum elemento inequivalente for encontrado e uma matriz for maior do que a outra, a matriz mais curta será mencionada primeiro.
+syntax: "function LexographicComparison (elementComparison : (('T, 'T) -> Bool)) : (('T[], 'T[]) -> Bool)"
+input:
+  content: "(elementComparison : (('T, 'T) -> Bool))"
+  types:
+  - name: elementComparison
+    summary: Uma função que compara dois elementos `x` e `y` retorna se `x` é menor ou igual a `y` .
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+output:
+  content: (('T[], 'T[]) -> Bool)
+  types:
+  - summary: Uma função que compara duas matrizes `xs` e `ys` retorna se `xs` ocorre antes ou igual a `ys` na ordenação de lexographical.
+    isFunction: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+typeParameters:
+- uid: "'T"
+  summary: O tipo dos elementos das matrizes que estão sendo comparados.
+seeAlso:
+- microsoft.quantum.arrays.sorted
+metadata:
+  ms.openlocfilehash: c7b1ec454d7a87c344b0297007dff32fb6ee07a6
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91493457"
