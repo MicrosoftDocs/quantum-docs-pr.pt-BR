@@ -1,20 +1,21 @@
 ---
 title: Desenvolver com o Q# e o Python
+description: Saiba como criar um aplicativo Q# usando o Python.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 01a5c31a7a920a69f4f90701d370f3a772d2c4d2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866733"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834152"
 ---
 # <a name="develop-with-no-locq-and-python"></a>Desenvolver com o Q# e o Python
 
@@ -55,7 +56,7 @@ Instale o QDK para desenvolver programas de host do Python para chamar operaçõ
     pip install qsharp
     ```
 
-1. Instale o IQ#, um kernel usado pelo Jupyter e pelo Python que fornece a funcionalidade básica para compilar e executar operações Q#.
+1. Instale o IQ#, um kernel usado pelo Jupyter e pelo Python que fornece uma funcionalidade básica para compilar e executar operações Q#.
 
     ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
@@ -73,7 +74,7 @@ Instale o QDK para desenvolver programas de host do Python para chamar operaçõ
     
 ***
 
-É isso! Agora, você tem o pacote `qsharp` do Python e o kernel do IQ# para Jupyter, que fornece a funcionalidade básica para compilar e executar operações de Q# no Python e permite usar os Jupyter Notebooks do Q#.
+É isso! Agora você tem o pacote `qsharp` do Python e o kernel do IQ# para Jupyter, que fornecem uma funcionalidade básica para compilar e executar operações Q# do Python e permite usar Jupyter Notebooks do Q#.
 
 ## <a name="choose-your-ide"></a>Escolher o IDE
 
@@ -88,7 +89,7 @@ Se você prefere usar outro editor, as instruções acima fornecem todas as info
 
 ## <a name="write-your-first-no-locq-program"></a>Escrever seu primeiro programa Q#
 
-Agora você pode verificar a instalação do pacote `qsharp` do Python escrevendo e executando um programa simples em Q#.
+Agora você está pronto para verificar a instalação do pacote `qsharp` do Python gravando e executando um programa de Q# simples.
 
 1. Crie uma operação mínima de Q# criando um arquivo chamado `Operation.qs` e adicionando o seguinte código a ele:
 
@@ -109,11 +110,11 @@ Agora você pode verificar a instalação do pacote `qsharp` do Python escrevend
     python host.py
     ```
 
-1. Você verá o resultado da operação que invocou. Nesse caso, como a operação gera um resultado aleatório, você verá `0` ou `1` impresso na tela. Se executar o programa repetidamente, você verá cada resultado em aproximadamente metade do tempo.
+1. Você verá o resultado da operação que invocou. Nesse caso, como a operação gera um resultado aleatório, você verá `0` ou `1` impresso na tela. Caso execute o programa várias vezes, será possível conferir cada resultado em aproximadamente metade do tempo.
 
 > [!NOTE]
 > * O código Python é apenas um programa Python normal. É possível usar qualquer ambiente Python, incluindo Jupyter Notebooks baseados em Python, para escrever o programa nessa linguagem de programação e chamar as operações Q#. O programa Python pode importar operações de Q# de arquivos .qs localizados na mesma pasta que o código Python.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Agora que você instalou o Quantum Development Kit em seu ambiente preferido, siga este tutorial para escrever e executar [seu primeiro programa quântico](xref:microsoft.quantum.quickstarts.qrng).
+Agora que você testou o Kit de Desenvolvimento Quantum em um ambiente preferencial, será possível seguir este tutorial para gravar e executar [seu primeiro programa quântico](xref:microsoft.quantum.quickstarts.qrng).
