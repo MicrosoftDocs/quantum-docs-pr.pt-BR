@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b27d084bbe2cda878efa6250c52c0ae628637850
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7a258a915a807b8e1ee7c2c9c062017d90f6a454
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834883"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91489758"
 ---
 # <a name="contributing-code"></a>Código de contribuição
 
@@ -82,6 +82,10 @@ Localmente, os testes de unidade podem ser executados usando o Visual Studio Tes
 
 ### Citations and References ### -->
 
+## <a name="pull-requests"></a>Solicitações de pull
+
+Quando estiver pronto para contribuir com seu trabalho, envie uma solicitação de pull por meio do GitHub para o repositório correspondente.
+A equipe irá revisar e fornecer comentários. Todos os comentários precisam ser respondidos e resolvidos e todas as verificações precisam passar antes que o código seja mesclado para a `main` ramificação.
 
 ## <a name="when-well-reject-a-pull-request"></a>Quando rejeitarmos uma solicitação de pull
 
