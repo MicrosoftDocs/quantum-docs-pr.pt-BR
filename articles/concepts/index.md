@@ -9,18 +9,18 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1b767313b7f421ddaba62ab2be99fe10b8d0430e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1523bfdfec08fd093f1c7ea999e23e85fc3cfc14
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834543"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91478929"
 ---
 # <a name="quantum-computing-history-and-background"></a>Histórico e contexto sobre a computação quântica
 
 Uma série de novas tecnologias computacionais surgiu nos últimos anos, sendo a computação quântica possivelmente a tecnologia que exige a maior mudança de paradigma por parte dos desenvolvedores.  Os computadores quânticos foram propostos na década de 1980 por [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) e [Yuri Manin](https://en.wikipedia.org/wiki/Yuri_Manin).  A intuição por trás da computação quântica originou-se do que costumava ser visto como um dos maiores constrangimentos da física: o notável progresso científico enfrentava uma incapacidade de modelar até mesmo sistemas simples. Observe que a mecânica quântica foi desenvolvida entre 1900 e 1925 e ela continua sendo a base na qual a química, a física da matéria condensada e as tecnologias que vão de chips de computador à iluminação LED, em última análise, se apoiam.  Ainda assim, apesar desses sucessos, até mesmo alguns dos sistemas mais simples pareciam estar além da capacidade humana de modelagem com a mecânica quântica.  Isso ocorre porque a simulação de sistemas de, até mesmo, algumas dezenas de partículas interativas exige mais potência computacional do que qualquer computador convencional possa fornecer em milhares de anos!
 
-Há várias maneiras de entender por que a mecânica quântica é difícil de ser simulada.  Talvez a mais simples seja ver que a teoria quântica pode ser interpretada como indicando que a matéria, em um nível quântico, está simultaneamente em uma variedade de diferentes configurações possíveis (conhecidas como *estados*).  Ao contrário da teoria de probabilidade clássica, essas muitas configurações do estado quântico, potencialmente observadas, podem interferir umas com as outras como as ondas em uma poça de maré.  Essa interferência impede o uso da amostragem estatística para obter as configurações de estado quântico.  Em vez disso, precisamos acompanhar *cada configuração possível* na qual um sistema quântico poderá estar se desejamos entender a evolução quântica.  
+Há várias maneiras de entender por que a mecânica quântica é difícil de ser simulada.  Talvez a mais simples delas seja ver que a teoria quântica pode ser interpretada como indicando que a matéria, em um nível quântico, está em uma série de configurações possíveis (conhecidas como *estados*).  Ao contrário da teoria de probabilidade clássica, essas muitas configurações do estado quântico, potencialmente observadas, podem interferir umas com as outras como as ondas em uma poça de maré.  Essa interferência impede o uso da amostragem estatística para obter as configurações de estado quântico.  Em vez disso, precisamos acompanhar *cada configuração possível* na qual um sistema quântico poderá estar se desejamos entender a evolução quântica.  
 
 Considere um sistema de elétrons em que os elétrons podem estar em qualquer uma das $40$ posições, digamos.  Os elétrons, portanto, podem estar em qualquer uma das $2^{40}$ configurações (já que cada posição pode ter ou não um elétron). Para armazenar o estado quântico dos elétrons em uma memória de computador convencional, será necessário mais de $130$ GB de memória!  Isso é substancial, mas dentro do alcance de alguns computadores.  Se permitíssemos que as partículas estivessem em qualquer uma das $41$ posições, haveria o dobro de configurações em $2^{41}$, que, por sua vez, exigiria mais de $260$ GB de memória para armazenar o estado quântico. Esse jogo de aumento do número de posições não poderá ser reproduzido indefinidamente se desejarmos armazenar o estado de forma convencional, pois excederemos rapidamente as capacidades de memória dos computadores mais eficientes do mundo.  Com algumas centenas de elétrons, a memória necessária para armazenar o sistema excede o número de partículas no universo; portanto, não há esperança de nossos computadores convencionais simularem a dinâmica quântica delas. Apesar disso, por natureza, esses sistemas evoluem imediatamente no tempo de acordo com as leis mecânicas quânticas, sem conhecimento algum da incapacidade de projetar e simular a evolução deles com a potência da computação convencional.
 
