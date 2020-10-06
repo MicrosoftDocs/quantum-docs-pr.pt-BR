@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 27038a86dc4854c397458d95529aca463d493fd6
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91492346"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771319"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas sobre a versão do Microsoft Quantum Development Kit
 
@@ -23,6 +23,12 @@ Este artigo contém informações sobre cada versão do Quantum Development Kit.
 Para obter instruções de instalação, consulte o [guia de instalação](xref:microsoft.quantum.install).
 
 Para obter instruções de atualização, consulte o [guia de atualização](xref:microsoft.quantum.update).
+
+## <a name="version-01220100504"></a>0.12.20100504 da versão
+
+*Data de lançamento: 5 de outubro de 2020*
+
+Esta versão corrige um bug que afeta a carga de Q# notebooks (consulte [iqsharp # 331](https://github.com/microsoft/iqsharp/pull/331)).
 
 ## <a name="version-01220092803"></a>0.12.20092803 da versão
 
@@ -66,7 +72,7 @@ Consulte a lista completa de PRss fechadas para [bibliotecas](https://github.com
 
 Esta versão contém o seguinte:
 
-- Os namespaces abertos em Q# blocos de anotações agora estão disponíveis para todos os cálculos de células futuros. Isso permite, por exemplo, que os namespaces sejam abertos uma vez em uma célula na parte superior do notebook, em vez de precisarem abrir namespaces relevantes em cada célula de código. Um novo `%lsopen` comando mágico exibe a lista de namespaces abertos no momento.
+- Os namespaces abertos em Q# blocos de anotações agora estão disponíveis ao executar todas as células futuras. Isso permite, por exemplo, que os namespaces sejam abertos uma vez em uma célula na parte superior do notebook, em vez de precisarem abrir namespaces relevantes em cada célula de código. Um novo `%lsopen` comando mágico exibe a lista de namespaces abertos no momento.
 
 Consulte a lista completa de PRss fechadas para [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compilador](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [tempo de execução](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [exemplos](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) e [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 

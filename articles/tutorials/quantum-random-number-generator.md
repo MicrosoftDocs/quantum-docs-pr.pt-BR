@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: cefe35a10dd89c14d2f1abc3080d52ab125236d1
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834033"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771282"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Tutorial: Implementar um gerador de número quântico aleatório em Q\#
 
@@ -33,7 +33,7 @@ Um exemplo simples de um algoritmo Quantum escrito em Q# é um gerador de númer
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-Conforme mencionado em nosso artigo [Noções básicas sobre computação quântica](xref:microsoft.quantum.overview.understanding), um qubit é uma unidade de informações quânticas que podem estar em superposição. Quando medido, um qubit pode ser apenas 0 ou 1. No entanto, quando uma operação está em execução, o estado do qubit representa a probabilidade de ler um 0 ou um 1 com uma medida. Esse estado probabilístico é conhecido como sobreposição. Podemos usar essa probabilidade para gerar números aleatórios.
+Conforme mencionado em nosso artigo [Noções básicas sobre computação quântica](xref:microsoft.quantum.overview.understanding), um qubit é uma unidade de informações quânticas que podem estar em superposição. Quando medido, um qubit pode ser apenas 0 ou 1. No entanto, antes da medição, o estado do qubit representa a probabilidade de ler um 0 ou um 1 com uma medida. Esse estado probabilístico é conhecido como sobreposição. Podemos usar essa probabilidade para gerar números aleatórios.
 
 Em nossa Q# operação, apresentamos o `Qubit` tipo de dados, nativo para Q# . Podemos alocar apenas um `Qubit` com uma instrução `using`. Quando é alocado, um qubit está sempre no estado `Zero`. 
 
