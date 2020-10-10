@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f40c63eed60379aa46a0cd9cfdd7d8de8c22c079
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833424"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771312"
 ---
 # <a name="quantum-simulators"></a>Simuladores quânticos
 
@@ -24,7 +24,7 @@ Simuladores quânticos são programas de software executados em computadores cl�
 
 ## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a>Atualizar os simuladores quânticos do QDK (Quantum Development Kit)
 
-O simulador quântico é responsável por fornecer implementações de primitivos quânticos para o algoritmo. Isso inclui operações primitivas, como `H`, `CNOT` e `Measure`, bem como gerenciamento e acompanhamento de qubits. O QDK inclui diferentes classes de simuladores quânticos que representam modelos de execução diferentes para o mesmo algoritmo quântico. 
+O simulador quântico é responsável por fornecer implementações de primitivos quânticos para o algoritmo. Isso inclui operações primitivas, como `H`, `CNOT` e `Measure`, bem como gerenciamento e acompanhamento de qubits. O QDK inclui diferentes classes de simuladores quânticos que representam diferentes maneiras de simular o mesmo algoritmo quântico. 
 
 
 Cada tipo de simulador quântico pode fornecer diferentes implementações desses primitivos. Por exemplo, o [simulador de estado completo](xref:microsoft.quantum.machines.full-state-simulator) executa o algoritmo quântico ao simular totalmente o [vetor de estado quântico](xref:microsoft.quantum.glossary#quantum-state), enquanto o [simulador de rastreamento de computador quântico](xref:microsoft.quantum.machines.qc-trace-simulator.intro) não considera o estado quântico real. Em vez disso, ele rastreia o uso de portões, qubits e outros recursos para o algoritmo.

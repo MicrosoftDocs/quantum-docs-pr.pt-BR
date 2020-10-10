@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7f5e25aa7b58277642783e03d03854cd75ff4ca3
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833362"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771300"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Simulador de rastreamento quântico do Microsoft QDK (Quantum Development Kit)
 
@@ -86,7 +86,7 @@ O QDK inclui cinco ferramentas que você pode usar com o simulador de rastreamen
 |-----| -----|
 |[Verificador de entradas distintas](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |Verifica se há conflitos potenciais com qubits compartilhados |
 |[Verificador de uso de qubits invalidados](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |Verifica se o programa aplica uma operação a um qubit que já foi liberado |
-|[Contador de operações primitivas](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Conta o número de processos primitivos usados em cada operação invocada em um programa quântico  |
+|[Contador de operações primitivas](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Conta o número de primitivos usados em cada operação invocada em um programa quântico  |
 |[Contador de profundidade](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |Coleta contagens que representam o limite inferior da profundidade de cada operação invocada em um programa quântico   |
 |[Contador de largura](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |Conta o número de qubits alocados e emprestados em cada operação em um programa quântico |
 
