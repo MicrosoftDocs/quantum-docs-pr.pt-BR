@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.simulators
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8691838b2d6c54baa40042245eee8c901a7ca965
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 714d8163a66feea2766a71886c6d07275098ac2f
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835002"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771365"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>Computadores e simuladores quantum
 
@@ -33,7 +33,7 @@ Os computadores quânticos enfrentam uma infinidade de desafios para funcionarem
 
 ## <a name="quantum-simulators"></a>Simuladores quânticos
 
-Os simuladores quânticos executados em computadores clássicos permitem simular a computação de algoritmos quânticos em um sistema quântico.  O QDK (Quantum Development Kit) da Microsoft inclui um simulador de vetor de estado completo junto com outros simuladores quânticos especializados.
+Os simuladores quânticos executados em computadores clássicos permitem simular a execução de algoritmos quânticos em um sistema quântico.  O QDK (Quantum Development Kit) da Microsoft inclui um simulador de vetor de estado completo junto com outros simuladores quânticos especializados.
 
 ## <a name="topological-qubit"></a>Qubit topológico
 
