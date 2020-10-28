@@ -1,0 +1,281 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Retorna o valor absoluto de um número complexo de tipo `Complex` .
+  uid: Microsoft.Quantum.Math.AbsComplex
+- summary: Retorna o valor absoluto de um número complexo de tipo `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.AbsComplexPolar
+- summary: Retorna o valor absoluto de um número de ponto flutuante de precisão dupla.
+  uid: Microsoft.Quantum.Math.AbsD
+- summary: Retorna o valor absoluto de um inteiro.
+  uid: Microsoft.Quantum.Math.AbsI
+- summary: Retorna o valor absoluto de um inteiro grande.
+  uid: Microsoft.Quantum.Math.AbsL
+- summary: Retorna o valor absoluto do quadrado de um número complexo de tipo `Complex` .
+  uid: Microsoft.Quantum.Math.AbsSquaredComplex
+- summary: Retorna o valor absoluto do quadrado de um número complexo de tipo `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.AbsSquaredComplexPolar
+- summary: Função auxiliar usada para calcular recursivamente o bits de um valor.
+  uid: Microsoft.Quantum.Math.AccumulatedBitsizeI
+- summary: Função auxiliar usada para calcular recursivamente o bits de um valor.
+  uid: Microsoft.Quantum.Math.AccumulatedBitsizeL
+- summary: Retorna o ângulo cujo cosseno é o número especificado.
+  uid: Microsoft.Quantum.Math.ArcCos
+- summary: Computa o cosseno hiperbólico inverso de um número.
+  uid: Microsoft.Quantum.Math.ArcCosh
+- summary: Retorna o ângulo cujo seno é o número especificado.
+  uid: Microsoft.Quantum.Math.ArcSin
+- summary: Computa o seno hiperbólico inverso de um número.
+  uid: Microsoft.Quantum.Math.ArcSinh
+- summary: Retorna o ângulo cuja tangente é o número especificado.
+  uid: Microsoft.Quantum.Math.ArcTan
+- summary: Retorna o ângulo cuja tangente é o quociente de dois números especificados.
+  uid: Microsoft.Quantum.Math.ArcTan2
+- summary: Computa a tangente hiperbólica inversa de um número.
+  uid: Microsoft.Quantum.Math.ArcTanh
+- summary: Retorna a fase de um número complexo de tipo `Complex` .
+  uid: Microsoft.Quantum.Math.ArgComplex
+- summary: Retorna a fase de um número complexo de tipo `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.ArgComplexPolar
+- summary: >-
+    Para um inteiro não negativo `a` , retorna o número de bits necessários para representar `a` .
+
+    Ou seja, retorna o menor $n $, que $a < 2 ^ n $.
+  uid: Microsoft.Quantum.Math.BitSizeI
+- summary: >-
+    Para um inteiro não negativo `a` , retorna o número de bits necessários para representar `a` .
+
+    Ou seja, retorna o menor $n $, que $a < 2 ^ n $.
+  uid: Microsoft.Quantum.Math.BitSizeL
+- summary: Retorna o menor inteiro maior ou igual ao número especificado.
+  uid: Microsoft.Quantum.Math.Ceiling
+- summary: Converte um número complexo de tipo `Complex` em um número complexo de tipo `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.ComplexAsComplexPolar
+- summary: Converte um número complexo de tipo `ComplexPolar` em um número complexo de tipo `Complex` .
+  uid: Microsoft.Quantum.Math.ComplexPolarAsComplex
+- summary: Localiza a fração contínua Convergent mais próxima de `fraction` com o denominador menor ou igual a `denominatorBound`
+  uid: Microsoft.Quantum.Math.ContinuedFractionConvergentI
+- summary: Localiza a fração contínua Convergent mais próxima de `fraction` com o denominador menor ou igual a `denominatorBound`
+  uid: Microsoft.Quantum.Math.ContinuedFractionConvergentL
+- summary: Retorna o cosseno do ângulo especificado.
+  uid: Microsoft.Quantum.Math.Cos
+- summary: Retorna o cosseno hiperbólico do ângulo especificado.
+  uid: Microsoft.Quantum.Math.Cosh
+- summary: Divide um valor de BigInteger por outro, retorna o resultado e o resto como uma tupla.
+  uid: Microsoft.Quantum.Math.DivRemL
+- summary: Retorna o quociente de duas entradas.
+  uid: Microsoft.Quantum.Math.DividedByC
+- summary: Retorna o quociente de duas entradas.
+  uid: Microsoft.Quantum.Math.DividedByCP
+- summary: Retorna o quociente de duas entradas.
+  uid: Microsoft.Quantum.Math.DividedByD
+- summary: Retorna o quociente de duas entradas.
+  uid: Microsoft.Quantum.Math.DividedByI
+- summary: Retorna o quociente de duas entradas.
+  uid: Microsoft.Quantum.Math.DividedByL
+- summary: Retorna a base logarítmica natural $e $.
+  uid: Microsoft.Quantum.Math.E
+- summary: Retorna $e $ elevado à potência especificada.
+  uid: Microsoft.Quantum.Math.ExpD
+- summary: Retorna um número inteiro elevado a uma determinada potência, com relação a um determinado módulo.
+  uid: Microsoft.Quantum.Math.ExpModI
+- summary: Retorna um número inteiro elevado a uma determinada potência, com relação a um determinado módulo.
+  uid: Microsoft.Quantum.Math.ExpModL
+- summary: Computa uma tupla $ (u, v) $ de forma que $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, em que $ \operatorname{GCD} $ é $a $ maior divisor comum de $a $ e $b $. O GCD é sempre positivo.
+  uid: Microsoft.Quantum.Math.ExtendedGreatestCommonDivisorI
+- summary: Computa uma tupla $ (u, v) $ de forma que $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, em que $ \operatorname{GCD} $ é $a $ maior divisor comum de $a $ e $b $. O GCD é sempre positivo.
+  uid: Microsoft.Quantum.Math.ExtendedGreatestCommonDivisorL
+- summary: Retorna o maior inteiro menor ou igual ao número especificado.
+  uid: Microsoft.Quantum.Math.Floor
+- summary: Computa o maior divisor comum de $a $ e $b $. O GCD é sempre positivo.
+  uid: Microsoft.Quantum.Math.GreatestCommonDivisorI
+- summary: Computa o maior divisor comum de $a $ e $b $. O GCD é sempre positivo.
+  uid: Microsoft.Quantum.Math.GreatestCommonDivisorL
+- summary: Retorna o resultado restante da divisão de um número especificado por outro número especificado.
+  uid: Microsoft.Quantum.Math.IEEERemainder
+- summary: Retorna $b $, que $a \cdot b = 1 (\operatorname{mod} \texttt{Modulus}) $.
+  uid: Microsoft.Quantum.Math.InverseModI
+- summary: Retorna $b $, que $a \cdot b = 1 (\operatorname{mod} \texttt{Modulus}) $.
+  uid: Microsoft.Quantum.Math.InverseModL
+- summary: Retornará true se $a $ e $b $ forem coprimos e false caso contrário.
+  uid: Microsoft.Quantum.Math.IsCoprimeI
+- summary: Retornará true se $a $ e $b $ forem coprimos e false caso contrário.
+  uid: Microsoft.Quantum.Math.IsCoprimeL
+- summary: Computa o logaritmo de base 2 de um número.
+  uid: Microsoft.Quantum.Math.Lg
+- summary: Retorna o logaritmo natural (base $e $) de um número especificado.
+  uid: Microsoft.Quantum.Math.Log
+- summary: Retorna o logaritmo de base 10 de um número especificado.
+  uid: Microsoft.Quantum.Math.Log10
+- summary: Retorna o logaritmo natural de 2.
+  uid: Microsoft.Quantum.Math.LogOf2
+- summary: Dada uma matriz de inteiros, retorna o maior elemento.
+  uid: Microsoft.Quantum.Math.Max
+- summary: Retorna o maior dos dois números especificados.
+  uid: Microsoft.Quantum.Math.MaxD
+- summary: Retorna o maior dos dois números especificados.
+  uid: Microsoft.Quantum.Math.MaxI
+- summary: Retorna o maior dos dois números especificados.
+  uid: Microsoft.Quantum.Math.MaxL
+- summary: Dada uma matriz de inteiros, retorna o elemento menor.
+  uid: Microsoft.Quantum.Math.Min
+- summary: Retorna o menor de dois números especificados.
+  uid: Microsoft.Quantum.Math.MinD
+- summary: Retorna o menor de dois números especificados.
+  uid: Microsoft.Quantum.Math.MinI
+- summary: Retorna o menor de dois números especificados.
+  uid: Microsoft.Quantum.Math.MinL
+- summary: Retorna a diferença entre duas entradas.
+  uid: Microsoft.Quantum.Math.MinusC
+- summary: Retorna a diferença entre duas entradas.
+  uid: Microsoft.Quantum.Math.MinusCP
+- summary: Retorna a diferença entre duas entradas.
+  uid: Microsoft.Quantum.Math.MinusD
+- summary: Retorna a diferença entre duas entradas.
+  uid: Microsoft.Quantum.Math.MinusI
+- summary: Retorna a diferença entre duas entradas.
+  uid: Microsoft.Quantum.Math.MinusL
+- summary: Retorna o módulo de um número em relação a outro número.
+  uid: Microsoft.Quantum.Math.ModI
+- summary: Retorna o módulo de um número em relação a outro número.
+  uid: Microsoft.Quantum.Math.ModL
+- summary: Executa uma divisão modular em um número elevado à potência de outro número.
+  uid: Microsoft.Quantum.Math.ModPowL
+- summary: Computa o residue canônico do `value` módulo `modulus` .
+  uid: Microsoft.Quantum.Math.ModulusI
+- summary: Computa o residue canônico do `value` módulo `modulus` .
+  uid: Microsoft.Quantum.Math.ModulusL
+- summary: Retorna a negação unário de uma entrada.
+  uid: Microsoft.Quantum.Math.NegationC
+- summary: Retorna a negação unário de uma entrada.
+  uid: Microsoft.Quantum.Math.NegationCP
+- summary: Retorna a negação unário de uma entrada.
+  uid: Microsoft.Quantum.Math.NegationD
+- summary: Retorna a negação unário de uma entrada.
+  uid: Microsoft.Quantum.Math.NegationI
+- summary: Retorna a negação unário de uma entrada.
+  uid: Microsoft.Quantum.Math.NegationL
+- summary: Representa a razão entre a circunferência de um círculo e seu diâmetro, especificada pela constante π.
+  uid: Microsoft.Quantum.Math.PI
+- summary: >-
+    Retorna a `L(p)` norma de um vetor de `Double` s.
+
+    Ou seja, dada uma matriz $x $ do tipo `Double[]` , isso retorna o $p $-normal $ \| x \| \_ p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
+  uid: Microsoft.Quantum.Math.PNorm
+- summary: >-
+    Normaliza um vetor de `Double` s na `L(p)` norma.
+
+    Ou seja, dada uma matriz $x $ do tipo `Double[]` , isso retorna uma matriz onde todos os elementos são divididos pelo $p $-norma $ \| x \| _p $.
+  uid: Microsoft.Quantum.Math.PNormalized
+- summary: Retorna a soma (concatenação) de duas entradas.
+  uid: Microsoft.Quantum.Math.PlusA
+- summary: Retorna a soma de duas entradas.
+  uid: Microsoft.Quantum.Math.PlusC
+- summary: Retorna a soma de duas entradas.
+  uid: Microsoft.Quantum.Math.PlusCP
+- summary: Retorna a soma de duas entradas.
+  uid: Microsoft.Quantum.Math.PlusD
+- summary: Retorna a soma de duas entradas.
+  uid: Microsoft.Quantum.Math.PlusI
+- summary: Retorna a soma de duas entradas.
+  uid: Microsoft.Quantum.Math.PlusL
+- summary: Retorna um número elevado a uma determinada potência.
+  uid: Microsoft.Quantum.Math.PowC
+- summary: Interno. Como é mais fácil definir a potência de dois números complexos na forma cartesianas como retornando na forma polar, definimos isso aqui e, em seguida, convertemos conforme necessário.
+  uid: Microsoft.Quantum.Math.PowCAsCP
+- summary: Retorna um número elevado a uma determinada potência.
+  uid: Microsoft.Quantum.Math.PowCP
+- summary: Retorna o número x elevado à potência y.
+  uid: Microsoft.Quantum.Math.PowD
+- summary: Retorna um número elevado a uma determinada potência.
+  uid: Microsoft.Quantum.Math.PowI
+- summary: Retorna um número elevado a uma determinada potência.
+  uid: Microsoft.Quantum.Math.PowL
+- summary: Computa o módulo entre dois números reais.
+  uid: Microsoft.Quantum.Math.RealMod
+- summary: Arredonda um valor para o número inteiro mais próximo.
+  uid: Microsoft.Quantum.Math.Round
+- summary: Retorna um inteiro que indica o sinal de um número.
+  uid: Microsoft.Quantum.Math.SignD
+- summary: Retorna um inteiro que indica o sinal de um número.
+  uid: Microsoft.Quantum.Math.SignI
+- summary: Retorna um inteiro que indica o sinal de um número.
+  uid: Microsoft.Quantum.Math.SignL
+- summary: Retorna o seno do ângulo especificado.
+  uid: Microsoft.Quantum.Math.Sin
+- summary: Retorna o seno hiperbólico do ângulo especificado.
+  uid: Microsoft.Quantum.Math.Sinh
+- summary: Retorna a raiz quadrada de um número especificado.
+  uid: Microsoft.Quantum.Math.Sqrt
+- summary: Retorna o quadrado 2-a norma de um vetor.
+  uid: Microsoft.Quantum.Math.SquaredNorm
+- summary: Retorna a tangente do ângulo especificado.
+  uid: Microsoft.Quantum.Math.Tan
+- summary: Retorna a tangente hiperbólica do ângulo especificado.
+  uid: Microsoft.Quantum.Math.Tanh
+- summary: Retorna o produto de duas entradas.
+  uid: Microsoft.Quantum.Math.TimesC
+- summary: Retorna o produto de duas entradas.
+  uid: Microsoft.Quantum.Math.TimesCP
+- summary: Retorna o produto de duas entradas.
+  uid: Microsoft.Quantum.Math.TimesD
+- summary: Retorna o produto de duas entradas.
+  uid: Microsoft.Quantum.Math.TimesI
+- summary: Retorna o produto de duas entradas.
+  uid: Microsoft.Quantum.Math.TimesL
+- summary: Calcula a parte integral de um número.
+  uid: Microsoft.Quantum.Math.Truncate
+- summary: Chamada recursiva interna para calcular o GCD com um associado
+  uid: Microsoft.Quantum.Math._ContinuedFractionConvergentI
+- summary: Chamada recursiva interna para calcular o GCD com um associado
+  uid: Microsoft.Quantum.Math._ContinuedFractionConvergentL
+- summary: Chamada recursiva interna para calcular o GCD.
+  uid: Microsoft.Quantum.Math._ExtendedGreatestCommonDivisorI
+- summary: Chamada recursiva interna para calcular o GCD.
+  uid: Microsoft.Quantum.Math._ExtendedGreatestCommonDivisorL
+name: Microsoft.Quantum.Math
+newtypes:
+- summary: Representa um número racional do formulário `p/q` . Integer `p` é o primeiro elemento da tupla e `q` é o segundo elemento da tupla.
+  uid: Microsoft.Quantum.Math.BigFraction
+- summary: Representa um número complexo por seus componentes reais e imaginários. O primeiro elemento da tupla é o componente real, o segundo componente imaginário.
+  uid: Microsoft.Quantum.Math.Complex
+- summary: >-
+    Representa um número complexo na forma polar.
+
+    A representação polar de um número complexo é $c = r e ^ {i t} $.
+  uid: Microsoft.Quantum.Math.ComplexPolar
+- summary: Representa um número racional do formulário `p/q` . Integer `p` é o primeiro elemento da tupla e `q` é o segundo elemento da tupla.
+  uid: Microsoft.Quantum.Math.Fraction
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > RandomInt foi preterido. Use <xref:Microsoft.Quantum.Random.DrawRandomInt> em seu lugar.
+
+  uid: Microsoft.Quantum.Math.RandomInt
+- summary: >+
+    > [!WARNING]
+
+    > RandomIntPow2 foi preterido. Use <xref:Microsoft.Quantum.Random.DrawRandomInt> em seu lugar.
+
+  uid: Microsoft.Quantum.Math.RandomIntPow2
+- summary: >+
+    > [!WARNING]
+
+    > RandomReal foi preterido. Use <xref:Microsoft.Quantum.Random.DrawRandomDouble> em seu lugar.
+
+  uid: Microsoft.Quantum.Math.RandomReal
+- summary: >+
+    > [!WARNING]
+
+    > RandomSingleQubitPauli foi preterido. Use <xref:Microsoft.Quantum.Random.DrawRandomPauli> em seu lugar.
+
+  uid: Microsoft.Quantum.Math.RandomSingleQubitPauli
+summary: Esse namespace contém funções matemáticas clássicas e tipos de dados.
+uid: Microsoft.Quantum.Math
+metadata:
+  ms.openlocfilehash: 13ccb80ce78e7d9d6341d7b228e39b65026ab090
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92696794"
