@@ -1,0 +1,374 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > AbsB foi preterido. Use <xref:Microsoft.Quantum.Math.AbsL> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.absl".
+
+  uid: Microsoft.Quantum.Extensions.Math.AbsB
+- summary: >+
+    > [!WARNING]
+
+    > AbsD foi preterido. Use <xref:Microsoft.Quantum.Math.AbsD> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.absd".
+
+  uid: Microsoft.Quantum.Extensions.Math.AbsD
+- summary: >+
+    > [!WARNING]
+
+    > AbsI foi preterido. Use <xref:Microsoft.Quantum.Math.AbsI> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.absi".
+
+  uid: Microsoft.Quantum.Extensions.Math.AbsI
+- summary: >+
+    > [!WARNING]
+
+    > ArcCos foi preterido. Use <xref:Microsoft.Quantum.Math.ArcCos> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.arccos".
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcCos
+- summary: >+
+    > [!WARNING]
+
+    > Os arcos foram preteridos. Use <xref:Microsoft.Quantum.Math.ArcSin> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.arcsin".
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcSin
+- summary: >+
+    > [!WARNING]
+
+    > ArcTan foi preterido. Use <xref:Microsoft.Quantum.Math.ArcTan> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.arctan".
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcTan
+- summary: >+
+    > [!WARNING]
+
+    > ArcTan2 foi preterido. Use <xref:Microsoft.Quantum.Math.ArcTan2> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.arctan2".
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcTan2
+- summary: >+
+    > [!WARNING]
+
+    > O teto foi preterido. Use <xref:Microsoft.Quantum.Math.Ceiling> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.ceiling".
+
+  uid: Microsoft.Quantum.Extensions.Math.Ceiling
+- summary: >+
+    > [!WARNING]
+
+    > O cos foi preterido. Use <xref:Microsoft.Quantum.Math.Cos> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.cos".
+
+  uid: Microsoft.Quantum.Extensions.Math.Cos
+- summary: >+
+    > [!WARNING]
+
+    > Cosh foi preterido. Use <xref:Microsoft.Quantum.Math.Cosh> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.cosh".
+
+  uid: Microsoft.Quantum.Extensions.Math.Cosh
+- summary: >+
+    > [!WARNING]
+
+    > DivRemB foi preterido. Use <xref:Microsoft.Quantum.Math.DivRemL> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.divreml".
+
+  uid: Microsoft.Quantum.Extensions.Math.DivRemB
+- summary: >+
+    > [!WARNING]
+
+    > E foi preterido. Use <xref:Microsoft.Quantum.Math.E> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.e".
+
+  uid: Microsoft.Quantum.Extensions.Math.E
+- summary: >+
+    > [!WARNING]
+
+    > ExpD foi preterido. Use <xref:Microsoft.Quantum.Math.ExpD> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.expd".
+
+  uid: Microsoft.Quantum.Extensions.Math.ExpD
+- summary: >+
+    > [!WARNING]
+
+    > O andar foi preterido. Use <xref:Microsoft.Quantum.Math.Floor> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.floor".
+
+  uid: Microsoft.Quantum.Extensions.Math.Floor
+- summary: >+
+    > [!WARNING]
+
+    > IEEERemainder foi preterido. Use <xref:Microsoft.Quantum.Math.IEEERemainder> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.ieeeremainder".
+
+  uid: Microsoft.Quantum.Extensions.Math.IEEERemainder
+- summary: >+
+    > [!WARNING]
+
+    > O log foi preterido. Use <xref:Microsoft.Quantum.Math.Log> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.log".
+
+  uid: Microsoft.Quantum.Extensions.Math.Log
+- summary: >+
+    > [!WARNING]
+
+    > Log10 foi preterido. Use <xref:Microsoft.Quantum.Math.Log10> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.log10".
+
+  uid: Microsoft.Quantum.Extensions.Math.Log10
+- summary: >+
+    > [!WARNING]
+
+    > MaxB foi preterido. Use <xref:Microsoft.Quantum.Math.MaxL> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.maxl".
+
+  uid: Microsoft.Quantum.Extensions.Math.MaxB
+- summary: >+
+    > [!WARNING]
+
+    > MaxD foi preterido. Use <xref:Microsoft.Quantum.Math.MaxD> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.maxd".
+
+  uid: Microsoft.Quantum.Extensions.Math.MaxD
+- summary: >+
+    > [!WARNING]
+
+    > O máximo foi preterido. Use <xref:Microsoft.Quantum.Math.MaxI> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.maxi".
+
+  uid: Microsoft.Quantum.Extensions.Math.MaxI
+- summary: >+
+    > [!WARNING]
+
+    > MinB foi preterido. Use <xref:Microsoft.Quantum.Math.MinL> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.minl".
+
+  uid: Microsoft.Quantum.Extensions.Math.MinB
+- summary: >+
+    > [!WARNING]
+
+    > A mente foi preterida. Use <xref:Microsoft.Quantum.Math.MinD> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.mind".
+
+  uid: Microsoft.Quantum.Extensions.Math.MinD
+- summary: >+
+    > [!WARNING]
+
+    > MinI foi preterido. Use <xref:Microsoft.Quantum.Math.MinI> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.mini".
+
+  uid: Microsoft.Quantum.Extensions.Math.MinI
+- summary: >+
+    > [!WARNING]
+
+    > ModPowB foi preterido. Use <xref:Microsoft.Quantum.Math.ModPowL> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.modpowl".
+
+  uid: Microsoft.Quantum.Extensions.Math.ModPowB
+- summary: >+
+    > [!WARNING]
+
+    > PI foi preterido. Use <xref:Microsoft.Quantum.Math.PI> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.pi".
+
+  uid: Microsoft.Quantum.Extensions.Math.PI
+- summary: >+
+    > [!WARNING]
+
+    > PowD foi preterido. Use <xref:Microsoft.Quantum.Math.PowD> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.powd".
+
+  uid: Microsoft.Quantum.Extensions.Math.PowD
+- summary: >+
+    > [!WARNING]
+
+    > A rodada foi preterida. Use <xref:Microsoft.Quantum.Math.Round> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.round".
+
+  uid: Microsoft.Quantum.Extensions.Math.Round
+- summary: >+
+    > [!WARNING]
+
+    > SignB foi preterido. Use <xref:Microsoft.Quantum.Math.SignL> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.signl".
+
+  uid: Microsoft.Quantum.Extensions.Math.SignB
+- summary: >+
+    > [!WARNING]
+
+    > A assinatura foi preterida. Use <xref:Microsoft.Quantum.Math.SignD> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.signd".
+
+  uid: Microsoft.Quantum.Extensions.Math.SignD
+- summary: >+
+    > [!WARNING]
+
+    > Signi foi preterido. Use <xref:Microsoft.Quantum.Math.SignI> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.signi".
+
+  uid: Microsoft.Quantum.Extensions.Math.SignI
+- summary: >+
+    > [!WARNING]
+
+    > O Sin foi preterido. Use <xref:Microsoft.Quantum.Math.Sin> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.sin".
+
+  uid: Microsoft.Quantum.Extensions.Math.Sin
+- summary: >+
+    > [!WARNING]
+
+    > Sinh foi preterido. Use <xref:Microsoft.Quantum.Math.Sinh> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.sinh".
+
+  uid: Microsoft.Quantum.Extensions.Math.Sinh
+- summary: >+
+    > [!WARNING]
+
+    > Sqrt foi preterido. Use <xref:Microsoft.Quantum.Math.Sqrt> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.sqrt".
+
+  uid: Microsoft.Quantum.Extensions.Math.Sqrt
+- summary: >+
+    > [!WARNING]
+
+    > Tan foi preterido. Use <xref:Microsoft.Quantum.Math.Tan> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.tan".
+
+  uid: Microsoft.Quantum.Extensions.Math.Tan
+- summary: >+
+    > [!WARNING]
+
+    > Tanh foi preterido. Use <xref:Microsoft.Quantum.Math.Tanh> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.tanh".
+
+  uid: Microsoft.Quantum.Extensions.Math.Tanh
+- summary: >+
+    > [!WARNING]
+
+    > O truncamento foi preterido. Use <xref:Microsoft.Quantum.Math.Truncate> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.math.truncate".
+
+  uid: Microsoft.Quantum.Extensions.Math.Truncate
+name: Microsoft.Quantum.Extensions.Math
+newtypes: []
+operations: []
+summary: ''
+uid: Microsoft.Quantum.Extensions.Math
+metadata:
+  ms.openlocfilehash: c07f137eaca95237d581691008c614025dd35a1d
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92693425"

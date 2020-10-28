@@ -1,0 +1,109 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Declara que duas matrizes de valores Boolianos são iguais.
+  uid: Microsoft.Quantum.Diagnostics.AllEqualityFactB
+- summary: Declara que duas matrizes de valores inteiros são iguais.
+  uid: Microsoft.Quantum.Diagnostics.AllEqualityFactI
+- summary: Declara que uma condição clássica é falsa.
+  uid: Microsoft.Quantum.Diagnostics.Contradiction
+- summary: Despeja o status do computador de destino atual.
+  uid: Microsoft.Quantum.Diagnostics.DumpMachine
+- summary: Despeja o status atual da máquina de destino associada ao qubits fornecido.
+  uid: Microsoft.Quantum.Diagnostics.DumpRegister
+- summary: Declara que uma variável bool clássica tem o valor esperado.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactB
+- summary: Declara que um número complexo tem o valor esperado.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactC
+- summary: Declara que um número complexo tem o valor esperado.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactCP
+- summary: Declara que uma variável int clássica tem o valor esperado.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactI
+- summary: Declara que uma variável BigInt clássica tem o valor esperado.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactL
+- summary: Declara que uma variável de resultado clássico tem o valor esperado.
+  uid: Microsoft.Quantum.Diagnostics.EqualityFactR
+- summary: Representa a declaração de que um valor de ponto flutuante clássico tem o valor esperado até uma determinada tolerância absoluta.
+  uid: Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact
+- summary: Declara que uma condição clássica é verdadeira.
+  uid: Microsoft.Quantum.Diagnostics.Fact
+- summary: Função interna usada para falhar com mensagens de erro significativas.
+  uid: Microsoft.Quantum.Diagnostics.FormattedFailure
+- summary: Declara que um número complexo clássico tem o valor esperado até uma pequena tolerância de 1e-10.
+  uid: Microsoft.Quantum.Diagnostics.NearEqualityFactC
+- summary: Declara que um número complexo clássico tem o valor esperado até uma pequena tolerância de 1e-10.
+  uid: Microsoft.Quantum.Diagnostics.NearEqualityFactCP
+- summary: Declara que um valor de ponto flutuante clássico tem o valor esperado até uma pequena tolerância de 1e-10.
+  uid: Microsoft.Quantum.Diagnostics.NearEqualityFactD
+name: Microsoft.Quantum.Diagnostics
+newtypes:
+- summary: Atributo reconhecido pelo compilador por meio do qual um nome alternativo pode ser definido, que pode ser usado ao carregar um tipo ou chamável para fins de teste.
+  uid: Microsoft.Quantum.Diagnostics.EnableTestingViaName
+- summary: Atributo reconhecido pelo compilador usado para marcar um teste de unidade.
+  uid: Microsoft.Quantum.Diagnostics.Test
+operations:
+- summary: Entre uma chamada para essa operação e seu adjacente, o declara que uma determinada operação é chamada no máximo um determinado número de vezes.
+  uid: Microsoft.Quantum.Diagnostics.AllowAtMostNCallsCA
+- summary: Entre uma chamada para essa operação e seu adjacente, o declara que, no máximo, um determinado número de qubits adicionais são alocados com instruções using.
+  uid: Microsoft.Quantum.Diagnostics.AllowAtMostNQubits
+- summary: Assert que determinados qubits estão todos no estado $ \ket {0} $.
+  uid: Microsoft.Quantum.Diagnostics.AssertAllZero
+- summary: Assert que determinados qubits estão todos em $ \ket {0} $ State até uma determinada tolerância.
+  uid: Microsoft.Quantum.Diagnostics.AssertAllZeroWithinTolerance
+- summary: As declarações que medem o qubits determinado na base de Pauli especificada sempre terão o resultado especificado.
+  uid: Microsoft.Quantum.Diagnostics.AssertMeasurement
+- summary: As declarações que medem o qubits determinado na base de Pauli especificada terão o resultado fornecido com a probabilidade determinada, dentro de certa tolerância.
+  uid: Microsoft.Quantum.Diagnostics.AssertMeasurementProbability
+- summary: >-
+    Dadas duas operações, afirma que elas agem de forma idêntica para todos os Estados de entrada.
+
+    Essa asserção é implementada verificando a ação das operações em todos os Estados do formulário $V _0 \otimes... \otimes V_ {n-1} $, em que $V _k $ é um dos Estados $ \ket {0} $, $ \ket {1} $, $ \ket{+} $ e $ \ket{i} $ (+ 1 eigenstate do operador Y Pauli).
+
+    Essa declaração usa $n $ qubits e requer que várias chamadas das operações sejam comparadas.
+  uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace
+- summary: Verifica se a operação `givenU` é igual à operação `expectedU` no tamanho de entrada fornecido, verificando a ação das operações somente nos vetores da base computacional. Essa é uma condição necessária, mas não suficiente, para a igualdade de duas unidades.
+  uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlaceCompBasis
+- summary: >-
+    Dadas duas operações, afirma que elas agem de forma idêntica para todos os Estados de entrada.
+
+    Essa declaração é implementada usando o Choi – Jamiołkowski isomorphism para reduzir a asserção para uma de uma declaração de estado qubit em dois registros de confusas. Portanto, essa operação precisa apenas de uma única chamada para cada operação que está sendo testada, mas requer duas vezes mais qubits a ser alocada. Essa declaração pode ser usada para garantir, por exemplo, que uma versão otimizada de uma operação atue de forma idêntica à sua implementação ingênua ou que uma operação que atue em uma variedade de entradas não Quantum concorde com casos conhecidos.
+  uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualReferenced
+- summary: Declara que a fase de um estado de superposição igual tem o valor esperado.
+  uid: Microsoft.Quantum.Diagnostics.AssertPhase
+- summary: Declara que o qubit `q` está no eigenstate esperado do operador Pauli Z.
+  uid: Microsoft.Quantum.Diagnostics.AssertQubit
+- summary: >-
+    Declara que um qubit no estado esperado.
+
+    `expected` representa um vetor complexo, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $. O primeiro elemento das tuplas que representa cada $a $, $b $ é a parte real do número complexo, enquanto o segundo é a parte imaginária. O último argumento define a tolerância com a qual a declaração é feita.
+  uid: Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance
+- summary: Declara que o qubit `q` está no eigenstate esperado do operador Z Pauli até uma determinada tolerância.
+  uid: Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance
+- summary: Dada uma operação, exibe o diagnóstico sobre a operação disponibilizada pelo destino de execução atual.
+  uid: Microsoft.Quantum.Diagnostics.DumpOperation
+- summary: Usa DumpRegister para fornecer diagnósticos sobre o estado de uma referência e um registro de destino. Escrito como uma operação separada para permitir a substituição e a interpretação de registros separados, em vez de um único registro combinado.
+  uid: Microsoft.Quantum.Diagnostics.DumpReferenceAndTarget
+- summary: Verifica se o resultado da aplicação de duas operações `givenU` e `expectedU` um estado de base é o mesmo. O estado base é descrito por `basis` parâmetro. Consulte <xref:microsoft.quantum.extensions.fliptobasis> a função para obter mais detalhes sobre essa descrição.
+  uid: Microsoft.Quantum.Diagnostics._assertEqualOnBasisVector
+- summary: >-
+    Aplica unidades que mapeiam $ \ket {0} \otimes\cdots\ket {0} $ a $ \ket{\ psi_0} \otimes \ket{\ psi_ {n-1}} $, em que $ \ket{\ psi_k} $ depende de `basis[k]` .
+
+    A correspondência entre o valor de `basis[k]` e $ \ket{\ psi_k} $ é a seguinte:
+
+    - `basis[k]=0` $ \rightarrow \ket {0} $. - `basis[k]=1` $ \rightarrow \ket {1} $. - `basis[k]=2` $ \rightarrow \ket{+} $. - `basis[k]=3` $ \rightarrow \ket{i} $ (+ 1 eigenstate de Pauli Y).
+  uid: Microsoft.Quantum.Diagnostics._flipToBasis
+- summary: Itera uma variável por meio de um produto cartesiano [0, limites [0]-1] × [0, limites [1]-1] × [0, limites [comprimento (limites)-1]-1] e chamadas op (ARR) para cada elemento do produto cartesiano
+  uid: Microsoft.Quantum.Diagnostics._iterateThroughCartesianPower
+- summary: >-
+    Dadas dois registros, o prepara o estado de confusas máximo entre cada par de qubits nos respectivos registros. Todos os qubits devem iniciar no estado | 0 ⟩.
+
+    O resultado é que os pares correspondentes de qubits de cada registro estão no $ \bra{\ beta_ {00} } \ket{\ beta_ {00} } $.
+  uid: Microsoft.Quantum.Diagnostics._prepareEntangledState
+summary: ''
+uid: Microsoft.Quantum.Diagnostics
+metadata:
+  ms.openlocfilehash: d39cd1cac6121bd411fc0c87024254599bbb0641
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92693589"
