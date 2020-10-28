@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39974af0121a5167f1965e508cd595535178548b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 476e93e3737dee6ad8f3a97e8ffbcfb9b0012ee1
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833898"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691521"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Glossário de Machine Learning Quantum
 
@@ -30,7 +30,7 @@ Dado um vetor de parâmetro candidato e uma diferença de classificador, sua *Po
 
 ## <a name="hyperparameters"></a>Hiperparâmetros
 
-O processo de treinamento do modelo é regido por determinados valores predefinidos chamados *hiperparâmetros*:
+O processo de treinamento do modelo é regido por determinados valores predefinidos chamados *hiperparâmetros* :
 
 ### <a name="learning-rate"></a>Taxa de aprendizado
 
@@ -56,9 +56,10 @@ A função de probabilidade, que é o utilitário de treinamento para o classifi
 
 #### <a name="how-to-modify-the-hyperparameters"></a>Como modificar os hiperparâmetros
 
-Na biblioteca QML, a melhor maneira de modificar os hiperparâmetros é substituindo os valores padrão de UDT [`TrainingOptions`](xref:microsoft.quantum.machinelearning.trainingoptions) . Para fazer isso, chamamos isso de função [`DefaultTrainingOptions`](xref:microsoft.quantum.machinelearning.defaulttrainingoptions) e aplicamos o operador `w/` para substituir os valores padrão. Por exemplo, para usar medidas de 100.000 e uma taxa de aprendizagem de 0, 1:
- ```qsharp
+Na biblioteca QML, a melhor maneira de modificar os hiperparâmetros é substituindo os valores padrão de UDT [`TrainingOptions`](xref:Microsoft.Quantum.MachineLearning.TrainingOptions) . Para fazer isso, chamamos isso de função [`DefaultTrainingOptions`](xref:Microsoft.Quantum.MachineLearning.DefaultTrainingOptions) e aplicamos o operador `w/` para substituir os valores padrão. Por exemplo, para usar medidas de 100.000 e uma taxa de aprendizagem de 0, 1:
+
+```qsharp
 let options = DefaultTrainingOptions()
 w/ LearningRate <- 0.01
 w/ NMeasurements <- 100000;
- ```
+```

@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8714d3290e4099f901dab20a9ee9334699c4ad81
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6b196cf1be584a3157c7a9eb8cf497fe1121dd7a
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834900"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691823"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# Princípios de design de API
 
@@ -224,32 +224,32 @@ Principal **princípio:** Escolha os nomes e a terminologia que são claros, ace
 
   - **Verbos**
 
-    - **Assert**: Verifique se uma suposição sobre o estado de um computador de destino e seu qubits contém, possivelmente usando recursos não físicos. As operações que usam esse verbo devem ser sempre removíveis com segurança sem afetar a funcionalidade de bibliotecas e programas executáveis. Observe que, ao contrário dos fatos, as asserções podem, em geral, depender do estado externo, como o estado de um registro de qubit, o ambiente de execução ou assim por diante. Como a dependência no estado externo é um tipo de efeito colateral, as asserções devem ser expostas como operações em vez de funções.
+    - **Assert** : Verifique se uma suposição sobre o estado de um computador de destino e seu qubits contém, possivelmente usando recursos não físicos. As operações que usam esse verbo devem ser sempre removíveis com segurança sem afetar a funcionalidade de bibliotecas e programas executáveis. Observe que, ao contrário dos fatos, as asserções podem, em geral, depender do estado externo, como o estado de um registro de qubit, o ambiente de execução ou assim por diante. Como a dependência no estado externo é um tipo de efeito colateral, as asserções devem ser expostas como operações em vez de funções.
 
-    - **Estimativa**: usando uma ou mais medidas possivelmente repetidas, estimar uma quantidade clássica dos resultados da medição.
+    - **Estimativa** : usando uma ou mais medidas possivelmente repetidas, estimar uma quantidade clássica dos resultados da medição.
 
       *Exemplos:*
       - @"microsoft.quantum.characterization.estimatefrequency"
       - @"microsoft.quantum.characterization.estimateoverlapbetweenstates"
 
-    - **Prepare**: aplicar uma operação Quantum ou sequência de operações a um ou mais qubits presumidos para iniciar em um estado inicial específico (normalmente $ \ket{00\cdots 0} $), fazendo com que o estado dessas qubits seja evoluir para um estado final desejado. Em geral, agir em outros Estados que não seja o estado inicial especificado **pode** resultar em uma transformação unitário indefinida, mas ainda **deve** preservar essa operação e seu "cancelamento" adjacente e aplicar um não op.
+    - **Prepare** : aplicar uma operação Quantum ou sequência de operações a um ou mais qubits presumidos para iniciar em um estado inicial específico (normalmente $ \ket{00\cdots 0} $), fazendo com que o estado dessas qubits seja evoluir para um estado final desejado. Em geral, agir em outros Estados que não seja o estado inicial especificado **pode** resultar em uma transformação unitário indefinida, mas ainda **deve** preservar essa operação e seu "cancelamento" adjacente e aplicar um não op.
 
       *Exemplos:*
       - @"microsoft.quantum.preparation.preparearbitrarystate"
       - @"microsoft.quantum.preparation.prepareuniformsuperposition"
 
-    - **Medida**: aplique uma operação Quantum ou uma sequência de operações a um ou mais qubits, lendo os dados clássicos de volta.
+    - **Medida** : aplique uma operação Quantum ou uma sequência de operações a um ou mais qubits, lendo os dados clássicos de volta.
 
       *Exemplos:*
-      - @"microsoft.quantum.intrinsic.measure"
+      - @"Microsoft.Quantum.Intrinsic.Measure"
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **Aplicar**: aplicar uma operação Quantum ou sequência de operações a um ou mais qubits, fazendo com que o estado dessas qubits seja alterado de maneira coerente. Esse verbo é o verbo mais geral em Q \# nomenclatura e **não deve ser** usado quando um verbo mais específico é mais diretamente relevante.
+    - **Aplicar** : aplicar uma operação Quantum ou sequência de operações a um ou mais qubits, fazendo com que o estado dessas qubits seja alterado de maneira coerente. Esse verbo é o verbo mais geral em Q \# nomenclatura e **não deve ser** usado quando um verbo mais específico é mais diretamente relevante.
 
-  - **Substantivos**:
+  - **Substantivos** :
 
-    - **Fato**: uma condição booliana que depende apenas de suas entradas e não do estado de um computador de destino, seu ambiente ou o estado do qubits da máquina. Ao contrário de uma asserção, um fato só é sensível aos *valores* fornecidos a esse fato. Por exemplo:
+    - **Fato** : uma condição booliana que depende apenas de suas entradas e não do estado de um computador de destino, seu ambiente ou o estado do qubits da máquina. Ao contrário de uma asserção, um fato só é sensível aos *valores* fornecidos a esse fato. Por exemplo:
 
       *Exemplos:*
       - @"microsoft.quantum.diagnostics.equalityfacti": representa um fato de igualdade sobre duas entradas de inteiro; os inteiros fornecidos como entrada são iguais, ou não são, independentemente de qualquer outro Estado de programa.
@@ -259,9 +259,9 @@ Principal **princípio:** Escolha os nomes e a terminologia que são claros, ace
       *Exemplos:*
       - O @"microsoft.quantum.machinelearning.trainingoptions" UDT inclui itens nomeados para taxa de aprendizado, tamanho de minilote e outros parâmetros configuráveis para treinamento de ml.
 
-  - **Adjetivos**:
+  - **Adjetivos** :
 
-    - ⛔️ **novo**: Esse adjetivo **não deve** ser usado, a fim de evitar confusão com seu uso como um verbo em muitas linguagens de programação (por exemplo: C++, C#, Java, TypeScript, PowerShell).
+    - ⛔️ **novo** : Esse adjetivo **não deve** ser usado, a fim de evitar confusão com seu uso como um verbo em muitas linguagens de programação (por exemplo: C++, C#, Java, TypeScript, PowerShell).
 
   - **Preposições:** Em alguns casos, as preposições podem ser usadas para desambiguar ainda mais ou esclarecer as funções de substantivos e verbos em nomes de função e de operação. Deve-se ter cuidado para fazer isso de forma moderada e consistente.
 

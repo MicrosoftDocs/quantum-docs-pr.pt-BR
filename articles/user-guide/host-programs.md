@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2cb02617c81ee8b144ffe933f11b476ba6f4a23e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f1a4ef0616a8a3f1548b7a7207cf8cbb9dcc7260
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835954"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691696"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>Maneiras de executar um Q# programa
 
@@ -26,7 +26,7 @@ Uma distinção principal é que Q# pode ser executada:
 - como um aplicativo autônomo, onde Q# é o único idioma envolvido e o programa é invocado diretamente. Dois métodos realmente se enquadram nesta categoria:
   - a interface de linha de comando
   - Q# Blocos de anotações do Jupyter
-- com um *programa de host*adicional, escrito em Python ou em uma linguagem .net (por exemplo, C# ou F #), que invoca o programa e pode processar os resultados retornados.
+- com um *programa de host* adicional, escrito em Python ou em uma linguagem .net (por exemplo, C# ou F #), que invoca o programa e pode processar os resultados retornados.
 
 Para entender melhor esses processos e suas diferenças, consideramos um Q# programa simples e comparamos as maneiras como ele pode ser executado.
 
@@ -56,16 +56,16 @@ Para isso, ele precisa criar o corpo de uma [operação](xref:microsoft.quantum.
 ```
 Você definiu uma operação, `MeasureSuperposition` , que não recebe entradas e retorna um valor do tipo [Result](xref:microsoft.quantum.guide.types).
 
-Embora os exemplos nesta página consistam apenas em Q# *operações*, todos os conceitos que discutiremos referem-se igualmente às Q# *funções*e, portanto, nos referimos a elas coletivamente como *chamáveis*. Suas diferenças são discutidas em [ Q# noções básicas: operações e funções](xref:microsoft.quantum.guide.basics#q-operations-and-functions), e mais detalhes sobre como defini-las podem ser encontrados em [operações e funções](xref:microsoft.quantum.guide.operationsfunctions).
+Embora os exemplos nesta página consistam apenas em Q# *operações* , todos os conceitos que discutiremos referem-se igualmente às Q# *funções* e, portanto, nos referimos a elas coletivamente como *chamáveis* . Suas diferenças são discutidas em [ Q# noções básicas: operações e funções](xref:microsoft.quantum.guide.basics#q-operations-and-functions), e mais detalhes sobre como defini-las podem ser encontrados em [operações e funções](xref:microsoft.quantum.guide.operationsfunctions).
 
 ### <a name="callable-defined-in-a-no-locq-file"></a>Callable definido em um Q# arquivo
 
 O callable é precisamente o que é chamado e executado pelo Q# .
 No entanto, ele requer mais algumas adições para compor um `*.qs` Q# arquivo completo.
 
-Todos os Q# tipos e os chamados (aqueles que você define e os intrínsecos ao idioma) são definidos em *namespaces*, que fornecem a cada um um nome completo que pode ser referenciado.
+Todos os Q# tipos e os chamados (aqueles que você define e os intrínsecos ao idioma) são definidos em *namespaces* , que fornecem a cada um um nome completo que pode ser referenciado.
 
-Por exemplo, as [`H`](xref:microsoft.quantum.intrinsic.h) [`MResetZ`](xref:microsoft.quantum.measurement.mresetz) operações e são encontradas nos [`Microsoft.Quantum.Instrinsic`](xref:microsoft.quantum.intrinsic) [`Microsoft.Quantum.Measurement`](xref:microsoft.quantum.measurement) namespaces e (parte das [ Q# bibliotecas padrão](xref:microsoft.quantum.qsharplibintro)).
+Por exemplo, as [`H`](xref:Microsoft.Quantum.Intrinsic.H) [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) operações e são encontradas nos [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) namespaces e (parte das [ Q# bibliotecas padrão](xref:microsoft.quantum.qsharplibintro)).
 Assim, eles sempre podem ser chamados por meio de *full* seus nomes completos `Microsoft.Quantum.Intrinsic.H(<qubit>)` e `Microsoft.Quantum.Measurement.MResetZ(<qubit>)` , mas sempre fazer isso levaria a um código muito confuso.
 
 Em vez disso, `open` as instruções permitem que os chamadores sejam referenciados com uma abreviação mais concisa, como fizemos no corpo da operação acima.
@@ -90,8 +90,8 @@ namespace NamespaceName {
 > Por exemplo, poderíamos usar `open Microsoft.Quantum.Instrinsic as NamespaceWithH;` acima e, em seguida, chamar `H` via `NamespaceWithH.H(<qubit>)` .
 
 > [!NOTE]
-> Uma exceção a tudo disso é o [`Microsoft.Quantum.Core`](xref:microsoft.quantum.core) namespace, que é sempre aberto automaticamente.
-> Portanto, os chamadores como o [`Length`](xref:microsoft.quantum.core.length) sempre podem ser usados diretamente.
+> Uma exceção a tudo disso é o [`Microsoft.Quantum.Core`](xref:Microsoft.Quantum.Core) namespace, que é sempre aberto automaticamente.
+> Portanto, os chamadores como o [`Length`](xref:Microsoft.Quantum.Core.Length) sempre podem ser usados diretamente.
 
 ### <a name="running-on-target-machines"></a>Em execução em computadores de destino
 
@@ -103,7 +103,7 @@ Agora o modelo de execução geral de um Q# programa fica claro.
 Em primeiro lugar, o resgatável específico a ser executado tem acesso a quaisquer outros chamados e tipos definidos no mesmo namespace.
 Ele também acessa aqueles de qualquer uma das [ Q# bibliotecas](xref:microsoft.quantum.libraries), mas eles devem ser referenciados por meio de seu nome completo ou por meio do uso de `open` instruções descritas acima.
 
-O próprio callable é executado em um *[computador de destino](xref:microsoft.quantum.machines)*.
+O próprio callable é executado em um *[computador de destino](xref:microsoft.quantum.machines)* .
 Esses computadores de destino podem ser hardwares de Quantum reais ou vários simuladores disponíveis como parte do QDK.
 Para nossos objetivos aqui, a máquina de destino mais útil é uma instância do [simulador de estado completo](xref:microsoft.quantum.machines.full-state-simulator), `QuantumSimulator` , que calcula o comportamento do programa como se ele estivesse sendo executado em um computador Quantum sem ruído.
 
@@ -121,7 +121,7 @@ Primeiro, discutimos como isso é feito com o Q# aplicativo autônomo do prompt 
 Reservamos o aplicativo autônomo de Q# notebooks Jupyter para o último, porque ao contrário dos três primeiros, a funcionalidade principal não é centralizada em um Q# arquivo local.
 
 > [!NOTE]
-> Embora não o ilustre nesses exemplos, uma semelhança entre os métodos de execução é que todas as mensagens impressas dentro do Q# programa (por [`Message`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) exemplo, ou) normalmente serão sempre impressas no respectivo console.
+> Embora não o ilustre nesses exemplos, uma semelhança entre os métodos de execução é que todas as mensagens impressas dentro do Q# programa (por [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) [`DumpMachine`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) exemplo, ou) normalmente serão sempre impressas no respectivo console.
 
 ## <a name="no-locq-from-the-command-prompt"></a>Q# no prompt de comando
 Uma das maneiras mais fáceis de começar a escrever Q# programas é evitar a preocupação com arquivos separados e uma segunda linguagem completamente.
@@ -180,7 +180,7 @@ Tal operação poderia ser gravada como
     }
 ```
 onde o valor retornado é uma matriz dos resultados da medição.
-Observe que [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) e [`ForEach`](xref:microsoft.quantum.arrays.foreach) estão nos [`Microsoft.Quantum.Canon`](xref:microsoft.quantum.canon) [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) namespaces e, exigindo instruções adicionais `open` para cada um.
+Observe que [`ApplyToEach`](xref:Microsoft.Quantum.Canon.ApplyToEach) e [`ForEach`](xref:Microsoft.Quantum.Arrays.ForEach) estão nos [`Microsoft.Quantum.Canon`](xref:Microsoft.Quantum.Canon) [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) namespaces e, exigindo instruções adicionais `open` para cada um.
 
 Se movermos o `@EntryPoint()` atributo para preceder essa nova operação (Observe que só pode haver uma linha em um arquivo), tentar executá-la com simplesmente `dotnet run` resulta em uma mensagem de erro que indica quais opções de linha de comando adicionais são necessárias e como expressá-las.
 
@@ -593,7 +593,7 @@ Portanto, podemos habilitar o acesso a callables a partir das [ Q# bibliotecas p
 Após a execução de uma célula com tal instrução, as definições desses namespaces estão disponíveis em todo o espaço de trabalho.
 
 > [!NOTE]
-> Os chamados de [Microsoft. Quantum. intrínseca](xref:microsoft.quantum.intrinsic) e [Microsoft. Quantum. Canon](xref:microsoft.quantum.canon) (por exemplo, [`H`](xref:microsoft.quantum.intrinsic.h) e [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) ) ficam automaticamente disponíveis para operações definidas nas células de Q# notebooks Jupyter.
+> Os chamados de [Microsoft. Quantum. intrínseca](xref:Microsoft.Quantum.Intrinsic) e [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon) (por exemplo, [`H`](xref:Microsoft.Quantum.Intrinsic.H) e [`ApplyToEach`](xref:Microsoft.Quantum.Canon.ApplyToEach) ) ficam automaticamente disponíveis para operações definidas nas células de Q# notebooks Jupyter.
 > No entanto, isso não é verdadeiro para o código trazido de Q# arquivos de origem externos (um processo mostrado em [introdução a Q# e Jupyter notebooks](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)). 
 > 
 

@@ -1,0 +1,100 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Extensions.Testing
+newtypes: []
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > AssertAllZero foi preterido. Use <xref:Microsoft.Quantum.Diagnostics.AssertAllZero> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertallzero".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertAllZero
+- summary: >+
+    > [!WARNING]
+
+    > AssertAllZeroTol foi preterido. Use <xref:Microsoft.Quantum.Diagnostics.AssertAllZeroWithinTolerance> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertallzerowithintolerance".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertAllZeroTol
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualInPlace foi preterido. Use <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertoperationsequalinplace".
+
+    > Observe que a ordem dos argumentos para esta operação foi alterada.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlace
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualInPlaceCompBasis foi preterido. Use <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlaceCompBasis> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis".
+
+    > Observe que a ordem dos argumentos para esta operação foi alterada.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlaceCompBasis
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualReferenced foi preterido. Use <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualReferenced> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertoperationsequalreferenced".
+
+    > Observe que a ordem dos argumentos para esta operação foi alterada.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualReferenced
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubit foi preterido. Use <xref:Microsoft.Quantum.Diagnostics.AssertQubit> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertqubit".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubit
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubitState foi preterido. Use <xref:Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubitState
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubitTol foi preterido. Use <xref:Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance> em seu lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubitTol
+summary: ''
+uid: Microsoft.Quantum.Extensions.Testing
+metadata:
+  ms.openlocfilehash: 717665e821b4e56b01664e6e0ed940cacd2a485c
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92693426"

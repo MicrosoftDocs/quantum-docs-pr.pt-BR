@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835920"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691869"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimador de recursos do kit de desenvolvimento Quantum (QDK)
 
@@ -130,15 +130,42 @@ O estimador de recursos acompanha as seguintes métricas:
 |__Medida__    |A contagem de execuções de qualquer medida.  |
 |__R__    |A contagem de execuções de qualquer rotação de qubit única, excluindo `T` , Clifford e Pauli operações.  |
 |__T__    |A contagem de execuções de `T` operações e seus conjugados, incluindo as `T` operações, T_x = h. T. H e T_y = hipótese. T. hipótese.  |
-|__Depth__|O limite inferior para a profundidade do circuito Quantum executado pela Q# operação. Por padrão, a métrica de profundidade conta apenas `T` Gates. Para obter mais detalhes, consulte o [contador de profundidade](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
-|__Largura__    |O limite inferior para o número máximo de qubits alocadas durante a execução da Q# operação. Talvez não seja possível obter os limites mais baixos de __profundidade__ e __largura__ simultaneamente.  |
+|__Profundidade__|Profundidade do circuito Quantum executado pela Q# operação (veja [abaixo](#depth-width-and-qubitcount)). Por padrão, a métrica de profundidade conta apenas `T` Gates. Para obter mais detalhes, consulte o [contador de profundidade](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Largura__|Largura do circuito Quantum executada pela Q# operação (veja [abaixo](#depth-width-and-qubitcount)). Por padrão, a métrica de profundidade conta apenas `T` Gates. Para obter mais detalhes, consulte o [contador de profundidade](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__QubitCount__    |O limite inferior para o número máximo de qubits alocadas durante a execução da Q# operação. Essa métrica pode não ser compatível com __profundidade__ (veja abaixo).  |
 |__BorrowedWidth__    |O número máximo de qubits emprestados dentro da Q# operação.  |
+
+
+## <a name="depth-width-and-qubitcount"></a>Profundidade, largura e QubitCount
+
+As estimativas de profundidade e largura relatadas são compatíveis entre si.
+(Anteriormente, os dois números eram atingíveis, mas circuitos diferentes seriam necessários para profundidade e largura.) Atualmente, ambas as métricas nesse par podem ser obtidas pelo mesmo circuito ao mesmo tempo.
+
+As seguintes métricas são relatadas:
+
+__Profundidade:__ Para a operação raiz, o tempo necessário para executá-lo assumindo tempos de portão específicos.
+Para operações chamadas ou a diferença de tempo de operações subsequentes entre o tempo de disponibilidade qubit mais recente no início e no fim da operação.
+
+__Largura:__ Para a operação raiz-número de qubits realmente usados para executá-lo (e operação que ele chama).
+Para operações chamadas ou operações subsequentes, quantos mais qubits foram usados, além do qubits já usado no início da operação.
+
+Observe que os qubits reutilizados não contribuem para esse número.
+Ou seja, se alguns qubits tiverem sido liberados antes da operação A ser iniciada, e todas as qubit exigidas por essa operação A (e as operações chamadas de A) fossem satisfeitas com a reutilização da versão anterior qubits, a largura da operação A é relatada como 0. Os qubits emprestados com êxito não contribuem com a largura.
+
+__QubitCount:__ Para a operação raiz-número mínimo de qubits que seriam suficientes para executar esta operação (e as operações chamadas a partir dela).
+Para operações chamadas ou operações subsequentes-número mínimo de qubits que seriam suficientes para executar essa operação separadamente. Esse número não inclui qubits de entrada. Ele inclui qubits emprestado.
+
+Há suporte para dois modos de operação. É selecionado por meio da configuração de QCTraceSimulatorConfiguration. OptimizeDepth.
+
+__OptimizeDepth = true:__ QubitManager é desencorajado de qubit reutilização e aloca novas qubit toda vez que for solicitado por um qubit. Para a __profundidade__ da operação raiz se torna a profundidade mínima (limite inferior). A __largura__ compatível é relatada para essa profundidade (ambas podem ser obtidas ao mesmo tempo). Observe que essa largura provavelmente não será ideal, considerando essa profundidade. __QubitCount__ pode ser menor que a largura da operação raiz porque ela assume reutilização.
+
+__OptimizeDepth = false:__ QubitManager é incentivado a reutilizar o qubits e reutilizará o qubits liberado antes de alocar novos. Para a __largura__ da operação raiz se torna a largura mínima (limite inferior). A __profundidade__ compatível é relatada na qual ela pode ser obtida. __QubitCount__ será igual à __largura__ da operação raiz, supondo que não haja empréstimo.
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Como fornecer a probabilidade de resultados de medida
 
-Você pode usar <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> do <xref:microsoft.quantum.diagnostics> namespace para fornecer informações sobre a probabilidade esperada de uma operação de medição. Para obter mais informações, consulte o [simulador de rastreamento do Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
+Você pode usar <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> do <xref:Microsoft.Quantum.Diagnostics> namespace para fornecer informações sobre a probabilidade esperada de uma operação de medição. Para obter mais informações, consulte o [simulador de rastreamento do Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Simulador de rastreamento Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [Simulador quântico do Toffoli](xref:microsoft.quantum.machines.toffoli-simulator)

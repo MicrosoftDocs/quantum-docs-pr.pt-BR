@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835835"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691597"
 ---
 # <a name="expressions-in-no-locq"></a>Expressões em Q#
 
@@ -40,7 +40,7 @@ let bigOne = bigZero + 1L;
 Eles podem ser escritos com ou sem um ponto decimal, `.` ou uma parte exponencial indicada com ' e ' ou ' e ' (após o qual apenas um possível sinal negativo e dígitos decimais são válidos).
 Os seguintes são `Double` literais válidos: `0.0` , `1.2e5` , `1e-5` .
 
-Dada uma expressão de matriz de qualquer tipo de elemento, você pode formar uma `Int` expressão usando a [`Length`](xref:microsoft.quantum.core.length) função interna, com a expressão de matriz entre parênteses.
+Dada uma expressão de matriz de qualquer tipo de elemento, você pode formar uma `Int` expressão usando a [`Length`](xref:Microsoft.Quantum.Core.Length) função interna, com a expressão de matriz entre parênteses.
 Por exemplo, se `a` estiver associado a uma matriz, `Length(a)` será uma expressão de inteiro.
 Se `b` é uma matriz de matrizes de inteiros, `Int[][]` , `Length(b)` é o número de submatrizes em `b` e `Length(b[1])` é o número de inteiros na segunda submatriz no `b` .
 
@@ -111,7 +111,7 @@ Dada qualquer expressão booliana, o `not` operador unário pode ser usado para 
 
 ## <a name="string-expressions"></a>Expressões de cadeia de caracteres
 
-Q# permite que as cadeias de caracteres sejam usadas na `fail` instrução (explicada no [fluxo de controle](xref:microsoft.quantum.guide.controlflow#fail-statement)) e na [`Message`](xref:microsoft.quantum.intrinsic.message) função padrão. O comportamento específico do segundo depende do simulador usado, mas normalmente grava uma mensagem no console do host quando chamado durante um Q# programa.
+Q# permite que as cadeias de caracteres sejam usadas na `fail` instrução (explicada no [fluxo de controle](xref:microsoft.quantum.guide.controlflow#fail-statement)) e na [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) função padrão. O comportamento específico do segundo depende do simulador usado, mas normalmente grava uma mensagem no console do host quando chamado durante um Q# programa.
 
 Cadeias de caracteres no Q# são literais ou cadeias de caracteres interpoladas.
 
@@ -128,7 +128,7 @@ A Q# sintaxe para interpolações de cadeia de caracteres é um subconjunto da s
 
 * Para identificar uma literal de cadeia de caracteres como uma cadeia de caracteres interpolada, preceda-o com o símbolo `$`. Não pode haver nenhum espaço em branco entre o `$` e o `"` que inicia uma cadeia de caracteres literal.
 
-* Veja a seguir um exemplo básico usando a [`Message`](xref:microsoft.quantum.intrinsic.message) função para gravar o resultado de uma medida no console, juntamente com outras Q# expressões.
+* Veja a seguir um exemplo básico usando a [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) função para gravar o resultado de uma medida no console, juntamente com outras Q# expressões.
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -189,7 +189,7 @@ Por exemplo, `(1, One)` é uma `(Int, Result)` expressão.
 
 Além de literais, as únicas expressões de tupla são símbolos associados a valores de tupla, elementos de matriz de matrizes de tupla e invocações que retornam tuplas.
 
-## <a name="user-defined-type-expressions"></a>Expressões de tipo definidas pelo usuário
+## <a name="user-defined-type-expressions"></a>Expressões de tipo de User-Defined
 
 Um literal de um tipo definido pelo usuário consiste no nome do tipo seguido por um literal de tupla do tipo de tupla base do tipo.
 Por exemplo, se `IntPair` for um tipo definido pelo usuário baseado em `(Int, Int)` , `IntPair(2, 3)` será um literal válido desse tipo.
@@ -237,7 +237,7 @@ Na maioria dos casos, essa é uma variação de zero.
 
 Para qubits e callableies, que são referências a entidades, não há nenhum valor padrão razoável.
 Portanto, para esses tipos, o padrão é uma referência inválida que você não pode usar sem causar um erro de tempo de execução, semelhante a uma referência nula em linguagens como C# ou Java.
-As matrizes que contêm qubits ou callables devem ser inicializadas com valores não padrão antes de você poder usar seus elementos com segurança. Para rotinas de inicialização adequadas, consulte <xref:microsoft.quantum.arrays> .
+As matrizes que contêm qubits ou callables devem ser inicializadas com valores não padrão antes de você poder usar seus elementos com segurança. Para rotinas de inicialização adequadas, consulte <xref:Microsoft.Quantum.Arrays> .
 
 Os valores padrão para cada tipo são:
 

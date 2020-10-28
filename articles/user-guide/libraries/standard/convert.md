@@ -8,12 +8,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: aa8a1ad624067906998d2735c7a95174a163ce97
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 9ec3a2ecd2aa59a10a7033e7b3067eb147ce4035
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835597"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691100"
 ---
 # <a name="type-conversions"></a>Conversões de tipo #
 
@@ -21,8 +21,8 @@ Q# é uma linguagem **fortemente tipada** .
 Em particular, não Q# é implicitamente convertido entre tipos distintos. Por exemplo, `1 + 2.0` não é uma Q# expressão válida.
 Em vez disso, Q# o fornece uma variedade de funções de conversão de tipo para construir novos valores de um determinado tipo.
 
-Por exemplo, <xref:microsoft.quantum.core.length> tem um tipo de saída de `Int` , portanto, sua saída deve primeiro ser convertida para um `Double` antes que possa ser usada como parte de uma expressão de ponto flutuante.
-Isso pode ser feito usando a <xref:microsoft.quantum.convert.intasdouble> função:
+Por exemplo, <xref:Microsoft.Quantum.Core.Length> tem um tipo de saída de `Int` , portanto, sua saída deve primeiro ser convertida para um `Double` antes que possa ser usada como parte de uma expressão de ponto flutuante.
+Isso pode ser feito usando a <xref:Microsoft.Quantum.Convert.IntAsDouble> função:
 
 ```qsharp
 open Microsoft.Quantum.Convert as Convert;
@@ -32,7 +32,7 @@ function HalfLength<'T>(arr : 'T[]) : Double {
 }
 ```
 
-O <xref:microsoft.quantum.convert> namespace fornece funções de conversão de tipo comuns para trabalhar com os tipos internos básicos, como `Int` ,, `Double` , `BigInt` `Result` e `Bool` :
+O <xref:Microsoft.Quantum.Convert> namespace fornece funções de conversão de tipo comuns para trabalhar com os tipos internos básicos, como `Int` ,, `Double` , `BigInt` `Result` e `Bool` :
 
 ```qsharp
 let bool = Convert.ResultAsBool(One);        // true
@@ -40,10 +40,10 @@ let big = Convert.IntAsBigInt(271);          // 271L
 let indices = Convert.RangeAsIntArray(0..4); // [0, 1, 2, 3, 4]
 ```
 
-O <xref:microsoft.quantum.convert> namespace também fornece algumas conversões mais exóticas, como `FunctionAsOperation` , que converte as funções `'T -> 'U` em novas operações `'T => 'U` .
+O <xref:Microsoft.Quantum.Convert> namespace também fornece algumas conversões mais exóticas, como `FunctionAsOperation` , que converte as funções `'T -> 'U` em novas operações `'T => 'U` .
 
-Por fim, a Q# biblioteca padrão fornece vários tipos definidos pelo usuário, como <xref:microsoft.quantum.math.complex> e <xref:microsoft.quantum.arithmetic.littleendian> .
-Juntamente com esses tipos, a biblioteca padrão fornece funções como <xref:microsoft.quantum.arithmetic.bigendianaslittleendian> :
+Por fim, a Q# biblioteca padrão fornece vários tipos definidos pelo usuário, como <xref:Microsoft.Quantum.Math.Complex> e <xref:Microsoft.Quantum.Arithmetic.LittleEndian> .
+Juntamente com esses tipos, a biblioteca padrão fornece funções como <xref:Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian> :
 
 ```Q#
 open Microsoft.Quantum.Arithmetic as Arithmetic;

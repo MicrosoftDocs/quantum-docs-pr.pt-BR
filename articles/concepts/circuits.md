@@ -89,7 +89,7 @@ Essa sequência de portão é de importância fundamental para a computação Qu
 
 $$\mathrm{CNOT } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right ),$$
 
-As operações com essa ou mais complexidade são onipresentes em algoritmos Quantum e correção de erro Quantum, portanto, deve ser um grande alívio de que há um método simples para sua visualização chamada de *diagrama de circuito Quantum*.
+As operações com essa ou mais complexidade são onipresentes em algoritmos Quantum e correção de erro Quantum, portanto, deve ser um grande alívio de que há um método simples para sua visualização chamada de *diagrama de circuito Quantum* .
 O diagrama de circuito para preparar esse estado de Quantum de confusas máximo é:
 
 <!--- ![](.\media\1.svg) --->
@@ -109,7 +109,7 @@ Por exemplo, o símbolo
 <!--Não pode encontrar uma maneira de centralizar facilmente isso... Provavelmente uma extensão necessária:-->
 ![Símbolo para uma operação Hadamard agindo em um registro de qubit único](~/media/2.svg)
 
-é uma operação [Hadamard](xref:microsoft.quantum.intrinsic.h) que atua em um registro de qubit único.
+é uma operação [Hadamard](xref:Microsoft.Quantum.Intrinsic.H) que atua em um registro de qubit único.
 
 As Gates da Quantum são ordenadas em ordem cronológica com a porta mais à esquerda como a portão aplicada pela primeira vez ao qubits.
 Em outras palavras, se você modelar os fios como tendo o estado Quantum, os fios trazem o estado da Quantum por meio de cada um dos Gates no diagrama da esquerda para a direita.
@@ -150,7 +150,7 @@ Em geral, descrevemos essas operações controladas em diagramas de circuito com
 ![Diagrama de circuito de um portão controlado individualmente](~/media/5.svg)
 
 Aqui, o círculo preto denota o bit quântico no qual o portão é controlado e uma transmissão vertical denota o unitário que é aplicado quando o qubit de controle usa o valor $ 1 $ .
-Para os casos especiais em que $ g = X $ e $ g = Z $ , apresentamos a seguinte notação para descrever a versão controlada das Gates (Observe que o portão-X controlado é o [ $ $ portão CNOT](xref:microsoft.quantum.intrinsic.cnot)):
+Para os casos especiais em que $ g = X $ e $ g = Z $ , apresentamos a seguinte notação para descrever a versão controlada das Gates (Observe que o portão-X controlado é o [ $ $ portão CNOT](xref:Microsoft.Quantum.Intrinsic.CNOT)):
 
 <!--- ![](.\media\6.svg) --->
 <!--Não pode encontrar uma maneira de centralizar facilmente isso... Provavelmente uma extensão necessária:-->
@@ -175,7 +175,7 @@ Especificamente, esse subcircuito é semelhante a:
 <!--Não pode encontrar uma maneira de centralizar facilmente isso... Provavelmente uma extensão necessária:-->
 ![Símbolo que representa uma operação de medição](~/media/7.svg)
 
-Q# implementa um [operador de medida](xref:microsoft.quantum.intrinsic.measure) para essa finalidade.
+Q# implementa um [operador de medida](xref:Microsoft.Quantum.Intrinsic.Measure) para essa finalidade.
 Consulte a [seção sobre medições](xref:microsoft.quantum.libraries.standard.prelude#measurements) para obter mais informações.
 
 Da mesma forma, o subcircuito

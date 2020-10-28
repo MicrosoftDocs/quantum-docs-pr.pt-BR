@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833515"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691093"
 ---
 # <a name="control-flow-in-no-locq"></a>Fluxo de controle em Q#
 
@@ -38,10 +38,10 @@ Ele consiste na palavra-chave `if` , uma expressão booliana entre parênteses e
 Opcionalmente, qualquer número de cláusulas else-if pode seguir, cada uma delas consiste na palavra-chave `elif` , uma expressão booliana entre parênteses e um bloco de instrução (o bloco _else-if_ ).
 Por fim, a instrução pode, opcionalmente, ser concluída com uma cláusula else, que consiste na palavra-chave `else` seguida por outro bloco de instrução (o bloco _else_ ).
 
-A `if` condição é avaliada e, se for *verdadeira*, o bloco *then* será executado.
-Se a condição for *falsa*, a primeira condição IF-IF será avaliada; Se isso for verdadeiro, o bloco *else-if* será executado.
+A `if` condição é avaliada e, se for *verdadeira* , o bloco *then* será executado.
+Se a condição for *falsa* , a primeira condição IF-IF será avaliada; Se isso for verdadeiro, o bloco *else-if* será executado.
 Caso contrário, o segundo bloco else é avaliado e, em seguida, o terceiro, e assim por diante, até que seja encontrada uma cláusula com uma condição true ou que não haja mais cláusulas If-If.
-Se a condição *If* original e todas as cláusulas else-if forem avaliadas como *false*, o bloco *else* será executado, se fornecido.
+Se a condição *If* original e todas as cláusulas else-if forem avaliadas como *false* , o bloco *else* será executado, se fornecido.
 
 Observe que qualquer bloco é executado, ele é executado dentro de seu próprio escopo.
 Associações feitas dentro de um `if` bloco, `elif` ou `else` não são visíveis depois que o bloco termina.
@@ -129,7 +129,7 @@ em que `expression` é qualquer expressão válida que seja avaliada como um val
 O corpo do loop é executado e, em seguida, a condição é avaliada.
 Se a condição for verdadeira, a instrução será concluída; caso contrário, a correção é executada e a instrução é executada novamente, começando com o corpo do loop.
 
-Todas as três partes de um loop RUS (o corpo, o teste e a correção) são tratadas como um único escopo *para cada repetição*, de modo que os símbolos associados ao corpo estejam disponíveis no teste e na correção.
+Todas as três partes de um loop RUS (o corpo, o teste e a correção) são tratadas como um único escopo *para cada repetição* , de modo que os símbolos associados ao corpo estejam disponíveis no teste e na correção.
 No entanto, concluir a execução da correção encerra o escopo da instrução, para que as associações de símbolo feitas durante o corpo ou correção não estejam disponíveis em repetições subsequentes.
 
 Além disso, a `fixup` instrução geralmente é útil, mas nem sempre é necessária.
@@ -324,7 +324,7 @@ Os recursos programáticos notáveis mostrados nesta operação são:
 * Uma parte mais complexa `fixup` do loop, que envolve operações de Quantum. 
 * O uso de `AssertMeasurementProbability` instruções para avaliar a probabilidade de medir o estado do Quantum em determinados pontos especificados no programa.
 
-Para obter mais informações sobre [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) as [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) operações e, consulte [testando e Depurando](xref:microsoft.quantum.guide.testingdebugging).
+Para obter mais informações sobre [`AssertMeasurement`](xref:Microsoft.Quantum.Diagnostics.assertmeasurement) as [`AssertMeasurementProbability`](xref:Microsoft.Quantum.Diagnostics.assertmeasurementprobability) operações e, consulte [testando e Depurando](xref:microsoft.quantum.guide.testingdebugging).
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {

@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.katas
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 097d7f70088b6ee84a1e91ee99be59149dd9e15b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6b2eff2a457b809bd168b9b59ab013b7fc7541e6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834815"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691647"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Conheça a computação quântica com o Quantum Katas
 
@@ -55,7 +55,7 @@ Explore os conceitos básicos e os conceitos básicos da computação Quantum ou
 |[Reconhecer portões quânticos](https://github.com/microsoft/QuantumKatas/tree/main/BasicGates)|Uma série de exercícios projetados para familiarizar-se com as Gates básicas da Quantum no Q# . Inclui exercícios para Gates básico de qubit único e qubit, Gates e entradas controladas e como usar Gates para modificar o estado de um qubit.|
 |[Criar uma sobreposição quântica](https://github.com/microsoft/QuantumKatas/tree/main/Superposition)|Use esses exercícios para se familiarizar com o conceito de superposição e programação no Q# . Inclui exercícios para os Gates básico de qubit e qubit, superposição e controle de fluxo e recursão no Q# .|
 |[Diferenciar estados quânticos usando medidas](https://github.com/microsoft/QuantumKatas/tree/main/Measurements)|Resolva esses exercícios enquanto aprende sobre a medição Quantum e os Estados ortogonal e não ortogonal. |
-|[Medidas conjuntas](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Saiba mais sobre as medidas de paridade conjuntas e como usar a operação de [medida](xref:microsoft.quantum.intrinsic.measure) para distinguir os Estados da Quantum.|
+|[Medidas conjuntas](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Saiba mais sobre as medidas de paridade conjuntas e como usar a operação de [medida](xref:Microsoft.Quantum.Intrinsic.Measure) para distinguir os Estados da Quantum.|
 
 ### <a name="algorithms"></a>Algoritmos
 

@@ -1,0 +1,58 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Converte um inteiro grande em uma matriz de boolianos. O elemento 0 da matriz é o bit menos significativo do inteiro grande.
+  uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
+- summary: Converte uma determinada matriz de boolianos em um inteiro grande equivalente. O elemento 0 da matriz é o bit menos significativo do inteiro grande.
+  uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
+- summary: Produz um inteiro positivo de uma cadeia de caracteres de bits no formato little endian.
+  uid: Microsoft.Quantum.Convert.BoolArrayAsInt
+- summary: Dada uma cadeia de caracteres de bits, retorna um operador qubit Pauli representado como uma matriz de operadores de Pauli de qubit único.
+  uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
+- summary: Converte um `Bool[]` tipo em um `Result[]` tipo, onde `true` é mapeado para `One` e `false` é mapeado para `Zero` .
+  uid: Microsoft.Quantum.Convert.BoolArrayAsResultArray
+- summary: Converte um `Bool` tipo em um `Result` tipo, onde `true` é mapeado para `One` e `false` é mapeado para `Zero` .
+  uid: Microsoft.Quantum.Convert.BoolAsResult
+- summary: Converte um determinado valor booliano em uma representação de cadeia de caracteres equivalente.
+  uid: Microsoft.Quantum.Convert.BoolAsString
+- summary: Converte um determinado número de ponto flutuante de precisão dupla em uma representação de cadeia de caracteres equivalente.
+  uid: Microsoft.Quantum.Convert.DoubleAsString
+- summary: Converte um determinado número de ponto flutuante de precisão dupla em uma representação de cadeia de caracteres equivalente, usando o formato fornecido.
+  uid: Microsoft.Quantum.Convert.DoubleAsStringWithFormat
+- summary: Converte funções em operações.
+  uid: Microsoft.Quantum.Convert.FunctionAsOperation
+- summary: Converte um determinado inteiro em um inteiro grande equivalente.
+  uid: Microsoft.Quantum.Convert.IntAsBigInt
+- summary: Produz uma representação binária de um inteiro positivo, usando a representação little-endian para a matriz retornada.
+  uid: Microsoft.Quantum.Convert.IntAsBoolArray
+- summary: Converte um determinado inteiro em um número de ponto flutuante de precisão dupla equivalente.
+  uid: Microsoft.Quantum.Convert.IntAsDouble
+- summary: Converte um número inteiro determinado em uma representação de cadeia de caracteres equivalente.
+  uid: Microsoft.Quantum.Convert.IntAsString
+- summary: Converte um número inteiro determinado em uma representação de cadeia de caracteres equivalente, usando o formato fornecido.
+  uid: Microsoft.Quantum.Convert.IntAsStringWithFormat
+- summary: Converte um inteiro grande em um inteiro equivalente, se possível. A função retorna um par do inteiro resultante e um sinalizador booliano que é true, se e somente se a conversão fosse possível.
+  uid: Microsoft.Quantum.Convert.MaybeBigIntAsInt
+- summary: Codifica um operador qubit Pauli representado como uma matriz de operadores de Pauli de qubit único em um inteiro.
+  uid: Microsoft.Quantum.Convert.PauliArrayAsInt
+- summary: Cria uma matriz `arr` de inteiros enumerados por início.. etapa.. completo.
+  uid: Microsoft.Quantum.Convert.RangeAsIntArray
+- summary: Converte um `Result[]` tipo em um `Bool[]` tipo, onde `One` é mapeado para `true` e `Zero` é mapeado para `false` .
+  uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray
+- summary: Produz um inteiro positivo de uma cadeia de caracteres de resultados no formato little endian.
+  uid: Microsoft.Quantum.Convert.ResultArrayAsInt
+- summary: Converte um `Result` tipo em um `Bool` tipo, onde `One` é mapeado para `true` e `Zero` é mapeado para `false` .
+  uid: Microsoft.Quantum.Convert.ResultAsBool
+name: Microsoft.Quantum.Convert
+newtypes: []
+operations:
+- summary: Chama uma função com uma determinada entrada.
+  uid: Microsoft.Quantum.Convert.Call
+summary: 'Esse namespace contém funções para converter entre vários tipos de dados Q #.'
+uid: Microsoft.Quantum.Convert
+metadata:
+  ms.openlocfilehash: d22f0735b800d2e9a34f8c7ce58353850a4cdded
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92693672"
