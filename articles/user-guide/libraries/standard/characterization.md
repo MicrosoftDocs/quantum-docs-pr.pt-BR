@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8dddc15354c32808e7ad1310bce233ee3dc93fe8
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835631"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692151"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterização e estatísticas do Quantum #
 
@@ -39,7 +39,7 @@ Isso tem a vantagem de exigirmos apenas um único qubit adicional para executar 
 Cada um dos métodos propostos abaixo usa uma estratégia diferente para a criação de experimentos e métodos de processamento de dados diferentes para aprender a fase.  Cada um deles tem vantagem única, desde a necessidade de limites de erro rigorosos até a capacidade de incorporar informações anteriores, tolerar erros ou executar em computadores Limitted de memória.
 
 Ao discutir a estimativa de fase iterativa, consideraremos um $U unitário $ fornecido como uma operação de caixa preta.
-Conforme descrito na seção sobre Oracle em estruturas de [dados](xref:microsoft.quantum.libraries.data-structures), os Q# modelos de Canon são operações pelo <xref:microsoft.quantum.oracles.discreteoracle> tipo definido pelo usuário, definidos pelo tipo de tupla `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
+Conforme descrito na seção sobre Oracle em estruturas de [dados](xref:microsoft.quantum.libraries.data-structures), os Q# modelos de Canon são operações pelo <xref:Microsoft.Quantum.Oracles.DiscreteOracle> tipo definido pelo usuário, definidos pelo tipo de tupla `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
 Concretamente, se `U : DiscreteOracle` , `U(m)` implementa $U ^ m $ para `m : Int` .
 
 Com essa definição em vigor, cada etapa da estimativa de fase iterativa continua preparando uma qubit auxiliar no estado $ \ket{+} $, juntamente com o estado inicial $ \ket{\phi} $ que supomos que é um [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) de $U (m) $, ou seja, $U (m) \ket{\phi} = e ^ {im\phi} \ ket {\ Phi} $.  
@@ -99,7 +99,7 @@ A inferência exata de bayesiana é uma prática inmanejável.
 Para ver essa imagine, desejamos aprender uma variável de $n de $ bits $x $.
 A distribuição anterior $ \Pr (x) $ tem suporte acima de US $2 ^ n $ valores hipotéticos de $x $.
 Isso significa que, se precisar de uma estimativa altamente precisa de $x $, a estimativa de fase Bayesiana poderá precisar de memória proibitiva e tempo de processamento.
-Embora, para alguns aplicativos, como a simulação do Quantum, a precisão Limitted necessária não impede que outros métodos de outros aplicativos, como o algoritmo do Atal, não possam usar a inferência exata de Bayesiana em sua etapa de estimativa de fase.  Por esse motivo, também fornecemos implementações para métodos Bayesiana aproximados, como [estimativa aleatória de fase de passeio (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) e também abordagens não Bayesiana, como [estimativa de fase robusta](xref:microsoft.quantum.characterization.robustphaseestimation).
+Embora, para alguns aplicativos, como a simulação do Quantum, a precisão Limitted necessária não impede que outros métodos de outros aplicativos, como o algoritmo do Atal, não possam usar a inferência exata de Bayesiana em sua etapa de estimativa de fase.  Por esse motivo, também fornecemos implementações para métodos Bayesiana aproximados, como [estimativa aleatória de fase de passeio (RWPE)](xref:Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation) e também abordagens não Bayesiana, como [estimativa de fase robusta](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation).
 
 ### <a name="robust-phase-estimation"></a>Estimativa de fase robusta ###
 
@@ -112,14 +112,14 @@ O recurso mais importante da estimativa de fase robusta, que é compartilhada co
 Outros detalhes relevantes incluem, digamos, a sobrecarga de espaço pequeno de apenas $1 $ ancilla qubit, ou que o procedimento não é adaptável, o que significa que a sequência necessária de experimentos de Quantum é independente dos resultados de medida intermediários. Neste e em breves exemplos em que a escolha do algoritmo de estimativa de fase é importante, deve-se consultar a documentação como @"microsoft.quantum.characterization.robustphaseestimation" e as publicações referenciadas aqui para obter mais informações e sobre sua implementação.
 
 > [!TIP]
-> Há muitos exemplos em que a estimativa de fase robusta é usada. Para estimativa de fase na extração da energia de estado terrestre de vários sistemas físicos, consulte o exemplo de [ **simulação H2** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), o [exemplo **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)e o exemplo de [ **modelo Hubbard** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
+> Há muitos exemplos em que a estimativa de fase robusta é usada. Para estimativa de fase na extração da energia de estado terrestre de vários sistemas físicos, consulte o exemplo de [ **simulação H2**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), o [exemplo **SimpleIsing**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)e o exemplo de [ **modelo Hubbard**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
 
 
 ### <a name="continuous-oracles"></a>Oracle contínuos ###
 
-Também podemos generalizar a partir do modelo Oracle usado acima para permitir ORACLES em tempo hábil, modelados pelo tipo Canon <xref:microsoft.quantum.oracles.continuousoracle> .
+Também podemos generalizar a partir do modelo Oracle usado acima para permitir ORACLES em tempo hábil, modelados pelo tipo Canon <xref:Microsoft.Quantum.Oracles.ContinuousOracle> .
 Considere que, em vez de um único operador unitário $U $, temos uma família de operadores unitários $U (t) $ para $t na \mathbb{R} $ de forma que $U (t) U (s) $ = $U (t + s) $.
-Essa é uma declaração mais fraca do que no caso discreto, já que podemos construir um <xref:microsoft.quantum.oracles.discreteoracle> restringindo $t = m \, \delta t $ para alguns $ \delta t $ fixos.
+Essa é uma declaração mais fraca do que no caso discreto, já que podemos construir um <xref:Microsoft.Quantum.Oracles.DiscreteOracle> restringindo $t = m \, \delta t $ para alguns $ \delta t $ fixos.
 Por [teorema da pedra](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups), $U (t) = \exp (i t) $ para algum operador $H $, em que $ \exp $ é o exponencial de matriz, conforme descrito em [matrizes avançadas](xref:microsoft.quantum.concepts.matrix-advanced).
 Um eigenstate $ \ket{\phi} $ de $H $ de forma que $H \ket{\phi} = \phi \ket{\phi} $ também é um eigenstate de $U (t) $ para todos os $t $, \begin{Equation} U (t) \ket{\phi} = e ^ {i \phi t} \ket{\phi}.
 \end{equation}
@@ -146,14 +146,14 @@ A capacidade de avançar para trás também permite que o algoritmo Aprenda mesm
 
 Cada operação de estimativa de fase fornecida com a Q# Canon usa um conjunto diferente de entradas parametrizando a qualidade que solicitamos a estimativa final de $ \hat{\phi} $.
 No entanto, essas várias entradas compartilham várias entradas em comum, de modo que o aplicativo parcial nos parâmetros de qualidade resulta em uma assinatura comum.
-Por exemplo, a <xref:microsoft.quantum.characterization.robustphaseestimation> operação discutida na próxima seção tem a seguinte assinatura:
+Por exemplo, a <xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation> operação discutida na próxima seção tem a seguinte assinatura:
 
 ```qsharp
 operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])  : Double
 ```
 
 A `bitsPrecision` entrada é exclusiva para `RobustPhaseEstimation` , enquanto `oracle` e `eigenstate` está em comum.
-Assim, como visto no **H2Sample**, uma operação pode aceitar um algoritmo de estimativa de fase iterativa com uma entrada do formulário `(DiscreteOracle, Qubit[]) => Unit` para permitir que um usuário especifique algoritmos de estimativa de fase arbitrária:
+Assim, como visto no **H2Sample** , uma operação pode aceitar um algoritmo de estimativa de fase iterativa com uma entrada do formulário `(DiscreteOracle, Qubit[]) => Unit` para permitir que um usuário especifique algoritmos de estimativa de fase arbitrária:
 
 ```qsharp
 operation H2EstimateEnergy(

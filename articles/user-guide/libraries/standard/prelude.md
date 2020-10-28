@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dd507d0c644ae711a5e5a1dff9156f571cb0fa92
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 4d15226fe46be79b7d3e6f414f33f1debd691f40
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833548"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692123"
 ---
 # <a name="the-prelude"></a>O prelúdio #
 
@@ -24,7 +24,7 @@ O Q# compilador e os computadores de destino incluídos no kit de desenvolviment
 
 As operações intrínsecas definidas na biblioteca padrão basicamente se enquadram em uma das várias categorias:
 
-- Funções clássicas essenciais, coletadas no <xref:microsoft.quantum.core> namespace.
+- Funções clássicas essenciais, coletadas no <xref:Microsoft.Quantum.Core> namespace.
 - Operações que representam unidades compostas por [Clifford e $T $ Gates](xref:microsoft.quantum.concepts.qubit).
 - Operações que representam rotações sobre vários operadores.
 - Operações de implementação de medidas.
@@ -35,16 +35,16 @@ Ao fornecer rotações também, Q# permite que o programador trabalhe dentro da 
 Sempre que possível, as operações definidas no prelúdio que atuam no qubits permitem a aplicação da `Controlled` variante, de modo que o computador de destino execute a decomposição apropriada.
 
 Muitas das funções e operações definidas nesta parte do prelúdio estão no @"microsoft.quantum.intrinsic" namespace, de modo que a maioria dos Q# arquivos de origem terá uma `open Microsoft.Quantum.Intrinsic;` diretiva imediatamente após a declaração de namespace inicial.
-O <xref:microsoft.quantum.core> namespace é aberto automaticamente, para que funções como o <xref:microsoft.quantum.core.length> possam ser usadas sem uma `open` instrução.
+O <xref:Microsoft.Quantum.Core> namespace é aberto automaticamente, para que funções como o <xref:Microsoft.Quantum.Core.Length> possam ser usadas sem uma `open` instrução.
 
-### <a name="common-single-qubit-unitary-operations"></a>Operações de um único qubit unitário comuns ###
+### <a name="common-single-qubit-unitary-operations"></a>Operações de Single-Qubit unitários comuns ###
 
 O prelúdio também define muitas [operações comuns de qubit único](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
 Todas essas operações permitem o e o `Controlled` `Adjoint` transmissão functors.
 
 #### <a name="pauli-operators"></a>Operadores Pauli ####
 
-A <xref:microsoft.quantum.intrinsic.x> operação implementa o operador Pauli $X $.
+A <xref:Microsoft.Quantum.Intrinsic.X> operação implementa o operador Pauli $X $.
 Às vezes, isso também é conhecido como `NOT` portão.
 Ele tem assinatura `(Qubit => Unit is Adj + Ctl)` .
 Ele corresponde ao único qubit unitário:
@@ -52,14 +52,14 @@ Ele corresponde ao único qubit unitário:
 \begin{Equation} \begin{bmatrix} 0 & 1 \\ \\ % FIXME: isso atualmente usa o quadwhack hack.
 1 & 0 \end{bmatrix} \end{Equation}
 
-A <xref:microsoft.quantum.intrinsic.y> operação implementa o operador Pauli $Y $.
+A <xref:Microsoft.Quantum.Intrinsic.Y> operação implementa o operador Pauli $Y $.
 Ele tem assinatura `(Qubit => Unit is Adj + Ctl)` .
 Ele corresponde ao único qubit unitário:
 
 \begin{Equation} \begin{bmatrix} 0 &-i \\ \\ % FIXME: isso atualmente usa o quadwhack hack.
 Eu & 0 \end{bmatrix} \end{Equation}
 
-A <xref:microsoft.quantum.intrinsic.z> operação implementa o operador Pauli $Z $.
+A <xref:Microsoft.Quantum.Intrinsic.Z> operação implementa o operador Pauli $Z $.
 Ele tem assinatura `(Qubit => Unit is Adj + Ctl)` .
 Ele corresponde ao único qubit unitário:
 
@@ -78,9 +78,9 @@ Isso pode ser visualizado na esfera de Bloch:
 
 ![XX = I](~/media/prelude_blochIdentity.png)
 
-#### <a name="other-single-qubit-cliffords"></a>Outros Cliffords de qubit único ####
+#### <a name="other-single-qubit-cliffords"></a>Outros Single-Qubit Cliffords ####
 
-A <xref:microsoft.quantum.intrinsic.h> operação implementa o portão Hadamard.
+A <xref:Microsoft.Quantum.Intrinsic.H> operação implementa o portão Hadamard.
 Isso troca os eixos Pauli $X $ e $Z $ do qubit de destino, de modo que $H \ket {0} = \ket{+} \mathrel{: =} (\ket {0} + \ket {1} )/\sqrt {2} $ e $H \ket{+} = \ket {0} $.
 Ele tem assinatura `(Qubit => Unit is Adj + Ctl)` e corresponde ao único qubit unitário:
 
@@ -91,7 +91,7 @@ A porta Hadamard é particularmente importante, pois pode ser usada para criar u
 
 ![Operação Hadamard mapeada na esfera Bloch](~/media/prelude_hadamardBloch.png)
 
-A <xref:microsoft.quantum.intrinsic.s> operação implementa o portão de fase $S $.
+A <xref:Microsoft.Quantum.Intrinsic.S> operação implementa o portão de fase $S $.
 Esta é a raiz quadrada da matriz do Pauli $Z $ Operation.
 Ou seja, $S ^ 2 = Z $.
 Ele tem assinatura `(Qubit => Unit is Adj + Ctl)` e corresponde ao único qubit unitário:
@@ -105,17 +105,17 @@ Além das operações Pauli e Clifford acima, o Q# prelúdio fornece uma varieda
 Conforme descrito em [operações de qubit único](xref:microsoft.quantum.concepts.qubit#single-qubit-operations), a capacidade de girar é essencial para algoritmos Quantum.
 
 Começamos recuperando que podemos expressar qualquer operação de qubit único usando o $H $ e $T $ Gates, em que $H $ é a operação Hadamard e em que \begin{Equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ % FIXME: atualmente, isso usa os de quatro de hack-back.
-0 & e ^ {i \pi/4} \end{bmatrix} \end{Equation} esta é a raiz quadrada da <xref:microsoft.quantum.intrinsic.s> operação, de modo que $T ^ 2 = S $.
-A Gate $T $ é, por sua vez, implementada pela <xref:microsoft.quantum.intrinsic.t> operação e tem assinatura `(Qubit => Unit is Adj + Ctl)` , indicando que se trata de uma operação unitário em um único qubit.
+0 & e ^ {i \pi/4} \end{bmatrix} \end{Equation} esta é a raiz quadrada da <xref:Microsoft.Quantum.Intrinsic.S> operação, de modo que $T ^ 2 = S $.
+A Gate $T $ é, por sua vez, implementada pela <xref:Microsoft.Quantum.Intrinsic.T> operação e tem assinatura `(Qubit => Unit is Adj + Ctl)` , indicando que se trata de uma operação unitário em um único qubit.
 
 Embora isso seja, de princípio, suficiente para descrever qualquer operação arbitrária de qubit único, diferentes computadores de destino podem ter representações mais eficientes para rotações sobre operadores Pauli, de modo que o prelúdio inclui várias maneiras de convienently essas rotações.
-O mais básico deles é a <xref:microsoft.quantum.intrinsic.r> operação, que implementa uma rotação em torno de um eixo Pauli especificado, \Begin{Equation} R (\sigma, \phi) \mathrel{: =} \exp (-i \phi \sigma/2), \end{Equation}, em que $ \sigma $ é um operador Pauli, $ \phi $ é um ângulo e em que $ \exp $ representa o exponencial de matriz.
+O mais básico deles é a <xref:Microsoft.Quantum.Intrinsic.r> operação, que implementa uma rotação em torno de um eixo Pauli especificado, \Begin{Equation} R (\sigma, \phi) \mathrel{: =} \exp (-i \phi \sigma/2), \end{Equation}, em que $ \sigma $ é um operador Pauli, $ \phi $ é um ângulo e em que $ \exp $ representa o exponencial de matriz.
 Ele tem assinatura `((Pauli, Double, Qubit) => Unit is Adj + Ctl)` , em que as duas primeiras partes da entrada representam os argumentos clássicos $ \sigma $ e $ \phi $ necessários para especificar o operador unitário $R (\sigma, \phi) $.
 Podemos aplicar parcialmente $ \sigma $ e $ \phi $ para obter uma operação cujo tipo é o de um único qubit unitário.
 Por exemplo, `R(PauliZ, PI() / 4, _)` tem tipo `(Qubit => Unit is Adj + Ctl)` .
 
 > [!NOTE]
-> A <xref:microsoft.quantum.intrinsic.r> operação divide o ângulo de entrada por 2 e o multiplica por-1.
+> A <xref:Microsoft.Quantum.Intrinsic.r> operação divide o ângulo de entrada por 2 e o multiplica por-1.
 > Para $Z $ rotações, isso significa que $ \ket {0} $ eigenstate é girado por $-\phi/$2 e $ \ket {1} $ eigenstate é girado por $ \phi/$2, para que $ \ket {1} $ eigenstate seja girado por $ \phi $ em relação ao $ \ket {0} $ eigenstate.
 >
 > Em particular, isso significa que `T` e `R(PauliZ, PI() / 8, _)` difere apenas por uma [fase global](xref:microsoft.quantum.glossary#global-phase)irrelevante.
@@ -124,29 +124,29 @@ Por exemplo, `R(PauliZ, PI() / 4, _)` tem tipo `(Qubit => Unit is Adj + Ctl)` .
 > Observe também que girar em volta `PauliI` simplesmente aplica uma fase global de $ \phi/$2. Embora essas fases sejam irrelevantes, como argumentadas nos [documentos conceituais](xref:microsoft.quantum.concepts.qubit), elas são relevantes para `PauliI` rotações controladas.
 
 Em algoritmos Quantum, geralmente é útil expressar rotações como frações dyadic, de modo que $ \phi = \pi k/2 ^ n $ para algumas $k na \mathbb{Z} $ e $n na \mathbb{N} $.
-A <xref:microsoft.quantum.intrinsic.rfrac> operação implementa uma rotação em um eixo de Pauli especificado usando essa convenção.
-Ele difere de <xref:microsoft.quantum.intrinsic.r> quando o ângulo de rotação é especificado como duas entradas do tipo `Int` , interpretado como uma fração dyadic.
+A <xref:Microsoft.Quantum.Intrinsic.RFrac> operação implementa uma rotação em um eixo de Pauli especificado usando essa convenção.
+Ele difere de <xref:Microsoft.Quantum.Intrinsic.R> quando o ângulo de rotação é especificado como duas entradas do tipo `Int` , interpretado como uma fração dyadic.
 Portanto, o `RFrac` tem assinatura `((Pauli, Int, Int, Qubit) => Unit is Adj + Ctl)` .
 Ele implementa o único qubit unitário $ \exp (i \pi k \sigma/2 ^ n) $, em que $ \sigma $ é a matriz Pauli correspondente ao primeiro argumento, $k $ é o segundo argumento e $n $ é o terceiro argumento.
 `RFrac(_,k,n,_)` é o mesmo que `R(_,-πk/2^n,_)` ; Observe que o ângulo é o *negativo* da fração.
 
-A <xref:microsoft.quantum.intrinsic.rx> operação implementa uma rotação em volta do eixo Pauli $X $.
+A <xref:Microsoft.Quantum.Intrinsic.Rx> operação implementa uma rotação em volta do eixo Pauli $X $.
 Ele tem assinatura `((Double, Qubit) => Unit is Adj + Ctl)` .
 `Rx(_, _)` é o mesmo que `R(PauliX, _, _)`.
 
-A <xref:microsoft.quantum.intrinsic.ry> operação implementa uma rotação em volta do eixo Pauli $Y $.
+A <xref:Microsoft.Quantum.Intrinsic.Ry> operação implementa uma rotação em volta do eixo Pauli $Y $.
 Ele tem assinatura `((Double, Qubit) => Unit is Adj + Ctl)` .
 `Ry(_, _)` é o mesmo que `R(PauliY,_ , _)`.
 
-A <xref:microsoft.quantum.intrinsic.rz> operação implementa uma rotação em volta do eixo Pauli $Z $.
+A <xref:Microsoft.Quantum.Intrinsic.Rz> operação implementa uma rotação em volta do eixo Pauli $Z $.
 Ele tem assinatura `((Double, Qubit) => Unit is Adj + Ctl)` .
 `Rz(_, _)` é o mesmo que `R(PauliZ, _, _)`.
 
-A <xref:microsoft.quantum.intrinsic.r1> operação implementa uma rotação pelo valor determinado em relação a $ \ket {1} $, a eigenstate $-$1 de $Z $.
+A <xref:Microsoft.Quantum.Intrinsic.R1> operação implementa uma rotação pelo valor determinado em relação a $ \ket {1} $, a eigenstate $-$1 de $Z $.
 Ele tem assinatura `((Double, Qubit) => Unit is Adj + Ctl)` .
 `R1(phi,_)` é o mesmo que o `R(PauliZ,phi,_)` seguido por `R(PauliI,-phi,_)` .
 
-A <xref:microsoft.quantum.intrinsic.r1frac> operação implementa uma rotação fracionária pelo valor determinado em volta do Z = 1 eigenstate.
+A <xref:Microsoft.Quantum.Intrinsic.R1Frac> operação implementa uma rotação fracionária pelo valor determinado em volta do Z = 1 eigenstate.
 Ele tem assinatura `((Int,Int, Qubit) => Unit is Adj + Ctl)` .
 `R1Frac(k,n,_)` é o mesmo que o `RFrac(PauliZ,-k.n+1,_)` seguido por `RFrac(PauliI,k,n+1,_)` .
 
@@ -158,16 +158,16 @@ Um exemplo de uma operação de rotação (em Pauli $Z $ Axis, nessa instância)
 
 Além das operações de qubit único acima, o prelúdio também define várias operações qubit.
 
-Primeiro, a <xref:microsoft.quantum.intrinsic.cnot> operação executa uma porta controlada padrão `NOT` , \begin{Equation} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{bmatrix}.
+Primeiro, a <xref:Microsoft.Quantum.Intrinsic.CNOT> operação executa uma porta controlada padrão `NOT` , \begin{Equation} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{bmatrix}.
 \end{Equation} tem assinatura `((Qubit, Qubit) => Unit is Adj + Ctl)` , representando que $ \operatorname{CNOT} $ atua unitarily em dois qubits individuais.
 `CNOT(q1, q2)` é o mesmo que `(Controlled X)([q1], q2)`.
 Como o `Controlled` functor permite controlar em um registro, usamos o literal de matriz `[q1]` para indicar que queremos apenas um controle.
 
-A <xref:microsoft.quantum.intrinsic.ccnot> operação executa a porta não controlada de forma dupla, às vezes também conhecida como portão Toffoli.
+A <xref:Microsoft.Quantum.Intrinsic.CCNOT> operação executa a porta não controlada de forma dupla, às vezes também conhecida como portão Toffoli.
 Ele tem assinatura `((Qubit, Qubit, Qubit) => Unit is Adj + Ctl)` .
 `CCNOT(q1, q2, q3)` é o mesmo que `(Controlled X)([q1, q2], q3)`.
 
-A <xref:microsoft.quantum.intrinsic.swap> operação troca os Estados de Quantum de dois qubits.
+A <xref:Microsoft.Quantum.Intrinsic.SWAP> operação troca os Estados de Quantum de dois qubits.
 Ou seja, ele implementa a matriz unitário \begin{Equation} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}.
 \end{Equation} ele tem assinatura `((Qubit, Qubit) => Unit is Adj + Ctl)` .
 `SWAP(q1,q2)` é equivalente a `CNOT(q1, q2)` seguido de `CNOT(q2, q1)` e depois `CNOT(q1, q2)` .
@@ -179,10 +179,10 @@ Ou seja, ele implementa a matriz unitário \begin{Equation} \operatorname{SWAP} 
 > A porta de troca controlada, também conhecida como portão Fredkin, é eficiente o suficiente para incluir toda a computação clássica.
 
 Por fim, o prelúdio fornece duas operações para representar exponencials de operadores de Pauli de vários qubit.
-A <xref:microsoft.quantum.intrinsic.exp> operação executa uma rotação com base em um produto tensor de matrizes Pauli, conforme representado pelo qubit unitário \Begin{Equation} \operatorname{exp} (\vec{\sigma}, \phi) \mathrel{: =} \exp\left (i \phi \ sigma_0 \otimes \ sigma_1 \otimes \cdots \otimes \ sigma_n \right), \end{Equation}, em que $ \vec{\sigma} = (\ sigma_0, \ sigma_1, \dots, \ sigma_n) $ é uma sequência de operadores de qubit de Pauli único e em que $ \phi $ é um ângulo.
+A <xref:Microsoft.Quantum.Intrinsic.Exp> operação executa uma rotação com base em um produto tensor de matrizes Pauli, conforme representado pelo qubit unitário \Begin{Equation} \operatorname{exp} (\vec{\sigma}, \phi) \mathrel{: =} \exp\left (i \phi \ sigma_0 \otimes \ sigma_1 \otimes \cdots \otimes \ sigma_n \right), \end{Equation}, em que $ \vec{\sigma} = (\ sigma_0, \ sigma_1, \dots, \ sigma_n) $ é uma sequência de operadores de qubit de Pauli único e em que $ \phi $ é um ângulo.
 A `Exp` rotação representa $ \vec{\sigma} $ como uma matriz de `Pauli` elementos, de modo que ele tem assinatura `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)` .
 
-A <xref:microsoft.quantum.intrinsic.expfrac> operação executa a mesma rotação, usando a notação de fração dyadic discutida acima.
+A <xref:Microsoft.Quantum.Intrinsic.ExpFrac> operação executa a mesma rotação, usando a notação de fração dyadic discutida acima.
 Ele tem assinatura `((Pauli[], Int, Int, Qubit[]) => Unit is Adj + Ctl)` .
 
 > [!WARNING]
@@ -200,7 +200,7 @@ Ao medir, a eigenvalue + 1 do operador que está sendo medido corresponde a um `
 
 As operações de medição não dão suporte nem a `Adjoint` nem a `Controlled` functor.
 
-A <xref:microsoft.quantum.intrinsic.measure> operação executa uma medida conjunta de um ou mais qubits no produto especificado dos operadores Pauli.
+A <xref:Microsoft.Quantum.Intrinsic.Measure> operação executa uma medida conjunta de um ou mais qubits no produto especificado dos operadores Pauli.
 Se a matriz Pauli e a matriz qubit tiverem comprimentos diferentes, a operação falhará.
 `Measure` tem assinatura `((Pauli[], Qubit[]) => Result)` .
 
@@ -214,10 +214,10 @@ Essa propriedade será essencial posteriormente, à medida que discutiremos a co
 
 Para sua conveniência, o prelúdio também fornece duas outras operações para medir o qubits.
 Primeiro, como a execução de medidas de qubit único é bastante comum, o prelúdio define uma abreviação para esse caso.
-A <xref:microsoft.quantum.intrinsic.m> operação mede o operador Pauli $Z $ em um único qubit e tem assinatura `(Qubit => Result)` .
+A <xref:Microsoft.Quantum.Intrinsic.M> operação mede o operador Pauli $Z $ em um único qubit e tem assinatura `(Qubit => Result)` .
 `M(q)` é equivalente a `Measure([PauliZ], [q])`.
 
-O <xref:microsoft.quantum.measurement.multim> mede o operador Pauli $Z $ *separadamente* em cada uma das matrizes de qubits, retornando a *matriz* de `Result` valores obtidos para cada qubit.
+O <xref:microsoft.quantum.measurement.MultiM> mede o operador Pauli $Z $ *separadamente* em cada uma das matrizes de qubits, retornando a *matriz* de `Result` valores obtidos para cada qubit.
 Em alguns casos, isso pode ser otimizado. Ele tem assinatura ( `Qubit[] => Result[])` .
 `MultiM(qs)` é equivalente a:
 
@@ -233,14 +233,14 @@ return rs;
 ## <a name="extension-functions-and-operations"></a>Funções e operações de extensão ##
 
 Além disso, o prelúdio define um conjunto avançado de funções matemáticas e de conversão de tipo no nível do .NET para uso no Q# código.
-Por exemplo, o <xref:microsoft.quantum.math> namespace define operações úteis, como <xref:microsoft.quantum.math.sin> e <xref:microsoft.quantum.math.log> .
+Por exemplo, o <xref:Microsoft.Quantum.Math> namespace define operações úteis, como <xref:Microsoft.Quantum.Math.Sin> e <xref:Microsoft.Quantum.Math.Log> .
 A implementação fornecida pelo kit de desenvolvimento Quantum usa a base class library clássica do .NET e, portanto, pode envolver uma viagem de ida e volta de comunicação adicional entre os programas Quantum e seus drivers clássicos.
 Embora isso não apresente um problema para um simulador local, isso pode ser um problema de desempenho ao usar um simulador remoto ou hardware real como um computador de destino.
 Dito isso, um computador de destino individual pode mitigar esse impacto no desempenho substituindo essas operações por versões mais eficientes para esse sistema específico.
 
 ### <a name="math"></a>Matemática ###
 
-O <xref:microsoft.quantum.math> namespace fornece muitas funções úteis da [ `System.Math` classe](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true)da biblioteca de classes base do .net.
+O <xref:Microsoft.Quantum.Math> namespace fornece muitas funções úteis da [ `System.Math` classe](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true)da biblioteca de classes base do .net.
 Essas funções podem ser usadas da mesma maneira que qualquer outra Q# função:
 
 ```qsharp
@@ -259,5 +259,5 @@ let y = AbsD(-PI()); // y : Double = 3.1415...
 
 ### <a name="bitwise-operations"></a>Operações bits ###
 
-Por fim, o <xref:microsoft.quantum.bitwise> namespace fornece várias funções úteis para manipular inteiros por meio de operadores bit a bit.
-Por exemplo, <xref:microsoft.quantum.bitwise.parity> retorna a paridade de um número de bits para um inteiro como outro inteiro.
+Por fim, o <xref:Microsoft.Quantum.Bitwise> namespace fornece várias funções úteis para manipular inteiros por meio de operadores bit a bit.
+Por exemplo, <xref:Microsoft.Quantum.Bitwise.Parity> retorna a paridade de um número de bits para um inteiro como outro inteiro.
