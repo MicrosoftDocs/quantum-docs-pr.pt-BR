@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7ce13c5df3795656156cccf28640c0a4b0dcba2e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 982103876b00718aa3b42c6bc3a07d242cde7594
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835665"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692222"
 ---
 # <a name="quantum-algorithms"></a>Algoritmos Quantum #
 
@@ -49,8 +49,8 @@ Para o segundo plano, você pode começar da [amplificação de amplitude padrã
 A transformação de Fourier é uma ferramenta fundamental de análise clássica e é tão importante para cálculos de Quantum.
 Além disso, a eficiência da *transformação de Fourier Quantum* (QFT) supera muito o que é possível em uma máquina clássica, tornando-a uma das primeiras ferramentas de escolha ao criar um algoritmo Quantum.
 
-Como uma generalização aproximada do QFT, fornecemos a <xref:microsoft.quantum.canon.approximateqft> operação que permite mais otimizações por meio da remoção de rotações que não são estritamente necessárias para a precisão do algoritmo desejado.
-O QFT aproximado requer a operação de rotação de dyadic $Z $-Rotation <xref:microsoft.quantum.intrinsic.rfrac> , bem como a <xref:microsoft.quantum.intrinsic.h> operação.
+Como uma generalização aproximada do QFT, fornecemos a <xref:Microsoft.Quantum.Canon.ApproximateQft> operação que permite mais otimizações por meio da remoção de rotações que não são estritamente necessárias para a precisão do algoritmo desejado.
+O QFT aproximado requer a operação de rotação de dyadic $Z $-Rotation <xref:Microsoft.Quantum.Intrinsic.RFrac> , bem como a <xref:Microsoft.Quantum.Intrinsic.H> operação.
 A entrada e a saída são consideradas codificadas em big endian codificação---ou seja, o qubit com índice `0` é codificado no bit mais à esquerda (mais alto) da representação de inteiro binário.
 Isso se alinha com a [notação ket](xref:microsoft.quantum.concepts.dirac), uma vez que um registro de três qubits no estado $ \ket {100} $ corresponde a $q _0 $ estar no estado $ \ket {1} $ enquanto $q _1 $ e $q _2 $ estão ambos no estado $ \ket {0} $.
 O parâmetro de aproximação $a $ determina o nível de remoção do $Z $-rotações, ou seja, $a na [0.. n] $.
@@ -103,15 +103,15 @@ Para obter mais detalhes, consulte [M. Roetteler, th. Beth](http://doi.org/10.10
 
 ### <a name="quantum-phase-estimation"></a>Estimativa de fase quântica ###
 
-Um aplicativo especialmente importante da transformação de Fourier do Quantum é aprender a eigenvalues de operadores unitários, um problema conhecido como *estimativa de fase*.
+Um aplicativo especialmente importante da transformação de Fourier do Quantum é aprender a eigenvalues de operadores unitários, um problema conhecido como *estimativa de fase* .
 Considere um unitário $U $ e um estado $ \ket{\phi} $, de forma que $ \ket{\phi} $ seja um eigenstate de $U $ com eigenvalue desconhecido $ \phi $, \begin{Equation} U\ket {\ Phi} = \phi\ket{\phi}.
 \end{Equation} se só tivermos acesso ao $U $ como um Oracle, podemos aprender a fase $ \phi $ utilizando esse $Z as rotações aplicadas ao destino de uma operação controlada se propagam de volta para o controle.
 
 Suponha que $V $ é um aplicativo controlado de $U $, de modo que \begin{align} V (\ket {0} \otimes \ket{\phi}) & = \ket {0} \otimes \ket{\phi} \\ \\ \textrm{e} V (\ket {1} \otimes \ket{\phi}) & = e ^ {i \phi} {1} \ket \otimes \ket{\phi}.
 \end{align} em seguida, por linearidade, \begin{align} V (\ket{+} \otimes \ket{\phi}) & = \frac{(\ket \otimes \ket{\phi} {0} ) + e ^ {i \phi} (\ket {1} \otimes \ket{\phi})} {\sqrt {2} }.
-\end{Align}, podemos coletar termos para descobrir que \begin{align} V (\ket{+} \otimes \ket{\phi}) & = \frac{\ket {0} + e ^ {i \phi} \ket {1} } {\sqrt {2} } \otimes \ket{\phi} \\ \\ & = (R_1 (\phi) \ket{+}) \otimes \ket{\phi}, \end{align} em que $R _1 $ é o unitário aplicado pela <xref:microsoft.quantum.intrinsic.r1> operação.
+\end{Align}, podemos coletar termos para descobrir que \begin{align} V (\ket{+} \otimes \ket{\phi}) & = \frac{\ket {0} + e ^ {i \phi} \ket {1} } {\sqrt {2} } \otimes \ket{\phi} \\ \\ & = (R_1 (\phi) \ket{+}) \otimes \ket{\phi}, \end{align} em que $R _1 $ é o unitário aplicado pela <xref:Microsoft.Quantum.Intrinsic.R1> operação.
 Em outras palavras, o efeito da aplicação de $V $ é precisamente o mesmo que aplicar $R _1 $ com um ângulo desconhecido, mesmo que tenhamos acesso apenas ao $V $ como um Oracle.
-Portanto, para o restante desta discussão, discutiremos a estimativa de fase em termos de $R _1 (\phi) $, que implementamos usando *Kickback fase*de chamada.
+Portanto, para o restante desta discussão, discutiremos a estimativa de fase em termos de $R _1 (\phi) $, que implementamos usando *Kickback fase* de chamada.
 
 Como o controle e o registro de destino permanecem Untangled após esse processo, podemos reutilizar $ \ket{\phi} $ como o destino de um aplicativo controlado de $U ^ $2 para preparar um segundo controle qubit no estado $R _1 (2 \phi) \ket{+} $.
 Continuando dessa forma, podemos obter um registro do formulário \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \phi) \ket{+} \\ \\ & \propto \ bigotimes_ {j = 0} ^ {n} \left (\ket {0} + \exp (i 2 ^ {j} \phi) \ket {1} \right) \\ \\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp (i \phi k) \ket{k} \end{align} em que $n $ é o número de bits de precisão que exigimos, e onde usamos $ {} \propto {} $ para indicar que suprimimos o fator de normalização de $1/\sqrt{2 ^ n} $.
@@ -119,4 +119,4 @@ Continuando dessa forma, podemos obter um registro do formulário \begin{align} 
 Se presumirmos que $ \phi = 2 \pi p/2 ^ k $ para um inteiro $p $, reconheceremos isso como $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n} $, em que $p _j $ é o $j ^ {\textrm{th}} $ bit of $2 \pi \phi $.
 Aplicando o adjoin da transformação de Fourier do Quantum, portanto, obtemos a representação binária da fase codificada como um estado Quantum.
 
-No Q# , isso é implementado pela <xref:microsoft.quantum.characterization.quantumphaseestimation> operação, que usa um <xref:microsoft.quantum.oracles.discreteoracle> aplicativo de implementação de $U ^ m $ como uma função de inteiros positivos $m $.
+No Q# , isso é implementado pela <xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation> operação, que usa um <xref:Microsoft.Quantum.Oracles.DiscreteOracle> aplicativo de implementação de $U ^ m $ como uma função de inteiros positivos $m $.
