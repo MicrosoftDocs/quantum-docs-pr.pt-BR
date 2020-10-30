@@ -1,22 +1,23 @@
 ---
 title: Comandos magic do IQ#
+description: Lista os comandos magic disponíveis no kernel de Jupyter do IQ#.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/26/2020
 ms.topic: article
-ms.openlocfilehash: 934ab18b667797d09d2c8188f727e64b0017e1d5
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: a615c6dac6cdb80ff84cec2b0a3c99fc700efb8e
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91464667"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691137"
 ---
 # <a name="iq-magic-commands"></a>Comandos magic do IQ#
 | Comandos magic | Resumo |
 |---------------|---------|
 | [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Conecta-se a um workspace do Azure Quantum ou exibe o status de conexão atual. |
-| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Executa um trabalho em um workspace do Azure Quantum. |
+| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Envia um trabalho para um workspace do Azure Quantum e aguarda a conclusão dele. |
 | [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs) | Exibe uma lista de trabalhos no workspace atual do Azure Quantum. |
 | [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output) | Exibe os resultados de um trabalho no workspace atual do Azure Quantum. |
 | [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status) | Exibe o status de um trabalho no workspace atual do Azure Quantum. |
@@ -29,6 +30,7 @@ ms.locfileid: "91464667"
 | [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load) | Carrega o hamiltoniano fermiônico para um problema de estrutura eletrônica. O problema é carregado de um arquivo ou passado como um argumento. |
 | [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load) | Carrega o problema de estrutura eletrônica Broombridge e retorna o estado de entrada selecionado. |
 | [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config) | Permite configurar ou consultar opções de configuração. |
+| [`%debug`](xref:microsoft.quantum.iqsharp.magic-ref.debug) | Executa em etapas uma operação ou uma função Q# especificada. |
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Executa uma determinada função ou operação no computador de destino do ResourcesEstimator. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Executa um só teste. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Retorna uma lista de todos os comandos magic disponíveis no momento. |
