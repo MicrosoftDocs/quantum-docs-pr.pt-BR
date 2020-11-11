@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fae603a81f8edc23ab8dc14277c5e3c4699f2cee
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d38482be17e67f180441440ee8ccc7f1f64ebc9d
+ms.sourcegitcommit: fb75d8f30f1d91f644b2a594f46867eb5968cfda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691685"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448337"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas sobre a versão do Microsoft Quantum Development Kit
 
@@ -23,6 +23,12 @@ Este artigo contém informações sobre cada versão do Quantum Development Kit.
 Para obter instruções de instalação, consulte o [guia de instalação](xref:microsoft.quantum.install).
 
 Para obter instruções de atualização, consulte o [guia de atualização](xref:microsoft.quantum.update).
+
+## <a name="version-01320111004"></a>0.13.20111004 da versão
+
+*Data de lançamento: 10 de novembro de 2020*
+
+Esta versão desabilita os recursos do IntelliSense para Q# arquivos no Visual Studio e Visual Studio Code quando um arquivo de projeto não está presente. Isso resolve um problema em que os recursos do IntelliSense podem parar de funcionar depois de adicionar um novo Q# arquivo a um projeto (consulte [qsharp-Compiler # 720](https://github.com/microsoft/qsharp-compiler/issues/720)).
 
 ## <a name="version-01320102604"></a>0.13.20102604 da versão
 
@@ -526,7 +532,7 @@ Essa atualização inclui melhorias significativas de desempenho para a simulaç
 Esta atualização adiciona a nova funcionalidade de depuração:
 * Foram adicionadas duas novas operações, @"microsoft.quantum.extensions.diagnostics.dumpmachine" e @"microsoft.quantum.extensions.diagnostics.dumpregister", que geram informações de função wave sobre o computador quântico de destino em um momento determinado.  
 * No Visual Studio, a probabilidade de medir um $\ket{1}$ em um único qubit agora é mostrada automaticamente na janela de depuração do computador de destino de QuantumSimulator.
-* No Visual Studio, melhorou a exibição de propriedades variáveis nas janelas de depuração **Automáticos** e **Locais** . 
+* No Visual Studio, melhorou a exibição de propriedades variáveis nas janelas de depuração **Automáticos** e **Locais**. 
 
 Saiba mais sobre como [Testar e depurar](xref:microsoft.quantum.guide.testingdebugging).
 
