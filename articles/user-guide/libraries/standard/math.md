@@ -1,13 +1,13 @@
 ---
-title: 'Matemática nas :::no-loc(Q#)::: bibliotecas padrão'
-description: 'Saiba mais sobre as funções matemáticas clássicas nas :::no-loc(Q#)::: bibliotecas padrão que são usadas com os tipos de dados internos.'
+title: 'Matemática nas Q# bibliotecas padrão'
+description: 'Saiba mais sobre as funções matemáticas clássicas nas Q# bibliotecas padrão que são usadas com os tipos de dados internos.'
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 6de1574341d67c569cd2f040ec533e263fdd386e
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -17,7 +17,7 @@ ms.locfileid: "92692064"
 ---
 # <a name="classical-mathematical-functions"></a><span data-ttu-id="79456-103">Funções matemáticas clássicas</span><span class="sxs-lookup"><span data-stu-id="79456-103">Classical Mathematical Functions</span></span> #
 
-<span data-ttu-id="79456-104">Essas funções são usadas principalmente para trabalhar com os :::no-loc(Q#)::: tipos de dados internos `Int` , `Double` e `Range` .</span><span class="sxs-lookup"><span data-stu-id="79456-104">These functions are primarily used to work with the :::no-loc(Q#)::: built-in data types `Int`, `Double`, and `Range`.</span></span>
+<span data-ttu-id="79456-104">Essas funções são usadas principalmente para trabalhar com os Q# tipos de dados internos `Int` , `Double` e `Range` .</span><span class="sxs-lookup"><span data-stu-id="79456-104">These functions are primarily used to work with the Q# built-in data types `Int`, `Double`, and `Range`.</span></span>
 
 <span data-ttu-id="79456-105">A <xref:Microsoft.Quantum.Intrinsic.Random> operação tem assinatura `(Double[] => Int)` .</span><span class="sxs-lookup"><span data-stu-id="79456-105">The <xref:Microsoft.Quantum.Intrinsic.Random> operation has signature `(Double[] => Int)`.</span></span>
 <span data-ttu-id="79456-106">Ele usa uma matriz de duplicatas como entrada e retorna um índice selecionado aleatoriamente para a matriz como um `Int` .</span><span class="sxs-lookup"><span data-stu-id="79456-106">It takes an array of doubles as input, and returns a randomly-selected index into the array as an `Int`.</span></span>

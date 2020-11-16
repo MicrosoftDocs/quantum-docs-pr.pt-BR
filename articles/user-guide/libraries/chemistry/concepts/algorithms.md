@@ -7,8 +7,8 @@ ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -20,7 +20,7 @@ ms.locfileid: "92691881"
 
 <span data-ttu-id="9dba1-104">Depois que o Hamiltonian tiver sido expresso como uma soma dos operadores elementares, o Dynamics poderá então ser compilado em operações fundamentais de portão usando uma série de técnicas bem conhecidas.</span><span class="sxs-lookup"><span data-stu-id="9dba1-104">Once the Hamiltonian has been expressed as a sum of elementary operators the dynamics can then be compiled into fundamental gate operations using a host of well-known techniques.</span></span>
 <span data-ttu-id="9dba1-105">Três abordagens eficientes incluem as fórmulas Trotter – Suzuki, combinações lineares de unidades e qubitization.</span><span class="sxs-lookup"><span data-stu-id="9dba1-105">Three efficient approaches include are Trotter–Suzuki formulas, linear combinations of unitaries, and qubitization.</span></span>
-<span data-ttu-id="9dba1-106">Explicamos essas três abordagens abaixo e fornecemos :::no-loc(Q#)::: exemplos concretos de como implementar esses métodos usando a biblioteca de simulação de Hamiltonian.</span><span class="sxs-lookup"><span data-stu-id="9dba1-106">We explain these three approaches below and give concrete :::no-loc(Q#)::: examples of how to implement these methods using the Hamiltonian simulation library.</span></span>
+<span data-ttu-id="9dba1-106">Explicamos essas três abordagens abaixo e fornecemos Q# exemplos concretos de como implementar esses métodos usando a biblioteca de simulação de Hamiltonian.</span><span class="sxs-lookup"><span data-stu-id="9dba1-106">We explain these three approaches below and give concrete Q# examples of how to implement these methods using the Hamiltonian simulation library.</span></span>
 
 
 ## <a name="trottersuzuki-formulas"></a><span data-ttu-id="9dba1-107">Trotter – fórmulas Suzuki</span><span class="sxs-lookup"><span data-stu-id="9dba1-107">Trotter–Suzuki Formulas</span></span>
@@ -52,7 +52,7 @@ ms.locfileid: "92691881"
         <span data-ttu-id="9dba1-128">0 & 0 & 0 & e ^ {-it} \end{bmatrix}.</span><span class="sxs-lookup"><span data-stu-id="9dba1-128">0 & 0 & 0 & e^{-it} \end{bmatrix}.</span></span>
 <span data-ttu-id="9dba1-129">$ $ Aqui, $e ^ {-iHt} \ket {00} = e ^ {it} \ket {00} $ e $e ^ {-IHT} \ket {01} = e ^ {-it} \ket {01} $, que pode ser visto diretamente como consequência do fato de que a paridade de $0 $ é $0 $ enquanto a paridade da cadeia de caracteres de bits $1 $ é $1 $.</span><span class="sxs-lookup"><span data-stu-id="9dba1-129">$$ Here, $e^{-iHt} \ket{00} = e^{it} \ket{00}$ and $e^{-iHt} \ket{01} = e^{-it} \ket{01}$, which can be seen directly as a consequence of the fact that the parity of $00$ is $0$ while the parity of the bit string $01$ is $1$.</span></span>
 
-<span data-ttu-id="9dba1-130">Os exponencials dos operadores Pauli podem ser implementados diretamente no :::no-loc(Q#)::: usando a <xref:Microsoft.Quantum.Intrinsic.Exp> operação:</span><span class="sxs-lookup"><span data-stu-id="9dba1-130">Exponentials of Pauli operators can be implemented directly in :::no-loc(Q#)::: using the <xref:Microsoft.Quantum.Intrinsic.Exp> operation:</span></span>
+<span data-ttu-id="9dba1-130">Os exponencials dos operadores Pauli podem ser implementados diretamente no Q# usando a <xref:Microsoft.Quantum.Intrinsic.Exp> operação:</span><span class="sxs-lookup"><span data-stu-id="9dba1-130">Exponentials of Pauli operators can be implemented directly in Q# using the <xref:Microsoft.Quantum.Intrinsic.Exp> operation:</span></span>
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];
@@ -85,12 +85,12 @@ ms.locfileid: "92691881"
     // We convert this fermion Hamiltonian to a Jordan-Wigner representation.
     var jordanWignerEncoding = hamiltonian.ToPauliHamiltonian(QubitEncoding.JordanWigner);
 
-    // We now convert this representation into a format consumable by :::no-loc(Q#):::.
+    // We now convert this representation into a format consumable by Q#.
     var qSharpData = jordanWignerEncoding.ToQSharpFormat();
 ```
 
-<span data-ttu-id="9dba1-135">Esse formato da representação Jordânia – Wigner que é consumível pelos :::no-loc(Q#)::: algoritmos de simulação é um tipo definido pelo usuário `JordanWignerEncodingData` .</span><span class="sxs-lookup"><span data-stu-id="9dba1-135">This format of the Jordan–Wigner representation that is consumable by the :::no-loc(Q#)::: simulation algorithms is a user-defined type `JordanWignerEncodingData`.</span></span>
-<span data-ttu-id="9dba1-136">No :::no-loc(Q#)::: , esse formato é passado para uma função de conveniência `TrotterStepOracle` que retorna um operador aproximar a evolução do tempo usando o Trotter – Suzuki Integrator, além de outros parâmetros necessários para sua execução.</span><span class="sxs-lookup"><span data-stu-id="9dba1-136">Within :::no-loc(Q#):::, this format is passed to a convenience function `TrotterStepOracle` that returns an operator approximating time-evolution using the Trotter—Suzuki integrator, in addition to other parameters required for its run.</span></span>
+<span data-ttu-id="9dba1-135">Esse formato da representação Jordânia – Wigner que é consumível pelos Q# algoritmos de simulação é um tipo definido pelo usuário `JordanWignerEncodingData` .</span><span class="sxs-lookup"><span data-stu-id="9dba1-135">This format of the Jordan–Wigner representation that is consumable by the Q# simulation algorithms is a user-defined type `JordanWignerEncodingData`.</span></span>
+<span data-ttu-id="9dba1-136">No Q# , esse formato é passado para uma função de conveniência `TrotterStepOracle` que retorna um operador aproximar a evolução do tempo usando o Trotter – Suzuki Integrator, além de outros parâmetros necessários para sua execução.</span><span class="sxs-lookup"><span data-stu-id="9dba1-136">Within Q#, this format is passed to a convenience function `TrotterStepOracle` that returns an operator approximating time-evolution using the Trotter—Suzuki integrator, in addition to other parameters required for its run.</span></span>
 
 ```qsharp
 // qSharpData passed from driver
@@ -154,10 +154,10 @@ $$
 
 <span data-ttu-id="9dba1-161">O operador de passeio, $W $, pode ser expresso em termos das operações $ \operatorname{Select} $ e $R $ como $ $ W = \operatorname{Select} R, $ $, que pode ser visto novamente para implementar um operador equivalente (até um isometry) a $e ^ {\pm i \cos ^ {-1} (H/| H | _1)} $.</span><span class="sxs-lookup"><span data-stu-id="9dba1-161">The walk operator, $W$, can be expressed in terms of the $\operatorname{Select}$ and $R$ operations as $$ W = \operatorname{Select} R, $$ which again can be seen to implement an operator that is equivalent (up to an isometry) to $e^{\pm i \cos^{-1}(H/|h|_1)}$.</span></span>
 
-<span data-ttu-id="9dba1-162">Essas sub-rotinas são fáceis de configurar no :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="9dba1-162">These subroutines are easy to set up in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="9dba1-162">Essas sub-rotinas são fáceis de configurar no Q# .</span><span class="sxs-lookup"><span data-stu-id="9dba1-162">These subroutines are easy to set up in Q#.</span></span>
 <span data-ttu-id="9dba1-163">Como exemplo, considere o simples qubit transversal-Ising Hamiltonian em que $H = X_1 + X_2 + Z_1 Z_2 $.</span><span class="sxs-lookup"><span data-stu-id="9dba1-163">As an example, consider the simple qubit transverse-Ising Hamiltonian where $H = X_1 + X_2 + Z_1 Z_2$.</span></span>
-<span data-ttu-id="9dba1-164">Nesse caso, o :::no-loc(Q#)::: código que implementaria a operação $ \operatorname{SELECT} $ é invocado pelo <xref:Microsoft.Quantum.Canon.MultiplexOperations> , enquanto a operação $ \operatorname{Prepare} $ pode ser implementada usando <xref:Microsoft.Quantum.Preparation.PrepareArbitraryState> .</span><span class="sxs-lookup"><span data-stu-id="9dba1-164">In this case, :::no-loc(Q#)::: code that would implement the $\operatorname{Select}$ operation is invoked by <xref:Microsoft.Quantum.Canon.MultiplexOperations>, whereas the $\operatorname{Prepare}$ operation can be implemented using <xref:Microsoft.Quantum.Preparation.PrepareArbitraryState>.</span></span>
-<span data-ttu-id="9dba1-165">Um exemplo que envolve a simulação do modelo Hubbard pode ser encontrado como um [ :::no-loc(Q#)::: exemplo](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).</span><span class="sxs-lookup"><span data-stu-id="9dba1-165">An example that involves simulating the Hubbard model can be found as a [:::no-loc(Q#)::: sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).</span></span>
+<span data-ttu-id="9dba1-164">Nesse caso, o Q# código que implementaria a operação $ \operatorname{SELECT} $ é invocado pelo <xref:Microsoft.Quantum.Canon.MultiplexOperations> , enquanto a operação $ \operatorname{Prepare} $ pode ser implementada usando <xref:Microsoft.Quantum.Preparation.PrepareArbitraryState> .</span><span class="sxs-lookup"><span data-stu-id="9dba1-164">In this case, Q# code that would implement the $\operatorname{Select}$ operation is invoked by <xref:Microsoft.Quantum.Canon.MultiplexOperations>, whereas the $\operatorname{Prepare}$ operation can be implemented using <xref:Microsoft.Quantum.Preparation.PrepareArbitraryState>.</span></span>
+<span data-ttu-id="9dba1-165">Um exemplo que envolve a simulação do modelo Hubbard pode ser encontrado como um [ Q# exemplo](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).</span><span class="sxs-lookup"><span data-stu-id="9dba1-165">An example that involves simulating the Hubbard model can be found as a [Q# sample](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).</span></span>
 
 <span data-ttu-id="9dba1-166">A especificação manual dessas etapas para problemas de química arbitrária exigiria muito esforço, o que é evitado com o uso da biblioteca química.</span><span class="sxs-lookup"><span data-stu-id="9dba1-166">Manually specifying these steps for arbitrary chemistry problems would require much effort, which is avoided using the chemistry library.</span></span>
 <span data-ttu-id="9dba1-167">Da mesma forma que o algoritmo de simulação Trotter – Suzuki acima, o `JordanWignerEncodingData` é passado para a função de conveniência `QubitizationOracle` que retorna o operador de orientação, além de outros parâmetros necessários para sua execução.</span><span class="sxs-lookup"><span data-stu-id="9dba1-167">Similarly to the Trotter–Suzuki simulation algorithm above, the `JordanWignerEncodingData` is passed to the convenience function `QubitizationOracle` that returns the walk-operator, in addition to other parameters required for its run.</span></span>
