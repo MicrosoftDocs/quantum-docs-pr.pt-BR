@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingQubitManager_
 title: Função _JordanWignerOptimizedBlockEncodingQubitManager_
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _JordanWignerOptimizedBlockEncodingQubitManager_
 qsharp.summary: ''
-ms.openlocfilehash: 3d6e442a126579966dd5d007e7ec58473c490caf
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6e047cea67fb599ba8d82a3290a5d03f6d5b5b91
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92693778"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96215666"
 ---
 # <a name="_jordanwigneroptimizedblockencodingqubitmanager_-function"></a>Função _JordanWignerOptimizedBlockEncodingQubitManager_
 
 Namespace: [Microsoft. Quantum. química. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. química](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 

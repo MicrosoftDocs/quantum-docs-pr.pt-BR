@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.EstimateEnergy
 title: Operação EstimateEnergy
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
 qsharp.name: EstimateEnergy
 qsharp.summary: Estimates the energy of the molecule by summing the energy contributed by the individual Jordan-Wigner terms.
-ms.openlocfilehash: 52e527a68818c80f93bc177d3563064fd0f2aea3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fb59071ed05234d4a19cd97598bf479489b9985c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92693662"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214408"
 ---
 # <a name="estimateenergy-operation"></a>Operação EstimateEnergy
 
 Namespace: [Microsoft. Quantum. química. JordanWigner. VQE](xref:Microsoft.Quantum.Chemistry.JordanWigner.VQE)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. química](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Estima a energia do molécula somando a energia contribuída pelos termos individuais de Jordan-Wigner.

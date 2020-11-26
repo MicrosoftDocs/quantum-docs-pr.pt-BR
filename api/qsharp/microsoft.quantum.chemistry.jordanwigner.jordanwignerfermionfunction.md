@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionFunction
 title: Função JordanWignerFermionFunction
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: JordanWignerFermionFunction
 qsharp.summary: Represents a dynamical generator as a set of simulatable gates and an expansion in the JordanWigner basis.
-ms.openlocfilehash: 7d29393293acfc1748a1805f339951b1ff0f9b10
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e1eeed0dcd4084401e2680ff1188db4225ee85ca
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92693702"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214748"
 ---
 # <a name="jordanwignerfermionfunction-function"></a>Função JordanWignerFermionFunction
 
 Namespace: [Microsoft. Quantum. química. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. química](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Representa um gerador dinâmico como um conjunto de Gates e uma expansão na base JordanWigner.
