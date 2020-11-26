@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerPauliString
 title: Função _ComputeJordanWignerPauliString
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _ComputeJordanWignerPauliString
 qsharp.summary: ''
-ms.openlocfilehash: e930e348559230697c0e206885204b0e261f6275
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c7c1cec8f9b89f68935b565035cb87113b21267c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92693797"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96215836"
 ---
 # <a name="_computejordanwignerpaulistring-function"></a>Função _ComputeJordanWignerPauliString
 
 Namespace: [Microsoft. Quantum. química. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. química](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 
