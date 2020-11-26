@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Measurement.MeasureWithScratch
 title: Operação MeasureWithScratch
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Measurement
 qsharp.name: MeasureWithScratch
 qsharp.summary: Measures the given Pauli operator using an explicit scratch qubit to perform the measurement.
-ms.openlocfilehash: 1ee25dbccd5bddde406cf8ed84dff77d96d7804e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c42316a811e0e4a81c7f244c093a2be88fe5c733
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694652"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96227056"
 ---
 # <a name="measurewithscratch-operation"></a>Operação MeasureWithScratch
 
 Namespace: [Microsoft. Quantum. medição](xref:Microsoft.Quantum.Measurement)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Mede o operador Pauli fornecido usando um qubit de rascunho explícito para executar a medição.

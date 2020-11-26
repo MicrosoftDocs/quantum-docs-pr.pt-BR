@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Measurement.MResetY
 title: Operação MResetY
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Measurement
 qsharp.name: MResetY
 qsharp.summary: Measures a single qubit in the Y basis, and resets it to a fixed initial state following the measurement.
-ms.openlocfilehash: 48aba7317d0e48d089ec6c4814efdee51bb8e2ed
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 36c6f227135b5ccaf1146fd7afdc8205d416c5dd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697024"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96227022"
 ---
 # <a name="mresety-operation"></a>Operação MResetY
 
 Namespace: [Microsoft. Quantum. medição](xref:Microsoft.Quantum.Measurement)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Mede um único qubit na base Y e o redefine para um estado inicial fixo após a medição.
