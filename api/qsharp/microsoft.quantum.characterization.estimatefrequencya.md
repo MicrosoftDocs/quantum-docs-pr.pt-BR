@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateFrequencyA
 title: Operação EstimateFrequencyA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: EstimateFrequencyA
 qsharp.summary: Given a preparation that is adjointable and measurement, estimates the frequency with which that measurement succeeds (returns `Zero`) by performing a given number of trials.
-ms.openlocfilehash: 88f0a237975c158bffcc015f79d2134b210ce83b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f12fc150de5bcea3d53ce88003c71976d8f2467f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92693850"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204344"
 ---
 # <a name="estimatefrequencya-operation"></a>Operação EstimateFrequencyA
 
 Namespace: [Microsoft. Quantum. caracterization](xref:Microsoft.Quantum.Characterization)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Devido a uma preparação que é de adjointable e de medição, o estima a frequência com a qual essa medida é realizada com sucesso (retorna `Zero` ) executando um determinado número de avaliações.
@@ -30,7 +30,7 @@ operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measuremen
 
 ## <a name="input"></a>Entrada
 
-### <a name="preparation--qubit--unit-adj"></a>preparação: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => adj da [unidade](xref:microsoft.quantum.lang-ref.unit)
+### <a name="preparation--qubit--unit--is-adj"></a>preparação: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] = [unidade](xref:microsoft.quantum.lang-ref.unit)  de> é adj
 
 Uma operação de adjointable $P $ que prepara um determinado estado $ \rho $ em seu registro de entrada.
 

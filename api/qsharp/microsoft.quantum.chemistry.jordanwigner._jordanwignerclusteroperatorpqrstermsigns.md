@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorPQRSTermSigns
 title: Função _JordanWignerClusterOperatorPQRSTermSigns
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _JordanWignerClusterOperatorPQRSTermSigns
 qsharp.summary: ''
-ms.openlocfilehash: 8d7ba71603c0873dd3898ef8563a73d4639dea23
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9416a17dfde6aa3947abd63eb991bbcf00a42708
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92693783"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203834"
 ---
 # <a name="_jordanwignerclusteroperatorpqrstermsigns-function"></a>Função _JordanWignerClusterOperatorPQRSTermSigns
 
 Namespace: [Microsoft. Quantum. química. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. química](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 

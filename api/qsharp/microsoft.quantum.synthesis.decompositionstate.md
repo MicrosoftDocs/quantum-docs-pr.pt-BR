@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Synthesis.DecompositionState
 title: Tipo definido pelo usuário de decomposiçãostate
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: DecompositionState
 qsharp.summary: State during decomposition based on variable indexes
-ms.openlocfilehash: 0547c04828a80b4f696cc17e13c8cc57d0379f96
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cd2a55013f1232d4158dd6c33143b7cf6c0aafbc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92697053"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203188"
 ---
 # <a name="decompositionstate-user-defined-type"></a>Tipo definido pelo usuário de decomposiçãostate
 
 Namespace: [Microsoft. Quantum. síntese](xref:Microsoft.Quantum.Synthesis)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Estado durante a decomposição com base em índices de variáveis
