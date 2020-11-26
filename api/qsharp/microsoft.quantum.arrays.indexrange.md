@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.IndexRange
 title: Função IndexRange
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: IndexRange
 qsharp.summary: Given an array, returns a range over the indices of that array, suitable for use in a for loop.
-ms.openlocfilehash: 7f9779acd4a781c50388217aa780710bd0b99ff3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5afd4cc260ac3e384d2736bf7b43d941afd9ef73
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694456"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220936"
 ---
 # <a name="indexrange-function"></a>Função IndexRange
 
 Namespace: [Microsoft. Quantum. arrays](xref:Microsoft.Quantum.Arrays)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Dada uma matriz, retorna um intervalo sobre os índices dessa matriz, adequado para uso em um loop for.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Filtered
 title: Função filtrada
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Filtered
 qsharp.summary: Given an array and a predicate that is defined for the elements of the array, returns an array that consists of those elements that satisfy the predicate.
-ms.openlocfilehash: 4c786c69b0896b517f108611e32501867838aeb1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fa8600f4d773daf6eabf8b9961ab46961155d1fd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694476"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221259"
 ---
 # <a name="filtered-function"></a>Função filtrada
 
 Namespace: [Microsoft. Quantum. arrays](xref:Microsoft.Quantum.Arrays)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dada uma matriz e um predicado que é definido para os elementos da matriz, retorna uma matriz que consiste nesses elementos que atendem ao predicado.
