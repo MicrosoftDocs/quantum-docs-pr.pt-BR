@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.PowD
 title: Função PowD
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.powd".
-ms.openlocfilehash: bf9e6195e158cfec3c7ec6bedf625aa45430af3f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: de0fb4cb7cc06bce3e8e27d5ebba0580a9fce616
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92693142"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212776"
 ---
-# <a name="powd-function"></a><span data-ttu-id="7746a-102">Função PowD</span><span class="sxs-lookup"><span data-stu-id="7746a-102">PowD function</span></span>
+# <a name="powd-function"></a><span data-ttu-id="73d13-102">Função PowD</span><span class="sxs-lookup"><span data-stu-id="73d13-102">PowD function</span></span>
 
-<span data-ttu-id="7746a-103">Namespace: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="7746a-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
+<span data-ttu-id="73d13-103">Namespace: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="73d13-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
 
-<span data-ttu-id="7746a-104">Agrupa [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="7746a-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="73d13-104">Pacote: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="73d13-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="7746a-105">PowD foi preterido.</span><span class="sxs-lookup"><span data-stu-id="7746a-105">PowD has been deprecated.</span></span> <span data-ttu-id="7746a-106">Use <xref:Microsoft.Quantum.Math.PowD> em seu lugar.</span><span class="sxs-lookup"><span data-stu-id="7746a-106">Please use <xref:Microsoft.Quantum.Math.PowD> instead.</span></span>
+> <span data-ttu-id="73d13-105">PowD foi preterido.</span><span class="sxs-lookup"><span data-stu-id="73d13-105">PowD has been deprecated.</span></span> <span data-ttu-id="73d13-106">Use <xref:Microsoft.Quantum.Math.PowD> em seu lugar.</span><span class="sxs-lookup"><span data-stu-id="73d13-106">Please use <xref:Microsoft.Quantum.Math.PowD> instead.</span></span>
 >
-> <span data-ttu-id="7746a-107">Use @"microsoft.quantum.math.powd".</span><span class="sxs-lookup"><span data-stu-id="7746a-107">Please use @"microsoft.quantum.math.powd".</span></span>
+> <span data-ttu-id="73d13-107">Use @"microsoft.quantum.math.powd".</span><span class="sxs-lookup"><span data-stu-id="73d13-107">Please use @"microsoft.quantum.math.powd".</span></span>
 
 
 
@@ -40,18 +40,18 @@ function PowD (x : Double, y : Double) : Double
 ```
 
 
-## <a name="input"></a><span data-ttu-id="7746a-108">Entrada</span><span class="sxs-lookup"><span data-stu-id="7746a-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="73d13-108">Entrada</span><span class="sxs-lookup"><span data-stu-id="73d13-108">Input</span></span>
 
-### <a name="x--double"></a><span data-ttu-id="7746a-109">x: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="7746a-109">x : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
-
-
-
-
-### <a name="y--double"></a><span data-ttu-id="7746a-110">y: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="7746a-110">y : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+### <a name="x--double"></a><span data-ttu-id="73d13-109">x: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="73d13-109">x : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
 
 
 
+### <a name="y--double"></a><span data-ttu-id="73d13-110">y: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="73d13-110">y : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
-## <a name="output--double"></a><span data-ttu-id="7746a-111">Saída: [duplo](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="7746a-111">Output : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+
+
+
+
+## <a name="output--double"></a><span data-ttu-id="73d13-111">Saída: [duplo](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="73d13-111">Output : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
