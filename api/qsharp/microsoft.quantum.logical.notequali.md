@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.NotEqualI
 title: Função não Iguali
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: NotEqualI
 qsharp.summary: Returns true if and only if two inputs are not equal.
-ms.openlocfilehash: 68e0e105a6b3742ec11e80ff92c39578a786aa85
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: dc132cbab556bd4b5d5c557ad267f1839e8039fc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92693102"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197204"
 ---
 # <a name="notequali-function"></a>Função não Iguali
 
 Namespace: [Microsoft. Quantum. Logical](xref:Microsoft.Quantum.Logical)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Retorna true se e somente se duas entradas não forem iguais.
