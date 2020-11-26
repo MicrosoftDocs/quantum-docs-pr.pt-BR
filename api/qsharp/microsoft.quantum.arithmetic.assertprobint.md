@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AssertProbInt
 title: Operação AssertProbInt
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: AssertProbInt
 qsharp.summary: Asserts that the probability of a specific state of a quantum register has the expected value.
-ms.openlocfilehash: a8e4217e18528adc0aa9923f1c0dcfb59e1d2488
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b95c2c6294dd5a95b7215c22bd6c50a41635f432
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694825"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223690"
 ---
 # <a name="assertprobint-operation"></a>Operação AssertProbInt
 
 Namespace: [Microsoft. Quantum. aritmético](xref:Microsoft.Quantum.Arithmetic)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Declara que a probabilidade de um estado específico de um registro Quantum tem o valor esperado.

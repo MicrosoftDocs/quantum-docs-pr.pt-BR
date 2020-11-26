@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ExtraArithmeticAssertionsEnabled
 title: Função ExtraArithmeticAssertionsEnabled
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ExtraArithmeticAssertionsEnabled
 qsharp.summary: If true, enables extra asserts that are expensive, but useful to debug the use of the arithmetic functions.
-ms.openlocfilehash: b53bcd1094b144891af800a848c9241e2a45e1cf
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d660a11901125a4270c9ba1079258438c2ab67bb
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694792"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223129"
 ---
 # <a name="extraarithmeticassertionsenabled-function"></a>Função ExtraArithmeticAssertionsEnabled
 
 Namespace: [Microsoft. Quantum. aritmético](xref:Microsoft.Quantum.Arithmetic)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Se for true, habilita as declarações extras que são caras, mas úteis para depurar o uso das funções aritméticas.
