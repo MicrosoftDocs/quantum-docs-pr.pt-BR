@@ -1,55 +1,55 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyConditionallyIntrinsicCA
 title: Operação ApplyConditionallyIntrinsicCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyConditionallyIntrinsicCA
 qsharp.summary: ''
-ms.openlocfilehash: 7cdddba45824d5e5037270d8578f2cb16c03be83
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2dd7a9b6e281c62470defa64685dc58872694468
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694620"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230184"
 ---
-# <a name="applyconditionallyintrinsicca-operation"></a><span data-ttu-id="e70b3-102">Operação ApplyConditionallyIntrinsicCA</span><span class="sxs-lookup"><span data-stu-id="e70b3-102">ApplyConditionallyIntrinsicCA operation</span></span>
+# <a name="applyconditionallyintrinsicca-operation"></a><span data-ttu-id="5c609-102">Operação ApplyConditionallyIntrinsicCA</span><span class="sxs-lookup"><span data-stu-id="5c609-102">ApplyConditionallyIntrinsicCA operation</span></span>
 
-<span data-ttu-id="e70b3-103">Namespace: [Microsoft. Quantum. Simulation. QuantumProcessor. Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)</span><span class="sxs-lookup"><span data-stu-id="e70b3-103">Namespace: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)</span></span>
+<span data-ttu-id="5c609-103">Namespace: [Microsoft. Quantum. Simulation. QuantumProcessor. Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)</span><span class="sxs-lookup"><span data-stu-id="5c609-103">Namespace: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)</span></span>
 
-<span data-ttu-id="e70b3-104">Agrupa [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="e70b3-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="5c609-104">Pacote: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="5c609-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 
 
 ```qsharp
-operation ApplyConditionallyIntrinsicCA (measurementResults : Result[], resultsValues : Result[], onEqualOp : (Unit => Unit is Ctl + Adj), onNonEqualOp : (Unit => Unit is Ctl + Adj)) : Unit
+operation ApplyConditionallyIntrinsicCA (measurementResults : Result[], resultsValues : Result[], onEqualOp : (Unit => Unit is Ctl + Adj), onNonEqualOp : (Unit => Unit is Ctl + Adj)) : Unit is Adj + Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="e70b3-105">Entrada</span><span class="sxs-lookup"><span data-stu-id="e70b3-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="5c609-105">Entrada</span><span class="sxs-lookup"><span data-stu-id="5c609-105">Input</span></span>
 
-### <a name="measurementresults--__invalidresult__"></a><span data-ttu-id="e70b3-106">measurementResults: __inválido <Result>__ []</span><span class="sxs-lookup"><span data-stu-id="e70b3-106">measurementResults : __invalid<Result>__ []</span></span>
-
-
-
-
-### <a name="resultsvalues--__invalidresult__"></a><span data-ttu-id="e70b3-107">resultsValues: __inválido <Result>__ []</span><span class="sxs-lookup"><span data-stu-id="e70b3-107">resultsValues : __invalid<Result>__ []</span></span>
+### <a name="measurementresults--__invalidresult__"></a><span data-ttu-id="5c609-106">measurementResults: __inválido <Result>__[]</span><span class="sxs-lookup"><span data-stu-id="5c609-106">measurementResults : __invalid<Result>__[]</span></span>
 
 
 
 
-### <a name="onequalop--unit--unit-ctl--adj"></a><span data-ttu-id="e70b3-108">onEqualOp: [unidade](xref:microsoft.quantum.lang-ref.unit) de => [Unit](xref:microsoft.quantum.lang-ref.unit) lista de certificados confiáveis + adj</span><span class="sxs-lookup"><span data-stu-id="e70b3-108">onEqualOp : [Unit](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl + Adj</span></span>
+### <a name="resultsvalues--__invalidresult__"></a><span data-ttu-id="5c609-107">resultsValues: __inválido <Result>__[]</span><span class="sxs-lookup"><span data-stu-id="5c609-107">resultsValues : __invalid<Result>__[]</span></span>
 
 
 
 
-### <a name="onnonequalop--unit--unit-ctl--adj"></a><span data-ttu-id="e70b3-109">onNonEqualOp: [unidade](xref:microsoft.quantum.lang-ref.unit) de => [Unit](xref:microsoft.quantum.lang-ref.unit) lista de certificados confiáveis + adj</span><span class="sxs-lookup"><span data-stu-id="e70b3-109">onNonEqualOp : [Unit](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl + Adj</span></span>
+### <a name="onequalop--unit--unit--is-adj--ctl"></a><span data-ttu-id="5c609-108">onEqualOp: unidade de [unidade](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit) é adj + CTL</span><span class="sxs-lookup"><span data-stu-id="5c609-108">onEqualOp : [Unit](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
+
+
+
+
+### <a name="onnonequalop--unit--unit--is-adj--ctl"></a><span data-ttu-id="5c609-109">onNonEqualOp: unidade de [unidade](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit) é adj + CTL</span><span class="sxs-lookup"><span data-stu-id="5c609-109">onNonEqualOp : [Unit](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
 
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="e70b3-110">Saída: [unidade](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="e70b3-110">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="5c609-110">Saída: [unidade](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="5c609-110">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
