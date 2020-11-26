@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.BoundA
 title: Função bounda
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: BoundA
 qsharp.summary: Given an array of operations acting on a single input, produces a new operation that performs each given operation in sequence. The modifier `A` indicates that all operations in the array are adjointable.
-ms.openlocfilehash: 40c112d0572dc4eebfc284c9ef29f43706e20c64
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3132bf198e98dd1a2b433f36b000060e7e721865
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694082"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216941"
 ---
 # <a name="bounda-function"></a>Função bounda
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dada uma matriz de operações que atuam em uma única entrada, o produz uma nova operação que executa cada operação específica em sequência.
@@ -31,13 +31,13 @@ function BoundA<'T> (operations : ('T => Unit is Adj)[]) : ('T => Unit is Adj)
 
 ## <a name="input"></a>Entrada
 
-### <a name="operations--t--unit-adj"></a>operações: t => adj da [unidade](xref:microsoft.quantum.lang-ref.unit) []
+### <a name="operations--t--unit--is-adj"></a>operações: ' T' = a [unidade](xref:microsoft.quantum.lang-ref.unit)  de> é adj []
 
 Uma sequência de operações a ser executada em uma determinada entrada.
 
 
 
-## <a name="output--t--unit-adj"></a>Saída: t => adj da [unidade](xref:microsoft.quantum.lang-ref.unit)
+## <a name="output--t--unit--is-adj"></a>Saída: ' T' = a [unidade](xref:microsoft.quantum.lang-ref.unit)  de> é adj
 
 Uma nova operação que executa cada operação específica em sequência em sua entrada.
 

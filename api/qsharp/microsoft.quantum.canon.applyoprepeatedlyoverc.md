@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOverC
 title: Operação ApplyOpRepeatedlyOverC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyOpRepeatedlyOverC
 qsharp.summary: Applies the same op over a qubit register multiple times.
-ms.openlocfilehash: effd61e6c012dcf81a83383c3fd43cf745d18117
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 08c3af3a4877481833973061aa4d54c2b29304c9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694245"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218250"
 ---
 # <a name="applyoprepeatedlyoverc-operation"></a>Operação ApplyOpRepeatedlyOverC
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica o mesmo op em um registro qubit várias vezes.
 
 ```qsharp
-operation ApplyOpRepeatedlyOverC (op : (Qubit[] => Unit is Ctl), targets : Int[][], register : Qubit[]) : Unit
+operation ApplyOpRepeatedlyOverC (op : (Qubit[] => Unit is Ctl), targets : Int[][], register : Qubit[]) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>Entrada
 
-### <a name="op--qubit--unit-ctl"></a>op: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => CTL de [unidade](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--qubit--unit--is-ctl"></a>op: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] = a [unidade](xref:microsoft.quantum.lang-ref.unit)  de> é CTL
 
 Uma operação a ser aplicada várias vezes no registro qubit
 

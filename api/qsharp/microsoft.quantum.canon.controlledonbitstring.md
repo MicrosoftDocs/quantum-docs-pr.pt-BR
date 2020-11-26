@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ControlledOnBitString
 title: Função ControlledOnBitString
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ControlledOnBitString
 qsharp.summary: Returns a unitary operation that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
-ms.openlocfilehash: ca5a6e116eff187060f7a160e42836b170f0362d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9435406506fc99fe211f5dce628b21c18ee4f9fe
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694047"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216652"
 ---
 # <a name="controlledonbitstring-function"></a>Função ControlledOnBitString
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Retorna uma operação unitário que aplica um Oracle no registro de destino se o estado de registro de controle corresponder a uma máscara de bits especificada.
@@ -39,13 +39,13 @@ A saída dessa função é uma operação que pode ser representada por uma tran
 A cadeia de caracteres de bits para controlar a operação unitário especificada.
 
 
-### <a name="oracle--t--unit-adj--ctl"></a>Oracle: t => [unidade](xref:microsoft.quantum.lang-ref.unit) de ano + CTL
+### <a name="oracle--t--unit--is-adj--ctl"></a>Oracle: T' = [unidade](xref:microsoft.quantum.lang-ref.unit)  de> é adj + CTL
 
 A operação unitário a ser aplicada no registro de destino.
 
 
 
-## <a name="output--qubitt--unit-adj--ctl"></a>Saída: ([qubit](xref:microsoft.quantum.lang-ref.qubit)[], t) => [unidade](xref:microsoft.quantum.lang-ref.unit) de ano + CTL
+## <a name="output--qubitt--unit--is-adj--ctl"></a>Saída: ([qubit](xref:microsoft.quantum.lang-ref.qubit)[], t) => [unidade](xref:microsoft.quantum.lang-ref.unit)  é adj + CTL
 
 Uma operação unitário que se aplica ao `oracle` registro de destino se o estado de registro de controle corresponder à máscara de bits `bits` .
 
