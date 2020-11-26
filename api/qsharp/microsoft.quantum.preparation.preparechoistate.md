@@ -1,27 +1,27 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareChoiState
 title: Operação PrepareChoiState
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PrepareChoiState
-qsharp.summary: Prepares the Choi–Jamiłkowski state for a given operation onto given reference and target registers.
-ms.openlocfilehash: 8b2917a7d9414539f2f7c821c4115fc4b21d0373
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+qsharp.summary: Prepares the Choi–Jamiołkowski state for a given operation onto given reference and target registers.
+ms.openlocfilehash: ced71c4278f42f577760acd54ae53e7f5e6dae4a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92696880"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210566"
 ---
 # <a name="preparechoistate-operation"></a>Operação PrepareChoiState
 
 Namespace: [Microsoft. Quantum. preparação](xref:Microsoft.Quantum.Preparation)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-Prepara o estado Choi – Jamiłkowski para uma determinada operação em determinados registros de referência e destino.
+Prepara o estado Choi – Jamiołkowski para uma determinada operação em determinados registros de referência e destino.
 
 ```qsharp
 operation PrepareChoiState (op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[]) : Unit
@@ -52,7 +52,7 @@ Um registro de qubits inicialmente no estado $ \ket{00\cdots 0} $ no qual deve `
 
 ## <a name="remarks"></a>Comentários
 
-O \Lambda (Choi-Jamiłkowski State $J) $ de um processo Quantum é definido como $ $ \begin{align} J (\Lambda) \mathrel{: =} (\boldone \otimes \Lambda) (| \boldone\rangle \! \rangle\langle \! \langle\boldone |), \end{Align} $ $, em que $ | X\rangle \! \rangle $ é a *vetorização* de uma matriz $X $ na Convenção de empilhamento de coluna. Aprender uma descrição clássica desse Estado fornece informações completas sobre o efeito de $ \Lambda $ agindo em Estados de entrada arbitrários e forma a base do *processo Quantum tomography* .
+O \Lambda (Choi-Jamiłkowski State $J) $ de um processo Quantum é definido como $ $ \begin{align} J (\Lambda) \mathrel{: =} (\boldone \otimes \Lambda) (| \boldone\rangle \! \rangle\langle \! \langle\boldone |), \end{Align} $ $, em que $ | X\rangle \! \rangle $ é a *vetorização* de uma matriz $X $ na Convenção de empilhamento de coluna. Aprender uma descrição clássica desse Estado fornece informações completas sobre o efeito de $ \Lambda $ agindo em Estados de entrada arbitrários e forma a base do *processo Quantum tomography*.
 
 ## <a name="see-also"></a>Consulte Também
 
