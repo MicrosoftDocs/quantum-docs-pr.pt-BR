@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.CControlledA
 title: Função CControlledA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: CControlledA
 qsharp.summary: Given an operation op, returns a new operation which applies the op if a classical control bit is true. If `false`, nothing happens. The modifier `A` indicates that the operation is adjointable.
-ms.openlocfilehash: 30b5e3408fa6e5a79b2f3d63cccc11899c0405ef
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cb72ca5b3dab99b9ee8a994ba9fde46e0eae5594
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694067"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207506"
 ---
 # <a name="ccontrolleda-function"></a>Função CControlledA
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dada uma operação op, retorna uma nova operação que aplica a op se um bit de controle clássico for true. Se `false` nada acontecer.
@@ -31,13 +31,13 @@ function CControlledA<'T> (op : ('T => Unit is Adj)) : ((Bool, 'T) => Unit is Ad
 
 ## <a name="input"></a>Entrada
 
-### <a name="op--t--unit-adj"></a>op: ' t => adj de [unidade](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--t--unit--is-adj"></a>op: ' T' = [unidade](xref:microsoft.quantum.lang-ref.unit)  de> é adj
 
 Uma operação a ser aplicada condicionalmente.
 
 
 
-## <a name="output--boolt--unit-adj"></a>Saída: ([bool](xref:microsoft.quantum.lang-ref.bool), não) => adj da [unidade](xref:microsoft.quantum.lang-ref.unit)
+## <a name="output--boolt--unit--is-adj"></a>Saída: ([bool](xref:microsoft.quantum.lang-ref.bool), não) => [unidade](xref:microsoft.quantum.lang-ref.unit)  é adj
 
 Uma nova operação que será op se o bit de controle clássico for true.
 

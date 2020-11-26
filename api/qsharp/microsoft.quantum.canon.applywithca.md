@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyWithCA
 title: Operação ApplyWithCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyWithCA
 qsharp.summary: Given two operations, applies one as conjugated with the other.
-ms.openlocfilehash: abc62791416e78c1b2937a226327b71da8b8e288
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e86c452e9693c5a4d0d4e5a36471ab46bbf66dfe
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694110"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208135"
 ---
 # <a name="applywithca-operation"></a>Operação ApplyWithCA
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dadas duas operações, o aplica-se uma como conjugado com a outra.
 
 ```qsharp
-operation ApplyWithCA<'T> (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl), target : 'T) : Unit
+operation ApplyWithCA<'T> (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl), target : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -34,12 +34,12 @@ Dadas duas operações, respectivamente descritas por operadores unitários $U $
 
 ## <a name="input"></a>Entrada
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation: t => adj da [unidade](xref:microsoft.quantum.lang-ref.unit)
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation: T' = [unidade](xref:microsoft.quantum.lang-ref.unit)  de> é adj
 
 A operação $U $ que deve ser usada para conjugar $V $. Observe que a operação externa $U $ precisa ser adjointable, mas não precisa ser controlável.
 
 
-### <a name="inneroperation--t--unit-adj--ctl"></a>innerOperation: t => [unidade](xref:microsoft.quantum.lang-ref.unit) de ano + CTL
+### <a name="inneroperation--t--unit--is-adj--ctl"></a>innerOperation: T' = [unidade](xref:microsoft.quantum.lang-ref.unit)  de> é adj + CTL
 
 A operação $V $ sendo conjugada.
 
