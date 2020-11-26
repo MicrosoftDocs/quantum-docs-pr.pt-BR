@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.MaybeChooseElement
 title: Operação MaybeChooseElement
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: MaybeChooseElement
 qsharp.summary: Given an array of data and an a distribution over its indices, attempts to choose an element at random.
-ms.openlocfilehash: 12640d9dc3aad301146eff7bcbbaae33d3ccd420
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1a69c8d5a6ae022ceda9269e17434b740809b107
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694948"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192852"
 ---
 # <a name="maybechooseelement-operation"></a>Operação MaybeChooseElement
 
 Namespace: [Microsoft. Quantum. Random](xref:Microsoft.Quantum.Random)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Dada uma matriz de dados e uma distribuição sobre seus índices, o tenta escolher um elemento aleatoriamente.

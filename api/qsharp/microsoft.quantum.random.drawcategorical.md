@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.DrawCategorical
 title: Operação DrawCategorical
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DrawCategorical
 qsharp.summary: Draws a random sample from a categorical distribution specified by a list of probablities.
-ms.openlocfilehash: fdc5ae3a9341cb11e8fda129bdd030289b6c99c2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a5826aa5f658fea766db0ca5ccbb9c0d7d056d4c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694645"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192988"
 ---
 # <a name="drawcategorical-operation"></a>Operação DrawCategorical
 
 Namespace: [Microsoft. Quantum. Random](xref:Microsoft.Quantum.Random)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Desenha um exemplo aleatório de uma distribuição categórica especificada por uma lista de probablities.
