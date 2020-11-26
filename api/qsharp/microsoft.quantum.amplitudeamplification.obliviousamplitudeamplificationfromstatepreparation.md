@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromStatePreparation
 title: Função ObliviousAmplitudeAmplificationFromStatePreparation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: ObliviousAmplitudeAmplificationFromStatePreparation
 qsharp.summary: Oblivious amplitude amplification by oracles for partial reflections.
-ms.openlocfilehash: 9975d26af8f9beb2b91e409ad78159d6f04936e3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 44bb394b0eb4ec98fd47fd1b156410b7a33903f1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694900"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191288"
 ---
 # <a name="obliviousamplitudeamplificationfromstatepreparation-function"></a>Função ObliviousAmplitudeAmplificationFromStatePreparation
 
 Namespace: [Microsoft. Quantum. AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Amplificação de amplitude de alheios por Oracle para reflexões parciais.
@@ -51,7 +51,7 @@ O $O do Oracle unitário $ do tipo `ObliviousOracle` que atua em conjunto no reg
 
 
 
-## <a name="output--qubitqubit--unit-adj--ctl"></a>Saída: ([qubit](xref:microsoft.quantum.lang-ref.qubit)[],[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [unidade](xref:microsoft.quantum.lang-ref.unit) adj + CTL
+## <a name="output--qubitqubit--unit--is-adj--ctl"></a>Saída: ([qubit](xref:microsoft.quantum.lang-ref.qubit)[],[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [unidade](xref:microsoft.quantum.lang-ref.unit)  é adj + CTL
 
 Uma operação que implementa a amplificação de amplitude de alheios com base em reflexos parciais.
 
