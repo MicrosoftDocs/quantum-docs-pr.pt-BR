@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Preparation._QuantumROMDiscretization
 title: Função _QuantumROMDiscretization
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: _QuantumROMDiscretization
 qsharp.summary: ''
-ms.openlocfilehash: 13d622f6983c17206bef9009b1042200724839c6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 094bcea0156586fb2ab3287921dc31a13590d8f9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92696904"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193770"
 ---
-# <a name="_quantumromdiscretization-function"></a><span data-ttu-id="9f765-102">Função _QuantumROMDiscretization</span><span class="sxs-lookup"><span data-stu-id="9f765-102">_QuantumROMDiscretization function</span></span>
+# <a name="_quantumromdiscretization-function"></a><span data-ttu-id="13c7e-102">Função _QuantumROMDiscretization</span><span class="sxs-lookup"><span data-stu-id="13c7e-102">_QuantumROMDiscretization function</span></span>
 
-<span data-ttu-id="9f765-103">Namespace: [Microsoft. Quantum. preparação](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="9f765-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
+<span data-ttu-id="13c7e-103">Namespace: [Microsoft. Quantum. preparação](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="13c7e-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
 
-<span data-ttu-id="9f765-104">Agrupa [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="9f765-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="13c7e-104">Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="13c7e-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 
@@ -28,18 +28,18 @@ function _QuantumROMDiscretization (bitsPrecision : Int, coefficients : Double[]
 ```
 
 
-## <a name="input"></a><span data-ttu-id="9f765-105">Entrada</span><span class="sxs-lookup"><span data-stu-id="9f765-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="13c7e-105">Entrada</span><span class="sxs-lookup"><span data-stu-id="13c7e-105">Input</span></span>
 
-### <a name="bitsprecision--int"></a><span data-ttu-id="9f765-106">bitsPrecision: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="9f765-106">bitsPrecision : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
-
-
-### <a name="coefficients--double"></a><span data-ttu-id="9f765-107">coeficientes: [duplo](xref:microsoft.quantum.lang-ref.double)[]</span><span class="sxs-lookup"><span data-stu-id="9f765-107">coefficients : [Double](xref:microsoft.quantum.lang-ref.double)[]</span></span>
+### <a name="bitsprecision--int"></a><span data-ttu-id="13c7e-106">bitsPrecision: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="13c7e-106">bitsPrecision : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
+### <a name="coefficients--double"></a><span data-ttu-id="13c7e-107">coeficientes: [duplo](xref:microsoft.quantum.lang-ref.double)[]</span><span class="sxs-lookup"><span data-stu-id="13c7e-107">coefficients : [Double](xref:microsoft.quantum.lang-ref.double)[]</span></span>
 
-## <a name="output--doubleintint"></a><span data-ttu-id="9f765-108">Saída: ([Double](xref:microsoft.quantum.lang-ref.double),[int](xref:microsoft.quantum.lang-ref.int)[],[int](xref:microsoft.quantum.lang-ref.int)[])</span><span class="sxs-lookup"><span data-stu-id="9f765-108">Output : ([Double](xref:microsoft.quantum.lang-ref.double),[Int](xref:microsoft.quantum.lang-ref.int)[],[Int](xref:microsoft.quantum.lang-ref.int)[])</span></span>
+
+
+
+
+## <a name="output--doubleintint"></a><span data-ttu-id="13c7e-108">Saída: ([Double](xref:microsoft.quantum.lang-ref.double),[int](xref:microsoft.quantum.lang-ref.int)[],[int](xref:microsoft.quantum.lang-ref.int)[])</span><span class="sxs-lookup"><span data-stu-id="13c7e-108">Output : ([Double](xref:microsoft.quantum.lang-ref.double),[Int](xref:microsoft.quantum.lang-ref.int)[],[Int](xref:microsoft.quantum.lang-ref.int)[])</span></span>
 

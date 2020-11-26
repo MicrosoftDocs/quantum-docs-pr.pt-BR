@@ -1,70 +1,80 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareQuantumROMState
 title: Operação PrepareQuantumROMState
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PrepareQuantumROMState
 qsharp.summary: ''
-ms.openlocfilehash: 74830ab9ecaeefdcf002369da7e70f096977a83b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 41b3a041ad3cef466e780fa9e88ab8ab72269e66
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92696879"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193498"
 ---
-# <a name="preparequantumromstate-operation"></a><span data-ttu-id="5f0f6-102">Operação PrepareQuantumROMState</span><span class="sxs-lookup"><span data-stu-id="5f0f6-102">PrepareQuantumROMState operation</span></span>
+# <a name="preparequantumromstate-operation"></a><span data-ttu-id="fe3eb-102">Operação PrepareQuantumROMState</span><span class="sxs-lookup"><span data-stu-id="fe3eb-102">PrepareQuantumROMState operation</span></span>
 
-<span data-ttu-id="5f0f6-103">Namespace: [Microsoft. Quantum. preparação](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="5f0f6-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
+<span data-ttu-id="fe3eb-103">Namespace: [Microsoft. Quantum. preparação](xref:Microsoft.Quantum.Preparation)</span><span class="sxs-lookup"><span data-stu-id="fe3eb-103">Namespace: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)</span></span>
 
-<span data-ttu-id="5f0f6-104">Agrupa [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="5f0f6-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="fe3eb-104">Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="fe3eb-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 
 
 ```qsharp
-operation PrepareQuantumROMState (nBitsPrecision : Int, nCoeffs : Int, nBitsIndices : Int, keepCoeff : Int[], altIndex : Int[], indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, garbageRegister : Qubit[]) : Unit
+operation PrepareQuantumROMState (nBitsPrecision : Int, nCoeffs : Int, nBitsIndices : Int, keepCoeff : Int[], altIndex : Int[], data : Bool[][], indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, dataQubits : Qubit[], garbageRegister : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="5f0f6-105">Entrada</span><span class="sxs-lookup"><span data-stu-id="5f0f6-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="fe3eb-105">Entrada</span><span class="sxs-lookup"><span data-stu-id="fe3eb-105">Input</span></span>
 
-### <a name="nbitsprecision--int"></a><span data-ttu-id="5f0f6-106">nBitsPrecision: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="5f0f6-106">nBitsPrecision : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
-
-
-### <a name="ncoeffs--int"></a><span data-ttu-id="5f0f6-107">nCoeffs: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="5f0f6-107">nCoeffs : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="nbitsprecision--int"></a><span data-ttu-id="fe3eb-106">nBitsPrecision: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="fe3eb-106">nBitsPrecision : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
-### <a name="nbitsindices--int"></a><span data-ttu-id="5f0f6-108">nBitsIndices: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="5f0f6-108">nBitsIndices : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="ncoeffs--int"></a><span data-ttu-id="fe3eb-107">nCoeffs: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="fe3eb-107">nCoeffs : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
-### <a name="keepcoeff--int"></a><span data-ttu-id="5f0f6-109">keepCoeff: [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="5f0f6-109">keepCoeff : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
+### <a name="nbitsindices--int"></a><span data-ttu-id="fe3eb-108">nBitsIndices: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="fe3eb-108">nBitsIndices : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
-### <a name="altindex--int"></a><span data-ttu-id="5f0f6-110">altIndex: [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="5f0f6-110">altIndex : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
+### <a name="keepcoeff--int"></a><span data-ttu-id="fe3eb-109">keepCoeff: [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="fe3eb-109">keepCoeff : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
 
 
 
 
-### <a name="indexregister--littleendian"></a><span data-ttu-id="5f0f6-111">indexRegister: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="5f0f6-111">indexRegister : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
+### <a name="altindex--int"></a><span data-ttu-id="fe3eb-110">altIndex: [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="fe3eb-110">altIndex : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
 
 
 
 
-### <a name="garbageregister--qubit"></a><span data-ttu-id="5f0f6-112">garbageRegister: [qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="5f0f6-112">garbageRegister : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
+### <a name="data--bool"></a><span data-ttu-id="fe3eb-111">dados: [bool](xref:microsoft.quantum.lang-ref.bool)[] []</span><span class="sxs-lookup"><span data-stu-id="fe3eb-111">data : [Bool](xref:microsoft.quantum.lang-ref.bool)[][]</span></span>
+
+
+
+
+### <a name="indexregister--littleendian"></a><span data-ttu-id="fe3eb-112">indexRegister: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span><span class="sxs-lookup"><span data-stu-id="fe3eb-112">indexRegister : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)</span></span>
+
+
+
+
+### <a name="dataqubits--qubit"></a><span data-ttu-id="fe3eb-113">dataQubits: [qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="fe3eb-113">dataQubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
+
+
+
+
+### <a name="garbageregister--qubit"></a><span data-ttu-id="fe3eb-114">garbageRegister: [qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="fe3eb-114">garbageRegister : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
 
 
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="5f0f6-113">Saída: [unidade](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="5f0f6-113">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="fe3eb-115">Saída: [unidade](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="fe3eb-115">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
