@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.UncurriedOp
 title: Função UncurriedOp
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: UncurriedOp
 qsharp.summary: Given a function which returns operations, returns a new operation which takes both inputs as a tuple.
-ms.openlocfilehash: 359c0b2a9dd56445fb39fadc6580809dd9fbf628
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cad508f166d4af805cb98cd21a0260d9babb6a4c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92693875"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204633"
 ---
 # <a name="uncurriedop-function"></a>Função UncurriedOp
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dada uma função que retorna operações, retorna uma nova operação que usa as duas entradas como uma tupla.
