@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Synthesis.UpdatedOutputPattern
 title: Função UpdatedOutputPattern
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: UpdatedOutputPattern
 qsharp.summary: Update an output pattern according to gate mask.
-ms.openlocfilehash: be0246ea721069e75708a57ae56de0683dbd4fb5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a284e766fae99012ef742612077f4637d716cb8e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92696944"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230966"
 ---
 # <a name="updatedoutputpattern-function"></a>Função UpdatedOutputPattern
 
 Namespace: [Microsoft. Quantum. síntese](xref:Microsoft.Quantum.Synthesis)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Atualize um padrão de saída de acordo com a máscara de portão.

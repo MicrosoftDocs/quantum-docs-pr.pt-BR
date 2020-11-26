@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.EstimateEnergy
 title: Operação EstimateEnergy
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: EstimateEnergy
 qsharp.summary: Performs state preparation by applying a `statePrepUnitary` on an automatically allocated input state phase estimation with respect to `qpeUnitary`on the resulting state using a `phaseEstAlgorithm`.
-ms.openlocfilehash: ba4a5372aaf092c3ac3a1302f9715ca643be8436
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0a02a8aad891c45b184b9b18d4e9383236485940
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694932"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229487"
 ---
 # <a name="estimateenergy-operation"></a>Operação EstimateEnergy
 
 Namespace: [Microsoft. Quantum. Simulation](xref:Microsoft.Quantum.Simulation)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Executa a preparação do estado aplicando um `statePrepUnitary` em uma estimativa de fase de estado de entrada alocada automaticamente em relação ao `qpeUnitary` estado resultante usando um `phaseEstAlgorithm` .
@@ -40,7 +40,7 @@ Número de qubits usadas para executar a simulação.
 Um Oracle representando a preparação do estado para o gerador dinâmico inicial.
 
 
-### <a name="qpeunitary--qubit--unit-adj--ctl"></a>qpeUnitary: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [unidade](xref:microsoft.quantum.lang-ref.unit) do ano + CTL
+### <a name="qpeunitary--qubit--unit--is-adj--ctl"></a>qpeUnitary: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [unidade](xref:microsoft.quantum.lang-ref.unit)  é adj + CTL
 
 Um Oracle que representa um operador unitário $U $ representando a evolução do tempo $ \delta t $ em um gerador dinâmico com estado de terra $ \ket{\phi} $ e energia de estado terrestre $E = \phi \\ , \delta t $.
 

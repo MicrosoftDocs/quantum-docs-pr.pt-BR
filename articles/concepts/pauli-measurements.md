@@ -87,8 +87,8 @@ Autor: bradben UID: Microsoft. Quantum. Concepts. Pauli MS. Author: v-benbra MS.
 
 Nas discussões anteriores, concentramos-se em medidas de base computacional.
 Na verdade, há outras medidas comuns que ocorrem na computação Quantum que, de uma perspectiva de notação, são convenientes para expressar em termos de medidas de base computacional.
-À medida que você trabalha com Q# o, o tipo mais comum de medidas que você encontrará provavelmente serão as *medidas Paulis* , que generalizam as medidas de base computacional para incluir medidas em outras bases e de paridade entre diferentes qubits.
-Nesses casos, é comum discutir a medição de um operador Pauli, em geral, um operador como $ X, Y, z $ ou $ z \otimes z, x \otimes x, x \otimes Y $ e assim por diante.
+À medida que você trabalha com Q# o, o tipo mais comum de medidas que você encontrará provavelmente serão as *medidas Paulis*, que generalizam as medidas de base computacional para incluir medidas em outras bases e de paridade entre diferentes qubits.
+Nesses casos, é comum discutir a medição de um operador Pauli, em geral, um operador como $ X, Y, z $ ou $ z \otimes z, x \otimes x, x \otimes Y $ e assim por diante. 
 
 > [!TIP]
 > No Q# , os operadores qubit Pauli geralmente são representados por matrizes do tipo `Pauli[]` .
@@ -247,12 +247,12 @@ Para obter mais informações, consulte [`Measure`](xref:Microsoft.Quantum.Intri
 As informações da Quantum são poderosas.
 Ele nos permite fazer coisas incríveis, como números de fator exponencialmente mais rápidos do que os melhores algoritmos clássicos conhecidos, ou simular com eficiência sistemas de informações de alta correlação que exigem, de modo clássico, o custo exponencial para simular com precisão.
 No entanto, há limitações no poder da computação Quantum.
-Uma dessas limitações é fornecida pelo *teorema no-Cloning* .
+Uma dessas limitações é fornecida pelo *teorema no-Cloning*.
 
 O No-Cloning teorema é adequadamente nomeado.
 Ele não permite a clonagem de Estados de Quantum genérico por um computador Quantum.
 A prova do teorema é bastante simples.
-Embora uma prova completa do teorema sem clonagem seja um pouco técnica para nossa discussão aqui, a prova no caso de nenhum qubits auxiliar adicional está dentro de nosso escopo (auxiliares qubits são qubits usados para espaço transitório durante uma computação e são facilmente usados e gerenciados no Q# , consulte [qubits emprestados](xref:microsoft.quantum.guide.qubits#borrowed-qubits)).
+Embora uma prova completa do teorema sem clonagem seja um pouco técnica para nossa discussão aqui, a prova no caso de nenhum qubits auxiliar adicional está dentro de nosso escopo.
 
 Para esse computador Quantum, a operação de clonagem deve ser descrita por uma matriz unitário.
 Não permitimos a medição, já que corromperia o estado Quantum que estamos tentando clonar.
