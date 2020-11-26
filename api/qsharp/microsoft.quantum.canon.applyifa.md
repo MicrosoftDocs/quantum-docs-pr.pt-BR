@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfA
 title: Operação ApplyIfA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfA
 qsharp.summary: Applies a adjointable operation conditioned on a classical bit.
-ms.openlocfilehash: 279a069176ee24ed83406f72170462bf58c790d9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d2880bbb95ebaf621ef9e5885051b94f32a3f1cc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694306"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218760"
 ---
 # <a name="applyifa-operation"></a>Operação ApplyIfA
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma operação de adjointable condicionalmente em um bit clássico.
 
 ```qsharp
-operation ApplyIfA<'T> (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Unit
+operation ApplyIfA<'T> (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Unit is Adj
 ```
 
 
@@ -35,7 +35,7 @@ O sufixo `A` indica que a operação a ser aplicada é adjointable.
 
 ## <a name="input"></a>Entrada
 
-### <a name="op--t--unit-adj"></a>op: ' t => adj de [unidade](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--t--unit--is-adj"></a>op: ' T' = [unidade](xref:microsoft.quantum.lang-ref.unit)  de> é adj
 
 Uma operação a ser aplicada condicionalmente.
 

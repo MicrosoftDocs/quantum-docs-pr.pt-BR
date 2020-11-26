@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfOneA
 title: Operação ApplyIfOneA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfOneA
 qsharp.summary: Applies an adjointable operation conditioned on a classical result value being one.
-ms.openlocfilehash: 76c15aba6042c2801ecfe8470e82099c54ba3846
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 200908f2958b74e4823c891ef901474d75d18336
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694283"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218539"
 ---
 # <a name="applyifonea-operation"></a>Operação ApplyIfOneA
 
 Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma operação de modo adjacente condição em um valor de resultado clássico sendo um.
 
 ```qsharp
-operation ApplyIfOneA<'T> (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit
+operation ApplyIfOneA<'T> (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit is Adj
 ```
 
 
@@ -40,7 +40,7 @@ O sufixo `A` indica que a operação a ser aplicada é adjointable.
 Um resultado de medida que controla se op é aplicado ou não.
 
 
-### <a name="op--t--unit-adj"></a>op: ' t => adj de [unidade](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--t--unit--is-adj"></a>op: ' T' = [unidade](xref:microsoft.quantum.lang-ref.unit)  de> é adj
 
 Uma operação a ser aplicada condicionalmente.
 
