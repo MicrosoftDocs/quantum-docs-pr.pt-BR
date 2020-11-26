@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691727"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231648"
 ---
 # <a name="no-locq-style-guide"></a>Q# Guia de estilo #
 ## <a name="general-conventions"></a>Convenções gerais ##
@@ -96,7 +96,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-| &nbsp;  | Name | Descrição |
+| &nbsp;  | Nome | Descrição |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Limpar o uso de um verbo ("refletir") para indicar o efeito da operação. |
 | ☒ | <s>`operation XRotation`</s> | O uso da frase de substantivo sugere a função, em vez da operação. |
@@ -129,7 +129,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-| &nbsp;  | Name | Descrição |
+| &nbsp;  | Nome | Descrição |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | Comunica claramente a finalidade do ponto de entrada por meio do nome da operação. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | O uso de `Main` não comunica claramente a finalidade do ponto de entrada e é redundante com o `@EntryPoint()` atributo. |
@@ -171,7 +171,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-| &nbsp;   | Name | Descrição |
+| &nbsp;   | Nome | Descrição |
 |---|------|-------------|
 | ☑ | `X` | Atalho bem compreendido para "aplicar uma transformação de $X $" |
 | ☑ | `CNOT` | Atalho bem compreendido para "controlado-não" |
@@ -215,7 +215,7 @@ _*_
 Como Q# é um idioma fortemente e com rigidez de tipos, um valor de um tipo só pode ser usado como um valor de outro tipo usando uma chamada explícita para uma função de conversão de tipo.
 Isso é diferente de linguagens que permitem valores para alterar tipos implicitamente (por exemplo: promoção de tipos) ou por meio de conversão.
 Como resultado, as funções de conversão de tipo desempenham um papel importante no Q# desenvolvimento da biblioteca e compõem uma das decisões mais comumente encontradas sobre a nomenclatura.
-No entanto, observamos que, como as conversões de tipo são sempre _determinísticas_ , elas podem ser escritas como funções e, portanto, se enquadram no Conselho acima.
+No entanto, observamos que, como as conversões de tipo são sempre _determinísticas_, elas podem ser escritas como funções e, portanto, se enquadram no Conselho acima.
 Em particular, sugerimos que as funções de conversão de tipo nunca devem ser nomeadas como verbos (por exemplo: `ConvertToX` ) ou advérbio frases preposicionais ( `ToX` ), mas devem ser nomeadas como frases preposicionais de adjetivo que indicam os tipos de origem e de destino ( `XAsY` ).
 Ao listar tipos de matriz em nomes de função de conversão de tipo, recomendamos a abreviação `Arr` .
 Ao bloquear circunstâncias excepcionais, recomendamos que todas as funções de conversão de tipo sejam nomeadas usando `As` para que possam ser identificadas rapidamente.
@@ -228,7 +228,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-| &nbsp;   | Name | Descrição |
+| &nbsp;   | Nome | Descrição |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | A preposição "to" resulta em uma frase verbal, indicando uma operação e não uma função. |
 | ☒ | <s>`AsDouble`</s> | O tipo de entrada não é claro do nome da função. |
@@ -251,7 +251,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-| &nbsp;  | Name | Descrição |
+| &nbsp;  | Nome | Descrição |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Não use um sublinhado `_` para indicar que esta operação é somente para uso interno. |
 | ☑ | `internal operation ApplyDecomposedOperation` | A `internal` palavra-chave no início indica claramente que esta operação é apenas para uso interno. |
@@ -390,7 +390,7 @@ Da mesma forma, o servidor de linguagem fornecido com o kit de desenvolvimento Q
 Fazer uso de comentários de documentação pode ajudar os usuários a fazer sentido de código fornecendo uma referência útil para os detalhes que não são facilmente expressos usando as outras convenções deste documento.
 
 > [!div class="nextstepaction"]
-> [Referência de sintaxe de comentário da documentação](xref:microsoft.quantum.guide.filestructure#documentation-comments).
+> [Referência de sintaxe de comentário da documentação](xref:microsoft.quantum.qsharp.comments#documentation-comments).
 
 Para usar efetivamente essa funcionalidade para ajudar os usuários, é recomendável manter algumas coisas em mente ao escrever comentários de documentação.
 
