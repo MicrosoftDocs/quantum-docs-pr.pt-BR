@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyOperationRepeatedly
 title: Operação ApplyOperationRepeatedly
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyOperationRepeatedly
 qsharp.summary: ''
-ms.openlocfilehash: e403f6a9815b5d9b3ada3c232e2d1c3bc22fdde0
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1eb66e14d2c53fa70a50e1536e577ccf8956a114
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92694260"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218420"
 ---
-# <a name="applyoperationrepeatedly-operation"></a><span data-ttu-id="394a8-102">Operação ApplyOperationRepeatedly</span><span class="sxs-lookup"><span data-stu-id="394a8-102">ApplyOperationRepeatedly operation</span></span>
+# <a name="applyoperationrepeatedly-operation"></a><span data-ttu-id="c0365-102">Operação ApplyOperationRepeatedly</span><span class="sxs-lookup"><span data-stu-id="c0365-102">ApplyOperationRepeatedly operation</span></span>
 
-<span data-ttu-id="394a8-103">Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="394a8-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="c0365-103">Namespace: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="c0365-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="394a8-104">Agrupa [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="394a8-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="c0365-104">Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="c0365-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 
@@ -28,29 +28,29 @@ operation ApplyOperationRepeatedly<'T> (op : ('T => Unit), power : Int, target :
 ```
 
 
-## <a name="input"></a><span data-ttu-id="394a8-105">Entrada</span><span class="sxs-lookup"><span data-stu-id="394a8-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="c0365-105">Entrada</span><span class="sxs-lookup"><span data-stu-id="c0365-105">Input</span></span>
 
-### <a name="op--t--unit"></a><span data-ttu-id="394a8-106">op: ' T' = [unidade](xref:microsoft.quantum.lang-ref.unit) de></span><span class="sxs-lookup"><span data-stu-id="394a8-106">op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span> 
-
-
-
-
-### <a name="power--int"></a><span data-ttu-id="394a8-107">potência: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="394a8-107">power : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="op--t--unit"></a><span data-ttu-id="c0365-106">op: ' T' = [unidade](xref:microsoft.quantum.lang-ref.unit) de></span><span class="sxs-lookup"><span data-stu-id="c0365-106">op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span> 
 
 
 
 
-### <a name="target--t"></a><span data-ttu-id="394a8-108">destino: ' t</span><span class="sxs-lookup"><span data-stu-id="394a8-108">target : 'T</span></span>
+### <a name="power--int"></a><span data-ttu-id="c0365-107">potência: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="c0365-107">power : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+
+
+
+
+### <a name="target--t"></a><span data-ttu-id="c0365-108">destino: ' t</span><span class="sxs-lookup"><span data-stu-id="c0365-108">target : 'T</span></span>
 
 
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="394a8-109">Saída: [unidade](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="394a8-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="c0365-109">Saída: [unidade](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="c0365-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
 
 
-## <a name="type-parameters"></a><span data-ttu-id="394a8-110">Parâmetros de tipo</span><span class="sxs-lookup"><span data-stu-id="394a8-110">Type Parameters</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="c0365-110">Parâmetros de tipo</span><span class="sxs-lookup"><span data-stu-id="c0365-110">Type Parameters</span></span>
 
-### <a name="t"></a><span data-ttu-id="394a8-111">T'</span><span class="sxs-lookup"><span data-stu-id="394a8-111">'T</span></span>
+### <a name="t"></a><span data-ttu-id="c0365-111">T'</span><span class="sxs-lookup"><span data-stu-id="c0365-111">'T</span></span>
 
