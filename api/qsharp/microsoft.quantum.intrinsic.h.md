@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.H
 title: Operação H
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Applies the Hadamard transformation to a single qubit.
 
   \begin{align} H \mathrel{:=} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ 1 & -1 \end{bmatrix}. \end{align}
-ms.openlocfilehash: 1ba99d2f34c601b46b82fb853008464c3add965d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6f02390588c9de38f69802575429aff749f70ac5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92693336"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212368"
 ---
 # <a name="h-operation"></a>Operação H
 
 Namespace: [Microsoft. Quantum. intrínseco](xref:Microsoft.Quantum.Intrinsic)
 
-Agrupa [](https://nuget.org/packages/)
+Pacote: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Aplica a transformação Hadamard a um único qubit.
@@ -30,7 +30,7 @@ Aplica a transformação Hadamard a um único qubit.
 \end{align}
 
 ```qsharp
-operation H (qubit : Qubit) : Unit
+operation H (qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
