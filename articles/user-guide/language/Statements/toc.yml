@@ -1,0 +1,20 @@
+- name: Instruções em Q#
+  href: index.md
+- name: Escopos de associação
+  href: bindingscopes.md
+- name: Chamar instruções
+  href: callstatements.md
+- name: Devoluções e término
+  href: returnsandtermination.md
+- name: Declaração de variável e reatribuição
+  href: variabledeclarationsandreassignments.md
+- name: Iterações
+  href: iterations.md
+- name: Loops condicionais
+  href: conditionalloops.md
+- name: Ramificação condicional
+  href: conditionalbranching.md
+- name: Conjugações
+  href: conjugations.md
+- name: Gerenciamento de memória quântica
+  href: quantummemorymanagement.md
