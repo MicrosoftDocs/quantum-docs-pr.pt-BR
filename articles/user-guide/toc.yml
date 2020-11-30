@@ -1,13 +1,13 @@
 - name: Visão Geral/Conteúdo
   href: index.md
-- name: Noções básicas da linguagem Q#
-  href: basics.md
+- name: Programas Q#
+  href: programs.md
 - name: Maneiras de executar um programa em Q#
   href: host-programs.md
-- name: Linguagem Q#
+- name: Testando e depurando
+  href: testing-debugging.md
+- name: Guia da linguagem Q#
   href: language/toc.yml
-- name: Usar Q#
-  href: using-qsharp/toc.yml
 - name: Simuladores e avaliadores de recursos
   href: machines/toc.yml
 - name: Bibliotecas do Q#
