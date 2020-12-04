@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
-ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
+ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
+ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96318483"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604636"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimador de recursos do kit de desenvolvimento Quantum (QDK)
 
@@ -28,9 +28,9 @@ Você pode usar o estimador de recursos para executar qualquer Q# operação. Pa
 
 ### <a name="invoking-the-resources-estimator-from-c"></a>Invocando o estimador de recursos de C # 
 
-Assim como acontece com outros computadores de destino, primeiramente você cria uma instância da classe `ResourceEstimator` e, em seguida, passa-a como o primeiro parâmetro do método `Run` de uma operação.
+Assim como acontece com outros computadores de destino, primeiramente você cria uma instância da classe `ResourcesEstimator` e, em seguida, passa-a como o primeiro parâmetro do método `Run` de uma operação.
 
-Observe que, diferentemente da classe `QuantumSimulator`, a classe `ResourceEstimator` não implementa a interface <xref:System.IDisposable> e, portanto, você não precisa colocá-la em uma instrução `using`.
+Observe que, diferentemente da classe `QuantumSimulator`, a classe `ResourcesEstimator` não implementa a interface <xref:System.IDisposable> e, portanto, você não precisa colocá-la em uma instrução `using`.
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -123,7 +123,7 @@ namespace Quantum.MyProgram
 
 O estimador de recursos acompanha as seguintes métricas:
 
-|Metric|Descrição|
+|Métrica|Descrição|
 |----|----|
 |__CNOT__    |A contagem de operações de execução `CNOT` (também conhecida como operações Pauli X controladas).|
 |__QubitClifford__ |A contagem de execuções de uma única qubit Clifford e operações de Pauli.|
