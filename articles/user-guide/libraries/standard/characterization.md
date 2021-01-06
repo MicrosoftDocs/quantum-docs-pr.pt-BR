@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 72af3f5517b272d6d8159b158103b5af91d266b5
+ms.sourcegitcommit: c48cdafccb3487bf93d67fa80cdc64768445b691
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692151"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940879"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterização e estatísticas do Quantum #
 
@@ -56,7 +56,7 @@ Enfatizamos isso descrevendo brevemente a estimativa de fase iterativa em um ní
 
 Se for fornecido um estado de entrada que não seja um eigenstate, o que significa que, se $U (m) \ket{\phi \_ j} = e ^ {im\phi \_ j} $, o processo de estimativa de fase não determina, de forma não determinística, o estado Quantum em direção a um único eigenstate de energia.  O eigenstate, em última análise, é o eigenstate que tem mais probabilidade de produzir o observado `Result` .
 
-Especificamente, uma única etapa do PE executa a seguinte transformação não-unitário em um estado \begin{align} \ sum_j \sqrt{\Pr (\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac {\ sqrt {\ PR (\phi \_ j)} \sqrt{\Pr (\Text{Result} | \phi \_ j)} \Ket{\phi \_ j}} {\sqrt{\Pr (\phi \_ j) \sum \_ j \Pr (\Text{Result} | \phi \_ j)}}.
+Especificamente, uma única etapa do PE executa a seguinte transformação não-unitário em um estado \begin{align} \ sum_j \sqrt{\Pr (\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac {\ sqrt {\ PR (\phi \_ j)} \sqrt{\Pr (\Text{Result} | \phi \_ j)} \Ket{\phi \_ j}} {\sqrt{\Pr (\phi \_ j) \sum \_ k \Pr (\Text{Result} | \phi \_ k)}}.
 \end{align} como esse processo é iterado em vários `Result` valores, eigenstates que não têm valores máximos de $ \ prod_k \pr (\Text{Result} \_ k | \phi \_ j) $ serão suprimidas exponencialmente.
 Como resultado, o processo de inferência terá a tendência de convergir para Estados com um único eigenvalue se os experimentos forem escolhidos corretamente.
 
@@ -153,7 +153,7 @@ operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, ei
 ```
 
 A `bitsPrecision` entrada é exclusiva para `RobustPhaseEstimation` , enquanto `oracle` e `eigenstate` está em comum.
-Assim, como visto no **H2Sample** , uma operação pode aceitar um algoritmo de estimativa de fase iterativa com uma entrada do formulário `(DiscreteOracle, Qubit[]) => Unit` para permitir que um usuário especifique algoritmos de estimativa de fase arbitrária:
+Assim, como visto no **H2Sample**, uma operação pode aceitar um algoritmo de estimativa de fase iterativa com uma entrada do formulário `(DiscreteOracle, Qubit[]) => Unit` para permitir que um usuário especifique algoritmos de estimativa de fase arbitrária:
 
 ```qsharp
 operation H2EstimateEnergy(
