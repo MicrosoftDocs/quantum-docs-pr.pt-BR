@@ -1,27 +1,27 @@
 ---
 uid: Microsoft.Quantum.Simulation.BlockEncodingReflection
 title: Tipo definido pelo usuário BlockEncodingReflection
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: BlockEncodingReflection
 qsharp.summary: Represents a `BlockEncoding` that is also a reflection.
-ms.openlocfilehash: 24ad4a992bbec82eb8e8cd32e70650818f606ddc
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f80f55da96e8e767ede7d2714358dc1ef3f978ab
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96225390"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858150"
 ---
-# <a name="blockencodingreflection-user-defined-type"></a><span data-ttu-id="24e41-102">Tipo definido pelo usuário BlockEncodingReflection</span><span class="sxs-lookup"><span data-stu-id="24e41-102">BlockEncodingReflection user defined type</span></span>
+# <a name="blockencodingreflection-user-defined-type"></a><span data-ttu-id="a4d22-102">Tipo definido pelo usuário BlockEncodingReflection</span><span class="sxs-lookup"><span data-stu-id="a4d22-102">BlockEncodingReflection user defined type</span></span>
 
-<span data-ttu-id="24e41-103">Namespace: [Microsoft. Quantum. Simulation](xref:Microsoft.Quantum.Simulation)</span><span class="sxs-lookup"><span data-stu-id="24e41-103">Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)</span></span>
+<span data-ttu-id="a4d22-103">Namespace: [Microsoft. Quantum. Simulation](xref:Microsoft.Quantum.Simulation)</span><span class="sxs-lookup"><span data-stu-id="a4d22-103">Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)</span></span>
 
-<span data-ttu-id="24e41-104">Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="24e41-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="a4d22-104">Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="a4d22-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="24e41-105">Representa um `BlockEncoding` que também é uma reflexão.</span><span class="sxs-lookup"><span data-stu-id="24e41-105">Represents a `BlockEncoding` that is also a reflection.</span></span>
+<span data-ttu-id="a4d22-105">Representa um `BlockEncoding` que também é uma reflexão.</span><span class="sxs-lookup"><span data-stu-id="a4d22-105">Represents a `BlockEncoding` that is also a reflection.</span></span>
 
 ```qsharp
 
@@ -30,6 +30,6 @@ newtype BlockEncodingReflection = (Microsoft.Quantum.Simulation.BlockEncoding);
 
 
 
-## <a name="see-also"></a><span data-ttu-id="24e41-106">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="24e41-106">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a4d22-106">Consulte Também</span><span class="sxs-lookup"><span data-stu-id="a4d22-106">See Also</span></span>
 
-- [<span data-ttu-id="24e41-107">Microsoft. Quantum. Simulation. BlockEncoding</span><span class="sxs-lookup"><span data-stu-id="24e41-107">Microsoft.Quantum.Simulation.BlockEncoding</span></span>](xref:Microsoft.Quantum.Simulation.BlockEncoding)
+- [<span data-ttu-id="a4d22-107">Microsoft. Quantum. Simulation. BlockEncoding</span><span class="sxs-lookup"><span data-stu-id="a4d22-107">Microsoft.Quantum.Simulation.BlockEncoding</span></span>](xref:Microsoft.Quantum.Simulation.BlockEncoding)
