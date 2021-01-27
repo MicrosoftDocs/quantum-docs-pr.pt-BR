@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f4b69250ed49bd56c3066d5cd40db4b8abfc9cb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690874"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858698"
 ---
 # <a name="higher-order-control-flow"></a>Fluxo de controle de Higher-Order #
 
@@ -162,9 +162,9 @@ U(1, time / Float(nSteps), target);
 // ...
 ```
 
-Neste ponto, agora podemos ter uma razão da expansão Trotter – Suzuki *sem referência à mecânica quantum* .
+Neste ponto, agora podemos ter uma razão da expansão Trotter – Suzuki *sem referência à mecânica quantum*.
 A expansão é efetivamente um padrão de iteração muito específico motivado por $ \eqref{EQ: Trotter-Suzuki-0} $.
-Esse padrão de iteração é implementado por <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> :
+Esse padrão de iteração é implementado por <xref:Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA> :
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
@@ -213,7 +213,7 @@ Essa construção é precisamente `ApplyWith` , então escrevemos o corpo da nos
 ```
 
 Aqui, usamos <xref:Microsoft.Quantum.Canon.ApplyPauliFromBitString> para aplicar $P $, parcialmente aplicando seu destino para uso com o `ApplyWith` .
-No entanto, observe que precisamos transformar o registro de *controle* em nosso formato desejado, portanto, aplicamos parcialmente a operação interna `(Controlled oracle)` no *destino* .
+No entanto, observe que precisamos transformar o registro de *controle* em nosso formato desejado, portanto, aplicamos parcialmente a operação interna `(Controlled oracle)` no *destino*.
 Isso deixa de `ApplyWith` agir de acordo com o registro de controle com $P $, exatamente como desejamos.
 
 Neste ponto, poderíamos ser feito, mas está, de alguma forma, desconhecendo que nossa nova operação não "sente" como aplicar o `Controlled` functor.

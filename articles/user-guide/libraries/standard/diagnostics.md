@@ -4,16 +4,16 @@ description: Saiba mais sobre as funções de diagnóstico e as operações nas 
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1ab9b77c7536a1860064110810371d3a68e95b40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d13122187a24893d297cfdbb3ad4db03eb22ded0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690856"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858692"
 ---
 # <a name="diagnostics"></a>Diagnósticos #
 
@@ -27,7 +27,7 @@ O diagnóstico sobre valores clássicos pode ser obtido usando a <xref:Microsoft
 Por padrão, isso grava a cadeia de caracteres no console.
 Usado junto com cadeias de caracteres interpoladas, <xref:Microsoft.Quantum.Intrinsic.Message> facilita o relatório de informações de diagnóstico sobre valores clássicos:
 
-```Q#
+```qsharp
 let angle = Microsoft.Quantum.Math.PI() * 2.0 / 3.0;
 Message($"About to rotate by an angle of {angle}...");
 ```
@@ -45,9 +45,9 @@ Por comparação, a máquina de destino do [Toffoli Simulator](xref:microsoft.qu
 
 ## <a name="facts-and-assertions"></a>Fatos e asserções ##
 
-Conforme discutido em [teste e depuração](xref:microsoft.quantum.guide.testingdebugging), uma função ou operação com assinatura `Unit -> Unit` ou `Unit => Unit` , respectivamente, pode ser marcada como um *teste de unidade* .
+Conforme discutido em [teste e depuração](xref:microsoft.quantum.guide.testingdebugging), uma função ou operação com assinatura `Unit -> Unit` ou `Unit => Unit` , respectivamente, pode ser marcada como um *teste de unidade*.
 Cada teste de unidade geralmente consiste em um pequeno programa Quantum, juntamente com uma ou mais condições que verificam a exatidão desse programa.
-Essas condições podem vir na forma de _fatos_ , que verificam os valores de suas entradas ou _asserções_ , que verificam os Estados de um ou mais qubits passados como entrada.
+Essas condições podem vir na forma de _fatos_, que verificam os valores de suas entradas ou _asserções_, que verificam os Estados de um ou mais qubits passados como entrada.
 
 Por exemplo, `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` representa o fato matemático que $1 + 1 = $2, enquanto `AssertQubit(One, qubit)` representa a condição que a medição `qubit` retornará um `One` com certeza.
 No primeiro caso, podemos verificar a exatidão da condição, dado apenas seus valores, enquanto, no último, devemos saber algo sobre o estado do qubit para avaliar a asserção.
@@ -145,7 +145,7 @@ Nos casos em que uma operação implementa uma operação clássica reversível,
 
 Mais importante, no entanto, as duas abordagens testam diferentes propriedades das operações em exame.
 Como a declaração in-loco chama cada operação várias vezes, uma vez para cada Estado de entrada, quaisquer escolhas aleatórias e resultados de medidas podem ser alterados entre as chamadas.
-Por outro lado, a declaração referenciada chama cada operação exatamente uma vez, de modo que ela verifica se as operações são iguais *em uma única captura* .
+Por outro lado, a declaração referenciada chama cada operação exatamente uma vez, de modo que ela verifica se as operações são iguais *em uma única captura*.
 Esses dois testes são úteis para garantir a exatidão dos programas Quantum.
 
 

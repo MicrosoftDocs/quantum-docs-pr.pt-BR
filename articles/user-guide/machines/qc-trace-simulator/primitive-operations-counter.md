@@ -4,17 +4,17 @@ description: Saiba mais sobre o contador de operações do Microsoft QDK Primiti
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 19ea3c1f5a91c00de4d3e435318bf4cf8cdd83be
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690947"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858595"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Simulador de rastreamento Quantum: contador de operações primitivas
 
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>Usando o contador de operação primitiva em um programa de host C#
 
-O exemplo de C# a seguir nesta seção conta quantas <xref:Microsoft.Quantum.Intrinsic.T> operações são necessárias para implementar a <xref:Microsoft.Quantum.Intrinsic.ccnot> operação, com base no seguinte Q# código de exemplo:
+O exemplo de C# a seguir nesta seção conta quantas <xref:Microsoft.Quantum.Intrinsic.T> operações são necessárias para implementar a <xref:Microsoft.Quantum.Intrinsic.CCNOT> operação, com base no seguinte Q# código de exemplo:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -75,7 +75,7 @@ Por fim, você pode gerar todas as estatísticas coletadas pelo contador de oper
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - A visão geral do [simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) do quantum do kit de desenvolvimento Quantum.
 - A <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> referência da API.

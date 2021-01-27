@@ -1,6 +1,6 @@
 ---
 Título: descrição dos circuitos do Quantum: saiba como representar visualmente operações Quantum simples e complexas com diagramas de circuito Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. circuits MS. Author: v-benbra MS. Date: 12/11/2017 MS. tópico: article no-loc:
+Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. circuits MS. Author: v-benbra MS. Date: 12/11/2017 MS. tópico: conceptual no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -89,7 +89,7 @@ Essa sequência de portão é de importância fundamental para a computação Qu
 
 $$\mathrm{CNOT } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right ),$$
 
-As operações com essa ou mais complexidade são onipresentes em algoritmos Quantum e correção de erro Quantum, portanto, deve ser um grande alívio de que há um método simples para sua visualização chamada de *diagrama de circuito Quantum* .
+As operações com essa ou mais complexidade são onipresentes em algoritmos Quantum e correção de erro Quantum, portanto, deve ser um grande alívio de que há um método simples para sua visualização chamada de *diagrama de circuito Quantum*.
 O diagrama de circuito para preparar esse estado de Quantum de confusas máximo é:
 
 <!--- ![](.\media\1.svg) --->
