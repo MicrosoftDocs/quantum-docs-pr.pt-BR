@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e9b593ba69ed41a9fb3c1298b5b945a4cbe43d5d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692236"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858328"
 ---
 # <a name="data-structures-and-modeling"></a>Estruturas de dados e modelagem #
 
@@ -72,7 +72,7 @@ ApplyToEach(
 ## <a name="oracles"></a>Oracle ##
 
 Na [estimativa da fase](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) e na [amplificação da amplitude](https://en.wikipedia.org/wiki/Amplitude_amplification) , o conceito de um Oracle é exibido com frequência.
-Aqui, o termo Oracle se refere a uma sub-rotina Quantum Blackbox que age em um conjunto de qubits e retorna a resposta como uma fase.
+Aqui, o termo Oracle se refere a uma sub-rotina Quantum que age em um conjunto de qubits e retorna a resposta como uma fase.
 Essa sub-rotina muitas vezes pode ser considerada como uma entrada para um algoritmo Quantum que aceita o Oracle, além de alguns outros parâmetros, e aplica uma série de operações Quantum e tratando uma chamada para essa sub-rotina Quantum como se fosse um portão fundamental.
 Obviamente, para realmente implementar o algoritmo maior, uma decomposição concreta do Oracle em Gates fundamentais deve ser fornecida, mas essa decomposição não é necessária para entender o algoritmo que chama o Oracle.
 No Q# , essa abstração é representada usando essas operações são valores de primeira classe, de modo que as operações podem ser passadas para implementações de algoritmos Quantum de uma maneira preta.

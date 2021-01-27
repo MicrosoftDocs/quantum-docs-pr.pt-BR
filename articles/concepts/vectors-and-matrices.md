@@ -1,6 +1,6 @@
 ---
 Título: vetores e matrizes na descrição da computação Quantum: Aprenda as noções básicas de como trabalhar com vetores e matrizes.
-Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. vetores MS. Author: v-benbra MS. Date: 12/11/2017 MS. tópico: article no-loc:
+Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. vetores MS. Author: v-benbra MS. Date: 12/11/2017 MS. tópico: conceptual no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -85,7 +85,7 @@ Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. vetores MS. Author: v-be
 
 # <a name="vectors-and-matrices"></a>Vetores e matrizes
 
-Alguma familiaridade com vetores e matrizes é essencial para entender a computação Quantum. Fornecemos uma breve introdução abaixo e os leitores interessados são recomendados para ler uma referência padrão em Algebra linear, como *Strang, G. (1993). Introdução à algebra linear (Vol. 3). Wellesley, MA: Wellesley-Cambridge, Press* ou uma referência online, como [Algebra linear](http://joshua.smcvt.edu/linearalgebra/).
+Alguma familiaridade com vetores e matrizes é essencial para entender a computação Quantum. Fornecemos uma breve introdução abaixo e os leitores interessados são recomendados para ler uma referência padrão em Algebra linear, como *Strang, G. (1993). Introdução à algebra linear (Vol. 3). Wellesley, MA: Wellesley-Cambridge pressione* ou uma referência online como [Algebra linear](http://joshua.smcvt.edu/linearalgebra/).
 
 Um vetor de coluna (ou simplesmente [*vetor*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v $ de Dimension (ou tamanho) $ n $ é uma coleção de $ n $ números complexos $ (v_1, v_2, \ldots, v_n) $ organizados como uma coluna:
 
