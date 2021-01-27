@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.R
 title: Operação de R
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,51 +10,51 @@ qsharp.summary: >-
   Applies a rotation about the given Pauli axis.
 
   \begin{align} R_{\mu}(\theta) \mathrel{:=} e^{-i \theta \sigma_{\mu} / 2}, \end{align} where $\mu \in \{I, X, Y, Z\}$.
-ms.openlocfilehash: 89aa5b2867068d4352a0b9550e8d22aa77439111
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1df4b1197e885e479339e542e8c1ffaeb392543d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96199021"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98818726"
 ---
-# <a name="r-operation"></a><span data-ttu-id="48564-102">Operação de R</span><span class="sxs-lookup"><span data-stu-id="48564-102">R operation</span></span>
+# <a name="r-operation"></a><span data-ttu-id="b71fb-102">Operação de R</span><span class="sxs-lookup"><span data-stu-id="b71fb-102">R operation</span></span>
 
-<span data-ttu-id="48564-103">Namespace: [Microsoft. Quantum. intrínseco](xref:Microsoft.Quantum.Intrinsic)</span><span class="sxs-lookup"><span data-stu-id="48564-103">Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)</span></span>
+<span data-ttu-id="b71fb-103">Namespace: [Microsoft. Quantum. intrínseco](xref:Microsoft.Quantum.Intrinsic)</span><span class="sxs-lookup"><span data-stu-id="b71fb-103">Namespace: [Microsoft.Quantum.Intrinsic](xref:Microsoft.Quantum.Intrinsic)</span></span>
 
-<span data-ttu-id="48564-104">Pacote: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="48564-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="b71fb-104">Pacote: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="b71fb-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
-<span data-ttu-id="48564-105">Aplica uma rotação sobre o eixo de Pauli fornecido.</span><span class="sxs-lookup"><span data-stu-id="48564-105">Applies a rotation about the given Pauli axis.</span></span>
+<span data-ttu-id="b71fb-105">Aplica uma rotação sobre o eixo de Pauli fornecido.</span><span class="sxs-lookup"><span data-stu-id="b71fb-105">Applies a rotation about the given Pauli axis.</span></span>
 
-<span data-ttu-id="48564-106">\begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \ sigma_ {\mu}/2}, \end{align} em que $ \mu na \{ i, X, Y, Z \} $.</span><span class="sxs-lookup"><span data-stu-id="48564-106">\begin{align} R_{\mu}(\theta) \mathrel{:=} e^{-i \theta \sigma_{\mu} / 2}, \end{align} where $\mu \in \{I, X, Y, Z\}$.</span></span>
+<span data-ttu-id="b71fb-106">\begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \ sigma_ {\mu}/2}, \end{align} em que $ \mu na \{ i, X, Y, Z \} $.</span><span class="sxs-lookup"><span data-stu-id="b71fb-106">\begin{align} R_{\mu}(\theta) \mathrel{:=} e^{-i \theta \sigma_{\mu} / 2}, \end{align} where $\mu \in \{I, X, Y, Z\}$.</span></span>
 
 ```qsharp
 operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="48564-107">Entrada</span><span class="sxs-lookup"><span data-stu-id="48564-107">Input</span></span>
+## <a name="input"></a><span data-ttu-id="b71fb-107">Entrada</span><span class="sxs-lookup"><span data-stu-id="b71fb-107">Input</span></span>
 
-### <a name="pauli--pauli"></a><span data-ttu-id="48564-108">Pauli: [Pauli](xref:microsoft.quantum.lang-ref.pauli)</span><span class="sxs-lookup"><span data-stu-id="48564-108">pauli : [Pauli](xref:microsoft.quantum.lang-ref.pauli)</span></span>
+### <a name="pauli--pauli"></a><span data-ttu-id="b71fb-108">Pauli: [Pauli](xref:microsoft.quantum.lang-ref.pauli)</span><span class="sxs-lookup"><span data-stu-id="b71fb-108">pauli : [Pauli](xref:microsoft.quantum.lang-ref.pauli)</span></span>
 
-<span data-ttu-id="48564-109">Operador Pauli ($ \mu $) a ser exponenciação para formar a rotação.</span><span class="sxs-lookup"><span data-stu-id="48564-109">Pauli operator ($\mu$) to be exponentiated to form the rotation.</span></span>
-
-
-### <a name="theta--double"></a><span data-ttu-id="48564-110">teta: [duplo](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="48564-110">theta : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
-
-<span data-ttu-id="48564-111">Ângulo sobre o qual o qubit deve ser girado.</span><span class="sxs-lookup"><span data-stu-id="48564-111">Angle about which the qubit is to be rotated.</span></span>
+<span data-ttu-id="b71fb-109">Operador Pauli ($ \mu $) a ser exponenciação para formar a rotação.</span><span class="sxs-lookup"><span data-stu-id="b71fb-109">Pauli operator ($\mu$) to be exponentiated to form the rotation.</span></span>
 
 
-### <a name="qubit--qubit"></a><span data-ttu-id="48564-112">qubit: [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="48564-112">qubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
+### <a name="theta--double"></a><span data-ttu-id="b71fb-110">teta: [duplo](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="b71fb-110">theta : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
-<span data-ttu-id="48564-113">Qubit ao qual a portão deve ser aplicada.</span><span class="sxs-lookup"><span data-stu-id="48564-113">Qubit to which the gate should be applied.</span></span>
+<span data-ttu-id="b71fb-111">Ângulo sobre o qual o qubit deve ser girado.</span><span class="sxs-lookup"><span data-stu-id="b71fb-111">Angle about which the qubit is to be rotated.</span></span>
 
 
+### <a name="qubit--qubit"></a><span data-ttu-id="b71fb-112">qubit: [qubit](xref:microsoft.quantum.lang-ref.qubit)</span><span class="sxs-lookup"><span data-stu-id="b71fb-112">qubit : [Qubit](xref:microsoft.quantum.lang-ref.qubit)</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="48564-114">Saída: [unidade](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="48564-114">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="b71fb-113">Qubit ao qual a portão deve ser aplicada.</span><span class="sxs-lookup"><span data-stu-id="b71fb-113">Qubit to which the gate should be applied.</span></span>
 
 
 
-## <a name="remarks"></a><span data-ttu-id="48564-115">Comentários</span><span class="sxs-lookup"><span data-stu-id="48564-115">Remarks</span></span>
+## <a name="output--unit"></a><span data-ttu-id="b71fb-114">Saída: [unidade](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="b71fb-114">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-<span data-ttu-id="48564-116">Quando chamado com `pauli = PauliI` , essa operação aplica uma *fase global*.</span><span class="sxs-lookup"><span data-stu-id="48564-116">When called with `pauli = PauliI`, this operation applies a *global phase*.</span></span> <span data-ttu-id="48564-117">Essa fase pode ser significativa quando usada com o `Controlled` functor.</span><span class="sxs-lookup"><span data-stu-id="48564-117">This phase can be significant when used with the `Controlled` functor.</span></span>
+
+
+## <a name="remarks"></a><span data-ttu-id="b71fb-115">Comentários</span><span class="sxs-lookup"><span data-stu-id="b71fb-115">Remarks</span></span>
+
+<span data-ttu-id="b71fb-116">Quando chamado com `pauli = PauliI` , essa operação aplica uma *fase global*.</span><span class="sxs-lookup"><span data-stu-id="b71fb-116">When called with `pauli = PauliI`, this operation applies a *global phase*.</span></span> <span data-ttu-id="b71fb-117">Essa fase pode ser significativa quando usada com o `Controlled` functor.</span><span class="sxs-lookup"><span data-stu-id="b71fb-117">This phase can be significant when used with the `Controlled` functor.</span></span>
