@@ -4,17 +4,17 @@ description: Saiba mais sobre as atualizações mais recentes da versão prévia
 author: bradben
 ms.author: v-benbra
 ms.date: 8/30/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1c3c502b6487482f06820e07425b8516f259fb0d
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231784"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856655"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas sobre a versão do Microsoft Quantum Development Kit
 
@@ -24,6 +24,16 @@ Para obter instruções de instalação, consulte o [guia de instalação](xref:
 
 Para obter instruções de atualização, consulte o [guia de atualização](xref:microsoft.quantum.update).
 
+## <a name="version-0152101125897"></a>0.15.2101125897 da versão
+
+*Data de lançamento: janeiro de 26, 2021*
+
+- Alocação qubit simplificada, fornecendo uma sintaxe mais conveniente para alocar qubits, [consulte os detalhes no Q# repositório de idioma](https://github.com/microsoft/qsharp-language/blob/main/Approved/1-implicitly-scoped-qubit-allocation.md).
+- Criado QDK-Python repositório que inclui `azure-quantum` o, o cliente Python para enviar trabalhos de otimização inspirados por Quantum para o serviço Quantum do Azure, bem como `qdk` , incluindo `qdk.chemistry` , uma camada de conveniência baseada em Python para a Q# biblioteca química que inclui visualização e funcionalidade de molecular para gerar arquivos de entrada para vários pacotes de química, como NWChem, Psi4 e OpenMolcas.
+- Os parênteses agora são opcionais para a operação e tipos de função e `if` instruções, e `elif` `while` `until` . Parênteses para `for` , `use` e as `borrow` instruções foram preteridas.
+- Estimativas de largura aprimoradas para profundidade ideal, [Consulte detalhes](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159).
+- Aplicar a operação unitário fornecida como matriz explícita usando `ApplyUnitary` ([QuantumLibraries # 391](https://github.com/microsoft/QuantumLibraries/pull/391), contribuição externa por Dmytro Fedoriaka)
+- Corrigido https://github.com/microsoft/iqsharp/issues/387 pela redução do impacto no desempenho na Q# inicialização do kernel.
 ## <a name="version-0142011120240"></a>0.14.2011120240 da versão
 
 *Data de lançamento: 25 de novembro de 2020*
@@ -486,14 +496,7 @@ Saiba mais sobre a [biblioteca de química do Quantum Development Kit](xref:micr
 
 Com a nova biblioteca de química, estamos separando as bibliotecas em um novo repositório do GitHub, [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries).  Os exemplos permanecem no repositório [Microsoft/Quantum](https://github.com/Microsoft/Quantum).  Contribuições são bem-vindas em ambos!
 
-Esta versão inclui correções de bugs e recursos para problemas relatados pela Comunidade:
-
-* IntelliSense para Q# ? ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918)).
-* Arquivos .qs ([UserVoice](https://quantum.uservoice.com/forums/906097/suggestions/32593049)).
-* Melhoria da mensagem de erro quando as chaves são abreviadas na instrução if ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/34718518)).
-* Suporte à desconstrução de tupla em (re-)associação mutável ([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/35020444)).
-* Erro ao executar o BitFlipCode fornecido ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546)).
-* H2SimulationGUI exibe grandes picos às vezes ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34668370)).
+Esta versão inclui correções de bugs e recursos para problemas relatados pela Comunidade.
 
 ### <a name="community-contributions"></a>Contribuições da Comunidade
 
@@ -509,15 +512,7 @@ Obrigado também a Rohit Gupta ([@guptarohit](https://github.com/guptarohit),[PR
 
 *Data de lançamento: 10 de setembro de 2018*
 
-Esta versão inclui correções de bugs para problemas relatados pela Comunidade. Incluindo:
-
-* Não é possível usar o operador SHIFT ([GitHub](https://github.com/Microsoft/Quantum/issues/75)).
-* `DumpMachine` / `DumpRegister` falha em `QCTraceSimulator` ao imprimir no console ([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34709680)).
-* Permitir a alocação de 0 qubits ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34768069-allow-allocating-0-qubits)).
-* `AssertQubitState` requer chamada Complex() explícita ([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34713733-assertqubitstate-requires-explicit-complex-call)).
-* A operação `Measure` sempre retorna `One` no macOS ([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546)).
-
-Obrigado! 
+Esta versão inclui correções de bugs para problemas relatados pela Comunidade.
 
 ## <a name="version-0218063001"></a>Versão 0.2.1806.3001
 

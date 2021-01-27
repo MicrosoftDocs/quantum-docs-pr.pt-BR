@@ -4,24 +4,24 @@ description: Saiba como os sistemas eletrônicos do molecular são simulados usa
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.quantummodels
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4ff3d11bfd4dae5489fc4b7efe4da4ccda00882f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c12ab277f06bed61991a26af96953ccdbf72b642
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833914"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856214"
 ---
 # <a name="quantum-models-for-electronic-systems"></a>Modelos de Quantum para sistemas eletrônicos
 
 Para simular sistemas eletrônicos, precisamos primeiro começar especificando o Hamiltonian, que pode ser encontrado pelo procedimento de quantificação canônica descrito acima.
 Especificamente, para $N _e $ elétrons com o nuclei de tempo $p _i $ (em três dimensões) e em massa $m _E $ e os vetores de posição $x _i $ juntamente com com encargos $Z _k e $ em posições $y _k $, o operador Hamiltonian lê \begin{Equation} \hat{H} = \sum \_ {i = 1} ^ {N \_ e} \frac{\hat{p} \_ i ^ 2} {2m \_ e} + \frac {1} {2} \sum \_ {i\ne j} \frac{e ^ 2} {| \hat{x} \_ i-\hat{x} \_ j |}-\sum \_ {i, k} \frac{Z \_ ke ^ 2} {| \hat{x} \_ i-{y} \_ k |} + \frac {1} {2} \ sum_ {k\ne k '} \frac{Z \_ KZ \_ {k '} e ^ 2} {| y \_ k-y \_ k ' |}. \label{EQ: Ham} \end{Equation} os operadores de tempo $ \hat{p} \_ i ^ 2 $ podem ser exibidos em espaço real como operadores laplaciana, ou seja, $ \hat{p} \_ i ^ 2 =-\partial \_ {x \_ i} ^ 2-\partial \_ {y \_ i} ^ 2-\partial \_ {z \_ i} ^ 2 $.
 Aqui, fizemos a suposição de simplificação de que os nuclei estão em repouso para o molécula.
-Isso é conhecido como a aproximação de Oppenheimer e tende a ser válido para o espectro de energia de baixa energia de $ \hat{H} $, já que a massa de US $1/1836 $ é a massa de um Proton.
+Isso é conhecido como a aproximação de Born-Oppenheimer e tende a ser válido para o espectro de energia de baixa energia de $ \hat{H} $, já que a massa de US $1/1836 $ é a massa de um Proton.
 Esse operador Hamiltonian pode ser facilmente encontrado escrevendo a energia de um sistema de $N \_ e $ elétrons e aplicando o processo de quantificação canônica descrito no [Quantum Dynamics](xref:microsoft.quantum.chemistry.concepts.quantumdynamics).
 
 Para construir a representação de matriz unitário para $e ^ {-i\hat {H} t} $, precisamos representar o operador $ \hat{H} $ como uma matriz.
@@ -36,7 +36,7 @@ Por esse motivo, escolher uma base que possa representar de forma concisa o prob
 
 Há muitas bases apropriadas que podem ser usadas e a escolha de uma boa base para se ajustar ao problema é grande parte da arte do quantum química.
 Talvez os conjuntos de base mais simples sejam ARM (Slater-tipo-órbitas), que são soluções (ortogonaled) para a equação Schrödinger (ou seja, eigenfunctions de $ \hat{H} $) para Atoms semelhantes a Hydrogen.
-Outros conjuntos de base, como planos-ondas ou órbitas de espaço real, podem ser usados e, para obter mais detalhes, nos referimos ao leitor curioso ao texto padrão [' molecular Electronic-Structure teoria '](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) por Helgaker.
+Outros conjuntos de base, como planos-ondas ou órbitas de espaço real, podem ser usados e, para obter mais detalhes, nos referimos ao leitor curioso ao texto padrão [' Molecular Electronic-Structure teoria '](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) por Helgaker.
 
 Embora os Estados usados no modelo acima possam parecer arbitrários, as restrições de locais da Quantum quântico nos Estados que podem ser encontrados por natureza.
 Em particular, todos os Estados de Quantum eletrônico válidos devem ser antisimétrico em troca de rótulos de emails eletrônicos.
