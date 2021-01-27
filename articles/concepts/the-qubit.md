@@ -1,6 +1,6 @@
 ---
 Título: o qubit na descrição da computação Quantum: Saiba mais sobre o qubits, a unidade fundamental de informações na computação Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. qubit MS. Author: v-benbra MS. Date: 12/11/2017 MS. tópico: article no-loc:
+Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. qubit MS. Author: v-benbra MS. Date: 12/11/2017 MS. tópico: conceptual no-loc:
 - "Q#"
 - "$$v"
 - "$$"
