@@ -5,18 +5,18 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 214d584840f235868c66a1fb3ee24d0acab49630
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692161"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857233"
 ---
-# <a name="applications"></a>Aplicativos #
+# <a name="applications"></a>Aplicativo #
 
 ## <a name="hamiltonian-simulation"></a>Simulação hamiltoniana ##
 
@@ -140,7 +140,7 @@ operation EstimateAdiabaticStateEnergy(
 
 ## <a name="shors-algorithm"></a>Algoritmo de Shor ##
 O algoritmo do Atal continua sendo um dos desenvolvimentos mais significativos na computação Quantum, pois ele mostrou que os computadores Quantum podem ser usados para resolver problemas importantes e, no momento, inmanejáveis.
-O algoritmo do Atal fornece uma maneira rápida de fatorar números grandes usando um computador Quantum, um problema chamado de *fatoração* .
+O algoritmo do Atal fornece uma maneira rápida de fatorar números grandes usando um computador Quantum, um problema chamado de *fatoração*.
 A segurança de muitos cryptosystems de hoje é baseada na suposição de que não existe um algoritmo rápido para fatoração.
 Portanto, o algoritmo de Atal teve um impacto profundo em como pensamos na segurança em um mundo posterior.
 
@@ -151,7 +151,7 @@ Examinamos essas duas etapas abaixo.
 
 ### <a name="period-finding"></a>Localização do período ###
 
-Depois de ver como o trabalho de transformação de Fourier de Quantum e a estimativa de fase (consulte [algoritmos de Quantum](xref:microsoft.quantum.libraries.standard.algorithms)), podemos usar essas ferramentas para resolver um problema computacional de forma clássica, chamado *localização de períodos* .  Na próxima seção, veremos como aplicar a localização do período à fatoração.
+Depois de ver como o trabalho de transformação de Fourier de Quantum e a estimativa de fase (consulte [algoritmos de Quantum](xref:microsoft.quantum.libraries.standard.algorithms)), podemos usar essas ferramentas para resolver um problema computacional de forma clássica, chamado *localização de períodos*.  Na próxima seção, veremos como aplicar a localização do período à fatoração.
 
 Considerando dois inteiros $a $ e $N $, em que $a<N $, a meta do período que localiza, também chamada de Order Localization, é encontrar a _ordem_ $r $ of $a $ módulo $N $, em que $r $ é definido para ser o inteiro mínimo positivo, de forma que $a ^ r \equiv 1 \Text{mod} N $.  
 
@@ -178,7 +178,7 @@ O $U controlado _a Gate mapeia $ \ket{x} $ para $ \ket{(AX) \Text{mod} N} $ se o
 Para atingir $ (a ^ NX) \Text{mod} N $, podemos simplesmente aplicar controlled-$U _ {a ^ N} $, em que calculamos $a ^ N \Text{mod} N $ de forma clássica para conectar-se ao circuito Quantum.  
 Os circuitos para atingir essa aritmética de modulação foram descritos na [documentação aritmética do Quantum](./algorithms.md#arithmetic), especificamente, exigimos um circuito de exponenciação modular para implementar as \_ operações {a ^ i} $ controladas por $U.
 
-Enquanto o circuito acima corresponde à [estimativa da fase Quantum](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) e habilita explicitamente a localização da ordem, podemos reduzir o número de qubits necessário. Podemos seguir o método de Beauregard para a localização de pedidos, conforme descrito [na página 8 de arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), ou use uma das rotinas de estimativa de fase disponível em Microsoft. Quantum. caracterization. Por exemplo, a [estimativa de fase robusta](xref:microsoft.quantum.characterization.robustphaseestimation) também usa um qubit extra.
+Enquanto o circuito acima corresponde à [estimativa da fase Quantum](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) e habilita explicitamente a localização da ordem, podemos reduzir o número de qubits necessário. Podemos seguir o método de Beauregard para a localização de pedidos, conforme descrito [na página 8 de arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), ou use uma das rotinas de estimativa de fase disponível em Microsoft. Quantum. caracterization. Por exemplo, a [estimativa de fase robusta](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation) também usa um qubit extra.
 
 ### <a name="factoring"></a>Cálculo ###
 A meta de fatoração é determinar os dois fatores primos de Integer $N $, em que $N $ é um número de $n $-bit.  
