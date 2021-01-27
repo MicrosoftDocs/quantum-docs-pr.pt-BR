@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fc8e46aa22cb2575de42cfc3d4f57c43e5d3f7b0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692037"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857201"
 ---
 # <a name="error-correction"></a>Correção de erro #
 
@@ -61,7 +61,7 @@ Denotamos os resultados de cada medição pelo sinal do eigenvalue observado, $ 
 | $X _2 $ | US $ \ket {001} $ | US $ \ket {110} $ | $+$ | $-$ |
 
 Assim, os resultados das duas medições determinam exclusivamente qual erro de inversão de bit ocorreu, mas sem revelar nenhuma informação sobre o estado que codificamos.
-Chamamos esses resultados de uma *síndrome* e referimos-se ao processo de mapeamento de uma síndrome de volta para o erro que o causou como *recuperação* .
+Chamamos esses resultados de uma *síndrome* e referimos-se ao processo de mapeamento de uma síndrome de volta para o erro que o causou como *recuperação*.
 Em particular, enfatizamos que a recuperação é um procedimento de inferência *clássico* que usa como entrada a síndrome que ocorreu e retorna uma receita para corrigir quaisquer erros que possam ter ocorrido.
 
 > [!NOTE]
@@ -70,7 +70,7 @@ Em particular, enfatizamos que a recuperação é um procedimento de inferência
 > Da mesma forma, a aplicação de uma operação de inversão de fase `Z` mapeará $ \ket{\overline {1} } $ para $-\ket{\overline {1} } $ e, portanto, mapeará $ \ket{\overline{+}} $ para $ \ket{\overline {-} } $.
 > Em geral, os códigos podem ser criados para lidar com um número maior de erros e para manipular $Z $ erros, bem como $X $ erros.
 
-A percepção de que podemos descrever as medidas na correção de erro Quantum que atuam da mesma forma em todos os Estados de código, é a essência do *semiformal do estabilizador* .
+A percepção de que podemos descrever as medidas na correção de erro Quantum que atuam da mesma forma em todos os Estados de código, é a essência do *semiformal do estabilizador*.
 A Q# Canon fornece uma estrutura para descrever a codificação e decodificação de códigos de estabilizador e para descrever como um se recupera de erros.
 Nesta seção, descrevemos essa estrutura e seu aplicativo com alguns códigos de correção de erro de Quantum simples.
 
