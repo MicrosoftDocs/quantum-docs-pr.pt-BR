@@ -1,48 +1,55 @@
 ---
 uid: Microsoft.Quantum.Arrays._SwapOrderToPermuteArray
 title: Função _SwapOrderToPermuteArray
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: _SwapOrderToPermuteArray
 qsharp.summary: Returns the order elements in an array need to be swapped to produce an ordered array. Assumes swaps occur in place.
-ms.openlocfilehash: 9df2ec00d91c1124fae960efd15d576b15b0223c
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ff8e4e23dde7d69f93054a275548ded49d5b0bfb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221701"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846286"
 ---
-# <a name="_swapordertopermutearray-function"></a><span data-ttu-id="83f3b-102">Função _SwapOrderToPermuteArray</span><span class="sxs-lookup"><span data-stu-id="83f3b-102">_SwapOrderToPermuteArray function</span></span>
+# <a name="_swapordertopermutearray-function"></a><span data-ttu-id="70985-102">Função _SwapOrderToPermuteArray</span><span class="sxs-lookup"><span data-stu-id="70985-102">_SwapOrderToPermuteArray function</span></span>
 
-<span data-ttu-id="83f3b-103">Namespace: [Microsoft. Quantum. arrays](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="83f3b-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
+<span data-ttu-id="70985-103">Namespace: [Microsoft. Quantum. arrays](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="70985-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
 
-<span data-ttu-id="83f3b-104">Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="83f3b-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="70985-104">Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="70985-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="83f3b-105">Retorna os elementos de ordem em uma matriz que precisam ser trocados para produzir uma matriz ordenada.</span><span class="sxs-lookup"><span data-stu-id="83f3b-105">Returns the order elements in an array need to be swapped to produce an ordered array.</span></span>
-<span data-ttu-id="83f3b-106">Pressupõe que as trocas ocorrem em vigor.</span><span class="sxs-lookup"><span data-stu-id="83f3b-106">Assumes swaps occur in place.</span></span>
+<span data-ttu-id="70985-105">Retorna os elementos de ordem em uma matriz que precisam ser trocados para produzir uma matriz ordenada.</span><span class="sxs-lookup"><span data-stu-id="70985-105">Returns the order elements in an array need to be swapped to produce an ordered array.</span></span>
+<span data-ttu-id="70985-106">Pressupõe que as trocas ocorrem em vigor.</span><span class="sxs-lookup"><span data-stu-id="70985-106">Assumes swaps occur in place.</span></span>
 
 ```qsharp
 function _SwapOrderToPermuteArray (newOrder : Int[]) : (Int, Int)[]
 ```
 
 
-## <a name="input"></a><span data-ttu-id="83f3b-107">Entrada</span><span class="sxs-lookup"><span data-stu-id="83f3b-107">Input</span></span>
+## <a name="input"></a><span data-ttu-id="70985-107">Entrada</span><span class="sxs-lookup"><span data-stu-id="70985-107">Input</span></span>
 
-### <a name="neworder--int"></a><span data-ttu-id="83f3b-108">newOrder: [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="83f3b-108">newOrder : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
+### <a name="neworder--int"></a><span data-ttu-id="70985-108">newOrder: [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="70985-108">newOrder : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
 
-<span data-ttu-id="83f3b-109">Matriz com a permutação dos índices da nova matriz.</span><span class="sxs-lookup"><span data-stu-id="83f3b-109">Array with the permutation of the indices of the new array.</span></span> <span data-ttu-id="83f3b-110">Deve haver $n elementos $, cada um com um inteiro exclusivo de $0 $ a $n-$1.</span><span class="sxs-lookup"><span data-stu-id="83f3b-110">There should be $n$ elements, each being a unique integer from $0$ to $n-1$.</span></span>
+<span data-ttu-id="70985-109">Matriz com a permutação dos índices da nova matriz.</span><span class="sxs-lookup"><span data-stu-id="70985-109">Array with the permutation of the indices of the new array.</span></span> <span data-ttu-id="70985-110">Deve haver $n elementos $, cada um com um inteiro exclusivo de $0 $ a $n-$1.</span><span class="sxs-lookup"><span data-stu-id="70985-110">There should be $n$ elements, each being a unique integer from $0$ to $n-1$.</span></span>
 
 
 
-## <a name="output--intint"></a><span data-ttu-id="83f3b-111">Saída: ([int](xref:microsoft.quantum.lang-ref.int),[int](xref:microsoft.quantum.lang-ref.int)) []</span><span class="sxs-lookup"><span data-stu-id="83f3b-111">Output : ([Int](xref:microsoft.quantum.lang-ref.int),[Int](xref:microsoft.quantum.lang-ref.int))[]</span></span>
+## <a name="output--intint"></a><span data-ttu-id="70985-111">Saída: ([int](xref:microsoft.quantum.lang-ref.int),[int](xref:microsoft.quantum.lang-ref.int)) []</span><span class="sxs-lookup"><span data-stu-id="70985-111">Output : ([Int](xref:microsoft.quantum.lang-ref.int),[Int](xref:microsoft.quantum.lang-ref.int))[]</span></span>
 
-<span data-ttu-id="83f3b-112">A tupla representa os dois índices a serem trocados.</span><span class="sxs-lookup"><span data-stu-id="83f3b-112">The tuple represents the two indices to be swapped.</span></span> <span data-ttu-id="83f3b-113">As trocas começam no índice mais baixo.</span><span class="sxs-lookup"><span data-stu-id="83f3b-113">The swaps begin at the lowest index.</span></span>
+<span data-ttu-id="70985-112">A tupla representa os dois índices a serem trocados.</span><span class="sxs-lookup"><span data-stu-id="70985-112">The tuple represents the two indices to be swapped.</span></span> <span data-ttu-id="70985-113">As trocas começam no índice mais baixo.</span><span class="sxs-lookup"><span data-stu-id="70985-113">The swaps begin at the lowest index.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="83f3b-114">Comentários</span><span class="sxs-lookup"><span data-stu-id="83f3b-114">Remarks</span></span>
+## <a name="example"></a><span data-ttu-id="70985-114">Exemplo</span><span class="sxs-lookup"><span data-stu-id="70985-114">Example</span></span>
 
-## <a name="psuedocode"></a><span data-ttu-id="83f3b-115">Psuedocode</span><span class="sxs-lookup"><span data-stu-id="83f3b-115">Psuedocode</span></span>
+```qsharp
+// The following returns [(0, 5),(0, 4),(0, 1),(0, 3)];
+let swapOrder = _SwapOrderToPermuteArray([5, 3, 2, 0, 1, 4]);
+```
 
-<span data-ttu-id="83f3b-116">para (índice em 0.. Length (newOrder)-1) {enquanto newOrder [index]! = index {switch newOrder [index] with newOrder [newOrder [index]]}}</span><span class="sxs-lookup"><span data-stu-id="83f3b-116">for (index in 0..Length(newOrder) - 1) { while newOrder[index] != index { Switch newOrder[index] with newOrder[newOrder[index]] } }</span></span>
+## <a name="remarks"></a><span data-ttu-id="70985-115">Comentários</span><span class="sxs-lookup"><span data-stu-id="70985-115">Remarks</span></span>
+
+## <a name="psuedocode"></a><span data-ttu-id="70985-116">Psuedocode</span><span class="sxs-lookup"><span data-stu-id="70985-116">Psuedocode</span></span>
+
+<span data-ttu-id="70985-117">para (índice em 0.. Length (newOrder)-1) {enquanto newOrder [index]! = index {switch newOrder [index] with newOrder [newOrder [index]]}}</span><span class="sxs-lookup"><span data-stu-id="70985-117">for (index in 0..Length(newOrder) - 1) { while newOrder[index] != index { Switch newOrder[index] with newOrder[newOrder[index]] } }</span></span>
