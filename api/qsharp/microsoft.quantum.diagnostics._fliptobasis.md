@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics._flipToBasis
 title: _flipToBasis operação
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -12,46 +12,46 @@ qsharp.summary: >-
   The correspondence between value of `basis[k]` and $\ket{\psi_k}$ is the following:
 
   - `basis[k]=0` $\rightarrow \ket{0}$. - `basis[k]=1` $\rightarrow \ket{1}$. - `basis[k]=2` $\rightarrow \ket{+}$. - `basis[k]=3` $\rightarrow \ket{i}$ ( +1 eigenstate of Pauli Y ).
-ms.openlocfilehash: 1581a1267902ceee81d6f01348f4ee718e49ee47
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: d46c42846066befafda2af22f7b6e861cb260c33
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96223979"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98831018"
 ---
-# <a name="_fliptobasis-operation"></a><span data-ttu-id="ffdd9-102">_flipToBasis operação</span><span class="sxs-lookup"><span data-stu-id="ffdd9-102">_flipToBasis operation</span></span>
+# <a name="_fliptobasis-operation"></a><span data-ttu-id="ae61c-102">_flipToBasis operação</span><span class="sxs-lookup"><span data-stu-id="ae61c-102">_flipToBasis operation</span></span>
 
-<span data-ttu-id="ffdd9-103">Namespace: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)</span><span class="sxs-lookup"><span data-stu-id="ffdd9-103">Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)</span></span>
+<span data-ttu-id="ae61c-103">Namespace: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)</span><span class="sxs-lookup"><span data-stu-id="ae61c-103">Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)</span></span>
 
-<span data-ttu-id="ffdd9-104">Pacote: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="ffdd9-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="ae61c-104">Pacote: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="ae61c-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
-<span data-ttu-id="ffdd9-105">Aplica unidades que mapeiam $ \ket {0} \otimes\cdots\ket {0} $ a $ \ket{\ psi_0} \otimes \ket{\ psi_ {n-1}} $, em que $ \ket{\ psi_k} $ depende de `basis[k]` .</span><span class="sxs-lookup"><span data-stu-id="ffdd9-105">Applies unitaries that map $\ket{0}\otimes\cdots\ket{0}$ to $\ket{\psi_0} \otimes \ket{\psi_{n - 1}}$, where $\ket{\psi_k}$ depends on `basis[k]`.</span></span>
+<span data-ttu-id="ae61c-105">Aplica unidades que mapeiam $ \ket {0} \otimes\cdots\ket {0} $ a $ \ket{\ psi_0} \otimes \ket{\ psi_ {n-1}} $, em que $ \ket{\ psi_k} $ depende de `basis[k]` .</span><span class="sxs-lookup"><span data-stu-id="ae61c-105">Applies unitaries that map $\ket{0}\otimes\cdots\ket{0}$ to $\ket{\psi_0} \otimes \ket{\psi_{n - 1}}$, where $\ket{\psi_k}$ depends on `basis[k]`.</span></span>
 
-<span data-ttu-id="ffdd9-106">A correspondência entre o valor de `basis[k]` e $ \ket{\ psi_k} $ é a seguinte:</span><span class="sxs-lookup"><span data-stu-id="ffdd9-106">The correspondence between value of `basis[k]` and $\ket{\psi_k}$ is the following:</span></span>
+<span data-ttu-id="ae61c-106">A correspondência entre o valor de `basis[k]` e $ \ket{\ psi_k} $ é a seguinte:</span><span class="sxs-lookup"><span data-stu-id="ae61c-106">The correspondence between value of `basis[k]` and $\ket{\psi_k}$ is the following:</span></span>
 
-- <span data-ttu-id="ffdd9-107">`basis[k]=0` $ \rightarrow \ket {0} $.</span><span class="sxs-lookup"><span data-stu-id="ffdd9-107">`basis[k]=0` $\rightarrow \ket{0}$.</span></span>
-- <span data-ttu-id="ffdd9-108">`basis[k]=1` $ \rightarrow \ket {1} $.</span><span class="sxs-lookup"><span data-stu-id="ffdd9-108">`basis[k]=1` $\rightarrow \ket{1}$.</span></span>
-- <span data-ttu-id="ffdd9-109">`basis[k]=2` $ \rightarrow \ket{+} $.</span><span class="sxs-lookup"><span data-stu-id="ffdd9-109">`basis[k]=2` $\rightarrow \ket{+}$.</span></span>
-- <span data-ttu-id="ffdd9-110">`basis[k]=3` $ \rightarrow \ket{i} $ (+ 1 eigenstate de Pauli Y).</span><span class="sxs-lookup"><span data-stu-id="ffdd9-110">`basis[k]=3` $\rightarrow \ket{i}$ ( +1 eigenstate of Pauli Y ).</span></span>
+- <span data-ttu-id="ae61c-107">`basis[k]=0` $ \rightarrow \ket {0} $.</span><span class="sxs-lookup"><span data-stu-id="ae61c-107">`basis[k]=0` $\rightarrow \ket{0}$.</span></span>
+- <span data-ttu-id="ae61c-108">`basis[k]=1` $ \rightarrow \ket {1} $.</span><span class="sxs-lookup"><span data-stu-id="ae61c-108">`basis[k]=1` $\rightarrow \ket{1}$.</span></span>
+- <span data-ttu-id="ae61c-109">`basis[k]=2` $ \rightarrow \ket{+} $.</span><span class="sxs-lookup"><span data-stu-id="ae61c-109">`basis[k]=2` $\rightarrow \ket{+}$.</span></span>
+- <span data-ttu-id="ae61c-110">`basis[k]=3` $ \rightarrow \ket{i} $ (+ 1 eigenstate de Pauli Y).</span><span class="sxs-lookup"><span data-stu-id="ae61c-110">`basis[k]=3` $\rightarrow \ket{i}$ ( +1 eigenstate of Pauli Y ).</span></span>
 
 ```qsharp
 operation _flipToBasis (basis : Int[], qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="ffdd9-111">Entrada</span><span class="sxs-lookup"><span data-stu-id="ffdd9-111">Input</span></span>
+## <a name="input"></a><span data-ttu-id="ae61c-111">Entrada</span><span class="sxs-lookup"><span data-stu-id="ae61c-111">Input</span></span>
 
-### <a name="basis--int"></a><span data-ttu-id="ffdd9-112">base: [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="ffdd9-112">basis : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
+### <a name="basis--int"></a><span data-ttu-id="ae61c-112">base: [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="ae61c-112">basis : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
 
-<span data-ttu-id="ffdd9-113">Matriz de IDs de estado base de qubit único (0 <= ID <= 3), uma para cada elemento de qubits.</span><span class="sxs-lookup"><span data-stu-id="ffdd9-113">Array of single-qubit basis state IDs (0 <= id <= 3), one for each element of qubits.</span></span>
-
-
-### <a name="qubits--qubit"></a><span data-ttu-id="ffdd9-114">qubits: [qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="ffdd9-114">qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
-
-<span data-ttu-id="ffdd9-115">Qubit para ser operado em.</span><span class="sxs-lookup"><span data-stu-id="ffdd9-115">Qubit to be operated on.</span></span>
+<span data-ttu-id="ae61c-113">Matriz de IDs de estado base de qubit único (0 <= ID <= 3), uma para cada elemento de qubits.</span><span class="sxs-lookup"><span data-stu-id="ae61c-113">Array of single-qubit basis state IDs (0 <= id <= 3), one for each element of qubits.</span></span>
 
 
+### <a name="qubits--qubit"></a><span data-ttu-id="ae61c-114">qubits: [qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="ae61c-114">qubits : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="ffdd9-116">Saída: [unidade](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="ffdd9-116">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="ae61c-115">Qubit para ser operado em.</span><span class="sxs-lookup"><span data-stu-id="ae61c-115">Qubit to be operated on.</span></span>
+
+
+
+## <a name="output--unit"></a><span data-ttu-id="ae61c-116">Saída: [unidade](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="ae61c-116">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
