@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayedCA
 title: Função DelayedCA
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayedCA
 qsharp.summary: Returns an operation that applies given operation with given argument.
-ms.openlocfilehash: fe2babb87d716185286b0864745f7ff6e637f8a1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c44e3448c471f2a20f995d4546ee54f3affb726e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96206996"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840544"
 ---
 # <a name="delayedca-function"></a>Função DelayedCA
 
@@ -41,7 +41,7 @@ A entrada à qual a operação `op` é aplicada.
 
 
 
-## <a name="output--unit--unit--is-adj--ctl"></a>Saída: unidade de [unidade](xref:microsoft.quantum.lang-ref.unit) => [Unit](xref:microsoft.quantum.lang-ref.unit) é adj + CTL
+## <a name="output--unit--unit--is-adj--ctl"></a>Saída: unidade de [unidade](xref:microsoft.quantum.lang-ref.unit) => [](xref:microsoft.quantum.lang-ref.unit) é adj + CTL
 
 Uma nova operação que se aplica `op` com a entrada `arg`
 

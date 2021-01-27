@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.TransformedOperationCA
 title: Função TransformedOperationCA
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: TransformedOperationCA
 qsharp.summary: Given a function and an operation, returns a new operation whose input is transformed by the given function.
-ms.openlocfilehash: fa204433dc8195dd27fa40980fb2262f8a3848bb
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bb39530ae28e17d07a6a5c2bb2d35f81be312d15
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96204837"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840116"
 ---
 # <a name="transformedoperationca-function"></a>Função TransformedOperationCA
 
@@ -53,6 +53,14 @@ Uma nova operação tbat chamadas `fn` com sua entrada e, em seguida, passa a sa
 ### <a name="u"></a>' U
 
 
+
+## <a name="example"></a>Exemplo
+
+A chamada a seguir usa @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" para transformar uma operação projetada para @"Microsoft.Quantum.Arithmetic.BigEndian" entradas em uma operação que aceita entradas do tipo @"Microsoft.Quantum.Arithmetic.LittleEndian" :
+
+```qsharp
+let leOp = TransformedOperation(LittleEndianAsBigEndian, ApplyXorInPlaceBE);
+```
 
 ## <a name="see-also"></a>Consulte Também
 
