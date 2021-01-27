@@ -1,46 +1,46 @@
 ---
 uid: Microsoft.Quantum.Logical.NotEqualC
 title: Função NotEqualC
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: NotEqualC
 qsharp.summary: Returns true if and only if two inputs are not equal.
-ms.openlocfilehash: 0be2c97ec7b0350fc20eace76746f3ffff65fd52
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 33049b09405529bd418ff8652b6cb0f11bf734f0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96197357"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98849062"
 ---
-# <a name="notequalc-function"></a><span data-ttu-id="89c65-102">Função NotEqualC</span><span class="sxs-lookup"><span data-stu-id="89c65-102">NotEqualC function</span></span>
+# <a name="notequalc-function"></a><span data-ttu-id="9de19-102">Função NotEqualC</span><span class="sxs-lookup"><span data-stu-id="9de19-102">NotEqualC function</span></span>
 
-<span data-ttu-id="89c65-103">Namespace: [Microsoft. Quantum. Logical](xref:Microsoft.Quantum.Logical)</span><span class="sxs-lookup"><span data-stu-id="89c65-103">Namespace: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)</span></span>
+<span data-ttu-id="9de19-103">Namespace: [Microsoft. Quantum. Logical](xref:Microsoft.Quantum.Logical)</span><span class="sxs-lookup"><span data-stu-id="9de19-103">Namespace: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)</span></span>
 
-<span data-ttu-id="89c65-104">Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="89c65-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="9de19-104">Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="9de19-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="89c65-105">Retorna true se e somente se duas entradas não forem iguais.</span><span class="sxs-lookup"><span data-stu-id="89c65-105">Returns true if and only if two inputs are not equal.</span></span>
+<span data-ttu-id="9de19-105">Retorna true se e somente se duas entradas não forem iguais.</span><span class="sxs-lookup"><span data-stu-id="9de19-105">Returns true if and only if two inputs are not equal.</span></span>
 
 ```qsharp
 function NotEqualC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Bool
 ```
 
 
-## <a name="input"></a><span data-ttu-id="89c65-106">Entrada</span><span class="sxs-lookup"><span data-stu-id="89c65-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="9de19-106">Entrada</span><span class="sxs-lookup"><span data-stu-id="9de19-106">Input</span></span>
 
-### <a name="a--complex"></a><span data-ttu-id="89c65-107">r: [complexo](xref:Microsoft.Quantum.Math.Complex)</span><span class="sxs-lookup"><span data-stu-id="89c65-107">a : [Complex](xref:Microsoft.Quantum.Math.Complex)</span></span>
+### <a name="a--complex"></a><span data-ttu-id="9de19-107">r: [complexo](xref:Microsoft.Quantum.Math.Complex)</span><span class="sxs-lookup"><span data-stu-id="9de19-107">a : [Complex](xref:Microsoft.Quantum.Math.Complex)</span></span>
 
-<span data-ttu-id="89c65-108">O primeiro valor a ser comparado.</span><span class="sxs-lookup"><span data-stu-id="89c65-108">The first value to be compared.</span></span>
-
-
-### <a name="b--complex"></a><span data-ttu-id="89c65-109">b: [complexo](xref:Microsoft.Quantum.Math.Complex)</span><span class="sxs-lookup"><span data-stu-id="89c65-109">b : [Complex](xref:Microsoft.Quantum.Math.Complex)</span></span>
-
-<span data-ttu-id="89c65-110">O segundo valor a ser comparado.</span><span class="sxs-lookup"><span data-stu-id="89c65-110">The second value to be compared.</span></span>
+<span data-ttu-id="9de19-108">O primeiro valor a ser comparado.</span><span class="sxs-lookup"><span data-stu-id="9de19-108">The first value to be compared.</span></span>
 
 
+### <a name="b--complex"></a><span data-ttu-id="9de19-109">b: [complexo](xref:Microsoft.Quantum.Math.Complex)</span><span class="sxs-lookup"><span data-stu-id="9de19-109">b : [Complex](xref:Microsoft.Quantum.Math.Complex)</span></span>
 
-## <a name="output--bool"></a><span data-ttu-id="89c65-111">Saída: [bool](xref:microsoft.quantum.lang-ref.bool)</span><span class="sxs-lookup"><span data-stu-id="89c65-111">Output : [Bool](xref:microsoft.quantum.lang-ref.bool)</span></span>
+<span data-ttu-id="9de19-110">O segundo valor a ser comparado.</span><span class="sxs-lookup"><span data-stu-id="9de19-110">The second value to be compared.</span></span>
 
-<span data-ttu-id="89c65-112">`true` se e somente se `a` não for igual a `b` .</span><span class="sxs-lookup"><span data-stu-id="89c65-112">`true` if and only if `a` is not equal to `b`.</span></span>
+
+
+## <a name="output--bool"></a><span data-ttu-id="9de19-111">Saída: [bool](xref:microsoft.quantum.lang-ref.bool)</span><span class="sxs-lookup"><span data-stu-id="9de19-111">Output : [Bool](xref:microsoft.quantum.lang-ref.bool)</span></span>
+
+<span data-ttu-id="9de19-112">`true` se e somente se `a` não for igual a `b` .</span><span class="sxs-lookup"><span data-stu-id="9de19-112">`true` if and only if `a` is not equal to `b`.</span></span>
