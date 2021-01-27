@@ -4,17 +4,17 @@ description: Saiba como enviar uma solicitação de pull do GitHub quando estive
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.pulls
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8e04e6502e0a6005dfdf0f93450bf3ffd5aaa672
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a936283f3e51da9b97b8145bad3ab765b6423458
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866920"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858463"
 ---
 # <a name="opening-pull-requests"></a>Abrir solicitações de pull #
 
@@ -38,7 +38,7 @@ A página de cada solicitação de pull inclui detalhes de todas as alterações
 
 ## <a name="what-is-a-pull-request"></a>O que é uma solicitação de pull? ##
 
-Dito isso, é útil levar alguns minutos para dizer o que **é**uma solicitação pull.
+Dito isso, é útil levar alguns minutos para dizer o que **é** uma solicitação pull.
 Ao trabalhar com o Git, todas as alterações são representadas como _confirmações_ que descrevem como essas alterações estão relacionadas ao estado do repositório antes dessas alterações.
 Em geral, desenhamos diagramas nos quais as confirmações são desenhadas como círculos com setas de confirmações anteriores.
 
