@@ -4,17 +4,17 @@ description: Saiba como contribuir com conteúdo conceitual ou de API para o con
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8602705d2dd071e822e2ff58a9a44cd0684f77f1
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691781"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857352"
 ---
 # <a name="improving-documentation"></a>Como aprimorar a documentação
 
@@ -42,7 +42,7 @@ Descreveremos mais sobre as solicitações pull abaixo, mas, por enquanto, há a
 - Alguns leitores encontrarão instruções e definições abstratas mais úteis, enquanto outros leitores funcionam melhor, extrapolando-se de exemplos concretos. Fornecer os exemplos de caso geral e específicos pode ajudar os leitores a obter o máximo da programação Quantum.
 - Especialmente se você também escreveu o código que está sendo documentado, as coisas podem ser óbvias para você que não são óbvias para seu leitor. Não existe uma melhor maneira de programar, portanto, independentemente de quão inteligente ou experiente um leitor possa ser, eles não podem adivinhar em quais padrões de design você encontrou o mais útil para expressar suas ideias no código. Estar claro sobre como um leitor pode esperar fazer uso do seu código pode ajudar a fornecer esse contexto.
 - Muitos membros da comunidade de programação Quantum são pesquisadores acadêmicos e são reconhecidos principalmente por meio de citações para suas contribuições para a Comunidade. Além de ajudar os leitores a encontrar materiais adicionais, certificar-se de que as saídas acadêmicas, como artigos, palestras, Postagens de blog e ferramentas de software, possam ajudar os colaboradores acadêmicos a continuar a fazer o melhor trabalho para melhorar a Comunidade.
-- A comunidade de programação Quantum é uma comunidade ampla e maravilhosamente diversificada. O uso de prostantivos sexos em exemplos de terceiros (por exemplo: "se um usuário..., ele vai...") pode funcionar para excluir em vez de incluir. Ser Cognizant de nomes de pessoas em citações e links, e a inclusão correta de caracteres não-ASCII pode servir a diversidade da Comunidade, mostrando respeito a seus membros. Da mesma forma, muitas palavras no idioma Inglês são frequentemente usadas de forma Hateful, de modo que seu uso na documentação técnica pode causar danos tanto aos leitores individuais quanto à Comunidade em geral.
+- A comunidade de programação Quantum é uma comunidade ampla e maravilhosamente diversificada. O uso de prostantivos sexos em exemplos de terceiros (por exemplo: "se um usuário..., eles serão...") pode funcionar para excluir em vez de incluir. Ser Cognizant de nomes de pessoas em citações e links, e a inclusão correta de caracteres não-ASCII pode servir a diversidade da Comunidade, mostrando respeito a seus membros. Da mesma forma, muitas palavras no idioma Inglês são frequentemente usadas de forma Hateful, de modo que seu uso na documentação técnica pode causar danos tanto aos leitores individuais quanto à Comunidade em geral.
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>Referenciando código de exemplo de artigos conceituais
 
@@ -54,6 +54,19 @@ Se você quiser incluir código do repositório de [exemplos](https://github.com
 
 Esse comando importará as linhas 4 a 8 do [ `Game.qs` arquivo do `chsh-game` exemplo](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs), marcando-as como Q# código para fins de realce de sintaxe.
 Usando esse comando, você pode evitar duplicar o código entre artigos conceituais e o repositório de exemplos, de modo que o código de exemplo na documentação sempre seja o mais atualizado possível.
+
+### <a name="contributing-image-files"></a>Arquivos de imagem de contribuição
+
+**Importante**: para que as imagens sejam renderizadas corretamente no modo escuro, você deve evitar transparências.
+
+- Para arquivos. jpg. Você não precisa fazer nada, pois o formato. jpg não dá suporte a elementos transparentes.
+- Para arquivos. png, você deve adicionar um plano de fundo branco ou alterar o valor do canal alfa para **100**. A maneira mais fácil de fazer isso no Windows é abrir o arquivo no **Paint** e salvá-lo, substituindo o arquivo original.
+- Para arquivos. svg, você deve adicionar um retângulo branco na camada mais baixa. Você pode fazer isso com **Inkscape**:
+  1. Abra o arquivo. svg.
+  1. Selecione a ferramenta Criador quadrado e desenhe um retângulo branco na parte superior da figura original.
+  1. Selecione a ferramenta **selecionar e transformar objetos** clicando na seta escura ou pressionando **F1**.
+  1. Enquanto estiver com o retângulo selecionado, clique na seleção inferior do elemento da barra **de ferramentas para baixo (fim)**.
+  1. Ajuste o retângulo com o mouse ou as teclas de direção.
 
 ## <a name="contributing-to-the-api-references"></a>Contribuindo para as referências de API
 

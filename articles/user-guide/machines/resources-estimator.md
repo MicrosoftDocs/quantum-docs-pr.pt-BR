@@ -1,20 +1,20 @@
 ---
 title: Estimador de recursos do Quantum – kit de desenvolvimento do Quantum
 description: Saiba mais sobre o estimador de recursos do Microsoft QDK, que estima os recursos necessários para executar uma determinada instância de uma Q# operação em um computador Quantum.
-author: anpaz-msft
+author: anpaz
 ms.author: anpaz
 ms.date: 06/26/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
-ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
+ms.openlocfilehash: c3aa94c8b34ad7247fbdeab4bf4dcb96ce746014
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96604636"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847473"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimador de recursos do kit de desenvolvimento Quantum (QDK)
 
@@ -143,7 +143,7 @@ As estimativas de profundidade e largura relatadas são compatíveis entre si.
 
 As seguintes métricas são relatadas:
 
-__Profundidade:__ Para a operação raiz, o tempo necessário para executá-lo assumindo tempos de portão específicos.
+__Profundidade:__ Para a operação raiz, o tempo necessário para executá-lo, supondo que os tempos de portão configurados.
 Para operações chamadas ou a diferença de tempo de operações subsequentes entre o tempo de disponibilidade qubit mais recente no início e no fim da operação.
 
 __Largura:__ Para a operação raiz-número de qubits realmente usados para executá-lo (e operação que ele chama).
@@ -157,9 +157,9 @@ Para operações chamadas ou operações subsequentes-número mínimo de qubits 
 
 Há suporte para dois modos de operação. É selecionado por meio da configuração de QCTraceSimulatorConfiguration. OptimizeDepth.
 
-__OptimizeDepth = true:__ QubitManager é desencorajado de qubit reutilização e aloca novas qubit toda vez que for solicitado por um qubit. Para a __profundidade__ da operação raiz se torna a profundidade mínima (limite inferior). A __largura__ compatível é relatada para essa profundidade (ambas podem ser obtidas ao mesmo tempo). Observe que essa largura provavelmente não será ideal, considerando essa profundidade. __QubitCount__ pode ser menor que a largura da operação raiz porque ela assume reutilização.
+__OptimizeDepth = false:__ Esse é o modo padrão. QubitManager é incentivado a reutilizar o qubits e reutilizará o qubits liberado antes de alocar novos. Para a __largura__ da operação raiz se torna a largura mínima (limite inferior). A __profundidade__ compatível é relatada na qual ela pode ser obtida. __QubitCount__ será igual à __largura__ da operação raiz, supondo que não haja empréstimo.
 
-__OptimizeDepth = false:__ QubitManager é incentivado a reutilizar o qubits e reutilizará o qubits liberado antes de alocar novos. Para a __largura__ da operação raiz se torna a largura mínima (limite inferior). A __profundidade__ compatível é relatada na qual ela pode ser obtida. __QubitCount__ será igual à __largura__ da operação raiz, supondo que não haja empréstimo.
+__OptimizeDepth = true:__ QubitManager é desencorajado da reutilização de qubit e a otimização baseada em heurística para a reutilização de qubit é executada durante e após a execução. Para a __profundidade__ da operação raiz se torna a profundidade mínima (limite inferior). A __largura__ compatível é relatada para essa profundidade (ambas podem ser obtidas ao mesmo tempo). Para otimizar a largura, as Gates encontradas posteriormente no programa podem ser agendadas antes que as Gates encontradas anteriormente no programa, mas qubits estão agendadas para serem reutilizadas de forma que a profundidade permaneça mínima. Como os qubits são reutilizados com base nos valores de tempo, é recomendável que os tempos de portão sejam configurados para serem valores inteiros. Não há garantia de que a __largura__ seja ideal. Mais informações podem ser encontradas na [largura e na profundidade do whitepaper no rastreador](https://github.com/microsoft/qsharp-runtime/tree/main/src/Simulation/Simulators/QCTraceSimulator/Docs).
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Como fornecer a probabilidade de resultados de medida
 
