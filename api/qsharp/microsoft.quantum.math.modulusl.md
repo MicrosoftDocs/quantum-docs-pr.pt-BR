@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Math.ModulusL
 title: Função de módulo
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ModulusL
 qsharp.summary: Computes the canonical residue of `value` modulo `modulus`.
-ms.openlocfilehash: 5c9a8ceceac5d2cdac6b82f7f74a85e9443382a2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 6be2edb052cf55f8e8465c76b5dcadeb61ff11ea
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96194926"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842737"
 ---
 # <a name="modulusl-function"></a>Função de módulo
 
@@ -47,4 +47,4 @@ Integer $r $ entre 0 e `modulus - 1` isso `value - r` é divisível por módulo
 
 ## <a name="remarks"></a>Comentários
 
-Essa função se comporta de forma diferente de como o operador `%` se comporta em C# e Q # como no resultado é sempre um inteiro positivo entre 0 e `modulus - 1` , mesmo se o valor for negativo.
+Essa função se comporta de forma diferente de como o operador `%` se comporta em C# e Q # como no resultado é sempre um inteiro não negativo entre 0 e `modulus - 1` , mesmo se o valor for negativo.
