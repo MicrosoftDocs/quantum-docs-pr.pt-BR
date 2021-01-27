@@ -1,41 +1,49 @@
 ---
 uid: Microsoft.Quantum.Random.DrawRandomBool
 title: Operação DrawRandomBool
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DrawRandomBool
 qsharp.summary: Given a success probability, returns a single Bernoulli trial that is true with the given probability.
-ms.openlocfilehash: dbe0836af5aa19f1bdce3cfe93be6833358c22be
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 7c13f8305756421b8d07baf22ff87764efac0418
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192954"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98853683"
 ---
-# <a name="drawrandombool-operation"></a><span data-ttu-id="a54dd-102">Operação DrawRandomBool</span><span class="sxs-lookup"><span data-stu-id="a54dd-102">DrawRandomBool operation</span></span>
+# <a name="drawrandombool-operation"></a><span data-ttu-id="641fb-102">Operação DrawRandomBool</span><span class="sxs-lookup"><span data-stu-id="641fb-102">DrawRandomBool operation</span></span>
 
-<span data-ttu-id="a54dd-103">Namespace: [Microsoft. Quantum. Random](xref:Microsoft.Quantum.Random)</span><span class="sxs-lookup"><span data-stu-id="a54dd-103">Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)</span></span>
+<span data-ttu-id="641fb-103">Namespace: [Microsoft. Quantum. Random](xref:Microsoft.Quantum.Random)</span><span class="sxs-lookup"><span data-stu-id="641fb-103">Namespace: [Microsoft.Quantum.Random](xref:Microsoft.Quantum.Random)</span></span>
 
-<span data-ttu-id="a54dd-104">Pacote: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="a54dd-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="641fb-104">Pacote: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="641fb-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
-<span data-ttu-id="a54dd-105">Devido a uma probabilidade de êxito, retorna uma única avaliação de Bernoulli que é verdadeira com a probabilidade especificada.</span><span class="sxs-lookup"><span data-stu-id="a54dd-105">Given a success probability, returns a single Bernoulli trial that is true with the given probability.</span></span>
+<span data-ttu-id="641fb-105">Devido a uma probabilidade de êxito, retorna uma única avaliação de Bernoulli que é verdadeira com a probabilidade especificada.</span><span class="sxs-lookup"><span data-stu-id="641fb-105">Given a success probability, returns a single Bernoulli trial that is true with the given probability.</span></span>
 
 ```qsharp
 operation DrawRandomBool (successProbability : Double) : Bool
 ```
 
 
-## <a name="input"></a><span data-ttu-id="a54dd-106">Entrada</span><span class="sxs-lookup"><span data-stu-id="a54dd-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="641fb-106">Entrada</span><span class="sxs-lookup"><span data-stu-id="641fb-106">Input</span></span>
 
-### <a name="successprobability--double"></a><span data-ttu-id="a54dd-107">successProbability: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="a54dd-107">successProbability : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+### <a name="successprobability--double"></a><span data-ttu-id="641fb-107">successProbability: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="641fb-107">successProbability : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
-<span data-ttu-id="a54dd-108">A probabilidade com a qual `true` deve ser retornada.</span><span class="sxs-lookup"><span data-stu-id="a54dd-108">The probability with which `true` should be returned.</span></span>
+<span data-ttu-id="641fb-108">A probabilidade com a qual `true` deve ser retornada.</span><span class="sxs-lookup"><span data-stu-id="641fb-108">The probability with which `true` should be returned.</span></span>
 
 
 
-## <a name="output--bool"></a><span data-ttu-id="a54dd-109">Saída: [bool](xref:microsoft.quantum.lang-ref.bool)</span><span class="sxs-lookup"><span data-stu-id="a54dd-109">Output : [Bool](xref:microsoft.quantum.lang-ref.bool)</span></span>
+## <a name="output--bool"></a><span data-ttu-id="641fb-109">Saída: [bool](xref:microsoft.quantum.lang-ref.bool)</span><span class="sxs-lookup"><span data-stu-id="641fb-109">Output : [Bool](xref:microsoft.quantum.lang-ref.bool)</span></span>
 
-<span data-ttu-id="a54dd-110">`true` com probabilidade `successProbability` e `false` com probabilidade `1.0 - successProbability` .</span><span class="sxs-lookup"><span data-stu-id="a54dd-110">`true` with probability `successProbability` and `false` with probability `1.0 - successProbability`.</span></span>
+<span data-ttu-id="641fb-110">`true` com probabilidade `successProbability` e `false` com probabilidade `1.0 - successProbability` .</span><span class="sxs-lookup"><span data-stu-id="641fb-110">`true` with probability `successProbability` and `false` with probability `1.0 - successProbability`.</span></span>
+
+## <a name="example"></a><span data-ttu-id="641fb-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="641fb-111">Example</span></span>
+
+<span data-ttu-id="641fb-112">Os seguintes exemplos de trechos de código Q são invertidos de uma moeda tendenciosa:</span><span class="sxs-lookup"><span data-stu-id="641fb-112">The following Q# snippet samples flips from a biased coin:</span></span>
+
+```qsharp
+let flips = DrawMany(DrawRandomBool, 10, 0.6);
+```
