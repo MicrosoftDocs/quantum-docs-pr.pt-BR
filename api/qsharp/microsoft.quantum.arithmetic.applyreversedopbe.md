@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpBE
 title: Operação ApplyReversedOpBE
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyReversedOpBE
 qsharp.summary: Applies an operation that takes big-endian input to a register encoding an unsigned integer using little-endian format.
-ms.openlocfilehash: 6db1fcb7437d97b1e56c64165d1be523ed2df07a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bf2d43d4e870150f8e6d51dc2f5fb37bdf01d6ec
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96202848"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843604"
 ---
 # <a name="applyreversedopbe-operation"></a>Operação ApplyReversedOpBE
 
@@ -30,7 +30,7 @@ operation ApplyReversedOpBE (op : (Microsoft.Quantum.Arithmetic.BigEndian => Uni
 
 ## <a name="input"></a>Entrada
 
-### <a name="op--bigendian--unit"></a>op: [BigEndian](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [unidade](xref:microsoft.quantum.lang-ref.unit) BigEndian 
+### <a name="op--bigendian--unit"></a>op: [](xref:Microsoft.Quantum.Arithmetic.BigEndian) => [unidade](xref:microsoft.quantum.lang-ref.unit) BigEndian 
 
 Operação que atua em um registro big-endian.
 

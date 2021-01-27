@@ -1,30 +1,30 @@
 ---
-title: Representação da Jordânia-Wigner
-description: Saiba mais sobre a representação da Jordânia-Wigner, que mapeia os operadores Hamiltonian para matrizes de unitários que podem ser implementadas mais facilmente em um computador Quantum.
+title: Representação de Jordan-Wigner
+description: Saiba mais sobre a representação de Jordan-Wigner, que mapeia operadores de Hamiltonian para matrizes de unitários que podem ser implementadas mais facilmente em um computador Quantum.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 29abb4d2ef11239a58af45bc4eee3bd60d20a6c7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 738c8262ea66b8a02ea7541e402953237dc2ea48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833849"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844128"
 ---
-# <a name="jordan-wigner-representation"></a>Representação da Jordânia-Wigner
+# <a name="jordan-wigner-representation"></a>Representação de Jordan-Wigner
 
 Embora o segundo Hamiltonians quantificado seja convenientemente representado em termos de $a ^ \dagger $ (criação) e $a $ (Annihilation), essas operações não são operações fundamentais em computadores Quantum.
 Como resultado, se quisermos implementá-los em um computador Quantum, precisamos mapear os operadores para matrizes de unitários que podem ser implementadas em um computador Quantum.
 A representação da Jordânia – Wigner fornece um desses mapas.
 No entanto, outras pessoas como a representação Bravyi – Kitaev também existem e têm suas próprias vantagens e desvantagens relativas.
-A principal vantagem da representação da Jordânia-Wigner é sua simplicidade.
+A principal vantagem da representação de Jordan-Wigner é sua simplicidade.
 
-A representação Jordânia-Wigner é direta para derivar.
+A representação de Jordan-Wigner é direta para derivar.
 Lembre-se de que um estado $ \ket {0} _J $ implica que o spin orbital $j $ está vazio e $ \ket {1} _J $ indica que está ocupado.
 Isso significa que o qubits pode, naturalmente, armazenar a ocupação de um determinado orbital de rotação.
 Em seguida, temos isso $a ^ \ dagger_j \ket {0} _J = \ket {1} _J $ e $a ^ \ dagger_j \ket {1} _J = $0.
@@ -51,14 +51,14 @@ A construção completa é a seguinte:
 \begin{align} a ^ \ dagger_1 &= \left (\frac{X-iY} {2} \right) \otimes 1 \otimes 1 \otimes 1 \otimes \cdots \otimes 1, \\ \\ a ^ \ dagger_2 &= Z\otimes\left (\frac{X-iy} {2} \right) \otimes 1 \ OTimes 1 \otimes \cdots \otimes 1, \\ \\ um ^ \ dagger_3 &= Z\otimes Z\otimes \left (\frac{X-iy} {2} \right) \otimes 1 \otimes \cdots \otimes \vdots Z\otimes Z\otimes \\ \\ \\ \\ a ^ \ & dagger_N = Z\otimes \otimes \cdots Z \otimes Z\otimes \left (\frac{X-iy} \right {2} ). \label{EQ: JW} \end{align}
 
 Também é conveniente expressar os operadores numéricos, $n _j $, em termos de operadores Pauli.
-Felizmente, as cadeias de caracteres de $Z $ Operators (conhecidas como cadeias de caracteres Jordânia-Wigner) cancelam depois que uma faz essa substituição.
+Felizmente, as cadeias de caracteres de $Z $ Operators (conhecidas como Jordan-Wigner cadeias de caracteres) cancelam depois de uma faz essa substituição.
 Depois de fazer isso (e chamar esse $X _jY_j = iZ_j $), temos \begin{Equation} n_j = a ^ \ dagger_j a_j = \frac{(1-Z_j)} {2} .
 \end{equation}
 
 
-## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Construindo Hamiltonians na representação da Jordânia-Wigner
+## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Construindo Hamiltonians na representação Jordan-Wigner
 
-Depois de invocarmos a representação Jordânia-Wigner, a conversão do Hamiltonian em uma soma dos operadores de Pauli é direta.
+Depois que invocamos a representação de Jordan-Wigner traduzir o Hamiltonian para uma soma de operadores Pauli é direta.
 Basta substituir cada um dos operadores $a ^ \dagger $ e $a $ no Hamiltonian Fermionic com as cadeias de caracteres Pauli-Operators fornecidos acima.
 Quando um executa essa substituição, há apenas cinco classes de termos no Hamiltonian.
 Essas cinco classes correspondem às diferentes maneiras pelas quais podemos escolher o $p, q $ e $p, q, r, s $ nos termos de um corpo e de dois corpo no Hamiltonian.
