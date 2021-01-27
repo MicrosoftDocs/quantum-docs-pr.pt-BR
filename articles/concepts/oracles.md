@@ -1,6 +1,6 @@
 ---
 Título: Descrição da Quantum Oracle: saiba como trabalhar com e definir Oracle Quantum, operações de caixa preta que são usadas como entrada para outro algoritmo.
-Autor: cgranade UID: Microsoft. Quantum. Concepts. oraclees MS. Author: chgranad MS. Date: 07/11/2018 MS. tópico: article no-loc:
+Autor: cgranade UID: Microsoft. Quantum. Concepts. oraclees MS. Author: chgranad MS. Date: 07/11/2018 MS. tópico: conceptual no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -134,7 +134,7 @@ em que $ \alpha : \\ { 0, 1 \\ } ^ n \times \\ { 0, 1 \\ } ^ m \to \mathbb { C }
 
 $$
 \begin{align}
-O \ket { \psi } & = \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum _ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
+O \ket { \psi } & = \sum _{ x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) O \sum_ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
              &= \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y \oplus f (x) } .
 \end{align}
 $$
@@ -157,6 +157,9 @@ Clique $$
         &=(-1) ^ { f (0) } Z ^ { f (0)-f (1) } \ket { + } .
 \end{align}
 $$
+
+> [!NOTE]
+>Observe que $ z ^ { -1 } = Z ^ { \dagger } = z $ e, portanto, $ z ^ { f (0)-f (1) } = z ^ { f (1)-f (0) } .$
 
 Em geral, as duas exibições de Oracle podem ser ampliadas para representar funções clássicas que retornam números reais em vez de apenas um único bit.
 

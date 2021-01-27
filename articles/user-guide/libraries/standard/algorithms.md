@@ -4,17 +4,17 @@ description: Saiba mais sobre algoritmos de computação básicos da Quantum, in
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 982103876b00718aa3b42c6bc3a07d242cde7594
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d4d8c35b3196ffb9915c6da06116b3c7dfd0562a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692222"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98859015"
 ---
 # <a name="quantum-algorithms"></a>Algoritmos Quantum #
 
@@ -49,7 +49,7 @@ Para o segundo plano, você pode começar da [amplificação de amplitude padrã
 A transformação de Fourier é uma ferramenta fundamental de análise clássica e é tão importante para cálculos de Quantum.
 Além disso, a eficiência da *transformação de Fourier Quantum* (QFT) supera muito o que é possível em uma máquina clássica, tornando-a uma das primeiras ferramentas de escolha ao criar um algoritmo Quantum.
 
-Como uma generalização aproximada do QFT, fornecemos a <xref:Microsoft.Quantum.Canon.ApproximateQft> operação que permite mais otimizações por meio da remoção de rotações que não são estritamente necessárias para a precisão do algoritmo desejado.
+Como uma generalização aproximada do QFT, fornecemos a <xref:Microsoft.Quantum.Canon.ApproximateQFT> operação que permite mais otimizações por meio da remoção de rotações que não são estritamente necessárias para a precisão do algoritmo desejado.
 O QFT aproximado requer a operação de rotação de dyadic $Z $-Rotation <xref:Microsoft.Quantum.Intrinsic.RFrac> , bem como a <xref:Microsoft.Quantum.Intrinsic.H> operação.
 A entrada e a saída são consideradas codificadas em big endian codificação---ou seja, o qubit com índice `0` é codificado no bit mais à esquerda (mais alto) da representação de inteiro binário.
 Isso se alinha com a [notação ket](xref:microsoft.quantum.concepts.dirac), uma vez que um registro de três qubits no estado $ \ket {100} $ corresponde a $q _0 $ estar no estado $ \ket {1} $ enquanto $q _1 $ e $q _2 $ estão ambos no estado $ \ket {0} $.
@@ -103,7 +103,7 @@ Para obter mais detalhes, consulte [M. Roetteler, th. Beth](http://doi.org/10.10
 
 ### <a name="quantum-phase-estimation"></a>Estimativa de fase quântica ###
 
-Um aplicativo especialmente importante da transformação de Fourier do Quantum é aprender a eigenvalues de operadores unitários, um problema conhecido como *estimativa de fase* .
+Um aplicativo especialmente importante da transformação de Fourier do Quantum é aprender a eigenvalues de operadores unitários, um problema conhecido como *estimativa de fase*.
 Considere um unitário $U $ e um estado $ \ket{\phi} $, de forma que $ \ket{\phi} $ seja um eigenstate de $U $ com eigenvalue desconhecido $ \phi $, \begin{Equation} U\ket {\ Phi} = \phi\ket{\phi}.
 \end{Equation} se só tivermos acesso ao $U $ como um Oracle, podemos aprender a fase $ \phi $ utilizando esse $Z as rotações aplicadas ao destino de uma operação controlada se propagam de volta para o controle.
 

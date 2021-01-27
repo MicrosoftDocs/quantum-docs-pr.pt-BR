@@ -1,6 +1,6 @@
 ---
 Título: Descrição de medidas de Pauli: saiba como trabalhar com operações de medição de Pauli única e qubit.
-Autor: bradben UID: Microsoft. Quantum. Concepts. Pauli MS. Author: v-benbra MS. Date: 12/11/2017 MS. tópico: article no-loc:
+Autor: bradben UID: Microsoft. Quantum. Concepts. Pauli MS. Author: v-benbra MS. Date: 12/11/2017 MS. tópico: conceptual no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -139,7 +139,7 @@ $$
 
 Também é equivalente a aplicar $ HS ^ \dagger $ ao vetor de estado Quantum e, em seguida, medir $ Z $ , de modo que a seguinte operação seja equivalente a `Measure([PauliY], [q])` :
 
-```Q#
+```qsharp
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
