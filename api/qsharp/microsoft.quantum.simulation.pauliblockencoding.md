@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.PauliBlockEncoding
 title: Função PauliBlockEncoding
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -10,47 +10,47 @@ qsharp.summary: >-
   Creates a block-encoding unitary for a Hamiltonian.
 
   The Hamiltonian $H=\sum_{j}\alpha_j P_j$ is described by a sum of Pauli terms $P_j$, each with real coefficient $\alpha_j$.
-ms.openlocfilehash: b1df6d239e6ef061cf0a4784c652e9dd126991d5
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 2e37b40c60d19aa747114de988dddc19f0d7c50b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96230422"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98848015"
 ---
-# <a name="pauliblockencoding-function"></a><span data-ttu-id="fbb76-102">Função PauliBlockEncoding</span><span class="sxs-lookup"><span data-stu-id="fbb76-102">PauliBlockEncoding function</span></span>
+# <a name="pauliblockencoding-function"></a><span data-ttu-id="1c9c4-102">Função PauliBlockEncoding</span><span class="sxs-lookup"><span data-stu-id="1c9c4-102">PauliBlockEncoding function</span></span>
 
-<span data-ttu-id="fbb76-103">Namespace: [Microsoft. Quantum. Simulation](xref:Microsoft.Quantum.Simulation)</span><span class="sxs-lookup"><span data-stu-id="fbb76-103">Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)</span></span>
+<span data-ttu-id="1c9c4-103">Namespace: [Microsoft. Quantum. Simulation](xref:Microsoft.Quantum.Simulation)</span><span class="sxs-lookup"><span data-stu-id="1c9c4-103">Namespace: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)</span></span>
 
-<span data-ttu-id="fbb76-104">Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="fbb76-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="1c9c4-104">Pacote: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="1c9c4-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="fbb76-105">Cria um unitário de codificação de bloco para um Hamiltonian.</span><span class="sxs-lookup"><span data-stu-id="fbb76-105">Creates a block-encoding unitary for a Hamiltonian.</span></span>
+<span data-ttu-id="1c9c4-105">Cria um unitário de codificação de bloco para um Hamiltonian.</span><span class="sxs-lookup"><span data-stu-id="1c9c4-105">Creates a block-encoding unitary for a Hamiltonian.</span></span>
 
-<span data-ttu-id="fbb76-106">O Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ é descrito por uma soma dos termos de Pauli $P _j $, cada um com o coeficiente real $ \ alpha_j $.</span><span class="sxs-lookup"><span data-stu-id="fbb76-106">The Hamiltonian $H=\sum_{j}\alpha_j P_j$ is described by a sum of Pauli terms $P_j$, each with real coefficient $\alpha_j$.</span></span>
+<span data-ttu-id="1c9c4-106">O Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ é descrito por uma soma dos termos de Pauli $P _j $, cada um com o coeficiente real $ \ alpha_j $.</span><span class="sxs-lookup"><span data-stu-id="1c9c4-106">The Hamiltonian $H=\sum_{j}\alpha_j P_j$ is described by a sum of Pauli terms $P_j$, each with real coefficient $\alpha_j$.</span></span>
 
 ```qsharp
 function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
 ```
 
 
-## <a name="input"></a><span data-ttu-id="fbb76-107">Entrada</span><span class="sxs-lookup"><span data-stu-id="fbb76-107">Input</span></span>
+## <a name="input"></a><span data-ttu-id="1c9c4-107">Entrada</span><span class="sxs-lookup"><span data-stu-id="1c9c4-107">Input</span></span>
 
-### <a name="generatorsystem--generatorsystem"></a><span data-ttu-id="fbb76-108">generatorSystem: [generatorSystem](xref:Microsoft.Quantum.Simulation.GeneratorSystem)</span><span class="sxs-lookup"><span data-stu-id="fbb76-108">generatorSystem : [GeneratorSystem](xref:Microsoft.Quantum.Simulation.GeneratorSystem)</span></span>
+### <a name="generatorsystem--generatorsystem"></a><span data-ttu-id="1c9c4-108">generatorSystem: [generatorSystem](xref:Microsoft.Quantum.Simulation.GeneratorSystem)</span><span class="sxs-lookup"><span data-stu-id="1c9c4-108">generatorSystem : [GeneratorSystem](xref:Microsoft.Quantum.Simulation.GeneratorSystem)</span></span>
 
-<span data-ttu-id="fbb76-109">Um `GeneratorSystem` que descreve $H $ como uma soma dos termos do Pauli</span><span class="sxs-lookup"><span data-stu-id="fbb76-109">A `GeneratorSystem` that describes $H$ as a sum of Pauli terms</span></span>
+<span data-ttu-id="1c9c4-109">Um `GeneratorSystem` que descreve $H $ como uma soma dos termos do Pauli</span><span class="sxs-lookup"><span data-stu-id="1c9c4-109">A `GeneratorSystem` that describes $H$ as a sum of Pauli terms</span></span>
 
 
 
-## <a name="output--doubleblockencodingreflection"></a><span data-ttu-id="fbb76-110">Saída: ([Double](xref:microsoft.quantum.lang-ref.double),[BlockEncodingReflection](xref:Microsoft.Quantum.Simulation.BlockEncodingReflection))</span><span class="sxs-lookup"><span data-stu-id="fbb76-110">Output : ([Double](xref:microsoft.quantum.lang-ref.double),[BlockEncodingReflection](xref:Microsoft.Quantum.Simulation.BlockEncodingReflection))</span></span>
+## <a name="output--doubleblockencodingreflection"></a><span data-ttu-id="1c9c4-110">Saída: ([Double](xref:microsoft.quantum.lang-ref.double),[BlockEncodingReflection](xref:Microsoft.Quantum.Simulation.BlockEncodingReflection))</span><span class="sxs-lookup"><span data-stu-id="1c9c4-110">Output : ([Double](xref:microsoft.quantum.lang-ref.double),[BlockEncodingReflection](xref:Microsoft.Quantum.Simulation.BlockEncodingReflection))</span></span>
 
-## <a name="first-parameter"></a><span data-ttu-id="fbb76-111">Primeiro parâmetro</span><span class="sxs-lookup"><span data-stu-id="fbb76-111">First parameter</span></span>
+## <a name="first-parameter"></a><span data-ttu-id="1c9c4-111">Primeiro parâmetro</span><span class="sxs-lookup"><span data-stu-id="1c9c4-111">First parameter</span></span>
 
-<span data-ttu-id="fbb76-112">A uma norma de coeficientes $ \alpha = \ sum_ {j} | \ alpha_j | $.</span><span class="sxs-lookup"><span data-stu-id="fbb76-112">The one-norm of coefficients $\alpha=\sum_{j}|\alpha_j|$.</span></span>
+<span data-ttu-id="1c9c4-112">A uma norma de coeficientes $ \alpha = \ sum_ {j} | \ alpha_j | $.</span><span class="sxs-lookup"><span data-stu-id="1c9c4-112">The one-norm of coefficients $\alpha=\sum_{j}|\alpha_j|$.</span></span>
 
-## <a name="second-parameter"></a><span data-ttu-id="fbb76-113">Segundo parâmetro</span><span class="sxs-lookup"><span data-stu-id="fbb76-113">Second parameter</span></span>
+## <a name="second-parameter"></a><span data-ttu-id="1c9c4-113">Segundo parâmetro</span><span class="sxs-lookup"><span data-stu-id="1c9c4-113">Second parameter</span></span>
 
-<span data-ttu-id="fbb76-114">Um `BlockEncodingReflection` unitário $U $ do Hamiltonian $H $.</span><span class="sxs-lookup"><span data-stu-id="fbb76-114">A `BlockEncodingReflection` unitary $U$ of the Hamiltonian $H$.</span></span> <span data-ttu-id="fbb76-115">Como esse unitário satisfaz $U ^ 2 = I $, também é uma reflexão.</span><span class="sxs-lookup"><span data-stu-id="fbb76-115">As this unitary satisfies $U^2 = I$, it is also a reflection.</span></span>
+<span data-ttu-id="1c9c4-114">Um `BlockEncodingReflection` unitário $U $ do Hamiltonian $H $.</span><span class="sxs-lookup"><span data-stu-id="1c9c4-114">A `BlockEncodingReflection` unitary $U$ of the Hamiltonian $H$.</span></span> <span data-ttu-id="1c9c4-115">Como esse unitário satisfaz $U ^ 2 = I $, também é uma reflexão.</span><span class="sxs-lookup"><span data-stu-id="1c9c4-115">As this unitary satisfies $U^2 = I$, it is also a reflection.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="fbb76-116">Comentários</span><span class="sxs-lookup"><span data-stu-id="fbb76-116">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="1c9c4-116">Comentários</span><span class="sxs-lookup"><span data-stu-id="1c9c4-116">Remarks</span></span>
 
-<span data-ttu-id="fbb76-117">Isso é obtido preparando e despreparando o estado $ \ sum_ {j} \sqrt{\ alpha_j/\alpha}\ket{j} $ e construindo um unitário controlado por multiplicação <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> e <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator> .</span><span class="sxs-lookup"><span data-stu-id="fbb76-117">This is obtained by preparing and unpreparing the state $\sum_{j}\sqrt{\alpha_j/\alpha}\ket{j}$, and constructing a multiply-controlled unitary <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> and <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>.</span></span>
+<span data-ttu-id="1c9c4-117">Isso é obtido preparando e despreparando o estado $ \ sum_ {j} \sqrt{\ alpha_j/\alpha}\ket{j} $ e construindo um unitário controlado por multiplicação <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> e <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator> .</span><span class="sxs-lookup"><span data-stu-id="1c9c4-117">This is obtained by preparing and unpreparing the state $\sum_{j}\sqrt{\alpha_j/\alpha}\ket{j}$, and constructing a multiply-controlled unitary <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> and <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>.</span></span>
