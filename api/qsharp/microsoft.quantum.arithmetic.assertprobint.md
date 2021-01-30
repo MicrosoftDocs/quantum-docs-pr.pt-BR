@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AssertProbInt
 title: Operação AssertProbInt
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: AssertProbInt
 qsharp.summary: Asserts that the probability of a specific state of a quantum register has the expected value.
-ms.openlocfilehash: b95c2c6294dd5a95b7215c22bd6c50a41635f432
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 85ff04bbad9dc2ed0f803db65508fdfbb0d22c56
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96223690"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843399"
 ---
 # <a name="assertprobint-operation"></a>Operação AssertProbInt
 
@@ -57,3 +57,14 @@ Tolerância absoluta na diferença entre real e esperado.
 
 ## <a name="output--unit"></a>Saída: [unidade](xref:microsoft.quantum.lang-ref.unit)
 
+
+
+## <a name="example"></a>Exemplo
+
+Suponha que o `qubits` registro codifica um estado de Quantum de 3 qubit $ \ket{\psi} = \ sqrt {1/8} \ ket {0} + \ sqrt {7/8} \ ket {6} $ no formato little-endian.
+Isso significa que o número afirma $ \ket {0} \equiv\ket {0} \ket {0} \ket {0} $ e $ \ket {6} \equiv\ket \ket \ket {0} {1} {1} $. Em seguida, as seguintes declarações serão realizadas com sucesso:
+
+```qsharp
+AssertProbInt(0, 0.125, qubits, 10e-10);
+AssertProbInt(6, 0.875, qubits, 10e-10);
+```
