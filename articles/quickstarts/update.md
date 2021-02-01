@@ -4,18 +4,17 @@ description: Descreve como atualizar projetos do Q# e o Microsoft Quantum Develo
 author: bradben
 ms.author: v-benbra
 ms.date: 5/30/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d9678a61f5fe4ca466b6a84e9e4b68321c5baee3
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1b5def3226bd073c878f8573aaddd757d733ec48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834906"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858055"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Atualizar o Microsoft QDK (Quantum Development Kit)
 
@@ -282,7 +281,7 @@ O procedimento de atualização depende de a instalação original ter sido feit
     %workspace reload
     ```
 
-***
+**_
 
 Agora você pode usar o kernel do IQ# atualizado para executar os Jupyter Notebooks existentes do Q#.
 
@@ -301,7 +300,7 @@ Agora você pode usar o kernel do IQ# atualizado para executar os Jupyter Notebo
 1. Atualize a extensão do Quantum para VS Code
 
     - Reinicie o VS Code
-    - Navegue até a guia **Extensões**
+    - Navegue até a guia _ *Extensões**
     - Selecione a extensão **Microsoft Quantum Development Kit para Visual Studio Code**
     - Recarregue a extensão
 

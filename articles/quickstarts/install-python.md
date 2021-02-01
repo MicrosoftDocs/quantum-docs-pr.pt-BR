@@ -4,18 +4,17 @@ description: Saiba como criar um aplicativo Q# usando o Python.
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1ec40b6f1b7a8d9144860e3b8cfd554eb51bae81
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834152"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844264"
 ---
 # <a name="develop-with-no-locq-and-python"></a>Desenvolver com o Q# e o Python
 
@@ -72,7 +71,7 @@ Instale o QDK para desenvolver programas de host do Python para chamar operaçõ
     > em que `/path/to/dotnet-iqsharp` deverá ser substituída pelo caminho absoluto para a ferramenta `dotnet-iqsharp` no sistema de arquivos.
     > Normalmente, isso estará em `.dotnet/tools` na pasta de perfil do usuário.
     
-***
+**_
 
 É isso! Agora você tem o pacote `qsharp` do Python e o kernel do IQ# para Jupyter, que fornecem uma funcionalidade básica para compilar e executar operações Q# do Python e permite usar Jupyter Notebooks do Q#.
 
@@ -113,7 +112,7 @@ Agora você está pronto para verificar a instalação do pacote `qsharp` do Pyt
 1. Você verá o resultado da operação que invocou. Nesse caso, como a operação gera um resultado aleatório, você verá `0` ou `1` impresso na tela. Caso execute o programa várias vezes, será possível conferir cada resultado em aproximadamente metade do tempo.
 
 > [!NOTE]
-> * O código Python é apenas um programa Python normal. É possível usar qualquer ambiente Python, incluindo Jupyter Notebooks baseados em Python, para escrever o programa nessa linguagem de programação e chamar as operações Q#. O programa Python pode importar operações de Q# de arquivos .qs localizados na mesma pasta que o código Python.
+> _ O código Python é apenas um programa Python normal. É possível usar qualquer ambiente Python, incluindo Jupyter Notebooks baseados em Python, para escrever o programa nessa linguagem de programação e chamar as operações Q#. O programa Python pode importar operações de Q# de arquivos .qs localizados na mesma pasta que o código Python.
 
 ## <a name="next-steps"></a>Próximas etapas
 
